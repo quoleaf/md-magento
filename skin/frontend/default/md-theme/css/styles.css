@@ -2097,10 +2097,10 @@ span.weee {
 
 .toolbar,
 .pager {
-  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "HelveticaLTStd-Light",Arial,sans-serif;
   color: #636363;
   line-height: 30px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .toolbar label,
@@ -2170,7 +2170,7 @@ span.weee {
 }
 
 .pager {
-  float: right;
+  
   overflow: hidden;
 }
 .pager > .count-container {

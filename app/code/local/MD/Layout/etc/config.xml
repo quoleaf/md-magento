@@ -1,0 +1,23 @@
+<?xml version="1.0"?> 
+<config>
+    <modules>
+        <MD_Layout>
+            <version>0.0.1</version>
+        </MD_Layout>
+    </modules>
+    <global>
+        <page>
+            <layouts> 
+                <new_cms_layout module="page" translate="label">
+                    <label>MD Theme</label>
+                    <template>page/md-1col.phtml</template>
+                    <layout_handle>lookbook</layout_handle>
+                </new_cms_layout> 
+            </layouts>
+        </page>
+    </global>
+</config>
+
+
+                
+

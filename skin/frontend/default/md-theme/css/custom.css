@@ -7134,6 +7134,11 @@ input, select, textarea {
 }
 
 /*ROM Custom CSS 9.30.2016*/
+.main-container, .footer-container{
+	padding: 0 !important;
+	max-width: auto !important;
+	width: 100%;
+}
 .page-title h1{
 	display:none;
 }
@@ -7273,16 +7278,25 @@ input, select, textarea {
 	color: #fff;
 }
 
-#topNavi ul li a {
-	color: #fff;
+#topNavi .navi{
+	padding-top: 55px;
 }
 
-#topNavi ul .shop a:hover {
+/*#topNavi ul li a {
+	color: #fff;
+}*/
+
+#topNavi ul li a:hover {
 	color: #e8418b !important;
 }
 
 .sub .inner ul li a {
 	color: #3399cc !important;
 }
+
+#topNavi{
+	padding-top: 60px;
+}
+
 /*HelveticaLTStd-Light*/
 /*END ROM Custom CSS 9.30.2016*/

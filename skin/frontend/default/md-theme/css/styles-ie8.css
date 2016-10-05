@@ -1131,9 +1131,9 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1260px;
+  /*max-width: 1260px;*/
   margin: 0 auto;
-  padding: 15px;
+  /*padding: 15px;*/
 }
 .main-container:after,
 .footer-container:after {
@@ -1144,7 +1144,7 @@ a.button:hover {
 
 .main-container,
 .footer-container {
-  padding: 30px;
+  /*padding: 30px;*/
 }
 
 .footer-container {

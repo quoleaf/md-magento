@@ -6499,6 +6499,20 @@ input, select, textarea {
 	padding: 25px;
 }
 
+#topBar a{
+	color: #fff;
+}
 
+#topNavi ul li a {
+	color: #fff;
+}
+
+#topNavi ul .shop a:hover {
+	color: #e8418b !important;
+}
+
+.sub .inner ul li a {
+	color: #3399cc !important;
+}
 /*HelveticaLTStd-Light*/
 /*END ROM Custom CSS 9.30.2016*/

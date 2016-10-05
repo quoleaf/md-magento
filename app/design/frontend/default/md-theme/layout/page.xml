@@ -92,7 +92,7 @@
                 <action method="addCss"><stylesheet>css/lity.min.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/owl.carousel.min.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/twentytwenty.css</stylesheet></action>
-                <action method="addItem"><type>skin_css</type><name>css/styles.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
+                
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
 
                 <!-- Sets viewport meta tag using text block -->

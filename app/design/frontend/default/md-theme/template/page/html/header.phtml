@@ -35,11 +35,22 @@
                 <a href="#" class="freeShipping info">FREE US SHIPPING <span>USE CODE: FREESHIPPING</span></a>
                 <a href="tel:18888825788" class="phone info">1-888-882-5788</a>
                 <a href="#" class="gifts info">GIFT CERTIFICATES</a>
-                <a href="#" class="shoppingBag">Shopping Bag</a>
-                <a href="#" class="signin info">SIGN IN</a>
-                <a href="#" class="myAccount info">MY ACCOUNT</a>
+                <a href="<?php echo Mage::getUrl('checkout/cart'); ?>" class="shoppingBag">Shopping Bag</a>
+                
+                <?php if (Mage::helper('customer')->isLoggedIn() ): ?>
+                        <a class="signin info" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo 'LOG OUT'; ?></a>
+
+                <?php 
+                    
+                else: ?>
+                       
+                        <a class="signin info" href="<?php echo Mage::helper('customer')->getLoginUrl(); ?>">SIGN IN</a>
+                <?php 
+                    
+                endif; ?>
+                <a href="<?php echo Mage::getUrl('customer/account'); ?>" class="myAccount info">MY ACCOUNT</a>
             </div>
-            <div id="topNavi">
+            <div id="topNavi" class="whiteVer">
                 <a href="home" class="logo">MD</a>
                 <a href="#" class="search">Search</a>
                                                         

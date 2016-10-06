@@ -97,18 +97,10 @@ jQuery.noConflict();
                                 </p>
                             </div>
                             <div class="tabInfo" style="display: none;">
-                                <p class="title">MD Nutri Hair Ingredients<br>We create beauty through advanced science™</p>
-                                <p>This physician-formulated daily supplement is a clinically-tested drug and hormone free solution for hair growth*. MD Nutri Hair also addresses hair breakage and excess shedding—for more beautiful, full, and thick-looking hair.*</p>
-                                <p>Lilac Extract from innovative plant stem cell technology provides optimal potency and purity. Use alone or in combination with your current hair care regimen for fuller and healthier-looking hair.</p>
-                                <p><strong>100% drug and hormone free.</strong></p>
-                                <p>Suitable for both men and women who desire beautiful, healthy and younger-looking hair.</p>
+                                <?php echo $_product->getData('ingredients') ?>
                             </div>
                             <div class="tabInfo" style="display: none;">
-                                <p class="title">MD Nutri Hair Other Details<br>We create beauty through advanced science™</p>
-                                <p>This physician-formulated daily supplement is a clinically-tested drug and hormone free solution for hair growth*. MD Nutri Hair also addresses hair breakage and excess shedding—for more beautiful, full, and thick-looking hair.*</p>
-                                <p>Lilac Extract from innovative plant stem cell technology provides optimal potency and purity. Use alone or in combination with your current hair care regimen for fuller and healthier-looking hair.</p>
-                                <p><strong>100% drug and hormone free.</strong></p>
-                                <p>Suitable for both men and women who desire beautiful, healthy and younger-looking hair.</p>
+                                <?php echo $_product->getData('other_details') ?>
                             </div>
                         </div>
                     </div>
@@ -175,7 +167,7 @@ jQuery.noConflict();
  </div>
 <?php endif;?>
 </div>
-
+</div>
 
 <?php echo $this->getChildHtml('related_products') ?>
 <?php //echo $this->getChildHtml('upsell_products') ?>
@@ -352,4 +344,4 @@ jQuery.noConflict();
     <?php //echo $this->getChildHtml('upsell_products') ?>
     <?php //echo $this->getChildHtml('product_additional_data') ?>
 
-</div>
+

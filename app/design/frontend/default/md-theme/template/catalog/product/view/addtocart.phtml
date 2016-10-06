@@ -31,7 +31,11 @@
         <?php if(!$_product->isGrouped()): ?>
         <div class="quantity">
             <label for="qty"><?php echo $this->__('QUANTITY:') ?></label>
-            <select id="qty" name="qty" id="qty" value="<?php echo max($this->getProductDefaultQty() * 1, 1) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('QUANTITY')) ?>"><option><?php echo max($this->getProductDefaultQty() * 1, 1) ?></option>
+            <select id="qty" name="qty" id="qty" title="<?php echo Mage::helper('core')->quoteEscape($this->__('QUANTITY')) ?>">
+                <?php $a = max($this->getProductDefaultQty() * 1, 10);?>
+                <?php for($i=1; $i<= $a; $i++){?>
+                <option value="<?php echo $i; ?>"><?php echo $i ?></option>
+                <?php } ?>
             </select>   
         </div>
         <?php endif; ?>

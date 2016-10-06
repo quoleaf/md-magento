@@ -31,16 +31,177 @@
  * @see Mage_Review_Block_Product_View
  */
 ?>
+
+<script>
+jQuery.noConflict();
+</script>
+
 <?php $_helper = $this->helper('catalog/output'); ?>
 <?php $_product = $this->getProduct(); ?>
 <script type="text/javascript">
-    $("#topNavi").addClass("blueVer")
-    $("body").addClass("withTopbar")
-    jQuery.noConflict();
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
-<div class="product-view">
+
+
+<!--Patrick Product View Code -->
+<form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+            <?php echo $this->getBlockHtml('formkey') ?>
+            <div class="no-display">
+                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
+            </div>
+<div id="product">
+            <div class="section">
+                <div class="details clearfix">
+                    <div class="left clearfix">
+                        <?php echo $this->getChildHtml('media') ?>
+                    </div>
+                    
+                    <div class="right">
+                        <?php echo $this->getLayout()->getBlock('breadcrumbs')->toHtml(); ?>  
+
+                        <div class="info clearfix">
+                            <div class="namePrice">
+                                <span class="name">
+                                <?php if ($_product->getName()): ?>
+                                <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                                <?php endif;?>
+                                </span>
+                                <span class="price">
+                                <?php echo $this->getPriceHtml($_product); ?>
+                                <?php echo $this->getChildHtml('bundle_prices') ?>
+                                <?php echo $this->getTierPriceHtml() ?>    
+                                </span>
+                            </div>
+                                <?php if (!$this->hasOptions()):?>
+                                <?php if($_product->isSaleable()): ?>
+                                <?php echo $this->getChildHtml('addtocart') ?>
+                                <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                <?php endif; ?>
+                                <?php endif; ?>
+                                <?php endif; ?>
+                        </div>
+                        
+                        <div class="tabs">
+                            <ul class="options">
+                                <li class="active">DESCRIPTION</li>
+                                <li>INGREDIENTS</li>
+                                <li>OTHER DETAILS</li>
+                            </ul>
+                            <div class="tabInfo" style="display: block;">
+                                <p class="title">
+                                <?php if ($_product->getDescription()): ?>
+                                <?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'description') ?>
+                                <?php endif;?>
+                                </p>
+                            </div>
+                            <div class="tabInfo" style="display: none;">
+                                <p class="title">MD Nutri Hair Ingredients<br>We create beauty through advanced science™</p>
+                                <p>This physician-formulated daily supplement is a clinically-tested drug and hormone free solution for hair growth*. MD Nutri Hair also addresses hair breakage and excess shedding—for more beautiful, full, and thick-looking hair.*</p>
+                                <p>Lilac Extract from innovative plant stem cell technology provides optimal potency and purity. Use alone or in combination with your current hair care regimen for fuller and healthier-looking hair.</p>
+                                <p><strong>100% drug and hormone free.</strong></p>
+                                <p>Suitable for both men and women who desire beautiful, healthy and younger-looking hair.</p>
+                            </div>
+                            <div class="tabInfo" style="display: none;">
+                                <p class="title">MD Nutri Hair Other Details<br>We create beauty through advanced science™</p>
+                                <p>This physician-formulated daily supplement is a clinically-tested drug and hormone free solution for hair growth*. MD Nutri Hair also addresses hair breakage and excess shedding—for more beautiful, full, and thick-looking hair.*</p>
+                                <p>Lilac Extract from innovative plant stem cell technology provides optimal potency and purity. Use alone or in combination with your current hair care regimen for fuller and healthier-looking hair.</p>
+                                <p><strong>100% drug and hormone free.</strong></p>
+                                <p>Suitable for both men and women who desire beautiful, healthy and younger-looking hair.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+        <script type="text/javascript">
+        //<![CDATA[
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(button, url) {
+                if (this.validator.validate()) {
+                    var form = this.form;
+                    var oldUrl = form.action;
+
+                    if (url) {
+                       form.action = url;
+                    }
+                    var e = null;
+                    try {
+                        this.form.submit();
+                    } catch (e) {
+                    }
+                    this.form.action = oldUrl;
+                    if (e) {
+                        throw e;
+                    }
+
+                    if (button && button != 'undefined') {
+                        button.disabled = true;
+                    }
+                }
+            }.bind(productAddToCartForm);
+
+            productAddToCartForm.submitLight = function(button, url){
+                if(this.validator) {
+                    var nv = Validation.methods;
+                    delete Validation.methods['required-entry'];
+                    delete Validation.methods['validate-one-required'];
+                    delete Validation.methods['validate-one-required-by-name'];
+                    // Remove custom datetime validators
+                    for (var methodName in Validation.methods) {
+                        if (methodName.match(/^validate-datetime-.*/i)) {
+                            delete Validation.methods[methodName];
+                        }
+                    }
+
+                    if (this.validator.validate()) {
+                        if (url) {
+                            this.form.action = url;
+                        }
+                        this.form.submit();
+                    }
+                    Object.extend(Validation.methods, nv);
+                }
+            }.bind(productAddToCartForm);
+        //]]>
+        </script>
+
+<div id="moreInfo">
+<?php if ($_product->getShortDescription()):?>
+ <div class="short-description">
+    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+ </div>
+<?php endif;?>
+</div>
+
+
+<?php echo $this->getChildHtml('related_products') ?>
+<?php //echo $this->getChildHtml('upsell_products') ?>
+<?php //echo $this->getChildHtml('product_additional_data') ?>
+
+<div id="getSocials">
+            <div class="section">
+                <p class="title">Get social <a href="#">@MDfactor</a></p>
+                <ul class="images">
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image01.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image02.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image03.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image04.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image05.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image06.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image07.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image08.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>images/getsocials-image09.jpg)"></a></div></li>
+                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image10.jpg)"></a></div></li>
+                </ul>
+            </div>
+        </div><!-- END getSocials -->
+
+
+
+<div class="product-view" style="display:none;">
     <div class="product-essential">
         <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
             <?php echo $this->getBlockHtml('formkey') ?>
@@ -188,7 +349,7 @@
         <?php endif; ?>
     </div>
 
-    <?php echo $this->getChildHtml('upsell_products') ?>
-    <?php echo $this->getChildHtml('product_additional_data') ?>
+    <?php //echo $this->getChildHtml('upsell_products') ?>
+    <?php //echo $this->getChildHtml('product_additional_data') ?>
 
 </div>

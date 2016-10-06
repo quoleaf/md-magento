@@ -29,14 +29,16 @@
 <?php if($_product->isSaleable()): ?>
     <div class="add-to-cart">
         <?php if(!$_product->isGrouped()): ?>
-        <div class="qty-wrapper">
-            <label for="qty"><?php echo $this->__('Qty:') ?></label>
-            <input type="text" pattern="\d*" name="qty" id="qty" maxlength="12" value="<?php echo max($this->getProductDefaultQty() * 1, 1) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="input-text qty" />
+        <div class="quantity">
+            <label for="qty"><?php echo $this->__('QUANTITY:') ?></label>
+            <select id="qty" name="qty" id="qty" value="<?php echo max($this->getProductDefaultQty() * 1, 1) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('QUANTITY')) ?>"><option><?php echo max($this->getProductDefaultQty() * 1, 1) ?></option>
+            </select>   
         </div>
         <?php endif; ?>
-        <div class="add-to-cart-buttons">
-            <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
-            <?php echo $this->getChildHtml('', true, true) ?>
-        </div>
+        <button href="#" class="buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)"><span>
+        <?php echo $this->__('BUY NOW') ?>
+        <?php echo $this->getChildHtml('', true, true) ?>    
+        </span></button>
+        <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&amp;direction=desc#reviews" target="_BLANK" class="award"></a>
     </div>
 <?php endif; ?>

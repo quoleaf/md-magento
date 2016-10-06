@@ -27,7 +27,9 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-
+<script>
+    jQuery("body").addClass("withTopbar")
+</script>
 <body>
     <div id="mainWrapper">
         <div id="header" class="parralax">
@@ -50,7 +52,7 @@
                 endif; ?>
                 <a href="<?php echo Mage::getUrl('customer/account'); ?>" class="myAccount info">MY ACCOUNT</a>
             </div>
-            <div id="topNavi" class="">
+            <div id="topNavi" class="blueVer">
                 <a href="home" class="logo">MD</a>
                 <a href="#" class="search">Search</a>
                                                         

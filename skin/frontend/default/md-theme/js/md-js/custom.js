@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(function($) {
 	
 	/* Search Overlay */
 	
@@ -332,10 +332,7 @@ $(document).ready(function(){
 		 byRow: true
 	});
 	
-	
-});
-
-$(window).load(function(){
+	$(window).load(function(){
 	
 	/* Before After Slider */
 	
@@ -348,4 +345,7 @@ $(window).load(function(){
 		$(this).find(".pic").css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
     })	
 	
+	});
 });
+
+

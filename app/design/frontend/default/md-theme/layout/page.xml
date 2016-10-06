@@ -35,6 +35,7 @@
         <block type="page/html" name="root" output="toHtml" template="page/3columns.phtml">
 
             <block type="page/html_head" name="head" as="head">
+                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery-1.11.2.min.js</name></action>
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
                 <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
@@ -56,11 +57,12 @@
                 <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name></action>
 
                 <!-- Start MD JS -->
+
                 <action method="addItem"><type>skin_js</type><name>js/md-js/html5shiv.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.event.move.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.matchHeight-min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.twentytwenty.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery-1.11.2.min.js</name></action>
+               
                 <action method="addItem"><type>skin_js</type><name>js/md-js/lity.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/owl.carousel.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/respond.min.js</name></action>
@@ -78,7 +80,7 @@
                 <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+                <!-- <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action> -->
                 <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
                 <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</href></action>
                 <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>

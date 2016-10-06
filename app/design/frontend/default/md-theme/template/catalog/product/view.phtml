@@ -173,23 +173,8 @@ jQuery.noConflict();
 <?php //echo $this->getChildHtml('upsell_products') ?>
 <?php //echo $this->getChildHtml('product_additional_data') ?>
 
-<div id="getSocials">
-            <div class="section">
-                <p class="title">Get social <a href="#">@MDfactor</a></p>
-                <ul class="images">
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image01.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image02.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image03.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image04.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image05.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image06.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image07.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image08.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>images/getsocials-image09.jpg)"></a></div></li>
-                    <li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>/images/getsocials-image10.jpg)"></a></div></li>
-                </ul>
-            </div>
-        </div><!-- END getSocials -->
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('get_social')->toHtml(); ?>
+
 
 
 

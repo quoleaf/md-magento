@@ -3798,6 +3798,8 @@ display: table;
 	font-size: 18px;
 	color: #555555;
 	line-height: 1.2;
+	height:250px;
+	overflow-y:auto;
 }
 
 #product .right .tabs .tabInfo .title {

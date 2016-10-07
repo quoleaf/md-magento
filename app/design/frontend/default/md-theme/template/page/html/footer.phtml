@@ -28,13 +28,14 @@
 			<div class="socials">
 				<div class="section">
 					<p class="title">CONNECT <span>with us</span></p>
+				
 					<ul class="icons">
-						<li><a href="#"><img src="<?php echo $this->getSkinUrl('images/facebook-ico.png') ?>" alt=""/></a></li>
-						<li><a href="#"><img src="<?php echo $this->getSkinUrl('images/twitter-ico.png') ?>" alt=""/></a></li>
-						<li><a href="#"><img src="<?php echo $this->getSkinUrl('images/instagram-ico.png') ?>" alt=""/></a></li>
-						<li><a href="#"><img src="<?php echo $this->getSkinUrl('images/google-ico.png') ?>" alt=""/></a></li>
-						<li><a href="#"><img src="<?php echo $this->getSkinUrl('images/pinterest-ico.png') ?>" alt=""/></a></li>
-						<li><a href="#"><img src="<?php echo $this->getSkinUrl('images/youtube-ico.png') ?>" alt=""/></a></li>
+						<li><a href="https://www.facebook.com/MDLASHF"><img src="<?php echo $this->getSkinUrl('images/facebook-ico.png') ?>" alt=""/></a></li>
+						<li><a href="https://twitter.com/MDLFbySusanLin"><img src="<?php echo $this->getSkinUrl('images/twitter-ico.png') ?>" alt=""/></a></li>
+						<li><a href="https://instagram.com/md_factor/"><img src="<?php echo $this->getSkinUrl('images/instagram-ico.png') ?>" alt=""/></a></li>
+						<li><a href="https://plus.google.com/107601202918737544485"><img src="<?php echo $this->getSkinUrl('images/google-ico.png') ?>" alt=""/></a></li>
+						<li><a href="https://www.pinterest.com/mdfactorbeauty/"><img src="<?php echo $this->getSkinUrl('images/pinterest-ico.png') ?>" alt=""/></a></li>
+						<li><a href="http://www.youtube.com/channel/UCzQBk-mlyv-x1K0O8_kEyYA"><img src="<?php echo $this->getSkinUrl('images/youtube-ico.png') ?>" alt=""/></a></li>
 					</ul>
 				</div>
 			</div>
@@ -44,40 +45,40 @@
 					<div class="type first">
 						<span class="title">CUSTOMER SERVICE</span>
 						<ul>
-							<li><a href="#">Shipping Policies</a></li>
-							<li><a href="#">Return Policy</a></li>
-							<li><a href="#">Authenticity</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms and Conditions</a></li>
-							<li><a href="#">Wholesale</a></li>
-						</ul>
+				          <li><a href="https://md-factor.com/shipping-policy/">Shipping Policies</a></li>
+				          <li><a href="https://md-factor.com/return-policy/">Return Policy</a></li>
+				          <li><a href="https://md-factor.com/authenticity/">Authenticity</a></li>
+				          <li><a href="https://md-factor.com/contact-us/">Contact Us</a></li>
+				          <li><a href="https://md-factor.com/privacy-policy/">Privacy Policy</a></li>
+				          <li><a href="https://md-factor.com/terms-and-conditions/">Terms and Conditions</a></li>
+				          <li><a href="https://md-factor.com/wholesale/">Wholesale</a></li>
+				        </ul>
 					</div>
 					<div class="type second">
 						<span class="title">ABOUT MD</span>
 						<ul>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">International</a></li>
-							<li><a href="#">About MD&reg; / 于MD&reg;</a></li>
-							<li><a href="#">In The Press</a></li>
-							<li><a href="#">FAQs</a></li>
-						</ul>
+				          <li><a href="https://md-factor.com/md-factor-careers/">Careers</a></li>
+				          <!--<li><a href="http://md-factor.com/international/">International</a></li>-->
+				          <li><a href="https://md-factor.com/about/">About MD&reg; / 于MD&reg;</a></li>
+				          <li><a href="https://md-factor.com/press/">In The Press</a></li>
+				          <li><a href="https://md-factor.com/faq/">FAQs</a></li>
+				        </ul>
 					</div>
 					<div class="type third">
 						<span class="title">MY ACCOUNT</span>
 						<ul>
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Wishlist</a></li>
-							<li><a href="#">Order Status</a></li>
-							<li><a href="#">View Cart</a></li>
+							<li><a href="<?php echo Mage::getUrl('customer/account'); ?>">My Account</a></li>
+							<li><a href="<?php echo Mage::getUrl('customer/account'); ?>">Wishlist</a></li>
+							<li><a href="<?php echo Mage::getUrl('customer/account'); ?>">Order Status</a></li>
+							<li><a href="<?php echo Mage::getUrl('checkout/cart'); ?>">View Cart</a></li>
 						</ul>
 					</div>
 					<div class="type forth">
-						<span class="title">INTERNATIONAL</span>
+						<!-- <span class="title">INTERNATIONAL</span>
 						<ul>
 							<li><a href="#">繁體中文</a></li>
 							<li><a href="#">体中文</a></li>
-						</ul>
+						</ul> -->
 						<a href="#" class="siteJabbar"><img src="<?php echo $this->getSkinUrl('images/site-jabbar.png') ?>" alt=""/></a>
 					</div>
 				</div>
@@ -87,13 +88,21 @@
 				<div class="section">
 					<div class="inner">
 						<address>LA CANADA VENTURES, INC. <span>|</span> 448 N San Mateo Drive, San Mateo, CA, 94401 <span>|</span> Phone: 888-882-5788</address>
-						<p class="copyright">All prices are in USD &copy; 2016 MD Factor. <a href="#">Sitemap</a></p>
+						<p class="copyright">All prices are in USD &copy; 2016 MD Factor. <!-- <a href="#">Sitemap</a> --></p>
 					</div>
 				</div>
 			</div>
 		</div><!-- END footer -->
-
-		<div id="searchOverlay">	
+		<div id="searchOverlay" style="display: none;"> <a href="#" class="closeBtn">Close</a>
+		  <div class="fields">
+		    <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
+		      <input placeholder="" class="query" "search_query"="" name="q" type="text">
+		      <p class="instruction">Press enter to begin your search</p>
+		      <input value="" class="searchBtn" type="submit">
+		    </form>
+		  </div>
+		</div><!-- END searchOverlay -->
+		<!-- <div id="searchOverlay">	
 			<a href="#" class="closeBtn">Close</a>
 			
 			<div class="fields">
@@ -101,7 +110,7 @@
 				<p class="instruction">Press enter to begin your search</p>
 			</div>
 
-		</div><!-- END searchOverlay -->
+		</div> -->
 		
 		<a href="#" id="reviewsBtn">Reviews</a>
 	</div><!-- END mainWrapper -->

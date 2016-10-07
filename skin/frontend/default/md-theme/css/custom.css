@@ -473,6 +473,8 @@ body.stickyNavi #topNavi.whiteVer .navi li.shop > a {
 	padding-left: 0;
 }
 
+#topBar a:hover{color:#dcdee0;}
+
 body.withTopbar #topNavi{
 	top: 56px;
 }
@@ -553,6 +555,41 @@ body.withTopbar #topNavi .navi li .sub {
 	text-indent: -9999em;
 	position: relative;
 	z-index: 2;
+}
+
+
+#topNavi .search {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    border: 2px solid #e8418b;
+    border-radius: 5px;
+    color: #e8418b;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    height: 30px !important;
+    margin: 50px 9px 0 0;
+    padding-top: 4px;
+    position: relative;
+    text-indent: 0 !important;
+    text-transform: uppercase;
+    width: 180px !important;
+    z-index: 2;
+}
+
+#topNavi .search {
+    color: #e8418b;
+    font-size: 13px;
+    font-weight: bold;
+    text-indent: 0 !important;
+    text-transform: uppercase;
+}
+
+#topNavi .search  img{
+	    height: 15px;
+	    margin-left: 10px;
+	    margin-right: 5px;
+	    display:inline;
+	    vertical-align: middle;
 }
 
 #topNavi.blueVer .search {
@@ -1160,12 +1197,33 @@ body.tabletMode.showMobileMenu {
 	transition: top 0.3s;
 }
 
+
+#searchOverlay {
+    background: rgba(244, 244, 244, 0.95) none repeat scroll 0 0;
+    bottom: 0;
+    display: none;
+    height: 140px;
+    left: auto !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: top 0.3s ease 0s;
+    width: 450px;
+    z-index: 100000;
+}
+
 body.stickyNavi #searchOverlay {
 	top: 55px;
 }
 
 body.withTopbar #searchOverlay {
 	top: 184px;
+}
+body.withTopbar #searchOverlay {
+    top: 57px !important;
+    z-index: 999999;
 }
 
 body.stickyNavi.withTopbar #searchOverlay {
@@ -1196,12 +1254,30 @@ body.stickyNavi.withTopbar #searchOverlay {
 	letter-spacing: 6px;
 }
 
+
+#searchOverlay .fields .query {
+    border: 1px solid #e8418b !important;
+    color: #5a5a5a;
+    font-size: 25px !important;
+    font-weight: bold;
+    letter-spacing: 1px !important;
+    margin: -80px 0 0 !important;
+    min-height: 40px;
+    outline: medium none;
+    padding: 3px 50px 3px 0 !important;
+    text-align: center;
+}
+
 #searchOverlay .fields .instruction {
 	text-align: center;
 	font-family: 'Bodoni', Arial, sans-serif;
 	font-style: italic;
 	font-size: 26.66px;
 	letter-spacing: 3px;
+}
+#searchOverlay .fields .instruction {
+    font-size: 20px !important;
+    letter-spacing: 2px !important;
 }
 
 #searchOverlay .closeBtn {
@@ -1220,10 +1296,36 @@ body.stickyNavi.withTopbar #searchOverlay {
 	transition: transform 0.3s;
 }
 
+#searchOverlay .closeBtn {
+    float: right;
+    height: 19px;
+    margin: 20px 0 0 !important;
+    text-indent: -9999em;
+    transition: transform 0.3s ease 0s;
+    width: 10px !important;
+}
+
 #searchOverlay .closeBtn:hover {
 	-webkit-transform: scale(1.5);
 	-moz-transform: scale(1.5);
 	transform: scale(1.5);
+}
+
+#searchOverlay .searchBtn {
+    background: rgba(0, 0, 0, 0) url("https://cdn3.bigcommerce.com/s-900h9lc3/product_images/uploaded_images/search-new.png?t=1471925497") repeat scroll center center / contain !important;
+    display: block !important;
+}
+#searchOverlay .searchBtn {
+    display: none;
+}
+
+.fields .searchBtn {
+    background-repeat: no-repeat;
+    height: 40px;
+    margin-left: 382px;
+    margin-top: -97px;
+    position: absolute;
+    width: 37px;
 }
 
 /* Categories */
@@ -3682,7 +3784,7 @@ display: table;
 	text-align: center;
 	color: #252525;
 	font-family:'HelveticaNeueLTStd-Md', Arial, sans-serif;
-	font-size: 18px;
+	font-size: 13px;
 	cursor: pointer;
 }
 
@@ -3696,6 +3798,8 @@ display: table;
 	font-size: 18px;
 	color: #555555;
 	line-height: 1.2;
+	height:250px;
+	overflow-y:auto;
 }
 
 #product .right .tabs .tabInfo .title {
@@ -5722,6 +5826,8 @@ input, select, textarea {
 		border-left: 0;
 		padding-left: 0;
 	}
+
+
 	
 	#topBar .myAccount {
 		text-indent: -9999em;

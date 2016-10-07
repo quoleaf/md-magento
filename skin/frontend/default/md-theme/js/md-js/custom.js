@@ -251,6 +251,38 @@ jQuery(function($) {
 		autoHeight: true,
 		responsiveRefreshRate: 10
 	});
+
+	/* Get Socials Slider */
+	
+	$("#getSocials.slider .images").owlCarousel({
+		loop: false,
+		autoplay: false,
+		items: 5,
+		margin: 22,
+		dots: false,
+		responsiveRefreshRate: 10,
+		responsive: {
+			0: {
+				items: 2,
+				nav: true,
+
+			},
+			
+			768: {
+				items: 3,
+				margin: 20,
+				nav: true,
+			},
+			
+			992: {
+				items: 5,
+				margin: 22,
+				nav: false,
+				pullDrag: false,
+				touchDrag: false,
+			}
+		}
+	});
 	
 	/* Press Media Tabs */
 	

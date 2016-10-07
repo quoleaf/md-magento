@@ -338,6 +338,31 @@ jQuery(function($) {
 	
 	$("#tryIt .beforeAfter .slider .images").twentytwenty({ default_offset_pct: 0.8});	
 	
+
+	/* Product Image */
+	
+	jQuery("#product .left .thumbnails ul li").on("click", function(e){
+		var fileName = $(this).find(".pic img").prop("src");
+		jQuery(this).parents(".left").find(".bigImage .pic img").prop("src", fileName);	
+		e.preventDefault();
+	});
+	
+	//$("#product .left .thumbnails ul li.active").click();
+
+	
+	/* Product Info Tabs */
+	
+	$("#product .right .tabs .options li").on("click", function(e){
+		var tabIndex = $(this).index();
+		$("#product .right .tabs .options li").removeClass("active");
+		$(this).addClass("active");
+		$("#product .right .tabs .tabInfo").hide();
+		$(this).parents(".tabs").find(".tabInfo").eq(tabIndex).fadeIn();
+		e.preventDefault();
+	});
+	
+	$("#product .right .tabs .options li.active").click();
+	
 		
 	/* Zoom Effect */
 	

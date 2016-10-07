@@ -55,8 +55,52 @@
             <div id="topNavi" class="blueVer">
                 <a href="home" class="logo">MD</a>
                 <a href="#" class="search">Search</a>
-                                                        
+                
+
                 <ul class="navi">
+                    <li class="shop"><a href="#">SHOP</a>
+                    <div class="sub">
+                     <div class="inner"> 
+                      <ul class="types">
+                        
+                        <?php
+                            $obj = new Mage_Catalog_Block_Navigation();
+                            $storeCategories = $obj->getStoreCategories();
+                            Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+
+                            foreach ($storeCategories as $_category):
+                        ?>
+                    <li> 
+                        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
+                        <?php $description = Mage::getModel('catalog/layer')->getCurrentCategory()->getDescription();?>
+                        <?php 
+                            echo $description;  
+                        ?>
+                        <span><?php echo $_category->getName(); ?></span></a>
+                        <ul>
+                        <?php 
+                            foreach($_category as $category){
+                                $category = Mage::getModel('catalog/category')->load($_category->getId());
+                                $_subcategories = $category->getChildrenCategories();
+                                if (count($_subcategories) > 0){    
+                                    foreach($_subcategories as $_subcategory){
+                                         echo '<li><a href="#">'.$_subcategory->getName().'</a></li>';
+                                    }
+                                }
+                            }
+                        ?>      
+                         </ul>
+                        </li>
+                        <?php endforeach ?>                           
+                       </ul> 
+                     </div>
+                    </div>
+                    </li>  
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_lg')->toHtml(); ?>      
+                </ul>    
+
+
+                <!--<ul class="navi">
                     <li class="shop"><a href="#">SHOP</a>
                         <div class="sub">
                             <div class="inner">
@@ -278,12 +322,8 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="about-us">ABOUT</a></li>
-                    <li><a href="#">REWARDS</a></li>
-                    <li><a href="#">STORES</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">MEDIA</a></li>
-                </ul>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_lg')->toHtml(); ?>
+                </ul>-->
             </div>
             
             <div id="mobileMenu">

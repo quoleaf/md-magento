@@ -68,8 +68,11 @@
                             $obj = new Mage_Catalog_Block_Navigation();
                             $storeCategories = $obj->getStoreCategories();
                             Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                            $limit_category = 4;
+                            $ctr = 1;
 
                             foreach ($storeCategories as $_category):
+                            if($ctr == $limit_category) :
                         ?>
                     <li> 
 
@@ -96,7 +99,7 @@
                         ?>      
                          </ul>
                         </li>
-                        <?php endforeach ?>                           
+                        <?php  $ctr++; endif;   endforeach; ?>                           
                        </ul> 
                      </div>
                     </div>

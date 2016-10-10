@@ -481,6 +481,7 @@ body.withTopbar #topNavi{
 
 body.withTopbar.scrolling #topNavi{
 	top: 31px;
+	max-height: 95px;
 }
 
 body.withTopbar.stickyNavi #topNavi .navi li .sub {

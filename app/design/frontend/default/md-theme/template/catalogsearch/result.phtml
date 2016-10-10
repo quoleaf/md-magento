@@ -40,6 +40,14 @@
     </p>
     <?php endif; ?>
     <?php echo $this->getProductListHtml() ?>
+
+
+<script>
+    jQuery(function($){
+        $(".page-title").prependTo("#shop")
+    })
+</script>
+
 <?php else: ?>
 <div class="page-title">
     <h1><?php echo ($this->getHeaderText() || $this->getHeaderText() === false) ? $this->getHeaderText() : $this->__("Search results for '%s'", $this->helper('catalogsearch')->getEscapedQueryText()) ?></h1>

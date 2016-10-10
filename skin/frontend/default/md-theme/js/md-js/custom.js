@@ -162,11 +162,16 @@ jQuery(function($) {
 	
 	/* Side Navi */
 	
-	$("#sidebar .sideNavi ul li a").on("click", function(e){
-		$(this).next().slideToggle(function(){
+	$("#sidebar .sideNavi ul li a.main").on("mouseover", function(e){
+		$(this).next().show(function(){
 			$(this).parent().toggleClass("active");	
 		});
-		e.preventDefault();
+		//e.preventDefault();
+	});
+
+	$("#sidebar .sideNavi ul li").on("mouseleave", function(e){
+		$(this).find("ul").hide("300")
+		//e.preventDefault();
 	});
 		
 	/* Services Slider */

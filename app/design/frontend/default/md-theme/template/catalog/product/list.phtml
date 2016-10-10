@@ -1,9 +1,11 @@
-<!-- append section to header fo category -->
+<!-- append section to header fo category  -->
 <script>
+jQuery(function($){
 $("#header").append('<div class="section"><div class="inner"><div class="overlay"><div class="text fadeInUp animated"><p class="title"><span>Physician-formulated</span> Fast-Acting. Real Results.</p></div><a href="#" class="shopNow pinkSolidBtn">SHOP NOW</a><a href="#" class="watchNow pinkHollowBtn">WATCH VIDEO</a></div></div></div>')
 $("#header").addClass("forCategory")
 $("#topNavi").removeClass("blueVer")
 $("#topNavi").addClass("whiteVer")
+})
 </script>
 
 <div id="categories">
@@ -41,45 +43,46 @@ $("#topNavi").addClass("whiteVer")
             <div class="sideNavi">
                 <p class="title">SHOP BY CATEGORY</p>
                 <ul>
-                    <li><a href="#">LASHES</a>
-                        <ul>
-                            <li><a href="#">Lash Conditioners</a></li>
-                            <li><a href="#">Lash and Eyebrow Conditioner</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">HAIR</a>
-                        <ul>
-                            <li><a href="#">Cleansing &amp; Conditioning</a></li>
-                            <li><a href="#">Hair Supplements</a></li>
-                            <li><a href="#">Scalp Treatments</a></li>
-                            <li><a href="#">Value Added Sets</a></li>
-                            <li><a href="#">Color &amp; Shine</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">SKIN</a>
-                        <ul>
-                            <li><a href="#">Cleansers &amp; Toners</a></li>
-                            <li><a href="#">Serums &amp; Treatments</a><li>
-                            <li><a href="#">Anti-Aging Treatments</a></li>
-                            <li><a href="#">Eye Treatments</a></li>
-                            <li><a href="#">Oily / Acne Prone Treatments</a></li>
-                            <li><a href="#">Protection</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">WELLNESS</a>
-                        <ul>
-                            <li><a href="#">Nutri Cleanse</a></li>
-                            <li><a href="#">Ultimate Green Capsules</a></li>
-                            <li><a href="#">Ultimate Beauty Drink Mix</a></li>
-                            <li><a href="#">Adrenal Pro</a></li>
-                            <li><a href="#">Intimate Restore</a></li>
-                            <li><a href="#">Nutri Hair</a></li>
-                        </ul>
-                    </li>
+                     <?php
+                        $obj = new Mage_Catalog_Block_Navigation();
+                        $storeCategories = $obj->getStoreCategories();
+                        Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                        $limit_category = 99;
+                        $ctr = 1;
+
+                    foreach ($storeCategories as $_category):
+                    if($ctr <= $limit_category) :
+                        $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                    ?>
+                        <li ><a class="main" href="<?php echo $_category->getUrl($_category)?>"><?php echo strtoupper($_category->getName()); ?></a>
+                            <ul>
+                                <?php 
+                                    
+                                    
+                                        $_subcategories = $_category->getChildrenCategories();
+
+                                        if (count($_subcategories) > 0){    
+
+                                            foreach($_subcategories as $_subcategory){
+                                            
+                                                 echo '
+                                                 <li><a  href="'.$_subcategory->getUrl($_subcategory).'">'
+                                                    .$_subcategory->getName().
+                                                 '</a>';
+                                                 
+                                                 echo '</li>';
+                                            }// end foreach subcat
+                                        }// end if count sub
+                                    
+                                ?>      
+                            </ul>
+                    
+                         </li>
+                    <?php $ctr++; endif;  endforeach; ?>
                 </ul>
             </div>
             
-            <div class="sideNavi">
+            <!-- <div class="sideNavi">
                 <p class="title">SHOP BY CONCERN</p>
                 <ul>
                     <li><a href="#">LASHES</a>
@@ -115,15 +118,11 @@ $("#topNavi").addClass("whiteVer")
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div><!-- END sidebar -->
         
         <div id="productListing">
-            <ul class="breadcrumb">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">MD Hair</a></li>
-                <li class="last">Cleansing &amp; Conditioning</li>
-            </ul>
+            <?php echo $this->getChildHtml('breadcrumbs') ?>
             
             <!-- <div class="naviBar">
                 <div class="desktopTablet">

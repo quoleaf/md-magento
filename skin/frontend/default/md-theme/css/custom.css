@@ -462,6 +462,32 @@ body.stickyNavi #topNavi.whiteVer .navi li.shop > a {
 	background-size: 100%;
 	-ms-behavior: url(backgroundsize.min.htc);
 }
+.cart-link{
+	position:relative;
+}
+.cart-link .badge {
+    background-color: #e8408b;
+    left: -10px;
+    padding: 3px 9px;
+    position: absolute;
+    text-indent: 0;
+    top: 0;
+}
+
+.badge {
+    background-color: #777;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 10px;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
 
 #topBar .signin {
 	float: right;

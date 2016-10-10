@@ -80,6 +80,7 @@
                         
                         <?php
                             $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                            
                             if ($_imgUrl = $_category->getImageUrl()) {
                                 echo "<img src=".$_imgUrl." >";     
                             }
@@ -96,7 +97,11 @@
                                         //load products now
                                     $products = Mage::getResourceModel('catalog/product_collection')
                                     ->setStoreId(Mage::app()->getStore()->getId())
-                                    ->addCategoryFilter($_subcategory);
+                                    ->addAttributeToSelect('*')
+                                    ->addAttributeToFilter('status', 1)
+                                    ->addAttributeToFilter('visibility', 4)
+                                    ->addCategoryFilter($_subcategory)
+                                    ->setOrder('price', 'ASC');
                                          echo '
                                          <li><a href="#">'.$_subcategory->getName().'</a>';
                                          if (count($products) > 0){    

@@ -95,20 +95,19 @@
 
                                     foreach($_subcategories as $_subcategory){
                                         //load products now
-                                    $products = Mage::getResourceModel('catalog/product_collection')
-                                    ->setStoreId(Mage::app()->getStore()->getId())
-                                    ->addAttributeToSelect('*')
-                                    ->addAttributeToFilter('status', 1)
-                                    ->addAttributeToFilter('visibility', 4)
-                                    ->addCategoryFilter($_subcategory)
-                                    ->setOrder('price', 'ASC');
+                                    $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
+                                     ->getProductCollection()
+                                     ->addAttributeToSelect('*')
+                                     ->addAttributeToFilter('status', 1)
+                                     ->addAttributeToFilter('visibility', 4)
+                                     ->setOrder('price', 'ASC');
                                          echo '
-                                         <li><a href="#">'.$_subcategory->getName().'</a>';
+                                         <li><a href="#">'.$_subcategory->getName().count($products).'</a>';
                                          if (count($products) > 0){    
 
                                             echo '<ul>';
                                             foreach($products as $_product){
-                                                '<li>
+                                               echo '<li>
                                                     <a href="'.$_product->getProductUrl().'">
                                                     <div class="image">
                                                         <img src="'.$_product->getImageUrl().'">                                                    
@@ -118,11 +117,11 @@
                                                 </li>';
                                             }
                                                 
-                                            echo '<ul>';
+                                            echo '</ul>';
                                         }
                                          echo '</li>';
-                                    }
-                                }
+                                    }// end foreach subcat
+                                }// end if count sub
                             
                         ?>      
                          </ul>

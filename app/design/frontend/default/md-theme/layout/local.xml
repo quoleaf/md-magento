@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+
+
+<catalog_category_default>
+    <action block="root" method="unsetChild"><name>breadcrumbs</name></action>
+    <action block="product_list" method="insert"><name>breadcrumbs</name></action>
+</catalog_category_default>
+
+<catalog_category_layered>
+    <action block="root" method="unsetChild"><name>breadcrumbs</name></action>
+    <action block="product_list" method="insert"><name>breadcrumbs</name></action>
+</catalog_category_layered>
+ <cms_index_index>
+    <reference name="content">
+       <remove name="cms_page" />
+       
+    </reference>
+ </cms_index_index>
+</layout>

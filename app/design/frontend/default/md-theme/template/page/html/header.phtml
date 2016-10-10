@@ -91,8 +91,31 @@
                             
                                 $_subcategories = $_category->getChildrenCategories();
                                 if (count($_subcategories) > 0){    
+
                                     foreach($_subcategories as $_subcategory){
-                                         echo '<li><a href="#">'.$_subcategory->getName().'</a></li>';
+                                        //load products now
+                                    $products = Mage::getResourceModel('catalog/product_collection')
+                                    ->setStoreId(Mage::app()->getStore()->getId())
+                                    ->addCategoryFilter($_subcategory);
+                                         echo '
+                                         <li><a href="#">'.$_subcategory->getName().'</a>';
+                                         if (count($products) > 0){    
+
+                                            echo '<ul>';
+                                            foreach($products as $_product){
+                                                '<li>
+                                                    <a href="'.$_product->getProductUrl().'">
+                                                    <div class="image">
+                                                        <img src="'.$_product->getImageUrl().'">                                                    
+                                                    </div>
+                                                    <div class="desc">'.$_product->getName().'</div>
+                                                    </a>
+                                                </li>';
+                                            }
+                                                
+                                            echo '<ul>';
+                                        }
+                                         echo '</li>';
                                     }
                                 }
                             

@@ -39,7 +39,7 @@
                                 <a class="name" href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->escapeHtml($_item->getName()) ?></a>
                                 <span class="price"><?php echo $this->getPriceHtml($_item, true, '-related') ?></span>
                             </div>
-                            <a href="<?php echo $_item->getProductUrl() ?>" class="addCart"></a>
+                            <a href="<?php echo Mage::getUrl('checkout/cart/add', array('product'=>$_item->getId(),'qty'=>1, 'form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>" class="addCart"></a>
                         </li>
                         <?php endforeach ?>
                     </ul>

@@ -40,7 +40,7 @@
         <div class="left">
             <p class="title">SIGN IN</p>
             <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" class="textbox input-text required-entry validate-email" title="<?php echo $this->quoteEscape($this->__('Email Address')) ?>" />
-            
+            <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
             <input type="password" name="login[password]" class="textbox input-text required-entry validate-password" id="pass" title="<?php echo $this->quoteEscape($this->__('Password')) ?>" />
             <div class="options">
                 <input type="submit" value="SIGN IN" class="pinkSolidBtn"/>
@@ -73,8 +73,8 @@
 
 
     <script type="text/javascript">
-    $("#topNavi").addClass("blueVer")
-    $("body").addClass("withTopbar")
+    jQuery("#topNavi").addClass("blueVer")
+    jQuery("body").addClass("withTopbar")
     //<![CDATA[
         var dataForm = new VarienForm('login-form', true);
     //]]>

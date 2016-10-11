@@ -39,7 +39,7 @@
                 <a href="#" class="freeShipping info">FREE US SHIPPING <span>USE CODE: FREESHIPPING</span></a>
                 <a href="tel:18888825788" class="phone info">1-888-882-5788</a>
                 <a href="#" class="gifts info">GIFT CERTIFICATES</a>
-                <?php   $count = $this->helper('checkout/cart')->getSummaryCount();?>
+                <?php   $count = ($this->helper('checkout/cart')->getSummaryCount() ? $this->helper('checkout/cart')->getSummaryCount() : 0  ) ?>
                 <a href="<?php echo Mage::getUrl('checkout/cart'); ?>" class="shoppingBag cart-link"><span class="badge"><?php echo $count?></span> Shopping Bag</a>
                 
                 <?php if (Mage::helper('customer')->isLoggedIn() ): ?>
@@ -58,7 +58,7 @@
             <div id="topNavi" class="blueVer">
 
                 <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
-                <a href="#" class="search"><img src="<?php echo $this->getSkinUrl('images/search-new.png') ?>">Search</a>
+                <a href="#" class="search"><img src="<?php echo $this->getSkinUrl('images/search-new.png') ?>">Search Products</a>
                 
 
                 <ul class="navi">

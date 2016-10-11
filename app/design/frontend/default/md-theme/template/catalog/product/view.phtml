@@ -85,23 +85,68 @@ jQuery.noConflict();
                         
                         <div class="tabs">
                             <ul class="options">
-                                <li class="active">DESCRIPTION</li>
-                                <li>INGREDIENTS</li>
-                                <li>OTHER DETAILS</li>
+                            <?php 
+                            $_descriptionText = $_helper->productAttribute($_product, $_product->getDescription(), 'description');
+                            $videoText = $_product->getData('video');
+                            $ingredientsText = $_product->getData('ingredients');
+                            $otherdetailText = $_product->getData('other_details');
+                            $beforeText = $_product->getData('before_and_after');
+                            if(isset($_descriptionText)){
+                                $prodAttrDesc = $_product->getResource()->getAttribute('description');
+                                $_description = $prodAttrDesc->getStoreLabel(Mage::app()->getStore()->getName());
+                                echo '<li class="active">'.$_description.'</li>';
+                            }
+                            if(isset($videoText)){
+                                $prodAttrVideo = $_product->getResource()->getAttribute('video');
+                                $_video = $prodAttrVideo->getStoreLabel(Mage::app()->getStore()->getName());
+                                echo '<li>'.$_video.'</li>';
+                            }
+                            if(isset($ingredientsText)){
+                                $prodAttrIngredients = $_product->getResource()->getAttribute('ingredients');
+                                $_ingredients = $prodAttrIngredients->getStoreLabel(Mage::app()->getStore()->getName());
+                                echo '<li>'.$_ingredients.'</li>';
+                            }
+                            if(isset($otherdetailText)){
+                                $prodAttrOtherDetails = $_product->getResource()->getAttribute('other_details');
+                                $_otherdetails = $prodAttrOtherDetails->getStoreLabel(Mage::app()->getStore()->getName());
+                                echo '<li>'.$_otherdetails.'</li>';
+                            }
+                            if(isset($beforeText)){
+                                $prodAttrBefore = $_product->getResource()->getAttribute('before_and_after');
+                                $_beforeAfter = $prodAttrBefore->getStoreLabel(Mage::app()->getStore()->getName());
+                                echo '<li>'.$_beforeAfter.'</li>';
+                            }
+                            
+                            ?>
                             </ul>
-                            <div class="tabInfo" style="display: block;">
+
+                            <?php if (isset($_descriptionText)): ?>
+                            <div class="tabInfo">
                                 <p class="title">
-                                <?php if ($_product->getDescription()): ?>
-                                <?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'description') ?>
-                                <?php endif;?>
+                                <?php echo $_descriptionText; ?>
                                 </p>
                             </div>
-                            <div class="tabInfo" style="display: none;">
-                                <?php echo $_product->getData('ingredients') ?>
+                            <?php endif;?>
+                            <?php if (isset($videoText)): ?>
+                            <div class="tabInfo">
+                                <?php echo $videoText; ?>
                             </div>
-                            <div class="tabInfo" style="display: none;">
-                                <?php echo $_product->getData('other_details') ?>
+                            <?php endif;?>
+                            <?php if (isset($ingredientsText)): ?>
+                            <div class="tabInfo">
+                                <?php echo $ingredientsText; ?>
                             </div>
+                            <?php endif;?>
+                            <?php if (isset($otherdetailText)): ?>
+                            <div class="tabInfo">
+                                <?php echo $otherdetailText; ?>
+                            </div>
+                            <?php endif;?>
+                            <?php if (isset($beforeText)): ?>
+                            <div class="tabInfo">
+                                <?php echo $beforeText; ?>
+                            </div>
+                            <?php endif;?>
                         </div>
                     </div>
                 </div>

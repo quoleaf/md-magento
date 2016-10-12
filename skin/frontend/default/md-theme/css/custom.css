@@ -7322,7 +7322,8 @@ div#sidebar .sideNavi ul li.active a {
 }
 
 #footer a:hover{
-	color: #363636;	
+	color: #e8418b;
+	text-decoration: none;	
 }
 
 @media only screen and (max-width : 767px) {

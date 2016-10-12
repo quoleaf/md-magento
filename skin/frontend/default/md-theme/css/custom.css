@@ -5840,7 +5840,7 @@ input, select, textarea {
 	}
 	
 	#mobileMenu {
-		height: 57px;
+		height: 60px;
 		padding-left: 15px;
 		padding-right: 15px;
 		min-width: 320px;
@@ -7296,11 +7296,29 @@ input, select, textarea {
 /*ROM additional CSS 10.12.16*/
 #topNavi a:hover{
 	color:#e8418b;
-	text-decoration: none;
 }
 
 .forCategory .section .inner .overlay .shopNow{
 	margin-right: 2%;
+	text-decoration: none;
+}
+
+
+.forCategory .section .inner .overlay .shopNow:hover, .forCategory .section .inner .overlay .watchNow:hover {
+    text-decoration: none;
+}
+
+ul .item .desc a:hover {
+    text-decoration: none;
+}
+
+div#sidebar .sideNavi ul li a:hover {
+    text-decoration: none;
+    color: #e8418b;
+}
+
+div#sidebar .sideNavi ul li.active a {
+	color: #363636;
 }
 
 @media only screen and (max-width : 767px) {

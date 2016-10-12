@@ -7296,11 +7296,11 @@ input, select, textarea {
 /*ROM additional CSS 10.12.16*/
 #topNavi a:hover{
 	color:#e8418b;
+	text-decoration: none;
 }
 
 .forCategory .section .inner .overlay .shopNow{
 	margin-right: 2%;
-	text-decoration: none;
 }
 
 
@@ -7319,6 +7319,10 @@ div#sidebar .sideNavi ul li a:hover {
 
 div#sidebar .sideNavi ul li.active a {
 	color: #363636;
+}
+
+#footer a:hover{
+	color: #363636;	
 }
 
 @media only screen and (max-width : 767px) {

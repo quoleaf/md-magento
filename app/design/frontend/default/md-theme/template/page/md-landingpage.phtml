@@ -1,0 +1,460 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+
+
+
+<div id="mainWrapper">
+		<div id="header" class="forHome parralax">
+			<div id="topNavi">
+				<a href="#" class="logo home">MD</a>
+				<a href="#" class="search home">Search</a>
+														
+				 <ul class="navi">
+                    <li class="shop"><a href="#"><?php echo $this->__('SHOP') ?></a>
+                    <div class="sub">
+                     <div class="inner"> 
+                      <ul class="types">
+                        
+                        <?php
+                            $obj = new Mage_Catalog_Block_Navigation();
+                            $storeCategories = $obj->getStoreCategories();
+                            Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                            $limit_category = 4;
+                            $ctr = 1;
+
+                            foreach ($storeCategories as $_category):
+                            if($ctr <= $limit_category) :
+                        ?>
+                    <li> 
+
+                        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
+                        
+                        <?php
+                            $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                            
+                            if ($_imgUrl = $_category->getImageUrl()) {
+                                echo "<img src=".$_imgUrl." >";     
+                            }
+                        ?>
+                        <span><?php echo $_category->getName(); ?></span></a>
+                        <ul>
+                        <?php 
+                            
+                            
+                                $_subcategories = $_category->getChildrenCategories();
+                                if (count($_subcategories) > 0){    
+
+                                    foreach($_subcategories as $_subcategory){
+                                        //load products now
+                                    $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
+                                     ->getProductCollection()
+                                     ->addAttributeToSelect('*')
+                                     ->addAttributeToFilter('status', 1)
+                                     ->addAttributeToFilter('visibility', 4)
+                                     ->setOrder('price', 'ASC');
+                                         echo '
+                                         <li><a href="#">'.$_subcategory->getName().'</a>';
+                                         if (count($products) > 0){    
+
+                                            echo '<ul>';
+                                            foreach($products as $_product){
+                                               echo '<li>
+                                                    <a href="'.$_product->getProductUrl().'">
+                                                    <div class="image">
+                                                        <img src="'.$_product->getImageUrl().'">                                                    
+                                                    </div>
+                                                    <div class="desc">'.$_product->getName().'</div>
+                                                    </a>
+                                                </li>';
+                                            }
+                                                
+                                            echo '</ul>';
+                                        }
+                                         echo '</li>';
+                                    }// end foreach subcat
+                                }// end if count sub
+                            
+                        ?>      
+                         </ul>
+                        </li>
+                        <?php  $ctr++; endif;   endforeach; ?>                           
+                       </ul> 
+                     </div>
+                    </div>
+                    </li>  
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_lg')->toHtml(); ?>      
+                </ul>    
+			</div>
+			
+			<div id="mobileMenu">
+				<a href="#" class="logo home">MD</a>
+				<a href="#" class="menuBtn"><span></span><span></span><span></span></a>
+			</div>
+			
+			<div id="mobileNavi">
+				<a href="#" class="closeBtn">Close</a>
+				<div class="inner">
+					<ul class="links">
+						<li class="hasSub"><a href="#" class="shop"><?php echo $this->__('SHOP') ?></a>
+							<ul>
+								<li class="hasSub"><a href="#">MD HAIR</a>
+									<ul>
+										<li><a href="#">CLEANSING &amp; CONDITIONING</a></li>
+										<li><a href="#">HAIR SUPPLEMENTS</a></li>
+										<li><a href="#">SCALP TREATMENTS</a></li>
+										<li><a href="#">VALUE ADDED SETS</a></li>
+										<li><a href="#">COLOR &amp; SHINE</a></li>
+									</ul>
+								</li>
+								<li class="hasSub"><a href="#">MD LASH FACTOR</a>
+									<ul>
+										<li><a href="#">LASH CONDITIONERS</a></li>
+										<li><a href="#">LASH AND EYEBROW CONDITIONER</a></li>
+									</ul>
+								</li>
+								<li class="hasSub"><a href="#">MD SKIN</a>
+									<ul>
+										<li><a href="#">CLEANSERS &amp; TONERS</a></li>
+										<li><a href="#">SERUMS &amp; TREATMENTS</a></li>
+										<li><a href="#">ANTI-AGING TREATMENTS</a></li>
+										<li><a href="#">EYE TREATMENTS</a></li>
+										<li><a href="#">OILY / ACNE PRONE TREATMENTS</a></li>
+										<li><a href="#">PROTECTION</a></li>
+									</ul>
+								</li>
+								<li class="hasSub"><a href="#">MD WELLNESS</a>
+									<ul>
+										<li><a href="#">NUTRI CLEANSE</a></li>
+										<li><a href="#">ULTIMATE GREEN CAPSULES</a></li>
+										<li><a href="#">ULTIMATE BEAUTY DRINK MIX</a></li>
+										<li><a href="#">ADRENAL PRO</a></li>
+										<li><a href="#">INTIMATE RESTORE</a></li>
+										<li><a href="#">NUTRI HAIR</a></li>
+									</ul>								
+								</li>
+								<li class="hasSub"><a href="#" class="byConcern">SHOP BY CONCERN</a>
+									<ul>
+										<li class="hasSub"><a href="#">MD HAIR</a>
+											<ul>
+												<li><a href="#">LOOSING HAIR FROM STRESS</a></li>
+												<li><a href="#">THINNING SCALP</a></li>
+												<li><a href="#">REASONS FOR HAIR LOSS</a></li>
+												<li><a href="#">THIN HAIR</a></li>
+												<li><a href="#">OILY SCALP</a></li>
+												<li><a href="#">DRY HAIR</a></li>
+											</ul>
+										</li>
+										<li class="hasSub"><a href="#">MD LASH FACTOR</a>
+											<ul>
+												<li><a href="#">THINNING EYEBROWS</a></li>
+												<li><a href="#">THINNING LASHES</a></li>
+											</ul>										
+										</li>
+										<li class="hasSub"><a href="#">MD SKIN</a>
+											<ul>
+												<li><a href="#">AGE OR DARK SPOTS</a></li>
+												<li><a href="#">LOSS OF FIRMNESS</a></li>
+												<li><a href="#">FINE LINE AND CROWS FEET</a></li>
+												<li><a href="#">ACNE MARKS</a></li>
+												<li><a href="#">OILY SKIN</a></li>
+											</ul>										
+										</li>
+										<li class="hasSub"><a href="#">MD WELLNESS</a>
+											<ul>
+												<li><a href="#">DETOX ANTIOXIDANT</a></li>
+												<li><a href="#">STRESS AND WEIGHT REDUCTION</a></li>
+												<li><a href="#">SEXUAL WELLNESS</a></li>
+											</ul>										
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="http://md-factor.com/about"><?php echo $this->__('ABOUT') ?></a></li>
+                        <li><a href="http://md-factor.com/rewards"><?php echo $this->__('REWARDS') ?></a></li>
+                        <li><a href="<?php echo Mage::getUrl('home'); ?>"><?php echo $this->__('STORE') ?></a></li>
+                        <li><a href="http://md-factor.com/blog"><?php echo $this->__('BLOG') ?></a></li>
+                        <li><a href="http://md-factor.com/pressmedia"><?php echo $this->__('MEDIA') ?></a></li>
+					</ul>
+					
+					<div class="search">
+						<input type="text" class="query"/>
+						<input type="submit" value="" class="searchBtn"/>
+					</div>
+				</div>
+			</div><!-- END mobileNavi -->
+			
+			<div class="section">
+				<div class="inner">
+					<div class="overlay">
+						<div class="text fadeInUp animated">
+							<p class="title"><span><?php echo $this->__('Super Simplified') ?></span> <?php echo $this->__('Skincare') ?></p>
+							<p class="subtitle"><?php echo $this->__('Choosing the right skin products can be confusing. Make it simple with MD.') ?></p>
+						</div>
+						<a href="#" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a>
+						<a href="#" class="watchNow pinkHollowBtn"><?php echo $this->__('WATCH VIDEO') ?></a>
+					</div>
+				</div>
+			</div>
+		</div><!-- END header -->
+		
+		<div id="categories">
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-hair.jpg)"></div></div>
+						<p><span><?php echo $this->__('Hair') ?></span></p>
+					</a>
+				</li>
+				<li class="alt">
+					<a href="#">
+						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-lash-factor.jpg)"></div></div>
+						<p><span><?php echo $this->__('Lash Factor') ?></span></p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-skin.jpg)"></div></div>
+						<p><span><?php echo $this->__('Skin') ?></span></p>
+					</a>
+				</li>
+				<li class="alt">
+					<a href="#">
+						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-wellness.jpg)"></div></div>
+						<p><span><?php echo $this->__('Wellness') ?></span></p>
+					</a>
+				</li>
+			</ul>
+		</div><!-- END categories -->
+		
+		<div id="testimonials">
+			<div class="section">
+				<div class="text">
+					<blockquote class="animated fadeInRightBig"><?php echo $this->__('My family and I have also struggled with lash, hair and wellness issues; that is why I created MD') ?> <span class="lastWord"><?php echo $this->__('products.') ?></span></blockquote>
+					<cite class="animated fadeIn"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/testimonial-pic.jpg" alt=""/><em><span><?php echo $this->__('Dr. Susan Lin') ?></span><?php echo $this->__('FOUNDER &amp; CREATOR OF MD HAIR') ?></em></cite>
+				</div>
+				<div class="product">
+					<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/testimonial-product.png" alt="" class="animated fadeInLeftBig"/>
+					<a href="#" class="pinkSolidBtn viewBtn animated fadeIn"><?php echo $this->__('VIEW PRODUCT') ?></a>
+				</div>
+			</div>
+		</div><!-- END testimonials -->
+		
+		<div id="infoBar">
+			<div class="section clearfix">
+				<div class="freeShipping">
+					<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/truck-imagepng.png" alt="" class="truck"/>
+					<p class="title"><span><?php echo $this->__('FREE SHIPPING') ?></span><?php echo $this->__('(US ONLY)') ?></p>
+					<p class="code"><?php echo $this->__('USE CODE: FREESHIP') ?></p>
+				</div>
+				<div class="howLook">
+					<a href="https://www.youtube.com/watch?v=xillqeHHY-c&feature=youtu.be" class="video" target="_BLANK"></a>
+					<div class="text">
+						<p class="title"><span><?php echo $this->__('how to look and')?></span> <?php echo $this->__('feel more beautiful')?></p>
+						<a href="https://www.youtube.com/watch?v=xillqeHHY-c&feature=youtu.be" target="_BLANK" class="watchNow"><?php echo $this->__('WATCH NOW') ?></a>
+					</div>
+				</div>
+			</div>
+		</div><!-- END infoBar -->
+		
+		<div id="asSeenIn">
+			<p class="title"><?php echo $this->__('As seen in') ?></p>
+			<div class="logos"></div>
+		</div><!-- END asSeenIn -->
+		
+		<div id="tryIt">
+			<div class="model">
+				<div class="section">
+					<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/try-it-product.png" alt="" class="product animated fadeInDown"/>
+					<div class="overlay animated fadeInUp">
+						<p class="title"><?php echo $this->__('TRY OUR') ?><em><?php echo $this->__('Best Selling') ?></em><span><?php echo $this->__('BEAUTY PRODUCT: LASH FACTOR!') ?></span></p>
+						<a href="#" class="pinkSolidBtn discoverBtn"><?php echo $this->__('DISCOVER') ?></a>
+						<a href="#" class="redSolidBtn tryBtn"><?php echo $this->__('TRY NOW') ?></a>
+					</div>
+					<div class="beforeAfter">
+						<p class="title"><?php echo $this->__('SLIDE TO SEE BEFORE AND AFTER EFFECT') ?></p>
+						<div class="slider">
+							<div class="images twentytwenty-container">
+								<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/before-eyelash.jpg" alt=""/>
+								<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/after-eyelash.jpg" alt=""/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- END tryIt -->
+		
+		<div id="featured">
+			<div class="section">
+				<p class="title"><span><?php echo $this->__('FEATURED') ?></span> <em><?php echo $this->__('favorites') ?></em></p>
+				<ul class="products">
+					<li>
+						<div class="image"><div class="inner"><a href="#"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/featured-product01.jpg" alt=""/></a></div></div>
+						<div class="name equalHeight"><a href="#"><?php echo $this->__('MD Revitalizing Shampoo') ?><br/><?php echo $this->__('and Conditioner Bundle') ?></a></div>
+						<a href="#" class="pinkSolidBtn shopNowBtn"><?php echo $this->__('SHOP NOW') ?></a>
+					</li>
+					<li>
+						<div class="image"><div class="inner"><a href="#"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/featured-product02.jpg" alt=""/></a></div></div>
+						<div class="name equalHeight"><a href="#"><?php echo $this->__('MD Beauty') ?><br/><?php echo $this->__('Essentials Bundle') ?></a></div>
+						<a href="#" class="pinkSolidBtn shopNowBtn"><?php echo $this->__('SHOP NOW') ?></a>
+					</li>
+					<li>
+						<div class="image"><div class="inner"><a href="#"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/featured-product03.jpg" alt=""/></a></div></div>
+						<div class="name equalHeight"><a href="#"><?php echo $this->__('MD Nutri Hair') ?><br/><?php echo $this->__('Ultimate Program') ?></a></div>
+						<a href="#" class="pinkSolidBtn shopNowBtn"><?php echo $this->__('SHOP NOW') ?></a>
+					</li>
+					<li>
+						<div class="image"><div class="inner"><a href="#"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/featured-product04.jpg" alt=""/></a></div></div>
+						<div class="name equalHeight"><a href="#"><?php echo $this->__('NEW MD Lash Factor') ?><br/><?php echo $this->__('Eyelash Conditioner') ?></a></div>
+						<a href="#" class="pinkSolidBtn shopNowBtn"><?php echo $this->__('SHOP NOW') ?></a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- END featured -->
+		
+		<div id="getSocials">
+			<div class="section">
+				<p class="title"><?php echo $this->__('Get social') ?> <a href="#"><?php echo $this->__('@MDfactor') ?></a></p>
+				<ul class="images">
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image01.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image02.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image03.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image04.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image05.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image06.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image07.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image08.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image09.jpg)"></a></div></li>
+					<li><div class="image zoomEffect"><a href="#" class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/getsocials-image10.jpg)"></a></div></li>
+				</ul>
+			</div>
+		</div><!-- END getSocials -->
+		
+		<div id="benefits">
+			<div class="section">
+				<ul>
+					<li><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/benefit-thicker-hair.png" alt=""/><p><?php echo $this->__('Fuller, thicker,') ?><span><?php echo $this->__('younger-looking hair') ?></span></p></li>
+					<li><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/benefit-gorgeous-lashes.png" alt=""/><p><?php echo $this->__('Gorgeous,') ?><span><?php echo $this->__('lashes') ?></span></p></li>
+					<li><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/benefit-lift-illuminate.png" alt=""/><p><?php echo $this->__('Lift, Firm &amp;') ?><span><?php echo $this->__('Illuminate') ?></span></p></li>
+				</ul>	
+			</div>
+		</div><!-- END benefits -->
+		
+		<div id="services">
+			<div class="section">
+				<ul class="listing owl-carousel clearfix">
+					<li>
+						<a href="#">
+							<div class="image"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/services-image01.jpg)"></div></div>
+							<div class="desc equalHeight">
+								<p class="title"><?php echo $this->__('Super Simplified Skincare') ?></p>
+								<p><?php echo $this->__('Choosing the right skin products can be confusing. Make it simple with MD.') ?></p>
+							</div>
+						</a>
+						<div class="options">
+							<a href="#" class="option comment">0</a><a href="#" class="option like">0</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<div class="image"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/services-image02.jpg)"></div></div>
+							<div class="desc equalHeight">
+								<p class="title"><?php echo $this->__('Super Simplified Skincare') ?></p>
+								<p><?php echo $this->__('Choosing the right skin products can be confusing. Make it simple with MD.') ?></p>
+							</div>
+						</a>
+						<div class="options">
+							<a href="#" class="option comment">0</a><a href="#" class="option like">0</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<div class="image"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/services-image03.jpg)"></div></div>
+							<div class="desc equalHeight">
+								<p class="title"><?php echo $this->__('Super Simplified Skincare') ?></p>
+								<p><?php echo $this->__('Choosing the right skin products can be confusing. Make it simple with MD.') ?></p>
+							</div>
+						</a>
+						<div class="options">
+							<a href="#" class="option comment">0</a><a href="#" class="option like">0</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div><!-- END services -->
+		
+		<div id="getUpdate">
+			<div class="section">
+				<p class="title"><span><?php echo $this->__('be the first to know') ?></span><?php echo $this->__('Receive the latest updates and deals from us!') ?></p>
+			</div>
+		</div><!-- END getUpdate -->
+		
+		<div id="subscribe">
+			<div class="section">
+				<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/subscribe-products.png" alt="" class="products"/>
+			
+				<div class="fields clearfix">
+					<div class="field"><input type="text" placeholder="<?php echo $this->__('Email') ?>" class="textbox"/></div>
+					<div class="field"><input type="text" placeholder="<?php echo $this->__('Name') ?>" class="textbox"/></div>
+					<a href="#" class="submitBtn pinkSolidBtn"><?php echo $this->__('SUBSCRIBE') ?> <span> <?php echo $this->__('NOW') ?></span></a>
+				</div>
+				
+				<div class="overlay">
+					<p class="title"><em><?php echo $this->__('10% OFF') ?></em><span><?php echo $this->__('ONLINE EXCLUSIVE') ?></span><?php echo $this->__('OFFER VALID TILL 10 ARPIL 2016') ?></p>
+					<a href="#" class="pinkSolidBtn showNowBtn"><?php echo $this->__('SHOP NOW') ?></a>
+				</div>
+			</div>
+		</div><!-- END subscribe -->
+		
+		<?php echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+        <?php echo $this->getAbsoluteFooter() ?>
+        <!-- END footer -->
+	</div><!-- END mainWrapper -->
+</body>
+</html>

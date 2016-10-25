@@ -234,8 +234,8 @@
 							<p class="title"><span><?php echo $this->__('Super Simplified') ?></span> <?php echo $this->__('Skincare') ?></p>
 							<p class="subtitle"><?php echo $this->__('Choosing the right skin products can be confusing. Make it simple with MD.') ?></p>
 						</div>
-						<a href="#" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a>
-						<a href="#" class="watchNow pinkHollowBtn"><?php echo $this->__('WATCH VIDEO') ?></a>
+						<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>categories" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a>
+						<a href="https://youtu.be/xiIIqeHHY-c" class="watchNow pinkHollowBtn"><?php echo $this->__('WATCH VIDEO') ?></a>
 					</div>
 				</div>
 			</div>
@@ -244,25 +244,25 @@
 		<div id="categories">
 			<ul class="clearfix">
 				<li>
-					<a href="#">
+					<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-hair">
 						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-hair.jpg)"></div></div>
 						<p><span><?php echo $this->__('Hair') ?></span></p>
 					</a>
 				</li>
 				<li class="alt">
-					<a href="#">
+					<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-lash-factor">
 						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-lash-factor.jpg)"></div></div>
 						<p><span><?php echo $this->__('Lash Factor') ?></span></p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-skin">
 						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-skin.jpg)"></div></div>
 						<p><span><?php echo $this->__('Skin') ?></span></p>
 					</a>
 				</li>
 				<li class="alt">
-					<a href="#">
+					<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-wellness">
 						<div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-wellness.jpg)"></div></div>
 						<p><span><?php echo $this->__('Wellness') ?></span></p>
 					</a>

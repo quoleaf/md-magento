@@ -15,7 +15,25 @@
                 </new_cms_layout> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <landingpage module="page" translate="label">
+                    <label>MD Landingpage</label>
+                    <template>page/md-landingpage.phtml</template>
+                    <layout_handle>landingpage</layout_handle>
+                </landingpage> 
+            </layouts>
+        </page>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <MD_Theme>
+                    <file>md_theme.xml</file>
+                </MD_Theme>
+            </updates>
+        </layout>
+    </frontend>
 </config>
 
 

@@ -569,19 +569,20 @@ body.withTopbar #topNavi .navi li .sub {
 	background-image: url(../images/cart-white-ico.png);
 }
 
-#topNavi .search {
+#topNavi .search.home {
 	float: right;
-	width: 15px;
-	height: 15px;
+	width: 15px!important;
+	height: 15px!important;
 	margin: 57px 9px 0 0;
-	background: url(../images/search-ico.png) no-repeat center;
-	-webkit-background-size: 100%;
-	-moz-background-size: 100%;
-	background-size: 100%;
-	-ms-behavior: url(backgroundsize.min.htc);
-	text-indent: -9999em;
+	background: url(../images/search-ico.png) no-repeat center!important;
+	-webkit-background-size: 100%!important;
+	-moz-background-size: 100%!important;
+	background-size: 100%!important;
+	-ms-behavior: url(backgroundsize.min.htc)!important;
+	text-indent: -9999em!important;
 	position: relative;
 	z-index: 2;
+	border:0;
 }
 
 

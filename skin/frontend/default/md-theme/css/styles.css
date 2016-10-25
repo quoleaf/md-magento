@@ -3266,6 +3266,11 @@ body {
     max-width: 300px;
     min-height: 90px;
   }
+  .logo.home {
+    max-width: initial;
+    min-height: initial;
+    min-width: initial;
+  }
   .logo .small {
     display: none;
   }

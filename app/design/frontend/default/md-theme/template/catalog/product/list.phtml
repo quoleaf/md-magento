@@ -1,37 +1,43 @@
 <!-- append section to header fo category  -->
 <script>
 jQuery(function($){
-$("#header").append('<div class="section"><div class="inner"><div class="overlay"><div class="text fadeInUp animated"><p class="title"><span>Physician-formulated</span> Fast-Acting. Real Results.</p></div><a href="#" class="shopNow pinkSolidBtn">SHOP NOW</a><a href="#" class="watchNow pinkHollowBtn">WATCH VIDEO</a></div></div></div>')
+var header_banner = $('.header-banner').html();    
+$("#header").append(header_banner);
+$('.main-container.col3-layout .header-banner').remove();
 $("#header").addClass("forCategory")
 $("#topNavi").removeClass("blueVer")
 $("#topNavi").addClass("whiteVer")
 })
 </script>
 
+<div class="header-banner">
+<div class="section"><div class="inner"><div class="overlay"><div class="text fadeInUp animated"><p class="title"><span><?php echo $this->__('Physician-formulated') ?></span> <?php echo $this->__('Fast-Acting. Real Results.') ?></p></div><a href="#" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a><a href="#" class="watchNow pinkHollowBtn"><?php echo $this->__('WATCH VIDEO') ?></a></div></div></div>
+</div>
+
 <div id="categories">
     <ul class="clearfix">
         <li>
             <a href="http://md-factor.com/magento/hair">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-hair-black.jpg');?>)"></div></div>
-                <p><span>Hair</span></p>
+                <p><span><?php echo $this->__('Hair') ?></span></p>
             </a>
         </li>
         <li class="alt">
             <a href="http://md-factor.com/magento/md-lash-factor">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-lash-factor-black.jpg');?>)"></div></div>
-                <p><span>Lash Factor</span></p>
+                <p><span><?php echo $this->__('Lash Factor') ?></span></p>
             </a>
         </li>
         <li>
             <a href="http://md-factor.com/magento/md-skin">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-skin-black.jpg');?>)"></div></div>
-                <p><span>Skin</span></p>
+                <p><span><?php echo $this->__('Skin') ?></span></p>
             </a>
         </li>
         <li class="alt">
             <a href="http://md-factor.com/magento/md-wellness">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-wellness-black.jpg');?>)"></div></div>
-                <p><span>Wellness</span></p>
+                <p><span><?php echo $this->__('Wellness') ?></span></p>
             </a>
         </li>
     </ul>
@@ -41,7 +47,7 @@ $("#topNavi").addClass("whiteVer")
     <div class="section clearfix">
         <div id="sidebar">
             <div class="sideNavi">
-                <p class="title">SHOP BY CATEGORY</p>
+                <p class="title"><?php echo $this->__('SHOP BY CATEGORY') ?></p>
                 <ul>
                      <?php
                         $obj = new Mage_Catalog_Block_Navigation();

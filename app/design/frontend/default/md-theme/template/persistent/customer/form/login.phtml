@@ -52,14 +52,14 @@
         </div>
         
         <div class="right">
-            <p class="title">CREATE A NEW ACCOUNT</p>
-            <p class="subtitle">Create an account with us and you’ll be able to:</p>
+            <p class="title"><?php echo $this->__('CREATE A NEW ACCOUNT') ?></p>
+            <p class="subtitle"><?php echo $this->__('Create an account with us and you’ll be able to:') ?></p>
             <ul class="benefits">
-                <li>Check out faster</li>
-                <li>Save multiple shipping addresses</li>
-                <li>Access your order history</li>
-                <li>Track new orders</li>
-                <li>Save items to your wish list</li>
+                <li><?php echo $this->__('Check out faster') ?></li>
+                <li><?php echo $this->__('Save multiple shipping addresses') ?></li>
+                <li><?php echo $this->__('Access your order history') ?></li>
+                <li><?php echo $this->__('Track new orders') ?></li>
+                <li><?php echo $this->__('Save items to your wish list') ?></li>
             </ul>
             <a title="<?php echo $this->quoteEscape($this->__('Create an Account')) ?>" class="pinkSolidBtn createAccount button" href="<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>"><?php echo $this->__('Create an Account') ?>
             </a>

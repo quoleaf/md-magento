@@ -3,7 +3,7 @@
 jQuery(function($){
 var header_banner = $('.header-banner').html();    
 $("#header").append(header_banner);
-$('.main-container.col3-layout .header-banner').remove();
+$('.header-banner').remove();
 $("#header").addClass("forCategory")
 $("#topNavi").removeClass("blueVer")
 $("#topNavi").addClass("whiteVer")
@@ -17,25 +17,25 @@ $("#topNavi").addClass("whiteVer")
 <div id="categories">
     <ul class="clearfix">
         <li>
-            <a href="http://md-factor.com/magento/hair">
+            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>hair">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-hair-black.jpg');?>)"></div></div>
                 <p><span><?php echo $this->__('Hair') ?></span></p>
             </a>
         </li>
         <li class="alt">
-            <a href="http://md-factor.com/magento/md-lash-factor">
+            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>md-lash-factor">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-lash-factor-black.jpg');?>)"></div></div>
                 <p><span><?php echo $this->__('Lash Factor') ?></span></p>
             </a>
         </li>
         <li>
-            <a href="http://md-factor.com/magento/md-skin">
+            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>md-skin">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-skin-black.jpg');?>)"></div></div>
                 <p><span><?php echo $this->__('Skin') ?></span></p>
             </a>
         </li>
         <li class="alt">
-            <a href="http://md-factor.com/magento/md-wellness">
+            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>md-wellness">
                 <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-wellness-black.jpg');?>)"></div></div>
                 <p><span><?php echo $this->__('Wellness') ?></span></p>
             </a>

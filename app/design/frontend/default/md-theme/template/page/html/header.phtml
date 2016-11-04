@@ -105,7 +105,7 @@
                                      ->addAttributeToFilter('visibility', 4)
                                      ->setOrder('price', 'ASC');
                                          echo '
-                                         <li><a href="#">'.$_subcategory->getName().'</a>';
+                                         <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
                                          if (count($products) > 0){    
 
                                             echo '<ul>';
@@ -148,7 +148,7 @@
                 </ul> -->
 
             </div>
-            
+
             <div id="mobileMenu">
                 <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
                 <a href="#" class="menuBtn"><span></span><span></span><span></span></a>
@@ -158,87 +158,67 @@
                 <a href="#" class="closeBtn">Close</a>
                 <div class="inner">
                     <ul class="links">
-                        <li class="hasSub"><a href="#" class="shop">SHOP</a>
-                            <ul>
-                                <li class="hasSub"><a href="#">MD HAIR</a>
-                                    <ul>
-                                        <li><a href="#">CLEANSING &amp; CONDITIONING</a></li>
-                                        <li><a href="#">HAIR SUPPLEMENTS</a></li>
-                                        <li><a href="#">SCALP TREATMENTS</a></li>
-                                        <li><a href="#">VALUE ADDED SETS</a></li>
-                                        <li><a href="#">COLOR &amp; SHINE</a></li>
-                                    </ul>
-                                </li>
-                                <li class="hasSub"><a href="#">MD LASH FACTOR</a>
-                                    <ul>
-                                        <li><a href="#">LASH CONDITIONERS</a></li>
-                                        <li><a href="#">LASH AND EYEBROW CONDITIONER</a></li>
-                                    </ul>
-                                </li>
-                                <li class="hasSub"><a href="#">MD SKIN</a>
-                                    <ul>
-                                        <li><a href="#">CLEANSERS &amp; TONERS</a></li>
-                                        <li><a href="#">SERUMS &amp; TREATMENTS</a></li>
-                                        <li><a href="#">ANTI-AGING TREATMENTS</a></li>
-                                        <li><a href="#">EYE TREATMENTS</a></li>
-                                        <li><a href="#">OILY / ACNE PRONE TREATMENTS</a></li>
-                                        <li><a href="#">PROTECTION</a></li>
-                                    </ul>
-                                </li>
-                                <li class="hasSub"><a href="#">MD WELLNESS</a>
-                                    <ul>
-                                        <li><a href="#">NUTRI CLEANSE</a></li>
-                                        <li><a href="#">ULTIMATE GREEN CAPSULES</a></li>
-                                        <li><a href="#">ULTIMATE BEAUTY DRINK MIX</a></li>
-                                        <li><a href="#">ADRENAL PRO</a></li>
-                                        <li><a href="#">INTIMATE RESTORE</a></li>
-                                        <li><a href="#">NUTRI HAIR</a></li>
-                                    </ul>                               
-                                </li>
-                                <li class="hasSub"><a href="#" class="byConcern">SHOP BY CONCERN</a>
-                                    <ul>
-                                        <li class="hasSub"><a href="#">MD HAIR</a>
-                                            <ul>
-                                                <li><a href="#">LOOSING HAIR FROM STRESS</a></li>
-                                                <li><a href="#">THINNING SCALP</a></li>
-                                                <li><a href="#">REASONS FOR HAIR LOSS</a></li>
-                                                <li><a href="#">THIN HAIR</a></li>
-                                                <li><a href="#">OILY SCALP</a></li>
-                                                <li><a href="#">DRY HAIR</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hasSub"><a href="#">MD LASH FACTOR</a>
-                                            <ul>
-                                                <li><a href="#">THINNING EYEBROWS</a></li>
-                                                <li><a href="#">THINNING LASHES</a></li>
-                                            </ul>                                       
-                                        </li>
-                                        <li class="hasSub"><a href="#">MD SKIN</a>
-                                            <ul>
-                                                <li><a href="#">AGE OR DARK SPOTS</a></li>
-                                                <li><a href="#">LOSS OF FIRMNESS</a></li>
-                                                <li><a href="#">FINE LINE AND CROWS FEET</a></li>
-                                                <li><a href="#">ACNE MARKS</a></li>
-                                                <li><a href="#">OILY SKIN</a></li>
-                                            </ul>                                       
-                                        </li>
-                                        <li class="hasSub"><a href="#">MD WELLNESS</a>
-                                            <ul>
-                                                <li><a href="#">DETOX ANTIOXIDANT</a></li>
-                                                <li><a href="#">STRESS AND WEIGHT REDUCTION</a></li>
-                                                <li><a href="#">SEXUAL WELLNESS</a></li>
-                                            </ul>                                       
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                    <li class="hasSub"><a href="#" class="shop"><?php echo $this->__('SHOP') ?></a> 
+                      <ul class="types">
+                        <?php
+                            $obj = new Mage_Catalog_Block_Navigation();
+                            $storeCategories = $obj->getStoreCategories();
+                            Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                            $limit_category = 4;
+                            $ctr = 1;
+
+                            foreach ($storeCategories as $_category):
+                            if($ctr <= $limit_category) :
+                        ?>
+                    <li class="hasSub"> 
+                        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
+                        <?php
+                            $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                        
+                            if ($_imgUrl = $_category->getImageUrl()) {
+                                    
+                            }
+                        ?>
+                        <?php echo $_category->getName(); ?></a>
+                        <ul>
+                        <?php 
+                            
+                            
+                                $_subcategories = $_category->getChildrenCategories();
+                                if (count($_subcategories) > 0){    
+
+                                    foreach($_subcategories as $_subcategory){
+                                        //load products now
+                                    $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
+                                     ->getProductCollection()
+                                     ->addAttributeToSelect('*')
+                                     ->addAttributeToFilter('status', 1)
+                                     ->addAttributeToFilter('visibility', 4)
+                                     ->setOrder('price', 'ASC');
+                                         echo '
+                                         <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
+                                         if (count($products) > 0){    
+
+                                            echo '<ul>';
+                                            foreach($products as $_product){
+                                               echo '<li>
+                                                <a href="'.$_product->getProductUrl().'">'.$_product->getName().'</a>
+                                                </li>';
+                                            }
+                                                
+                                            echo '</ul>';
+                                        }
+                                         echo '</li>';
+                                    }// end foreach subcat
+                                }// end if count sub
+                            
+                        ?>      
+                         </ul>
                         </li>
-                        <li><a href="http://md-factor.com/about"><?php echo $this->__('ABOUT') ?></a></li>
-                        <li><a href="http://md-factor.com/rewards"><?php echo $this->__('REWARDS') ?></a></li>
-                        <li><a href="<?php echo Mage::getUrl('home'); ?>"><?php echo $this->__('STORE') ?></a></li>
-                        <li><a href="http://md-factor.com/blog"><?php echo $this->__('BLOG') ?></a></li>
-                        <li><a href="http://md-factor.com/pressmedia"><?php echo $this->__('MEDIA') ?></a></li>
-                    </ul>
+                        <?php  $ctr++; endif;   endforeach; ?>                           
+                       </ul> 
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_lg')->toHtml(); ?>      
+                    </ul> 
                     
                     <div class="search">
                         <input type="text" class="query"/>

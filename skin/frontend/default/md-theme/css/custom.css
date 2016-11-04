@@ -378,7 +378,7 @@ body.stickyNavi #header.forPressMedia {
 }
 
 body.stickyNavi #topNavi .search {
-	margin-top: 49px;
+	margin-top: 40px;
 }
 
 body.stickyNavi #topNavi.whiteVer {
@@ -571,18 +571,20 @@ body.withTopbar #topNavi .navi li .sub {
 
 #topNavi .search.home {
 	float: right;
-	width: 15px!important;
-	height: 15px!important;
-	margin: 57px 9px 0 0;
-	background: url(../images/search-ico.png) no-repeat center!important;
-	-webkit-background-size: 100%!important;
-	-moz-background-size: 100%!important;
-	background-size: 100%!important;
+	width: 180px!important;
+	height: 30px!important;
+	margin: 50px 9px 0 0;
+	background: url(../images/search-new.png) no-repeat left!important;
+	-webkit-background-size: 20px!important;
+	-moz-background-size: 20px !important;
+	background-size: 20px!important;
 	-ms-behavior: url(backgroundsize.min.htc)!important;
-	text-indent: -9999em!important;
+	text-indent: -9999em;
 	position: relative;
 	z-index: 2;
-	border:0;
+	border: 2px solid #e8418b;
+	border-radius: 5px;
+	padding-left: 25px;
 }
 
 
@@ -4116,6 +4118,7 @@ display: table;
 
 .pinkSolidBtn:hover {
 	background-color: #db3d83;
+	text-decoration: none;
 }
 
 .redSolidBtn {
@@ -4137,6 +4140,7 @@ display: table;
 
 .redSolidBtn:hover {
 	background-color: #d0005c;
+	text-decoration: none;
 }
 
 .pinkHollowBtn {
@@ -4159,6 +4163,7 @@ display: table;
 .pinkHollowBtn:hover {
 	color: #fff;
 	background-color: #e8418b;
+	text-decoration: none;
 }
 
 .showOnMobile {

@@ -3632,8 +3632,9 @@ display: table;
 }
 
 #product .left .bigImage .inner .pic img {
-	max-width: 100%;
+	width: 90%;
 	max-height: 631px;
+	margin: 0 auto; 
 }
 
 #product .left .thumbnails {
@@ -3784,6 +3785,7 @@ display: table;
 	-webkit-transition: background-color 0.3s;
 	-moz-transition: background-color 0.3s;
 	transition: background-color 0.3s;
+	border: none;
 }
 
 #product .right .info .buyNow span {
@@ -3856,7 +3858,7 @@ display: table;
 	font-size: 18px;
 	color: #555555;
 	line-height: 1.2;
-	height:250px;
+	height:400px;
 	overflow-y:auto;
 }
 
@@ -7145,6 +7147,10 @@ input, select, textarea {
 	#product .right .tabs .tabInfo {
 		padding: 20px 16px;
 		font-size: 14px;
+	}
+
+	.tabInfo object {
+	    height: 330px;
 	}
 	
 	#moreInfo {

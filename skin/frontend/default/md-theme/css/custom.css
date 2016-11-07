@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
 	font-family:'HelveticaLTStd-Light';
 	src: url('../fonts/HelveticaLTStd-Light_gdi.eot');
 	src: url('../fonts/HelveticaLTStd-Light_gdi.eot?#iefix') format('embedded-opentype'),
@@ -387,6 +387,10 @@ body.stickyNavi #topNavi.whiteVer {
 
 body.stickyNavi #topNavi.whiteVer .logo {
 	background-image: url(../images/logo-brown.png);
+	    background-size: contain;
+    height: 41px;
+    margin-bottom: 10px;
+    min-height: auto;
 }
 
 body.stickyNavi #topNavi.whiteVer .search {
@@ -507,7 +511,7 @@ body.withTopbar #topNavi{
 
 body.withTopbar.scrolling #topNavi{
 	top: 31px;
-	max-height: 95px;
+	max-height: 85px;
 }
 
 body.withTopbar.stickyNavi #topNavi .navi li .sub {
@@ -7343,3 +7347,64 @@ div#sidebar .sideNavi ul li.active a {
 	}
 }
 /*ROM additional CSS 10.12.16*/
+
+
+/*Patrick Flag Translation Header */
+.stickyNavi .translation-flag{
+    margin-top: 44px;
+}
+.translation-flag{
+	display: inline-block;
+    float: right;
+    margin-top: 55px;
+    margin-right: 7px;
+    position: relative;
+    z-index: 99;
+}
+.translation-flag a{
+	display: inline-block;
+    margin: 0 2px;
+}
+
+.translation-flag a img{
+	width: 32px;
+    display: table-cell;
+}
+
+@media only screen and (max-width : 1580px) {
+	#topNavi .navi {
+    	left: -165px;
+	}
+}
+
+@media only screen and (max-width : 1380px) {
+	#topNavi .navi {
+	    left: -254px;
+	}
+}
+@media only screen and (max-width : 1250px) {
+	.translation-flag{
+		margin:0;
+		float:none;
+	}
+	.translation-flag a img {
+   		width: 50px;
+	}
+	.translation-flag a {
+	    margin-right: 11px;
+	}
+	#mobileNavi .search {
+	    position: relative;
+	    margin-bottom: 30px;
+	}
+	#mobileMenu .logo {
+		margin-top: 0;
+	    padding: 0;
+	    height: 65px;
+	    width: 100px;
+	    min-height: auto;
+	}
+	.stickyNavi .translation-flag {
+    	margin-top: 0;
+	}
+}

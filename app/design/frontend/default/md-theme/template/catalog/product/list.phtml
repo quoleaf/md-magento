@@ -226,6 +226,7 @@ $("#topNavi").addClass("whiteVer")
                              <div class="desc">
                                     <a href="<?php echo $_product->getProductUrl() ?>" class="name"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a>
                                     <span class="price"><?php echo $this->getPriceHtml($_product, true) ?></span>
+                                    <?php echo Mage::helper('core/mwrewardpoints')->pointsProductListRewardPoints($_product); ?>
                             </div>
                             
                              <?php if(!$_product->canConfigure() && $_product->isSaleable()): ?>

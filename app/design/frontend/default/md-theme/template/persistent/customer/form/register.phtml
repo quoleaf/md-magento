@@ -166,6 +166,7 @@
                         <label for="is_subscribed"><?php echo $this->__('Sign Up for Newsletter') ?></label>
                     </li>
                 <?php endif ?>
+                <?php echo Mage::helper('core/mwrewardpoints')->pointsCreateAccountRewardPoints(); ?>
                 <?php echo $this->getChildHtml('persistent.remember.me'); ?>
             </ul>
             <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>

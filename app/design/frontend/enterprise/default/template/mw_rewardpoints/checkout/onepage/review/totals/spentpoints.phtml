@@ -1,0 +1,24 @@
+<?php $quote = Mage::getSingleton('checkout/session')->getQuote();
+	  $rewardpoints = $quote->getMwRewardpoint();
+	  $reward_point_sell_product = $quote->getMwRewardpointSellProduct();
+	  $store_id = Mage::app()->getStore()->getId();
+	  $points = 0;
+	  if ($quote->getPayment()->hasMethodInstance()){            
+		  $paymentMethod = $quote->getPayment()->getMethodInstance();
+		  if($paymentMethod->getCode() == 'rewardpoints') {
+	
+		  	 $base_grand_total = $quote->getBaseGrandTotal();
+		  	 $points = (int)Mage::helper('rewardpoints')->roundPoints(Mage::helper('rewardpoints')->exchangeMoneysToPoints($base_grand_total,$store_id),$store_id);
+		  } 	
+	  }
+	  $total_reward_point = $rewardpoints + $reward_point_sell_product + $points;
+	  
+	  ?>
+
+
+<?php if($total_reward_point && ($reward_point_sell_product || $points)):?>
+	<tr>
+	    <td colspan="3" class="a-right" colspan="1"><b><?php echo Mage::helper("rewardpoints")->__("Total Points");?></b></td>
+	    <td class="a-right"><span class="price"><?php echo Mage::helper('rewardpoints')->formatPoints($total_reward_point,$store_id)?></span></td>
+	</tr> 
+<?php endif;?>

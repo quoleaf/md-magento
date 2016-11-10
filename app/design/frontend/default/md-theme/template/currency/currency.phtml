@@ -1,0 +1,22 @@
+<?php if($this->getCurrencyCount() > 1): ?>
+
+<nav class="MDCurrencyWrapper">
+    <ul>
+        <li>
+        <a class="selectedCurrency <?php echo $current_currency_code = Mage::app()->
+        getStore()->getCurrentCurrencyCode(); ?>" href="javascript:void(0);"></a>
+            <ul class="currencyNames" onchange="window.location.href=this.value" name="custom-currency-selector" id="custom-currency-selector">
+                <?php foreach ($this->
+                getCurrencies() as $_code => $_name): ?>
+                <li> 
+                    <a class="<?php echo $_code ?>" href="<?php echo $this->getSwitchCurrencyUrl($_code)?> <?php if($_code == $this->getCurrentCurrencyCode()): ?> <?php endif; ?>"> 
+                        <?php echo $_code ?>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<?php endif; ?>

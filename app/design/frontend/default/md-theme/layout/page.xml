@@ -95,6 +95,8 @@
                 <action method="addCss"><stylesheet>css/lity.min.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/owl.carousel.min.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/twentytwenty.css</stylesheet></action>
+                <action method="addLinkRel"><rel>stylesheet</rel><href>//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css</href></action>
+
                 
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
 

@@ -60,13 +60,11 @@
                 <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
                 <a href="#" class="search"><img src="<?php echo $this->getSkinUrl('images/search-new.png') ?>"><?php echo $this->__('Search Products') ?></a>
                 
-                <div class="translation-flag">
-                    <a href="http://au.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/au-flag.png" /></a>
-                    <a href="http://ca.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/ca-flag.png" /></a>
-                    <a href="http://ch.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/ch-flag.png" /></a>
-                    <a href="http://mx.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/mx-flag.png" /></a>
-                    <a href="http://br.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/br-flag.png" /></a>
-                </div>
+                <!-- Custom Currency -->
+                    
+                    <?php echo $this->getChildHtml('custom_currency_selector') ?>
+                    
+                <!-- END of Custom Currency -->
 
                 <ul class="navi">
                     <li class="shop"><a href="#"><?php echo $this->__('SHOP') ?></a>
@@ -231,13 +229,13 @@
                         <input type="text" class="query"/>
                         <input type="submit" value="" class="searchBtn"/>
                     </div>
-                    <div class="translation-flag">
-                    <a href="http://au.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/au-flag.png" /></a>
-                    <a href="http://ca.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/ca-flag.png" /></a>
-                    <a href="http://ch.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/ch-flag.png" /></a>
-                    <a href="http://mx.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/mx-flag.png" /></a>
-                    <a href="http://br.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/br-flag.png" /></a>
-                    </div>
+
+                    <!-- Custom Currency -->
+                    
+                    <?php echo $this->getChildHtml('custom_currency_selector') ?>
+                    
+                    <!-- END of Custom Currency -->
+                    
                 </div>
             </div><!-- END mobileNavi -->
             

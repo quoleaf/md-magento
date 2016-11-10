@@ -7,4 +7,11 @@
             <action method="setIsHandle"><applied>1</applied></action>
         </reference>
     </landingpage> 
+
+    <default>
+        <reference name="header">
+            <block type="directory/currency" name="custom_currency_selector" template="currency/currency.phtml"/>
+        </reference>
+        <remove name="currency" />
+    </default>
 </layout>

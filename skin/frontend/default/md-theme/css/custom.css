@@ -6063,8 +6063,8 @@ div#sidebar .sideNavi ul li.active a {
   display: block;
   font-size: 15px; }
 
-/**************** Custom ****************/
-.mobileNavi .MDCurrencyWrapper {
+/**************** Custom - rej ****************/
+#mobileNavi .MDCurrencyWrapper {
   float: left !important; }
 
 body.stickyNavi #topNavi .MDCurrencyWrapper {

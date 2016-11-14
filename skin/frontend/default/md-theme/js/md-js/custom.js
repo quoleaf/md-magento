@@ -1,5 +1,32 @@
 jQuery(function($) {
-	
+
+	/* Subdomain Flags */
+	var url = location.hostname.split('.');
+	var subdomain = url.shift();
+	if(subdomain == "au"){
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('AUD');
+	}
+	else if(subdomain == "ca"){
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('CAD');
+	}
+	else if(subdomain == "ch"){
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('CNY');
+	}
+	else if(subdomain == "mx"){
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('MXN');
+	}
+	else if(subdomain == "br"){
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('BRL');
+	}
+	else if(subdomain == "us"){
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('USD');
+	}
+	else{
+		$('.MDCurrencyWrapper .selectedCurrency').addClass('USD');
+	}
+
+
+
 	/* Search Overlay */
 	
 	$("#topNavi .search,#searchOverlay .closeBtn").on("click", function(e){

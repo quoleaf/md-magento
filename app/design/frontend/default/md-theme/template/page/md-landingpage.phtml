@@ -51,10 +51,11 @@
 			<div id="topNavi">
 				<a href="#" class="logo home">MD</a>
 				<a href="#" class="search home"><?php echo $this->__('Search Products') ?></a>
-				
+				<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+
     
                 <!-- START How to add Currency selector to Magento's header -->
-                    <?php echo $this->getChildHtml('custom_currency_selector') ?>
+                    <!-- <?php //echo $this->getChildHtml('custom_currency_selector') ?> -->
                 <!-- END   How to add Currency selector to Magento's header -->
 
 				 <ul class="navi">

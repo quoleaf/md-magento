@@ -59,10 +59,10 @@
 
                 <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
                 <a href="#" class="search"><img src="<?php echo $this->getSkinUrl('images/search-new.png') ?>"><?php echo $this->__('Search Products') ?></a>
-                
+                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
                 <!-- Custom Currency -->
                     
-                    <?php echo $this->getChildHtml('custom_currency_selector') ?>
+                    <!-- <?php //echo //$this->getChildHtml('custom_currency_selector') ?> -->
                     
                 <!-- END of Custom Currency -->
 

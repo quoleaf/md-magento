@@ -1,22 +1,15 @@
-<?php if($this->getCurrencyCount() > 1): ?>
-
 <nav class="MDCurrencyWrapper">
     <ul>
         <li>
-        <a class="selectedCurrency <?php echo $current_currency_code = Mage::app()->
-        getStore()->getCurrentCurrencyCode(); ?>" href="javascript:void(0);"></a>
+        <a class="selectedCurrency CAD" href="javascript:void(0);"></a>
             <ul class="currencyNames" onchange="window.location.href=this.value" name="custom-currency-selector" id="custom-currency-selector">
-                <?php foreach ($this->
-                getCurrencies() as $_code => $_name): ?>
-                <li> 
-                    <a class="<?php echo $_code ?>" href="<?php echo $this->getSwitchCurrencyUrl($_code)?> <?php if($_code == $this->getCurrentCurrencyCode()): ?> <?php endif; ?>"> 
-                        <?php echo $_code ?>
-                    </a>
-                </li>
-                <?php endforeach; ?>
+                <li><a class="AUD" href="http://au.md-factor.com/">AUD</a></li>
+                <li><a class="BRL" href="http://br.md-factor.com/">BRL</a></li>
+                <li><a class="CAD" href="http://ca.md-factor.com/">CAD</a></li>
+                <li><a class="CNY" href="http://ch.md-factor.com/">CNY</a></li>
+                <li><a class="MXN" href="http://mx.md-factor.com/">MXN</a></li>
+                <li><a class="USD" href="http://us.md-factor.com/">USD</a></li>
             </ul>
         </li>
     </ul>
 </nav>
-
-<?php endif; ?>

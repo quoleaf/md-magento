@@ -74,13 +74,35 @@ jQuery.noConflict();
                                 <?php echo $this->getTierPriceHtml() ?>    
                                 </span>
                             </div>
-                                <?php if (!$this->hasOptions()):?>
+
+                            <!-- Quantity -->
+                            <?php if(!$_product->isGrouped()): ?>
+                            <div class="quantity">
+                                <label for="qty"><?php echo $this->__('QUANTITY:') ?></label>
+                                <select id="qty" name="qty" id="qty" title="<?php echo Mage::helper('core')->quoteEscape($this->__('QUANTITY')) ?>">
+                                    <?php $a = max($this->getProductDefaultQty() * 1, 10);?>
+                                    <?php for($i=1; $i<= $a; $i++){?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i ?></option>
+                                    <?php } ?>
+                                </select>   
+                            </div>
+                            <?php endif; ?>
+
+                            <!-- Customer Feedback -->
+                            <div class="feedbackWrapper">
+                                <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
+                            </div> 
+
+                            <!-- Add to cart button -->
+                            <div class="optionsWrapper">
+                                 <?php if (!$this->hasOptions()):?>
                                 <?php if($_product->isSaleable()): ?>
                                 <?php echo $this->getChildHtml('addtocart') ?>
                                 <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
                                 <?php endif; ?>
                                 <?php endif; ?>
                                 <?php endif; ?>
+                            </div>
                         </div>
                         <?php echo Mage::helper('core/mwrewardpoints')->pointsProductDetailRewardPoints($_product); ?>
                         <?php echo Mage::helper('core/mwrewardpoints')->showFacebookRewardPoints(); ?>
@@ -88,10 +110,10 @@ jQuery.noConflict();
                             <ul class="options">
                             <?php 
                             $_descriptionText = $_helper->productAttribute($_product, $_product->getDescription(), 'description');
-                            $videoText = $_product->getData('video');
+                            $videoText = $_helper->productAttribute($_product, $_product->getVideo(), 'video');
                             $ingredientsText = $_product->getData('ingredients');
                             $otherdetailText = $_product->getData('other_details');
-                            $beforeText = $_product->getData('before_and_after');
+                            $beforeText = $_helper->productAttribute($_product, $_product->getbefore_and_after(), 'before_and_after');
                             if(isset($_descriptionText)){
                                 $prodAttrDesc = $_product->getResource()->getAttribute('description');
                                 $_description = $prodAttrDesc->getStoreLabel(Mage::app()->getStore()->getName());
@@ -122,9 +144,9 @@ jQuery.noConflict();
                             </ul>
                             <?php if (isset($_descriptionText)): ?>
                             <div class="tabInfo">
-                                <p class="title">
+                                
                                 <?php echo $_descriptionText; ?>
-                                </p>
+                                
                             </div>
                             <?php endif;?>
                             <?php if (isset($videoText)): ?>

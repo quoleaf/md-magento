@@ -56,7 +56,9 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
 
     <td class="product-cart-info">
 
-        <a href="<?php echo $this->getDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove Item')) ?>" class="btn-remove btn-remove2"><?php echo $this->__('Remove Item') ?></a>
+        <a href="<?php echo $this->getDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove Item')) ?>" class="btn-remove">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
 
         <h2 class="product-name">
         <?php if ($this->hasProductUrl()):?>
@@ -325,7 +327,7 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     </td>
     <?php endif; ?>
     <td class="a-center product-cart-remove">
-        <a href="<?php echo $this->getDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove Item')) ?>" class="btn-remove btn-remove2"><?php echo $this->__('Remove Item') ?></a>
+        <a href="<?php echo $this->getDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove Item')) ?>" class="btn-remove"><i class="fa fa-trash" aria-hidden="true"></i></a>
     </td>
 </tr>
 

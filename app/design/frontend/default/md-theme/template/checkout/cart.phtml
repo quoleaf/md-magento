@@ -34,18 +34,9 @@
 
 <script>jQuery.noConflict()</script>
 <?php $_priceDisplay = ($this->helper('tax')->displayCartBothPrices()) ? 'display-both-prices' : 'display-single-price'; ?>
-<div class="cart <?php echo $_priceDisplay; ?>">
+<div id="cartWrapper" class="cart <?php echo $_priceDisplay; ?> ">
     <div class="page-title title-buttons">
-        <h1><?php echo $this->__('Shopping Cart') ?></h1>
-        <?php if(!$this->hasError()): ?>
-        <ul class="checkout-types top">
-        <?php foreach ($this->getMethods('top_methods') as $method): ?>
-            <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
-            <li><?php echo $methodHtml; ?></li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-        </ul>
-        <?php endif; ?>
+        <h1><?php echo $this->__('Your Shopping Cart') ?></h1>
     </div>
     <?php echo $this->getMessagesBlock()->toHtml() ?>
     <?php echo $this->getChildHtml('form_before') ?>
@@ -66,7 +57,7 @@
         <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
             <thead>
                 <tr>
-                    <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Product') ?></span></th>
+                    <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Cart Items') ?></span></th>
 
                     <th rowspan="<?php echo $mergedCells; ?>">&nbsp;</th>
 
@@ -108,16 +99,20 @@
                     <td colspan="50" class="a-right cart-footer-actions">
 
                         <!-- Make this button the first responder rather than empty cart -->
-                        <button type="submit" style="visibility:hidden;" data-cart-item-update name="update_cart_action" value="update_qty" title="<?php echo $this->quoteEscape($this->__('Update Shopping Cart')); ?>" class="button2 btn-update"><span><span><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
+                      
+                        <button type="submit" name="update_cart_action" data-cart-empty value="empty_cart" title="<?php echo $this->quoteEscape($this->__('Empty Cart')); ?>" class="button2 btn-empty" id="empty_cart_button"><span><span><?php echo $this->__('Empty Cart'); ?></span></span>
+                        </button>
 
-                        <button type="submit" name="update_cart_action" data-cart-empty value="empty_cart" title="<?php echo $this->quoteEscape($this->__('Empty Cart')); ?>" class="button2 btn-empty" id="empty_cart_button"><span><span><?php echo $this->__('Empty Cart'); ?></span></span></button>
-
-                        <button type="submit" name="update_cart_action" data-cart-item-update value="update_qty" title="<?php echo $this->quoteEscape($this->__('Update Shopping Cart')); ?>" class="button2 btn-update"><span><span><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
+                        <button type="submit" name="update_cart_action" data-cart-item-update value="update_qty" title="<?php echo $this->quoteEscape($this->__('Update Shopping Cart')); ?>" class="button2 btn-update"><span><span><?php echo $this->__('Update Shopping Cart'); ?></span></span>
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
 
                         <span class="or">-<?php echo $this->__('or'); ?>-</span>
 
                         <?php if($this->getContinueShoppingUrl()): ?>
-                            <button type="button" title="<?php echo $this->quoteEscape($this->__('Continue Shopping')) ?>" class="button2 btn-continue" onclick="setLocation('<?php echo Mage::helper('core')->quoteEscape($this->getContinueShoppingUrl()) ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+                            <button type="button" title="<?php echo $this->quoteEscape($this->__('Continue Shopping')) ?>" class="button2 btn-continue" onclick="setLocation('<?php echo Mage::helper('core')->quoteEscape($this->getContinueShoppingUrl()) ?>')"><span><?php echo $this->__('Continue Shopping') ?></span>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
                         <?php endif; ?>
                         <!--[if lt IE 8]>
                         <input type="hidden" id="update_cart_action_container" data-cart-item-update />
@@ -153,27 +148,53 @@
         <script type="text/javascript">decorateTable('shopping-cart-table')</script>
     </form>
 
-    <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
-    <div class="cart-forms">
-        <?php /* Extensions placeholder */ ?>
-        <?php echo $this->getChildHtml('checkout_cart_widget') ?>
-        <?php echo $this->getChildHtml('coupon') ?>
-        <?php echo Mage::helper('core/mwrewardpoints')->formRewardShoppingCartRewardPoints(); ?>
-        <?php echo $this->getChildHtml('checkout.cart.extra') ?>
-        <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
-    </div>
-    <div class="cart-totals-wrapper">
-        <div class="cart-totals">
-            <?php echo $this->getChildHtml('totals'); ?>
-            <?php if(!$this->hasError()): ?>
-            <ul class="checkout-types bottom">
-            <?php foreach ($this->getMethods('methods') as $method): ?>
-                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
-                <li class="method-<?php echo preg_replace("/[^_a-zA-Z0-9-]/", '-', $method); ?>"><?php echo $methodHtml; ?></li>
-                <?php endif; ?>
-            <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
+    <div class="BottomOptionsWrapper">
+        <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
+
+        <div class="MobileViewTotaltWrapper" style="display: none;">
+            
+            <div class="cart-totals-wrapper">
+                <div class="cart-totals">
+                    <?php echo $this->getChildHtml('totals'); ?>
+                    <?php if(!$this->hasError()): ?>
+                    <ul class="checkout-types bottom">
+                    <?php foreach ($this->getMethods('methods') as $method): ?>
+                        <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                        <li class="method-<?php echo preg_replace("/[^_a-zA-Z0-9-]/", '-', $method); ?>"><?php echo $methodHtml; ?></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    </ul>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="leftWrapper">
+            <div class="cart-forms">
+                <?php /* Extensions placeholder */ ?>
+                <?php echo $this->getChildHtml('checkout_cart_widget') ?>
+                <?php echo $this->getChildHtml('coupon') ?>
+                <?php echo Mage::helper('core/mwrewardpoints')->formRewardShoppingCartRewardPoints(); ?>
+                <?php echo $this->getChildHtml('checkout.cart.extra') ?>
+            </div>
+
+            <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
+        </div>
+        <div class="rightWrapper">
+            <div class="cart-totals-wrapper">
+                <div class="cart-totals">
+                    <?php echo $this->getChildHtml('totals'); ?>
+                    <?php if(!$this->hasError()): ?>
+                    <ul class="checkout-types bottom">
+                    <?php foreach ($this->getMethods('methods') as $method): ?>
+                        <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                        <li class="method-<?php echo preg_replace("/[^_a-zA-Z0-9-]/", '-', $method); ?>"><?php echo $methodHtml; ?></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    </ul>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </div>
     <?php echo $this->getChildHtml('crosssell') ?>

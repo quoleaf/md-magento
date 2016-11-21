@@ -27,22 +27,16 @@
 <?php $_product = $this->getProduct(); ?>
 <?php $buttonTitle = Mage::helper('core')->quoteEscape($this->__('Add to Cart')); ?>
 <?php if($_product->isSaleable()): ?>
-    <div class="add-to-cart">
-        <?php if(!$_product->isGrouped()): ?>
-        <div class="quantity">
-            <label for="qty"><?php echo $this->__('QUANTITY:') ?></label>
-            <select id="qty" name="qty" id="qty" title="<?php echo Mage::helper('core')->quoteEscape($this->__('QUANTITY')) ?>">
-                <?php $a = max($this->getProductDefaultQty() * 1, 10);?>
-                <?php for($i=1; $i<= $a; $i++){?>
-                <option value="<?php echo $i; ?>"><?php echo $i ?></option>
-                <?php } ?>
-            </select>   
-        </div>
-        <?php endif; ?>
-        <button href="#" class="buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)"><span>
-        <?php echo $this->__('BUY NOW') ?>
-        <?php echo $this->getChildHtml('', true, true) ?>    
-        </span></button>
+   <div class="AddToCartWrapper">
+        <button href="#" class="buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
+            <span>
+                <?php echo $this->__('BUY NOW') ?>
+                <?php echo $this->getChildHtml('', true, true) ?>    
+            </span>
+        </button>
+    </div>
+
+    <div class="AwardWrapper">
         <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&amp;direction=desc#reviews" target="_BLANK" class="award"></a>
     </div>
 <?php endif; ?>

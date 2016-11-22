@@ -152,7 +152,7 @@
         <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
 
         <div class="MobileViewTotaltWrapper" style="display: none;">
-            
+            <?php echo Mage::helper('core/mwrewardpoints')->formRewardShoppingCartRewardPoints(); ?>
             <div class="cart-totals-wrapper">
                 <div class="cart-totals">
                     <?php echo $this->getChildHtml('totals'); ?>
@@ -174,13 +174,13 @@
                 <?php /* Extensions placeholder */ ?>
                 <?php echo $this->getChildHtml('checkout_cart_widget') ?>
                 <?php echo $this->getChildHtml('coupon') ?>
-                <?php echo Mage::helper('core/mwrewardpoints')->formRewardShoppingCartRewardPoints(); ?>
                 <?php echo $this->getChildHtml('checkout.cart.extra') ?>
             </div>
 
             <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
         </div>
         <div class="rightWrapper">
+            <?php echo Mage::helper('core/mwrewardpoints')->formRewardShoppingCartRewardPoints(); ?>
             <div class="cart-totals-wrapper">
                 <div class="cart-totals">
                     <?php echo $this->getChildHtml('totals'); ?>

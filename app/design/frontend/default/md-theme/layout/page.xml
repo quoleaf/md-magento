@@ -35,21 +35,21 @@
         <block type="page/html" name="root" output="toHtml" template="page/3columns.phtml">
 
             <block type="page/html_head" name="head" as="head">
-                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery-1.11.2.min.js</name></action>
-                <action method="addJs"><script>prototype/prototype.js</script></action>
-                <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
-                <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery-1.11.2.min.js</name><params>async="async"</params></action>
+                <action method="addJs"><script>prototype/prototype.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>lib/jquery/noconflict.js</script><params>async="async"</params></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
-                <action method="addJs"><script>prototype/validation.js</script></action>
-                <action method="addJs"><script>scriptaculous/builder.js</script></action>
-                <action method="addJs"><script>scriptaculous/effects.js</script></action>
-                <action method="addJs"><script>scriptaculous/dragdrop.js</script></action>
-                <action method="addJs"><script>scriptaculous/controls.js</script></action>
-                <action method="addJs"><script>scriptaculous/slider.js</script></action>
-                <action method="addJs"><script>varien/js.js</script></action>
-                <action method="addJs"><script>varien/form.js</script></action>
-                <action method="addJs"><script>mage/translate.js</script></action>
-                <action method="addJs"><script>mage/cookies.js</script></action>
+                <action method="addJs"><script>prototype/validation.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>scriptaculous/builder.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>scriptaculous/effects.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>scriptaculous/dragdrop.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>scriptaculous/controls.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>scriptaculous/slider.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>varien/js.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>varien/form.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>mage/translate.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>mage/cookies.js</script><params>async="async"</params></action>
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
@@ -58,32 +58,33 @@
 
                 <!-- Start MD JS -->
 
-                <action method="addItem"><type>skin_js</type><name>js/md-js/html5shiv.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.event.move.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.matchHeight-min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.twentytwenty.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/html5shiv.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.event.move.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.matchHeight-min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/jquery.twentytwenty.js</name><params>async="async"</params></action>
                
-                <action method="addItem"><type>skin_js</type><name>js/md-js/lity.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/owl.carousel.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/respond.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/ssm.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/wow.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/md-js/custom.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/lity.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/owl.carousel.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/respond.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/ssm.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/wow.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/md-js/custom.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/signup-form.js</name><params>async="async"</params></action>
                 <!-- End MD JS -->
 
                 <!-- Add vendor dependencies -->
-                <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/app.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name><params>async="async"</params></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name><params>async="async"</params></action>
                 <!-- <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action> -->
-                <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name><params>async="async"</params></action>
                 <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</href></action>
-                <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/minicart.js</name><params>async="async"</params></action>
 
                 <!-- Add stylesheets with no media queries for use in IE 8 and below -->
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie8.css</name><params/><if><![CDATA[ (lte IE 8) & (!IEMobile)]]></if></action>
@@ -190,11 +191,11 @@
             <block type="page/html_header" name="header" as="header"/>
 
             <block type="page/html_head" name="head" as="head">
-                <action method="addJs"><script>prototype/prototype.js</script></action>
-                <action method="addJs"><script>mage/translate.js</script></action>
-                <action method="addJs"><script>lib/ccard.js</script></action>
-                <action method="addJs"><script>prototype/validation.js</script></action>
-                <action method="addJs"><script>varien/js.js</script></action>
+                <action method="addJs"><script>prototype/prototype.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>mage/translate.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>lib/ccard.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>prototype/validation.js</script><params>async="async"</params></action>
+                <action method="addJs"><script>varien/js.js</script><params>async="async"</params></action>
 
                 
                 <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>

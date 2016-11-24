@@ -10,15 +10,14 @@
 </p>
 <?php }?>
 
- <div id="mw_popup" class="popup mw_box_popup" style="display: none;">
+ <div id="mw_popup" class="" style="display: none;">
     <form id="form-validate" method="post" onsubmit="return false;" >
     	
-    <div style="left: -2px; top: 0px; width: 1343px; display:none" id="loading-mask">
-	    <p id="loading_mask_loader" style="background: none repeat scroll 0 0 #FFF4E9;border: 2px solid #F1AF73;color: #D85909; font-weight: bold;
-    left: 50%;margin-left: -60px;padding: 15px 60px;position: fixed;text-align: center;top: 45%;width: 120px; z-index: 1000;">
-			<img alt="Loading..." src="<?php echo $this->getSkinUrl('mw_rewardpoints/images/ajax-loader-tr.gif') ?>"><br>Please wait...
-		</p>
-	</div>
+   <div style="left: -2px; top: 0px; width: 1343px; display:none" id="loading-mask">
+	   <!--  <p id="loading_mask_loader" style="z-index: 1000;">
+			<img alt="Loading..." src="<?php // echo $this->getSkinUrl('mw_rewardpoints/images/ajax-loader-tr.gif') ?>"><br>Please wait...
+		</p> -->
+	</div> 
     <div class="fieldset group-select">
         <?php echo $this->getBlockHtml('formkey')?>
         <h2 class="mw_legend"><?php echo $this->__('Invite Friends Via Email');?></h2>

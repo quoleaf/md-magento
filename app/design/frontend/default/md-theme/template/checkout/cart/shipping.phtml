@@ -59,14 +59,14 @@
                    </div>
                 </li>
             <?php // endif; ?>
-            <?php if($this->getCityActive()): ?>
+            <!-- <?php // if($this->getCityActive()): ?>
                 <li class="shipping-region">
-                    <label for="city"<?php if ($this->isCityRequired()) echo ' class="required"' ?>><?php if ($this->isCityRequired()) echo '<em>*</em>' ?><?php echo $this->__('City') ?></label>
+                    <label for="city"<?php // if ($this->isCityRequired()) echo ' class="required"' ?>><?php if ($this->isCityRequired()) echo '<em>*</em>' ?><?php // echo $this->__('City') ?></label>
                     <div class="input-box">
                         <input class="input-text<?php if ($this->isCityRequired()):?> required-entry<?php endif;?>" id="city" type="text" name="estimate_city" value="<?php echo $this->escapeHtml($this->getEstimateCity()) ?>" />
                     </div>
                 </li>
-            <?php endif; ?>
+            <?php // endif; ?> -->
                 <li class="shipping-postcode">
                     <?php /* Removing the conditional check for whether the postal code is required, because it doesn't work
                     <label for="postcode"<?php if ($this->isZipCodeRequired()) echo ' class="required"' ?>><?php if ($this->isZipCodeRequired()) echo '<em>*</em>' ?><?php echo $this->__('Zip/Postal Code') ?></label>

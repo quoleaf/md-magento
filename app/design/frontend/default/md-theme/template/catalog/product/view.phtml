@@ -68,6 +68,9 @@ jQuery.noConflict();
                                 <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
                                 <?php endif;?>
                                 </span>
+                                <span class="reviews">
+                                    <?php $this->helper('yotpo')->showBottomline($this, $_product); ?>
+                                </span>
                                 <span class="price">
                                 <?php echo $this->getPriceHtml($_product); ?>
                                 <?php echo $this->getChildHtml('bundle_prices') ?>
@@ -75,7 +78,7 @@ jQuery.noConflict();
                                 </span>
                             </div>
 
-                            <!-- Quantity -->
+                            <!-- Quantity --> <!--added by rej -->
                             <?php if(!$_product->isGrouped()): ?>
                             <div class="quantity">
                                 <label for="qty"><?php echo $this->__('QUANTITY:') ?></label>
@@ -88,7 +91,7 @@ jQuery.noConflict();
                             </div>
                             <?php endif; ?>
 
-                            <!-- Customer Feedback -->
+                            <!-- Customer Feedback --> <!--added by rej -->
                             <div class="feedbackWrapper">
                                 <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
                             </div> 
@@ -175,6 +178,10 @@ jQuery.noConflict();
             </div>
         </div>
 </form>
+
+<div class="ReviewsWrapper">
+    <?php $this->helper('yotpo')->showWidget($this, $_product); ?>
+</div>
         <script type="text/javascript">
         //<![CDATA[
             var productAddToCartForm = new VarienForm('product_addtocart_form');

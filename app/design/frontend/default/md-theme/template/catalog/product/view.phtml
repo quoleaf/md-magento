@@ -107,8 +107,11 @@ jQuery.noConflict();
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <?php echo Mage::helper('core/mwrewardpoints')->pointsProductDetailRewardPoints($_product); ?>
-                        <?php echo Mage::helper('core/mwrewardpoints')->showFacebookRewardPoints(); ?>
+                        <div class="RewardProductWrapper">
+                            <?php echo Mage::helper('core/mwrewardpoints')->pointsProductDetailRewardPoints($_product); ?>
+                            <?php echo Mage::helper('core/mwrewardpoints')->showFacebookRewardPoints(); ?>
+                            <?php echo Mage::helper('core/mwrewardpoints')->showInvitationRewardPoints(); ?>
+                        </div>
                         <div class="tabs">
                             <ul class="options">
                             <?php 

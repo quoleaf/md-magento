@@ -60,7 +60,7 @@
                 <li class="control">
                     <input type="radio" name="checkout_method" id="login:guest" value="guest"<?php if($this->getQuote()->getCheckoutMethod()!=Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER): ?> checked="checked"<?php endif; ?> class="radio" />
                     <label for="login:guest">
-                        <span>
+                        <span class="radiocustom">
                             <p>
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                             </p>
@@ -73,7 +73,7 @@
                 <li class="control">
                     <input type="radio" name="checkout_method" id="login:register" value="register"<?php if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER || !$this->getQuote()->isAllowedGuestCheckout()): ?> checked="checked"<?php endif ?> class="radio" />
                     <label for="login:register">
-                        <span>
+                        <span class="radiocustom">
                             <p>
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                             </p>

@@ -6,7 +6,7 @@
 $check = version_compare(Mage::getVersion(),'1.4.0.1','>=');?>
 <div id="rewardpoints_box">
 <form id="rewardpoints-form" action="<?php echo $this->getUrl('rewardpoints/checkout/rewardPointsPost') ?>"  onsubmit="return false;" method="post">
-    <div class="discount discount-codes box" style="width:262px;background: none repeat scroll 0 0 #FAFAEC;">
+    <div class="discount discount-codes box" >
         <?php if($check):?><h2 style="background-image: none; padding: 0px 0px 5px 0px;"><?php echo $reward_icon.$this->__('Reward points') ?></h2><?php else:?><h4 style="background-image: : none; padding: 0px;"><?php echo $reward_icon.$this->__('Reward points') ?></h4><?php endif;?>
         <div class="discount-form">
         	<ul id="mw_reward_accordion">
@@ -25,9 +25,8 @@ $check = version_compare(Mage::getVersion(),'1.4.0.1','>=');?>
 		   
 			
         	<?php $rate = $this->getPointPerMoney($store_id);?>
-        	<div style="width:100%; padding-top: 5px;">
         	<?php if($this->_getCustomer()->getId()):?>
-	        	<div style="float:left;width:258px; border-top: 1px dashed;"">
+	        	<div class="inner">
 	        		<div style="margin-top:5px;"><?php echo $this->__("You have <b>%s</b> available <br>(<b>%s</b> = <b>%s</b>)",Mage::helper('rewardpoints')->formatPoints($this->getCurrentRewardPoints(),$store_id),Mage::helper('rewardpoints')->formatPoints($rate[0],$store_id), $this->formatMoney($rate[1]))?></div>
 	        		<?php /* ?><label><?php echo $this->__("Slide to specify number of points to redeem")?></label> <?php */?>
 	        		<div id="mw_reward_slider_contaner" class="mw_reward_slider_contaner" style="width:215px;">
@@ -35,14 +34,13 @@ $check = version_compare(Mage::getVersion(),'1.4.0.1','>=');?>
 	        			<div id="mw_reward_incr_handle"></div>
 	        			<div id="mw_slider" class="mw_reward_select" ></div>
 	        		</div>
-	        		<div style="padding: 15px 0 5px 0;"><label for="mw_amount"><?php echo $this->__("Points to redeem")?> </label><input style="color:#f6931f; width:50px; text-align:center;font-size: 13px;font-weight: bold;" type="text" name="mw_amount" id="mw_amount" /> <label id="mw_label_amount" style="color:#f6931f; font-weight:bold;display:none;"></label></div>
-	        		<div ><input type="checkbox" name="mw_use_max_points" id="mw_use_max_points" /><label for="mw_use_max_points" style="padding-left: 5px;"><?php echo $this->__("Use maximum (<b>%s</b>)",Mage::helper('rewardpoints')->formatPoints($spend_point,$store_id));?></label></div>
+	        		<div class="pointsWrapper"><label for="mw_amount"><?php echo $this->__("Points to redeem")?> </label><input style="color:#e8408b; width:150px; text-align:center;font-size: 13px;font-weight: bold;" type="text" name="mw_amount" id="mw_amount" /> <label id="mw_label_amount" style="color:#f6931f; font-weight:bold;display:none;"></label></div>
+	        		<div ><input type="checkbox" name="mw_use_max_points" id="mw_use_max_points" /><label for="mw_use_max_points"><?php echo $this->__("Use maximum (<b>%s</b>)",Mage::helper('rewardpoints')->formatPoints($spend_point,$store_id));?></label></div>
               		
 				</div>
 		         <?php else:?>
 		         <div style="text-align: center; margin-top:10px; border-top: 1px dashed;padding-top: 10px;"><?php echo $this->__("Please <a href='%s'>LOGIN</a> to use reward points", Mage::getUrl('customer/account/login',array('mw_re_login' => 1)))?></div>
 	            <?php endif;?>
-            </div>
             <div style="clear:both;"></div>
 		</div>
 	</div>

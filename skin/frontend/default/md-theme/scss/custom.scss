@@ -7616,6 +7616,9 @@ body.stickyNavi #topNavi {
 */
 
 #product {
+	#popup_overlay {
+	    display: none;
+	}
 	.feedbackWrapper {
 		width: 100%;
 		float: left;
@@ -8001,6 +8004,64 @@ body.stickyNavi #topNavi {
 	    left: 0.4px;
 	}
 
+	[type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked {
+	  position: absolute;
+	  left: -9999px;
+	}
+
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label {
+	  position: relative;
+	  padding-left: 25px;
+	  cursor: pointer;
+	}
+
+	/* checkbox aspect */
+
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before {
+	  content: '';
+	  position: absolute;
+	  left:0; 
+	  top:0 ;
+	  width: 17px; height: 17px;
+	  border: 1px solid #aaa;
+	  background: #f8f8f8;
+	  border-radius: 3px;
+	  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+	}
+
+	/* checked mark aspect */
+	[type="checkbox"]:checked + label:after {
+	    content: "\f00c";
+	    font-family: FontAwesome;
+	    position: absolute;
+	    top: 0px;
+	    left: 4px;
+	    font-size: 18px;
+	    line-height: 0.8;
+	    color: #1183ce;
+	    transition: all .2s;
+	}
+
+	/* checked mark aspect changes */
+	[type="checkbox"]:not(:checked) + label:after {
+	  opacity: 0;
+	  transform: scale(0);
+	}
+
+	[type="checkbox"]:checked + label:after {
+	  opacity: 1;
+	  transform: scale(1);
+	}
+
+	/* hover style just for information */
+	label:hover:before {
+	  border: 1px solid #4778d9!important;
+	}
+
+
 	.page-title {
 		border: none;
 		h1 {
@@ -8277,7 +8338,7 @@ body.stickyNavi #topNavi {
 			}
 	    }
 
-	    .rightWrapper, .MobileViewTotaltWrapper {
+	    .rightWrapper {
 	    	width: 50%;
 
 	    	h2 {
@@ -8296,6 +8357,12 @@ body.stickyNavi #topNavi {
 					position: relative;
 					bottom: 2px;
 				}
+
+				img {
+					position: relative;
+					top: 4px;
+					outline: none;
+				}
 			}
 
 	    	#rewardpoints_box {
@@ -8306,25 +8373,27 @@ body.stickyNavi #topNavi {
 				margin-bottom: 35px;
 
 				.discount-codes.box {
-					width: 100%!important;
-				}
+					width: 100%;
 
-				.discount-form{
-				    padding: 25px 20px 25px 20px;
+					.discount-form{
+					    padding: 25px 20px 25px 20px;
+					    text-align: center;
 
-				    	div {
-				    		div {
-				    			border: none!important;
+					    .inner {
+					    	.mw_reward_slider_contaner {
+					    		margin: 15px auto;
+					    	}
 
-				    			// .mw_reward_slider_contaner {
-				    			// 	display: none;
-				    			// }
+					    	.pointsWrapper {
+							    width: 250px;
+							    margin: 15px auto;
+							}
 
-				    			label {
-				    				margin-right: 15px;
-				    			}
-				    		}
-				    	}
+							span.mw_rewardpoints {
+							    color: #e8408b;
+							}
+					    }
+					}
 				}
 	    	}
 
@@ -8339,7 +8408,12 @@ body.stickyNavi #topNavi {
 	    		.cart-totals {
 	    			padding: 20px 0 0 0;
 
+
 	    			#shopping-cart-totals-contaner {
+	    				img {
+	    					margin: 0 auto;
+	    				}
+
 	    				table {
 	    					tbody{
 	    						tr {
@@ -8510,7 +8584,7 @@ body.stickyNavi #topNavi {
 			}
 
 			.rightWrapper {
-				display: none;
+				width: 100%;
 			}
 		}
 	}
@@ -8682,6 +8756,11 @@ body:not(.opc-has-progressed-from-login).col-main {
 		}
 	}
 }
+
+
+
+
+
 
 
 

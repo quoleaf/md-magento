@@ -11,35 +11,82 @@ $("#topNavi").addClass("whiteVer")
 </script>
 
 <div class="header-banner">
-<div class="section"><div class="inner"><div class="overlay"><div class="text fadeInUp animated"><p class="title"><span><?php echo $this->__('Physician-formulated') ?></span> <?php echo $this->__('Fast-Acting. Real Results.') ?></p></div><a href="#" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a><a href="#" class="watchNow pinkHollowBtn"><?php echo $this->__('WATCH VIDEO') ?></a></div></div></div>
+    <div class="section">
+        <div class="inner">
+            <div class="overlay">
+                <div class="text fadeInUp animated">
+                    <p class="title">
+                        <span><?php echo $this->
+                        __('Physician-formulated') ?></span>
+                        <?php echo $this->
+                        __('Fast-Acting. Real Results.') ?>
+                    </p>
+                </div>
+                <div class="wtchnw">
+                    <a href="https://www.youtube.com/watch?v=xiIIqeHHY-c" class="watchNow pinkHollowBtn" data-lity="">
+                        <?php echo $this->
+                __('WATCH VIDEO') ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="categories">
     <ul class="clearfix">
         <li>
-            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>hair">
-                <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-hair-black.jpg');?>)"></div></div>
-                <p><span><?php echo $this->__('Hair') ?></span></p>
+            <a href="<?php echo mage::getbaseurl(mage_core_model_store::url_type_web);?>hair">
+                <div class="image zoomEffect">
+                    <div class="pic" style="background-image: url(<?php echo $this->
+                        getSkinUrl('images/category-md-hair-black.jpg');?>)">
+                    </div>
+                </div>
+                <p>
+                    <span><?php echo $this->
+                    __('Hair') ?></span>
+                </p>
             </a>
         </li>
-        <li class="alt">
-            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>md-lash-factor">
-                <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-lash-factor-black.jpg');?>)"></div></div>
-                <p><span><?php echo $this->__('Lash Factor') ?></span></p>
+            <li class="alt">
+            <a href="<?php echo mage::getbaseurl(mage_core_model_store::url_type_web);?>md-lash-factor">
+            <div class="image zoomEffect">
+                <div class="pic" style="background-image: url(<?php echo $this->
+                    getSkinUrl('images/category-md-lash-factor-black.jpg');?>)">
+                </div>
+            </div>
+            <p>
+                <span><?php echo $this->
+                __('Lash Factor') ?></span>
+            </p>
             </a>
-        </li>
-        <li>
-            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>md-skin">
-                <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-skin-black.jpg');?>)"></div></div>
-                <p><span><?php echo $this->__('Skin') ?></span></p>
+            </li>
+            <li>
+            <a href="<?php echo mage::getbaseurl(mage_core_model_store::url_type_web);?>md-skin">
+            <div class="image zoomEffect">
+                <div class="pic" style="background-image: url(<?php echo $this->
+                    getSkinUrl('images/category-md-skin-black.jpg');?>)">
+                </div>
+            </div>
+            <p>
+                <span><?php echo $this->
+                __('Skin') ?></span>
+            </p>
             </a>
-        </li>
-        <li class="alt">
-            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>md-wellness">
-                <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo $this->getSkinUrl('images/category-md-wellness-black.jpg');?>)"></div></div>
-                <p><span><?php echo $this->__('Wellness') ?></span></p>
+            </li>
+            <li class="alt">
+            <a href="<?php echo mage::getbaseurl(mage_core_model_store::url_type_web);?>md-wellness">
+            <div class="image zoomEffect">
+                <div class="pic" style="background-image: url(<?php echo $this->
+                    getSkinUrl('images/category-md-wellness-black.jpg');?>)">
+                </div>
+            </div>
+            <p>
+                <span><?php echo $this->
+                __('Wellness') ?></span>
+            </p>
             </a>
-        </li>
+            </li>
     </ul>
 </div><!-- END categories -->
 

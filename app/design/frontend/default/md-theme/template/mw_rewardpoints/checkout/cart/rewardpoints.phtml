@@ -16,7 +16,7 @@ $check = version_compare(Mage::getVersion(),'1.4.0.1','>=');?>
 		        <div  id="reward-points-rules" class="mw_reward_toggle">
 		        	<?php foreach($this->getRewardPointsRule() as $rule):?>
 		        	<div style="width:100%;font-size: 11px; margin: 0 0 5px 0; overflow: hidden;">
-		        		<div style="float:left; width:258px"><?php echo $this->__('<span style="float: left;">+</span> <div style="margin: 0px 0px 0px 10px;">%s %s</div>',($rule['qty']>1?$rule['qty']." x":""),$rule['message']);?></div>
+		        		<div><?php echo $this->__('<span style="float: left;">+</span> <div style="margin: 0px 0px 0px 10px;">%s %s</div>',($rule['qty']>1?$rule['qty']." x":""),$rule['message']);?></div>
 		        	</div>
 		        	<?php endforeach;?>
 		        </div>

@@ -69,7 +69,7 @@
                 <action method="addItem"><type>skin_js</type><name>js/md-js/ssm.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/wow.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/md-js/custom.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/signup-form.js</name></action>
+
                 <!-- End MD JS -->
 
                 <!-- Add vendor dependencies -->

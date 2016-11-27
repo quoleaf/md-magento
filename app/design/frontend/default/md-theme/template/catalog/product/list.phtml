@@ -10,9 +10,14 @@ $("#topNavi").addClass("whiteVer")
 })
 </script>
 
-<div class="header-banner">
-<div class="section"><div class="inner"><div class="overlay"><div class="text fadeInUp animated"><p class="title"><span><?php echo $this->__('Physician-formulated') ?></span> <?php echo $this->__('Fast-Acting. Real Results.') ?></p></div><a href="#" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a><a href="#" class="watchNow pinkHollowBtn"><?php echo $this->__('WATCH VIDEO') ?></a></div></div></div>
-</div>
+<!-- Added by rej -->
+
+<?php echo  Mage::app()->getLayout()
+    ->createBlock('cms/block')
+    ->setBlockId(Mage::registry('current_category')->getData('block id from custom field'))->toHtml(); 
+?>
+
+
 
 <div id="categories">
     <ul class="clearfix">

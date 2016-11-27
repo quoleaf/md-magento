@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <googleadwordsadmin_adminhtml_googleadwords_index>
+        <reference name="content">
+            <block type="googleadwords/adminhtml_googleadwords" name="googleadwords" />
+        </reference>
+    </googleadwordsadmin_adminhtml_googleadwords_index>
+</layout>

@@ -62,3 +62,11 @@
 <div class="buttons-set">
     <button type="button" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue Shopping')) ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
 </div>
+
+
+<!-- pepperjam tracking -->
+<iframe src="https://t.pepperjamnetwork.com/track?PID=7314&INT=ITEMIZED&ITEM1=1&QTY1=1&AMOUNT1=%%ORDER_SUBTOTAL_DISCOUNTED%%&OID=%%ORDER_ID%%" width="1" height="1" frameborder="0"></iframe> 
+
+<!-- Rakuten -->
+<img src="https://track.linksynergy.com/ep?mid=42138&ord=%%ORDER_ID%%&skulist=order&qlist=1&amtlist=%%ORDER_SUBTOTAL_DISCOUNTED_IN_CENTS%%&cur=USD&namelist=order" alt="" width="1" height="1" border="0">
+<!-- End of Rakuten -->

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mageplaza_Googleadwords>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mageplaza_Googleadwords>
+    </modules>
+</config>

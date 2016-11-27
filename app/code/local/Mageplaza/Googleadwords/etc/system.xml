@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <mageplaza translate="label">
+            <label>Mageplaza Extensions</label>
+            <sort_order>100</sort_order>
+        </mageplaza>
+    </tabs>
+    <sections>
+        <googleadwords translate="label" module="googleadwords">
+            <class>separator-top</class>
+            <label>Adwords Conversion Tracking</label>
+            <tab>mageplaza</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>299</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>        
+                        <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Enable/Disable Google Adwords Conversion Tracking</comment>
+                        </enable>
+
+                        <conversion_id translate="label">
+                            <label>Conversion ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[E.g: 944123123]]></comment>
+                        </conversion_id>
+
+                        <conversion_language translate="label">
+                            <label>Conversion Language</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_locale</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[]]></comment>
+                        </conversion_language>
+
+                        <conversion_format translate="label">
+                            <label>Conversion Format</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>googleadwords/system_config_format</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[]]></comment>
+                        </conversion_format>
+
+
+                        <conversion_color translate="label">
+                            <label>Conversion Color</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Leave empty for using default value: "ffffff"]]></comment>
+                        </conversion_color>
+
+
+                        <conversion_label translate="label">
+                            <label>Conversion Label</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[E.g: "gMddCKWQ7l8Qh5WEmmn"]]></comment>
+                        </conversion_label>
+
+
+                        <enable_conversion_value translate="label">
+                            <label>Enable Submit Conversion Value</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>60</sort_order>
+                            <source_model>googleadwords/system_config_conversionValue</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </enable_conversion_value>
+
+                        <conversion_value translate="label">
+                            <label>Conversion Value</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[E.g: 10]]></comment>
+                            <depends>
+                                <enable_conversion_value>same</enable_conversion_value>
+                            </depends>
+                        </conversion_value>
+
+
+                        <!--<conversion_count translate="label">-->
+                            <!--<label>Conversion Count</label>-->
+                            <!--<frontend_type>select</frontend_type>-->
+                            <!--<sort_order>70</sort_order>-->
+                            <!--<source_model>googleadwords/system_config_conversionCount</source_model>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<comment></comment>-->
+                        <!--</conversion_count>-->
+
+
+                        <!--<viewthrough_conversion_window translate="label">-->
+                            <!--<label>View-through conversion window</label>-->
+                            <!--<frontend_type>select</frontend_type>-->
+                            <!--<sort_order>80</sort_order>-->
+                            <!--<source_model>googleadwords/system_config_window</source_model>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<comment><![CDATA[From <strong>impressions</strong>, not clicks, of your image or rich media Display Network ads. <a class="gwt-Anchor" href="https://support.google.com/adwords/answer/1722023?&amp;hl=en_GB&amp;authuser=0#vtc">Learn more</a>. <br> Your view-through conversions will always exclude conversions from people who've also clicked your Search or Display ads.]]></comment>-->
+                        <!--</viewthrough_conversion_window>-->
+
+
+
+
+                        <remarketing_only translate="label">
+                            <label>Remarketing Only</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>999</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[]]></comment>
+                        </remarketing_only>
+
+
+
+                    </fields>
+                </general>
+            </groups>
+        </googleadwords>
+    </sections>
+</config>

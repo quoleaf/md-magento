@@ -3349,7 +3349,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	padding: 0;
 	list-style: none;
 	vertical-align: top;
-	font-size: 18px;
+	font-size: 14px;
 	color: #868a90;
 }
 
@@ -3751,15 +3751,14 @@ display: table;
 #product .right .info .namePrice {
 	float: left;
 	width: 54.26356589147287%; /* 350px */
-	margin-bottom: 20px;
 }
 
 #product .right .info .name {
 	display: block;
 	font-family: 'HelveticaNeueLTStd-Roman', Arial, sans-serif;
-	font-size: 24px;
+	font-size: 18px;
 	color: #3a3942;
-	line-height: 1.2;
+	line-height: 30px;
 	margin: 0 0 11px;
 }
 
@@ -4837,7 +4836,7 @@ input, select, textarea {
 	#product .right .breadcrumb li,
 	#product .right .info .quantity label,
 	#product .right .tabs .options li	{
-		font-size: 16px;
+		font-size: 12px;
 	}
 	
 	#product .right .info .price {
@@ -7676,9 +7675,20 @@ body.category-md-wellness {
 
 body.catalog-product-view {
 	#popup_overlay {
-		    display: none;
-		}
+		display: none;
+	}
+
 	#product {
+		.right {
+			.info {
+				.namePrice {
+					.yotpo .text-m {
+						padding-left: 15px;
+					}
+				}
+			}
+		}
+
 		.feedbackWrapper {
 			width: 100%;
 			float: left;
@@ -7759,6 +7769,12 @@ body.catalog-product-view {
 		    width: 100%;
 		    float: left;
 		    padding: 0 0 15px 0;
+
+		    span.mw_display_point {
+			    margin-bottom: 10px;
+			    width: 100%;
+			    float: left;
+			}
 
 		    #mw_popup_invited {
 			    background: #1183ce;

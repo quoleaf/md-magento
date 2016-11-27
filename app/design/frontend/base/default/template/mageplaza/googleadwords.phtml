@@ -1,0 +1,26 @@
+<?php if(!$this->getGeneral('enable')) return;?>
+
+
+<!-- Google Code for Conversion Page -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = <?php echo $this->getGeneral('conversion_id');?>;
+    var google_conversion_language = "<?php echo $this->getGeneral('conversion_language');?>";
+    var google_conversion_format = "<?php echo $this->getGeneral('conversion_format');?>";
+    var google_conversion_color = "<?php echo $this->getGeneral('conversion_color') ? $this->getGeneral('conversion_color') : 'ffffff';?>";
+    var google_conversion_label = "<?php echo $this->getGeneral('conversion_label');?>";
+
+    <?php if($this->getGeneral('enable_conversion_value')):?>
+    var google_conversion_value = <?php echo $this->getConversionValue();?>;
+    var google_conversion_currency = "<?php echo $this->getCurrentCurrency();?>";
+    <?php endif;?>
+    var google_remarketing_only = <?php echo $this->getGeneral('remarketing_only') ? 'true' : 'false';?>;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/<?php echo $this->getGeneral('conversion_id');?>/?label=<?php echo $this->getGeneral('conversion_label');?>&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>

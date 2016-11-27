@@ -8955,6 +8955,11 @@ body.mageplaza-betterblog-index-index {
 
 								.contentInner {
 									padding: 40px;
+
+									.mc-post-title {
+										text-align: center;
+									}
+									
 								}
 							}
 						}
@@ -9002,7 +9007,7 @@ body.mageplaza-betterblog-index-index {
 		    				height: 100%;
 
 		    				.mc-post-title {
-							    text-align: center;
+							    text-align: left;
 							    margin-bottom: 4.04040404040404%;
 							    font-size: 30px;
 							    color: #4d4d4d;
@@ -9021,6 +9026,10 @@ body.mageplaza-betterblog-index-index {
 								    font-style: normal;
 								    color: #1183ce;
 								}
+							}
+
+							.post-short-description {
+								margin-top: 25px;
 							}
 
 							a.mc-read-more {
@@ -9153,6 +9162,7 @@ body.mageplaza-betterblog-index-index {
 							font-size: 20px;
 							font-style: normal;
 							color: #1183ce;
+							text-align: center;
 						}
 					}
 
@@ -9217,7 +9227,7 @@ body.mageplaza-betterblog-index-index {
 					height:0;
 					display:none;
 				}
-				
+
 				&::-webkit-scrollbar-corner,&::-webkit-scrollbar-corner {
 					background-color:transparent;
 				}

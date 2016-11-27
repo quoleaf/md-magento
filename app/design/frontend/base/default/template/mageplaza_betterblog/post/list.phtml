@@ -116,13 +116,10 @@
       $("#FeaturedSlider").owlCarousel({
             items : 3,
             itemsCustom : false,
-            itemsDesktop : [1199,4],
             itemsDesktopSmall : [980,3],
             itemsTablet: [768,2],
-            itemsTabletSmall: false,
             itemsMobile : [540,1],
-            singleItem : false,
-            itemsScaleUp : false,
+            
          
             //Basic Speeds
             slideSpeed : 200,
@@ -137,25 +134,17 @@
             navigation : true,
             navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
             rewindNav : true,
-            scrollPerPage : false,
          
             //Pagination
             pagination : true,
-            paginationNumbers: false,
          
             // Responsive 
             responsive: true,
             responsiveRefreshRate : 200,
             responsiveBaseWidth: window,
          
-            // CSS Styles
-            baseClass : "owl-carousel",
-            theme : "owl-theme",
-         
-            //Lazy load
-            lazyLoad : true,
-            lazyFollow : true,
-            lazyEffect : "fade",
+            Type: Number,
+            Default: 5
       });
     });
 

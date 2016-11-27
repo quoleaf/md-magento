@@ -329,12 +329,12 @@ a {
 	background: none;
 }
 
-// #header.forCategory {
-// 	height: 508px;
-// 	background-position: center 0;
-// 	background-image: url(../images/category-header-bg.jpg);
-// 	background-color: #bdaba6;
-// }
+#header.forCategory {
+	height: 508px;
+	background-position: center 0;
+	background-image: url(../images/category-header-bg.jpg);
+	background-color: #bdaba6;
+}
 
 #header.forCategory .title {
 	font-family: 'Bodoni', Arial, sans-serif;
@@ -7615,6 +7615,61 @@ body.stickyNavi #topNavi {
 }
 
 
+body.category-hair {
+	#header.forCategory {
+		height: 508px;
+		background-position: center 0;
+		background-image: url('../images/black-friday-teaser.jpg');
+		background-color: #bdaba6;
+	}
+
+	#MainCatPageWrapper {
+		display: none;
+	}
+}
+
+body.category-md-lash-factor {
+	#header.forCategory {
+		height: 508px;
+		background-position: center 0;
+		background-image: url('../images/MD-Lash.jpg');
+		background-color: #bdaba6;
+	}
+
+	#MainCatPageWrapper {
+		display: none;
+	}
+}
+
+body.category-md-skin {
+	#header.forCategory {
+		height: 508px;
+		background-position: center 0;
+		background-image: url('../images/MD-Skin.jpg');
+		background-color: #bdaba6;
+	}
+
+	#MainCatPageWrapper {
+		display: none;
+	}
+}
+
+body.category-md-wellness {
+	#header.forCategory {
+		height: 508px;
+		background-position: center 0;
+		background-image: url('../images/MD-Wellness.jpg');
+		background-color: #bdaba6;
+	}
+
+	#MainCatPageWrapper {
+		display: none;
+	}
+}
+
+
+
+
 /*
 	- Product Page
 */
@@ -7973,47 +8028,6 @@ body.catalog-product-view {
 				}
 			}
 		}
-	}
-}
-
-
-/* 
-	- Category Page
-*/
-
-body.category-hair {
-	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/black-friday-teaser.jpg');
-		background-color: #bdaba6;
-	}
-}
-
-body.category-md-lash-factor {
-	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/MD-Lash.jpg');
-		background-color: #bdaba6;
-	}
-}
-
-body.category-md-skin {
-	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/MD-Skin.jpg');
-		background-color: #bdaba6;
-	}
-}
-
-body.category-md-wellness {
-	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/MD-Wellness.jpg');
-		background-color: #bdaba6;
 	}
 }
 
@@ -8959,7 +8973,7 @@ body.mageplaza-betterblog-index-index {
 									.mc-post-title {
 										text-align: center;
 									}
-									
+
 								}
 							}
 						}
@@ -9522,6 +9536,8 @@ body.mageplaza-betterblog-index-index {
 	margin-top: 10px;
 	text-align: center;
 }
+
+
 
 /* Styling Next and Prev buttons */
 

@@ -8735,6 +8735,14 @@ body:not(.opc-has-progressed-from-login).col-main {
 }
 
 
+body.checkout-onepage-success .sidebar {
+    display: none;
+}
+
+body.checkout-onepage-success .col-main {
+    width: 100%!important;
+}
+
 .checkout-onepage-index {
 	.main-container {
 		.buttons-set {
@@ -8881,6 +8889,10 @@ body:not(.opc-has-progressed-from-login).col-main {
 */
 
 body.mageplaza-betterblog-index-index {
+	.block.block-reorder, .block-viewed,  .block-poll {
+		display: none;
+	}
+
 	#mainWrapper {
 		background: #f3f0f0;
 

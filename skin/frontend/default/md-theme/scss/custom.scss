@@ -8052,6 +8052,7 @@ body.catalog-product-view {
 	- Cart Page
 */
 
+
 .checkout-cart-index {
 	.main-container .col-main {
 		width: 100%!important;
@@ -8741,6 +8742,54 @@ body.checkout-onepage-success .sidebar {
 
 body.checkout-onepage-success .col-main {
     width: 100%!important;
+}
+
+
+body.opc-index-index {
+	input[type="radio"] {
+		  display: none;
+		}
+
+		input[type="radio"] + label {
+		  color: #292321;
+		  font-size: 14px;
+		}
+
+		input[type="radio"] + label span.radiocustom {
+		  display: inline-block;
+		  width: 25px;
+		  height: 25px;
+		  margin: -1px 4px 0 0;
+		  vertical-align: middle;
+		  cursor: pointer;
+		  -moz-border-radius: 50%;
+		  border-radius: 50%;
+		}
+
+		input[type="radio"] + label span.radiocustom p {
+		    width: 100%;
+		    float: left;
+		    text-align: center;
+		    line-height: 0;
+		    margin: 0;
+		    padding: 0;
+		}
+
+		input[type="radio"] + label span.radiocustom p i{
+		    color: transparent;
+		}
+
+		input[type="radio"] + label span.radiocustom {
+		  border: 2px solid #b5b5b5;
+		}
+
+		input[type="radio"]:checked + label span.radiocustom p i {
+		    color: #1183ce;
+		    font-size: 16px;
+		    position: relative;
+		    top: 2.4px;
+		    left: 0.4px;
+		}
 }
 
 .checkout-onepage-index {
@@ -9533,6 +9582,22 @@ body.mageplaza-betterblog-index-index {
 	}
 }
 
+
+/* No Route Page */
+
+body.cms-index-noroute {
+	#mainWrapper {
+		.std {
+			width: 100%;
+			float: left;
+			padding: 20px 55px 20px 55px;
+		}
+	}
+
+	.BlogContentRight {
+		display: none;
+	}
+}
 
 
 

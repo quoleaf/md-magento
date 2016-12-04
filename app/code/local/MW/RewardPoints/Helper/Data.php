@@ -199,7 +199,7 @@ class MW_RewardPoints_Helper_Data extends Mage_Core_Helper_Abstract
 		 $enable = $this->moduleEnabled();
 		 if($mw_reward_point > 0 && $enable)
 		  {
-		 	 return '<span class="mw_display_point">'.$reward_icon.$this->__("You will earn <b>%s</b> for buying this product.",$this->formatPoints($mw_reward_point,$store_id)).'</span>';            
+		 	 return '<span class="mw_display_point">'.$this->__("%s",$this->formatPoints($mw_reward_point,$store_id)).'</span>';            
 		  }
 		  return '';
 	}

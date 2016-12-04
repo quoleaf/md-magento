@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MD_Customerbodyclass>
+            <version>1.0.0</version>
+        </MD_Customerbodyclass>
+    </modules>
+ 
+    <global>
+        <blocks>
+            <page>
+                <rewrite>
+                    <html>MD_Customerbodyclass_Block_Html</html>
+                </rewrite>
+            </page>           
+        </blocks>
+    </global>
+</config>

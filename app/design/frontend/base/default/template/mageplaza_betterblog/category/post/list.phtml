@@ -22,6 +22,8 @@
  * @author      Sam
  */
 ?>
+<!-- Edited By Rej -->
+
 <?php $_posts = $this->getPosts(); ?>
 <?php if ($_posts->getSize() > 0) :?>
 <div class="posts-list-container">
@@ -32,9 +34,6 @@
                     <?php echo $_post->getPostTitle();?>
                 </a>
             </h3>
-
-
-
             <div class="post-image">
                 <?php if ($_post->getImage()) :?>
                     <img src="<?php echo Mage::helper('mageplaza_betterblog/post_image')->init($_post, 'image');?>" alt="<?php echo $this->escapeHtml($_post->getPostTitle());?>" />
@@ -44,8 +43,6 @@
             <div class="post-post_excerpt">
                 <?php echo $_post->getPostExcerpt();?>
             </div>
-
-
         </div>
     <?php endforeach;?>
 </div>

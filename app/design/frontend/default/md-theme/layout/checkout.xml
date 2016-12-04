@@ -78,7 +78,7 @@ Default layout, loads most of the pages
         <remove name="left"/>
         <!-- Mage_Checkout -->
         <reference name="root">
-            <action method="setTemplate"><template>page/checkout.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
             <block type="checkout/cart" name="checkout.cart">
@@ -146,7 +146,7 @@ will be rendered on all checkout pages
         <remove name="left"/>
 
         <reference name="root">
-            <action method="setTemplate"><template>page/checkout.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
             <block type="checkout/multishipping_state" name="checkout_state" template="checkout/multishipping/state.phtml"/>
@@ -347,7 +347,7 @@ One page checkout main layout
         <remove name="left"/>
 
         <reference name="root">
-            <action method="setTemplate"><template>page/checkout.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="right">
             <action method="unsetChildren"></action>
@@ -523,7 +523,7 @@ One page checkout order review block
     <checkout_onepage_success translate="label">
         <label>One Page Checkout Success</label>
         <reference name="root">
-            <action method="setTemplate"><template>page/checkout.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
             <block type="checkout/onepage_success" name="checkout.success" template="checkout/success.phtml"/>
@@ -532,7 +532,7 @@ One page checkout order review block
     <checkout_onepage_failure translate="label">
         <label>One Page Checkout Failure</label>
         <reference name="root">
-            <action method="setTemplate"><template>page/checkout.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
             <block type="checkout/onepage_failure" name="checkout.failure" template="checkout/onepage/failure.phtml"/>

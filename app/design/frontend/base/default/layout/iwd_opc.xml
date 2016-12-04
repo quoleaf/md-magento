@@ -26,7 +26,7 @@
 		<label>Onepage Checkout</label>
 		        
         <reference name="root">
-            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setTemplate"><template>page/checkout.phtml</template></action>
         </reference>
         
         <reference name="head">		
@@ -185,7 +185,7 @@
 
    <opc_paypal_asklink>
         <reference name="root">
-            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setTemplate"><template>page/checkout.phtml</template></action>
         </reference>
          <reference name="content">
              <block type="opc/customer_account_asklink" name="opc.paypal.auth" template="opc/customer/account/asklink.phtml"/>

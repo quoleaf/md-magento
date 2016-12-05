@@ -15,7 +15,11 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
         <!-- Left -->
 
         <div class="opc-col-left">
-            <h3 class="MainTitle"><?php echo $this->__('Bag')?></h3>
+
+            <div class="headerTitle">
+                <img src="<?php echo $this->getSkinUrl('images/OPC/opc-bag-ico.png') ?>">
+                <h3 class="MainTitle"><?php echo $this->__('Bag')?></h3>
+            </div>
 
             <p class="MainSubTitle">
                 <?php $_cartQty = Mage::getSingleton('checkout/cart')->getItemsCount(); echo $_cartQty; ?> Item/s
@@ -32,7 +36,10 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 
         <div class="opc-col-center">
 
-            <h3 class="MainTitle"><?php echo $this->__('Delivery')?></h3>
+            <div class="headerTitle">
+                <img src="<?php echo $this->getSkinUrl('images/OPC/opc-delivery-ico.png') ?>">
+                <h3 class="MainTitle"><?php echo $this->__('Delivery')?></h3>
+            </div>
 
             <p class="MainSubTitle">
                 Deliver To
@@ -90,7 +97,11 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
         <!-- Right -->
 
         <div class="opc-col-right ">
-            <h3 class="MainTitle" ><?php echo $this->__('Payment')?></h3>
+            
+            <div class="headerTitle">
+                <img src="<?php echo $this->getSkinUrl('images/OPC/opc-payment-ico.png') ?>">
+                <h3 class="MainTitle"><?php echo $this->__('Payment')?></h3>
+            </div>
 
             <p class="MainSubTitle">
                 pay by

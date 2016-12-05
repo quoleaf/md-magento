@@ -375,12 +375,12 @@
 .opc-wrapper-opc .btn span span{background:#00909e;color:#ffffff;font-size:12px;font-weight:bold;text-transform:uppercase;padding:0 10px}
 
 .opc-wrapper-opc .btn-checkout{display:block;width:100%;}
-.opc-wrapper-opc .btn-checkout span{background:#00909e;-webkit-border-radius: 3px;border-radius: 3px;width:100%;line-height: 46px;padding: 0 !important;height: 45px;padding: 0;display:block;}
-.opc-wrapper-opc .btn-checkout span span{background:#e8408b;color:#ffffff;font-size:18px;font-weight:bold;text-transform:uppercase;}
+.opc-wrapper-opc .btn-checkout span{background: #e8408b;-webkit-border-radius: 3px;border-radius: 3px;width:100%;line-height: 46px;padding: 0 !important;height: 45px;padding: 0;display:block;}
+.opc-wrapper-opc .btn-checkout span span{background: transparent;color:#ffffff;font-size: 13px;letter-spacing: 5px;font-weight:bold;text-transform:uppercase;}
 .opc-wrapper-opc .buttons-set{border:none;margin-top:10px}
 
 .opc-wrapper-opc .btn-checkout:hover span,
-.opc-wrapper-opc .btn-checkout:hover span span{background:#e8408b;}
+.opc-wrapper-opc .btn-checkout:hover span span{background: #e8408b;opacity: 1;}
 
 .opc-wrapper-opc .btn-checkout.button-disabled{}
 .opc-wrapper-opc .btn-checkout.button-disabled span span{background: url(images/ajax-loader-button.png) no-repeat scroll 15px 12px transparent;}

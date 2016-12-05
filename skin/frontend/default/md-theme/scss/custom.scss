@@ -8761,6 +8761,16 @@ body.customer-logged-in{
 
 body.opc-index-index {
 
+	.securitylogoWrapper {
+		background: #f6f6f6;
+	    width: 100%;
+	    float: left;
+
+		img {
+			margin: auto;
+		}
+	}
+
 	input, select, table, textarea, label {
 		font-family: "Helvetica Neue", Verdana, Arial, sans-serif!important;
 	}
@@ -8816,14 +8826,33 @@ body.opc-index-index {
 
 	.opc-wrapper-opc {
 
-		h3.MainTitle {
-		    border-bottom: 1px solid #dbdbdb;
-		    padding-bottom: 15px;
-		    font-size: 16px;
-		    font-weight: 700;
-		    color: #4c4c4c;
-		    text-transform: uppercase;
+		.headerTitle {
+			border-bottom: 1px solid #dbdbdb;
+		    width: 100%;
+		    float: left;
+		    height: 40px;
+		    display: flex;
+		    align-items: center;
+		    margin-bottom: 25px;
+
+		    img {
+		    	float: left;
+			    bottom: 2px;
+			    margin-right: 10px;
+			    position: relative;
+		    }
+
+			h3.MainTitle {
+			    font-size: 16px;
+			    font-weight: 700;
+			    color: #4c4c4c;
+			    width: auto;
+			    margin: 0;
+			    padding: 0;
+			    text-transform: uppercase;
+			}
 		}
+		
 
 		.MainSubTitle {
 			width: 100%;
@@ -9151,6 +9180,7 @@ body.opc-index-index {
 			}
 
 			fieldset {
+				margin-bottom: 50px;
 
 				&#register_details {
 					ul {
@@ -9327,6 +9357,16 @@ body.opc-index-index {
 
 				button {
 					padding: 5px;
+				}
+
+				.btn-checkout {
+					span {
+						span {
+							&:hover {
+								background: #ee1f7b;
+							}
+						}
+					}
 				}
 			}
 		}

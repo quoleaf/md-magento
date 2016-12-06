@@ -58,11 +58,11 @@
 
 /** BASE OPC ELEMENTS **/
 .opc-wrapper-opc{margin: 0 auto;}
-.opc-wrapper-opc *{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.opc-wrapper-opc *{font-family: 'Open Sans', Arial, Helvetica;color:#393939;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 .opc-wrapper-opc label{color:#000000;font-weight: 600;font-size:14px;line-height: 1.5;margin-bottom:5px;text-align: left;text-transform: none;background:none !important}
-/*.opc-wrapper-opc .control label{padding-left:10px}*//*
+/*.opc-wrapper-opc .control label{padding-left:10px}*/
 .opc-wrapper-opc h3{font-weight:600;color:#404040; font-size:16px;text-align:left;border-bottom:1px solid #b6b6b6;padding-bottom:8px;line-height: 1;margin-bottom: 20px;text-transform: none;}
-*/.opc-wrapper-opc .validation-advice{font-weight:normal;text-align: left;}
+.opc-wrapper-opc .validation-advice{font-weight:normal;text-align: left;}
 .opc-wrapper-opc h2{color:#4a4a4a; font-size:36px; font-weight:400;text-align:left;text-transform:none !important}
 .opc-wrapper-opc p{font-size:16px; color:#393939;text-align:left;margin: 0 0 10px;}
 .opc-wrapper-opc input{box-shadow:none;background: none;float: none !important;margin-left: 0 !important;margin-right: 0 !important;}
@@ -140,6 +140,17 @@
 .opc-wrapper-opc .payment-block{position: relative;}
 .opc-wrapper-opc .payment-block.clear-margin{margin-top:0}
 .opc-wrapper-opc .payment-block .tool-tip{top:0 !important}
+.opc-wrapper-opc .payment-block dt:first-child{
+    margin: 0px 0 13px;
+}
+.opc-wrapper-opc .payment-block dl,
+.opc-wrapper-opc .payment-block dt{text-align:left;font-size:14px;color:#000000;overflow: hidden;}
+.opc-wrapper-opc .payment-block dt{margin: 0px 0 13px;background:#00909e;position:relative;border-radius:2px;}
+.opc-wrapper-opc .payment-block dt:hover,
+.opc-wrapper-opc .payment-block dt.active{background:#39b9c6;}
+.opc-wrapper-opc .payment-block dt label{color: #ffffff;cursor: pointer;display: block;font-size: 18px;font-weight: bold;height: 41px;line-height: 41px;max-width: 100%;text-align: center;text-transform: uppercase;width: 100%; padding: 2px 0 0 0 !important}
+.opc-wrapper-opc .payment-block select{padding:0;border: 1px solid #d8d8d8;margin-top: 0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;height:34px;width:100%}
+.opc-wrapper-opc .payment-block dt input{display:block;position:absolute;height:44px; width:100%;left:0;top:0; opacity:0;cursor:pointer;margin:0 !important;display:none;}
 .opc-wrapper-opc .payment-block h3{margin-bottom:26px;}
 .opc-wrapper-opc .payment-block li{margin-bottom:12px;}
 .opc-wrapper-opc .payment-block .form-list{padding-left:0}
@@ -374,24 +385,25 @@
 .opc-wrapper-opc .btn span{background:#00909e;border:none;height:35px;line-height:35px;-webkit-border-radius: 3px;border-radius: 3px;display:block;padding: 0;}
 .opc-wrapper-opc .btn span span{background:#00909e;color:#ffffff;font-size:12px;font-weight:bold;text-transform:uppercase;padding:0 10px}
 
-.opc-wrapper-opc .btn-checkout{display:block;width:100%;}
-.opc-wrapper-opc .btn-checkout span{background: #e8408b;-webkit-border-radius: 3px;border-radius: 3px;width:100%;line-height: 46px;padding: 0 !important;height: 45px;padding: 0;display:block;}
-.opc-wrapper-opc .btn-checkout span span{background: transparent;color:#ffffff;font-size: 13px;letter-spacing: 5px;font-weight:bold;text-transform:uppercase;}
+.opc-wrapper-opc .btn-checkout{display:block;width:100%;height:45px;}
+.opc-wrapper-opc .btn-checkout span{background:#00909e;-webkit-border-radius: 3px;border-radius: 3px;width:100%;line-height: 46px;padding: 0 !important;height: 45px;padding: 0;display:block;}
+.opc-wrapper-opc .btn-checkout span span{background:#00909e;color:#ffffff;font-size:18px;font-weight:bold;text-transform:uppercase;}
 .opc-wrapper-opc .buttons-set{border:none;margin-top:10px}
 
 .opc-wrapper-opc .btn-checkout:hover span,
-.opc-wrapper-opc .btn-checkout:hover span span{background: #e8408b;opacity: 1;}
+.opc-wrapper-opc .btn-checkout:hover span span{background:#39b9c6;}
 
 .opc-wrapper-opc .btn-checkout.button-disabled{}
 .opc-wrapper-opc .btn-checkout.button-disabled span span{background: url(images/ajax-loader-button.png) no-repeat scroll 15px 12px transparent;}
-.opc-wrapper-opc .btn-checkout.button-disabled span {cursor: default;background-color:#e8408b; text-shadow:none}
+.opc-wrapper-opc .btn-checkout.button-disabled span {cursor: default;background-color:rgba(2,72,79, .8); text-shadow:none}
 
 .opc-wrapper-opc .opc-newsletter{margin-top:30px;margin-bottom:14px;}
 .opc-wrapper-opc .opc-newsletter li{margin-top:10px;margin-bottom:10px;}
 .opc-wrapper-opc .opc-newsletter li label{color:#676767; font-size:14px;font-weight:normal;padding-left:4px;}
 .opc-wrapper-opc .opc-newsletter li .input-box{float:left; width: auto;}
 
-
+.opc-wrapper-opc button{background:none !important;border:none !important;padding:0;}
+.opc-wrapper-opc button span{display:block;}
 .opc-wrapper-opc #update-shipping-methods { border-radius: 2px; height: 40px; background: #4278AD !important; color: #ffffff; text-transform: uppercase; display: block; text-decoration: none; text-align: center; font-weight: bold; padding: 0px 25px; font-size: 14px; }
 
 

@@ -4802,6 +4802,9 @@ input, select, textarea {
 .cart .cart-totals table td:first-child {
   width: 70% !important; }
 
+div#GrandDetails {
+  display: none; }
+
 /* Mobile Screens */
 @media only screen and (max-width: 767px) {
   .hideOnMobile {

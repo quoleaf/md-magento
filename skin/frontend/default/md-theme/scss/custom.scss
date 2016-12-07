@@ -5887,6 +5887,10 @@ input, select, textarea {
 	width: 70% !important;
 }
 
+div#GrandDetails {
+    display: none;
+}
+
 /* Mobile Screens */
 
 @media only screen and (max-width : 767px) {

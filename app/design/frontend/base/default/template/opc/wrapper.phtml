@@ -95,13 +95,9 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
         <!-- End of Center -->            
 
         <!-- Right -->
-
+        <!-- Patrick Added Login Session -->
+        <?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
         <div class="opc-col-right ">
-            <!-- TEST -->
-
-          
-            <div id="GrandDetails">text <b>tag</b></div>
-
             <div class="headerTitle">
                 <img src="<?php echo $this->getSkinUrl('images/OPC/opc-payment-ico.png') ?>">
                 <h3 class="MainTitle"><?php echo $this->__('Payment')?></h3>
@@ -155,7 +151,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                 </div>
             </div>
         </div>
-
+        <?php endif;?>
         <!-- End of Right -->
 
     </div>

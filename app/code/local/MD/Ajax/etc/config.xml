@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+ <config>
+    <modules>
+        <Inchoo_HelloDeveloper>
+            <version>0.0.1</version>
+        </Inchoo_HelloDeveloper>
+    </modules>    
+    <frontend>
+        <routers>
+            <MD_Ajax_Products>
+                <use>standard</use>
+                <args>
+                    <module>MD_Ajax</module>
+                    <frontName>email-lists</frontName>
+                </args>
+            </MD_Ajax_Products>
+        </routers>
+    </frontend>    
+</config>

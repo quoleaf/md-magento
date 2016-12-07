@@ -1,3 +1,5 @@
+<!-- Edited By Rej -->
+
 <script type="text/javascript">countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?></script>
 <?php
 echo $this->getDesignStyles();
@@ -5,103 +7,155 @@ $package = Mage::getDesign()->getPackageName();
 $theme = Mage::getDesign()->getTheme('frontend');
 $is_persistent = Mage::helper('opc')->isPersistentMember();
 ?>
+
+
 <div class="opc-wrapper-opc design_package_<?php echo $package;?> design_theme_<?php echo $theme;?>">
-    <h2><?php echo $this->__('Checkout')?></h2>
-    <div class="opc-menu">
-<?php if(!$is_persistent):?>
-        <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
-        <?php echo $this->getChildHtml('paypal.button'); ?>
+    <div <?php if($is_persistent):?>style="display:none !important;"<?php endif;?>>
 
-        <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
-            <?php echo $this->getChildHtml('login');?>
-        <?php endif;?>
+        <!-- Left -->
 
-        <div class="right review-menu-block">
-          <a class="review-total">
-            <i class="fa fa-2x fa-shopping-cart"></i>
-            <i class="fa fa-2x dd-arrow"></i>
-            <?php echo Mage::helper('opc')->getGrandTotal()?>
-          </a>   
-          <span class="polygon"></span>
-          <div class="hidden" id="opc-review-block">
-              <?php echo $this->_getReviewHtml()?>
-          </div>
+        <div class="opc-col-left">
+
+            <div class="headerTitle">
+                <img src="<?php echo $this->getSkinUrl('images/OPC/opc-bag-ico.png') ?>">
+                <h3 class="MainTitle"><?php echo $this->__('Bag')?></h3>
+            </div>
+
+            <p class="MainSubTitle">
+                <?php $_cartQty = Mage::getSingleton('checkout/cart')->getItemsCount(); echo $_cartQty; ?> Item/s
+            </p>
+
+            <div  id="Review-Wrapper">
+                  <?php echo $this->_getReviewHtml()?>
+            </div>
         </div>
-       <div class="clear move-columns"></div>
-<?php else:?>
-    <?php echo $this->getChildHtml('login');?>
-<?php endif;?>
-    </div>
-    
-    <div class="clear"></div>
 
-<div <?php if($is_persistent):?>style="display:none !important;"<?php endif;?>>
+        <!-- End of Left -->
 
-    <div class="opc-col-left">
-        <form id="opc-address-form-billing" method="post">
-            <?php echo $this->getChildHtml('billing')?>
-        </form>
+        <!-- Center -->
+
+        <div class="opc-col-center">
+
+            <div class="headerTitle">
+                <img src="<?php echo $this->getSkinUrl('images/OPC/opc-delivery-ico.png') ?>">
+                <h3 class="MainTitle"><?php echo $this->__('Delivery')?></h3>
+            </div>
+
+            <p class="MainSubTitle">
+                Deliver To
+            </p>
+
+            <?php if(!$is_persistent):?>
             
-        <form id="opc-address-form-shipping" class="hidden" method="post">
-        <?php echo $this->getChildHtml('shipping')?>
-        </form>
-        
-    </div>
+                <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
+                <?php echo $this->getChildHtml('paypal.button'); ?>
+            
+            <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+                <?php echo $this->getChildHtml('login');?>
+            <?php endif;?>
+            
+            <div class="clear move-columns"></div>
 
-    <div class="opc-col-center">
-       <?php if (!$this->getOnepage()->getQuote()->isVirtual()):?>
-        <div class="shipping-block">
-            <h3><?php echo $this->__('Shipping Method')?></h3>
-            <?php if (Mage::helper('core')->isModuleEnabled('Shipperhq_Splitrates')): ?>
-                <p class="opc-required-msg">You must provide information for all fields marked with an (<span class="highlighted-star">*</span>)</p>
-                <button id="update-shipping-methods" type="button">Get shipping method/rates</button>
-            <?php endif; ?>
-            <div id="shipping-block-methods">
-                <?php echo $this->getChildHtml('shipping_method');//$this->_getShippingMethodsHtml();?>
+            <?php else:?>
+                <?php echo $this->getChildHtml('login');?>
+            <?php endif;?>
+            
+            <form id="opc-address-form-billing" method="post">
+                <?php echo $this->getChildHtml('billing')?>
+            </form>
+                                                    
+            <form id="opc-address-form-shipping" class="hidden" method="post">
+                <?php echo $this->getChildHtml('shipping')?>
+            </form>
+
+            <!-- Shipping Method -->
+
+            <?php if (!$this->getOnepage()->getQuote()->isVirtual()):?>
+                <div class="shipping-block">
+                    <h3>
+                        <?php echo $this->__('Shipping Method')?>
+                    </h3>
+                            
+                    <?php if (Mage::helper('core')->isModuleEnabled('Shipperhq_Splitrates')): ?>
+                        <p class="opc-required-msg">
+                            You must provide information for all fields marked with an 
+                            (<span class="highlighted-star">*</span>)
+                        </p>
+                                
+                        <button id="update-shipping-methods" type="button">Get shipping method/rates</button>
+                    <?php endif; ?>
+                                    
+                    <div id="shipping-block-methods">
+                        <?php echo $this->getChildHtml('shipping_method');//$this->_getShippingMethodsHtml();?>
+                    </div>
+                </div>
+            <?php endif;?>
+        </div>
+            
+        <!-- End of Center -->            
+
+        <!-- Right -->
+
+        <div class="opc-col-right ">
+            <div class="headerTitle">
+                <img src="<?php echo $this->getSkinUrl('images/OPC/opc-payment-ico.png') ?>">
+                <h3 class="MainTitle"><?php echo $this->__('Payment')?></h3>
             </div>
-        </div>
-        <?php endif;?>
-        
-        <?php if(Mage::helper('opc')->isShowDiscount()):?>
-        <div class="discount-block">
-            <h3><?php echo $this->__('Discount Codes')?><span class='fa expand_plus'></span></h3>
-            <div  class="collapse-block hidden">
-                 <?php echo $this->getChildhtml('coupon');?>
-            </div>
-        </div>
-        <?php endif;?>
 
-        <?php if(Mage::helper('opc')->isShowComment()):?>
-            <?php echo $this->getChildhtml('customer.comment');?>
-        <?php endif;?>
-    </div>
+            <p class="MainSubTitle">
+                pay by
+            </p>
 
-    <div class="opc-col-right">
-        <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
-            <h3><?php echo $this->__('Payment Method')?></h3>
-            <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
-        </div>
-    
-        <?php if (Mage::getConfig()->getModuleConfig('IWD_OnepageCheckoutSignature')->is('active', 'true')): ?>
-            <div class="signature-block">
-                <h3><?php echo $this->__('Signature')?><span class='fa expand_plus'></span></h3>
-                <div  class="collapse-block hidden">
-                    <?php echo $this->getChildhtml('opcsignature');?>
+            <div class="payment section">
+                <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
+                    <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+                </div>
+
+                <form id="opc-discount-coupon-form" action="<?php echo $this->getUrl('checkout/cart/couponPost', array('_secure' => $this->getRequest()->isSecure())) ?>" method="post">
+                    <div class="discount">
+                        <label for="coupon_code"><?php echo $this->__('Coupon Code') ?></label>
+
+                        <div class="discount-form">
+                            <div class="input-box">
+                                <input class="input-text" id="coupon_code" type="text" name="coupon_code" value="<?php echo $this->htmlEscape($this->getCouponCode()) ?>" autocomplete="off"/>
+                            </div>
+                            <div class="buttons-set">
+                                <button type="button" title="<?php echo $this->__('Apply') ?>" class="button apply-coupon"  value="<?php echo $this->__('Apply') ?>">
+                                    <a>
+                                        <?php echo $this->__('Apply') ?>
+                                    </a>
+                                </button>
+                                <?php if(strlen($this->getCouponCode())): ?>
+                                    &nbsp; <button type="button" title="<?php echo $this->__('Cancel') ?>" class="button remove-coupon right"  value="<?php echo $this->__('Cancel') ?>"><span><span><?php echo $this->__('Cancel') ?></span></span></button>
+                                <?php endif;?>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <?php if (Mage::getConfig()->getModuleConfig('IWD_OnepageCheckoutSignature')->is('active', 'true')): ?>
+                    <div class="signature-block">
+                        <h3><?php echo $this->__('Signature')?><span class='fa expand_plus'></span></h3>
+                        <div  class="collapse-block hidden">
+                            <?php echo $this->getChildhtml('opcsignature');?>
+                        </div>
+                    </div>
+                <?php endif;?>
+
+                <div class="opc-review-actions" id="checkout-review-submit">
+                      <h5 class="grand_total"><?php echo $this->__('Grand Total')?><?php echo Mage::helper('opc')->getGrandTotal()?></h5>
+                      <?php echo $this->getChildHtml('agreements')?>
+                      <?php echo $this->getChildHtml('opc.newsletters');?>
+                      <button type="button" title="<?php echo $this->__('Place Order Now') ?>" class="button btn-checkout opc-btn-checkout"><span><span><?php echo $this->__('Place Order Now') ?></span></span></button>
                 </div>
             </div>
-        <?php endif;?>
-
-        <div class="opc-review-actions" id="checkout-review-submit">
-              <h5 class="grand_total"><?php echo $this->__('Grand Total')?><?php echo Mage::helper('opc')->getGrandTotal()?></h5>
-              <?php echo $this->getChildHtml('agreements')?>
-              <?php echo $this->getChildHtml('opc.newsletters');?>
-              <button type="button" title="<?php echo $this->__('Place Order Now') ?>" class="button btn-checkout opc-btn-checkout"><span><span><?php echo $this->__('Place Order Now') ?></span></span></button>
         </div>
+
+        <!-- End of Right -->
+
     </div>
-    
 </div>
 
-</div>
 <script>
     var vopc = '<?php echo Mage::getConfig()->getModuleConfig("IWD_Opc")->version;?>';
     IWD.OPC.Checkout.config = '<?php echo $this->getJsonConfig()?>';
@@ -110,8 +164,14 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
     <?php endif;?>
 </script>
 
-<div id="agree_error" style="display:none !important;"><?php echo $this->__('Please agree to all the terms and conditions before placing the order.');?></div>
-<div id="pssm_msg" style="display:none !important;"><?php echo $this->__('Please specify shipping method.');?></div>
+<div id="agree_error" style="display:none !important;">
+    <?php echo $this->__('Please agree to all the terms and conditions before placing the order.');?>
+</div>
+
+<div id="pssm_msg" style="display:none !important;">
+    <?php echo $this->__('Please specify shipping method.');?>
+</div>
+
 <div class="opc-ajax-loader">
     <div id="floatingCirclesG">
         <div class="f_circleG" id="frotateG_01"></div>
@@ -124,11 +184,192 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
         <div class="f_circleG" id="frotateG_08"></div>
     </div>
 </div>
+
 <div class="opc-message-wrapper design_package_<?php echo $package;?> design_theme_<?php echo $theme;?>">
-    
     <div class="opc-messages">
         <a class="close-message-wrapper"><i class="fa fa-close"></i></a>
         <div class="opc-message-container"></div>
         <div class="opc-messages-action"><button class="button"><span><span><?php echo $this->__('Close')?></span></span></button></div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+
+MoveContent('GrandDetails','TotalsDetail');
+    jQuery( document ).ready(function() {
+    
+        // Custom Login Validation
+
+        jQuery(".nextCustomLogin").click(function(){
+            var CustomLoginform = jQuery("#login-form");
+            
+            CustomLoginform.validate({
+                errorElement: 'span',
+                errorClass: 'help-block',
+
+                highlight: function(element, errorClass, validClass) {
+                    jQuery(element).closest('.form-group').addClass("has-error");
+                },
+                    
+                unhighlight: function(element, errorClass, validClass) {
+                    jQuery(element).closest('.form-group').removeClass("has-error");
+                },
+                    
+                rules: {
+                    "login[username]": {
+                        required: true,
+                    }
+                },
+
+                messages: {
+                    "login[username]": {
+                        required: "Please enter your email",
+                    }   
+                }
+            });
+                
+            if (CustomLoginform.valid() === true){
+                if (jQuery('#login_email').is(":visible")){
+
+                    current_fs = jQuery('#login_email');
+                    next_fs = jQuery('#login_password');
+
+                }else if(jQuery('#login_password').is(":visible")){
+                        
+                    current_fs = jQuery('#login_password');
+                    next_fs = jQuery('#register_password');
+                    
+                }else if(jQuery('#register_password').is(":visible")){
+
+                    current_fs = jQuery('#register_password');
+                    next_fs = jQuery('#register_details');
+                }
+                    
+                next_fs.show(); 
+                current_fs.hide();
+            }
+        });
+
+
+        jQuery(".nextCustomReg").click(function(){
+            var CustomRegisterForm = jQuery("#opc-address-form-billing");
+                
+            CustomRegisterForm.validate({
+                errorElement: 'span',
+                errorClass: 'help-block',
+
+                highlight: function(element, errorClass, validClass) {
+                    jQuery(element).closest('.form-group').addClass("has-error");
+                },
+                
+                unhighlight: function(element, errorClass, validClass) {
+                    jQuery(element).closest('.form-group').removeClass("has-error");
+                },
+
+                rules: {
+
+                    "billing[customer_password]" : {
+                        required: true,
+                    },
+                        
+                    "billing[confirm_password]" : {
+                        required: true,
+                        equalTo: '#billing\\:customer_password',
+                    }
+                        
+                },
+
+                messages: {
+                    "billing[customer_password]" : {
+                        required: "Password required",
+                    },
+                        
+                    "billing[confirm_password]" : {
+                        required: "Password required",
+                        equalTo: "Password don't match",
+                    }
+                }
+            });
+                
+            if (CustomRegisterForm.valid() === true){
+                if(jQuery('#register_password').is(":visible")){
+                
+                    current_fs = jQuery('#register_password');
+                    next_fs = jQuery('#register_confirm_password');
+                
+                }else if (jQuery('#register_confirm_password').is(":visible")){
+                        
+                    current_fs = jQuery('#register_confirm_password');
+                    next_fs = jQuery('#register_details');
+                    
+                }
+                
+                next_fs.show(); 
+                current_fs.hide();
+                
+                }
+            });
+
+            jQuery('#PreviousToLoginEmail').click(function(){
+                if(jQuery('#login_password').is(":visible")){
+                    current_fs = jQuery('#login_password');
+                    next_fs = jQuery('#login_email');
+                }else if (jQuery('#register_password').is(":visible")){
+                    current_fs = jQuery('#register_password');
+                    next_fs = jQuery('#login_password');
+                }
+                next_fs.show(); 
+                current_fs.hide();
+            });
+            
+            jQuery('#PreviousToLoginPass').click(function(){
+                if(jQuery('#register_password').is(":visible")){
+                    current_fs = jQuery('#register_password');
+                    next_fs = jQuery('#login_password');
+                }else if (jQuery('#register_confirm_password').is(":visible")){
+                    current_fs = jQuery('#register_confirm_password');
+                    next_fs = jQuery('#register_confirm_password');
+                }
+                next_fs.show(); 
+                current_fs.hide();
+            });
+
+            jQuery('#PreviousToRegisterPass').click(function(){
+                if(jQuery('#register_confirm_password').is(":visible")){
+                    current_fs = jQuery('#register_confirm_password');
+                    next_fs = jQuery('#register_password');
+                }else if (jQuery('#register_details').is(":visible")){
+                    current_fs = jQuery('#register_details');
+                    next_fs = jQuery('#register_confirm_password');
+                }
+                next_fs.show(); 
+                current_fs.hide();
+            });
+
+
+            jQuery('#PreviousToRegisterConfirmPass').click(function(){
+                if(jQuery('#register_details').is(":visible")){
+                    current_fs = jQuery('#register_details');
+                    next_fs = jQuery('#register_confirm_password');
+                }else if (jQuery('#register_details').is(":visible")){
+                    current_fs = jQuery('#register_details');
+                    next_fs = jQuery('#register_details');
+                }
+                next_fs.show(); 
+                current_fs.hide();
+            });
+            
+        });
+
+
+        jQuery(document).on('click', '.myCheckbox', function () {
+            var target = jQuery(this).data('target');    
+            if (jQuery(this).is(':checked')) {
+                jQuery('#' + target).removeClass('disabled').css('pointerEvents','none');
+            }
+            else {
+                jQuery('#' + target).addClass('disabled').css('pointerEvents','auto');;
+            }
+        });
+</script>

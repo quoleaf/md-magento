@@ -595,7 +595,7 @@ body.withTopbar #topNavi .navi li .sub {
 	width: 180px!important;
 	height: 30px!important;
 	margin: 50px 9px 0 0;
-	background: url(../images/search-new.png) no-repeat left!important;
+	background: url(../images/search-new.png) no-repeat left 4px !important;
 	-webkit-background-size: 20px!important;
 	-moz-background-size: 20px !important;
 	background-size: 20px!important;
@@ -606,6 +606,7 @@ body.withTopbar #topNavi .navi li .sub {
 	border: 2px solid #e8418b;
 	border-radius: 5px;
 	padding-left: 25px;
+	padding-top: 6px;
 }
 
 
@@ -1539,7 +1540,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #testimonials .product .viewBtn {
 	width: 245px;
-	line-height: 65px;
+	line-height: 70px;
 	font-size: 18px;
 }
 
@@ -1783,7 +1784,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #featured .products li .shopNowBtn {
 	max-width: 100%;
-	line-height: 60px;
+	line-height: 68px;
 	font-size: 16.55px;
 }
 
@@ -3220,7 +3221,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 #newsletter .fields .submitBtn {
 	float: right;
 	width: 21.18110236220472%;
-	line-height: 45px;
+	line-height: 68px;
 	min-width: auto;
 }
 

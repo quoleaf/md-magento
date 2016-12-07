@@ -97,6 +97,11 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
         <!-- Right -->
 
         <div class="opc-col-right ">
+            <!-- TEST -->
+
+          
+            <div id="GrandDetails">text <b>tag</b></div>
+
             <div class="headerTitle">
                 <img src="<?php echo $this->getSkinUrl('images/OPC/opc-payment-ico.png') ?>">
                 <h3 class="MainTitle"><?php echo $this->__('Payment')?></h3>
@@ -195,6 +200,11 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 
 
 <script type="text/javascript">
+
+function MoveContent(destId, srcId) {
+
+    jQuery('#' + destId).append(jQuery('#' + srcId).contents().detach());
+}
 
 MoveContent('GrandDetails','TotalsDetail');
     jQuery( document ).ready(function() {

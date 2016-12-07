@@ -24,11 +24,10 @@
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
     <?php echo $this->getChildHtml('paypalauth.login'); ?>
 
-    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" class="OPCMain-Form" id="login-form">
         <?php echo $this->getBlockHtml('formkey'); ?>
-
+        <!-- Patrick Added Ajax Customer Email checker -->
         <!-- Login Email -->
-
         <fieldset id="login_email">
 
             <strong class="title">
@@ -44,7 +43,8 @@
                     <?php echo $this->__('Email Address') ?> 
                 </label>
 
-                <input type="email" class="form-control" id="email" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>"  placeholder="Type your email here">
+                <!--<input type="email" class="form-control MDLogin" id="email" name="login[username]" value="<?php //echo $this->htmlEscape($this->getUsername()) ?>"  placeholder="Type your email here">-->
+                <input type="email" class="form-control MDLogin" id="email" name="login[username]" value=""  placeholder="Type your email here">
             </div>  
 
             <div class="NextButton">
@@ -57,22 +57,12 @@
         <!-- End of Login Email -->
 
         <!-- Login Password -->
-
-        <fieldset id="login_password" class="">
-
-            <strong class="title">
-                Welcome Back 
-            </strong>
-
-            <p class="subtitle">
-                Please enter your password to continue to delivery and payment.
-            </p>
+        <fieldset id="login_password" class="hide">
+            <strong class="title">Welcome Back</strong>
+            <p class="subtitle">Please enter your password to continue to delivery and payment.</p>
 
             <div class="form-group">
-                <label for="login[password]" class="control-label">
-                    <?php echo $this->__('Password') ?>
-                </label>
-
+                <label for="login[password]" class="control-label"><?php echo $this->__('Password') ?></label>
                 <input type="password" class="form-control" id="pass" name="login[password]" placeholder="Password">
             </div>
                           
@@ -80,31 +70,40 @@
             <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
             
             <button type="submit" title="<?php echo $this->__('Login') ?>" name="send" id="send2">
-                <a>
-                    <?php echo $this->__('Continue') ?>
-                </a>
+                <a><?php echo $this->__('Continue') ?></a>
             </button>
-
-            <ul class="links">
-                <li><a href="<?php echo $this->getForgotPasswordUrl() ?>">Forgot you password?</a></li>
-                <li>
-                    <a id="PreviousToLoginEmail">Sign in with another account</a> 
-                    <span>
-                        - OR- 
-                    </span>
-                    <a class="nextCustomLogin">Create an account</a>
-                </li>
-            </ul>
-
 
             <?php if ($isContextCheckout): ?>
                 <input name="context" type="hidden" value="checkout"/>
             <?php endif; ?>
         </fieldset>
-
         <!-- End of Login Password -->
-
     </form>
+
+        <fieldset id="registration_password" class="hide">
+        <?php echo $this->getLayout()->createBlock('customer/form_register')->setTemplate('customer/form/register2.phtml')->toHtml(); ?>
+
+            <strong class="title">IT LOOKS LIKE YOU'RE NEW HERE</strong>
+            <p class="subtitle">Please enter a password to create your account and continue to delivery and payment.</p>
+
+            <div class="form-group">
+                <label for="login[password]" class="control-label"><?php echo $this->__('Password') ?></label>
+                <input type="password" class="form-control" id="pass" name="login[password]" placeholder="Password">
+            </div>
+                          
+            <?php echo $this->getChildHtml('persistent.remember.me'); ?> 
+            <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+            
+            <button type="submit" title="<?php echo $this->__('Login') ?>" name="send" id="send2">
+                <a><?php echo $this->__('Continue') ?></a>
+            </button>
+
+            <?php if ($isContextCheckout): ?>
+                <input name="context" type="hidden" value="checkout"/>
+            <?php endif; ?>
+             <div class="buttons-set">
+            </form>
+        </fieldset>
 
 </div>
 
@@ -114,3 +113,25 @@
     //]]>
 </script>
 
+<script type="text/javascript">
+var url = '<?php echo Mage::getBaseUrl();?>email-lists/index/ajax';
+jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
+    var mail = jQuery('.opc-index-index input.MDLogin').val();
+    var dataForm = new VarienForm('login-form', true);
+    jQuery.ajax({
+        type: "POST",
+        url: url,
+        dataType: "json",
+        data: {email: mail},
+        success: function (exists) {
+            jQuery('.opc-index-index #login_password').removeClass('hide'); 
+        },
+        error: function (exists, jqXHR, textStatus, errorThrown) {
+           jQuery('.opc-index-index #registration_password').removeClass('hide'); 
+           var email = jQuery('.opc-index-index input.MDLogin').val();
+           localStorage.setItem("email", email);
+        }
+    });
+
+});
+</script>

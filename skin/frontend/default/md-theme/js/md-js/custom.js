@@ -1,4 +1,11 @@
 jQuery(function($) {
+	var email = localStorage.getItem("email");
+	$('.OPCregister-email').val(email);
+
+	$('.opc-index-index .account-login input[name="login[password]"]').on('change', function(){
+		var pass = $(this).val();
+		$('.opc-index-index .OPCregister-pass').val(pass);
+	});
 
 	/* Subdomain Flags */
 	var url = location.hostname.split('.');

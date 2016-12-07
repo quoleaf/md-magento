@@ -1602,6 +1602,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #tryIt .model {
 	background: url(../images/try-it-model.png) no-repeat center bottom;
+	background-size: contain;
 }
 
 #tryIt .section {
@@ -1678,6 +1679,15 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #tryIt .beforeAfter .slider .twentytwenty-container {
 	overflow: visible;
+}
+
+.images.twentytwenty-container{
+	height: 85px !important;
+	width: 100%;
+}
+
+.twentytwenty-container img{
+	width: 100%;
 }
 
 #tryIt .beforeAfter .slider .twentytwenty-handle {
@@ -5865,6 +5875,18 @@ input, select, textarea {
 	
 }
 
+.cart .cart-totals table tfoot strong span, .cart .cart-totals table tfoot span.price{
+	font-size: 18px;
+}
+
+.cart .cart-totals table tfoot strong{
+	font-size: 18px;
+}
+
+.cart .cart-totals table td:first-child{
+	width: 70% !important;
+}
+
 /* Mobile Screens */
 
 @media only screen and (max-width : 767px) {
@@ -8539,7 +8561,7 @@ body.catalog-product-view {
 		    					tbody{
 		    						tr {
 		    							td {
-		    								padding: 0 20px 10px 20px;
+		    								padding: 20px 20px 20px 0px;
 		    								width: 100%;
 		    							}
 		    						}

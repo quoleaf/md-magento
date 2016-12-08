@@ -66,12 +66,29 @@
         
         <div class="sort">
             <span class="lbl">SORT BY</span>
+            
+            <!-- Edited by rej -->
              <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sort By')) ?>">
-                <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
-                    <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
-                        <?php echo $this->__($_order) ?>
-                    </option>
-                <?php endforeach; ?>
+
+                <!-- Featured products -->
+                <option value="<?php echo $this->getOrderUrl('position', 'asc') ?>"<?php if($this->isOrderCurrent('position') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Featured Items </option>
+
+
+                <!-- Newest products -->
+                <option value="<?php echo $this->getOrderUrl('news_from_date','desc') ?>"<?php if($this->isOrderCurrent('news_from_date') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>>
+                     Newest
+                </option>
+
+                <!-- A-Z | Z-A -->
+                <option value="<?php echo $this->getOrderUrl('name', 'asc') ?>"<?php if($this->isOrderCurrent('name') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Alphabetical - A to Z </option>
+                
+                <option value="<?php echo $this->getOrderUrl('name', 'desc') ?>"<?php if($this->isOrderCurrent('name') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>> Alphabetical - Z to A </option>
+
+                <!-- Low to High | High to Low -->
+
+                <option value="<?php echo $this->getOrderUrl('price', 'asc') ?>"<?php if($this->isOrderCurrent('price') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Price - Low to High </option>
+                  <option value="<?php echo $this->getOrderUrl('price', 'desc') ?>"<?php if($this->isOrderCurrent('price') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>> Price - High to Low </option>
+                  
             </select>
         </div>                      
     </div>
@@ -88,11 +105,27 @@
             </select>
             
              <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sort By')) ?>">
-                <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
-                    <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
-                        <?php echo $this->__($_order) ?>
-                    </option>
-                <?php endforeach; ?>
+                <!-- Edited by rej -->
+             <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sort By')) ?>">
+
+                <!-- Featured products -->
+                <option value="<?php echo $this->getOrderUrl('position', 'asc') ?>"<?php if($this->isOrderCurrent('position') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Featured Items </option>
+
+
+                <!-- Newest products -->
+                <option value="<?php echo $this->getOrderUrl('news_from_date','desc') ?>"<?php if($this->isOrderCurrent('news_from_date') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>>
+                     Newest
+                </option>
+
+                <!-- A-Z | Z-A -->
+                <option value="<?php echo $this->getOrderUrl('name', 'asc') ?>"<?php if($this->isOrderCurrent('name') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Alphabetical - A to Z </option>
+                
+                <option value="<?php echo $this->getOrderUrl('name', 'desc') ?>"<?php if($this->isOrderCurrent('name') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>> Alphabetical - Z to A </option>
+
+                <!-- Low to High | High to Low -->
+
+                <option value="<?php echo $this->getOrderUrl('price', 'asc') ?>"<?php if($this->isOrderCurrent('price') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Price - Low to High </option>
+                  <option value="<?php echo $this->getOrderUrl('price', 'desc') ?>"<?php if($this->isOrderCurrent('price') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>> Price - High to Low </option>
             </select>
         </div>
         

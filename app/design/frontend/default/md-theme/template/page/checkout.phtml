@@ -38,18 +38,25 @@
 <!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
 
+<!-- edited by rej -->
 <head>
+
     <?php echo $this->getChildHtml('head') ?>
     <script type="text/javascript">
         jQuery.noConflict()
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
 </head>
+
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
-        <!-- Google Tag Manager -->
+    
+    <!-- Google Tag Manager -->
     <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-582BMC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -60,27 +67,46 @@
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-582BMC');</script>
     <!-- End Google Tag Manager -->
+
 <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
     <div id="mainWrapper">
         <div id="header" class="parralax">
             <div id="topBar" class="clearfix">
-                <div class="logo">
-                    <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
+                <div class="logoWrapper">
+                    <a href="<?php echo Mage::getUrl('home'); ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/OPC/md-logo.png') ?>" alt=""/>
+                    </a>
                 </div>
 
-                <div class="details">
-                    <a href="javascript:void(0);">
-                        Free Delivery
-                    </a>
+                <div class="detailsWrapper">
+                    <span class="inner">
+                        <img src="<?php echo $this->getSkinUrl('images/OPC/truck-ico.png') ?>" alt=""/>
+                        <a href="javascript:void(0);">
+                            Free Delivery
+                        </a>
+                    </span>
 
-                    <a href="javascript:void(0);">
-                        Use points
-                    </a>
+                    <span class="inner">
+                        <img src="<?php echo $this->getSkinUrl('images/OPC/star-ico.png') ?>" alt=""/>
+                        <a href="javascript:void(0);">
+                            Use points
+                        </a>
+                    </span>
 
-                    <a href="javascript:void(0);">
-                        Shipping Details
+                    <span class="inner">
+                        <img src="<?php echo $this->getSkinUrl('images/OPC/shipping-ico.png') ?>" alt=""/>
+                        <a href="javascript:void(0);">
+                            Shipping Details
+                        </a>
+                    </span>
+                </div>
+
+                <div class="ContinueShoppingWrapper">
+                    <img src="<?php echo $this->getSkinUrl('images/OPC/left-arrow-ico.png') ?>" alt=""/>
+                    <a href="<?php echo Mage::getUrl('categories'); ?>">
+                        Continue Shopping
                     </a>
                 </div>
             </div>

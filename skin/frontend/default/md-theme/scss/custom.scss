@@ -8241,6 +8241,36 @@ body.catalog-product-view {
 			tbody {
 				border-top: 1px dashed #afacac;
 	    		border-bottom: 1px dashed #afacac;
+	    		height: 318px!Important;
+			    overflow-y: auto;
+			    overflow-x: hidden;
+			    display: block;
+
+			    &::-webkit-scrollbar,&::-webkit-scrollbar {
+							width:13px;
+							height:10px;
+							outline:none;
+						}
+
+						&::-webkit-scrollbar-thumb,&::-webkit-scrollbar-thumb {
+							height: 6px;
+							border: 4px solid rgba(0, 0, 0, 0);
+							background-clip: padding-box;
+							-webkit-border-radius: 7px;
+							background-color: rgba(0, 0, 0, 0.15);
+							-webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+						}
+
+						&::-webkit-scrollbar-button,&::-webkit-scrollbar-button {
+							width:0;
+							height:0;
+							display:none;
+						}
+
+						&::-webkit-scrollbar-corner,&::-webkit-scrollbar-corner {
+							background-color:transparent;
+						}
+						
 
 	    		tr {
 	    			display: flex;

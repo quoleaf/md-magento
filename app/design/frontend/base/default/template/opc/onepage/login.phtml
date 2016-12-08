@@ -82,21 +82,25 @@
 
         <fieldset id="registration_password" class="hide">
         <?php echo $this->getLayout()->createBlock('customer/form_register')->setTemplate('customer/form/register2.phtml')->toHtml(); ?>
-
-            
-
             <?php if ($isContextCheckout): ?>
                 <input name="context" type="hidden" value="checkout"/>
             <?php endif; ?>
+            </form>
         </fieldset>
+
 </div>
 
 <script type="text/javascript">
-//<![CDATA[
-var dataForm = new VarienForm('login-form', true);
+    //<![CDATA[
+        var dataForm = new VarienForm('login-form', true);
+    //]]>
+</script>
+
+<script type="text/javascript">
 var url = '<?php echo Mage::getBaseUrl();?>email-lists/index/ajax';
-jQuery(document).on('click', '.opc-index-index .nextCustomLogin', function(){
-var mail = jQuery('.opc-index-index input.MDLogin').val();
+jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
+    var mail = jQuery('.opc-index-index input.MDLogin').val();
+    var dataForm = new VarienForm('login-form', true);
     jQuery.ajax({
         type: "POST",
         url: url,
@@ -114,9 +118,6 @@ var mail = jQuery('.opc-index-index input.MDLogin').val();
     });
 if (jQuery('.opc-index-index #email-error').text().length){
     jQuery('.opc-index-index #registration_password').hide();           
-}else{
-    jQuery('.opc-index-index #registration_password').show();
 }
 });
-//]]>
 </script>

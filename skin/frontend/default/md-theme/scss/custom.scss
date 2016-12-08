@@ -168,7 +168,7 @@ body {
 }
 
 a, p, span, h1, h2, h3, h4, h5, h6, div {
-	font-family: 'Helvetica', Arial, sans-serif;
+	font-family: 'Helvetica', Arial, sans-serif!important;
 }
 
 
@@ -243,7 +243,7 @@ a {
 
 #header.forHome .overlay .title {
 	font-size: 62.47px;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-weight: bold;
 	font-style: italic;
 	margin: 0 0 5px;
@@ -309,7 +309,7 @@ a {
 
 #header.forAbout .overlay .title span {
 	display: block;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-weight: bold;
 	font-style: italic;
 	font-size: 44.76px;
@@ -336,8 +336,8 @@ a {
 	background-color: #bdaba6;
 }
 
-#header.forCategory .title {
-	font-family: 'Bodoni', Arial, sans-serif;
+#header.forCategory .title, #header.forCategory .title span {
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 48px;
 	font-style: italic;
 	color: #fff;
@@ -380,7 +380,7 @@ a {
 
 #header.forShop .overlay .title span {
 	display: block;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 48px;
 	font-style: italic;
 }
@@ -1091,7 +1091,7 @@ body.tabletMode.showMobileMenu {
 	border: 0;
 	color: #fff;
 	background: #222222;
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 	font-size: 15px;
 	-webkit-box-shadow: inset 1px 3px 3px rgba(0,0,0,0.35);
 	-moz-box-shadow: inset 1px 3px 3px rgba(0,0,0,0.35);
@@ -1134,7 +1134,7 @@ body.tabletMode.showMobileMenu {
 
 #infoBar .freeShipping .title span {
 	display: block;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 35.78px;
 	font-style: italic;
 }
@@ -1322,7 +1322,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #searchOverlay .fields .instruction {
 	text-align: center;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-style: italic;
 	font-size: 26.66px;
 	letter-spacing: 3px;
@@ -1431,6 +1431,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	-moz-background-size: 53px;
 	background-size: 53px;
 	-ms-behavior: url(backgroundsize.min.htc);
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
 }
 
 #categories ul li a:hover .image .pic{
@@ -1603,6 +1604,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 #tryIt .model {
 	background: url(../images/try-it-model.png) no-repeat center bottom;
 	background-size: contain;
+	background-position-y: 0;
 }
 
 #tryIt .section {
@@ -1625,7 +1627,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 }
 
 #tryIt .overlay .title {
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 33.01px;
 	line-height: 1.1;
 	margin-bottom: 50px;
@@ -1640,7 +1642,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #tryIt .overlay .title span {
 	display: block;
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 	font-size: 24px;
 }
 
@@ -1738,7 +1740,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 }
 
 #featured .title em {
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 72px;
 	font-style: italic;
 	vertical-align: middle;
@@ -1908,7 +1910,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #benefits ul li p span {
 	display: block;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-weight: bold;
 	font-style: italic;
 	color: #707070;
@@ -1981,7 +1983,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 }
 
 #services .listing li .desc .title {
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 	font-size: 28.04px;
 	color: #2162a3;
 	margin-bottom: 25px;
@@ -2050,7 +2052,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #getUpdate .title span {
 	display: block;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-style: italic;
 	font-size: 48px;
 	color: #898989;
@@ -2135,7 +2137,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	font-size: 40px;
 	color: #555555;
 	margin: 0 auto;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	text-align: center;
 	line-height: 1.139;
 }
@@ -2349,7 +2351,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 #gallery .title {
 	text-align: center;
 	font-size: 65px;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-style: italic;
 	color: #585858;
 }
@@ -2472,7 +2474,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 #joinUs .title {
 	margin: 0;
 	text-align: center;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 65px;
 	font-style: italic;
 	color: #585858;
@@ -2572,7 +2574,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	padding: 8.108108108108108%;
 	display: table-cell;
 	vertical-align: middle;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 28px;
 	font-style: italic;
 	color: #4d4d4d;
@@ -2749,7 +2751,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #blog .posts .post .title {
 	color: #4d4d4d;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-style: italic;
 	font-size: 28px;
 	line-height: 1.25;
@@ -3055,7 +3057,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #pressMedia .media .slider .desc .title {
 	color: #1183ce;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 30px;
 	font-style: italic;
 	margin: 0 0 12px;
@@ -3105,7 +3107,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 }
 
 #signin .title {
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 	font-size: 30px;
 	color: #1965b3;
 }
@@ -3117,7 +3119,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	width: 100%;
 	height: 60px;
 	border: 1px solid #dadada;
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 	font-size: 18px;
 	color: #a8a8a8;
 	-webkit-border-radius: 4px;
@@ -3131,7 +3133,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #signin .left .options .forget {
 	margin-left: 27px;
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 	font-size: 18px;
 	color: #3d65ca;
 }
@@ -3161,7 +3163,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	min-width: auto;
 	padding-left: 43px;
 	padding-right: 43px;
-	font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+	font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 }
 
 /* Subscribe */
@@ -3261,14 +3263,14 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #subscribe .overlay .title em {
 	display: block;
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-style: italic;
 	font-size: 66px;
 }
 
 #subscribe .overlay .title span {
 	display: block;
-	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif;
+	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif!important;
 	font-size: 65px;
 	margin-bottom: 5px;
 	margin-top: -8px;
@@ -3413,8 +3415,13 @@ display: table;
 }
 
 .naviBar .pager {
+	display: none;
 	text-align: left;
 	padding-left: 10px;
+}
+
+.naviBar .show {
+	display: none;
 }
 
 .naviBar .pager ul {
@@ -3600,7 +3607,7 @@ display: table;
 
 #shopProducts ul li .desc .price {
 	display: block;
-	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif;
+	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif!important;
 	font-size: 24px;
 	padding-top: 5px;
 }
@@ -3779,7 +3786,7 @@ display: table;
 
 #product .right .info .price {
 	display: block;
-	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif;
+	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif!important;
 	font-size: 36px;
 	color: #3a3942;
 }
@@ -3952,7 +3959,7 @@ display: table;
 }
 
 #related .title {
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-size: 36px;
 	font-style: italic;
 	color: #1965b3;
@@ -3997,14 +4004,14 @@ display: table;
 
 #footer .socials .title {
 	display: inline-block;
-	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif;
+	font-family: 'HelveticaNeueLTStd-Th', Arial, sans-serif!important;
 	font-size: 35.54px;
 	margin: 0 31px 0 0;
 	vertical-align: middle;
 }
 
 #footer .socials .title span {
-	font-family: 'Bodoni', Arial, sans-serif;
+	font-family: 'Bodoni', Arial, sans-serif!important;
 	font-style: italic;
 	font-size: 30.28px;
 	margin-left: -7px;
@@ -5875,13 +5882,6 @@ input, select, textarea {
 	
 }
 
-.cart .cart-totals table tfoot strong span, .cart .cart-totals table tfoot span.price{
-	font-size: 18px;
-}
-
-.cart .cart-totals table tfoot strong{
-	font-size: 18px;
-}
 
 .cart .cart-totals table td:first-child{
 	width: 70% !important;
@@ -6586,7 +6586,7 @@ div#GrandDetails {
 		left: 0;
 		right: 0;
 		top: 47%;
-		font-family: 'HelveticaLTStd-Light', Arial, sans-serif; 
+		font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
 		font-size: 14px;
 	}
 	
@@ -8104,8 +8104,10 @@ body.catalog-product-view {
 		}
 
 		input[type="radio"] + label {
-		  color: #292321;
+		  color: #454545;
 		  font-size: 14px;
+		  display: flex;
+		  align-items: center;
 		}
 
 		input[type="radio"] + label span.radiocustom {
@@ -8117,6 +8119,7 @@ body.catalog-product-view {
 		  cursor: pointer;
 		  -moz-border-radius: 50%;
 		  border-radius: 50%;
+		  margin-right: 10px;
 		}
 
 		input[type="radio"] + label span.radiocustom p {
@@ -8333,19 +8336,20 @@ body.catalog-product-view {
 
 		    	h2 {
 				    width: 100%;
-				    height: 30px;
-				    border-bottom: 2px solid #1183ce;
+				    height: 35px;
+				    border-bottom: 1px solid #e2e2e2;
 				    line-height: 29px;
 				    padding: 0 20px 0 20px;
-				    font-size: 14px;
-				    font-weight: 600;
+				    font-size: 16px;
+				    font-weight: 500;
 				    color: #636363;
 				    margin: 0;
 
 				    i {
-						color: #e8408b;
+						color: #636363;
 						position: relative;
-						bottom: 2px;
+						bottom: 1px;
+    					margin-right: 10px;
 					}
 				}
 
@@ -8353,7 +8357,6 @@ body.catalog-product-view {
 		    		width: 100%;
 
 		    		#discount-coupon-form {
-		    			background: rgba(241, 247, 250, 0.38);
 					    height: 125px;
 					    width: 100%;
 					    float: left;
@@ -8406,7 +8409,7 @@ body.catalog-product-view {
 
 										    span {
 											    color: #fff!important;
-											    line-height: 35px;
+											    line-height: 30px;
 											    text-decoration: none;
 											    font-weight: 400;
 											    font-size: 15px;
@@ -8425,7 +8428,6 @@ body.catalog-product-view {
 		    	}
 
 		    	.shipping {
-					background: rgba(241, 247, 250, 0.38);
 					min-height: 200px;
 					height: auto;
 					width: 100%;
@@ -8490,19 +8492,20 @@ body.catalog-product-view {
 
 		    	h2 {
 				    width: 100%;
-				    height: 30px;
-				    border-bottom: 2px solid #1183ce;
+				    height: 35px;
+				    border-bottom: 1px solid #e2e2e2;
 				    line-height: 29px;
 				    padding: 0 20px 0 20px!important;
-				    font-size: 14px;
-				    font-weight: 600;
+				    font-size: 16px;
+				    font-weight: 500;
 				    color: #636363;
 				    margin: 0;
 
 				    i {
-						color: #e8408b;
+						color: #636363;
 						position: relative;
-						bottom: 2px;
+						bottom: 1px;
+    					margin-right: 10px;
 					}
 
 					img {
@@ -8513,7 +8516,6 @@ body.catalog-product-view {
 				}
 
 		    	#rewardpoints_box {
-		    		background: rgba(241, 247, 250, 0.38);
 					height: auto;
 					width: 100%;
 					float: left;
@@ -8545,15 +8547,33 @@ body.catalog-product-view {
 		    	}
 
 		    	.cart-totals-wrapper {
-		    		background: rgba(241, 247, 250, 0.38);
-					min-height: 200px;
 					height: auto;
 					width: 100%;
 					float: left;
-					margin-bottom: 35px;
+					margin-bottom: 0;
+
+					table  {
+						margin: 0;
+
+						tfoot {
+							border: none;
+
+							tr {
+								td {
+									padding: 0;
+
+									strong {
+										font-size: 15px;
+										font-weight: 600;
+									}
+								}
+							}
+						}
+					}
 
 		    		.cart-totals {
-		    			padding: 20px 0 0 0;
+		    			padding:25px 20px 0 20px;
+		    			margin-bottom: 0;
 
 
 		    			#shopping-cart-totals-contaner {
@@ -8581,9 +8601,19 @@ body.catalog-product-view {
 		    					}
 		    				}
 		    			}
+		    		}
+		    	}
 
-		    			.checkout-types {
-		    				padding-right: 20px;
+		    	.ProceedToCheckout {
+		    		width: 100%;
+		    		float: left;
+		    		border-top: 1px solid #e2e2e2;
+    				margin-top: 25px;
+    				padding-top: 20px;
+    				font-size: 13px;
+    				color: #454545;
+
+		    		.checkout-types {
 
 		    				button {
 								background: #1183ce;
@@ -8608,7 +8638,6 @@ body.catalog-product-view {
 								}
 							}
 		    			}
-		    		}
 		    	}
 		    }
 		}
@@ -8787,6 +8816,10 @@ body.customer-logged-in{
 }
 
 body.opc-index-index {
+
+	#header {
+		height: 100px;
+	}
 
 	.securitylogoWrapper {
 		background: #f6f6f6;
@@ -9787,7 +9820,7 @@ body.mageplaza-betterblog-index-index {
 									padding: 8.108108108108108%;
 									display: table-cell;
 									vertical-align: middle;
-									font-family: 'Bodoni', Arial, sans-serif;
+									font-family: 'Bodoni', Arial, sans-serif!important;
 									font-size: 28px;
 									font-style: italic;
 									color: #4d4d4d;
@@ -9907,7 +9940,7 @@ body.mageplaza-betterblog-index-index {
 							    outline: none;
 
 							    a {
-							    	font-family: 'Bodoni', Arial, sans-serif;
+							    	font-family: 'Bodoni', Arial, sans-serif!important;
 							    }
 
 							    .mc-post-info {
@@ -10044,7 +10077,7 @@ body.mageplaza-betterblog-index-index {
 						outline: none;
 
 						a {
-							font-family: 'Bodoni', Arial, sans-serif;
+							font-family: 'Bodoni', Arial, sans-serif!important;
 						}
 
 						.mc-post-info {

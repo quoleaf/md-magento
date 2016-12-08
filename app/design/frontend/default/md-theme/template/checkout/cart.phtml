@@ -163,9 +163,17 @@
         <div class="rightWrapper">
             <?php echo Mage::helper('core/mwrewardpoints')->formRewardShoppingCartRewardPoints(); ?>
             <div class="cart-totals-wrapper">
+                <h2>
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                    Order Summary   
+                </h2>
                 <div class="cart-totals">
                     <?php echo $this->getChildHtml('totals'); ?>
-                    <?php if(!$this->hasError()): ?>
+                </div>
+            </div>
+
+             <div class="ProceedToCheckout">
+            <?php if(!$this->hasError()): ?>
                     <ul class="checkout-types bottom">
                     <?php foreach ($this->getMethods('methods') as $method): ?>
                         <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
@@ -174,8 +182,7 @@
                     <?php endforeach; ?>
                     </ul>
                     <?php endif; ?>
-                </div>
-            </div>
+        </div>
         </div>
     </div>
     <?php echo $this->getChildHtml('crosssell') ?>

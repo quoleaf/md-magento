@@ -49,10 +49,48 @@
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
+        <!-- Google Tag Manager -->
+    <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-582BMC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-582BMC');</script>
+    <!-- End Google Tag Manager -->
 <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
-        <?php echo $this->getChildHtml('header') ?>
+    <div id="mainWrapper">
+        <div id="header" class="parralax">
+            <div id="topBar" class="clearfix">
+                <div class="logo">
+                    <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
+                </div>
+
+                <div class="details">
+                    <a href="javascript:void(0);">
+                        Free Delivery
+                    </a>
+
+                    <a href="javascript:void(0);">
+                        Use points
+                    </a>
+
+                    <a href="javascript:void(0);">
+                        Shipping Details
+                    </a>
+                </div>
+            </div>
+         
+            
+            
+        </div><!-- END header -->
+
+
+
         <div class="main-container col1-layout">
             <div class="main">
                 <div class="col-main">

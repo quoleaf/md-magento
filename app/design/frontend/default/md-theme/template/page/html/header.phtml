@@ -56,7 +56,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="<?php echo Mage::getUrl('checkout/cart'); ?>" class="shoppingBag cart-link"><span class="badge"><?php echo $count?></span> <?php echo $this->__('Shopping Bag') ?></a>
                 
                 <?php if (Mage::helper('customer')->isLoggedIn() ): ?>
-                        <a class="signin info" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo $this->__('LOG OUT')?></a>
+                    <a class="signin info" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo $this->__('LOG OUT')?></a>
+
+                    <a href="<?php echo Mage::getUrl('customer/account'); ?>" class="myAccount info"><?php echo $this->__('MY ACCOUNT') ?></a>
 
                 <?php 
                     
@@ -66,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <?php 
                     
                 endif; ?>
-                <a href="<?php echo Mage::getUrl('customer/account'); ?>" class="myAccount info"><?php echo $this->__('MY ACCOUNT') ?></a>
+                <!-- <a href="<?php //echo Mage::getUrl('customer/account'); ?>" class="myAccount info"><?php //echo $this->__('MY ACCOUNT') ?></a> -->
             </div>
             <div id="topNavi" class="blueVer">
 

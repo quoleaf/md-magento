@@ -231,7 +231,7 @@
 							<p class="title"><span><?php echo $this->__('Super Simplified') ?></span> <?php echo $this->__('Skincare') ?></p>
 							<p class="subtitle"><?php echo $this->__('Choosing the right skin products can be confusing. Make it simple with MD.') ?></p>
 						</div>
-						<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>categories" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a>
+						<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>categories" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a> 
 						<a href="https://youtu.be/xiIIqeHHY-c" target="_blank" class="watchNow pinkHollowBtn" data-lity=""><?php echo $this->__('WATCH VIDEO') ?></a>
 					</div>
 				</div>
@@ -446,8 +446,123 @@
 			</div>
 		</div><!-- END subscribe -->
 		
+
+
+<div id="footer">
+      <div class="socials">
+        <div class="section">
+          <p class="title"><?php echo $this->__('CONNECT')?> <span><?php echo $this->__('with us')?></span></p>
+        
+          <ul class="icons">
+            <li><a href="https://www.facebook.com/MDLASHF"><img src="<?php echo $this->getSkinUrl('images/facebook-ico.png') ?>" alt=""/></a></li>
+            <li><a href="https://twitter.com/MDLFbySusanLin"><img src="<?php echo $this->getSkinUrl('images/twitter-ico.png') ?>" alt=""/></a></li>
+            <li><a href="https://instagram.com/md_factor/"><img src="<?php echo $this->getSkinUrl('images/instagram-ico.png') ?>" alt=""/></a></li>
+            <li><a href="https://plus.google.com/107601202918737544485"><img src="<?php echo $this->getSkinUrl('images/google-ico.png') ?>" alt=""/></a></li>
+            <li><a href="https://www.pinterest.com/mdfactorbeauty/"><img src="<?php echo $this->getSkinUrl('images/pinterest-ico.png') ?>" alt=""/></a></li>
+            <li><a href="http://www.youtube.com/channel/UCzQBk-mlyv-x1K0O8_kEyYA"><img src="<?php echo $this->getSkinUrl('images/youtube-ico.png') ?>" alt=""/></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="links">
+        <div class="section">
+          <div class="type first">
+            <span class="title"><?php echo $this->__('CUSTOMER SERVICE')?></span>
+            <ul>
+                  <li><a href="https://md-factor.com/shipping-policy/"><?php echo $this->__('Shipping Policies')?></a></li>
+                  <li><a href="https://md-factor.com/return-policy/"><?php echo $this->__('Return Policy')?></a></li>
+                  <li><a href="https://md-factor.com/authenticity/"><?php echo $this->__('Authenticity')?></a></li>
+                  <li><a href="https://md-factor.com/contact-us/"><?php echo $this->__('Contact Us')?></a></li>
+                  <li><a href="https://md-factor.com/privacy-policy/"><?php echo $this->__('Privacy Policy')?></a></li>
+                  <li><a href="https://md-factor.com/terms-and-conditions/"><?php echo $this->__('Terms and Conditions')?></a></li>
+                  <li><a href="https://md-factor.com/wholesale/"><?php echo $this->__('Wholesale')?></a></li>
+                </ul>
+          </div>
+          <div class="type second">
+            <span class="title"><?php echo $this->__('ABOUT MD')?></span>
+            <ul>
+                  <li><a href="https://md-factor.com/md-factor-careers/"><?php echo $this->__('Careers')?></a></li>
+                  <!--<li><a href="http://md-factor.com/international/">International</a></li>-->
+                  <li><a href="https://md-factor.com/about/"><?php echo $this->__('About MD&reg; / 于MD&reg;')?></a></li>
+                  <li><a href="https://md-factor.com/press/"><?php echo $this->__('In The Press')?></a></li>
+                  <li><a href="https://md-factor.com/faq/"><?php echo $this->__('FAQs')?></a></li>
+                </ul>
+          </div>
+          <div class="type third">
+            <span class="title"><?php echo $this->__('MY ACCOUNT')?></span>
+            <ul>
+              <li><a href="<?php echo Mage::getUrl('customer/account'); ?>"><?php echo $this->__('My Account')?></a></li>
+              <li><a href="<?php echo Mage::getUrl('customer/account'); ?>"><?php echo $this->__('Wishlist')?></a></li>
+              <li><a href="<?php echo Mage::getUrl('customer/account'); ?>"><?php echo $this->__('Order Status')?></a></li>
+              <li><a href="<?php echo Mage::getUrl('checkout/cart'); ?>"><?php echo $this->__('View Cart')?></a></li>
+            </ul>
+          </div>
+          <div class="type forth">
+            <!-- <span class="title">INTERNATIONAL</span>
+            <ul>
+              <li><a href="#">繁體中文</a></li>
+              <li><a href="#">体中文</a></li>
+            </ul> -->
+            <a href="#" class="siteJabbar"><img src="<?php echo $this->getSkinUrl('images/site-jabbar.png') ?>" alt=""/></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info">
+        <div class="section">
+          <div class="inner">
+            <address>LA CANADA VENTURES, INC. <span>|</span> 448 N San Mateo Drive, San Mateo, CA, 94401 <span>|</span> Phone: 888-882-5788</address>
+            <p class="copyright"><?php echo $this->__('All prices are in USD')?> &copy; <?php echo $this->__('2016 MD Factor.')?> <!-- <a href="#">Sitemap</a> --></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- END footer -->
+    <div id="searchOverlay" style="display: none;"> <a href="#" class="closeBtn">Close</a>
+      <div class="fields">
+        <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
+          <input placeholder="" class="query" "search_query"="" name="q" type="text">
+          <p class="instruction">Press enter to begin your search</p>
+          <input value="" class="searchBtn" type="submit">
+        </form>
+      </div>
+    </div><!-- END searchOverlay -->
+    <!-- <div id="searchOverlay"> 
+      <a href="#" class="closeBtn">Close</a>
+      
+      <div class="fields">
+        <input type="text" placeholder="START TYPING..." class="query"/>
+        <p class="instruction">Press enter to begin your search</p>
+      </div>
+
+    </div> -->
+    <!-- 
+    <a href="#" id="reviewsBtn"><?php // echo $this->__('Reviews')?></a> -->
+  </div><!-- END mainWrapper -->
+
+
+  <!-- Justuno Script -->
+
+  <script data-cfasync="false">var ju_num="EFC0E7DB-CA2F-4F51-B390-F920D634A92C";var asset_host='//cdn.justuno.com/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+  
+  <!-- End of Justuno Script -->
+
+  <!-- Lucky Orange -->
+
+  <script type='text/javascript'>
+window.__lo_site_id = 59158;
+
+  (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+  </script>
+
+  <!-- End of Lucky Orange -->
+</body>
+
 		<?php echo $this->getChildHtml('footer_before') ?>
-        <?php echo $this->getChildHtml('footer') ?>
+        
         <?php echo $this->getChildHtml('global_cookie_notice') ?>
         <?php echo $this->getChildHtml('before_body_end') ?>
         <?php echo $this->getAbsoluteFooter() ?>

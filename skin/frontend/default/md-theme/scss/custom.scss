@@ -595,7 +595,7 @@ body.withTopbar #topNavi .navi li .sub {
 	width: 180px!important;
 	height: 30px!important;
 	margin: 50px 9px 0 0;
-	background: url(../images/search-new.png) no-repeat left!important;
+	background: url(../images/search-new.png) no-repeat left 4px !important;
 	-webkit-background-size: 20px!important;
 	-moz-background-size: 20px !important;
 	background-size: 20px!important;
@@ -606,6 +606,7 @@ body.withTopbar #topNavi .navi li .sub {
 	border: 2px solid #e8418b;
 	border-radius: 5px;
 	padding-left: 25px;
+	padding-top: 6px;
 }
 
 
@@ -1539,7 +1540,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #testimonials .product .viewBtn {
 	width: 245px;
-	line-height: 65px;
+	line-height: 70px;
 	font-size: 18px;
 }
 
@@ -1601,6 +1602,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #tryIt .model {
 	background: url(../images/try-it-model.png) no-repeat center bottom;
+	background-size: contain;
 }
 
 #tryIt .section {
@@ -1677,6 +1679,15 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #tryIt .beforeAfter .slider .twentytwenty-container {
 	overflow: visible;
+}
+
+.images.twentytwenty-container{
+	height: 85px !important;
+	width: 100%;
+}
+
+.twentytwenty-container img{
+	width: 100%;
 }
 
 #tryIt .beforeAfter .slider .twentytwenty-handle {
@@ -1783,7 +1794,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #featured .products li .shopNowBtn {
 	max-width: 100%;
-	line-height: 60px;
+	line-height: 68px;
 	font-size: 16.55px;
 }
 
@@ -3220,7 +3231,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 #newsletter .fields .submitBtn {
 	float: right;
 	width: 21.18110236220472%;
-	line-height: 45px;
+	line-height: 68px;
 	min-width: auto;
 }
 
@@ -5864,6 +5875,22 @@ input, select, textarea {
 	
 }
 
+.cart .cart-totals table tfoot strong span, .cart .cart-totals table tfoot span.price{
+	font-size: 18px;
+}
+
+.cart .cart-totals table tfoot strong{
+	font-size: 18px;
+}
+
+.cart .cart-totals table td:first-child{
+	width: 70% !important;
+}
+
+div#GrandDetails {
+    display: none;
+}
+
 /* Mobile Screens */
 
 @media only screen and (max-width : 767px) {
@@ -7627,7 +7654,7 @@ body.category-hair {
 	#header.forCategory {
 		height: 508px;
 		background-position: center 0;
-		background-image: url('../images/black-friday-teaser.jpg');
+		background-image: url('../images/category-header-bg.jpg');
 		background-color: #bdaba6;
 	}
 
@@ -8538,7 +8565,7 @@ body.catalog-product-view {
 		    					tbody{
 		    						tr {
 		    							td {
-		    								padding: 0 20px 10px 20px;
+		    								padding: 20px 20px 20px 0px;
 		    								width: 100%;
 		    							}
 		    						}

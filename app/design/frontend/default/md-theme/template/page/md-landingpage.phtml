@@ -59,7 +59,7 @@
                 <!-- END   How to add Currency selector to Magento's header -->
 
 				 <ul class="navi">
-                    <li class="shop"><a href="#"><?php echo $this->__('SHOP') ?></a>
+                    <li class="shop"><a href="<?php echo Mage::getUrl('categories'); ?>"><?php echo $this->__('SHOP') ?></a>
                     <div class="sub">
                      <div class="inner"> 
                       <ul class="types">
@@ -144,7 +144,7 @@
                 <a href="#" class="closeBtn">Close</a>
                 <div class="inner">
                     <ul class="links">
-                    <li class="hasSub"><a href="#" class="shop"><?php echo $this->__('SHOP') ?></a> 
+                    <li class="hasSub"><a href="<?php echo Mage::getUrl('categories'); ?>" class="shop"><?php echo $this->__('SHOP') ?></a> 
                       <ul class="types">
                         <?php
                             $obj = new Mage_Catalog_Block_Navigation();

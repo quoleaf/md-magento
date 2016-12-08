@@ -90,11 +90,30 @@
 
             <li id="billing-new-address-form"<?php if ($this->customerHasAddresses()): ?> style="display:none;"<?php endif; ?>>
                 
-                <input type="hidden" name="billing[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="billing:address_id" />
+                <input type="hidden" name="billing[address_id]" />
                
                 <ul>
                     <li class="fields">
-                        <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?> 
+                        <div class="customer-name-middlename">
+                            <div class="field name-firstname">
+                                <label for="billing:firstname" class="required"><em>*</em>First Name</label>
+                                <div class="input-box">
+                                    <input type="text" id="billing:firstname" name="billing[firstname]" title="First Name" maxlength="255" class="input-text required-entry">
+                                </div>
+                            </div>
+                            <div class="field name-middlename">
+                                <label for="billing:middlename">Middle Name/Initial</label>
+                                <div class="input-box">
+                                    <input type="text" id="billing:middlename" name="billing[middlename]" title="Middle Name/Initial" class="input-text ">
+                                </div>
+                            </div>
+                            <div class="field name-lastname">
+                                <label for="billing:lastname" class="required"><em>*</em>Last Name</label>
+                                <div class="input-box">
+                                    <input type="text" id="billing:lastname" name="billing[lastname]" title="Last Name" maxlength="255" class="input-text required-entry">
+                                </div>
+                            </div>
+                        </div>
                     </li>
 
                     <li class="fields">
@@ -103,7 +122,7 @@
                                 <?php echo $this->__('Company') ?>
                             </label>
                             
-                            <input type="text" id="billing:company" name="billing[company]" value="<?php echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('company') ?>" />
+                            <input type="text" id="billing:company" name="billing[company]" title="<?php echo $this->__('Company') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('company') ?>" />
                         </div>
 
                         <?php if(!$this->isCustomerLoggedIn()): ?>
@@ -113,7 +132,7 @@
                                     <?php echo $this->__('Email Address') ?>
                                 </label>
 
-                                <input type="text" name="billing[email]" id="billing:email" value="<?php echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
+                                <input type="text" name="billing[email]" id="billing:email" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
                             </div>
                         <?php endif; ?>
                     </li>
@@ -126,7 +145,7 @@
                             <?php echo $this->__('Address') ?>
                         </label>
 
-                        <input type="text" title="<?php echo $this->__('Street Address') ?>" name="billing[street][]" id="billing:street1" value="<?php echo $this->escapeHtml($this->getAddress()->getStreet(1)) ?>" class="input-text <?php echo $_streetValidationClass ?>" />
+                        <input type="text" title="<?php echo $this->__('Street Address') ?>" name="billing[street][]" id="billing:street1" class="input-text <?php echo $_streetValidationClass ?>" />
                     </li>
 
                     <?php $_streetValidationClass = trim(str_replace('required-entry', '', $_streetValidationClass)); ?>
@@ -134,7 +153,7 @@
                     <?php for ($_i = 2, $_n = $this->helper('customer/address')->getStreetLines(); $_i <= $_n; $_i++): ?>
                     
                         <li class="wide">
-                            <input type="text" title="<?php echo $this->__('Street Address %s', $_i) ?>" name="billing[street][]" id="billing:street<?php echo $_i ?>" value="<?php echo $this->escapeHtml($this->getAddress()->getStreet($_i)) ?>" class="input-text <?php echo $_streetValidationClass ?>" />
+                            <input type="text" title="<?php echo $this->__('Street Address %s', $_i) ?>" name="billing[street][]" id="billing:street<?php echo $_i ?>" class="input-text <?php echo $_streetValidationClass ?>" />
                         </li>
                     <?php endfor; ?>
 
@@ -144,7 +163,7 @@
                                 <?php echo $this->__('VAT Number') ?>
                             </label>
                             
-                            <input type="text" id="billing:vat_id" name="billing[vat_id]" value="<?php echo $this->escapeHtml($this->getAddress()->getVatId()) ?>" title="<?php echo $this->__('VAT Number') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('vat_id') ?>" />
+                            <input type="text" id="billing:vat_id" name="billing[vat_id]" title="<?php echo $this->__('VAT Number') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('vat_id') ?>" />
                         </li>
                     <?php endif; ?>
 
@@ -154,7 +173,7 @@
                                 <?php echo $this->__('City') ?>
                             </label>
                             
-                            <input type="text" title="<?php echo $this->__('City') ?>" name="billing[city]" value="<?php echo $this->escapeHtml($this->getAddress()->getCity()) ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('city') ?>" id="billing:city" />
+                            <input type="text" title="<?php echo $this->__('City') ?>" name="billing[city]" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('city') ?>" id="billing:city" />
                         </div>
 
                         <div class="field">
@@ -173,7 +192,7 @@
                                 //]]>
                             </script>
                                 
-                            <input type="text" id="billing:region" name="billing[region]" value="<?php echo $this->escapeHtml($this->getAddress()->getRegion()) ?>"  title="<?php echo $this->__('State / Province') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('region') ?>" style="display:none;" />
+                            <input type="text" id="billing:region" name="billing[region]"  title="<?php echo $this->__('State / Province') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('region') ?>" style="display:none;" />
                         </div>
                     </li>
 
@@ -183,7 +202,7 @@
                                 <em>*</em><?php echo $this->__('Zip') ?>
                             </label>
 
-                            <input type="text" title="<?php echo $this->__('Zip') ?>" name="billing[postcode]" id="billing:postcode" value="<?php echo $this->escapeHtml($this->getAddress()->getPostcode()) ?>" class="input-text validate-zip-international <?php echo $this->helper('opc')->getAttributeValidationClass('postcode') ?>" />
+                            <input type="text" title="<?php echo $this->__('Zip') ?>" name="billing[postcode]" id="billing:postcode" class="input-text validate-zip-international <?php echo $this->helper('opc')->getAttributeValidationClass('postcode') ?>" />
                         </div>
 
                         <div class="field">
@@ -201,7 +220,7 @@
                                 <em>*</em><?php echo $this->__('Telephone') ?>
                             </label>
                             
-                            <input type="text" name="billing[telephone]" value="<?php echo $this->escapeHtml($this->getAddress()->getTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('telephone') ?>" id="billing:telephone" />
+                            <input type="text" name="billing[telephone]" title="<?php echo $this->__('Telephone') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('telephone') ?>" id="billing:telephone" />
                         </div>
 
                         <div class="field">
@@ -209,7 +228,7 @@
                                 <?php echo $this->__('Fax') ?>
                             </label>
                             
-                            <input type="text" name="billing[fax]" value="<?php echo $this->escapeHtml($this->getAddress()->getFax()) ?>" title="<?php echo $this->__('Fax') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('fax') ?>" id="billing:fax" />
+                            <input type="text" name="billing[fax]" title="<?php echo $this->__('Fax') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('fax') ?>" id="billing:fax" />
                         </div>
                     </li>
 
@@ -283,9 +302,17 @@
 </div>
 
 <script type="text/javascript">
-
 //<![CDATA[
-    var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'billing:postcode');
+var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'billing:postcode');
+var url = '<?php echo Mage::getBaseUrl();?>customer/account/editPost';
+var firstname = 'Patrick';
+var lastname = 'Flores';
+jQuery.post(url,
+            {'firstname': firstname, 'lastname': lastname})
+            .done(function( data ) {
+            console.log('sucess');             
+        });
+
 //]]>
 </script>
 

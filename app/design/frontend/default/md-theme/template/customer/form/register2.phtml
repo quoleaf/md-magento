@@ -31,13 +31,13 @@
  * @var $this Mage_Customer_Block_Form_Register
  */
 ?>
-<div class="account-create hide">
+<div class="account-create">
     <?php echo $this->getChildHtml('form_fields_before')?>
     <?php echo $this->getMessagesBlock()->toHtml() ?>
     <?php /* Extensions placeholder */ ?>
     <?php echo $this->getChildHtml('customer.form.register.extra')?>
     <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate">
-        <div class="fieldset">
+        <div class="fieldset hide">
             <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
             <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
             <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
@@ -75,7 +75,7 @@
 
             </div>
         </div>
-        <div class="fieldset">
+        <div class="fieldset hide">
             <div class="form-list">
                 <div class="form-group">
                     <label for="login[username]" class="control-label"><?php echo $this->__('Password') ?></label>
@@ -88,7 +88,23 @@
                 <?php echo $this->getChildHtml('form.additional.info'); ?>
             </div>
         </div>
-       
+
+            <strong class="title">IT LOOKS LIKE YOU'RE NEW HERE</strong>
+            <p class="subtitle">Please enter a password to create your account and continue to delivery and payment.</p>
+
+            <div class="form-group">
+                <label for="login[password]" class="control-label"><?php echo $this->__('Password') ?></label>
+                <input type="password" class="form-control required-entry validate-password" id="pass" name="login[password]" placeholder="Password">
+            </div>
+                          
+            <?php echo $this->getChildHtml('persistent.remember.me'); ?> 
+            <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+            
+            <button type="submit" title="<?php echo $this->__('Login') ?>" name="send" id="send2">
+                <a><?php echo $this->__('Continue') ?></a>
+            </button>
+
+       </form>
     <script type="text/javascript">
     //<![CDATA[
         var dataForm = new VarienForm('form-validate', true);

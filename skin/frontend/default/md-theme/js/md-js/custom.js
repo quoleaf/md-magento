@@ -1,4 +1,11 @@
 jQuery(function($) {
+	if($('.opc-index-index #register_details input[name="billing[firstname]"]').val() == " "){
+		$('.opc-index-index #register_details input[name="billing[firstname]"]').val('');
+	}
+	if($('.opc-index-index #register_details input[name="billing[lastname]"]').val() == " "){
+		$('.opc-index-index #register_details input[name="billing[lastname]"]').val('');
+	}
+
 	var email = localStorage.getItem("email");
 	$('.OPCregister-email').val(email);
 

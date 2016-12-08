@@ -63,7 +63,7 @@
 
             <div class="form-group">
                 <label for="login[password]" class="control-label"><?php echo $this->__('Password') ?></label>
-                <input type="password" class="form-control" id="pass" name="login[password]" placeholder="Password">
+                <input type="password" class="form-control required-entry validate-password" id="pass" name="login[password]" placeholder="Password">
             </div>
                           
             <?php echo $this->getChildHtml('persistent.remember.me'); ?> 
@@ -83,41 +83,20 @@
         <fieldset id="registration_password" class="hide">
         <?php echo $this->getLayout()->createBlock('customer/form_register')->setTemplate('customer/form/register2.phtml')->toHtml(); ?>
 
-            <strong class="title">IT LOOKS LIKE YOU'RE NEW HERE</strong>
-            <p class="subtitle">Please enter a password to create your account and continue to delivery and payment.</p>
-
-            <div class="form-group">
-                <label for="login[password]" class="control-label"><?php echo $this->__('Password') ?></label>
-                <input type="password" class="form-control" id="pass" name="login[password]" placeholder="Password">
-            </div>
-                          
-            <?php echo $this->getChildHtml('persistent.remember.me'); ?> 
-            <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
             
-            <button type="submit" title="<?php echo $this->__('Login') ?>" name="send" id="send2">
-                <a><?php echo $this->__('Continue') ?></a>
-            </button>
 
             <?php if ($isContextCheckout): ?>
                 <input name="context" type="hidden" value="checkout"/>
             <?php endif; ?>
-             <div class="buttons-set">
-            </form>
         </fieldset>
-
 </div>
 
 <script type="text/javascript">
-    //<![CDATA[
-        var dataForm = new VarienForm('login-form', true);
-    //]]>
-</script>
-
-<script type="text/javascript">
+//<![CDATA[
+var dataForm = new VarienForm('login-form', true);
 var url = '<?php echo Mage::getBaseUrl();?>email-lists/index/ajax';
-jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
-    var mail = jQuery('.opc-index-index input.MDLogin').val();
-    var dataForm = new VarienForm('login-form', true);
+jQuery(document).on('click', '.opc-index-index .nextCustomLogin', function(){
+var mail = jQuery('.opc-index-index input.MDLogin').val();
     jQuery.ajax({
         type: "POST",
         url: url,
@@ -125,6 +104,7 @@ jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
         data: {email: mail},
         success: function (exists) {
             jQuery('.opc-index-index #login_password').removeClass('hide'); 
+            jQuery('.opc-index-index #registration_password').addClass('hide');
         },
         error: function (exists, jqXHR, textStatus, errorThrown) {
            jQuery('.opc-index-index #registration_password').removeClass('hide'); 
@@ -132,6 +112,11 @@ jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
            localStorage.setItem("email", email);
         }
     });
-
+if (jQuery('.opc-index-index #email-error').text().length){
+    jQuery('.opc-index-index #registration_password').hide();           
+}else{
+    jQuery('.opc-index-index #registration_password').show();
+}
 });
+//]]>
 </script>

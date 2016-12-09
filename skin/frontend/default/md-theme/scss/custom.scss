@@ -1608,8 +1608,6 @@ body.stickyNavi.withTopbar #searchOverlay {
 
 #tryIt .model {
 	background: url(../images/try-it-model.png) no-repeat center bottom;
-	background-size: contain;
-	background-position-y: 0;
 }
 
 #tryIt .section {
@@ -1779,7 +1777,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 #featured .products li .image .inner {
 	display: table-cell;
 	vertical-align: bottom;
-	height: 275px;
+	height: 200px;
 	width: 100%;
 }
 
@@ -8247,8 +8245,8 @@ body.catalog-product-view {
 			    display: block;
 
 			    &::-webkit-scrollbar,&::-webkit-scrollbar {
-							width:13px;
-							height:10px;
+					width:13px;
+					height:10px;
 							outline:none;
 						}
 
@@ -8270,7 +8268,7 @@ body.catalog-product-view {
 						&::-webkit-scrollbar-corner,&::-webkit-scrollbar-corner {
 							background-color:transparent;
 						}
-						
+
 
 	    		tr {
 	    			display: flex;

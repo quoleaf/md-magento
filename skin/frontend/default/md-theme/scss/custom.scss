@@ -1688,7 +1688,6 @@ body.stickyNavi.withTopbar #searchOverlay {
 }
 
 .images.twentytwenty-container{
-	height: 85px !important;
 	width: 100%;
 }
 
@@ -3260,7 +3259,7 @@ body.stickyNavi.withTopbar #searchOverlay {
 	font-size: 18px;
 	color: #5b5b5b;
 	letter-spacing: -1px;
-	line-height: 75px;
+	line-height: 1;
 	font-family: 'HelveticaNeueLTStd-Md', Arial, sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 40px;
@@ -6210,6 +6209,7 @@ input, select, textarea {
 		width: 230px;
 		line-height: 44px;
 		font-size: 16px;
+		height: 44px;
 	}
 	
 	#infoBar {
@@ -6341,6 +6341,7 @@ input, select, textarea {
 		line-height: 44px;
 		display: block;
 		margin: 0 auto 9px;
+		height: 44px;
 	}
 	
 	#tryIt .beforeAfter {
@@ -6391,6 +6392,7 @@ input, select, textarea {
 		min-width: 231px;
 		line-height: 44px;
 		margin-right: 0;
+		height: 44px;
 	}
 	
 	#featured .title span {
@@ -6539,7 +6541,7 @@ input, select, textarea {
 	}
 	
 	#subscribe {
-		background-image: url(../images/subscribe-mobile-bg.jpg);
+		background-image: url(../images/subscribe_mobile.jpg);
 	}	
 	
 	#subscribe .fields,
@@ -6580,6 +6582,7 @@ input, select, textarea {
 	#newsletter .fields .submitBtn {
 		width: 100%;
 		line-height: 44px;
+		height: 44px;
 	}
 	
 	#subscribe .overlay {
@@ -6613,6 +6616,7 @@ input, select, textarea {
 		bottom: 5.9375%;
 		line-height: 44px;
 		font-size: 16px;
+		height: 44px;
 	}
 	
 	#intro .products {

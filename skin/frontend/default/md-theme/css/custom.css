@@ -1394,7 +1394,6 @@ body.stickyNavi.withTopbar #searchOverlay {
   overflow: visible; }
 
 .images.twentytwenty-container {
-  height: 85px !important;
   width: 100%; }
 
 .twentytwenty-container img {
@@ -2725,7 +2724,7 @@ body.stickyNavi.withTopbar #searchOverlay {
   font-size: 18px;
   color: #5b5b5b;
   letter-spacing: -1px;
-  line-height: 75px;
+  line-height: 1;
   font-family: 'HelveticaNeueLTStd-Md', Arial, sans-serif;
   letter-spacing: 1px;
   margin-bottom: 40px; }
@@ -5048,7 +5047,8 @@ input, select, textarea {
   #testimonials .product .viewBtn {
     width: 230px;
     line-height: 44px;
-    font-size: 16px; }
+    font-size: 16px;
+    height: 44px; }
 
   #infoBar {
     margin-bottom: 45px; }
@@ -5149,7 +5149,8 @@ input, select, textarea {
     width: 231px;
     line-height: 44px;
     display: block;
-    margin: 0 auto 9px; }
+    margin: 0 auto 9px;
+    height: 44px; }
 
   #tryIt .beforeAfter {
     width: 245px;
@@ -5191,7 +5192,8 @@ input, select, textarea {
   #featured .products li .shopNowBtn {
     min-width: 231px;
     line-height: 44px;
-    margin-right: 0; }
+    margin-right: 0;
+    height: 44px; }
 
   #featured .title span {
     font-size: 16px;
@@ -5310,7 +5312,7 @@ input, select, textarea {
     font-size: 27px; }
 
   #subscribe {
-    background-image: url(../images/subscribe-mobile-bg.jpg); }
+    background-image: url(../images/subscribe_mobile.jpg); }
 
   #subscribe .fields,
   #newsletter .fields {
@@ -5343,7 +5345,8 @@ input, select, textarea {
   #subscribe .fields .submitBtn,
   #newsletter .fields .submitBtn {
     width: 100%;
-    line-height: 44px; }
+    line-height: 44px;
+    height: 44px; }
 
   #subscribe .overlay {
     position: static; }
@@ -5371,7 +5374,8 @@ input, select, textarea {
     right: 5%;
     bottom: 5.9375%;
     line-height: 44px;
-    font-size: 16px; }
+    font-size: 16px;
+    height: 44px; }
 
   #intro .products {
     display: none; }

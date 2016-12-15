@@ -98,7 +98,7 @@
 
 <script type="text/javascript">
 var url = '<?php echo Mage::getBaseUrl();?>email-lists/index/ajax';
-jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
+jQuery(document).on('click', '.opc-index-index .nextCustomLogin', function(){
     var mail = jQuery('.opc-index-index input.MDLogin').val();
     var dataForm = new VarienForm('login-form', true);
     jQuery.ajax({
@@ -116,11 +116,12 @@ jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
            localStorage.setItem("email", email);
         }
     });
-if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email address.")').length){
+if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email address.")')){
     jQuery('.opc-index-index #registration_password').hide();           
+}
+if (jQuery('.opc-index-index #login_email[style="display: none;"]').length){
+    jQuery('.opc-index-index #registration_password').show();           
 }
 });
-if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email address.")').length){
-    jQuery('.opc-index-index #registration_password').hide();           
-}
+
 </script>

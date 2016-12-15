@@ -28,7 +28,10 @@
  * @see Mage_Tax_Block_Checkout_Subtotal
  */
 ?>
+
 <?php if ($this->displayBoth()):?>
+
+<div class="innerOPCtotals">
 <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->helper('tax')->__('Subtotal (Excl. Tax)') ?>
@@ -37,6 +40,8 @@
         <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValueExclTax()) ?>
     </td>
 </tr>
+</div>
+<div class="innerOPCtotals">
 <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->helper('tax')->__('Subtotal (Incl. Tax)') ?>
@@ -45,7 +50,9 @@
         <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValueInclTax()) ?>
     </td>
 </tr>
+</div>
 <?php else : ?>
+<div class="innerOPCtotals">
 <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getTotal()->getTitle() ?>
@@ -54,4 +61,5 @@
         <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?>
     </td>
 </tr>
+</div>
 <?php endif;?>

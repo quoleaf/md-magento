@@ -57,7 +57,9 @@
                     <i class="fa fa-circle" aria-hidden="true"></i>
                 </p>
             </span> 
-            <?php echo $this->escapeHtml($this->getMethodTitle($_method)) ?> <?php echo $this->getMethodLabelAfterHtml($_method) ?>
+            <span class="title">
+                <?php echo $this->escapeHtml($this->getMethodTitle($_method)) ?> <?php echo $this->getMethodLabelAfterHtml($_method) ?>
+            </span>
             
         </label>
     </dt>

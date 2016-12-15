@@ -91,6 +91,12 @@ jQuery.noConflict();
                             </div>
                             <?php endif; ?>
 
+                            <div class="selectOptionWrapper"> <!-- Added by Rej -->
+                                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                                <?php endif;?>
+                            </div>
+
                             <!-- Customer Feedback --> <!--added by rej -->
                             <div class="feedbackWrapper">
                                 <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
@@ -301,9 +307,7 @@ jQuery.noConflict();
 
                 <?php echo $this->getChildHtml('other');?>
 
-                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-                <?php endif;?>
+                
 
             </div>
 

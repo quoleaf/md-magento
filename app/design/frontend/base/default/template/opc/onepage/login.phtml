@@ -116,8 +116,11 @@ jQuery('.opc-index-index .nextCustomLogin').on('click', function(){
            localStorage.setItem("email", email);
         }
     });
-if (jQuery('.opc-index-index #email-error').text().length){
+if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email address.")').length){
     jQuery('.opc-index-index #registration_password').hide();           
 }
 });
+if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email address.")').length){
+    jQuery('.opc-index-index #registration_password').hide();           
+}
 </script>

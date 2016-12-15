@@ -62,13 +62,15 @@
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                             </p>
                         </span> 
-                        <?php echo $this->escapeHtml($_rate->getMethodTitle()) ?>
+                        <span class="title">
+                            <?php echo $this->escapeHtml($_rate->getMethodTitle()) ?>
                         <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
                         <?php $_incl = $this->getShippingPrice($_rate->getPrice(), true); ?>
                         <?php echo $_excl; ?>
                         <?php if ($this->helper('tax')->displayShippingBothPrices() && $_incl != $_excl): ?>
                             (<?php echo $this->__('Incl. Tax'); ?> <?php echo $_incl; ?>)
                         <?php endif; ?>
+                        </span>
                         </label>
                    <?php endif ?>
                 </li>

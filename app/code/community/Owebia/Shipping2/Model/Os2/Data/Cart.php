@@ -1,13 +1,28 @@
 <?php
+
 /**
- * Copyright © 2008-2016 Owebia. All rights reserved.
- * See COPYING.txt for license details.
- */
+ * Copyright (c) 2008-14 Owebia
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ *
+ * @website    http://www.owebia.com/
+ * @project    Magento Owebia Shipping 2 module
+ * @author     Antoine Lemoine
+ * @license    http://www.opensource.org/licenses/MIT  The MIT License (MIT)
+**/
 
 class Owebia_Shipping2_Model_Os2_Data_Cart extends Owebia_Shipping2_Model_Os2_Data_Abstract
 {
-    protected $_additionalAttributes = array('coupon_code', 'weight_unit', 'weight_for_charge', 'free_shipping');
-    protected $_freeShipping;
+    protected $additional_attributes = array('coupon_code', 'weight_unit', 'weight_for_charge', 'free_shipping');
+    protected $_free_shipping;
     protected $_items;
     protected $_quote;
     protected $_options;
@@ -20,9 +35,8 @@ class Owebia_Shipping2_Model_Os2_Data_Cart extends Owebia_Shipping2_Model_Os2_Da
 
         $this->_data = array(
             // Do not use quote to retrieve values, totals are not available
-            // package_value and package_value_with_discount : Bad value in backoffice orders
-            'price-tax+discount' => null,
-            'price-tax-discount' => null,
+            'price-tax+discount' => null,//(double)$request->getData('package_value_with_discount'), // Bad value in backoffice orders
+            'price-tax-discount' => null,//(double)$request->getData('package_value'),
             'price+tax+discount' => null,
             'price+tax-discount' => null,
             'weight' => $request->getData('package_weight'),
@@ -30,11 +44,10 @@ class Owebia_Shipping2_Model_Os2_Data_Cart extends Owebia_Shipping2_Model_Os2_Da
             'free_shipping' => $request->getData('free_shipping'),
         );
 
-        $cartItems = array();
+        $cart_items = array();
         $items = $request->getAllItems();
-        $quoteTotalCollected = false;
-        $bundleProcessChildren = isset($this->_options['bundle']['process_children'])
-            && $this->_options['bundle']['process_children'];
+        $quote_total_collected = false;
+        $bundle_process_children = isset($this->_options['bundle']['process_children']) && $this->_options['bundle']['process_children'];
         foreach ($items as $item) {
             $product = $item->getProduct();
             if ($product instanceof Mage_Catalog_Model_Product) {
@@ -44,45 +57,45 @@ class Owebia_Shipping2_Model_Os2_Data_Cart extends Owebia_Shipping2_Model_Os2_Da
                 } else if ($item instanceof Mage_Sales_Model_Quote_Item) { // Onepage checkout
                     $key = $item->getId();
                 }
-                $cartItems[$key] = $item;
+                $cart_items[$key] = $item;
             }
         }
 
         // Do not use quote to retrieve values, totals are not available
-        $totalInclTaxWithoutDiscount = 0;
-        $totalExclTaxWithoutDiscount = 0;
-        $totalInclTaxWithDiscount = 0;
-        $totalExclTaxWithDiscount = 0;
+        $total_incl_tax_without_discount = 0;
+        $total_excl_tax_without_discount = 0;
+        $total_incl_tax_with_discount = 0;
+        $total_excl_tax_with_discount = 0;
         $this->_items = array();
-        foreach ($cartItems as $item) {
+        foreach ($cart_items as $item) {
             $type = $item->getProduct()->getTypeId();
-            $parentItemId = $item->getData('parent_item_id');
-            $parentItem = isset($cartItems[$parentItemId]) ? $cartItems[$parentItemId] : null;
-            $parentType = isset($parentItem) ? $parentItem->getProduct()->getTypeId() : null;
-            if ($type != 'configurable') {
-                if ($type == 'bundle' && $bundleProcessChildren) {
+            //echo $item->getProduct()->getTypeId().', '.$item->getQty().'<br/>';
+            $parent_item_id = $item->getData('parent_item_id');
+            $parent_item = isset($cart_items[$parent_item_id]) ? $cart_items[$parent_item_id] : null;
+            $parent_type = isset($parent_item) ? $parent_item->getProduct()->getTypeId() : null;
+            if ($type!='configurable') {
+                if ($type=='bundle' && $bundle_process_children) {
                     $this->_data['qty'] -= $item->getQty();
                     continue;
                 }
-                if ($parentType == 'bundle') {
-                    if (!$bundleProcessChildren) continue;
+                if ($parent_type=='bundle') {
+                    if (!$bundle_process_children) continue;
                     else $this->_data['qty'] += $item->getQty();
                 }
-                $this->_items[] = Mage::getModel(
-                    'owebia_shipping2/Os2_Data_CartItem',
-                    array('item' => $item, 'parent_item' => $parentItem, 'options' => $this->_options)
-                );
+                $this->_items[] = Mage::getModel('owebia_shipping2/Os2_Data_CartItem', array('item' => $item, 'parent_item' => $parent_item, 'options' => $this->_options));
             }
-            $totalExclTaxWithoutDiscount += $item->getData('base_row_total');
-            $totalExclTaxWithDiscount += $item->getData('base_row_total') - $item->getData('base_discount_amount');
-            $totalInclTaxWithDiscount += $item->getData('base_row_total') - $item->getData('base_discount_amount')
-                + $item->getData('tax_amount');
-            $totalInclTaxWithoutDiscount += $item->getData('base_row_total_incl_tax');
+            //foreach ($item->getData() as $index => $value) echo "$index = $value<br/>\n";
+            $total_excl_tax_without_discount += $item->getData('base_row_total');
+            $total_excl_tax_with_discount += $item->getData('base_row_total') - $item->getData('base_discount_amount');
+            $total_incl_tax_with_discount += $item->getData('base_row_total') - $item->getData('base_discount_amount') + $item->getData('tax_amount');
+            $total_incl_tax_without_discount += $item->getData('base_row_total_incl_tax');
         }
-        $this->_data['price-tax+discount'] = $totalExclTaxWithDiscount;
-        $this->_data['price-tax-discount'] = $totalExclTaxWithoutDiscount;
-        $this->_data['price+tax+discount'] = $totalInclTaxWithDiscount;
-        $this->_data['price+tax-discount'] = $totalInclTaxWithoutDiscount;
+        $this->_data['price-tax+discount'] = $total_excl_tax_with_discount;
+        $this->_data['price-tax-discount'] = $total_excl_tax_without_discount;
+        $this->_data['price+tax+discount'] = $total_incl_tax_with_discount;
+        $this->_data['price+tax-discount'] = $total_incl_tax_without_discount;
+
+        //echo '<pre>Owebia_Shipping2_Model_Os2_Data_Abstract::__construct<br/>';foreach ($this->_data as $n => $v){echo "\t$n => ".(is_object($v) ? get_class($v) : (is_array($v) ? 'array' : $v))."<br/>";}echo '</pre>';
     }
 
     protected function _getQuote()
@@ -94,15 +107,15 @@ class Owebia_Shipping2_Model_Os2_Data_Cart extends Owebia_Shipping2_Model_Os2_Da
     {
         switch ($name) {
             case 'weight_for_charge':
-                $weightForCharge = $this->getData('weight');
+                $weight_for_charge = $this->weight;
                 foreach ($this->_items as $item) {
-                    if ($item->getData('free_shipping')) $weightForCharge -= $item->getData('weight');
+                    if ($item->free_shipping) $weight_for_charge -= $item->weight;
                 }
-                return $weightForCharge;
+                return $weight_for_charge;
             case 'coupon_code':
-                $couponCode = null;
+                $coupon_code = null;
                 $quote = $this->_getQuote();
-                return $quote->getData('coupon_code');
+                return $quote->coupon_code;
             case 'weight_unit':
                 return Mage::getStoreConfig('owebia_shipping2/general/weight_unit');
         }
@@ -118,22 +131,22 @@ class Owebia_Shipping2_Model_Os2_Data_Cart extends Owebia_Shipping2_Model_Os2_Da
         return parent::__set($name, $value);
     }
 
-    public function getData($name)
+    public function __get($name)
     {
         switch ($name) {
             case 'items':
                 return $this->_items;
             case 'free_shipping':
-                if (isset($this->_freeShipping)) return $this->_freeShipping;
-                $freeShipping = parent::getData('free_shipping');
-                if (!$freeShipping) {
+                if (isset($this->_free_shipping)) return $this->_free_shipping;
+                $free_shipping = parent::__get('free_shipping');
+                if (!$free_shipping) {
                     foreach ($this->_items as $item) {
-                        $freeShipping = $item->getData('free_shipping');
-                        if (!$freeShipping) break;
+                        $free_shipping = $item->free_shipping;
+                        if (!$free_shipping) break;
                     }
                 }
-                return $this->_freeShipping = $freeShipping;
+                return $this->_free_shipping = $free_shipping;
         }
-        return parent::getData($name);
+        return parent::__get($name);
     }
 }

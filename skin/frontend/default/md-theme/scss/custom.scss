@@ -7662,10 +7662,20 @@ body.stickyNavi #topNavi {
 
 body.category-hair {
 	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/category-header-bg.jpg');
+		height: 600px;
+		background-position: center 56px!important;
+		background-image: url('../images/categorybanners/MD-HAir-image.jpg');
 		background-color: #bdaba6;
+
+		.title, span {
+			color: #454545!important;
+		}
+
+		span {
+			font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+			font-style: oblique;
+    		text-transform: uppercase;
+		}
 	}
 
 	#MainCatPageWrapper {
@@ -7675,10 +7685,20 @@ body.category-hair {
 
 body.category-md-lash-factor {
 	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/MD-Lash.jpg');
+		height: 600px;
+		background-position: center 56px!important;
+		background-image: url('../images/categorybanners/MD-Lash-Factor-image.jpg');
 		background-color: #bdaba6;
+
+		.title, span {
+			color: #454545!important;
+		}
+
+		span {
+			font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+			font-style: oblique;
+    		text-transform: uppercase;
+		}
 	}
 
 	#MainCatPageWrapper {
@@ -7688,10 +7708,20 @@ body.category-md-lash-factor {
 
 body.category-md-skin {
 	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/MD-Skin.jpg');
+		height: 600px;
+		background-position: center 56px!important;
+		background-image: url('../images/categorybanners/MD-Skin-image.jpg');
 		background-color: #bdaba6;
+
+		.title, span {
+			color: #454545!important;
+		}
+
+		span {
+			font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+			font-style: oblique;
+    		text-transform: uppercase;
+		}
 	}
 
 	#MainCatPageWrapper {
@@ -7701,10 +7731,20 @@ body.category-md-skin {
 
 body.category-md-wellness {
 	#header.forCategory {
-		height: 508px;
-		background-position: center 0;
-		background-image: url('../images/MD-Wellness.jpg');
+		height: 600px;
+		background-position: center 56px!important;
+		background-image: url('../images/categorybanners/MD-Wellness-image.jpg');
 		background-color: #bdaba6;
+
+		.title, span {
+			color: #454545!important;
+		}
+
+		span {
+			font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+			font-style: oblique;
+    		text-transform: uppercase;
+		}
 	}
 
 	#MainCatPageWrapper {

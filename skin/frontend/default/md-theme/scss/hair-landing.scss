@@ -334,7 +334,7 @@ body {
         background-size: cover;
         position: relative;
         box-shadow: none;
-        min-height:40em;
+        min-height:41.5em;
 
           .MDcontainer {
 
@@ -367,6 +367,8 @@ body {
                 }
 
                 h1 {
+                    width:100%;
+                    float: left;
                     color: #566167;
                     font-family: 'Bodoni', Arial, sans-serif!important;
                     text-transform: uppercase;
@@ -385,6 +387,9 @@ body {
                 }
 
                 .top {
+                    width: 100%; 
+                    float: left;
+
                     p {
                         font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
                         text-transform: uppercase;
@@ -427,6 +432,7 @@ body {
                     background: rgba(106,106,106,0.2);
                     width: 370px;
                     height: 214px;
+                    float: left;
                     margin: 37px 0 0 0;
                     padding: 25px 40px 25px 40px;
 

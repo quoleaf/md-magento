@@ -498,6 +498,7 @@ body.stickyNavi #topNavi.whiteVer .navi li.shop > a {
     position: absolute;
     text-indent: 0;
     top: 0;
+    color: #fff!important;
 }
 
 .badge {
@@ -5939,6 +5940,7 @@ input, select, textarea {
 		padding-left: 0;
 		line-height: 1.2;
 		margin-top: 9px;
+		width: 290px;
 	}
 	
 	#topBar .freeShipping span {
@@ -7394,6 +7396,14 @@ div#sidebar .sideNavi ul li.active a {
 		width: 283px;
 	}
 }
+
+@media only screen and (max-width : 370px) {
+
+#topBar .freeShipping {
+	display: none;
+}
+
+}
 /*ROM additional CSS 10.12.16*/
 
 
@@ -7675,7 +7685,7 @@ body.category-hair {
 		background-color: #bdaba6;
 
 		.title, span {
-			color: #454545!important;
+			color: #454545;
 		}
 
 		span {
@@ -7705,7 +7715,7 @@ body.category-md-lash-factor {
 		background-color: #bdaba6;
 
 		.title, span {
-			color: #454545!important;
+			color: #454545;
 		}
 
 		span {
@@ -7735,7 +7745,7 @@ body.category-md-skin {
 		background-color: #bdaba6;
 
 		.title, span {
-			color: #454545!important;
+			color: #454545;
 		}
 
 		span {
@@ -7765,7 +7775,7 @@ body.category-md-wellness {
 		background-color: #bdaba6;
 
 		.title, span {
-			color: #454545!important;
+			color: #454545;
 		}
 
 		span {

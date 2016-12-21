@@ -26,11 +26,29 @@
         </page>
         <page>
             <layouts> 
-                <mdhairlandingpage module="page" translate="label">
-                    <label>MD Hair Landing Page</label>
-                    <template>page/md-hair-landingpage.phtml</template>
+                <mdhairlossveronelandingpage module="page" translate="label">
+                    <label>MD Hairloss Version One Landing Page</label>
+                    <template>page/md-hairloss-version-one-landingpage.phtml</template>
                     <layout_handle>landingpage</layout_handle>
-                </mdhairlandingpage> 
+                </mdhairlossveronelandingpage> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairlossvertwolandingpage module="page" translate="label">
+                    <label>MD Hairloss Version Two Landing Page</label>
+                    <template>page/md-hairloss-version-two-landingpage.phtml</template>
+                    <layout_handle>landingpage</layout_handle>
+                </mdhairlossvertwolandingpage> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairkitofferlandingpage module="page" translate="label">
+                    <label>MD Hair Kit Offer Landing Page</label>
+                    <template>page/md-hair-kit-offer-landingpage.phtml</template>
+                    <layout_handle>landingpage</layout_handle>
+                </mdhairkitofferlandingpage> 
             </layouts>
         </page>
     </global>

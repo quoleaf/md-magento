@@ -441,8 +441,10 @@ body.hairlossVer-one {
                         padding: 25px 40px 25px 40px;
 
                         .inner {
-                            background: #fff;
-                            height: 100%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -27px;
+                            height: 99%;
+                            background-size: cover;
+                            background-repeat: no-repeat; 
                             display: flex;
                             align-items: center;
 
@@ -455,11 +457,11 @@ body.hairlossVer-one {
                                 span {
                                     width: 100%;
                                     float: left;
-                                    color: #566167;
+                                    color: #4f4f4f;
+                                    font-weight: bold;
                                     text-transform: uppercase;
                                     margin-top: 5px;
                                 }
-
                             }
                         }
                     }
@@ -580,11 +582,6 @@ body.hairlossVer-one {
                             button {
                                 width: 87%;
                             }
-
-                            .bottom {
-                                width: 100%;
-                                left: 0;
-                            }
                         }
                     }
                 }
@@ -614,6 +611,10 @@ body.hairlossVer-one {
                             .bottom {
                                 width: 100%;
                                 left: 0;
+
+                                .inner {
+                                    background:url("http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg") 50% -45px;
+                                }
                             }
                         }
                     }
@@ -639,6 +640,7 @@ body.hairlossVer-one {
 
                             .bottom {
                                 width: 100%;
+                                margin: 65px auto 0;
                             }
 
                             h1 {
@@ -723,6 +725,7 @@ body.hairlossVer-one {
                 position: relative;
                 width: 100%;
                 display: -webkit-inline-box;
+                display: inline-block;
             }
             .owl-carousel .owl-wrapper-outer.autoHeight{
                 -webkit-transition: height 500ms ease-in-out;
@@ -1819,7 +1822,10 @@ body.hairlossVer-one {
                         padding: 0;
 
                         .inner {
-                            height: 100%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -46px;
+                            height: 99%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
                             display: flex;
                             align-items: center;
                             margin-top: 25px;
@@ -2199,8 +2205,10 @@ body.hairlossVer-two {
                         padding: 25px 40px 25px 40px;
 
                         .inner {
-                            background: #fff;
-                            height: 100%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -27px;
+                            height: 99%;
+                            background-size: cover;
+                            background-repeat: no-repeat;  
                             display: flex;
                             align-items: center;
 
@@ -2213,7 +2221,8 @@ body.hairlossVer-two {
                                 span {
                                     width: 100%;
                                     float: left;
-                                    color: #566167;
+                                    color: #4f4f4f;
+                                    font-weight: bold;
                                     text-transform: uppercase;
                                     margin-top: 5px;
                                 }
@@ -2248,6 +2257,10 @@ body.hairlossVer-two {
 
                             .bottom {
                                 margin: 97px auto 0;
+
+                                .inner {
+                                    background:url("http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg") 50% -45px;
+                                }
                             }
                         }
                     }
@@ -2374,6 +2387,7 @@ body.hairlossVer-two {
 
                             .bottom {
                                 width: 100%;
+                                margin: 65px auto 0;
                             }
 
                             h1 {
@@ -2458,6 +2472,7 @@ body.hairlossVer-two {
                 position: relative;
                 width: 100%;
                 display: -webkit-inline-box;
+                display: inline-block;
             }
             .owl-carousel .owl-wrapper-outer.autoHeight{
                 -webkit-transition: height 500ms ease-in-out;
@@ -3554,7 +3569,10 @@ body.hairlossVer-two {
                         padding: 0;
 
                         .inner {
-                            height: 100%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -46px;
+                            height: 99%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
                             display: flex;
                             align-items: center;
                             margin-top: 25px;
@@ -3823,7 +3841,7 @@ body.hairkitoffer {
         /* Header Section */
 
         #header-section {
-            background: url(../images/md-hair-landing/hairkit-offer-banner.jpg) 0 -70px fixed;
+            background: url(../images/md-hair-landing/hairkit-offer-banner.jpg) 0 0px fixed;
             height: auto;
             margin: 0 auto;
             width: 100%;
@@ -3941,8 +3959,10 @@ body.hairkitoffer {
                         padding: 25px 40px 25px 40px;
 
                         .inner {
-                            background: #fff;
-                            height: 100%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -27px;
+                            height: 99%;
+                            background-size: cover;
+                            background-repeat: no-repeat;                            
                             display: flex;
                             align-items: center;
 
@@ -3955,7 +3975,8 @@ body.hairkitoffer {
                                 span {
                                     width: 100%;
                                     float: left;
-                                    color: #566167;
+                                    color: #4f4f4f;
+                                    font-weight: bold;
                                     text-transform: uppercase;
                                     margin-top: 5px;
                                 }
@@ -4028,7 +4049,6 @@ body.hairkitoffer {
 
         @media only screen and (max-width :835px) {
             #header-section {
-
                 .MDcontainer {
                     .col-md-6 {
                         &:nth-child(2) {
@@ -4118,6 +4138,10 @@ body.hairkitoffer {
                                 width: 100%;
                                 left: 0;
                                 margin: 40px auto 0;
+
+                                .inner {
+                                    background:url("http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg") 50% -45px;
+                                }
                             }
                         }
                     }
@@ -4143,6 +4167,7 @@ body.hairkitoffer {
 
                             .bottom {
                                 width: 100%;
+                                margin: 65px auto 0;
                             }
 
                             h1 {
@@ -4227,6 +4252,7 @@ body.hairkitoffer {
                 position: relative;
                 width: 100%;
                 display: -webkit-inline-box;
+                display: inline-block;
             }
             .owl-carousel .owl-wrapper-outer.autoHeight{
                 -webkit-transition: height 500ms ease-in-out;
@@ -5337,7 +5363,10 @@ body.hairkitoffer {
                         padding: 0;
 
                         .inner {
-                            height: 100%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -46px;
+                            height: 99%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
                             display: flex;
                             align-items: center;
                             margin-top: 25px;

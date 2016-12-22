@@ -24,7 +24,12 @@
 </head>
 
 <body class="hairkitoffer">
-
+<?php $homeurl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 7 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/form_key/'.$formkey.'/'; ?>
 <!-- Edited by rej -->
 
 <div class="navWrapper">
@@ -177,13 +182,13 @@
                     <div class="right">
                         <div class="top">
                             <p>
-                                This physician-formulated daily supplement is a clinically-tested drug and hormone free solution for hair growth*. MD Nutri Hair also addresses hair breakage and excess shedding—for more beautiful, full, and thick-looking hair.
+                                This physician-formulated daily supplement is a clinically-tested drug and hormone free solution  for thinning hair*. MD Nutri Hair address hair breakage and excess shedding—for more beautiful, full, and thick-looking hair.
                             </p>
                             <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/description-logos.png') ?>" alt=""/>
                         </div>
 
                         <div class="bottom">
-                            <button class="pinkBG">
+                            <button class="pinkBG" onClick="location='<?php echo $cartUrl; ?>'">
                                 <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/shopping-bag-ico.png') ?>" alt=""/>
                                 Add to bag
                             </button>
@@ -211,7 +216,7 @@
                         </div>
 
                         <div class="bottom">
-                            <button class="pinkBG">
+                            <button class="pinkBG" onClick="location='<?php echo $cartUrl; ?>'">
                                 <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/shopping-bag-ico.png') ?>" alt=""/>
                                 Add to bag
                             </button>

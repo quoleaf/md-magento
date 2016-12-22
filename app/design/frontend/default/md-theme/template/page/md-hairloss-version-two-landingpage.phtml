@@ -24,7 +24,12 @@
 </head>
 
 <body class="hairlossVer-two">
-
+<?php $homeurl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 8 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/form_key/'.$formkey.'/'; ?>
 <!-- Edited by rej -->
 
 <div class="navWrapper">
@@ -76,7 +81,7 @@
                     <p>
                         Nourish your hair back to beautiful
                     </p>
-                    <button class="pinkBG">
+                    <button class="pinkBG" onClick="location='<?php echo $cartUrl; ?>'">
                         Buy Now
                     </button>
 
@@ -179,7 +184,7 @@
                         </div>
 
                         <div class="bottom">
-                            <button class="pinkBG">
+                            <button class="pinkBG" onClick="location='<?php echo $cartUrl; ?>'">
                                 <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/shopping-bag-ico.png') ?>" alt=""/>
                                 Add to bag
                             </button>

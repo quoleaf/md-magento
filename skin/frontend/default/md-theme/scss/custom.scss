@@ -8345,7 +8345,7 @@ body.catalog-product-view {
 			tbody {
 				border-top: 1px dashed #afacac;
 	    		border-bottom: 1px dashed #afacac;
-	    		height: 321px!Important;
+	    		height: 323px!Important;
 			    overflow-y: auto;
 			    overflow-x: hidden;
 			    display: block;
@@ -8403,6 +8403,13 @@ body.catalog-product-view {
 
 	    				h2 {
 	    					text-transform: capitalize;
+
+	    					span {
+	    						width: 100%;
+	    						float: left;
+	    						font-size: 12px;
+	    						color: red;
+	    					}
 	    				}
 
 	    				.product-cart-sku, .cart-links {

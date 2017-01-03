@@ -191,7 +191,14 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                             <strong class="Title">
                                 Your Order
                             </strong>
-                            <div id="GrandDetails"></div> <!-- added by rej -->
+
+							<div id="GrandDetails" class="pf-opc-total">
+							    <div id="opc-review-block">
+									<?php echo $this->_getReviewHtml()?>
+								</div>
+								<div class="clear move-columns"></div>
+							</div>
+
                         </div>
                           <?php echo $this->getChildHtml('agreements')?>
                           <?php echo $this->getChildHtml('opc.newsletters');?>
@@ -251,7 +258,7 @@ function MoveContent(destId, srcId) {
     jQuery('#' + destId).append(jQuery('#' + srcId).contents().detach());
 }
 
-MoveContent('GrandDetails','TotalsDetail');
+//MoveContent('GrandDetails','TotalsDetail');
     jQuery( document ).ready(function() {
     
         // Custom Login Validation

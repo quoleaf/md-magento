@@ -229,8 +229,26 @@ a {
 #header.forHome {
 	height: 765px;
 	background-position: center 0;
-	background-image: url(../images/md_main_bg.jpg);
+	background-image: url(../images/homepage-banner-2017.png);
 	background-color: #fbfaf8;
+
+	span.home_sub {
+	    color: #5b5b5b;
+	    font-size: 30px;
+	    width: 100%;
+	    float: left;
+	    font-style: normal;
+	    font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+	    font-weight: 500;
+	    margin-bottom: 10%;
+	}
+
+	.overlay {
+		.home_title {
+			font-size: 44.47px;
+			padding-left: 15px;
+		}
+	}
 }
 
 #header.forHome .overlay {
@@ -334,11 +352,31 @@ a {
 	background: none;
 }
 
-#header.forCategory {
-	height: 508px;
-	background-position: center 0;
-	background-image: url(../images/category-header-bg.jpg);
-	background-color: #bdaba6;
+body.cms-page-view{
+
+	#topNavi a {
+		color: #454545;
+	}
+	#topNavi.whiteVer .logo {
+		 background-image: url(../images/logo-brown.png);
+	}
+
+	#header.forCategory {
+		height: 650px;
+		background-position: center 56px!important;
+		background-image: url(../images/MD-Categories-image.jpg);
+		background-color: #bdaba6;
+
+		.title, span {
+			color: #454545;
+		}
+
+		span {
+			font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+			font-style: oblique;
+    		text-transform: uppercase;
+		}
+	}
 }
 
 #header.forCategory .title, #header.forCategory .title span {

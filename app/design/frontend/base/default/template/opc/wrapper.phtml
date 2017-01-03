@@ -94,7 +94,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 
                 <div class="customCheckboxWrapper">
 
-                    <input type="checkbox" checked class="myCheckbox" id="paymentmenthodtrigger" data-target="checkboxPaymentTarget"/>
+                    <input type="checkbox" class="myCheckbox" id="paymentmenthodtrigger" data-target="checkboxPaymentTarget"/>
                     
                     <label for="paymentmenthodtrigger">
                         Enable Payment Method    
@@ -262,7 +262,7 @@ function MoveContent(destId, srcId) {
     jQuery( document ).ready(function() {
     
         // Custom Login Validation
-
+        jQuery('#paymentmenthodtrigger').click();
         jQuery(".nextCustomLogin").click(function(){
             var CustomLoginform = jQuery("#login-form");
             

@@ -1,0 +1,278 @@
+<!-- append section to header fo category  -->
+<script>
+jQuery(function($){
+var header_banner = $('.header-banner').html();    
+$("#header").append(header_banner);
+$('.header-banner').remove();
+$("#header").addClass("forCategory")
+$("#topNavi").removeClass("blueVer")
+$("#topNavi").addClass("whiteVer")
+})
+</script>
+
+<div id="MainCatPageWrapper" class="header-banner">
+    <div class="section">
+        <div class="inner">
+            <div class="overlay">
+                <div class="text fadeInUp animated">
+                    <p class="title">
+                        <span><?php echo $this->__('Physician-formulated') ?></span> 
+                        <?php echo $this->__('Fast-Acting. Real Results.') ?>
+                    </p>
+                </div>
+                <!-- <a href="#" class="shopNow pinkSolidBtn">
+                    <?php //echo $this->__('SHOP NOW') ?>
+                </a> -->
+
+                <a href="#" class="watchNow pinkHollowBtn" data-lity>
+                    <?php echo $this->__('WATCH VIDEO') ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="categories">
+            <ul class="clearfix">
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>hair">
+                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-hair.jpg)"></div></div>
+                        <p><span><?php echo $this->__('Hair') ?></span></p>
+                    </a>
+                </li>
+                <li class="alt">
+                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-lash-factor">
+                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-lash-factor.jpg)"></div></div>
+                        <p><span><?php echo $this->__('Lash Factor') ?></span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-skin">
+                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-skin.jpg)"></div></div>
+                        <p><span><?php echo $this->__('Skin') ?></span></p>
+                    </a>
+                </li>
+                <li class="alt">
+                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-wellness">
+                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-wellness.jpg)"></div></div>
+                        <p><span><?php echo $this->__('Wellness') ?></span></p>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- END categories -->
+
+<div id="shop">
+    <div class="section clearfix">
+        <div id="sidebar">
+            <div class="sideNavi">
+                <p class="title"><?php echo $this->__('Categories') ?></p>
+                <ul>
+                     <?php
+                        $obj = new Mage_Catalog_Block_Navigation();
+                        $storeCategories = $obj->getStoreCategories();
+                        Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                        $limit_category = 99;
+                        $ctr = 1;
+
+                    foreach ($storeCategories as $_category):
+                    if($ctr <= $limit_category) :
+                        $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                    ?>
+                        <li ><a class="main" href="<?php echo $_category->getUrl($_category)?>"><?php echo ($_category->getName()); ?></a>
+                            <!-- <ul>
+                                <?php 
+                                
+                                    
+                                        // $_subcategories = $_category->getChildrenCategories();
+
+                                        // if (count($_subcategories) > 0){    
+
+                                        //     foreach($_subcategories as $_subcategory){
+                                            
+                                        //          echo '
+                                        //          <li><a  href="'.$_subcategory->getUrl($_subcategory).'">'
+                                        //             .$_subcategory->getName().
+                                        //          '</a>';
+                                                 
+                                        //          echo '</li>';
+                                        //     }// end foreach subcat
+                                        // }// end if count sub
+                                    
+                                ?>      
+                            </ul> -->
+                    
+                         </li>
+                    <?php $ctr++; endif;  endforeach; ?>
+                </ul>
+            </div>
+            
+            <!-- <div class="sideNavi">
+                <p class="title">SHOP BY CONCERN</p>
+                <ul>
+                    <li><a href="#">LASHES</a>
+                        <ul>
+                            <li><a href="#">Thinning Eyebrows</a></li>
+                            <li><a href="#">Thinning Lashes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">HAIR</a>
+                        <ul>
+                            <li><a href="#">Loosing Hair from Stress</a></li>
+                            <li><a href="#">Thinning Scalp</a></li>
+                            <li><a href="#">Reasons for Hair Loss</a></li>
+                            <li><a href="#">Thin Hair</a></li>
+                            <li><a href="#">Oily Scalp</a></li>
+                            <li><a href="#">Dry Hair</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SKIN</a>
+                        <ul>
+                            <li><a href="#">Age or Dark Spots</a></li>
+                            <li><a href="#">Loss of Firmness</a></li>
+                            <li><a href="#">Fine Line and Crows Feet</a></li>
+                            <li><a href="#">Acne Marks</a></li>
+                            <li><a href="#">Oily Skin</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">WELLNESS</a>
+                        <ul>
+                            <li><a href="#">Detox Antioxidant</a></li>
+                            <li><a href="#">Stress and Weight Reduction</a></li>
+                            <li><a href="#">Sexual Wellness</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> -->
+        </div><!-- END sidebar -->
+        
+        <div id="productListing">
+            <?php echo $this->getChildHtml('breadcrumbs') ?>
+            
+            <!-- <div class="naviBar">
+                <div class="desktopTablet">
+                    <div class="pager">
+                        <ul>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                        
+                        <a href="#" class="pagi prev">Prev Page</a>
+                        <a href="#" class="pagi next">Next Page</a>
+                    </div>
+                    
+                    <div class="show">
+                        <span class="lbl">SHOW</span>
+                        <select>
+                            <option>12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="sort">
+                        <span class="lbl">SORT BY</span>
+                        <select>
+                            <option>Please Select One</option>
+                        </select>
+                    </div>                      
+                </div>
+                
+                <div class="mobileOnly">
+                    <div class="show">
+                        <span class="lbl">SHOW</span>
+                        <select class="showBy">
+                            <option>12</option>
+                        </select>
+                        
+                        <select class="sortBy">
+                            <option>SORT BY</option>
+                        </select>
+                    </div>
+                    
+                    <div class="pager">
+                        <a href="#" class="pagi prev">Prev Page</a>
+                        <ul>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>   
+                        <a href="#" class="pagi next">Next Page</a>                             
+                    </div>
+                </div>
+            </div> --><!-- END navibar -->
+            <?php echo $this->getToolbarHtml() ?>
+            <div id="shopProducts">
+                <div class="category-products">
+                
+                <!-- <ul>
+                    <li>
+                        <div class="image"><a href="#" class="inner"><img src="images/product-image01.jpg" alt=""/><div class="overlay"><span><em>VIEW PRODUCT</em></span></div></a></div>
+                        <div class="desc">
+                            <a href="#" class="name">Nutritional support in times of stress</a>
+                            <span class="price">$40.00</span>
+                        </div>
+                        <a href="#" class="addCart"></a>
+                    </li>
+                    
+                </ul> -->
+                <!-- start products here -->
+                <?php
+                    $_productCollection=$this->getLoadedProductCollection();
+                    $_helper = $this->helper('catalog/output');
+
+                ?>
+                <?php if(!$_productCollection->count()): ?>
+                <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+                <?php else: ?>
+                <ul>
+                    <?php $_iterator = 0; ?>
+                    <?php $_imgSize = 277; ?>
+                    <?php foreach ($_productCollection as $_product): ?>
+                        <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+                            <div class="image">
+                                <a href="<?php echo $_product->getProductUrl() ?>" class="inner">
+                                    <img 
+                                    src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepFrame(false)->resize($_imgSize); ?>"
+                                     alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"
+                                    />
+                                    <div class="overlay"><span><em>VIEW PRODUCT</em></span></div>
+                                </a>
+                            </div>
+                             <div class="desc">
+                                <div class="ProductRewardTop">
+                                    <?php echo Mage::helper('core/mwrewardpoints')->pointsProductListRewardPoints($_product); ?>
+                                </div>
+
+                                <a href="<?php echo $_product->getProductUrl() ?>" class="name"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a>
+                                
+                                <div class="ReviewsList">
+                                    <?php $this->helper('yotpo')->showBottomline($this, $_product); ?>
+                                </div>
+                                
+                                <span class="price"><?php echo $this->getPriceHtml($_product, true) ?></span>
+                            </div>
+                            
+                             <?php if(!$_product->canConfigure() && $_product->isSaleable()): ?>
+                                <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"></a>               
+                             <?php elseif($_product->getStockItem() && $_product->getStockItem()->getIsInStock()): ?>
+                                <?php echo $_product->getProductUrl() ?>"><?php echo $this->__('View Details') ?></a></p>
+                             <?php else: ?>
+                                <p class="action availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                             <?php endif; ?>
+                        </li>
+                    <?php endforeach //end product loop ?>
+                </ul>
+                <?php endif; //checker if no products ?>
+                
+              
+            </div> <!-- end category-products -->   
+        </div><!-- END shopProducts -->
+          <?php echo $this->getToolbarHtml() ?>    
+           
+        </div><!-- END productListing -->
+    </div>
+</div><!-- END shop -->     
+

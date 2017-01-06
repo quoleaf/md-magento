@@ -1,0 +1,84 @@
+<?php $_products = $this->getProducts(); ?>
+<?php $_items = $this->getProductCount(); ?>
+<div class="deal-product deal-slider">
+<div class="block_head_center"><h3><?php echo $this->getTitle(); ?></h3></div>
+<div class="container-slider">
+<div id="owl-demo" class="owl-carousel hot-deals">
+	 <?php foreach($_products as $_product):?>
+	<div class="item">
+		<div class="item-inner">
+		<div class="item-img">
+		<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>" class="product-image">
+			<img class="main-img lazyOwl" data-src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250,250) ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"/>
+		</a>
+		</div>
+		<div class="item-info">
+		<div class="info-inner">
+		<div class="item-title"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>"><?php echo $this->escapeHtml($_product->getName()) ?></a></div>
+		<?php echo $this->getPriceHtml($_product, true, '-new') ?>
+        <div class="discount">
+        <?php echo 'Discount: <span>'.$this->getDiscountPer($_product).'</span>,';?>
+  		<?php echo 'You save: <span>'.$this->getDiscountAmt($_product).'</span>'; ?>
+        </div>
+		<?php echo $this->getReviewsSummaryHtml($_product, 'short',true) ?>
+		<div data-countdown="<?php echo date('Y/m/d', strtotime($_product['special_to_date'])); ?>" class="timer"></div>
+		<div class="actions">
+                    <?php if($_product->isSaleable()): ?>
+                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__('Add to Cart') ?></button>
+                    <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                    <?php endif; ?>
+                    
+                    <ul class="add-to-links">
+                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <li><a href="<?php echo $this->getAddToWishlistUrl($_product) ?>" class="link-wishlist" title="Add to Wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                        <?php endif; ?>
+                        <?php if ($_compareUrl = $this->getAddToCompareUrl($_product)): ?>
+                            <li><a href="<?php echo $_compareUrl ?>" class="link-compare" title="Add to Compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                        <?php endif; ?>
+                    </ul>
+            </div>
+	 	</div>
+		</div>
+		</div>
+	
+	 </div>	
+	 <?php endforeach; ?>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	jQuery('[data-countdown]').each(function(){
+		var $this = $(this), finaldate = jQuery(this).data('countdown');
+		finaldate = new Date(finaldate);
+		jQuery(this).countdown({until: finaldate, padZeroes: true});
+	})
+</script>
+<?php $autoplay = Mage::getStoreConfig('deals/settings/autoplay'); ?>
+<script type="text/javascript">
+    //<![CDATA
+		jQuery(document).ready(function() {
+ 
+		jQuery(".owl-carousel.hot-deals").owlCarousel({
+			items : 2,
+			itemsCustom : [
+				[0, 1],
+				[450, 1],
+				[600, 1],
+				[700, 1],
+				[1000, 1],
+				[1200, 1],
+				[1400, 1],
+				[1600, 1]
+			],
+			lazyLoad : true,
+			navigation : true,
+			pagination : false,
+			autoPlay: <?php echo $autoplay ?>,
+			navigationText: [
+"<i class='icon-left'></i>",
+"<i class='icon-right'></i>"],
+		}); 
+});
+    //]]>
+    </script>

@@ -1,0 +1,69 @@
+<?php $_products = $this->getProducts(); ?>
+<?php $_items = $this->getProductCount(); ?>
+<div class="deal-product section clearfix">
+	<div class="block_head_center">
+		<h3><?php echo $this->
+		getTitle(); ?></h3>
+	</div>
+	<div class="container-slider">
+		<div id="shopProducts" class="hot-deals list list-<?php echo mage::getstoreconfig('deals/settings/productcount')?>
+			">
+			<ul>
+				<?php foreach($_products as $_product):?>
+				<li class="item">
+				<div class="image">
+					<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->
+					escapeHtml($_product->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+					stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"/>
+					<div class="overlay">
+						<span><em>VIEW PRODUCT</em></span>
+					</div>
+					</a>
+				</div>
+				<div class="desc">
+					<div class="ProductRewardTop">
+						<?php echo Mage::helper('core/mwrewardpoints')->
+						pointsProductListRewardPoints($_product); ?>
+					</div>
+					<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->
+					escapeHtml($_product->getName()) ?>"><?php echo $this->
+					escapeHtml($_product->getName()) ?></a>
+					<div class="ReviewsList">
+						<?php $this->
+						helper('yotpo')->showBottomline($this, $_product); ?>
+					</div>
+					<?php echo $this->
+				getPriceHtml($_product, true, '-new') ?>
+				<div class="discount">
+					<?php echo 'Discount: <span>
+					'.$this->getDiscountPer($_product).'</span>,';?> <?php echo 'You save: <span>
+					'.$this->getDiscountAmt($_product).'</span>'; ?>
+				</div>
+				</div>
+				
+				<?php if(!$_product->
+				canConfigure() && $_product->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"></a>
+				<?php elseif($_product->
+				getStockItem() && $_product->getStockItem()->getIsInStock()): ?> <?php echo $_product->
+				getProductUrl() ?>"><?php echo $this->
+				__('View Details') ?></a>
+			
+			<?php else: ?>
+			<p class="action availability out-of-stock">
+				<span><?php echo $this->
+				__('Out of stock') ?></span>
+			</p>
+			<?php endif; ?>
+			</li>
+			<?php endforeach; ?>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery('[data-countdown]').each(function(){
+		var $this = $(this), finaldate = jQuery(this).data('countdown');
+		finaldate = new Date(finaldate);
+		jQuery(this).countdown({until: finaldate, padZeroes: true});
+	})
+</script>

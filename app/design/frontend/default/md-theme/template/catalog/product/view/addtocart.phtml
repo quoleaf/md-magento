@@ -29,6 +29,7 @@
 <?php if($_product->isSaleable()): ?>
    <div class="AddToCartWrapper">
         <button href="#" class="buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
+            <img src="<?php echo $this->getSkinUrl('images/product-page/shopping-cart-white-ico.png') ?>" alt=""/>
             <span>
                 <?php echo $this->__('BUY NOW') ?>
                 <?php echo $this->getChildHtml('', true, true) ?>    

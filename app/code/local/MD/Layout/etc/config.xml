@@ -51,6 +51,15 @@
                 </mdhairkitofferlandingpage> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <salespage module="page" translate="label">
+                    <label>Sales Page</label>
+                    <template>page/sales.phtml</template>
+                    <layout_handle>salespage</layout_handle>
+                </salespage> 
+            </layouts>
+        </page>
     </global>
     <frontend>
         <layout>

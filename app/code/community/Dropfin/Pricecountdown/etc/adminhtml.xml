@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Special Price Countdown
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+-->
+<config>
+    <menu>
+        <system>
+            <children>
+                <dropfin>
+                    <title>Dropfin Extensions</title>
+                    <sort_order>10</sort_order>
+                    <children>
+                        <dropfin_pricecountdown>
+                            <title>Special Price Countdown</title>
+                            <action>adminhtml/system_config/edit/section/dropfin_pricecountdown</action>
+                            <sort_order>20</sort_order>
+                        </dropfin_pricecountdown>
+                    </children>
+                </dropfin>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <dropfin_pricecountdown>
+                                        <title>Dropfin - Special Price Countdown</title>
+                                    </dropfin_pricecountdown>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

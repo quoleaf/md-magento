@@ -1,0 +1,409 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+
+
+
+<form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+
+<?php echo $this->getBlockHtml('formkey') ?>
+
+    <div class="BreadcrumbsWrapper">
+        <?php echo $this->getLayout()->getBlock('breadcrumbs')->toHtml(); ?>  
+    </div>
+
+    <div id="product">
+        <div class="inner">
+            <!-- Image Section -->
+
+            <div class="left clearfix">
+                <?php echo $this->
+                getChildHtml('media') ?>
+            </div>
+
+            <!-- End of Image Section -->
+
+            <div class="right">
+                <div class="MainInfoWrapper">
+
+                    <!-- Product Name -->
+
+                    <div class="productName">
+                        <strong>
+                            <?php if ($_product->getName()): ?> 
+                                <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?> 
+                            <?php endif;?>
+                        </strong>
+                    </div>
+
+                    <!-- End of Product Name -->
+
+                    <div class="inner">
+                        <!-- Product Price -->
+
+                        <div class="price">
+                            <?php echo $this->getPriceHtml($_product); ?> 
+                            <?php echo $this->getChildHtml('bundle_prices') ?> 
+                            <?php echo $this->getTierPriceHtml() ?>
+                        </div>
+
+                        <!-- End of Product Price -->
+                    </div>
+                </div>
+
+                <!-- Customer's Feedback -->
+
+                <div class="SelectedCustomerReviewsWrapper">
+                    <div class="inner">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <?php 
+                            echo $_product->getData("customer_feedback");
+                        ?>
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    </div>
+                    <p class="author">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <?php 
+                            echo $_product->getData("author");
+                        ?>
+                     </p>
+                </div>
+
+                <!-- End of Customer's Feedback -->
+
+                <!-- Product Review -->
+
+                <div class="ProductReviews">
+                    <?php $this->helper('yotpo')->showBottomline($this, $_product); ?>
+                </div>
+
+                <!-- End of Product Review -->
+
+                <!-- Options -->
+
+                <div class="OptionsWrapper">
+                    <div class="top">
+                        <strong>
+                            <?php echo $this->__('QTY:') ?>
+                        </strong>
+
+                        <div class="inner">
+                            <div class="qtyWrapper">
+                                <div class="custom-qty">
+                                    <input class="button-arrow button-down" type="button" value='-'>
+                                    <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty">
+                                    <input class="button-arrow button-up" type="button" value='+'>
+                                </div>
+                            </div>
+
+                            <div class="BuyNowWrapper">
+                                <?php if (!$this->hasOptions()):?> 
+                                    <?php if($_product->isSaleable()): ?> 
+                                    <?php echo $this->getChildHtml('addtocart') ?> 
+                                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?> 
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="RewardProductWrapper"> <!--added by rej -->
+                            <?php echo Mage::helper('core/mwrewardpoints')->pointsProductDetailRewardPoints($_product); ?>
+                            <?php echo Mage::helper('core/mwrewardpoints')->showFacebookRewardPoints(); ?>
+                            <?php echo Mage::helper('core/mwrewardpoints')->showInvitationRewardPoints(); ?>
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <?php if (!$this->hasOptions()):?>
+                            <div class="add-to-box">
+                                <?php echo $this->
+                                getChildHtml('addto') ?>
+                            </div>
+                            <?php elseif (!$_product->isSaleable()): ?>
+                            <div class="add-to-box">
+                                <?php echo $this->
+                                getChildHtml('addto') ?> <?php echo $this->
+                                getChildHtml('sharing') ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <!-- End of Options -->
+
+                <!-- Product Details -->
+
+                <div class="ProductDetailsWrapper">
+                            
+                    <div class="accordion">
+                        <dl>
+
+                        <?php 
+                            $_descriptionText = $_helper->productAttribute($_product, $_product->getDescription(), 'description');
+                            if(isset($_descriptionText)){
+                                $prodAttrDesc = $_product->getResource()->getAttribute('description');
+                                $_description = $prodAttrDesc->getStoreLabel(Mage::app()->getStore()->getName());
+                                echo '<dt>
+                            <a href="#accordion1" aria-expanded="true" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">'.$_description.'</a>
+                            </dt>';
+                            }
+
+                        ?>
+                            <?php if (isset($_descriptionText)): ?>
+                      
+                            
+                                    <?php echo '<dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                                <div class="accordion-content-inner">'.$_descriptionText.'</div>
+                            </dd>';
+
+                            ?>
+                                
+                                
+                                
+                                
+                        
+                            <?php endif;?>
+                            
+                            <dt>
+                            <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+                            Second Accordion heading</a>
+                            </dt>
+                            <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+                                <div class="accordion-content-inner">
+                                    <p>
+                                         Lorem ipsum dolor sit amet, consectetur <a href="http://www.google.com">Test</a>adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris.
+                                    </p>
+                                    <p>
+                                         Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.
+                                    </p>
+                                    <p>
+                                         Lorem ipsum dolor sit amet, consectetur <a href="http://www.google.com">Test</a>adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris.
+                                    </p>
+                                    <p>
+                                         Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.
+                                    </p>
+                                </div>
+                            </dd>
+                            
+                        </dl>
+                    </div>
+                </div>
+
+                <!-- End of Product Details -->
+
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="left">
+                Left
+            </div>
+
+            <div class="right">
+                Right
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="ReviewsWrapper">
+    <?php $this->helper('yotpo')->showWidget($this, $_product); ?>
+</div>
+
+
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('get_social')->toHtml(); ?>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+    
+    var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+        if (this.validator.validate()) {
+            var form = this.form;
+            var oldUrl = form.action;
+
+            if (url) {
+                form.action = url;
+            }
+                   
+            var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {}
+                
+                this.form.action = oldUrl;
+                    if (e) {
+                        throw e;
+                    }
+
+                    if (button && button != 'undefined') {
+                        button.disabled = true;
+                    }
+                }
+            }.bind(productAddToCartForm);
+
+            productAddToCartForm.submitLight = function(button, url){
+                if(this.validator) {
+                    var nv = Validation.methods;
+                    delete Validation.methods['required-entry'];
+                    delete Validation.methods['validate-one-required'];
+                    delete Validation.methods['validate-one-required-by-name'];
+                    // Remove custom datetime validators
+                    for (var methodName in Validation.methods) {
+                        if (methodName.match(/^validate-datetime-.*/i)) {
+                            delete Validation.methods[methodName];
+                        }
+                    }
+
+                    if (this.validator.validate()) {
+                        if (url) {
+                            this.form.action = url;
+                        }
+                        this.form.submit();
+                    }
+                    Object.extend(Validation.methods, nv);
+                }
+            }.bind(productAddToCartForm);
+        //]]>
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+        
+
+
+
+        </style>
+
+
+        <script type="text/javascript">
+          //uses classList, setAttribute, and querySelectorAll
+//if you want this to work in IE8/9 youll need to polyfill these
+(function(){
+  var d = document,
+  accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+  setAria,
+  setAccordionAria,
+  switchAccordion,
+  touchSupported = ('ontouchstart' in window),
+  pointerSupported = ('pointerdown' in window);
+  
+  skipClickDelay = function(e){
+    e.preventDefault();
+    e.target.click();
+  }
+
+    setAriaAttr = function(el, ariaType, newProperty){
+    el.setAttribute(ariaType, newProperty);
+  };
+  setAccordionAria = function(el1, el2, expanded){
+    switch(expanded) {
+      case "true":
+        setAriaAttr(el1, 'aria-expanded', 'true');
+        setAriaAttr(el2, 'aria-hidden', 'false');
+        break;
+      case "false":
+        setAriaAttr(el1, 'aria-expanded', 'false');
+        setAriaAttr(el2, 'aria-hidden', 'true');
+        break;
+      default:
+        break;
+    }
+  };
+//function
+switchAccordion = function(e) {
+  console.log("triggered");
+  e.preventDefault();
+  var thisAnswer = e.target.parentNode.nextElementSibling;
+  var thisQuestion = e.target;
+  if(thisAnswer.classList.contains('is-collapsed')) {
+    setAccordionAria(thisQuestion, thisAnswer, 'true');
+  } else {
+    setAccordionAria(thisQuestion, thisAnswer, 'false');
+  }
+    thisQuestion.classList.toggle('is-collapsed');
+    thisQuestion.classList.toggle('is-expanded');
+    thisAnswer.classList.toggle('is-collapsed');
+    thisAnswer.classList.toggle('is-expanded');
+  
+    thisAnswer.classList.toggle('animateIn');
+  };
+  for (var i=0,len=accordionToggles.length; i<len; i++) {
+    if(touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if(pointerSupported){
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+})();
+        </script>
+
+        <script type="text/javascript">
+        //&lt;![CDATA[
+        jQuery(function($) {
+            $('.custom-qty .button-up').click(function() {
+                $qty = $(this).parent().find('.qty');
+                qty = parseInt($qty.val()) + 1;
+                $qty.val(qty);
+            });
+            $('.custom-qty .button-down').click(function() {
+                $qty = $(this).parent().find('.qty');
+                qty = parseInt($qty.val()) - 1;
+                if (qty < 1)
+                    qty = 1;
+                $qty.val(qty);
+            });
+        });
+     //]]&gt;
+</script>

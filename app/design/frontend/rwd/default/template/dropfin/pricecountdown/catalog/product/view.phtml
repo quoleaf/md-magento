@@ -1,0 +1,164 @@
+<?php   
+
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Special Price Countdown
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+?>
+
+<?php
+	$count = 1;
+	$_product = $this->getProduct();
+?>
+
+<?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
+<ul class="add-to-links">
+<?php if ($this->helper('wishlist')->isAllow()) : ?>
+    <li><a href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, '<?php echo $_wishlistSubmitUrl ?>'); return false;" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+<?php endif; ?>
+<?php
+    $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product);
+?>
+<?php if ($_compareUrl) : ?>
+        <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+<?php endif; ?>
+</ul>
+
+<?php
+$priceCountdownHelper = $this->helper('dropfin_pricecountdown');
+
+if($priceCountdownHelper->getStatus() 
+    && $priceCountdownHelper->getProductViewPageStatus()) {
+
+	$fromDate = date("Y-m-d", strtotime($_product->getSpecialFromDate())).' 00:00:00 AM';
+	$toDate = date("Y-m-d", strtotime($_product->getSpecialToDate())).' 11:59:59 PM';
+
+	if($priceCountdownHelper->validatePriceCountDown($fromDate, $toDate, $_product->getSpecialPrice())) {
+
+		if($priceCountdownHelper->getPdpTitle()) { ?>
+			<h5 class="pdp-clock-title"><?php echo $priceCountdownHelper->getPdpTitle();?></h5>
+			<?php
+		}
+
+		if($priceCountdownHelper->getProductViewPageClockStyle() == 1) {
+			?>
+			<link rel="stylesheet" href="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-1/css/jquery.countdown.css');?>">
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-1/js/jquery.1.11.0.min.js');?>"></script>
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-1/js/jquery.plugin.js');?>"></script>
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-1/js/jquery.countdown.js');?>"></script>
+			<div id="countdown_1" class="pdp-clock-1"></div>
+			<?php $strtotime = strtotime($toDate); ?>
+			<script script="text/javascript">
+				jQuery.noConflict();
+				jQuery(function($) {
+					var currentTime = Date.parse(new Date());
+					var serverTime = Date.parse(new Date("<?php echo Date("m/d/y h:i:s A", strtotime(Mage_Core_Model_Locale::date(null, null, "en_US", true))); ?>"));
+					var diff = currentTime - serverTime;
+					var endDate = new Date('<?php echo $toDate;?>');
+					endDate = Date.parse(endDate)+diff;
+					endDate = new Date(endDate);
+					$('#countdown_1').countdown({until: endDate});
+				});
+			</script>
+
+			<?php
+		} else if($priceCountdownHelper->getProductViewPageClockStyle() == 2) {
+			?>
+			<link rel="stylesheet" href="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-2/css/timeTo.css');?>">
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-2/js/jquery.1.11.0.min.js');?>"></script>
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-2/js/jquery.time-to.js');?>"></script>
+			<div id="countdown_2" class="pdp-clock-2"></div>
+			<script script="text/javascript">
+				jQuery.noConflict();
+				jQuery(function($) {
+					var currentTime = Date.parse(new Date());
+					var serverTime = Date.parse(new Date("<?php echo Date("m/d/y h:i:s A", strtotime(Mage_Core_Model_Locale::date(null, null, "en_US", true))); ?>"));
+					var diff = currentTime - serverTime;
+					var endDate = new Date('<?php echo $toDate;?>');
+					endDate = Date.parse(endDate)+diff;
+					endDate = new Date(endDate);
+					$('#countdown_2').timeTo({
+						timeTo: endDate,
+						displayDays: 2,
+						theme: "white",
+						displayCaptions: true,
+						fontSize: 48,
+						captionSize: 14
+					}); 
+				});
+			</script>
+			<?php
+		} else if($priceCountdownHelper->getProductViewPageClockStyle() == 3) {
+			?>
+			<link rel="stylesheet" href="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-2/css/timeTo.css');?>">
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-2/js/jquery.1.11.0.min.js');?>"></script>
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-2/js/jquery.time-to.js');?>"></script>
+			<div id="countdown_3" class="pdp-clock-3"></div>
+			<script script="text/javascript">
+				jQuery.noConflict();
+				jQuery(function($) {
+					var currentTime = Date.parse(new Date());
+					var serverTime = Date.parse(new Date("<?php echo Date("m/d/y h:i:s A", strtotime(Mage_Core_Model_Locale::date(null, null, "en_US", true))); ?>"));
+					var diff = currentTime - serverTime;
+					var endDate = new Date('<?php echo $toDate;?>');
+					endDate = Date.parse(endDate)+diff;
+					endDate = new Date(endDate);
+					$('#countdown_3').timeTo({
+						timeTo: endDate,
+						displayDays: 2,
+						theme: "black",
+						displayCaptions: true,
+						fontSize: 48,
+						captionSize: 14
+					}); 
+				});
+			</script>
+			<?php
+		} else if($priceCountdownHelper->getProductViewPageClockStyle() == 4) {
+			$currentTime = strtotime(Mage_Core_Model_Locale::date(null, null, "en_US", true));
+			$diff = strtotime($toDate) - $currentTime;
+			if($diff > 0) {
+			?>
+			<link rel="stylesheet" href="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-4/css/flipclock.css');?>">
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-4/js/jquery.1.11.0.min.js');?>"></script>
+			<script type="text/javascript" src="<?php echo $this->getSkinUrl('dropfin/pricecountdown/type-4/js/flipclock.js');?>"></script>
+			<div id="countdown_4" class="pdp-clock-4"></div>
+			<script script="text/javascript">
+				jQuery.noConflict();
+				jQuery(function($) {
+					var clock;
+					clock = $('#countdown_4').FlipClock({
+						clockFace: 'DailyCounter',
+						autoStart: false
+					});
+
+					clock.setTime(<?php echo $diff;?>);
+					clock.setCountdown(true);
+					clock.start(); 
+				});
+			</script>
+			<?php
+			}
+		}
+		
+	}
+
+}

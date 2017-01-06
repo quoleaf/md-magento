@@ -232,8 +232,18 @@
 
                         <?php if (isset($videoText)): ?>
                             <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
-                                <div class="accordion-content-inner">
+                                <div class="accordion-content-inner video">
+                                    <?php echo $_product->getData("video_iframe");?>
+
+                                    <strong>
+                                        <?php echo $_product->getData("video_title");?>
+                                    </strong>
+
                                     <?php echo $videoText; ?>
+
+                                    <p class="footerContent">
+                                        For more information, visit <a href="<?php echo Mage::getUrl('home'); ?>">MD Factor Website</a>, Follow us on <a href="https://twitter.com/MDLFbySusanLin">Twitter</a>, Like us on <a href="https://www.facebook.com/MDLASHF/">Facebook</a>, Follow us on Instagram: <a href="https://www.instagram.com/md_factor/?hl=en">@MD_Factor</a>
+                                    </p>
                                 </div>
                             </dd>
                            
@@ -295,9 +305,11 @@
                     Key Ingredients
                 </h1>
 
-                <?php 
+                <div class="inner">
+                    <?php 
                     echo $_product->getData("key_ingredients");
                 ?>
+                </div>
 
                 
             </div>

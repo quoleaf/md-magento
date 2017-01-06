@@ -7901,21 +7901,55 @@ body.catalog-product-view {
 
 				.right {
 
-					div {
-						border: 1px solid #cecdcd;
-						text-align: center;
-						padding: 50px 0 25px 0;
-						margin-bottom: 30px;
+					.inner {
+						overflow-y: auto;
+						max-height: 960px;
+						height: auto;
+						margin-top:0;
 
-						img {
-							display: inline-block;
-						}
+						&::-webkit-scrollbar,&::-webkit-scrollbar {
+							width:13px;
+								height:10px;
+								outline:none;
+							}
 
-						p {
-							margin: 0;
-							padding: 0;
-							text-transform: uppercase;
-							font-size: 20px;
+							&::-webkit-scrollbar-thumb,&::-webkit-scrollbar-thumb {
+								height: 6px;
+								border: 4px solid rgba(0, 0, 0, 0);
+								background-clip: padding-box;
+								-webkit-border-radius: 7px;
+								background-color: rgba(0, 0, 0, 0.15);
+								-webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+							}
+
+							&::-webkit-scrollbar-button,&::-webkit-scrollbar-button {
+								width:0;
+								height:0;
+								display:none;
+							}
+
+							&::-webkit-scrollbar-corner,&::-webkit-scrollbar-corner {
+								background-color:transparent;
+							}
+
+						div {
+							border: 1px solid #cecdcd;
+							text-align: center;
+							padding: 50px 0 25px 0;
+							margin-bottom: 30px;
+
+							img {
+								display: inline-block;
+								width: 90%;
+								margin-bottom: 50px;
+							}
+
+							p {
+								margin: 0;
+								padding: 0;
+								text-transform: uppercase;
+								font-size: 20px;
+							}
 						}
 					}
 
@@ -7996,6 +8030,14 @@ body.catalog-product-view {
 					.inner {
 						width: 100%;
 						float: left;
+
+						.fa-quote-left {
+							padding-right: 5px;
+						}
+
+						.fa-quote-right {
+							padding-left: 5px;
+						}
 					}
 
 					.author {
@@ -8036,6 +8078,7 @@ body.catalog-product-view {
 							width: 100%;
 							float: left;
 							display: flex;
+							align-items: center;
 							margin-top: 0;
 
 							.qtyWrapper {
@@ -8116,6 +8159,78 @@ body.catalog-product-view {
 										}
 									}
 								}
+
+								@media only screen and (max-width : 575px) { 
+									.AddToCartWrapper {
+										button {
+											padding: 17px 60px 17px 60px;
+											font-size: 9px;
+
+											img {
+												top:0;
+											}
+										}
+									}
+								}
+
+								@media only screen and (max-width : 550px) { 
+									.AddToCartWrapper {
+										button {
+											img {
+												top:5px;
+											}
+										}
+									}
+								}
+
+								@media only screen and (max-width : 520px) { 
+									.AddToCartWrapper {
+										button {
+											padding: 17px 30px 17px 29px;
+
+											img {
+												top:0px;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						@media only screen and (max-width : 490px) { 
+							.inner {
+								display: block;
+
+								.qtyWrapper {
+									width: 100%;
+									float: left;
+									margin-bottom: 10px;
+
+									.custom-qty {
+										input.button-down, input.button-up {
+											padding: 13px 45px 13px 45px !important;
+										}
+
+										input#qty {
+											width: 79% !important;
+										}
+									}
+								}
+
+								.BuyNowWrapper {
+									width: 100%;
+									float:left;
+									margin:0;
+
+									.AddToCartWrapper {
+										width: 100%;
+
+										button {
+											width: 100%;
+											font-size: 12px;
+										}
+									}
+								}
 							}
 						}
 
@@ -8135,6 +8250,12 @@ body.catalog-product-view {
 						border-bottom: 1px solid #b3b3b3;
 
 						.add-to-box {
+							.is-countdown {
+								width: 100%;
+								float: left;
+								margin-bottom: 35px;
+							}
+
 							.add-to-links {
 								.link-compare {
 									display: none;
@@ -8143,7 +8264,7 @@ body.catalog-product-view {
 								i {
 									color: #646464;
 									font-weight: 600;
-									margin-right: 10px;
+									margin-right: 35px;
 								}
 
 								a {
@@ -8173,8 +8294,80 @@ body.catalog-product-view {
 					  	}
 
 					  	.accordion-content-inner {
-						  	padding: 1em 2em 1em 2em;
-						  	background: #eee;
+						  	padding: 15px;
+						  	background: #f8f8f8;
+						  	margin-bottom: 20px;
+						  	font-size: 14px;
+						  	height: auto;
+						  	max-height: 350px;
+    						overflow-y: auto;
+
+    						&::-webkit-scrollbar,&::-webkit-scrollbar {
+								width:13px;
+								height:10px;
+								outline:none;
+							}
+
+							&::-webkit-scrollbar-thumb,&::-webkit-scrollbar-thumb {
+								height: 6px;
+								border: 4px solid rgba(0, 0, 0, 0);
+								background-clip: padding-box;
+								-webkit-border-radius: 7px;
+								background-color: rgba(0, 0, 0, 0.15);
+								-webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+							}
+
+							&::-webkit-scrollbar-button,&::-webkit-scrollbar-button {
+								width:0;
+								height:0;
+								display:none;
+							}
+
+							&::-webkit-scrollbar-corner,&::-webkit-scrollbar-corner {
+								background-color:transparent;
+							}
+
+
+						  	h3 {
+						  		color: #e8408b;
+						  		margin: 0 0 30px 0;
+						  	}
+
+						  	p {
+						  		margin:0 0 10px 0;
+						  		padding:0;
+						  	}
+
+						  	ul {
+						  		margin: 10px 0 10px 40px;
+
+						  		li {
+						  			list-style: disc;
+						  			margin: 0 0 15px 0;
+						  		}
+						  	}
+
+						  	&.video {
+						  		strong {
+						  			width: 100%;
+								    float: left;
+								    font-size: 17px;
+								    margin: 10px 0 20px 0;
+						  		}
+
+						  		p.footerContent {
+						  			margin: 15px 0 0 0;
+
+						  			a {
+						  				color: #e8408b;
+						  				text-decoration: underline!important;
+
+						  				&:hover {
+						  					color: #1183ce;
+						  				}
+						  			}
+						  		}
+						  	}
 						}
 
 						.accordionTitle, .accordion__Heading {
@@ -8203,14 +8396,14 @@ body.catalog-product-view {
 							}
 
 							&:hover {
-								background-color: #e8408b;
+								background-color: #1183ce;
 								color: #fff;
 							}
 						}
 
 
 						.accordionTitleActive, .accordionTitle.is-expanded {
-						  	background-color: #e8408b;
+						  	background-color: #1183ce;
 						  	color: #fff;
 
 						  	&:before {
@@ -11216,7 +11409,7 @@ body.cms-sales {
 		.container-slider {
 			#shopProducts {
 				padding: 5.208333333333333%;
-				
+
 				ul {
 					li {
 						.image {

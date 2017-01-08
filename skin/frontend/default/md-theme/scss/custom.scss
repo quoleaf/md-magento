@@ -234,7 +234,7 @@ a {
 
 	span.home_sub {
 	    color: #5b5b5b;
-	    font-size: 30px;
+	    font-size: 35px;
 	    width: 100%;
 	    float: left;
 	    font-style: normal;
@@ -245,7 +245,9 @@ a {
 
 	.overlay {
 		.home_title {
-			font-size: 44.47px;
+			font-family: 'Bodoni', Arial, sans-serif!important;
+			font-size: 60px;
+			font-style: italic;
 			padding-left: 15px;
 		}
 	}
@@ -8025,7 +8027,7 @@ body.catalog-product-view {
 					width: 100%;
 					float: left;
 					font-size: 14px;
-					padding: 15px 0 15px 0;
+					padding: 35px 0 15px 0;
 
 					.inner {
 						width: 100%;
@@ -8238,6 +8240,13 @@ body.catalog-product-view {
 							width: 100%;
 							float: left;
 							margin-top: 10px;
+
+							#mw_popup {
+								.mw_share.left {
+								    width: 100%;
+								    margin-top: 20px;
+								}
+							}
 						}
 					}
 

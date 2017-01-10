@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @project: CartServiceMigrate
+ * @author : LitExtension
+ * @url    : http://litextension.com
+ * @email  : litextension@gmail.com
+ */
+-->
+<config>
+    <modules>
+        <LitExtension_CartServiceMigrate>
+            <active>true</active>
+            <codePool>community</codePool>
+        </LitExtension_CartServiceMigrate>
+    </modules>
+</config>

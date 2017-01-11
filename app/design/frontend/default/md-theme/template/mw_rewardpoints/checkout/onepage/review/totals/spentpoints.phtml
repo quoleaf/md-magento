@@ -17,8 +17,8 @@
 
 
 <?php if($total_reward_point  && ($reward_point_sell_product || $points)):?>
-	<tr>
-	    <td colspan="3" class="a-right" colspan="1"><b><?php echo Mage::helper("rewardpoints")->__("Total Points");?></b></td>
-	    <td class="a-right"><span class="price"><?php echo Mage::helper('rewardpoints')->formatPoints($total_reward_point,$store_id)?></span></td>
-	</tr> 
+	<div class="innerOPCtotals">
+	<b><?php echo Mage::helper("rewardpoints")->__("Total Points");?></b>
+	<?php echo Mage::helper('rewardpoints')->formatPoints($total_reward_point,$store_id)?>
+	</div>
 <?php endif;?>

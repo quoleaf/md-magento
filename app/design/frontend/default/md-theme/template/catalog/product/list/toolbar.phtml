@@ -96,16 +96,19 @@
     <div class="mobileOnly">
         <div class="show">
             <span class="lbl">SHOW</span>
-           <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Results per page')); ?>">
+            <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Results per page')); ?>">
             <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
                 <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
                     <?php echo $_limit ?>
                 </option>
             <?php endforeach; ?>
             </select>
+        </div>
+        
+        <div class="sort">
+            <span class="lbl">SORT BY</span>
             
-             <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sort By')) ?>">
-                <!-- Edited by rej -->
+            <!-- Edited by rej -->
              <select onchange="setLocation(this.value)" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sort By')) ?>">
 
                 <!-- Featured products -->
@@ -126,20 +129,9 @@
 
                 <option value="<?php echo $this->getOrderUrl('price', 'asc') ?>"<?php if($this->isOrderCurrent('price') && $this->getCurrentDirection() == 'asc'): ?> selected="selected"<?php endif; ?>> Price - Low to High </option>
                   <option value="<?php echo $this->getOrderUrl('price', 'desc') ?>"<?php if($this->isOrderCurrent('price') && $this->getCurrentDirection() == 'desc'): ?> selected="selected"<?php endif; ?>> Price - High to Low </option>
+                  
             </select>
-        </div>
-        
-        <div class="pager">
-            <a href="#" class="pagi prev">Prev Page</a>
-            <ul>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-            </ul>   
-            <a href="#" class="pagi next">Next Page</a>                             
-        </div>
+        </div>      
     </div>
 </div><!-- END navibar -->
 

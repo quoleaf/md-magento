@@ -47,7 +47,7 @@
 
 
 <div id="mainWrapper">
-		<div id="header" class="forHome parralax">
+		<div id="header" class="forHome parralax" style="background-image: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_banner_image')->toHtml(); ?>')">
 			<div id="topNavi">
 				<a href="#" class="logo home">MD</a>
 				<a href="#" class="search home"><?php echo $this->__('Search Products') ?></a>
@@ -228,10 +228,13 @@
 				<div class="inner">
 					<div class="overlay">
 						<div class="text fadeInUp animated">
-							<p class="title">Nourish Your Hair <br><span class="subtitle1">Back to Beautiful</span></p>
+							<p class="home_title"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_banner_title')->toHtml(); ?><br>
+                <span class="home_sub"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_banner_subtitle')->toHtml(); ?>
+                </span>
+              </p>
 						</div>
 						<a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>categories" class="shopNow pinkSolidBtn"><?php echo $this->__('SHOP NOW') ?></a> 
-						<a href="https://youtu.be/xiIIqeHHY-c" target="_blank" class="watchNow pinkHollowBtn" data-lity=""><?php echo $this->__('WATCH VIDEO') ?></a>
+						<a href="<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_banner_video_url')->toHtml(); ?>" target="_blank" class="watchNow pinkHollowBtn" data-lity=""><?php echo $this->__('WATCH VIDEO') ?></a>
 					</div>
 				</div>
 			</div>

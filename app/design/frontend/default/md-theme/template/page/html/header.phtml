@@ -46,224 +46,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-    <div id="mainWrapper">
-        <div id="header" class="parralax">
-            <div id="topBar" class="clearfix">
-                <a href="#" class="freeShipping info">
-                    <img src="<?php echo $this->getSkinUrl('images/truck.gif') ?>">
-                </a>
-                <a href="tel:18888825788" class="phone info"><?php echo $this->__('1-888-882-5788') ?></a>
-                <a href="#" class="gifts info"><?php echo $this->__('GIFT CERTIFICATES') ?></a>
-                <?php   $count = ($this->helper('checkout/cart')->getSummaryCount() ? $this->helper('checkout/cart')->getSummaryCount() : 0  ) ?>
-                <a href="<?php echo Mage::getUrl('checkout/cart'); ?>" class="shoppingBag cart-link"><span class="badge"><?php echo $count?></span> <?php echo $this->__('Shopping Bag') ?></a>
-                
-                <?php if (Mage::helper('customer')->isLoggedIn() ): ?>
-                    <a class="signin info" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo $this->__('LOG OUT')?></a>
+<div id="mainWrapper">
 
-                    <a href="<?php echo Mage::getUrl('customer/account'); ?>" class="myAccount info"><?php echo $this->__('MY ACCOUNT') ?></a>
+<!-- Updated By rej -->
 
-                <?php 
-                    
-                else: ?>
-                       
-                        <a class="signin info" href="<?php echo Mage::helper('customer')->getLoginUrl(); ?>"><?php echo $this->__('SIGN IN') ?></a>
-                <?php 
-                    
-                endif; ?>
-                <!-- <a href="<?php //echo Mage::getUrl('customer/account'); ?>" class="myAccount info"><?php //echo $this->__('MY ACCOUNT') ?></a> -->
-            </div>
-            <div id="topNavi" class="blueVer">
+    <?php $category = Mage::getModel('catalog/layer')->getCurrentCategory();?>
 
-                <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
-                <a href="#" class="search"><img src="<?php echo $this->getSkinUrl('images/search-new.png') ?>"><?php echo $this->__('Search Products') ?></a>
-                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
-                <!-- Custom Currency -->
-                    
-                    <!-- <?php //echo //$this->getChildHtml('custom_currency_selector') ?> -->
-                    
-                <!-- END of Custom Currency -->
+        <!-- Categories -->
 
-                <ul class="navi">
-                    <li class="shop"><a href="#"><?php echo $this->__('SHOP') ?></a>
-                    <div class="sub">
-                     <div class="inner"> 
-                      <ul class="types">
-                        
-                        <?php
-                            $obj = new Mage_Catalog_Block_Navigation();
-                            $storeCategories = $obj->getStoreCategories();
-                            Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
-                            $limit_category = 4;
-                            $ctr = 1;
+        <?php if($category->getId()==2): ?>
 
-                            foreach ($storeCategories as $_category):
-                            if($ctr <= $limit_category) :
-                        ?>
-                    <li> 
+         <div id="header" class="forCategory parralax" style="background-image: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('main_category_banner_image')->toHtml(); ?>')">
 
-                        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
-                        
-                        <?php
-                            $_category = Mage::getModel('catalog/category')->load($_category->getId());
-                            
-                            if ($_imgUrl = $_category->getImageUrl()) {
-                                echo "<img src=".$_imgUrl." >";     
-                            }
-                        ?>
-                        <span><?php echo $_category->getName(); ?></span></a>
-                        <ul>
-                        <?php 
-                            
-                            
-                                $_subcategories = $_category->getChildrenCategories();
-                                if (count($_subcategories) > 0){    
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
 
-                                    foreach($_subcategories as $_subcategory){
-                                        //load products now
-                                    $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
-                                     ->getProductCollection()
-                                     ->addAttributeToSelect('*')
-                                     ->addAttributeToFilter('status', 1)
-                                     ->addAttributeToFilter('visibility', 4)
-                                     ->setOrder('price', 'ASC');
-                                         echo '
-                                         <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
-                                         if (count($products) > 0){    
-
-                                            echo '<ul>';
-                                            foreach($products as $_product){
-                                               echo '<li>
-                                                    <a href="'.$_product->getProductUrl().'">
-                                                    <div class="image">
-                                                        <img src="'.$_product->getImageUrl().'">                                                    
-                                                    </div>
-                                                    <div class="desc">'.$_product->getName().'</div>
-                                                    </a>
-                                                </li>';
-                                            }
-                                                
-                                            echo '</ul>';
-                                        }
-                                         echo '</li>';
-                                    }// end foreach subcat
-                                }// end if count sub
-                            
-                        ?>      
-                         </ul>
-                        </li>
-                        <?php  $ctr++; endif;   endforeach; ?>                           
-                       </ul> 
-                     </div>
-                    </div>
-                    </li>  
-                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_lg')->toHtml(); ?>      
-                </ul>    
-
-
-               <!--  <ul class="navi">
-                    
-                    <li><a href="http://md-factor.com/about">ABOUT</a></li>
-                    <li><a href="http://md-factor.com/rewards">REWARDS</a></li>
-                    <li><a href="https://us.md-factor.com/categories.php">STORES</a></li>
-                    <li><a href="http://md-factor.com/blog">BLOG</a></li>
-                    <li><a href="http://md-factor.com/pressmedia">MEDIA</a></li>
-                </ul> -->
-
-            </div>
-
-            <div id="mobileMenu">
-                <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
-                <a href="#" class="menuBtn"><span></span><span></span><span></span></a>
-            </div>
-            
-            <div id="mobileNavi">
-                <a href="#" class="closeBtn">Close</a>
+            <div class="section">
                 <div class="inner">
-                    <ul class="links">
-                    <li class="hasSub"><a href="#" class="shop"><?php echo $this->__('SHOP') ?></a> 
-                      <ul class="types">
-                        <?php
-                            $obj = new Mage_Catalog_Block_Navigation();
-                            $storeCategories = $obj->getStoreCategories();
-                            Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
-                            $limit_category = 4;
-                            $ctr = 1;
-
-                            foreach ($storeCategories as $_category):
-                            if($ctr <= $limit_category) :
-                        ?>
-                    <li class="hasSub"> 
-                        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
-                        <?php
-                            $_category = Mage::getModel('catalog/category')->load($_category->getId());
-                        
-                            if ($_imgUrl = $_category->getImageUrl()) {
-                                    
-                            }
-                        ?>
-                        <?php echo $_category->getName(); ?></a>
-                        <ul>
-                        <?php 
-                            
-                            
-                                $_subcategories = $_category->getChildrenCategories();
-                                if (count($_subcategories) > 0){    
-
-                                    foreach($_subcategories as $_subcategory){
-                                        //load products now
-                                    $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
-                                     ->getProductCollection()
-                                     ->addAttributeToSelect('*')
-                                     ->addAttributeToFilter('status', 1)
-                                     ->addAttributeToFilter('visibility', 4)
-                                     ->setOrder('price', 'ASC');
-                                         echo '
-                                         <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
-                                         if (count($products) > 0){    
-
-                                            echo '<ul>';
-                                            foreach($products as $_product){
-                                               echo '<li>
-                                                <a href="'.$_product->getProductUrl().'">'.$_product->getName().'</a>
-                                                </li>';
-                                            }
-                                                
-                                            echo '</ul>';
-                                        }
-                                         echo '</li>';
-                                    }// end foreach subcat
-                                }// end if count sub
-                            
-                        ?>      
-                         </ul>
-                        </li>
-                        <?php  $ctr++; endif;   endforeach; ?>                           
-                       </ul> 
-                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_lg')->toHtml(); ?>      
-                    </ul> 
-                    
-                    <div class="search">
-                        <input type="text" class="query"/>
-                        <input type="submit" value="" class="searchBtn"/>
+                    <div class="overlay">
+                        <div class="text fadeInUp animated">
+                            <p class="title">
+                                <span>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('main_category_banner_title')->toHtml(); ?>
+                                </span> 
+                                <strong>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('main_category_banner_subtitle')->toHtml(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <a href="<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('main_category_banner_video_url')->toHtml(); ?>" class="watchNow pinkHollowBtn" data-lity>
+                            <?php echo $this->__('WATCH VIDEO') ?>
+                        </a>
                     </div>
-                    <div class="translation-flag">
-                        <a href="http://au.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/au-flag.png" /></a>
-                        <a href="http://ca.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/ca-flag.png" /></a>
-                        <a href="http://ch.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/ch-flag.png" /></a>
-                        <a href="http://mx.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/mx-flag.png" /></a>
-                        <a href="http://br.md-factor.com"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/default/md-theme/images/br-flag.png" /></a>
-                    </div>
-
-                    <!-- Custom Currency -->
-                    
-                    <!-- <?php //echo $this->getChildHtml('custom_currency_selector') ?> -->
-                    
-                    <!-- END of Custom Currency -->
-                    
                 </div>
-            </div><!-- END mobileNavi -->
-            
-            
+            </div>
+        </div>
+
+        <!-- hair -->
+
+        <?php elseif($category->getId()==4): ?>
+
+        <div id="header" class="forCategory parralax" style="background-image: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('hair_category_banner_image')->toHtml(); ?>')">
+
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+
+            <div class="section">
+                <div class="inner">
+                    <div class="overlay">
+                        <div class="text fadeInUp animated">
+                            <p class="title">
+                                <span>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('hair_category_banner_title')->toHtml(); ?>
+                                </span> 
+                                <strong>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('hair_category_banner_subtitle')->toHtml(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <a href="<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('hair_category_banner_video_url')->toHtml(); ?>" class="watchNow pinkHollowBtn" data-lity>
+                            <?php echo $this->__('WATCH VIDEO') ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lash Factor -->
+
+        <?php elseif($category->getId()==7): ?>
+
+        <div id="header" class="forCategory parralax" style="background-image: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('lash_category_banner_image')->toHtml(); ?>')">
+
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+
+            <div class="section">
+                <div class="inner">
+                    <div class="overlay">
+                        <div class="text fadeInUp animated">
+                            <p class="title">
+                                <span>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('lash_category_banner_title')->toHtml(); ?>
+                                </span> 
+                                <strong>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('lash_category_banner_subtitle')->toHtml(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <a href="<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('lash_category_banner_video_url')->toHtml(); ?>" class="watchNow pinkHollowBtn" data-lity>
+                            <?php echo $this->__('WATCH VIDEO') ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skin -->
+
+        <?php elseif($category->getId()==6): ?>
+
+        <div id="header" class="forCategory parralax" style="background-image: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('skin_category_banner_image')->toHtml(); ?>')">
+
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+
+            <div class="section">
+                <div class="inner">
+                    <div class="overlay">
+                        <div class="text fadeInUp animated">
+                            <p class="title">
+                                <span>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('skin_category_banner_title')->toHtml(); ?>
+                                </span> 
+                                <strong>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('skin_category_banner_subtitle')->toHtml(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <a href="<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('skin_category_banner_video_url')->toHtml(); ?>" class="watchNow pinkHollowBtn" data-lity>
+                            <?php echo $this->__('WATCH VIDEO') ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wellness -->
+
+        <?php elseif($category->getId()==8): ?>
+
+        <div id="header" class="forCategory parralax" style="background-image: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('wellness_category_banner_image')->toHtml(); ?>')">
+
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+
+            <div class="section">
+                <div class="inner">
+                    <div class="overlay">
+                        <div class="text fadeInUp animated">
+                            <p class="title">
+                                <span>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('wellness_category_banner_title')->toHtml(); ?>
+                                </span> 
+                                <strong>
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('wellness_category_banner_subtitle')->toHtml(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <a href="<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('wellness_category_banner_video_url')->toHtml(); ?>" class="watchNow pinkHollowBtn" data-lity>
+                            <?php echo $this->__('WATCH VIDEO') ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <?php else: ?>
+
+        
+        <div id="header" class="parralax">
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
         </div><!-- END header -->
+
+    <?php endif; ?>
+
+
 
 

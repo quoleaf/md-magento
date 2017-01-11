@@ -1,38 +1,4 @@
-<!-- append section to header fo category  -->
-<script>
-jQuery(function($){
-var header_banner = $('.header-banner').html();    
-$("#header").append(header_banner);
-$('.header-banner').remove();
-$("#header").addClass("forCategory")
-$("#topNavi").removeClass("blueVer")
-$("#topNavi").addClass("whiteVer")
-})
-</script>
-
-<div id="MainCatPageWrapper" class="header-banner">
-    <div class="section">
-        <div class="inner">
-            <div class="overlay">
-                <div class="text fadeInUp animated">
-                    <p class="title">
-                        <span><?php echo $this->__('Fast-Acting') ?></span> 
-                        <?php echo $this->__('Real Results.') ?>
-                    </p>
-                </div>
-                <!-- <a href="#" class="shopNow pinkSolidBtn">
-                    <?php //echo $this->__('SHOP NOW') ?>
-                </a> -->
-
-                <a href="#" class="watchNow pinkHollowBtn" data-lity>
-                    <?php echo $this->__('WATCH VIDEO') ?>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="categories">
+        <div id="categories">
             <ul class="clearfix">
                 <li>
                     <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>hair">

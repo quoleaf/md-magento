@@ -24,7 +24,7 @@
             </div>
             <div id="topNavi" class="blueVer">
 
-                <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
+                <a href="<?php echo Mage::getBaseUrl(); ?>" class="logo">MD</a>
                 <a href="#" class="search"><img src="<?php echo $this->getSkinUrl('images/search-new.png') ?>"><?php echo $this->__('Search Products') ?></a>
                 <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
                 <!-- Custom Currency -->
@@ -122,7 +122,7 @@
             </div>
 
             <div id="mobileMenu">
-                <a href="<?php echo Mage::getUrl('home'); ?>" class="logo">MD</a>
+                <a href="<?php echo Mage::getBaseUrl(); ?>" class="logo">MD</a>
                 <a href="#" class="menuBtn"><span></span><span></span><span></span></a>
             </div>
             

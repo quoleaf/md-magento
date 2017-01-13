@@ -233,7 +233,7 @@ a {
 
 	span.home_sub {
 	    color: #5b5b5b;
-	    font-size: 35px;
+	    font-size: 40px;
 	    width: 100%;
 	    float: left;
 	    font-style: normal;
@@ -252,6 +252,7 @@ a {
 			font-size: 60px;
 			font-style: italic;
 			padding-left: 15px;
+			font-weight: 600;
 
 			@media only screen and (max-width : 767px) {
 				font-size: 45px;

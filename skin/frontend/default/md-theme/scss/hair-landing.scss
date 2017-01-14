@@ -1845,6 +1845,12 @@ body.hairlossVer-one {
                                 }
                             }
                         }
+
+                        @media only screen and (max-width :470px) {
+                            .inner {
+                                background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 0;
+                            }
+                        }
                     }
                 }
             }
@@ -3590,6 +3596,12 @@ body.hairlossVer-two {
                                     text-transform: uppercase;
                                     margin-top: 5px;
                                 }
+                            }
+                        }
+
+                        @media only screen and (max-width :470px) {
+                            .inner {
+                                background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 0;
                             }
                         }
                     }
@@ -5384,6 +5396,13 @@ body.hairkitoffer {
                                     text-transform: uppercase;
                                     margin-top: 5px;
                                 }
+                            }
+                        }
+
+
+                        @media only screen and (max-width :470px) {
+                            .inner {
+                                background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 0;
                             }
                         }
                     }

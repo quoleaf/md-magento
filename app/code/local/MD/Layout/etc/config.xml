@@ -29,7 +29,7 @@
                 <mdhairlossveronelandingpage module="page" translate="label">
                     <label>MD Hairloss Version One Landing Page</label>
                     <template>page/md-hairloss-version-one-landingpage.phtml</template>
-                    <layout_handle>landingpage</layout_handle>
+                    <layout_handle>mdhairlossveronelandingpage</layout_handle>
                 </mdhairlossveronelandingpage> 
             </layouts>
         </page>
@@ -38,7 +38,7 @@
                 <mdhairlossvertwolandingpage module="page" translate="label">
                     <label>MD Hairloss Version Two Landing Page</label>
                     <template>page/md-hairloss-version-two-landingpage.phtml</template>
-                    <layout_handle>landingpage</layout_handle>
+                    <layout_handle>mdhairlossvertwolandingpage</layout_handle>
                 </mdhairlossvertwolandingpage> 
             </layouts>
         </page>
@@ -47,7 +47,7 @@
                 <mdhairkitofferlandingpage module="page" translate="label">
                     <label>MD Hair Kit Offer Landing Page</label>
                     <template>page/md-hair-kit-offer-landingpage.phtml</template>
-                    <layout_handle>landingpage</layout_handle>
+                    <layout_handle>mdhairkitofferlandingpage</layout_handle>
                 </mdhairkitofferlandingpage> 
             </layouts>
         </page>

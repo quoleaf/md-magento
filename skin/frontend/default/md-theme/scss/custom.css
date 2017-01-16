@@ -6394,7 +6394,7 @@ body.catalog-product-view #product .tabs .tabInfo {
     font-size: 14px;
     font-weight: 600;
     margin: 0 0 10px 0;
-    color: #333333; }
+    color: #333333 !important; }
   body.catalog-product-view #product .tabs .tabInfo .prod-content {
     font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
     font-size: 14px; }

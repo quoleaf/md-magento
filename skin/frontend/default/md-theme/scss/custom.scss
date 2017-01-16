@@ -1,3 +1,4 @@
+
 @font-face {
 	font-family:'HelveticaLTStd-Light';
 	src: url('../fonts/HelveticaLTStd-Light_gdi.eot');
@@ -57,6 +58,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 @font-face {
 	font-family: 'Bodoni';
@@ -8092,7 +8094,7 @@ body {
           font-size: 14px;
           font-weight: 600;
           margin: 0 0 10px 0;
-          color: #333333;
+          color: #333333 !important;
         }
 
         .prod-content {

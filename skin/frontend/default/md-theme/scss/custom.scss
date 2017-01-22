@@ -10530,6 +10530,14 @@ body {
     }
   }
   &.opc-index-index .opc-wrapper-opc {
+  	a.forgotpass {
+	    width: 100%;
+	    float: left;
+	    text-align: center;
+	    color: #1183ce;
+	    padding-top: 5px;
+	}
+
     #GrandDetails {
       table {
         display: none;

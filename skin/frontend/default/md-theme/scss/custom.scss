@@ -1,4 +1,3 @@
-
 @font-face {
 	font-family:'HelveticaLTStd-Light';
 	src: url('../fonts/HelveticaLTStd-Light_gdi.eot');
@@ -10577,3 +10576,10 @@ body.catalogsearch-result-index {
 /* Pat */
 
 body.opc-index-index .hide{visibility:hidden;height:0;opacity:0;margin:0;padding:0;display:block;}
+
+/* jim */
+.opc-shipping-title{
+	width: 80%;
+    display: inline-block;
+    margin-bottom: 15px;
+}

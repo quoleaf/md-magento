@@ -57,10 +57,13 @@
 <?php else:?>
 <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
-        <?php echo $this->escapeHtml($this->getTotal()->getTitle()) ?>
+        <span class="opc-shipping-title"><?php echo $this->escapeHtml($this->getTotal()->getTitle()) ?></span>
+        
     </td>
     <td style="<?php echo $this->getStyle() ?>" class="a-right">
+
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
     </td>
 </tr>
+    </br>
 <?php endif;?>

@@ -53,6 +53,15 @@
         </page>
     </global>
     <frontend>
+        <routers>
+            <customer>
+             <args>
+                <modules>
+                 <MD_Layout before="Mage_Customer">MD_Layout</MD_Layout>
+                </modules>
+             </args>
+            </customer>
+       </routers>
         <layout>
             <updates>
                 <MD_Theme>

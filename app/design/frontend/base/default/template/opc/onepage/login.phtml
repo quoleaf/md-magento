@@ -72,7 +72,7 @@
             <button type="submit" title="<?php echo $this->__('Login') ?>" name="send" id="send2">
                 <a><?php echo $this->__('Continue') ?></a>
             </button>
-            <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="forgotpass"><?php echo $this->__('Forgot your password?') ?></a>
+            <a href="#" id="OPC-ForgotPassword" class="forgotpass"><?php echo $this->__('Forgot your password?') ?></a>
 
             <?php if ($isContextCheckout): ?>
                 <input name="context" type="hidden" value="checkout"/>
@@ -123,5 +123,15 @@ if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email a
 if (jQuery('.opc-index-index #login_email[style="display: none;"]').length){
     jQuery('.opc-index-index #registration_password').show();           
 }
+});
+
+jQuery(document).on('click', '.opc-index-index #OPC-ForgotPassword', function(){
+var url = '<?php echo Mage::getBaseUrl();?>customer/account/forgotpasswordpost';
+var form_key = '<?php echo Mage::getSingleton('core/session')->getFormKey()?>';
+var email =  jQuery('.opc-index-index #login-form input[name="login[username]"]').val();
+jQuery.post(url,{'email': email,});
+jQuery('.opc-index-index .col-main').before('<ul class="messages"><li class="success-msg"><ul><li><span>If there is an account associated with '+email+' you will receive an email with a link to reset your password.</span></li></ul></li></ul>');
+window.setTimeout(function(){
+window.location.href = "<?php echo Mage::getBaseUrl();?>onepage/";}, 20000);
 });
 </script>

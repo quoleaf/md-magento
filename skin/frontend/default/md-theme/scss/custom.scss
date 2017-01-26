@@ -7607,7 +7607,9 @@ body.stickyNavi #topNavi {
 
 .MDCurrencyWrapper {
 	float: right;
-	position: relative;
+    top: 40px ;
+    right: 20px;
+    position: relative;
 
 	.AUD::before {
 		content: url('../images/currency/au-flag.png');
@@ -7637,7 +7639,7 @@ body.stickyNavi #topNavi {
 	  	display:list-item;
 	  	color: #1183ce;
 	    z-index: 100;
-	    width: 260px;
+	    width: 300px;
 
 	    li {
 	    	width: 50%;
@@ -7663,6 +7665,15 @@ body.stickyNavi #topNavi {
 				cursor: pointer;
 				z-index:100;
 	 	 	}
+
+	 	 	&.language {
+			    width: 100%!important;
+			    float: left;
+			    text-align: center;
+			    padding: 10px 0 5px 0;
+			    color: #454545;
+			}
+
 
 		  	a {
 		  	 	display: block;

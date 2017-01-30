@@ -1,0 +1,1878 @@
+@font-face {
+    font-family:'HelveticaLTStd-Light';
+    src: url('../fonts/HelveticaLTStd-Light_gdi.eot');
+    src: url('../fonts/HelveticaLTStd-Light_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaLTStd-Light_gdi.woff') format('woff'),
+        url('../fonts/HelveticaLTStd-Light_gdi.ttf') format('truetype'),
+        url('../fonts/HelveticaLTStd-Light_gdi.otf') format('opentype'),
+        url('../fonts/HelveticaLTStd-Light_gdi.svg#HelveticaLTStd-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family:'HelveticaLTStd-Light';
+    src: url('../fonts/HelveticaLTStd-Bold_gdi.eot');
+    src: url('../fonts/HelveticaLTStd-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaLTStd-Bold_gdi.woff') format('woff'),
+        url('../fonts/HelveticaLTStd-Bold_gdi.ttf') format('truetype'),
+        url('../fonts/HelveticaLTStd-Bold_gdi.otf') format('opentype'),
+        url('../fonts/HelveticaLTStd-Bold_gdi.svg#HelveticaLTStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica_gdi.eot');
+    src: url('../fonts/Helvetica_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica_gdi.woff') format('woff'),
+        url('../fonts/Helvetica_gdi.ttf') format('truetype'),
+        url('../fonts/Helvetica_gdi.otf') format('opentype'),
+        url('../fonts/Helvetica_gdi.svg#Helvetica-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica-Bold_gdi.eot');
+    src: url('../fonts/Helvetica-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica-Bold_gdi.woff') format('woff'),
+        url('../fonts/Helvetica-Bold_gdi.ttf') format('truetype'),
+        url('../fonts/Helvetica-Bold_gdi.otf') format('opentype'),
+        url('../fonts/Helvetica-Bold_gdi.svg#Helvetica-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-Normal';
+    src: url('../fonts/Helvetica-Normal_gdi.eot');
+    src: url('../fonts/Helvetica-Normal_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica-Normal_gdi.woff') format('woff'),
+        url('../fonts/Helvetica-Normal_gdi.ttf') format('truetype'),
+        url('../fonts/Helvetica-Normal_gdi.otf') format('opentype'),
+        url('../fonts/Helvetica-Normal_gdi.svg#Helvetica-Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('../fonts/BodoniXT_gdi.eot');
+    src: url('../fonts/BodoniXT_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BodoniXT_gdi.woff') format('woff'),
+        url('../fonts/BodoniXT_gdi.ttf') format('truetype'),
+        url('../fonts/BodoniXT_gdi.otf') format('opentype'),
+        url('../fonts/BodoniXT_gdi.svg#BodoniXT-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('../fonts/BodoniMT-Italic_gdi.eot');
+    src: url('../fonts/BodoniMT-Italic_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BodoniMT-Italic_gdi.woff') format('woff'),
+        url('../fonts/BodoniMT-Italic_gdi.ttf') format('truetype'),
+        url('../fonts/BodoniMT-Italic_gdi.otf') format('opentype'),
+        url('../fonts/BodoniMT-Italic_gdi.svg#BodoniMT-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('../fonts/BodoniMT-BoldItalic_gdi.eot');
+    src: url('../fonts/BodoniMT-BoldItalic_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BodoniMT-BoldItalic_gdi.woff') format('woff'),
+        url('../fonts/BodoniMT-BoldItalic_gdi.ttf') format('truetype'),
+        url('../fonts/BodoniMT-BoldItalic_gdi.otf') format('opentype'),
+        url('../fonts/BodoniMT-BoldItalic_gdi.svg#BodoniMT-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bodoni-Book';
+    src: url('../fonts/BodoniSvtyTwoITCTTBook_gdi.eot');
+    src: url('../fonts/BodoniSvtyTwoITCTTBook_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BodoniSvtyTwoITCTTBook_gdi.woff') format('woff'),
+        url('../fonts/BodoniSvtyTwoITCTTBook_gdi.ttf') format('truetype'),
+        url('../fonts/BodoniSvtyTwoITCTTBook_gdi.otf') format('opentype'),
+        url('../fonts/BodoniSvtyTwoITCTTBook_gdi.svg#BodoniSvtyTwoITCTTBook-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'HelveticaNeueLTStd-Md';
+    src: url('../fonts/HelveticaNeueLTStd-Md_gdi.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Md_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Md_gdi.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Md_gdi.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Md_gdi.otf') format('opentype'),
+        url('../fonts/HelveticaNeueLTStd-Md_gdi.svg#HelveticaNeueLTStd-Md') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Th';
+    src: url('../fonts/HelveticaNeueLTStd-Th_gdi.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Th_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Th_gdi.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Th_gdi.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Th_gdi.otf') format('opentype'),
+        url('../fonts/HelveticaNeueLTStd-Th_gdi.svg#HelveticaNeueLTStd-Th') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    src: url('../fonts/HelveticaNeueLTStd-Roman_gdi.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Roman_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Roman_gdi.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Roman_gdi.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Roman_gdi.otf') format('opentype'),
+        url('../fonts/HelveticaNeueLTStd-Roman_gdi.svg#HelveticaNeueLTStd-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers-Bold';
+    src: url('../fonts/Univers Bold.eot');
+    src: url('../fonts/Univers Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Univers Bold.woff') format('woff'),
+        url('../fonts/Univers Bold.ttf') format('truetype'),
+        url('../fonts/Univers Bold.otf') format('opentype'),
+        url('../fonts/Univers Bold.svg#Univers-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html { box-sizing: border-box;} 
+*, *:before, *:after { box-sizing: inherit; vertical-align:top;}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    margin:0;
+    height: auto;
+    min-height: 100vh;
+    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+}
+
+
+/* Custom Container */
+
+.custom-container {
+    width: 1220px;
+    margin: 0 auto;
+
+    @media only screen and (max-width : 1370px) {
+        width: 1120px;
+    }
+
+    @media only screen and (max-width : 1270px) {
+        width: 1020px;
+    }
+
+    @media only screen and (max-width : 1170px) {
+        width: 970px;
+    }
+
+    @media only screen and (max-width : 1100px) {
+        width: 100%;
+        padding: 0 50px 0 50px;
+    }
+
+    @media only screen and (max-width : 470px) {
+        padding: 0 15px 0 15px;
+    }
+}
+
+/* End of Custom Container */
+
+
+/* Vid */
+
+
+/* End of Vid */
+
+.vid {
+    background: rgba(106,106,106,0.2);
+    width: 100%;
+    float: left;
+    height: 280px;
+    margin: 0;
+    padding: 0;
+
+    .inner {
+        background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') center;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+
+        a {
+            width: 100%;
+            text-align: center;
+            display: block!important;
+            text-decoration: none;
+
+            span {
+                width: 100%;
+                float: left;
+                color: #566167;
+                text-transform: uppercase;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @media only screen and (max-width :470px) {
+        .inner {
+            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 0;
+        }
+    }
+}
+
+/* Top */
+
+.TopWrapper {
+    background: #d72f7a;
+    width: 100%;
+    float: left;
+    color: #fff;
+    display: inline-block;
+
+    @media screen and (max-width: 700px) {
+        padding: 10px 0 10px 0;
+    }
+
+    .custom-container {
+        p {
+            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+            float: left;
+            font-size: 17px;
+            padding: 7px 0 7px 0;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            @media screen and (max-width: 870px) {
+                font-size: 12px;
+            }
+
+            @media screen and (max-width: 700px) {
+                font-size: 8px;
+            }
+
+            @media screen and (max-width: 570px) { 
+                text-align: center;
+                width: 100%;
+            }
+
+            &:last-child {
+                float: right;
+            } 
+
+            i {
+                letter-spacing: 0;
+                position: relative;
+                top: 3px;
+
+                @media screen and (max-width: 870px) {
+                    top: 2px;
+                }
+
+                @media screen and (max-width: 700px) {
+                    top: 1px;
+                }
+            }
+        }
+    }
+}
+
+/* End of Top */
+
+/* Navigation */
+
+nav {
+    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+    width: 100%;
+    text-align: center;
+    height: 145px;
+    transition: all 0.4s ease;
+
+    @media screen and (max-width: 870px) {
+        height: auto;
+        border-bottom: 0;
+    }
+
+    .custom-container {
+        display: inline-block;
+
+        @media screen and (max-width: 870px) {
+            padding: 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            float: left;
+
+            @media screen and (max-width: 870px) {
+                display: none;
+                height: auto;
+                float: none;
+            }
+
+            li {
+                display: flex;
+                float: left;
+                height: 110px;
+                align-items: center;
+                padding: 0 30px 0 0;
+
+                @media screen and (max-width: 1070px) {
+                    padding: 0 15px 0 0;
+                }
+
+                @media screen and (max-width: 870px) {
+                    height: auto;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    padding: 0 0 0 0;
+                }
+
+                &:nth-child(1) {
+                    padding: 0;
+
+                    a {
+                        img {
+                            margin: 0 50px 0 0;
+
+                            @media screen and (max-width: 1070px) {
+                                margin: 0 15px 0 0;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-width: 870px) {
+                        display: none;
+                    }
+                }
+
+                &:nth-child(5) {
+                    a {
+                        padding: 7px 30px 7px 30px;
+                        border: 2px solid #d72f7a;
+                        color: #d72f7a;
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                            background: #d72f7a;
+                            color: #fff;
+                        }
+
+                        @media screen and (max-width: 870px) {
+                            border: none;
+                            color: #fff;
+
+                            &:hover {
+                                background: #363636;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    display: inline-block;
+                    width: auto;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 10px 0;
+                    color: #556067;
+
+                    &:hover {
+                        color: #d72f7a;
+                    }
+
+                    @media screen and (max-width: 1070px) {
+                        font-size: 13px;
+                    }
+
+                    @media screen and (max-width: 870px) {
+                        text-align: left;
+                        width: 100%;
+                        text-indent: 0px;
+                        border-bottom: 1px solid #555!important;
+                        padding: 20px 50px 20px 50px!important;
+                        color: #fff;
+                        font-size: 15px;
+                        transition: all 0.5s ease;
+                        background: #363636;
+
+                        &:hover {
+                            color: #d72f7a!important;
+                        }
+
+                        &.share {
+                            display: block!important;
+                        }
+                    }
+
+                    @media screen and (max-width: 470px) {
+                        padding: 20px 15px 20px 15px!important;
+                    }
+                }
+
+                @media screen and (max-width: 870px) {
+                    width: 100%;
+                    float: left;
+                    position: relative;
+                }
+            }
+        }
+
+        #openup {
+            display: none;
+
+            @media screen and (max-width: 870px) {
+                display: block;
+                width: 100%;
+                float: left;
+                height: 85px;
+                line-height: 85px;
+                position: relative;
+                background: #f1f1f0;
+                text-align: left;
+                padding: 0 50px 0 50px;
+
+                &:after {
+                    content: "\f0c9";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 39px;
+                    color: #555555;
+                    float: right;
+                }
+
+                img {
+                    position: relative;
+                    top: 13px;
+                    width: 125px;
+                }
+            }
+
+            @media only screen and (max-width : 470px) {
+                padding: 0 15px 0 15px;
+            }
+        }
+
+        span {
+            display: flex;
+            float: right;
+            height: 110px;
+            align-items: center;
+
+            @media screen and (max-width: 870px) {
+                display: none;
+            }
+
+            a.share {
+                background: #383838;
+                padding: 6px 15px 6px 15px;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: 5px;
+                font-size: 15px;
+
+                i {
+                    -webkit-transform: rotateY(180deg);
+                    -moz-transform: rotateY(180deg);
+                    -o-transform: rotateY(180deg);
+                    -ms-transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+
+    &.fixed-nav{
+        width: 100%;
+        position: fixed;
+        top: -10px;
+        left: 0;
+        text-align: center;
+        height: 100px;
+        transition: all 0.4s ease;
+        box-shadow: 0px 1.5px 0px 0px rgba(13, 107, 169, 0.74);
+        background: #0d6ba9;
+        z-index: 9;
+
+        @media screen and (max-width: 870px) {
+            height: auto;
+        }
+
+        .custom-container {
+            ul {
+                li {
+                    &:nth-child(1) {
+                        a {
+                            margin: 0 50px 0 0;
+
+                            @media screen and (max-width: 1070px) {
+                                margin: 0 15px 0 0;
+                            }
+
+                            &:before {
+                                content: url('../images/intimate-restore/logo-white.png');
+                                visibility: visible;
+                            }
+
+                            img {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 870px) {
+                #openup {
+                    background: transparent;
+
+                    &:before {
+                        content: url('../images/intimate-restore/logo-white.png');
+                        visibility: visible;
+                        position:relative;
+                        top: 8px;
+                    }
+
+                    &:after {
+                        color: #fff;
+                    }
+
+                    img {
+                        display: none;                    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#main-navWrapper {
+    .sticky {
+        font-size: 24px;
+        line-height: 48px;
+        height: 48px;
+        background: #efc47D;
+        text-align: left;
+        padding-left: 20px;
+        transition: all 0.4s ease;
+    }
+}
+
+/* End of Navigation */
+
+
+/* Header */
+
+#headerWrapper {
+    width: 100%;
+    float: left;
+    padding: 0 0 65px 0;
+
+    @media screen and (max-width: 986px) {
+       display: flex;
+       align-items: center;
+       min-height: 35em;
+       height: auto;
+       padding: 0;
+
+        &:after {
+            content: '';
+            background: url('../images/intimate-restore/cat-gif-bling.gif') no-repeat center center;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            width:100%;
+            height:100%;
+            z-index:-1;
+            opacity: 0.1; 
+        }
+    }
+
+    @media screen and (max-width: 470px) {
+        &:after {
+            background-size: 100%;
+        }
+    }
+
+    .custom-container {
+        padding: 35px 0 0 0;
+
+        @media screen and (max-width: 986px) {
+            padding: 0 50px 0 50px;
+        }
+
+        .MainCat {
+            width: 385px;
+            float: left;
+            position: relative;
+            right: 30px;
+            top: 7px;
+            z-index: 1;
+
+            @media only screen and (max-width : 1370px) {
+                width: 367px;
+            }
+
+            @media only screen and (max-width : 1170px) {
+                width: 348px;
+            }
+
+            @media only screen and (max-width : 1100px) {
+                right: -25px;
+            }
+
+            @media screen and (max-width: 986px) {
+                display: none;
+            }
+        }
+
+        .intimate {
+            position: relative;
+            right: 19px;
+
+            @media only screen and (max-width : 1270px) {
+                right: 0;
+            }
+
+            @media screen and (max-width: 986px) {
+                display: none;
+            }
+        }
+
+        .inner {
+            text-align: center;
+            width: 55%;
+            float: left;
+            padding: 113px 0 0 0;
+            position: relative;
+            right: 105px;
+
+            @media only screen and (max-width : 1270px) {
+                width: 50%;
+                right: 50px;
+            }
+
+            @media screen and (max-width: 986px) {
+                width: 100%;
+                right:0;
+                padding: 0;
+            }
+
+            strong {
+                font-family: 'Univers-Bold', Arial, sans-serif;
+                font-size: 50px;
+                color: #556067;
+                -webkit-text-stroke: 1px;
+
+                @media only screen and (max-width : 1270px) {
+                    font-size: 40px;
+                    -webkit-text-stroke: 0px;
+                }
+
+                @media screen and (max-width: 470px) {
+                    font-size: 27px;
+                }
+            }
+
+            p {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                font-size: 43px;
+                color: #e8408b;
+                margin: 0;
+                padding: 0 0 45px 0;
+
+                @media only screen and (max-width : 1270px) {
+                    font-size: 35px;
+                }
+
+                @media screen and (max-width: 470px) {
+                    font-size: 26px;
+                }
+
+                img {
+                    display: inline-block;
+                    position: relative;
+                    top: 5px;
+                }
+            }
+
+            span {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                font-style: italic;
+                color: #7d7d7d;
+                font-size: 35px;
+                position: relative;
+                right: 0;
+                width: 100%;
+                float: left;
+                padding: 0 0 55px 0;
+
+                @media only screen and (max-width : 1270px) {
+                    font-size: 27px;
+                    padding: 0 0 35px 0;
+                }
+
+                @media screen and (max-width: 470px) {
+                    font-size: 19px;
+                }
+            }
+
+            a { 
+                text-transform: uppercase;
+                text-decoration: none;
+                background: #e8408b;
+                transition: all 0.5s ease;
+                padding: 15px 35px 15px 35px;
+                font-size: 17px;
+                color: #fff;
+
+                &:hover {
+                    background: #da0061;
+                }
+
+                @media screen and (max-width: 370px) {
+                    font-size: 14px;
+                    padding: 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* End of Header */
+
+
+/* As Seen In */
+
+#AsSeenIn {
+    background: url('../images/intimate-restore/as-seen-in-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    float: left;
+    padding: 55px 0 60px 0;
+
+    .custom-container {
+        h2 {
+            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            color: #525252;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 0 30px 0;
+        }
+
+        #AsSeenInSlider {
+            .owl-wrapper-outer {
+                .owl-wrapper {
+                    .owl-item {
+                        @media only screen and (max-width :1216px) {
+                            text-align: center;
+                        }
+
+                        &:nth-child(2) {
+                            position: relative;
+                            right: 15px;
+
+                            @media only screen and (max-width :1216px) {
+                                right: 0;
+                            }
+                        }
+
+                        &:nth-child(4), &:nth-child(5) {
+                            text-align: right;
+
+                            @media only screen and (max-width :1216px) {
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End As Seen In */
+
+
+/* Description */
+
+#description {
+    background: url('../images/intimate-restore/description.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    float: left;
+    padding: 160px 0 140px 0;
+
+    @media only screen and (max-width : 1445px) {
+        background-position: -120px 0;
+    }
+
+    @media only screen and (max-width : 1270px) {
+        background-position: -455px 0;
+    }
+
+    @media only screen and (max-width : 1170px) {
+        background: url('../images/intimate-restore/description-tablet.jpg');
+        background-position: -455px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media only screen and (max-width : 1100px) {
+        background-position: -420px 0;
+    }
+
+    @media only screen and (max-width : 1055px) {
+        background-position: -565px 0;
+    }
+
+    @media only screen and (max-width : 945px) {
+        background: url('../images/intimate-restore/description-mobile.jpg');
+        background-position: -630px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media only screen and (max-width : 870px) {
+        background: url('../images/intimate-restore/description-mobileV2.jpg');
+        background-position: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 100px 0 100px 0;
+    }
+    
+    @media only screen and (max-width : 620px) {
+        background-position: -150px 0;
+    }
+
+    @media only screen and (max-width : 535px) {
+        background-position: -279px 0;
+    }
+
+    .left {
+        width: 55%;
+        text-align: center;
+
+        @media only screen and (max-width : 945px) {
+            width: 65%;
+        }
+
+        @media only screen and (max-width : 870px) {
+            width: 100%;
+        }
+
+        .inner {
+            padding: 0 0 100px 0;
+            position: relative;
+            right: 15px;
+
+            &:nth-child(2) {
+                padding: 0 0 45px 0;
+            }
+
+            @media only screen and (max-width : 870px) {
+                right: 0;
+            }
+
+            h2 {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                text-align: center;
+                text-transform: uppercase;
+                color: #525252;
+                font-weight:normal;
+                font-size: 29px;
+                margin:0;
+                padding:0 0 20px 0;
+
+                @media only screen and (max-width : 1100px) {
+                    font-size: 26px;
+                }
+            }
+
+            p {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                text-align: center;
+                color: #686666;
+                font-size: 16.5px;
+                margin:0;
+                padding:0;
+
+                @media only screen and (max-width : 1100px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        a { 
+            text-transform: uppercase;
+            text-decoration: none;
+            background: #e8408b;
+            transition: all 0.5s ease;
+            padding: 15px 40px 15px 40px;
+            font-size: 17px;
+            color: #fff;
+            position: relative;
+            right: 18px;
+
+            &:hover {
+                background: #da0061;
+            }
+
+            @media only screen and (max-width : 870px) {
+                right: 0;
+            }
+        }
+    }
+}
+
+/* End of Description */
+
+
+/* Amazon Review */
+
+#AmazonReview {
+    width: 100%;
+    float: left;
+    padding: 100px 0 100px 0;
+
+    .custom-container {
+        text-align: center;
+
+        h1, p, span {
+            width: 100%;
+            float: left;
+        }
+
+        h1 {
+            font-family: 'Bodoni', Arial, sans-serif;
+            font-style: italic;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #4e4e4e;
+            margin:0;
+            padding:0;
+
+            @media only screen and (max-width : 488px) {
+                font-size: 26px;
+            }
+        }
+
+        p {
+            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+            font-size: 23px;
+            color: #5e5a5a;
+            text-transform: uppercase;
+            margin:0;
+            padding:0 0 10px 0;
+
+            @media only screen and (max-width : 488px) {
+                font-size: 21px;
+            }
+        }
+
+        .testi {
+            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #2141cb;
+            -webkit-text-stroke: 0.5px;
+            padding: 15px 0 15px 0;
+            width: 100%;
+            float: left;
+
+            @media only screen and (max-width : 488px) {
+                font-size: 12px;
+            }
+        }
+
+        .amazon {
+            padding: 0 0 55px 0;
+        }
+
+        .button {
+            text-transform: uppercase;
+            text-decoration: none;
+            background: #e8408b;
+            transition: all 0.5s ease;
+            padding: 15px 40px 15px 40px;
+            font-size: 17px;
+            color: #fff;
+
+            &:hover {
+                background: #da0061;
+            }
+        }
+    }
+}
+
+/* End of Amazon Review */
+
+ 
+/* Testimonial */
+
+#testimonial {
+    width: 100%;
+    float: left;
+    padding: 0 0 135px 0;
+
+    .custom-container {
+        display: flex;
+
+        @media only screen and (max-width : 830px) {
+            display: block;
+        }
+
+        .left {
+            width: 53%;
+            padding: 0 4% 0 0;
+
+            @media only screen and (max-width : 830px) {
+                width: 100%;
+                float: left;
+                padding: 0 0 50px 0;
+                text-align: center;
+            }
+
+            p {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                font-size: 17.4px;
+                color: #5e5e5e;
+                width: 90%;
+                float: left;
+                margin: 0;
+                padding: 10px 0 55px 0;      
+
+                @media only screen and (max-width : 830px) {
+                    padding: 0 0 20px 0;
+                    width: 100%;
+                }      
+            }
+
+            span {
+                width: 100%;
+                float: left;
+                display: flex;
+                align-items: center;
+
+                @media only screen and (max-width : 830px) {
+                    width: 100%;    
+                    float: none;
+                    display: block;
+                }
+
+                img {
+                    border-radius: 100%;
+                }
+
+                p {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    font-style: italic;
+                    font-size: 20px;
+                    width: auto;
+                    padding: 0 0 0 30px;
+
+                    @media only screen and (max-width : 830px) {
+                        width: 100%;
+                        float: left;
+                        padding:0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 43%;
+
+            @media only screen and (max-width : 830px) {
+                width: 65%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/* End of Testimonial */
+
+
+/* Ingredients */
+
+#ingredients {
+    background: #e8408b;
+    color: #fff;
+    width: 100%;
+    float: left;
+
+    .custom-container {
+        display: flex;
+        align-items: center;
+        height: auto;
+        min-height: 25em;
+
+        @media only screen and (max-width : 1050px) { 
+            display: block;
+            min-height: auto;
+            padding: 25px 0 35px 0
+        }
+
+        .left {
+            width: 40%;
+
+            @media only screen and (max-width : 1050px) { 
+                width: 100%;
+                float: left;
+                text-align: center;
+                padding: 30px 0 40px 0;
+            }
+
+            p {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                font-size: 30px;
+                text-transform: uppercase;
+                -webkit-text-stroke: 0.4px;
+                padding: 0;
+                margin: 0;
+
+                @media only screen and (max-width : 1270px) {
+                    font-size: 24px;
+                    -webkit-text-stroke: 0px;
+                }
+
+                @media only screen and (max-width : 360px) {
+                    font-size: 20px;
+                }
+
+                 span {
+                    font-family: 'Bodoni', Arial, sans-serif;
+                    font-style: italic;
+                    font-weight: normal;
+                    font-size: 60px;
+                    position: relative;
+                    top: 5px;
+                    text-transform: lowercase;
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 50px;
+                    }
+
+                    @media only screen and (max-width : 425px) {
+                        font-size: 35px;
+                    }
+
+                    @media only screen and (max-width : 360px) {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 60%;
+            display: flex;
+            color: #fff;
+            margin-top: 60px;
+
+            @media only screen and (max-width : 1050px) { 
+                width: 100%;
+                justify-content: center;
+                position: relative;
+                right: 20px;
+            }
+
+            .inner {
+                display: block;
+                text-align: center;
+
+                &:nth-child(1) {
+                    margin-right: 10px;
+
+                    @media only screen and (max-width : 1370px) {
+                        margin-right: -10px;
+                    }
+
+                    @media only screen and (max-width : 690px) {
+                        margin-right: -20px;
+                    }
+
+                    @media only screen and (max-width : 640px) {
+                        margin-right: -30px;
+                    }
+
+                    @media only screen and (max-width : 555px) {
+                        margin-right: -45px;
+                    }
+
+                    div {
+                        background: url('../images/intimate-restore/tetrapeptides.jpg');
+                        background-position: -40px 0;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        @media only screen and (max-width : 425px) {
+                            background-position: -20px 0;
+                        }
+                    }
+
+                    p {
+                        @media only screen and (max-width : 1050px) { 
+                            width: 90%;
+                            white-space: normal;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    position: relative;
+                    bottom: 55px;
+                    margin-right: 50px;
+
+                    @media only screen and (max-width : 1370px) { 
+                        margin-right: 40px;
+                    }
+
+                    @media only screen and (max-width : 1050px) { 
+                        bottom: 0;
+                        margin-right: 30px;
+                    }
+
+                    @media only screen and (max-width : 690px) {
+                        margin-right: 20px;
+                    }
+            
+                    @media only screen and (max-width : 425px) {
+                        margin-right: 10px;
+                    }
+
+                    @media only screen and (max-width : 360px) {
+                        margin-right: 6px;
+                    }
+
+                    div {
+                        background: url('../images/intimate-restore/greentea.jpg');
+                        background-position: -140px 0;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        @media only screen and (max-width : 1370px) { 
+                            background-position: -100px 0;
+                        }
+
+                        @media only screen and (max-width : 1100px) {
+                            background-position: -90px 0;
+                        }
+
+                        @media only screen and (max-width : 1050px) { 
+                            background-position: -100px 0;
+                        }
+
+                        @media only screen and (max-width : 555px) { 
+                            background-position: -60px 0;
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    position: relative;
+                    bottom: 145px;
+
+                    @media only screen and (max-width : 1050px) { 
+                        bottom: 0;
+                    }
+                    
+                    div {
+                        background: url('../images/intimate-restore/panthenol.jpg');
+                        background-position: -3px -31px;
+                        background-repeat: no-repeat;
+                        background-size: 109%;
+
+                        @media only screen and (max-width : 1370px) { 
+                            background-size: 115%;
+                        }
+
+                        @media only screen and (max-width : 1100px) {
+                            background-size: 117%;
+                        }
+
+                        @media only screen and (max-width : 1050px) { 
+                            background-size: 115%;
+                        }
+
+                        @media only screen and (max-width : 640px) {
+                            background-size: 121%;
+                        }
+
+                        @media only screen and (max-width : 555px) {
+                            background-size: 126%;
+                        }
+
+                        @media only screen and (max-width : 425px) {
+                            background-size: 133%;
+                        }
+                    }
+                }   
+
+                div {
+                    border-radius: 100%;
+                    border: 5px solid #fff;
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 auto;
+
+                    @media only screen and (max-width : 1370px) {
+                        width: 150px;
+                        height: 150px;
+                    }
+
+                    @media only screen and (max-width : 1100px) {
+                        width: 135px;
+                        height: 135px;
+                    }
+
+                    @media only screen and (max-width : 1050px) {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    @media only screen and (max-width : 830px) {
+                        width: 175px;
+                        height: 175px;
+                    }
+
+                    @media only screen and (max-width : 690px) {
+                        width: 150px;
+                        height: 150px;
+                    }
+
+                    @media only screen and (max-width : 640px) {
+                        width: 125px;
+                        height: 125px;
+                    }
+
+                    @media only screen and (max-width : 555px) {
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    @media only screen and (max-width : 425px) {
+                        width: 85px;
+                        height: 85px;
+                    }
+
+                    @media only screen and (max-width : 425px) {
+                        width: 75px;
+                        height: 75px;
+                        border: 1px solid #fff;
+                    }
+                }
+
+                p {
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                    font-size: 18px;
+                    letter-spacing: 3px;
+                    padding: 25px 0 0 0;
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 16px;
+                    }
+
+                    @media only screen and (max-width : 830px) {
+                        font-size: 12px;
+                    }
+
+                    @media only screen and (max-width : 425px) {
+                        font-size: 9px;
+                    }
+
+                    @media only screen and (max-width : 360px) {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Ingredients */
+
+
+/* Promo */
+
+#promo {
+    background: url('../images/intimate-restore/promo.jpg');
+    background-size: cover;
+    width: 100%;
+    float: left;
+
+    .custom-container {
+        display: flex;
+        align-items: center;
+        min-height: 33em;
+        height: auto;
+        position: relative;
+        bottom: 25px;
+
+        @media only screen and (max-width : 855px) {
+            min-height: auto;
+            padding: 60px 15px 60px 15px;
+        }
+
+        .left {
+            width: 17%;
+            float: left;
+            text-align: center;
+            position: relative;
+            top: 35px;
+
+            @media only screen and (max-width : 855px) {
+                display: none;
+            }
+        }
+
+        .middle {
+            width: 66%;
+            float: left;
+            text-align: center;
+
+            @media only screen and (max-width : 986px) {
+                position: relative;
+                left: 5px;
+            }
+
+            @media only screen and (max-width : 855px) {
+                width: 100%;
+                left: 0;
+            }
+
+            h1 {
+                font-family: 'Bodoni', Arial, sans-serif;
+                font-style: italic;
+                font-weight: normal;
+                line-height: 40px;
+                font-size: 43px;
+                color: #686666;
+                padding:0;
+                margin:0;
+
+                @media only screen and (max-width : 1170px) {
+                    font-size: 36px;
+                }
+
+                @media only screen and (max-width : 1270px) {
+                    font-size: 30px;
+                }
+
+                @media only screen and (max-width : 911px) {
+                    font-size: 25px;
+                }
+
+                @media only screen and (max-width : 440px) {
+                    font-size: 19px;
+                    line-height: 31px;
+                }
+            }
+
+            p {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                font-size: 20.5px;
+                text-transform: uppercase;
+                color: #556067;
+                padding: 10px 0 30px 0;
+                margin:0;
+
+                @media only screen and (max-width : 1270px) {
+                    font-size: 18px;
+                }
+
+                @media only screen and (max-width : 911px) {
+                    font-size:15px;
+                }
+
+                @media only screen and (max-width : 440px) {
+                    font-size: 12px;
+                }
+
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+
+                @media only screen and (max-width : 1100px) {
+                    display: block;
+                }
+
+                input {
+                    width: 502px;
+                    height: 47px;
+                    padding: 0 15px 0 15px;
+                    margin: 0 15px 0 0;
+                    outline: none;
+
+                    @media only screen and (max-width : 1370px) {
+                        width: 490px;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        width: 457px
+                    }
+
+                    @media only screen and (max-width : 1100px) {
+                        width: 100%;
+                        float: left;
+                        margin: 0 0 30px 0;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: #4c4c4c;
+                        opacity: 1;
+                        font-size: 18px;
+                        font-weight: normal;
+                        position: relative;
+                        top: 1px;
+                    }
+
+                    &:-moz-placeholder {
+                        color: #4c4c4c;
+                        opacity: 1;
+                        font-size: 18px;
+                        font-weight: normal;
+                        position: relative;
+                        top: 1px;
+                    }
+
+                    &::-moz-placeholder {
+                        color: #4c4c4c;
+                        opacity: 1;
+                        font-size: 18px;
+                        font-weight: normal;
+                        position: relative;
+                        top: 1px;
+                    }
+
+                    &:-ms-input-placeholder {  
+                        color: #4c4c4c;
+                        opacity: 1;
+                        font-size: 18px;
+                        font-weight: normal;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    background: #e8408b;
+                    transition: all 0.5s ease;
+                    padding: 0 30px 0 30px;
+                    height: 48px;
+                    line-height: 48px;
+                    font-size: 21px;
+                    color: #fff;
+
+                    @media only screen and (max-width : 1370px) {
+                        font-size: 16px;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 16px;
+                        height: 48px;
+                        line-height: 48px;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 13px;
+                    }
+
+                    @media only screen and (max-width : 1100px) {
+                        font-size: 21px;
+                        height: auto;
+                        padding: 15px 30px 15px 30px;
+                    }
+
+                    @media only screen and (max-width : 911px) {
+                        font-size: 15px;
+                    }
+
+                    &:hover {
+                        background: #da0061;
+                    }
+                }
+            }
+
+            span {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                color: #686666;
+                width: 100%;
+                float: left;
+                padding: 20px 0 0 0;
+
+                @media only screen and (max-width : 440px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .right {
+            width: 17%;
+            float: left;
+            text-align: center;
+            position: relative;
+            top: 35px;
+
+            @media only screen and (max-width : 855px) {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Promo */
+
+
+
+/* Footer */
+
+#footer {
+    background: #313131;
+    width: 100%;
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0 30px 0;
+
+    .custom-container {
+        p {
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #196fa7;
+        }
+
+        span {
+            width: 100%;
+            float: left;
+            padding: 15px 0 0 0 ;
+
+            a {
+                text-decoration: none;
+
+                &:nth-child(3) {
+                    position: relative;
+                    left: 3px;
+                }
+            }
+        }
+    }
+}
+
+/* Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  OWL Carousel  */
+
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+/* display none until init */
+.owl-carousel{
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+    
+.owl-carousel .owl-item{
+    float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+    cursor: pointer;
+}
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+
+
+.owl-theme .owl-controls{
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;/*IE7 life-saver */
+    margin: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: #869791;
+    filter: Alpha(Opacity=50);/*IE7 fix*/
+    opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+    filter: Alpha(Opacity=100);/*IE7 fix*/
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+    display: inline-block;
+    zoom: 1;
+    *display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+    filter: Alpha(Opacity=50);/*IE7 fix*/
+    opacity: 0.5;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    filter: Alpha(Opacity=100);/*IE7 fix*/
+    opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+    height: auto;
+    width: auto;
+    color: #FFF;
+    padding: 2px 10px;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+    min-height: 150px;
+    background: url(AjaxLoader.gif) no-repeat center center
+}   

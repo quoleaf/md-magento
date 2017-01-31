@@ -216,7 +216,7 @@ body {
     padding: 0;
 
     .inner {
-        background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') center;
+        background: url('http://i3.ytimg.com/vi/m3O7yjaCoHk/hqdefault.jpg') center;
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -241,7 +241,7 @@ body {
 
     @media only screen and (max-width :470px) {
         .inner {
-            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 0;
+            background: url('http://i3.ytimg.com/vi/m3O7yjaCoHk/hqdefault.jpg') 0;
         }
     }
 }
@@ -660,6 +660,10 @@ nav {
                 right: -25px;
             }
 
+            @media only screen and (max-width : 1020px) {
+                width: 330px;
+            }
+
             @media screen and (max-width: 986px) {
                 display: none;
             }
@@ -689,6 +693,18 @@ nav {
             @media only screen and (max-width : 1270px) {
                 width: 50%;
                 right: 50px;
+            }
+
+            @media only screen and (max-width : 1100px) {
+                right: 35px;
+            }
+
+            @media only screen and (max-width : 1060px) {
+                right: 20px;
+            }
+
+            @media only screen and (max-width : 1000px) {
+                right: 0px;
             }
 
             @media screen and (max-width: 986px) {

@@ -1,4 +1,18 @@
 jQuery(function($) {
+	/* Guest Checkout */
+	$("body.opc-index-index .checkout-selector .members").on("click", function(){
+		$('body.opc-index-index .checkout-selector .members input').prop('checked', true);
+		$('body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest').addClass('hide');
+		$('body.opc-index-index .opc-wrapper-opc .opc-col-center #login_email').removeClass('hide');
+		$('body.opc-index-index .opc-wrapper-opc .checkout-guests #opc-address-form-billing #register_details').hide();
+	});
+
+	$("body.opc-index-index .checkout-selector .guests").on("click", function(){
+		$('body.opc-index-index .checkout-selector .guests input').prop('checked', true);
+		$('body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest').removeClass('hide');
+		$('body.opc-index-index .opc-wrapper-opc .opc-col-center #login_email').addClass('hide');
+	});
+
 	if($('.opc-index-index #register_details input[name="billing[firstname]"]').val() == " "){
 		$('.opc-index-index #register_details input[name="billing[firstname]"]').val('');
 	}
@@ -12,6 +26,11 @@ jQuery(function($) {
 	$('.opc-index-index .account-login input[name="login[password]"]').on('change', function(){
 		var pass = $(this).val();
 		$('.opc-index-index .OPCregister-pass').val(pass);
+	});
+
+	$('body.opc-index-index .opc-wrapper-opc .opc-col-center fieldset .form-group input[name="guestlogin[username]"]').on('change', function(){
+		var pass = $(this).val();
+		$('body.opc-index-index .opc-wrapper-opc .opc-col-center fieldset#register_details ul li input[name="billing[email]"]').val(pass);
 	});
 
 	/* Subdomain Flags */

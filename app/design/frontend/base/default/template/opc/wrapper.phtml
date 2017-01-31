@@ -21,9 +21,9 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
             <div class="headerTitle">
                 <img src="<?php echo $this->getSkinUrl('images/opc-images/opc-bag-ico.png') ?>">
                 <h3 class="MainTitle"><?php echo $this->__('Bag')?></h3>
-                <p>
+                <!-- <p>
                     (For MD Hair products: Use code <span>"B2G1"</span> Buy 2 get 1 for free)
-                </p>
+                </p> -->
             </div>
 
             <p class="MainSubTitle">
@@ -50,6 +50,24 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                 Deliver To
             </p>
 
+            <div class="checkout-selector">
+                <h3>Choose Your Checkout Method</h3>
+                <div class="members">
+                    <div class="members-holder">
+                        <input type="radio" class="checkout-selector-radio" checked name="selection"/>
+                        <h2>Member Sign In</h2>
+                    </div>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="guests">
+                    <div class="guests-holder">
+                        <input type="radio" class="checkout-selector-radio" name="selection"/>
+                        <h2>Guest Checkout</h2>
+                    </div>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+            </div>
+
             <?php if(!$is_persistent):?>
             
                 <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
@@ -65,8 +83,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                 <?php echo $this->getChildHtml('login');?>
             <?php endif;?>
 
-            <?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
-            
+            <div class="shipping-session hide">
             <input class="TabInput" id="tab1" type="radio" name="tabs" checked>
             <label class="TabLabel" for="tab1">
                 <span>
@@ -102,7 +119,8 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 
                 </div>
             </section>
-                
+            </div>    
+
             <section id="content2" class="SectionTabWrapper">
   
             <!-- Shipping Method -->
@@ -124,7 +142,6 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                     </div>
                 </div>
             <?php endif;?>
-        <?php endif;?>
  
   </section>
   
@@ -137,8 +154,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
         <!-- Right -->
 
         <!-- Patrick Added Login Session -->
-        <?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
-        <div class="opc-col-right ">
+        <div class="opc-col-right hide">
             <div class="headerTitle">
                 <img src="<?php echo $this->getSkinUrl('images/opc-images/opc-payment-ico.png') ?>">
                 <h3 class="MainTitle"><?php echo $this->__('Payment')?></h3>
@@ -191,7 +207,14 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                             <strong class="Title">
                                 Your Order
                             </strong>
-                            <div id="GrandDetails"></div> <!-- added by rej -->
+
+							<div id="GrandDetails" class="pf-opc-total">
+							    <div id="opc-review-block">
+									<?php echo $this->_getReviewHtml()?>
+								</div>
+								<div class="clear move-columns"></div>
+							</div>
+
                         </div>
                           <?php echo $this->getChildHtml('agreements')?>
                           <?php echo $this->getChildHtml('opc.newsletters');?>
@@ -200,7 +223,6 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                 </div>
             </div>
         </div>
-        <?php endif;?>
         <!-- End of Right -->
 
     </div>
@@ -244,6 +266,20 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 </div>
 
 
+<?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
+<script type="text/javascript">
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-right').removeClass('hide'); 
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .shipping-session').removeClass('hide'); 
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .checkout-selector').remove(); 
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .TabLabel[for="tab1"]').on('click', function(){
+        jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #content2').addClass('SectionTabWrapper'); 
+    });
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .TabLabel[for="tab2"]').on('click', function(){
+        jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #content2').removeClass('SectionTabWrapper'); 
+    });
+</script>
+<?php endif; ?>
+
 <script type="text/javascript">
 
 function MoveContent(destId, srcId) {
@@ -251,11 +287,11 @@ function MoveContent(destId, srcId) {
     jQuery('#' + destId).append(jQuery('#' + srcId).contents().detach());
 }
 
-MoveContent('GrandDetails','TotalsDetail');
+//MoveContent('GrandDetails','TotalsDetail');
     jQuery( document ).ready(function() {
     
         // Custom Login Validation
-
+        jQuery('#paymentmenthodtrigger').click();
         jQuery(".nextCustomLogin").click(function(){
             var CustomLoginform = jQuery("#login-form");
             

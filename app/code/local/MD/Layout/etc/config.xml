@@ -54,10 +54,19 @@
         <page>
             <layouts> 
                 <mdintimaterestore module="page" translate="label">
-                    <label>MD Intimate Restore PLanding age</label>
+                    <label>MD Intimate Restore PLanding Page</label>
                     <template>page/md-intimate-restore-landingpage.phtml</template>
                     <layout_handle>mdhairkitofferlandingpage</layout_handle>
                 </mdintimaterestore> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairkitbundle module="page" translate="label">
+                    <label>MD Hair Kit Bundle</label>
+                    <template>page/md-hairkit-bundle-landingpage.phtml</template>
+                    <layout_handle>mdhairkitbundlelandingpage</layout_handle>
+                </mdhairkitbundle> 
             </layouts>
         </page>
     </global>

@@ -155,6 +155,13 @@
     font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Univers-Bold';
+    src: url('../fonts/Univers Bold.svg#Univers-Bold') format('svg');
+  }
+}
+
 html { box-sizing: border-box;} 
 *, *:before, *:after { box-sizing: inherit; vertical-align:top;}
 
@@ -268,6 +275,7 @@ body {
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-decoration: none;
 
             @media screen and (max-width: 870px) {
                 font-size: 12px;
@@ -381,6 +389,7 @@ nav {
                         padding: 7px 30px 7px 30px;
                         border: 2px solid #d72f7a;
                         color: #d72f7a;
+                        font-weight: 600;
                         transition: all 0.5s ease;
 
                         &:hover {
@@ -497,7 +506,7 @@ nav {
             }
 
             a.share {
-                background: #383838;
+                background: #d72f7a;
                 padding: 6px 15px 6px 15px;
                 color: #fff;
                 text-decoration: none;
@@ -510,6 +519,8 @@ nav {
                     -moz-transform: rotateY(180deg);
                     -o-transform: rotateY(180deg);
                     -ms-transform: rotateY(180deg);
+                    position: relative;
+                    top: 3px;
                 }
             }
         }
@@ -688,19 +699,19 @@ nav {
             float: left;
             padding: 113px 0 0 0;
             position: relative;
-            right: 105px;
+            right: 60px;
 
             @media only screen and (max-width : 1270px) {
                 width: 50%;
-                right: 50px;
+                right: 40px;
             }
 
             @media only screen and (max-width : 1100px) {
-                right: 35px;
+                right: 15px;
             }
 
             @media only screen and (max-width : 1060px) {
-                right: 20px;
+                right: 5px;
             }
 
             @media only screen and (max-width : 1000px) {
@@ -716,12 +727,10 @@ nav {
             strong {
                 font-family: 'Univers-Bold', Arial, sans-serif;
                 font-size: 50px;
-                color: #556067;
-                -webkit-text-stroke: 1px;
+                color: #0d6ba9;
 
                 @media only screen and (max-width : 1270px) {
                     font-size: 40px;
-                    -webkit-text-stroke: 0px;
                 }
 
                 @media screen and (max-width: 470px) {
@@ -754,7 +763,7 @@ nav {
             span {
                 font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
                 font-style: italic;
-                color: #7d7d7d;
+                color: #e8408b;
                 font-size: 35px;
                 position: relative;
                 right: 0;
@@ -772,25 +781,31 @@ nav {
                 }
             }
 
-            a { 
-                text-transform: uppercase;
-                text-decoration: none;
-                background: #e8408b;
-                transition: all 0.5s ease;
-                padding: 15px 35px 15px 35px;
-                font-size: 17px;
-                color: #fff;
+            div {
+                width: 100%;
+                float: left;
+                padding: 35px 0 0 0;
 
-                &:hover {
-                    background: #da0061;
-                }
+                a { 
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    background: #e8408b;
+                    transition: all 0.5s ease;
+                    padding: 15px 35px 15px 35px;
+                    font-size: 17px;
+                    color: #fff;
 
-                @media screen and (max-width: 370px) {
-                    font-size: 14px;
-                    padding: 15px;
-                    width: 100%;
+                    &:hover {
+                        background: #da0061;
+                    }
+
+                    @media screen and (max-width: 370px) {
+                        font-size: 14px;
+                        padding: 15px;
+                        width: 100%;
+                    }
                 }
-            }
+           }
         }
     }
 }
@@ -1036,7 +1051,6 @@ nav {
             text-transform: uppercase;
             text-decoration: none;
             color: #2141cb;
-            -webkit-text-stroke: 0.5px;
             padding: 15px 0 15px 0;
             width: 100%;
             float: left;
@@ -1194,13 +1208,11 @@ nav {
                 font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
                 font-size: 30px;
                 text-transform: uppercase;
-                -webkit-text-stroke: 0.4px;
                 padding: 0;
                 margin: 0;
 
                 @media only screen and (max-width : 1270px) {
                     font-size: 24px;
-                    -webkit-text-stroke: 0px;
                 }
 
                 @media only screen and (max-width : 360px) {
@@ -1700,7 +1712,7 @@ nav {
 /* Footer */
 
 #footer {
-    background: #313131;
+    background: #d72f7a;
     width: 100%;
     float: left;
     color: #fff;
@@ -1709,12 +1721,12 @@ nav {
 
     .custom-container {
         p {
-            font-size: 13px;
+            font-size: 14px;
         }
 
         a {
             text-decoration: underline;
-            color: #196fa7;
+            color: #fff;
         }
 
         span {

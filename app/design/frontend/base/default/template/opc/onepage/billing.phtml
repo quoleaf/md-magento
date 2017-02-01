@@ -4,18 +4,9 @@
 
         <?php if(!$this->isCustomerLoggedIn()): ?>
     
-            <?php $guest_allowed = $this->getQuote()->isAllowedGuestCheckout(); if($guest_allowed): ?>
-                <li class="control hidden">
-                    <input type="checkbox" name="billing[create_account]" id="billing:create_account" value="1" title="<?php echo  $this->__('Create an account for later use') ?>"  class="checkbox" checked>
-                    <label for="billing:create_account"><?php echo  $this->__('Create an account for later use') ?></label>
-                </li>
-                
-                <?php else:?>
-                    <input type="hidden" name="billing[create_account]" id="billing:create_account" value="1" />
-            <?php endif;?>
             
 
-            <li class="fields <?php if($guest_allowed):?><?php endif;?>" id="register-customer-password">
+            <li class="fields" id="register-customer-password">
 
                  <!-- Password -->
 
@@ -97,26 +88,26 @@
                         <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?> 
                     </li>
 
-                    <!-- <li class="fields">
+                    <li class="fields hide">
                         <div class="field">
                             <label for="billing:company">
-                                <?php //echo $this->__('Company') ?>
+                                <?php echo $this->__('Company') ?>
                             </label>
                             
-                            <input type="text" id="billing:company" name="billing[company]" value="<?php //echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php //echo $this->__('Company') ?>" class="input-text <?php// echo $this->helper('opc')->getAttributeValidationClass('company') ?>" />
-                        </div>
+                            <input type="text" id="billing:company" name="billing[company]" value="<?php echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('company') ?>" />
+                        </div> 
 
-                        <?php //if(!$this->isCustomerLoggedIn()): ?>
+                        <?php if(!$this->isCustomerLoggedIn()): ?>
                             <div class="field">
                                 <label for="billing:email" class="required">
                                     <em>*</em>
-                                    <?php // echo $this->__('Email Address') ?>
+                                    <?php echo $this->__('Email Address') ?>
                                 </label>
 
-                                <input type="text" name="billing[email]" id="billing:email" value="<?php // echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php //echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
+                                <input type="text" name="billing[email]" id="billing:email" value="<?php  echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
                             </div>
-                        <?php// endif; ?>
-                    </li> -->
+                        <?php endif; ?>
+                    </li>
 
                     <?php $_streetValidationClass = $this->helper('opc')->getAttributeValidationClass('street'); ?>
 

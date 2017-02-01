@@ -53,9 +53,7 @@
                 </a>
             </div>
         </fieldset>
-
         <!-- End of Login Email -->
-
         <!-- Login Password -->
         <fieldset id="login_password" class="hide">
             <strong class="title">Welcome Back</strong>
@@ -80,6 +78,28 @@
         </fieldset>
         <!-- End of Login Password -->
     </form>
+         <!-- Login Email -->
+        <form method="post" class="OPCGuests-Form" id="formGuests">
+            <fieldset id="login_guest" class="hide">
+
+                <strong class="title">
+                    Hi Guest!
+                </strong>
+                <p class="subtitle">
+                    We need your email to send you your receipt.
+                </p>
+                <div class="form-group">
+                    <label for="guestlogin[username]" class="control-label">
+                        <?php echo $this->__('Email Address') ?> 
+                    </label>
+                    <input type="text" class="required-entry validate-email" id="email" name="guestlogin[username]" placeholder="Type your email here">
+                </div> 
+                <div class="NextButton">
+                    <input type="submit" value="Continue" class="btn btn-primary nextGuestLogin">
+                </div>
+            </fieldset>
+        </form>
+        <!-- End of Login Email -->
 
         <fieldset id="registration_password" class="hide">
         <?php echo $this->getLayout()->createBlock('customer/form_register')->setTemplate('customer/form/register2.phtml')->toHtml(); ?>
@@ -94,6 +114,31 @@
 <script type="text/javascript">
     //<![CDATA[
         var dataForm = new VarienForm('login-form', true);
+        jQuery("#formGuests").submit(function(e){
+                e.preventDefault();
+            });
+        jQuery('.nextGuestLogin').on('click', function(){
+            var guestsForm = new VarienForm('formGuests', true);
+            if (guestsForm .validator.validate()){
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #opc-address-form-billing #register_details').show();
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest').addClass('hide');
+                jQuery('body.opc-index-index .opc-wrapper-opc .shipping-session').removeClass('hide');    
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-right').removeClass('hide'); 
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .checkout-selector').addClass('hide');  
+                  
+            }else{
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #opc-address-form-billing #register_details').hide();
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest').removeClass('hide');      
+                jQuery('body.opc-index-index .opc-wrapper-opc .shipping-session').addClass('hide');  
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-right').addClass('hide');  
+            } 
+            jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .TabLabel[for="tab1"]').on('click', function(){
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #content2').addClass('SectionTabWrapper'); 
+            });
+            jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .TabLabel[for="tab2"]').on('click', function(){
+                jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center #content2').removeClass('SectionTabWrapper'); 
+            });
+        });
     //]]>
 </script>
 
@@ -109,7 +154,7 @@ jQuery(document).on('click', '.opc-index-index .nextCustomLogin', function(){
         data: {email: mail},
         success: function (exists) {
             jQuery('.opc-index-index #login_password').removeClass('hide'); 
-            jQuery('.opc-index-index #registration_password').addClass('hide');
+            jQuery('.opc-index-index #registration_password').addClass('hide'); 
         },
         error: function (exists, jqXHR, textStatus, errorThrown) {
            jQuery('.opc-index-index #registration_password').removeClass('hide'); 
@@ -118,10 +163,12 @@ jQuery(document).on('click', '.opc-index-index .nextCustomLogin', function(){
         }
     });
 if (jQuery('.opc-index-index #email-error:contains("Please enter a valid email address.")')){
-    jQuery('.opc-index-index #registration_password').hide();           
+    jQuery('.opc-index-index #registration_password').hide();      
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .checkout-selector').removeClass('hide');       
 }
 if (jQuery('.opc-index-index #login_email[style="display: none;"]').length){
-    jQuery('.opc-index-index #registration_password').show();           
+    jQuery('.opc-index-index #registration_password').show();  
+    jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-center .checkout-selector').addClass('hide');          
 }
 });
 

@@ -10585,8 +10585,90 @@ body.catalogsearch-result-index {
 
 
 /* Pat */
-
 body.opc-index-index .hide{visibility:hidden;height:0;opacity:0;margin:0;padding:0;display:block;}
+body.opc-index-index .account-login{
+	clear: both;
+}
+body.opc-index-index .checkout-selector{
+	margin-bottom: 50px;
+    display: table;
+}
+body.opc-index-index .checkout-selector input[type="radio"] {
+    display: inline-block;
+}
+body.opc-index-index .checkout-selector h3{
+	font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+body.opc-index-index .checkout-selector h2{
+	margin: 0;
+    margin-left: 7px;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: normal;
+    font-family: "HelveticaLTStd-Bold",Arial,sans-serif !important;
+    cursor:pointer;
+}
+body.opc-index-index .checkout-selector .members {
+    background: #fbfbfb;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 15px;
+    width: 167px;
+    float: left;
+    margin-right: 10px;
+    cursor:pointer;
+}
+body.opc-index-index .checkout-selector .guests{
+	background: #fbfbfb;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 15px;
+	width: 167px;
+    float: left;
+    cursor:pointer;
+}
+body.opc-index-index .checkout-selector i {
+    font-size: 36px;
+    margin: auto;
+    text-align: center;
+    display: table;
+    margin-top: 10px;
+}
+
+body.opc-index-index .shipping-session{
+	display: table;
+    width: 100%;
+}
+
+body.opc-index-index .opc-wrapper-opc .opc-col-center .NextButton input.btn.btn-primary.nextGuestLogin{
+	height: auto;
+	outline: 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 18px;
+    color: #fff;
+    font-size: 12px;
+}
+body.opc-index-index .opc-wrapper-opc .opc-col-center fieldset .form-group input.validation-failed {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px #ce8483;
+}
+
+
+body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest .validation-advice{
+	color: #a94442!important;
+    font-size: 16px;
+    margin-top: 10px;;
+}
+
+    
+
 
 /* jim */
 .opc-shipping-title{

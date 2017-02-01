@@ -145,22 +145,16 @@
 
 @font-face {
     font-family: 'Univers-Bold';
-    src: url('../fonts/Univers Bold.eot');
-    src: url('../fonts/Univers Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Univers Bold.woff') format('woff'),
-        url('../fonts/Univers Bold.ttf') format('truetype'),
-        url('../fonts/Univers Bold.otf') format('opentype'),
-        url('../fonts/Univers Bold.svg#Univers-Bold') format('svg');
+    src: url('../fonts/Univers 65 Bold.eot');
+    src: url('../fonts/Univers 65 Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Univers 65 Bold.woff') format('woff'),
+        url('../fonts/Univers 65 Bold.ttf') format('truetype'),
+        url('../fonts/Univers 65 Bold.otf') format('opentype'),
+        url('../fonts/Univers 65 Bold.svg#Univers-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'Univers-Bold';
-    src: url('../fonts/Univers Bold.svg#Univers-Bold') format('svg');
-  }
-}
 
 html { box-sizing: border-box;} 
 *, *:before, *:after { box-sizing: inherit; vertical-align:top;}
@@ -400,6 +394,7 @@ nav {
                         @media screen and (max-width: 870px) {
                             border: none;
                             color: #fff;
+                            font-weight: normal;
 
                             &:hover {
                                 background: #363636;
@@ -724,10 +719,13 @@ nav {
                 padding: 0;
             }
 
-            strong {
+            h1 {
                 font-family: 'Univers-Bold', Arial, sans-serif;
                 font-size: 50px;
                 color: #0d6ba9;
+                font-weight: normal;
+                margin: 0;
+                padding:0;
 
                 @media only screen and (max-width : 1270px) {
                     font-size: 40px;

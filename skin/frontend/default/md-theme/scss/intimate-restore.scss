@@ -217,7 +217,7 @@ body {
     padding: 0;
 
     .inner {
-        background: url('http://i3.ytimg.com/vi/m3O7yjaCoHk/hqdefault.jpg') center;
+        background: url('http://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg') center;
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -242,7 +242,7 @@ body {
 
     @media only screen and (max-width :470px) {
         .inner {
-            background: url('http://i3.ytimg.com/vi/m3O7yjaCoHk/hqdefault.jpg') 0;
+            background: url('http://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg') 0;
         }
     }
 }
@@ -988,6 +988,11 @@ nav {
             color: #fff;
             position: relative;
             right: 18px;
+            margin: 0 5px 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
 
             &:hover {
                 background: #da0061;
@@ -995,6 +1000,12 @@ nav {
 
             @media only screen and (max-width : 870px) {
                 right: 0;
+            }
+
+            @media only screen and (max-width : 600px) {
+                margin: 0 0 10px 0;
+                width: 100%;
+                float: left;
             }
         }
     }
@@ -1581,7 +1592,7 @@ nav {
 
                 input {
                     width: 502px;
-                    height: 47px;
+                    height: 55px;
                     padding: 0 15px 0 15px;
                     margin: 0 15px 0 0;
                     outline: none;
@@ -1643,8 +1654,8 @@ nav {
                     background: #e8408b;
                     transition: all 0.5s ease;
                     padding: 0 30px 0 30px;
-                    height: 48px;
-                    line-height: 48px;
+                    height: 55px;
+                    line-height: 55px;
                     font-size: 21px;
                     color: #fff;
 

@@ -10662,7 +10662,22 @@ body.opc-index-index .opc-wrapper-opc .opc-col-center fieldset .form-group input
 body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest .validation-advice{
 	color: #a94442!important;
     font-size: 16px;
-    margin-top: 10px;;
+    margin-top: 10px;
+}
+
+.catalog-product-view .product-bottom.right{
+	clear: both;
+    float: none;
+    width: 100%!important;
+    margin-top: 50px;
+}
+
+.catalog-product-view .product-bottom.right img{
+	width: auto!important;
+}
+
+.catalog-product-view .product-bottom.right .tabInfo{
+	height:auto!important;
 }
 
 @media only screen and (max-width: 1250px) {

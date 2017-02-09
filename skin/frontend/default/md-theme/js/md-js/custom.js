@@ -1,4 +1,37 @@
 jQuery(function($) {
+	/* ROM Script*/
+	jQuery('input[name="email"]').on('change', function(e){
+	var email = jQuery('input[name="email"]').val();
+	});
+
+	jQuery('input[name="first_name"]').on('change', function(e){
+	var name = jQuery('input[name="first_name"]').val();
+	});
+
+	function validateEmail(email) {
+	  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	  
+	  return re.test(email);
+	}
+
+	
+		jQuery('.newsletter-submit').on('click', function(e){
+
+		if(jQuery('.newsletter-name').val() == "" || jQuery('.newsletter-email').val() == "") {
+			alert('Please Input Email and Name!'); 
+			return false;
+		}
+		
+		if(!validateEmail(jQuery('.newsletter-email').val())){
+			alert('Invalid Email!'); 
+			return false;
+		}
+
+		jQuery('#loader').removeAttr('style');
+		
+		});
+	
+
 	/* Guest Checkout */
 	$("body.opc-index-index .checkout-selector .members").on("click", function(){
 		$('body.opc-index-index .checkout-selector .members input').prop('checked', true);

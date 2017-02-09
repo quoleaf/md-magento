@@ -10719,3 +10719,32 @@ body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest .validation-a
     display: inline-block;
     margin-bottom: 15px;
 }
+
+.subscribe-btn-wrp{
+	position: relative;
+
+	img#loader{
+	    width: 25px;
+	    position: absolute;
+	    right: 1%;
+	    top: 20px;
+	}
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+	.subscribe-btn-wrp{
+		img#loader{
+			right: 35%;
+			top: 100px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px){
+	.subscribe-btn-wrp{
+		img#loader{
+			right: 20%;
+    		top: 10px;
+		}
+	}
+}

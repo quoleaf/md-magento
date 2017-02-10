@@ -1,0 +1,55 @@
+.plp-clock-title {
+	text-align: left;
+}
+
+.plp-countdown {
+	width: auto; 
+	margin: 5px 0px; 
+	overflow: hidden;
+}
+
+.plp-countdown .countdown-amount {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.plp-countdown .countdown-period {
+	font-size: 100%;
+}
+
+.plp-countdown .countdown-descr {
+	display: block;
+	width: 70%;
+}
+
+.plp-countdown .countdown-show3 .countdown-section {
+	width: 32%;
+}
+
+.plp-countdown .countdown-show4 .countdown-section {
+	width: 23.5%;
+}
+
+.pdp-clock-title {
+	text-align: left; clear: both;
+}
+
+.pdp-clock-1, .pdp-clock-2,  .pdp-clock-3, .pdp-clock-4 {
+	width: auto; 
+	clear: both; 
+	padding: 10px; 
+	margin: 10px 0px; 
+	overflow: hidden;
+}
+
+.pdp-clock-4 {
+	padding: 0px; 
+	padding-bottom: 50px;
+	margin: 0px; 
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.pdp-clock-4 .flip-clock-divider .flip-clock-label {
+	font-size: 14px;
+}

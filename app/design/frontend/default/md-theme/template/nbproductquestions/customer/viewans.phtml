@@ -1,0 +1,49 @@
+<?php $id = $this->getRequest()->getParam('question_id');
+$question = Mage::getModel('productquestions/questions')->load($id);
+$product_id = $question->getProductId();
+$obj = Mage::getModel('catalog/product');	
+$_product = $obj->load($product_id);
+$answer = Mage::getModel('productquestions/answers')->getCollection()->addFieldToFilter('product_questions_id', $id);
+
+if (Mage::getSingleton('customer/session')->isLoggedIn()) {
+	$customer = Mage::getSingleton('customer/session')->getCustomer();
+	$customer_email = $customer->getId();
+}
+?>
+<h2><?php echo $this->__('Your Answer View')?></h2>
+<div class="note"><?php echo $this->__('<b>Note:</b> Highlighted Answer is given by you')?></div>
+<div class="que-view">
+	<table>
+		<tr>
+			<td><?php echo $this->__('<b>'.'Product'.'</b>')?></td>
+			<td><a href="<?php echo $_product->getProductUrl(); ?>"><?php echo $_product->getName();?></a></td>
+		</tr>
+		<tr>
+			<td><?php echo $this->__('<b>'.'Question'.'</b>')?></td>
+			<td><div><?php echo $question->getQuestions();?></div></td>
+		</tr>
+		<tr>
+			<td><?php echo $this->__('<b>'.'Answer'.'</b>')?></td>
+			<td>
+				<?php foreach($answer as $ans):?>
+					<p class='que-view-ans <?php if($customer_email == $ans->getCustomerId()) echo 'make-highlight'; ?>'><?php echo $this->makeClickableLinks($ans->getAnswers()) . '<hr class="view">';?></p>
+				<?php endforeach;?>
+			</td>
+		</tr>
+		<tr>
+			<td><?php echo $this->__('<b>'.'Status'.'</b>')?></td>
+			<td>
+				<div>
+					<?php if($question->getStatus() == 'approved') {
+						echo $this->__('Approved');
+					} else {
+						echo $this->__('Pending');
+					} ?>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="buttons-set">
+	<p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back to Product Q & A') ?></a></p>
+</div>

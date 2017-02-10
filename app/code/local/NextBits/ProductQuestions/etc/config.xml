@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<NextBits_ProductQuestions>
+			<version>1.0.0</version>	
+		</NextBits_ProductQuestions>
+	</modules>
+	<frontend>
+		<routers>
+			<productquestions>
+				<use>standard</use>
+				<args>
+					<module>NextBits_ProductQuestions</module>
+					<frontName>productquestions</frontName>
+				</args>
+			</productquestions>
+		</routers>
+		<layout>
+			<updates>
+				<productquestions module="productquestions">
+					<file>nbproductquestions.xml</file>
+				</productquestions>
+			</updates>
+		</layout>
+		<events>
+           <core_block_abstract_prepare_layout_before>
+				<observers>
+					<nextbits_jquery_prepare_layout_before>
+						<class>productquestions/observer</class>
+						<method>prepareLayoutBefore</method>
+					</nextbits_jquery_prepare_layout_before>
+				</observers>
+           </core_block_abstract_prepare_layout_before>
+       </events>
+	</frontend>
+	<global>
+		<helpers>
+			<productquestions>
+				<class>NextBits_ProductQuestions_Helper</class>
+			</productquestions>
+		</helpers>
+		<blocks>
+			<productquestions>
+				<class>NextBits_ProductQuestions_Block</class>
+			</productquestions>
+		</blocks>	
+		<models>
+			<productquestions>
+				<class>NextBits_ProductQuestions_Model</class>
+				<resourceModel>productquestions_mysql4</resourceModel>
+			</productquestions>
+			<productquestions_mysql4>
+				<class>NextBits_ProductQuestions_Model_Mysql4</class>
+				<entities>
+					<questions>
+						<table>nbpq_product_questions</table>
+					</questions>
+					<answers>
+						<table>nbpq_product_answers</table>
+					</answers>
+					<likedislike>
+						<table>nbpq_like_dislike</table>
+					</likedislike>
+				</entities>
+			</productquestions_mysql4>
+		</models>
+		<resources>
+			<productquestions_setup>
+				<setup>
+					<module>NextBits_ProductQuestions</module>
+				<!-- 	<class>Mage_Customer_Model_Resource_Setup</class> -->
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</productquestions_setup>
+			<productquestions_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</productquestions_write>
+			<productquestions_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</productquestions_read>
+		</resources>
+		<template>
+			<email>
+				<productquestions_general_notification_question translate="label" module="productquestions">
+					<label>Product Questions</label>
+					<file>nbproductquestion.html</file>
+					<type>html</type>
+				</productquestions_general_notification_question>
+				<productquestions_general_notification_answer translate="label" module="productquestions">
+					<label>Product Question Answers</label>
+					<file>nbproductanswer.html</file>
+					<type>html</type>
+				</productquestions_general_notification_answer>
+			</email>
+		</template>
+	</global> 
+	<admin>
+        <routers>
+			<productquestions>
+				<use>admin</use>
+				<args>
+					<module>NextBits_ProductQuestions</module>
+					<frontName>productquestions</frontName>
+				</args>
+			</productquestions>
+        </routers> 
+    </admin>
+	<adminhtml>
+		<menu>
+			<productquestions module="productquestions">
+				<title>Product Q &amp; A</title>
+				<sort_order>90</sort_order>
+				<depends>
+					<config>productquestions/general/enabled</config>
+				</depends>
+				<children>
+					<productquestions module="productquestions">
+						<title>Manage Questions</title>
+						<sort_order>0</sort_order>
+						<action>productquestions/adminhtml_questions</action>
+					</productquestions>	
+					<answer module="productquestions">
+						<title>Manage Answers</title>
+						<sort_order>1</sort_order>
+						<action>productquestions/adminhtml_answers</action>
+					</answer>	
+				</children> 
+			</productquestions>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<productquestions translate="title" module="productquestions">
+											<title>Product Q &amp; A</title>
+											<sort_order>10000</sort_order>
+										</productquestions>
+									</children>
+								</config>
+							</children>
+						</system>
+						<productquestions module="productquestions">
+							<title>Product Q &amp; A</title>
+							<sort_order>90</sort_order>
+							<depends>
+								<config>productquestions/general/enabled</config>
+							</depends>
+							<children>
+								<productquestions module="productquestions">
+									<title>Manage Questions</title>
+									<sort_order>0</sort_order>
+									<action>productquestions/adminhtml_questions</action>
+								</productquestions>	
+								<answer module="productquestions">
+									<title>Manage Answers</title>
+									<sort_order>1</sort_order>
+									<action>productquestions/adminhtml_answers</action>
+								</answer>	
+							</children> 
+						</productquestions>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<productquestions>
+					<file>nbproductquestions.xml</file>
+				</productquestions>
+			</updates>
+		</layout>
+	</adminhtml>
+</config>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?> 
+<layout>
+    <productquestions_adminhtml_questions_index>
+        <reference name="content">
+            <block type="productquestions/adminhtml_questions" name="questions" />
+        </reference>
+    </productquestions_adminhtml_questions_index>	
+	<productquestions_adminhtml_answers_index>
+        <reference name="content">
+            <block type="productquestions/adminhtml_answers" name="answers" />
+        </reference>
+    </productquestions_adminhtml_answers_index>
+	
+	<productquestions_adminhtml_questions_product>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="productquestions/adminhtml_questions_edit_tab_grid" name="product.grid"/>
+            <block type="adminhtml/widget_grid_serializer" name="grid_serializer">
+                <reference name="grid_serializer">
+                    <action method="initSerializerBlock">
+						<grid_block_name>product.grid</grid_block_name>
+						<data_callback>getSelectedProducts</data_callback>
+						<hidden_input_name>products</hidden_input_name>
+						<reload_param_name>products</reload_param_name>
+                    </action>              
+                </reference>
+            </block>
+        </block>
+    </productquestions_adminhtml_questions_product>
+  
+	<productquestions_adminhtml_questions_productgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="productquestions/adminhtml_questions_edit_tab_grid" name="product.grid"/>
+        </block>
+	</productquestions_adminhtml_questions_productgrid>
+	
+</layout>

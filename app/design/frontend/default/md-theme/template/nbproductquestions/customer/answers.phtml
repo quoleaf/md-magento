@@ -1,0 +1,46 @@
+<?php $answers = $this->getAnswers();?>
+<br/><br/>
+<div>
+	<h4><b><?php echo $this->__('Your Answers')?></b></h4>
+</div>
+<?php
+echo $this->getPagerHtml();
+if($answers->getSize()):?>
+	<table cellspacing="0" class="data-table linearize-table-large" id="attachments-table">
+		<thead>
+			<tr>
+				<th><?php echo $this->__('Product')?></th>
+				<th><?php echo $this->__('Questions')?></th>
+				<th><?php echo $this->__('Answers')?></th>
+				<th><?php echo $this->__('Status')?></th>
+				<th style="width:10%;"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($answers as $val):?>
+				<?php $question_id = $val->getProductQuestionsId();
+				$question = Mage::getModel('productquestions/questions')->load($question_id);
+				$product_id = $question->getProductId();
+				$obj = Mage::getModel('catalog/product');	
+				$_product = $obj->load($product_id);?>
+				<tr>
+					<td><a href="<?php echo $_product->getProductUrl(); ?>"><?php echo $_product->getName();?></a></td>
+					<td><?php echo $question->getQuestions(); ?></td>
+					<td><?php echo $this->makeClickableLinks($val->getAnswers());?></td>
+					<td>
+						<?php if($question->getStatus() == 'approved') {
+							echo $this->__('Approved');
+						} else {
+							echo $this->__('Pending');
+						} ?>
+					</td>
+					<td style="width:10%;"><a href="<?php echo Mage::getUrl('productquestions/account/viewans',array('question_id' => $question_id ));?>"><?php echo $this->__('View')?></a></td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<script type="text/javascript">decorateTable('attachments-table')</script>
+	<?php echo $this->getPagerHtml();?>			
+<?php else:?>
+	<p><?php echo $this->__('There are no answers.')?></p>
+<?php endif?>

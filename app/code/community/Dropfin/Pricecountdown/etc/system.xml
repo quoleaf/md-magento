@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Special Price Countdown
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+-->
+<config>
+    <tabs>
+        <dropfin translate="label">
+            <label>Dropfin</label>
+            <sort_order>150</sort_order>
+        </dropfin>
+    </tabs>
+    <sections>
+        <dropfin_pricecountdown translate="label">
+            <label>Special Price Countdown</label>
+            <tab>dropfin</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>20</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+
+                <configurations translate="label">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <enabled translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+
+                        <show_plp translate="label">
+                            <label>Show Clock in Product List Page</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_plp>
+
+                        <show_plp_title translate="label">
+                            <label>Show Clock Title</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <comment>Show Clock Title in Product List Page</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <show_plp>1</show_plp>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_plp_title>
+
+                        <plp_title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <comment>Title will be displayed in Product List Page</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <show_plp>1</show_plp>
+                                <show_plp_title>1</show_plp_title>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </plp_title>
+
+                        <clock_style_plp translate="label">
+                            <label>Clock Style</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>pricecountdown/style</source_model>
+                            <sort_order>5</sort_order>
+                            <comment>Clock Style for Product List Page</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <show_plp>1</show_plp>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </clock_style_plp>
+
+                        <show_pdp translate="label">
+                            <label>Show Clock in Product View Page</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_pdp>
+
+                        <show_pdp_title translate="label">
+                            <label>Show Clock Title</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>7</sort_order>
+                            <comment>Show Clock Title in Product View Page</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <show_pdp>1</show_pdp>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_pdp_title>
+
+                        <pdp_title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <comment>Title will be displayed in Product View Page</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <show_pdp>1</show_pdp>
+                                <show_pdp_title>1</show_pdp_title>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </pdp_title>
+
+                        <clock_style_pdp translate="label">
+                            <label>Clock Style</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>pricecountdown/style</source_model>
+                            <sort_order>9</sort_order>
+                            <comment>Clock Style for Product View Page</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <show_pdp>1</show_pdp>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </clock_style_pdp>
+
+                    </fields>
+                </configurations>
+
+            </groups>
+        </dropfin_pricecountdown>
+    </sections>
+</config>

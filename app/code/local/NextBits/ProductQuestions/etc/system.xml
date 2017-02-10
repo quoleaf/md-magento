@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<NextBits_Extensions translate="label" module="productquestions">
+			<label>NextBits - Extensions</label>
+			<sort_order>100</sort_order>
+		</NextBits_Extensions>
+	</tabs>
+	<sections>
+		<productquestions translate="label" module="productquestions">
+			<class>separator-top</class>
+			<label>Product Q &amp; A</label>
+			<tab>NextBits_Extensions</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>200</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>General Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label">
+							<label>Enable</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Activate Product Questions Module</comment>
+						</enabled>
+						<jquery>
+							<label>Enable jQuery</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</jquery>
+						<ask_questions translate="label">
+							<label>Who can ask questions from product page</label>
+							<frontend_type>select</frontend_type>
+							<source_model>productquestions/question</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</ask_questions>
+						<answers translate="label">
+							<label>Who can answer questions from product page</label>
+							<frontend_type>select</frontend_type>
+							<source_model>productquestions/answer</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</answers>
+						<approve_ans translate="label">
+							<label>Approve answer automatically</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</approve_ans>
+						<approve_que translate="label">
+							<label>Approve question automatically</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</approve_que>
+						<admin_email translate="label">
+							<label>Email Address</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+							<comment>Email address where you want to receive notification. If empty,no email is sent</comment>
+						</admin_email>
+						<admin_name translate="label">
+							<label> Admin Name</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</admin_name>
+						<send_notification_question>
+							<label>Notification send to admin and customer about new question</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</send_notification_question>
+						<notification_question>
+							<label>New Question Template</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_email_template</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<send_notification_question separator="|">
+									<value>1</value>
+								</send_notification_question>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</notification_question>
+						<send_notification_answer>
+							<label>Notification send to admin and customer about new answer</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</send_notification_answer>
+						<notification_answer>
+							<label>New Answer Template</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_email_template</source_model>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<send_notification_answer separator="|">
+									<value>1</value>
+								</send_notification_answer>
+								<enabled separator="|">
+									<value>1</value>
+								</enabled>
+							</depends>
+						</notification_answer>
+					</fields>
+				</general>
+			</groups>
+		</productquestions>
+	</sections>
+</config>

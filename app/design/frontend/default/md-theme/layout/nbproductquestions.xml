@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<layout>
+	<catalog_product_view translate="label">
+		<reference name="head">
+			<action method="addItem" ifconfig="productquestions/general/enabled">
+				<type>js_css</type>
+				<script>nbproductquestions/frontend.css</script>
+			</action>
+			<action method="addItem" ifconfig="productquestions/general/enabled">
+				<type>js_css</type>
+				<script>nbproductquestions/font-awesome.min.css</script>
+			</action>
+			<action method="addItem" ifconfig="productquestions/general/enabled">
+				<type>js_css</type>
+				<script>nbproductquestions/font-awesome.css</script>
+			</action>
+		</reference>
+		<reference name="product.info">
+			<block type="productquestions/product_view_productquestions" name="product_questions">
+				<action method="setTemplate" ifconfig="productquestions/general/enabled"><template>nbproductquestions/catalog/product/view/productquestions.phtml</template></action>
+				<action method="addToParentGroup"><group>detailed_info</group></action>
+				<action method="setTitle" translate="value"><value>Product Questions &amp; Answers</value></action>
+			</block> 
+		</reference>
+	</catalog_product_view>
+	
+	<customer_account>
+		<reference name="customer_account_navigation">
+			<action method="addLink" module="productquestions" ifconfig="productquestions/general/enabled"><name>product_questions</name><path>productquestions/account/list/</path><label>Product Q &amp; A</label></action>
+		</reference>
+	</customer_account>
+	
+	<productquestions_account_list>
+		<update handle="customer_account"/>
+		<reference name="content">
+			<block type="productquestions/customer_productquestionlist" name="productquestions.customer.list" >
+				<action method="setTemplate" ifconfig="productquestions/general/enabled"><template>nbproductquestions/customer/questions.phtml</template></action>
+			</block> 
+			<block type="productquestions/customer_productanswerlist" name="productanswers.customer.list" >
+				<action method="setTemplate" ifconfig="productquestions/general/enabled"><template>nbproductquestions/customer/answers.phtml</template></action>
+			</block> 
+		</reference>	
+	</productquestions_account_list>
+	<productquestions_account_view>
+		<update handle="customer_account"/>
+		<reference name="head">
+			<action method="addItem" ifconfig="productquestions/general/enabled">
+				<type>js_css</type>
+				<script>nbproductquestions/frontend.css</script>
+			</action>
+		</reference>
+		<reference name="content">
+			<block type="productquestions/customer_questionview" name="productquestions.customer.view" >
+				<action method="setTemplate" ifconfig="productquestions/general/enabled"><template>nbproductquestions/customer/view.phtml</template></action>
+			</block> 
+		</reference>
+	</productquestions_account_view>
+	<productquestions_account_viewans>
+		<update handle="customer_account"/>
+		<reference name="head">
+			<action method="addItem" ifconfig="productquestions/general/enabled">
+				<type>js_css</type>
+				<script>nbproductquestions/frontend.css</script>
+			</action>
+		</reference>
+		<reference name="content">
+			<block type="productquestions/customer_answerview" name="productquestions.customer.viewans" >
+				<action method="setTemplate" ifconfig="productquestions/general/enabled"><template>nbproductquestions/customer/viewans.phtml</template></action>
+			</block> 
+		</reference>
+	</productquestions_account_viewans>
+</layout>

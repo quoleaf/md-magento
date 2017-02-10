@@ -1,0 +1,56 @@
+<?php $questions = $this->getQuestions();?>
+<div class="page-title">
+	<h2><?php echo $this->__('Product Questions & Answers')?></h2>
+</div>
+<div>
+	<h4><b><?php echo $this->__('Your Questions')?></b></h4>
+</div>
+<?php
+echo $this->getPagerHtml();
+if($questions->getSize()):?>
+	<table cellspacing="0" class="data-table linearize-table-large" id="attachment-table">
+		<thead>
+			<tr>
+				<th><?php echo $this->__('Product')?></th>
+				<th><?php echo $this->__('Questions')?></th>
+				<th><?php echo $this->__('Status')?></th>
+				<th><?php echo $this->__('Is Answered?')?></th>
+				<th style="width:10%;"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($questions as $val):?>
+				<?php $question_id = $val->getProductQuestionsId();
+				$ans = Mage::getModel('productquestions/answers')->getCollection()
+					->addFieldToFilter('product_questions_id',$question_id)
+					->addFieldToFilter('status','Approved');
+				$product_id = $val->getProductId();
+				$obj = Mage::getModel('catalog/product');
+				$_product = $obj->load($product_id);?>
+				<tr>
+					<td><a href="<?php echo $_product->getProductUrl(); ?>"><?php echo $_product->getName();?></a></td>
+					<td><?php echo $val->getQuestions() ?></td>
+					<td>
+						<?php if($val->getStatus() == 'approved') {
+							echo $this->__('Approved');
+						} else {
+							echo $this->__('Pending');
+						} ?>
+					</td>
+					<td>
+						<?php if(count($ans)):?>
+							<?php echo "Yes (" . count($ans) . " answer)";?>
+						<?php else:?>
+							<?php echo "Not yet";?>
+						<?php endif;?>
+					</td>
+					<td style="width:10%;"><a href="<?php echo Mage::getUrl('productquestions/account/view',array('question_id' => $question_id ));?>"><?php echo $this->__('View')?></a></td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<script type="text/javascript">decorateTable('attachment-table')</script>
+	<?php echo $this->getPagerHtml();?>			
+<?php else:?>
+	<p><?php echo $this->__('There are no questions.')?></p>
+<?php endif?>

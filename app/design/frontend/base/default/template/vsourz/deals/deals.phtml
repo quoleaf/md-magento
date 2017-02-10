@@ -1,0 +1,46 @@
+<?php $_products = $this->getProducts(); ?>
+<?php $_items = $this->getProductCount(); ?>
+<div class="deal-product">
+<div class="block_head_center"><h3><?php echo $this->getTitle(); ?></h3></div>
+<div class="container-slider">
+<div id="" class="hot-deals list list-<?php echo Mage::getStoreConfig('deals/settings/productcount')?>">
+	 <?php foreach($_products as $_product):?>
+	 <div class="item">
+		<div class="item-inner">
+		<div class="item-img">
+		<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>" class="product-image">
+			<img class="main-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"/>
+		</a>
+		</div>
+		<div class="item-info">
+		<div class="info-inner">
+		<div class="item-title"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>"><?php echo $this->escapeHtml($_product->getName()) ?></a></div>
+		<?php echo $this->getPriceHtml($_product, true, '-new') ?>
+		<div class="discount">
+        <?php echo 'Discount: <span>'.$this->getDiscountPer($_product).'</span>,';?>
+  		<?php echo 'You save: <span>'.$this->getDiscountAmt($_product).'</span>'; ?>
+        </div>
+		<?php echo $this->getReviewsSummaryHtml($_product, 'short',true) ?>
+			<div class="actions">
+                    <?php if($_product->isSaleable()): ?>
+                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__('Add to Cart') ?></button>
+                    <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                    <?php endif; ?>
+                    <ul class="add-to-links">
+                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <li><a href="<?php echo $this->getAddToWishlistUrl($_product) ?>" class="link-wishlist" title="Add to Wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                        <?php endif; ?>
+                        <?php if ($_compareUrl = $this->getAddToCompareUrl($_product)): ?>
+                            <li><a href="<?php echo $_compareUrl ?>" class="link-compare" title="Add to Compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                        <?php endif; ?>
+                    </ul>
+            </div>
+	 	</div>
+		</div>
+		</div>
+	 </div>	
+	 <?php endforeach; ?>
+</div>
+</div>
+</div>

@@ -1,0 +1,338 @@
+<?php 
+Mage::getSingleton('customer/session', array('name'=>'frontend'));
+$sessionCustomer = Mage::getSingleton("customer/session");
+$question = Mage::helper("productquestions")->whoAskQuestion();
+$answer = Mage::helper("productquestions")->whoCanAnswer();
+?>
+<?php $productId = $this->getProduct()->getId();
+$obj = Mage::getModel('catalog/product');
+		$_product = $obj->load($productId);
+		$prdurl=$_product->getProductUrl(); 
+		$url=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK);
+		$_prdurl=explode($url,$prdurl); 
+		$sort = $this->getRequest()->getParam('sort');
+ ?>
+<div class="product-collateral">
+	<div class="add-questions">
+		<?php if($question == 2):?>
+			<?php if($sessionCustomer->isLoggedIn()):?> 
+				<input type="button" class="button add-question " value	="Ask Question"/>
+			<?php endif;?>
+		<?php else:?>
+			<input type="button" class="button add-question " value	="Ask Question"/>
+		<?php endif;?>
+		<p style="float:right;margin-left:40px;"><strong><?php echo $this->__('Sort By:')?></strong>&nbsp;      
+			<select class="sort-select" name="sort_questions" id="sortque" onchange="myFunction()">
+				<?php if($sort == 'new'):?>
+					<option value="new" selected="selected"><?php echo $this->__('Newest First')?></option>
+				<?php else:?>
+					<option value="new"><?php echo $this->__('Newest First')?></option>
+				<?php endif;?>
+				<?php if($sort == 'old'):?>
+					<option value="old" selected="selected"><?php echo $this->__('Oldest First')?></option>
+				<?php else:?>
+					<option value="old"><?php echo $this->__('Oldest First')?></option>
+				<?php endif;?>
+			</select>
+        </p>
+		<p style="float:right; margin-right: 150px">   
+			<input type="text" value="" placeholder="Search within this product's Question" class="search-box input-text" id="searchtext" name="keywords">
+			&nbsp;&nbsp;
+			<button style="border:0 !important;" class="button" type="button" value="search" title="Search" onclick="submitFrm()" id="searchque"><span><?php echo $this->__('Search')?></span></button>
+		</p>
+	</div>
+	<div style="clear: both;"></div>
+	<div class="question-form" style="display:none;">
+		<form id="question_form" class="form scaffold-form" method="post" action="<?php echo Mage::getUrl('productquestions/productquestions/savequestions',array('product_id'=>$productId));?>" >
+			<div class="fieldset">
+				<input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey()?>"/>
+				<h2 class="legend"><?php echo $this->__('Ask Question')?></h2>
+				<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+				<ul class="form-list">
+					<li class="fields">
+						<div class="authors">
+							<?php if($sessionCustomer->isLoggedIn()):?> 
+								<div class="field">
+									<label for="author_name" class="required"><?php echo $this->__('Name') ?><em><?php echo $this->__('*') ?></em></label>
+									<div class="input-box">
+										<input class="input-text required-entry " id="author_name" type="text" name="author_name" maxlength="255" value="<?php echo $sessionCustomer->getCustomer()->getName();?>">
+									</div>
+								</div>
+								<div class="field">
+									<label for="author_mail" class="required"><?php echo $this->__('Email') ?><em><?php echo $this->__('*') ?></em></label>
+									<div class="input-box">
+										<input class="input-text required-entry " id="author_mail" type="text" name="author_mail"  maxlength="255" value="<?php echo $sessionCustomer->getCustomer()->getEmail();?>">
+									</div>
+								</div>
+								<input type="hidden" id="asked_from" name="asked_from" value="customer"/>
+							<?php else:?>
+								<div class="field">
+									<label for="author_name" class="required"><?php echo $this->__('Name') ?><em><?php echo $this->__('*') ?></em></label>
+									<div class="input-box">
+										<input class="input-text required-entry " id="author_name" type="text" name="author_name" maxlength="255">
+									</div>
+								</div>
+								<div class="field">
+									<label for="author_mail" class="required"><?php echo $this->__('Email') ?><em><?php echo $this->__('*') ?></em></label>
+									<div class="input-box">
+										<input class=" input-text required-entry " id="author_mail" type="text" name="author_mail"  maxlength="255">
+									</div>
+								</div>
+								<input type="hidden" id="asked_from" name="asked_from" value="guest"/>
+							<?php endif;?>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="question_content" class="required"><?php echo $this->__('Question') ?><em><?php echo $this->__('*') ?></em></label>
+							<div class="input-box">
+								<textarea class=" input-text required-entry " name="content" id="question_content" title="Question Content"></textarea>
+							</div>
+						</div> 
+					</li>
+					<li class="control">
+						<input type="checkbox" name="is_private" class="checkbox" id="question_visibility"/><b><label for="question_visibility"><?php echo $this->__('Is Question Private?') ?></label></b>
+					</li>
+				</ul>
+				<div class=" buttons-set">
+					<?php if(!Mage::helper('productquestions')->approveQueAutomatically()):?>
+						<p class="back-link"><?php echo $this->__('All questions will be displayed after moderation.') ?></p>
+					<?php endif;?>
+					<button type="submit" class="button" title="Submit Question"><span><span><?php echo $this->__('Submit Question') ?></span></span></button>
+				</div>
+			</div>
+		</form>
+		
+		<script type="text/javascript">
+			var myForm = new VarienForm('question_form');
+		</script>
+	</div>
+	<script>
+		function submitFrm(){
+				var Searchtxt = document.getElementById("searchtext").value;
+				window.location = '<?php echo $this->getBaseUrl() . $_prdurl[1];?>' +"?search=" + Searchtxt;
+		}
+		
+		function myFunction() {
+			var sort = document.getElementById("sortque").value;
+			window.location = '<?php echo $this->getBaseUrl() . $_prdurl[1];?>' +"?sort=" + sort;
+		}
+		jQuery(document).ready(function(){
+			jQuery(".add-question").click(function(){
+				if(jQuery(".question-form").is(':visible')){
+					jQuery(".question-form").hide();
+					jQuery('.add-question').val('Ask Question');
+				}
+				else{
+					jQuery(".question-form").show();
+					jQuery(".add-question").val('Close');
+				}
+			});
+		});
+		function setLike(id,idtype)	
+		{	
+			jQuery.ajax({
+				type: 'POST',
+				url: "<?php echo Mage::getUrl('productquestions/productquestions/setLike');?>",
+				data: {qaId: id,customerId: '<?php echo Mage::getSingleton("customer/session")->getCustomer()->getId();?>',typeId: idtype },
+				dataType: 'json',
+				success: function(data) {	
+					var likeId = '#likecount_'+data.type+'_'+id;
+					var dislikeId = '#dislikecount_'+data.type+'_'+id;
+					jQuery(likeId).html(data.like);
+					jQuery(dislikeId).html(data.dislike);
+				}
+			});
+		}
+		function setDisLike(id,idtype)	
+		{	
+			jQuery.ajax({
+				type: 'POST',
+				url: "<?php echo Mage::getUrl('productquestions/productquestions/setDisLike');?>",
+				data: {qaId: id,customerId: '<?php echo Mage::getSingleton("customer/session")->getCustomer()->getId();?>',typeId: idtype},
+				dataType: 'json',
+				success: function(data) {		
+					var likeId = '#likecount_'+data.type+'_'+id;
+					var dislikeId = '#dislikecount_'+data.type+'_'+id;
+					jQuery(likeId).html(data.like);
+					jQuery(dislikeId).html(data.dislike);
+				}
+			});
+
+		}
+	</script>
+	<?php $search = $this->getRequest()->getParam('search');
+		$conn = $this->getQuestions($productId);
+		if($sort == 'old'){
+			$conn = $conn->setOrder('product_questions_id','ASC');
+		}
+		else {
+			$conn = $conn->setOrder('product_questions_id','DESC');
+		}
+	
+		$conn->getSelect()->where("questions like '%$search%'");
+		$conn->load()->getData();?>
+	<?php if(count($conn)):?>		
+		<?php foreach($conn as $val):?>
+			<?php 
+			$id =  $val->getProductQuestionsId();
+			$cust_id = $val->getCustomerId();
+			$customerObj  = Mage::getModel('customer/customer')->load($cust_id);
+			$answers = $this->getAnswers($id);
+			$que = 'question';
+			$type = 'answer';
+			?>
+			<div id="queans">
+				<div class="questions">
+					<img src='<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS).'nbproductquestions/arrow_down.png';?>' width ='20' height='20' class='img' id="que_but_<?php echo $id?>"/>
+					<b><?php echo $this->__('Questions: ')?> </b><?php echo $val->getQuestions(); ?>
+					<?php if($sessionCustomer->isLoggedIn()):?> 
+						<div class="q-a">
+							<a class="tooltips" id="like_question_<?php echo $val['product_questions_id']?>" onclick="setLike('<?php echo $val['product_questions_id']?>','<?php echo $que ?>')"><i class="fa fa-thumbs-up"></i></a>
+							<span class="likecount" id="likecount_question_<?php echo $val['product_questions_id']?>"><?php echo $this->getQALikes($val['product_questions_id'],$que)?></span>
+							
+							<a class="tooltips" id="dislike_question_<?php echo $val['product_questions_id']?>" onclick="setDisLike('<?php echo $val['product_questions_id']?>','<?php echo $que ?>')"><i class="fa fa-thumbs-down"></i></a>	
+							<span class="likecount" id="dislikecount_question_<?php echo $val['product_questions_id']?>"><?php echo $this->getQADisLikes($val['product_questions_id'],$que)?></span>
+						</div>
+					<?php endif;?>
+				</div>
+				<script>
+					jQuery( "#que_but_<?php echo $id?>" ).click(function() {
+						if(document.getElementById('que_but_<?php echo $id?>').src == '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS).'nbproductquestions/arrow_down.png';?>') {
+							jQuery('#que_but_<?php echo $id?>').attr('src','<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS).'nbproductquestions/arrow_right.png';?>');
+						} else {
+							jQuery('#que_but_<?php echo $id?>').attr('src','<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS).'nbproductquestions/arrow_down.png';?>');
+						}
+					  
+						
+						 jQuery( "#ans_<?php echo $id?>" ).toggle( "slow" );
+					});
+				</script>
+				<div class="answers" id='ans_<?php echo $id?>'>
+					<div class="que-by">
+						<?php echo $this->__('Question By:')?> <?php echo $val->getData('author_name'); ?> <?php echo $this->__('on') ?> <?php echo date('M j Y g:i A', strtotime($val->getCreatedAt()));?>
+					</div>
+					<?php if(count($answers)):?>
+						<?php foreach($answers as $ans):?>
+							<div class="ans">
+								<?php if($ans->getAnswers()):?>
+									<?php echo $this->makeClickableLinks($ans->getAnswers());?>
+									<?php if($sessionCustomer->isLoggedIn()):?> 
+										<div class="q-a">
+											<a class="tooltips" id="like_answer_<?php echo $ans['answers_id']?>" onclick="setLike('<?php echo $ans['answers_id']?>','<?php echo $type ?>')"><i class="fa fa-thumbs-up"></i></a>
+											<span class="likecount" id="likecount_answer_<?php echo $ans['answers_id']?>"><?php echo $this->getQALikes($ans['answers_id'],$type)?></span>
+											
+											<a class="tooltips" id="dislike_answer_<?php echo $ans['answers_id']?>" onclick="setDisLike('<?php echo $ans['answers_id']?>','<?php echo $type ?>')"><i class="fa fa-thumbs-down"></i></a>
+											<span class="likecount" id="dislikecount_answer_<?php echo $ans['answers_id']?>"><?php echo $this->getQADisLikes($ans['answers_id'],$type)?></span>
+										</div>
+									<?php endif;?>
+									<div class="ans-by">
+										<?php if($ans->getAnswersFrom() == 'admin'):?>
+											<?php echo $this->__('Answer By:') ?> <?php echo $this->__('Admin');?> <?php echo $this->__('on') ?> <?php echo date('M j Y g:i A', strtotime($ans->getCreatedAt()));?>
+										<?php else:?>
+											<?php echo $this->__('Answer By:') ?> <?php echo $ans->getAuthorName();?> <?php echo $this->__('on') ?> <?php echo date('M j Y g:i A', strtotime($ans->getCreatedAt()));?>
+										<?php endif;?>
+									</div>
+								<?php endif;?>
+							</div>
+						<?php endforeach;?>
+					<?php else:?>
+						<div class="no-ans"><?php echo $this->__('No answers yet. Be the first to answers the question!') ?></div>
+					<?php endif;?>
+					<?php if($answer == 2):?>
+						<?php if($sessionCustomer->isLoggedIn()):?> 
+							<div class="add-answers" >
+								<input type="button" id="add_answer_<?php echo $id;?>" class="button add-answer" value="Add Answer"/>
+							</div>
+						<?php endif;?>
+					<?php elseif($answer == 1):?>
+						<div class="add-answers" >
+							<input type="button" id="add_answer_<?php echo $id;?>" class="button add-answer" value="Add Answer"/>
+						</div>
+					<?php else:?>
+						<div class="add-answers" style="display:none;">
+							<input type="button" id="add_answer_<?php echo $id;?>" class="button add-answer" value="Add Answer"/>
+						</div>
+					<?php endif;?>
+					<div class="answer-form" id="answer_form_<?php echo $id;?>" style="display:none">
+						<form id="answer_form_<?php echo $id;?>" class="form" method="post" action="<?php echo Mage::getUrl('productquestions/productquestions/saveanswers',array('product_questions_id'=>$id));?>">
+							<div class="fieldset">
+								<input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey()?>" />
+								<h2 class="legend"><?php echo $this->__('Add Answer') ?></h2>
+								<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+								<ul class="form-list">
+									<li class="fields">
+										<div class="authors">
+											<?php if($sessionCustomer->isLoggedIn()):?> 
+												<div class="field">
+													<label for="author_name_<?php echo $id;?>" class="required"><?php echo $this->__('Name') ?><em><?php echo $this->__('*') ?></em></label>
+													<div class="input-box">
+														<input class="input-text required-entry " id="author_name_<?php echo $id;?>" type="text" name="author_name" maxlength="255" value="<?php echo $sessionCustomer->getCustomer()->getName();?>">
+													</div>
+												</div>
+												<div class="field">
+													<label for="author_mail_<?php echo $id;?>" class="required"><?php echo $this->__('Email') ?><em><?php echo $this->__('*') ?></em></label>
+													<div class="input-box">
+														<input class=" input-text required-entry " id="author_mail_<?php echo $id;?>" type="text" name="author_mail" maxlength="255" value="<?php echo $sessionCustomer->getCustomer()->getEmail();?>">
+													</div>
+												</div>
+												<input type="hidden" id="answers_from" name="answers_from" value="customer"/>
+											<?php else:?>
+												<div class="field">
+													<label for="author_name_<?php echo $id;?>" class="required"><?php echo $this->__('Name') ?>	<em><?php echo $this->__('*') ?></em></label>
+													<div class="input-box">
+														<input class=" input-text required-entry " id="author_name_<?php echo $id;?>" type="text" name="author_name" maxlength="255">
+													</div>
+												</div>
+												<div class="field">
+													<label for="author_mail_<?php echo $id;?>" class="required"><?php echo $this->__('Email') ?><em><?php echo $this->__('*') ?></em></label>
+													<div class="input-box">
+														<input class=" input-text required-entry " id="author_mail_<?php echo $id;?>" type="text" name="author_mail" maxlength="255">
+													</div>
+												</div>
+												<input type="hidden" id="answers_from" name="answers_from" value="guest"/>
+											<?php endif;?>
+										</div>
+									</li>
+									<li>
+										<div>
+											<label for="answer_content_<?php echo $id;?>" class="required"><?php echo $this->__('Answer') ?><em><?php echo $this->__('*') ?></em></label>
+											<div class="input-box">
+												<textarea class="input-text required-entry " name="content" id="answer_content_<?php echo $id;?>" title="Answer Content"></textarea>
+											</div>
+										</div> 
+									</li>
+								</ul>
+								<div class=" buttons-set">
+									<?php if(!Mage::helper('productquestions')->approveAnsAutomatically()):?>
+										<p class="back-link"><?php echo $this->__('All answers will be displayed after moderation.') ?></p>
+									<?php endif;?>
+									<button type="submit" class="button" title="Send Answer"><span><span><?php echo $this->__('Submit Answer') ?></span></span></button>
+								</div>
+							</div>
+						</form>
+						<script type="text/javascript">
+							var myForm1= new VarienForm('answer_form_<?php echo $id;?>');
+						</script>
+					</div>
+					<script>	
+						jQuery(document).ready(function(){
+							jQuery("#add_answer_<?php echo $id;?>").click(function(){
+								if(jQuery("#answer_form_<?php echo $id;?>").is(':visible')){
+									jQuery("#answer_form_<?php echo $id;?>").hide();
+									jQuery('#add_answer_<?php echo $id;?>').val('Add Answer');
+								}
+								else{
+									jQuery("#answer_form_<?php echo $id;?>").show();
+									jQuery("#add_answer_<?php echo $id;?>").val('Close');
+								}
+							});
+						}); 
+					</script>
+				</div>
+			</div>
+		<?php endforeach;?> 
+	<?php else:?>
+		<div><?php echo $this->__('No questions yet. Be the first to ask the question!') ?></div>
+	<?php endif;?>
+</div>

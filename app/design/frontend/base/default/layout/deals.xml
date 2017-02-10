@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addItem" ifconfig="deals/settings/loadjs"><type>skin_js</type><name>js/deals/jquery-1.10.2.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/deals/jquery.plugin.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/deals/jquery.countdown.min.js</name></action>
+			<action method="addItem" ifconfig="deals/settings/loadcarousel"><type>skin_js</type><name>js/deals/owl.carousel.min.js</name></action>
+			<action method="addItem" ifconfig="deals/settings/loadcarousel"><type>skin_css</type><name>css/deals/owl.carousel.css</name></action>
+			<action method="addItem" ifconfig="deals/settings/loadcarousel"><type>skin_css</type><name>css/deals/owl.transitions.css</name></action>
+			<action method="addItem" ifconfig="deals/settings/loadcarousel"><type>skin_css</type><name>css/deals/owl.theme.css</name></action>
+			<action method="addItem"><type>skin_css</type><name>css/deals/deals.css</name></action>
+		</reference>
+	</default>
+</layout>

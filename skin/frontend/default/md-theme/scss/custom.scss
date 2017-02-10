@@ -8110,10 +8110,13 @@ body.catalog-product-view {
                                 }
                             }
 
-                            &.vid {
-                                display: flex;
-                                align-items: center;
-                                width: 190px;
+                            &.vid {		
+    							width: 190px;
+
+    							.inner {
+    								position: relative;
+    								top: 15px;
+    							}
                             }
 
                             img {

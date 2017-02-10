@@ -1,0 +1,28 @@
+<?xml version="1.0"?> 
+<config>
+    <modules>
+        <MD_API>
+            <version>0.0.1</version>
+        </MD_API>
+    </modules>
+    <global>
+        <models>
+            <md_api>
+                <class>MD_API_Model</class>
+            </md_api>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <sales_order_collection_load_after>
+                <observers>
+                    <md_api>
+                        <type>singleton</type>
+                        <model>md_api/observer</model>
+                        <method>collectRewardPoints</method>
+                    </md_api>
+                </observers>
+            </sales_order_collection_load_after>
+        </events>
+    </adminhtml>
+</config>    

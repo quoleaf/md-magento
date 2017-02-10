@@ -8,7 +8,7 @@ class MD_API_Model_Observer{
              $customer = Mage::getModel('rewardpoints/customer')->load($customerId);
              //Zend_Debug::dump($customer->getName());
              $md_rewards = Mage::getModel('rewardpoints/order')->load($customerId);
-			 Zend_Debug::dump($order->getMwRewardpointDiscountShow());
+			 //Zend_Debug::dump($order->getMwRewardpointDiscountShow());
              $order->setData('mdfactor_reward_points', $order->getMwRewardpointDiscountShow()); 
          }
 

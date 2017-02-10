@@ -7958,7 +7958,7 @@ body.catalog-product-view {
         }
     }
 
-    #popup_overlay, .box-description, .box-reviews, .box-tags, .no-rating, .link-wishlist {
+    #popup_overlay, .box-description, .box-reviews, .box-tags, .no-rating, .link-wishlist, .add-to-links {
       display: none;
     }
 
@@ -8098,7 +8098,7 @@ body.catalog-product-view {
                             margin: 4px;
                             padding: 5px;
                             border: 3px solid transparent;
-                            width: 120px;
+                            width: 150px;
                             height: 150px;
                             cursor: pointer;
 

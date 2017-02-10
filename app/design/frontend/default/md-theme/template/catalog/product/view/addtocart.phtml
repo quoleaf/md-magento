@@ -27,16 +27,56 @@
 <?php $_product = $this->getProduct(); ?>
 <?php $buttonTitle = Mage::helper('core')->quoteEscape($this->__('Add to Cart')); ?>
 <?php if($_product->isSaleable()): ?>
-   <div class="AddToCartWrapper">
-        <button href="#" class="buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
-            <span>
-                <?php echo $this->__('BUY NOW') ?>
-                <?php echo $this->getChildHtml('', true, true) ?>    
-            </span>
-        </button>
-    </div>
+   
+
+<div class="top">
+                    <strong>
+                    <?php echo $this->__('QTY:') ?> </strong>
+                    <div class="inner">
+                        <div class="qtyWrapper">
+                            <div class="custom-qty">
+                                <input class="button-arrow button-down" type="button" value='-'>
+                                <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->
+                                __('Qty') ?>" class="input-text qty"> <input class="button-arrow button-up" type="button" value='+'>
+                            </div>
+                        </div>
+                        <div class="BuyNowWrapper">
+                            <div class="AddToCartWrapper">
+                                <button href="#" class="buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
+                                    <span>
+                                        <?php echo $this->__('BUY NOW') ?>
+                                        <?php echo $this->getChildHtml('', true, true) ?>    
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="RewardProductWrapper">
+                        <?php echo Mage::helper('core/mwrewardpoints')->
+                        pointsProductDetailRewardPoints($_product); ?> <?php echo Mage::helper('core/mwrewardpoints')->
+                        showFacebookRewardPoints(); ?> <?php echo Mage::helper('core/mwrewardpoints')->
+                        showInvitationRewardPoints(); ?>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <?php if (!$this->
+                    hasOptions()):?>
+                    <div class="add-to-box">
+                        <?php echo $this->
+                         getChildHtml('addto') ?>
+                    </div>
+                    <?php elseif (!$_product->
+                    isSaleable()): ?>
+                    <div class="add-to-box">
+                        <?php echo $this->
+                         getChildHtml('addto') ?> <?php echo $this->
+                         getChildHtml('sharing') ?>
+                    </div>
+                    <?php endif; ?>
+                </div>
 
     <div class="AwardWrapper">
         <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&amp;direction=desc#reviews" target="_BLANK" class="award"></a>
     </div>
 <?php endif; ?>
+

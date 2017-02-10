@@ -23,43 +23,39 @@
  * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-
 /**
  * Product media data template
  *
  * @see Mage_Catalog_Block_Product_View_Media
  */
-
 /* @var $this Mage_Catalog_Block_Product_View_Media */
 ?>
-<?php
-    $_product = $this->getProduct();
-    $_helper = $this->helper('catalog/output');
-?>
-
-<div class="bigImage">
-    <div class="inner">
-        <div class="pic">
-            <img
-             src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"
-             alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
-             title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
+<?php $_product = $this->getProduct(); $_helper = $this->helper('catalog/output'); ?>
+<div class="gallery">
+    <div class="images">
+        <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?> 
+        <?php if ($this->isGalleryImageVisible($_image)): ?>
+        <div class="image">
+            <div class="content">
+                <div data-zoom="<?php echo $this->getGalleryImageUrl($_image); ?>" class="zoom"> 
+                    <img src="<?php echo $this->getGalleryImageUrl($_image); ?>" />
+                </div>
+            </div>
         </div>
+        <?php endif; ?>
+        <?php $i++; endforeach; ?>
+
+        <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getvideo_base_image(), 'video_base_image') ?>
+    </div>
+    <div class="thumbs">
+        <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+        <div class="thumb">
+            <?php if ($this->
+            isGalleryImageVisible($_image)): ?> <img src="<?php echo $this->getGalleryImageUrl($_image); ?>" /> <?php endif; ?>
+        </div>
+        <?php $i++; endforeach; ?>
+
+        <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getvideo_thumbnail(), 'video_thumbnail') ?>
+                
     </div>
 </div>
-                        
-<div class="thumbnails">
-<ul>
-    <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
-    <li>
-        <div class="pic">
-            <?php if ($this->isGalleryImageVisible($_image)): ?>
-            <img src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
-            <?php endif; ?>
-        </div>    
-    </li>
-    <?php $i++; endforeach; ?>
-</ul>
-</div>
-<?php echo $this->getChildHtml('after'); ?>

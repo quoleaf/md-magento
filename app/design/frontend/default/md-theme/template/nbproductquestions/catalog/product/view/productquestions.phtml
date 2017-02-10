@@ -14,6 +14,10 @@ $obj = Mage::getModel('catalog/product');
  ?>
 <div class="product-collateral">
 	<div class="add-questions">
+		<p class="QASearchWrapper" style="width:100%;">   
+			<input type="text" value="" placeholder="Search within this product's Question" class="search-box input-text" id="searchtext" name="keywords">
+			<button style="border:0 !important;" class="button" type="button" value="search" title="Search" onclick="submitFrm()" id="searchque"><span><?php echo $this->__('Search')?></span></button>
+		</p>
 		<?php if($question == 2):?>
 			<?php if($sessionCustomer->isLoggedIn()):?> 
 				<input type="button" class="button add-question " value	="Ask Question"/>
@@ -35,11 +39,11 @@ $obj = Mage::getModel('catalog/product');
 				<?php endif;?>
 			</select>
         </p>
-		<p style="float:right; margin-right: 150px">   
+		<!-- <p style="float:right; margin-right: 150px">   
 			<input type="text" value="" placeholder="Search within this product's Question" class="search-box input-text" id="searchtext" name="keywords">
 			&nbsp;&nbsp;
-			<button style="border:0 !important;" class="button" type="button" value="search" title="Search" onclick="submitFrm()" id="searchque"><span><?php echo $this->__('Search')?></span></button>
-		</p>
+			<button style="border:0 !important;" class="button" type="button" value="search" title="Search" onclick="submitFrm()" id="searchque"><span><?php// echo $this->__('Search')?></span></button>
+		</p> -->
 	</div>
 	<div style="clear: both;"></div>
 	<div class="question-form" style="display:none;">

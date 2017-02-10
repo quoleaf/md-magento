@@ -17,6 +17,15 @@
         </page>
         <page>
             <layouts> 
+                <sales module="page" translate="label">
+                    <label>Sales</label>
+                    <template>page/sales.phtml</template>
+                    <layout_handle>sales</layout_handle>
+                </sales> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
                 <landingpage module="page" translate="label">
                     <label>MD Landingpage</label>
                     <template>page/md-landingpage.phtml</template>

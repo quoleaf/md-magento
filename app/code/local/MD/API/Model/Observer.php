@@ -5,10 +5,11 @@ class MD_API_Model_Observer{
 
          foreach ($orderCollection as $order) {
              $customerId = $order->getCustomerId();
-             //$customer = Mage::getModel('customer/customer')->load($customerId);
+             $customer = Mage::getModel('rewardpoints/customer')->load($customerId);
              //Zend_Debug::dump($customer->getName());
              $md_rewards = Mage::getModel('rewardpoints/order')->load($customerId);
-             $order->setData('mdfactor_reward_points', $md_rewards->mw_rewardpoint_discount); 
+			 Zend_Debug::dump($order->getMwRewardpointDiscountShow());
+             $order->setData('mdfactor_reward_points', $order->getMwRewardpointDiscountShow()); 
          }
 
          return $this;

@@ -7923,7 +7923,7 @@ body.catalog-product-view {
 	#topBar .info {
 		font-weight: bold;
 	}
-	
+
 	#topNavi {
 		ul.navi {
 			li {
@@ -8147,6 +8147,7 @@ body.catalog-product-view {
             }
 
             .productIntro {
+            	width: 60%;
 
             	@media only screen and (max-width : 845px) {
             		width: 100%;
@@ -8502,6 +8503,10 @@ body.catalog-product-view {
                     transform: scale(1);
                     opacity: 1;
                 }
+            }
+
+            .box-collateral.box-additional {
+            	display: none;
             }
 
             .QASearchWrapper {

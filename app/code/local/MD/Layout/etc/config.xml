@@ -44,11 +44,65 @@
         </page>
         <page>
             <layouts> 
+                <mdhairlossveronelandingpagered module="page" translate="label">
+                    <label>MD Hairloss Version One Landing Page (RED)</label>
+                    <template>page/md-hairloss-version-one-landingpage-red.phtml</template>
+                    <layout_handle>mdhairlossveronelandingpagered</layout_handle>
+                </mdhairlossveronelandingpagered> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairlossveronelandingpageyellow module="page" translate="label">
+                    <label>MD Hairloss Version One Landing Page (YELLOW)</label>
+                    <template>page/md-hairloss-version-one-landingpage-yellow.phtml</template>
+                    <layout_handle>mdhairlossveronelandingpageyellow</layout_handle>
+                </mdhairlossveronelandingpageyellow> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairlossveronelandingpageblue module="page" translate="label">
+                    <label>MD Hairloss Version One Landing Page (BLUE)</label>
+                    <template>page/md-hairloss-version-one-landingpage-blue.phtml</template>
+                    <layout_handle>mdhairlossveronelandingpageblue</layout_handle>
+                </mdhairlossveronelandingpageblue> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
                 <mdhairlossvertwolandingpage module="page" translate="label">
                     <label>MD Hairloss Version Two Landing Page</label>
                     <template>page/md-hairloss-version-two-landingpage.phtml</template>
                     <layout_handle>mdhairlossvertwolandingpage</layout_handle>
                 </mdhairlossvertwolandingpage> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairlossvertwolandingpagered module="page" translate="label">
+                    <label>MD Hairloss Version Two Landing Page (RED)</label>
+                    <template>page/md-hairloss-version-two-landingpage-red.phtml</template>
+                    <layout_handle>mdhairlossvertwolandingpagered</layout_handle>
+                </mdhairlossvertwolandingpagered> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairlossvertwolandingpageyellow module="page" translate="label">
+                    <label>MD Hairloss Version Two Landing Page (YELLOW)</label>
+                    <template>page/md-hairloss-version-two-landingpage-yellow.phtml</template>
+                    <layout_handle>mdhairlossvertwolandingpageyellow</layout_handle>
+                </mdhairlossvertwolandingpageyellow> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdhairlossvertwolandingpageblue module="page" translate="label">
+                    <label>MD Hairloss Version Two Landing Page (BLUE)</label>
+                    <template>page/md-hairloss-version-two-landingpage-blue.phtml</template>
+                    <layout_handle>mdhairlossvertwolandingpageblue</layout_handle>
+                </mdhairlossvertwolandingpageblue> 
             </layouts>
         </page>
         <page>

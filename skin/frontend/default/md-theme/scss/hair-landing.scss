@@ -330,15 +330,29 @@ body.hairlossVer-one {
         /* Header Section */
 
         #header-section {
-            background: url(../images/md-hair-landing/hairloss-banner-1.jpg) 55% 0px fixed;
             height: auto;
             margin: 0 auto;
             width: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
             position: relative;
             box-shadow: none;
             min-height:41.5em;
+
+            @media only screen and (min-width :1371px) {
+                background: url(../images/md-hair-landing/hairloss-banner-wide-screen.jpg) 0 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            @media only screen and (max-width :1370px) {
+                background: url(../images/md-hair-landing/hairloss-banner-1.jpg) 0 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: -75px;
+            }
+
+            @media only screen and (max-width :991px) {
+                background-position-x: -155px;
+            }
 
               .MDcontainer {
 
@@ -402,7 +416,7 @@ body.hairlossVer-one {
                             margin-bottom: 29px;
                         }
 
-                        button.pinkBG {
+                        .pinkBG {
                             background: #e8408b;
                             border: none;
                             padding: 15px 45px 15px 45px;
@@ -414,7 +428,7 @@ body.hairlossVer-one {
                             font-size: 16px;
                         }
 
-                        button.pinkBorder {
+                        .pinkBorder {
                             border: 2px solid #e8408b;
                             background: transparent;
                             padding: 13px 14px 13px 14px;
@@ -488,7 +502,7 @@ body.hairlossVer-one {
                             }
 
                             .bottom {
-                                margin: 105px auto 0;
+                                margin: 65px auto 0;
                             }
                         }
                     }
@@ -524,6 +538,10 @@ body.hairlossVer-one {
 
         @media only screen and (max-width :770px) {
             #header-section {
+                background: url(../images/md-hair-landing/hairloss-banner-1-mobile-wide.jpg) fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+
                 .MDcontainer {
                     .col-md-6 {
                         &:nth-child(1) {
@@ -906,7 +924,7 @@ body.hairlossVer-one {
                     }
                 }
 
-                button.pinkBG {
+                .pinkBG {
                     background: #e8408b;
                     border: none;
                     padding: 15px 65px 15px 65px;
@@ -1019,8 +1037,9 @@ body.hairlossVer-one {
                         .bottom {
                             width: 100%;
                             float: left;
+                            display: flex;
 
-                            button.pinkBG {
+                            .pinkBG {
                                 background: #e8408b;
                                 border: none;
                                 padding: 15px 30px 15px 30px;
@@ -1038,20 +1057,32 @@ body.hairlossVer-one {
                             }
 
 
-                            button.pinkBorder {
+                            .pinkBorder {
                                 border: 2px solid #e8408b;
                                 background: transparent;
-                                padding: 13px 30px 13px 30px;
                                 outline: none;
                                 color: #e8408b;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 font-size: 16px;
                                 transition: all 0.5s ease;
+                                outline: none;
+                                text-decoration: none;
 
                                 &:hover {
                                     background: #e8408b;
-                                    color: #fff;
+                                    
+                                    a {
+                                        color: #fff;
+                                    }
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    color: #e8408b;
+                                    padding: 15px 30px 15px 30px;
+                                    width: 100%;
+                                    float: left;
                                 }
                             }
                         }
@@ -1170,6 +1201,8 @@ body.hairlossVer-one {
                             }
 
                             .bottom {
+                                display: block;
+
                                 button{
                                     width: 87%;
                                     margin: 0 0 10px 0!important;
@@ -1327,7 +1360,7 @@ body.hairlossVer-one {
                             }
                         }
 
-                        button.pinkBG {
+                        .pinkBG {
                             background: #e8408b;
                             border: none;
                             padding: 15px 35px 15px 35px;
@@ -1815,15 +1848,14 @@ body.hairlossVer-one {
                     width: 45%;
 
                     .vid {
-                        background: rgba(106,106,106,0.2);
                         width: 100%;
-                        height: 280px;
+                        height: 300px;
                         margin: 0;
                         padding: 0;
 
                         .inner {
-                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -46px;
-                            height: 99%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% center;
+                            height: 100%;
                             background-size: cover;
                             background-repeat: no-repeat;
                             display: flex;
@@ -2100,7 +2132,7 @@ body.hairlossVer-two {
         /* Header Section */
 
         #header-section {
-            background: url(../images/md-hair-landing/hairloss-banner-2.jpg) 55% 0 fixed;
+            background: url('../images/md-hair-landing/hairloss-banner-2.jpg');
             height: auto;
             margin: 0 auto;
             width: 100%;
@@ -2109,6 +2141,13 @@ body.hairlossVer-two {
             position: relative;
             box-shadow: none;
             min-height:41.5em;
+
+            @media only screen and (max-width :1370px) {
+                background: url('../images/md-hair-landing/hairloss-banner-2-desktop.jpg') 55% 0 fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
 
               .MDcontainer {
 
@@ -2172,7 +2211,7 @@ body.hairlossVer-two {
                             margin-bottom: 29px;
                         }
 
-                        button.pinkBG {
+                        .pinkBG {
                             background: #e8408b;
                             border: none;
                             padding: 15px 45px 15px 45px;
@@ -2184,7 +2223,7 @@ body.hairlossVer-two {
                             font-size: 16px;
                         }
 
-                        button.pinkBorder {
+                        .pinkBorder {
                             border: 2px solid #e8408b;
                             background: transparent;
                             padding: 13px 14px 13px 14px;
@@ -2242,7 +2281,9 @@ body.hairlossVer-two {
 
         @media only screen and (max-width :991px) {
             #header-section {
-                background: url(../images/md-hair-landing/hairloss-banner-2.jpg) 40% 50px fixed;
+                background: url('../images/md-hair-landing/hairloss-banner-2-desktop.jpg') 40% 50px fixed;
+                background-repeat:no-repeat;
+                background-size: cover;
                 min-height: 40.5em;
 
                 .MDcontainer {
@@ -2659,7 +2700,7 @@ body.hairlossVer-two {
                     }
                 }
 
-                button.pinkBG {
+                .pinkBG {
                     background: #e8408b;
                     border: none;
                     padding: 15px 65px 15px 65px;
@@ -2772,8 +2813,9 @@ body.hairlossVer-two {
                         .bottom {
                             width: 100%;
                             float: left;
+                            display: flex;
 
-                            button.pinkBG {
+                            .pinkBG {
                                 background: #e8408b;
                                 border: none;
                                 padding: 15px 30px 15px 30px;
@@ -2791,20 +2833,32 @@ body.hairlossVer-two {
                             }
 
 
-                            button.pinkBorder {
+                            .pinkBorder {
                                 border: 2px solid #e8408b;
                                 background: transparent;
-                                padding: 13px 30px 13px 30px;
                                 outline: none;
                                 color: #e8408b;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 font-size: 16px;
                                 transition: all 0.5s ease;
+                                outline: none;
+                                text-decoration: none;
 
                                 &:hover {
                                     background: #e8408b;
-                                    color: #fff;
+                                    
+                                    a {
+                                        color: #fff;
+                                    }
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    color: #e8408b;
+                                    padding: 15px 30px 15px 30px;
+                                    width: 100%;
+                                    float: left;
                                 }
                             }
                         }
@@ -2963,6 +3017,8 @@ body.hairlossVer-two {
                             }
 
                             .bottom {
+                                display: block;
+
                                 button{
                                     width: 87%;
                                     margin: 0 0 10px 0!important;
@@ -3080,7 +3136,7 @@ body.hairlossVer-two {
                             }
                         }
 
-                        button.pinkBG {
+                        .pinkBG {
                             background: #e8408b;
                             border: none;
                             padding: 15px 35px 15px 35px;
@@ -3568,15 +3624,14 @@ body.hairlossVer-two {
                     width: 45%;
 
                     .vid {
-                        background: rgba(106,106,106,0.2);
                         width: 100%;
-                        height: 280px;
+                        height: 300px;
                         margin: 0;
                         padding: 0;
 
                         .inner {
-                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -46px;
-                            height: 99%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% center;
+                            height: 100%;
                             background-size: cover;
                             background-repeat: no-repeat;
                             display: flex;
@@ -3932,7 +3987,7 @@ body.hairkitoffer {
                             margin-bottom: 29px;
                         }
 
-                        button.pinkBG {
+                        .pinkBG {
                             background: #e8408b;
                             border: none;
                             padding: 15px 45px 15px 45px;
@@ -3944,7 +3999,7 @@ body.hairkitoffer {
                             font-size: 16px;
                         }
 
-                        button.pinkBorder {
+                        .pinkBorder {
                             border: 2px solid #e8408b;
                             background: transparent;
                             padding: 13px 14px 13px 14px;
@@ -4456,7 +4511,7 @@ body.hairkitoffer {
                     }
                 }
 
-                button.pinkBG {
+                .pinkBG {
                     background: #e8408b;
                     border: none;
                     padding: 15px 65px 15px 65px;
@@ -4572,7 +4627,7 @@ body.hairkitoffer {
                             width: 100%;
                             float: left;
 
-                            button.pinkBG {
+                            .pinkBG {
                                 background: #e8408b;
                                 border: none;
                                 padding: 15px 30px 15px 30px;
@@ -4590,7 +4645,7 @@ body.hairkitoffer {
                             }
 
 
-                            button.pinkBorder {
+                            .pinkBorder {
                                 border: 2px solid #e8408b;
                                 background: transparent;
                                 padding: 13px 30px 13px 30px;
@@ -4880,7 +4935,7 @@ body.hairkitoffer {
                             }
                         }
 
-                        button.pinkBG {
+                        .pinkBG {
                             background: #e8408b;
                             border: none;
                             padding: 15px 35px 15px 35px;
@@ -5622,3 +5677,298 @@ body.hairkitoffer {
 }
 
 
+
+/* Variations */
+
+body.hairlossVer-one-red, body.hairlossVer-two-red {
+    .contentWrapper {
+        #header-section {
+            .MDcontainer {
+                .col-md-6 {
+                    .top {
+                        .pinkBG {
+                            background: #fd2b2b;
+
+                            &:hover {
+                                background: #d62d2d;
+                            }
+                        }
+
+                        .pinkBorder {
+                            border: 2px solid #fd2b2b;
+                            color: #fd2b2b;
+
+                            &:hover {
+                                background: #d62d2d;
+                            }
+                        }
+                    }
+
+                    .share {
+                        a {
+                            i {
+                                color: #fd2b2b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #JoinMD {
+            form {
+                .pinkBG {
+                    background: #fd2b2b;
+
+                    &:hover {
+                        background: #d62d2d;
+                    }
+                }
+            }
+        }
+
+        #CustomDescription {
+            .leftSide {
+                .contentInner, .contentInnerMobile {
+                    .right {
+                        .bottom {
+                            .pinkBG {
+                                background: #fd2b2b;
+
+                                &:hover {
+                                    background: #d62d2d;
+                                }
+                            }
+
+                            .pinkBorder {
+                                border: 2px solid #fd2b2b;
+
+                                &:hover {
+                                    border: 2px solid #d62d2d;
+                                    background: #d62d2d;
+                                    color: #fff;
+                                }
+
+                                a {
+                                    color: #fd2b2b;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #Promo {
+            .MDcontainer {
+                .middle {
+                    form {
+                        .pinkBG {
+                            background: #fd2b2b;
+
+                            &:hover {
+                                background: #d62d2d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+body.hairlossVer-one-yellow, body.hairlossVer-two-yellow {
+    .contentWrapper {
+        #header-section {
+            .MDcontainer {
+                .col-md-6 {
+                    .top {
+                        .pinkBG {
+                            background: #eaaf08;
+
+                            &:hover {
+                                background: #e0a603;
+                            }
+                        }
+
+                        .pinkBorder {
+                            border: 2px solid #eaaf08;
+                            color: #eaaf08;
+
+                            &:hover {
+                                background: #e0a603;
+                            }
+                        }
+                    }
+
+                    .share {
+                        a {
+                            i {
+                                color: #eaaf08;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #JoinMD {
+            form {
+                .pinkBG {
+                    background: #eaaf08;
+
+                    &:hover {
+                        background: #e0a603;
+                    }
+                }
+            }
+        }
+
+        #CustomDescription {
+            .leftSide {
+                .contentInner, .contentInnerMobile {
+                    .right {
+                        .bottom {
+                            .pinkBG {
+                                background: #eaaf08;
+
+                                &:hover {
+                                    background: #e0a603;
+                                }
+                            }
+
+                            .pinkBorder {
+                                border: 2px solid #eaaf08;
+
+                                &:hover {
+                                    border: 2px solid #e0a603;
+                                    background: #e0a603;
+                                    color: #fff;
+                                }
+
+                                a {
+                                    color: #eaaf08;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #Promo {
+            .MDcontainer {
+                .middle {
+                    form {
+                        .pinkBG {
+                            background: #eaaf08;
+
+                            &:hover {
+                                background: #e0a603;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+body.hairlossVer-one-blue, body.hairlossVer-two-blue {
+    .contentWrapper {
+        #header-section {
+            .MDcontainer {
+                .col-md-6 {
+                    .top {
+                        .pinkBG {
+                            background: #0d6ba9;
+
+                            &:hover {
+                                background: #0b5484;
+                            }
+                        }
+
+                        .pinkBorder {
+                            border: 2px solid #0d6ba9;
+                            color: #0d6ba9;
+
+                            &:hover {
+                                background: #0b5484;
+                            }
+                        }
+                    }
+
+                    .share {
+                        a {
+                            i {
+                                color: #0d6ba9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #JoinMD {
+            form {
+                .pinkBG {
+                    background: #0d6ba9;
+
+                    &:hover {
+                        background: #0b5484;
+                    }
+                }
+            }
+        }
+
+        #CustomDescription {
+            .leftSide {
+                .contentInner, .contentInnerMobile {
+                    .right {
+                        .bottom {
+                            .pinkBG {
+                                background: #0d6ba9;
+
+                                &:hover {
+                                    background: #0b5484;
+                                }
+                            }
+
+                            .pinkBorder {
+                                border: 2px solid #0d6ba9;
+
+                                &:hover {
+                                    border: 2px solid #0b5484;
+                                    background: #0b5484;
+                                    color: #fff;
+                                }
+
+                                a {
+                                    color: #0d6ba9;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #Promo {
+            .MDcontainer {
+                .middle {
+                    form {
+                        .pinkBG {
+                            background: #0d6ba9;
+
+                            &:hover {
+                                background: #0b5484;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

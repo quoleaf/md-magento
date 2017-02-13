@@ -3,6 +3,10 @@
 <head>
 	<title>MD Hair Loss Version One</title>
 
+    <meta property="og:image" content="http://us.md-factor.com/skin/frontend/default/md-theme/images/md-hair-landing/nutrihair-fb-thumbnail.jpg" />
+    
+    <meta property="og:image" content="http://us.md-factor.com/skin/frontend/default/md-theme/images/md-hair-landing/nutrihair-fb-thumbnail.jpg" />
+
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
@@ -25,16 +29,44 @@
     <link href="owl-carousel/owl.theme.css" rel="stylesheet"> 
 
 	<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/hair-landing.css" type="text/css" />
+
+    <!-- BEGIN GOOGLE ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-89987290-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        //]]>
+    </script>
+    <!-- END GOOGLE ANALYTICS CODE -->
+        
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1010013549017189');
+        fbq('track', "PageView");
+    </script>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
 </head>
 
 <body class="hairlossVer-one">
-<?php $homeurl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>
-<?php $_product = Mage::registry('current_product'); ?>
-<?php //$_productID = $_product->getId(); ?>
-<?php $_productID = 8 ?>
-<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
-<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/form_key/'.$formkey.'/'; ?>
-<!-- Edited by rej -->
 
 <div class="navWrapper">
 	<nav id="header" class="navbar navbar-fixed-top">
@@ -69,7 +101,7 @@
 
             <div class="col-md-6">
                 <span class="share wow fadeInDown animated" data-wow-delay="0.5s">
-                    <a href="#" >
+                    <a href="https://www.addtoany.com/share" class="a2a_dd" >
                         <i class="fa fa-reply" aria-hidden="true"></i> Share
                     </a>
                 </span>
@@ -85,7 +117,7 @@
                     <p>
                         Nourish your hair back to beautiful
                     </p>
-                    <button class="pinkBG" onClick="location='<?php echo $cartUrl; ?>'">
+                    <button class="pinkBG" onclick="window.location='<?php echo Mage::getBaseUrl(); ?>md-nutri-hair';">
                         Buy Now
                     </button>
 
@@ -188,16 +220,17 @@
                         </div>
 
                         <div class="bottom">
-                            <button class="pinkBG" onClick="location='<?php echo $cartUrl; ?>'">
+                            <button class="pinkBG" onclick="window.location='<?php echo Mage::getBaseUrl(); ?>md-nutri-hair';">
                                 <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/shopping-bag-ico.png') ?>" alt=""/>
                                 Add to bag
                             </button>
 
                             <button class="pinkBorder">
-                                Learn more
+                                <a href="https://www.youtube.com/watch?v=xiIIqeHHY-c&feature=youtu.be" target="_blank" data-lity="">
+                                    Learn more
+                                </a>
                             </button>
                         </div>
-
                     </div>
                 </div>  
 
@@ -216,13 +249,15 @@
                         </div>
 
                         <div class="bottom">
-                            <button class="pinkBG">
+                            <button class="pinkBG" onclick="window.location='<?php echo Mage::getBaseUrl(); ?>md-nutri-hair';">
                                 <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/shopping-bag-ico.png') ?>" alt=""/>
                                 Add to bag
                             </button>
 
                             <button class="pinkBorder">
-                                Learn more
+                                <a href="https://www.youtube.com/watch?v=xiIIqeHHY-c&feature=youtu.be" target="_blank" data-lity="">
+                                    Learn more
+                                </a>
                             </button>
                         </div>
 
@@ -381,6 +416,15 @@
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
 
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/owl.carousel.js') ?>"></script>
+
+<!-- Share button -->
+
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.num_services = 2;
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
 
 <script>
 

@@ -71,6 +71,33 @@
         </page>
         <page>
             <layouts> 
+                <mdintimaterestorered module="page" translate="label">
+                    <label>MD Intimate Restore PLanding Page (RED)</label>
+                    <template>page/md-intimate-restore-landingpage-red.phtml</template>
+                    <layout_handle>mdhairkitofferlandingpagered</layout_handle>
+                </mdintimaterestorered> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdintimaterestoreyellow module="page" translate="label">
+                    <label>MD Intimate Restore PLanding Page (YELLOW)</label>
+                    <template>page/md-intimate-restore-landingpage-yellow.phtml</template>
+                    <layout_handle>mdhairkitofferlandingpageyellow</layout_handle>
+                </mdintimaterestoreyellow> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <mdintimaterestoreblue module="page" translate="label">
+                    <label>MD Intimate Restore PLanding Page (BLUE)</label>
+                    <template>page/md-intimate-restore-landingpage-blue.phtml</template>
+                    <layout_handle>mdhairkitofferlandingpageblue</layout_handle>
+                </mdintimaterestoreblue> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
                 <mdhairkitbundle module="page" translate="label">
                     <label>MD Hair Kit Bundle</label>
                     <template>page/md-hairkit-bundle-landingpage.phtml</template>

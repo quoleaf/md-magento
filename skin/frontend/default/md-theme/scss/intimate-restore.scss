@@ -205,6 +205,10 @@ body {
     font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
 }
 
+a, button, div, span, input, textarea {
+    outline: none;
+}
+
 
 /* Custom Container */
 
@@ -324,16 +328,6 @@ body {
 
             i {
                 letter-spacing: 0;
-                position: relative;
-                top: 3px;
-
-                @media screen and (max-width: 870px) {
-                    top: 2px;
-                }
-
-                @media screen and (max-width: 700px) {
-                    top: 1px;
-                }
             }
         }
     }
@@ -551,7 +545,7 @@ nav {
                     -o-transform: rotateY(180deg);
                     -ms-transform: rotateY(180deg);
                     position: relative;
-                    top: 3px;
+                    top: 1px;
                 }
             }
         }
@@ -1802,13 +1796,340 @@ nav {
 /* Footer */
 
 
+/* Variations - Experiment */
 
 
+body.intimate-restore-red {
+    nav {
+        &.fixed-nav {
+            .custom-container {
+                ul {
+                    li{
+                        &:nth-child(5) {
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-container {
+            ul {
+                li{
+                    &:nth-child(5) {
+                        a {
+                            border: 2px solid #fd2b2b;
+                            color: #fd2b2b;
+
+                            @media screen and (max-width: 870px) {
+                                border: none;
+                                color: #fff;
+                            }
+
+                            &:hover {
+                                background: #d62d2d;
+                                border: 2px solid #d62d2d;
+                                color: #fff;
+
+                                @media screen and (max-width: 870px) {
+                                    background: #363636;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            span {
+                a.share {
+                    background: #fd2b2b;
+                }
+            }
+        }
+    }
+
+    #headerWrapper {
+        .custom-container {
+            .inner {
+                div {
+                    a {
+                        background: #fd2b2b;
+
+                        &:hover {
+                            background: #d62d2d;
+                        }      
+                    }
+                }
+            }
+        }
+    }
+
+    #description {
+        .left {
+            a {
+                background: #fd2b2b;
+
+                &:hover {
+                    background: #d62d2d;
+                }  
+            }
+        }
+    }
+
+    #AmazonReview {
+        .custom-container {
+            .button {
+                background: #fd2b2b;
+
+                &:hover {
+                    background: #d62d2d;
+                }  
+            }
+        }
+    }
+
+    #promo {
+        .custom-container {
+            .middle {
+                form {
+                    a {
+                        background: #fd2b2b;
+
+                        &:hover {
+                            background: #d62d2d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
+body.intimate-restore-yellow {
+    nav {
+        &.fixed-nav {
+            .custom-container {
+                ul {
+                    li{
+                        &:nth-child(5) {
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-container {
+            ul {
+                li{
+                    &:nth-child(5) {
+                        a {
+                            border: 2px solid #eaaf08;
+                            color: #eaaf08;
+
+                            @media screen and (max-width: 870px) {
+                                border: none;
+                                color: #fff;
+                            }
+
+                            &:hover {
+                                background: #e0a603;
+                                border: 2px solid #e0a603;
+                                color: #fff;
+
+                                @media screen and (max-width: 870px) {
+                                    background: #363636;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            span {
+                a.share {
+                    background: #eaaf08;
+                }
+            }
+        }
+    }
+
+    #headerWrapper {
+        .custom-container {
+            .inner {
+                div {
+                    a {
+                        background: #eaaf08;
+
+                        &:hover {
+                            background: #e0a603;
+                        }      
+                    }
+                }
+            }
+        }
+    }
+
+    #description {
+        .left {
+            a {
+                background: #eaaf08;
+
+                &:hover {
+                    background: #e0a603;
+                }  
+            }
+        }
+    }
+
+    #AmazonReview {
+        .custom-container {
+            .button {
+                background: #eaaf08;
+
+                &:hover {
+                    background: #e0a603;
+                }  
+            }
+        }
+    }
+
+    #promo {
+        .custom-container {
+            .middle {
+                form {
+                    a {
+                        background: #eaaf08;
+
+                        &:hover {
+                            background: #e0a603;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
+body.intimate-restore-blue {
+    nav {
+        &.fixed-nav {
+            box-shadow: 0px 1.5px 0px 0px rgb(238, 66, 139);
+            background: #ee428b;  
+                  
+            .custom-container {
+                ul {
+                    li{
+                        &:nth-child(5) {
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
+        .custom-container {
+            ul {
+                li{
+                    &:nth-child(5) {
+                        a {
+                            border: 2px solid #0d6ba9;
+                            color: #0d6ba9;
+
+                            @media screen and (max-width: 870px) {
+                                border: none;
+                                color: #fff;
+                            }
+
+                            &:hover {
+                                background: #0b5484;
+                                border: 2px solid #0b5484;
+                                color: #fff;
+
+                                @media screen and (max-width: 870px) {
+                                    background: #363636;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            span {
+                a.share {
+                    background: #0d6ba9;
+                }
+            }
+        }
+    }
+
+    #headerWrapper {
+        .custom-container {
+            .inner {
+                div {
+                    a {
+                        background: #0d6ba9;
+
+                        &:hover {
+                            background: #0b5484;
+                        }      
+                    }
+                }
+            }
+        }
+    }
+
+    #description {
+        .left {
+            a {
+                background: #0d6ba9;
+
+                &:hover {
+                    background: #0b5484;
+                }  
+            }
+        }
+    }
+
+    #AmazonReview {
+        .custom-container {
+            .button {
+                background: #0d6ba9;
+
+                &:hover {
+                    background: #0b5484;
+                }  
+            }
+        }
+    }
+
+    #promo {
+        .custom-container {
+            .middle {
+                form {
+                    a {
+                        background: #0d6ba9;
+
+                        &:hover {
+                            background: #0b5484;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

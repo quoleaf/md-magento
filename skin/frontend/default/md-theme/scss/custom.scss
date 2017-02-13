@@ -8098,7 +8098,7 @@ body.catalog-product-view {
                             margin: 4px;
                             padding: 5px;
                             border: 3px solid transparent;
-                            width: 150px;
+                            width: 125px;
                             height: 150px;
                             cursor: pointer;
 
@@ -8736,6 +8736,105 @@ body.catalog-product-view {
     }   
 }
 
+
+body.cms-sales {	
+	.deal-product .list .timer {
+		display: none;
+	}
+
+	.SaleBanner {
+	    background: url('http://s2.lximg.com/images/banner_images/landingpage/1/SALESALEx_6c9cb202c82085848882f7652f8b4c95b11d129d_1483538607.jpg');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 475px;
+	}
+
+	.deal-product {
+		.container-slider {
+			#shopProducts {
+				padding: 5.208333333333333%;
+
+				ul {
+					li {
+						.image {
+							img {
+								margin: 0 auto;
+							}
+
+							.overlay {
+								text-align: center;
+							}
+						}
+
+						.desc {
+							width: 305px;
+							margin-top: 25px;
+
+							.ProductRewardTop, .ReviewsList, a {
+								width: 100%;
+								float: left;
+							}
+
+							.price-box {
+								width: 100%;
+								float: left;
+								margin-top: 10px;
+
+								.special-price {
+									padding-left: 0;
+								}
+
+								span {
+									color: #3085c7;
+								}
+
+								p.old-price {
+									span {
+										color: #777777;
+								    	font-size: 15px;
+								    	padding-left: 15px;	
+									}
+								}
+							}
+
+							.discount {
+								width: 100%;
+								float: left;
+
+								span {
+									color: red;
+								}
+							}
+						}
+
+						.addCart {
+							margin-top: 25px;
+						}
+
+
+						@media only screen and (max-width : 767px) { 
+							.desc {
+								width: 100%;
+								float: left;
+								text-align: center;
+							}
+
+							.addCart {
+								float: right;
+							} 
+						}
+					}
+
+					@media only screen and (max-width : 500px) { 
+						li {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 @media only screen and (max-width: 565px) {

@@ -187,7 +187,8 @@
             <?php if (isset($ingredientsText)): ?>
                 <section id="content2" class="tab-content">
                     <div class="inner"> 
-                        <?php echo $ingredientsText; ?>
+
+                        <?php echo $ingredientsText = $_helper->productAttribute($_product, $_product->getIngredients(), 'ingredients'); ?>
                     </div>
                 </section>
             <?php endif;?>

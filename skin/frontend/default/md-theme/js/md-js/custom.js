@@ -1,4 +1,8 @@
 jQuery(function($) {
+	jQuery('.checkout-cart-index #s_method_owebiashipping3_international').parent().after('<small>IMPORTANT NOTE: "La Canada Venture reserve right to adjust international shipping rate for certain countries with high shipping rates"</small>');
+	jQuery('.opc-index-index label[for="s_method_owebiashipping3_international"]').after('<small style="display:block">IMPORTANT NOTE: "La Canada Venture reserve right to adjust international shipping rate for certain countries with high shipping rates"</small>');
+	
+
 	/* ROM Script*/
 	jQuery('input[name="email"]').on('change', function(e){
 	var email = jQuery('input[name="email"]').val();

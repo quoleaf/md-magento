@@ -37,9 +37,8 @@
         <?php if ($this->isGalleryImageVisible($_image)): ?>
         <div class="image">
             <div class="content">
-                <div data-zoom="<?php echo $this->getGalleryImageUrl($_image); ?>" class="zoom"> 
-                    <img src="<?php echo $this->getGalleryImageUrl($_image); ?>" />
-                </div>
+                <img  class="zoom" data-magnify-src="<?php echo $this->getGalleryImageUrl($_image); ?>" src="<?php echo $this->getGalleryImageUrl($_image); ?>" />
+                
             </div>
         </div>
         <?php endif; ?>
@@ -59,3 +58,5 @@
                 
     </div>
 </div>
+
+

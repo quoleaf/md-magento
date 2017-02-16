@@ -228,9 +228,11 @@
 </div>
 
 
-
-
-    
+<style type="text/css">
+    html.magnifying > body {
+        overflow-x: hidden !important;
+    }
+</style>
 
 <script type="text/javascript">
     //<![CDATA[
@@ -287,10 +289,18 @@
 <!-- custom scripts -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
-<script src="<?php echo $this->getSkinUrl(); ?>js/md-js/jquery.imagezoom.js"></script>
+<script src="<?php echo $this->getSkinUrl(); ?>js/md-js/jquery.magnify.js"></script>
+<script src="<?php echo $this->getSkinUrl(); ?>js/md-js/jquery.magnify-mobile.js"></script>
+
 
 <script>
-    jQuery('.zoom').zoom();
+jQuery(function($) {
+   $('.zoom').magnify({
+    afterLoad: function() {
+      console.log('Magnification powers activated!');
+    }
+  });
+});
 </script>
 
 <script type="text/javascript">

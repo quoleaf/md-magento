@@ -591,7 +591,13 @@ body.hairlossVer-one .contentWrapper {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 16px;
-        height: 60px; }
+        height: 60px;
+        position: relative; }
+      body.hairlossVer-one .contentWrapper #JoinMD form .subscribe-btn-wrp img#loader {
+        width: 25px;
+        position: absolute;
+        right: 10%;
+        margin-top: -22px !important; }
   @media only screen and (max-width: 970px) {
     body.hairlossVer-one .contentWrapper #JoinMD {
       padding: 50px 0 50px 0; } }
@@ -847,7 +853,8 @@ body.hairlossVer-one .contentWrapper {
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 16px; }
+            font-size: 16px;
+            position: relative; }
       body.hairlossVer-one .contentWrapper #Promo .MDcontainer .rightSide {
         width: 30%;
         padding: 100px 0 100px 0; }

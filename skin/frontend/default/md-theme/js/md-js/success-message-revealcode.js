@@ -21,7 +21,7 @@ function main($) {
   if (typeof postURL === 'undefined') {
     postURL = 'https://visitor2.constantcontact.com/api/signup';
   }
-  var _form = $('[data-id="embedded_signup:form"]');
+  var _form = $('[data-id="embedded_reveal:form"]');
   var stateInput = $("<input/>").attr({ type: 'text', name: 'address_state', maxlength: '50', style: 'display:none;' });
   var stateSelect = $("<select/>").attr({ name: 'address_state'});
   stateSelect.append($("<option>--</option>").attr({value: '', selected:'selected'}));
@@ -136,7 +136,6 @@ function main($) {
   });
 
   _form.submit(function(e) {
-    e.preventDefault();
 
     /*  Generate the serialized payload and hash to map with */
     var payload = $(this).serialize();

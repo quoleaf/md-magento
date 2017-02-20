@@ -597,7 +597,8 @@ body.hairlossVer-one .contentWrapper {
         width: 25px;
         position: absolute;
         right: 10%;
-        margin-top: -22px !important; }
+        margin-top: -22px !important;
+        display: block; }
   @media only screen and (max-width: 970px) {
     body.hairlossVer-one .contentWrapper #JoinMD {
       padding: 50px 0 50px 0; } }

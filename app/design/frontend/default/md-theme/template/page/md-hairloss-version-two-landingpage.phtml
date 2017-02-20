@@ -199,33 +199,32 @@
                 </span>
             </h2>
                 <div class="fields clearfix">
-                  <div class="ctct-embed-signup">
-                    <div class="fields clearfix">
-                      <span id="success_message" style="display:none;">
-                        <div style="text-align:center;font-size:32px;color:#fff">Thanks for signing up!</div>
-                      </span>
-                      
-                      <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
-                      <input data-id="ca:input" name="ca" value="84bd4af4-34ab-46fe-93f8-cc6f0d942fdf" type="hidden">
-                      <input data-id="list:input" name="list" value="1275815905" type="hidden">
-                      <input data-id="source:input" name="source" value="EFD" type="hidden">
-                      <input data-id="required:input" name="required" value="list,email,first_name" type="hidden">
-                      <input data-id="url:input" name="url" value="" type="hidden">
-                          <input data-id="Email Address:input" placeholder="<?php echo $this->__('Email') ?>" class="textbox newsletter-email" name="email" value="" maxlength="80" type="text">
-                          <input data-id="First Name:input" placeholder="<?php echo $this->__('Name') ?>" class="textbox newsletter-name" name="first_name" value="" maxlength="50" type="text">
-                        <div class="subscribe-btn-wrp">
-                          <button type="submit" class="pinkBG Button ctct-button Button--block Button-secondary newsletter-submit submitBtn " data-enabled="enabled">Subscribe<img id="loader" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/subscribe-loader.gif" alt="" style="display: none;"/></button>
-                          <label>
-                            
-                          </label>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <script type="text/javascript">var localizedErrMap={};localizedErrMap['required']='This field is required.';localizedErrMap['ca']='An unexpected error occurred while attempting to send email.';localizedErrMap['email']='Please enter your email address in name@email.com format.';localizedErrMap['birthday']='Please enter birthday in MM/DD format.';localizedErrMap['anniversary']='Please enter anniversary in MM/DD/YYYY format.';localizedErrMap['custom_date']='Please enter this date in MM/DD/YYYY format.';localizedErrMap['list']='Please select at least one email list.';localizedErrMap['generic']='This field is invalid.';localizedErrMap['shared']='Sorry, we could not complete your sign-up. Please contact us to resolve this.';localizedErrMap['state_mismatch']='Mismatched State/Province and Country.';localizedErrMap['state_province']='Select a state/province';localizedErrMap['selectcountry']='Select a country';var postURL='https://visitor2.constantcontact.com/api/signup';</script> 
-                  <script type="text/javascript" src="https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js"></script>
+          <div class="ctct-embed-signup subscription">
+            <div class="fields clearfix">
+              <span id="success_message_subscription" style="display:none;">
+                <div style="text-align:center;font-size:32px;color:#fff">Thanks for signing up!</div>
+              </span>
+              
+              <form data-id="embedded_signup:form" class="ctct-custom-form Form subscribe" name="embedded_signup" method="POST" >
+              <input data-id="ca:input" name="ca" value="84bd4af4-34ab-46fe-93f8-cc6f0d942fdf" type="hidden">
+              <input data-id="list:input" name="list" value="1275815905" type="hidden">
+              <input data-id="source:input" name="source" value="EFD" type="hidden">
+              <input data-id="required:input" name="required" value="list,email,first_name" type="hidden">
+              <input data-id="url:input" name="url" value="" type="hidden">
+                  <input data-id="Email Address:input" placeholder="<?php echo $this->__('Email') ?>" class="textbox newsletter-email" name="email" value="" maxlength="80" type="text">
+                  <input data-id="First Name:input" placeholder="<?php echo $this->__('Name') ?>" class="textbox newsletter-name" name="first_name" value="" maxlength="50" type="text">
+                <div class="subscribe-btn-wrp">
+                  <button type="button" class="pinkBG Button ctct-button Button--block Button-secondary newsletter-submit submitBtn submitBtnCust " data-enabled="enabled">Subscribe<img id="loader" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/subscribe-loader.gif" alt="" style="display: none;"/></button>
+                  <label>
+                    
+                  </label>
                 </div>
+              </form>
+            </div>
+          </div>
+
+          <script type="text/javascript">var localizedErrMap={};localizedErrMap['required']='This field is required.';localizedErrMap['ca']='An unexpected error occurred while attempting to send email.';localizedErrMap['email']='Please enter your email address in name@email.com format.';localizedErrMap['birthday']='Please enter birthday in MM/DD format.';localizedErrMap['anniversary']='Please enter anniversary in MM/DD/YYYY format.';localizedErrMap['custom_date']='Please enter this date in MM/DD/YYYY format.';localizedErrMap['list']='Please select at least one email list.';localizedErrMap['generic']='This field is invalid.';localizedErrMap['shared']='Sorry, we could not complete your sign-up. Please contact us to resolve this.';localizedErrMap['state_mismatch']='Mismatched State/Province and Country.';localizedErrMap['state_province']='Select a state/province';localizedErrMap['selectcountry']='Select a country';var postURL='https://visitor2.constantcontact.com/api/signup';</script> 
+        </div>
             <!-- <form class="wow fadeIn animated" data-wow-delay="0.3s">
                 <input type="text" name="Fullname" placeholder="Name">
                 <input type="email" name="email" placeholder="Email">
@@ -332,7 +331,7 @@
                        <span id="success_message_revealcode" style="display:none;">
                            <div style="text-align:center;font-size: 18px;margin-top: 44px;background: none;">Please check email after 24 hours. Thanks you!</div>
                        </span>
-                       <form data-id="embedded_signup:form" class="ctct-custom-form Form reveal" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+                       <form data-id="embedded_reveal:form" class="ctct-custom-form Form reveal" name="embedded_signup" method="POST">
                           
                            <!-- The following code must be included to ensure your sign-up form works properly. -->
                            <input data-id="ca:input" type="hidden" name="ca" value="5224d021-d80f-4db5-ad04-84b8bda089b6">
@@ -340,8 +339,8 @@
                            <input data-id="source:input" type="hidden" name="source" value="EFD">
                            <input data-id="required:input" type="hidden" name="required" value="list,email">
                            <input data-id="url:input" type="hidden" name="url" value="">
-                           <p data-id="Email Address:p" ><input data-id="Email Address:input" type="text" name="email" value="" maxlength="80" placeholder="EMAIL"></p>
-                           <button type="submit" class="pinkBG Button ctct-button Button--block Button-secondary" data-enabled="enabled">Reveal Code</button>
+                           <p data-id="Email Address:p" ><input data-id="Email Address:input" type="text" id="reveal-email" name="email" value="" maxlength="80" placeholder="EMAIL"></p>
+                           <button type="submit" class="pinkBG Button ctct-button Button--block Button-secondary RevealsubmitBtn" data-enabled="enabled">Reveal Code</button>
                         
                        </form>
                    </div>
@@ -362,7 +361,7 @@
                    localizedErrMap['selectcountry'] =   'Select a country';
                    var postURL = 'https://visitor2.constantcontact.com/api/signup';
                 </script>
-                <script type="text/javascript" src="https://us.md-factor.com/skin/frontend/default/md-theme/js/md-js/success-message-revealcode.js"></script>
+                <script type="text/javascript" src="../skin/frontend/default/md-theme/js/md-js/success-message-revealcode.js"></script> 
 
                 <!-- <form>
                     <input type="email" name="email" placeholder="email">
@@ -582,6 +581,38 @@ a2a_config.num_services = 2;
      * could be load with scroll down set.
      */
     offSetManager();
+    });
+
+/* ROM Script*/
+jQuery('input[name="email"]').on('change', function(e){
+var email = jQuery('input[name="email"]').val();
+});
+
+jQuery('input[name="first_name"]').on('change', function(e){
+var name = jQuery('input[name="first_name"]').val();
+});
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+  return re.test(email);
+}
+
+
+    jQuery('.newsletter-submit').on('click', function(e){
+
+    if(jQuery('.newsletter-name').val() == "" || jQuery('.newsletter-email').val() == "") {
+        alert('Please Input Email and Name!'); 
+        return false;
+    }
+    
+    if(!validateEmail(jQuery('.newsletter-email').val())){
+        alert('Invalid Email!'); 
+        return false;
+    }
+
+    jQuery('#loader').removeAttr('style');
+    
     });
 
 

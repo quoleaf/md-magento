@@ -67,18 +67,19 @@
 </head>
 
 <body class="landingpage-revamp">
-<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
-
 
 <div class="VideoWrapper">
 	<div id="video-container">
         <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
             <source src="<?php echo $this->getSkinUrl('images/landingpage-revamp/header-vid-new.mp4') ?>" type="video/mp4">  
+            <source type="video/webm" src="<?php echo $this->getSkinUrl('images/landingpage-revamp/header-vid-new.webm') ?>"></source>
+            <source type="video/ogg src="<?php echo $this->getSkinUrl('images/landingpage-revamp/header-vid-new.ogg') ?>"></source>
         </video>
     </div>
 
     <div class="overlay">
         <div class="overlay__inner">
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
             <nav class='main-nav' id="main-navWrapper">
                 <div class="custom-container">
                     <ul class='main-nav'>
@@ -1217,7 +1218,7 @@ function debounce(func, wait, immediate) {
 
       // Center it by scrolling the video viewport
       videoContainer.scrollLeft = (videoNewWidth - winWidth) / 2;
-      videoContainer.scrollTop = (videoNewHeight - winHeight) / 1.3;
+      videoContainer.scrollTop = (videoNewHeight - winHeight) / 2;
 
     };
 

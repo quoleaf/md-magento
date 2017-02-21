@@ -180,21 +180,23 @@ body.landingpage-revamp {
     background-size: 34px;
     -ms-behavior: url(backgroundsize.min.htc);
     font-family: 'Helvetica', Arial, sans-serif; }
-  @media only screen and (max-width: 1100px) {
-    body.landingpage-revamp #topBar .myAccount {
-      text-indent: -9999em;
-      width: 20px;
-      height: 22px;
-      background: url(../images/my-account-ico.png) no-repeat;
-      -webkit-background-size: 100%;
-      -moz-background-size: 100%;
-      background-size: 100%;
-      -ms-behavior: url(backgroundsize.min.htc);
-      top: 12px;
-      position: relative; } }
-  @media only screen and (max-width: 767px) {
-    body.landingpage-revamp #topBar .myAccount {
-      top: 0; } }
+  body.landingpage-revamp #topBar .myAccount {
+    display: none; }
+    @media only screen and (max-width: 1100px) {
+      body.landingpage-revamp #topBar .myAccount {
+        text-indent: -9999em;
+        width: 20px;
+        height: 22px;
+        background: url(../images/my-account-ico.png) no-repeat;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        background-size: 100%;
+        -ms-behavior: url(backgroundsize.min.htc);
+        top: 12px;
+        position: relative; } }
+    @media only screen and (max-width: 767px) {
+      body.landingpage-revamp #topBar .myAccount {
+        top: 0; } }
   body.landingpage-revamp #topBar .signin {
     margin-right: 20px; }
   body.landingpage-revamp #topBar .freeShipping {
@@ -339,7 +341,7 @@ body.landingpage-revamp {
           object-fit: cover; } }
   body.landingpage-revamp .VideoWrapper .overlay {
     position: absolute;
-    top: 33px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -347,7 +349,7 @@ body.landingpage-revamp {
     @media screen and (max-width: 1070px) {
       body.landingpage-revamp .VideoWrapper .overlay {
         background-color: rgba(38, 38, 38, 0.64);
-        top: 55px; } }
+        top: 0; } }
     body.landingpage-revamp .VideoWrapper .overlay .overlay__inner {
       width: 100%; }
       body.landingpage-revamp .VideoWrapper .overlay .overlay__inner .content {
@@ -443,12 +445,8 @@ body.landingpage-revamp {
     float: left;
     display: flex;
     position: relative;
-    bottom: 5px;
     /* Hover state - trigger effect */
     /* Active state */ }
-    @media screen and (max-width: 1070px) {
-      body.landingpage-revamp .categoryWrapper {
-        bottom: 3px; } }
     @media screen and (max-width: 991px) {
       body.landingpage-revamp .categoryWrapper {
         display: block; } }
@@ -565,9 +563,7 @@ body.landingpage-revamp {
     height: auto;
     background: url("../images/landingpage-revamp/lash-bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    bottom: 5px; }
+    background-size: cover; }
     @media only screen and (max-width: 1170px) {
       body.landingpage-revamp .lashWrapper {
         background-position-x: -100px; } }
@@ -581,9 +577,6 @@ body.landingpage-revamp {
       body.landingpage-revamp .lashWrapper {
         min-height: auto;
         padding: 100px 0 100px 0; } }
-    @media screen and (max-width: 400px) {
-      body.landingpage-revamp .lashWrapper {
-        bottom: 3px; } }
     body.landingpage-revamp .lashWrapper .custom-container .inner {
       width: 65%;
       float: left; }

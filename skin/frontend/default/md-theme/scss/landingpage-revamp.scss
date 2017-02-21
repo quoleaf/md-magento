@@ -256,6 +256,7 @@ body.landingpage-revamp {
 
 
 	#topBar .myAccount {
+		display: none;
 		@media only screen and (max-width: 1100px) {
 			text-indent: -9999em;
 			width: 20px;
@@ -494,7 +495,7 @@ body.landingpage-revamp {
 
 		.overlay {
 		  	position: absolute;
-		  	top: 33px;
+		  	top: 0;
 		  	left: 0;
 		  	width: 100%;
 		  	height: 100%;
@@ -502,7 +503,7 @@ body.landingpage-revamp {
 
 		  	@media screen and (max-width: 1070px) {
 		  		background-color: rgba(38, 38, 38, 0.64);
-		  		top: 55px;
+		  		top: 0;
 		  	}
 
 			.overlay__inner {
@@ -643,11 +644,6 @@ body.landingpage-revamp {
 		float: left;
 		display: flex;
 		position: relative;
-    	bottom: 5px;
-
-    	@media screen and (max-width: 1070px) {
-    		bottom: 3px;
-    	}
 
     	@media screen and (max-width: 991px) {
     		display: block;
@@ -860,8 +856,6 @@ body.landingpage-revamp {
 		background: url('../images/landingpage-revamp/lash-bg.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		position: relative;
-    	bottom: 5px;
 
     	@media only screen and (max-width : 1170px) {
     		background-position-x: -100px;
@@ -877,10 +871,6 @@ body.landingpage-revamp {
     	@media only screen and (max-width : 991px) {
 			min-height: auto;
 			padding: 100px 0 100px 0;
-    	}
-
-    	@media screen and (max-width: 400px) {
-    		bottom: 3px;
     	}
 
 		.custom-container {

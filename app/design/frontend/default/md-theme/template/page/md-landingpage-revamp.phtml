@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage Revamp</title>
+
+    <meta property="og:image" content="http://us.md-factor.com/skin/frontend/default/md-theme/images/md-hair-landing/nutrihair-fb-thumbnail.jpg" />
+    
+    <meta property="og:image" content="http://us.md-factor.com/skin/frontend/default/md-theme/images/md-hair-landing/nutrihair-fb-thumbnail.jpg" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+    
+    <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+
+	<!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
+
+    <!-- Owl Carousel Assets -->
+    <link href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/mainNav.css" type="text/css" />
+
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
+
+    <!-- BEGIN GOOGLE ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-89987290-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        //]]>
+    </script>
+    <!-- END GOOGLE ANALYTICS CODE -->
+        
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1010013549017189');
+        fbq('track', "PageView");
+    </script>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class="landingpage-revamp">
+<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
+
+
+<div class="VideoWrapper">
+	<div id="video-container">
+        <video preload="auto" autoplay loop muted width="1440" height="810">
+            <source src="http://localhost/webfiles/MDMageVerTwo/skin/frontend/default/md-theme/images/landingpage-revamp/header-vid-new.mp4" type="video/mp4">  
+        </video>
+    </div>
+
+    <div class="overlay">
+        <div class="overlay__inner">
+            <nav class='main-nav' id="main-navWrapper">
+                <div class="custom-container">
+                    <ul class='main-nav'>
+                        <li>
+                            <a href='<?php echo Mage::getBaseUrl(); ?>'>
+                                <img src="<?php echo $this->getSkinUrl('images/logo-white.png') ?>">
+                            </a>
+                        </li>
+                        <li>
+                            <a href='<?php echo Mage::getBaseUrl(); ?>md-lash-factor'>
+                                Lash
+                            </a>
+                        </li>
+                        <li>
+                            <a href='<?php echo Mage::getBaseUrl(); ?>hair'>
+                                Hair
+                            </a>
+                        </li>
+                        <li>
+                            <a href='<?php echo Mage::getBaseUrl(); ?>md-skin'>
+                                Skin
+                            </a>
+                        </li>
+                        <li>
+                            <a href='<?php echo Mage::getBaseUrl(); ?>md-wellness'>
+                                Wellness
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo Mage::getBaseUrl(); ?>sales">
+                                Sale
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="">
+                                Brand
+                            </a>
+                        </li>
+
+                        <li style="display: none;">
+                            <div class="searchWrapper">
+                                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+                                                
+                                <div id="searchInner" > 
+                                    <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
+                                            
+                                            <button value="" type="submit">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                            
+                                            <input placeholder="SEARCH PRODUCTS" class="query" "search_query"="" name="q" type="text">
+                                        </form>
+                                </div> 
+                            </div>
+                        </li>
+                        
+                        <li style="display: none;">
+                            <a href="http://br.md-factor.com">
+                                <img src="<?php echo $this->getSkinUrl('images/currency/br-flag.png') ?>" />
+                            </a>
+
+                            <a href="http://mx.md-factor.com">
+                                <img src="<?php echo $this->getSkinUrl('images/currency/mx-flag.png') ?>" />
+                            </a>
+
+                            <a href="http://ch.md-factor.com">
+                                <img src="<?php echo $this->getSkinUrl('images/currency/ch-flag.png') ?>" />
+                            </a>
+
+                            <a href="http://ca.md-factor.com">
+                            <img src="<?php echo $this->getSkinUrl('images/currency/ca-flag.png') ?>" />
+                            </a>
+
+                            <a href="http://au.md-factor.com">
+                            <img src="<?php echo $this->getSkinUrl('images/currency/au-flag.png') ?>" />
+                            </a>
+
+                            <a href="https://us.md-factor.com">
+                            <img src="<?php echo $this->getSkinUrl('images/currency/us-flag.png') ?>" />
+                            </a>
+                        </li>
+
+                    </ul>
+                    <a href='#' id='openup'>
+                        <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+                    </a>
+
+                    <div class="searchWrapper desktopSearcWrapper">
+                        <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+                                    
+                        <div id="searchInner" > 
+                            <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
+                                
+                                <button value="" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                                
+                                <input placeholder="SEARCH PRODUCTS" class="query" "search_query"="" name="q" type="text">
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+     
+            <div class="content">
+                <div class="custom-container">
+                    <h1>
+                        We create beauty
+                    </h1>
+                    <span>
+                        through ADVANCE SCIENCE
+                    </span>
+
+                    <div class="ctaWrapper">
+                        <a href="<?php echo Mage::getBaseUrl(); ?>categories">
+                            Shop Now
+                        </a>
+                        <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="categoryWrapper">
+    <div class="shine">
+        <div class="inner">
+            <a href="" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-hair.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Hair
+            </a>
+        </span>
+    </div>
+    
+    <div class="shine">
+        <div class="inner">
+            <a href="" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-lash.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Lash
+            </a>
+        </span>
+    </div>
+
+    <div class="shine">
+        <div class="inner">
+            <a href="" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-skin.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Skin
+            </a>
+        </span>
+    </div>
+
+    <div class="shine">
+        <div class="inner">
+            <a href="" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-wellness.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Wellness
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="lashWrapper">
+    <div class="custom-container">
+        <div class="inner">
+            <div class="left">
+               <h2>
+                   try our BEST SEELING BEAUTY PRODUCT
+               </h2>
+               <h1>
+                   MD Lash Factor
+               </h1>
+
+                <div class="ctaWrapper">
+                    <a href="https://youtu.be/QUQR0xiWyvI" target="_blank" data-lity="">
+                        Discover 
+                    </a>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
+                        Try Now
+                    </a>
+                </div>
+
+                <div class="beforeAfter">
+                        <p class="title"><?php echo $this->__('SLIDE TO SEE BEFORE AND AFTER EFFECT') ?></p>
+                        <div class="slider">
+                            <div class="images twentytwenty-container">
+                                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/beforeImage.jpg') ?>" />
+                        <img src="<?php     echo $this->getSkinUrl('images/landingpage-revamp/afterImage.jpg') ?>" />
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="right">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/lash-factor-big.png') ?>" class=" wow fadeInDown animated" data-wow-delay="0.5s">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="AsSeenInWrapper">
+    <h1>
+        As Seen in
+    </h1>
+    <div id="AsSeenInSlider" class="owl-carousel">
+        <a class="item">
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/womens-health-logo.png') ?>"> 
+        </a>
+
+        <a class="item">
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/cosmopolitan-logo.png') ?>"> 
+        </a>
+
+        <a class="item">
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/marie-claire-logo.png') ?>"> 
+        </a>
+
+        <a class="item">
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/allure-logo.png') ?>"> 
+        </a>
+
+        <a class="item">
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/ny-times-logo.png') ?>"> 
+        </a>
+    </div>
+</div>
+
+<div class="productsWrapper">
+    <div class="custom-container">
+        <div class="left">
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/all-products.png') ?>" class="wow fadeIn animated" data-wow-delay="0.5s">
+            <div class="ctaWrapper">
+                <a href="<?php echo Mage::getBaseUrl(); ?>categories">
+                    View product
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <p>
+               <span>"</span> <em>MD</em> we create beauty through <br/>  advanced science. <span>"</span> 
+            </p>
+
+            <div class="authorWrapper">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/author-susan.png') ?>">
+                <span>
+                    Dr. Susan Lin <br/> <em>founder &amp; creator of md hair</em>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="advertisementWrapper">
+    <div class="custom-container">
+        <div class="content">
+            <p>
+                how to look and feel more beautiful
+            </p>
+            <div class="ctaWrapper">
+                <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                    Watch Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="featuredProductsWrapper">
+
+    <h1>
+        featured
+        <span>
+            favorites
+        </span>
+    </h1>
+
+    <div class="custom-container">
+        <div id="feauredProductSlider" class="owl-carousel">
+
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-revitalizing-shampoo-and-conditioner-bundle">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/conditioner-shampoo-bundle.png') ?>">
+                <p class="name">
+                    MD Revitalizing Shampoo <br/> and Conditioner Bundle
+                </p>
+                <p class="price">
+                    from $80.00
+                </p>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                    10 Reviews
+                </span>
+            </a>
+
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-beauty-essentials-bundle">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/beauty-essentials-bundle.png') ?>">
+                <p class="name">
+                    MD Beauty <br/> Essentials Bundle
+                </p>
+                <p class="price">
+                    from $159.00
+                </p>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/grey-stars.png') ?>">
+                </span>
+            </a>
+
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-nutri-hair-ultimate-program">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/hair-ultimate-program.png') ?>">
+                <p class="name">
+                    MD Nutri Hair <br/> Ultimate Program
+                </p>
+                <p class="price">
+                    from $39.95
+                </p>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                    2 Reviews
+                </span>
+            </a>
+
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>new-md-lash-factor-eyelash-conditioner">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/lash-factor-5-91-NEW.png') ?>">
+               <p class="name">
+                   NEW MD Lash Factor <br/> Eyelash Conditioner
+               </p>
+               <p class="price">
+                   from $140.00
+               </p>
+               <span>
+                   <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                   27 Reviews
+                </span>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<div class="socialWrapper">
+    <h1>
+        Get social <span>@MDfactor</span>
+    </h1>
+
+    <div class="inner">
+        <div class="custom-container">
+            <h1>
+                Real-time updates
+            </h1>
+            <span>
+                over 11,000 followers on facebook
+            </span>
+            <div class="ctaWrapper">
+                <a href="https://instagram.com/md_factor/">
+                    Follow Us
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blogWrapper">
+    <div class="custom-container">
+        <div id="blogSlider" class="owl-carousel">
+            <div class="item">
+                <div class="post-image">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/featured-blog-1.jpg') ?>" class="zoom">
+
+                </div>
+                <div class="inner">
+                    <h2>
+                        What is Special about MD Nutri Hair Capsule?
+                    </h2>
+                    <p>
+                        When taking supplements, it is important for you  to understand the source of the capsules. Many manufacturers use inexpensive animal derived capsules that are chemically  treated.   MD Hair use plant based capsules that are derived from pure vegetable source (Hydroxypropy Methylcellulose).  It is a GRAS approved ingredient by FDA for…
+                    </p>
+                    <span>
+                        <a href="">
+                            Continue reading
+                        </a>
+                    </span>
+                </div>
+
+                <div class="ctaWrapper">
+                    <a href="">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/comments-ico.png') ?>">
+                        0
+                    </a>
+                    <a href="">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/likes-ico.png') ?>">
+                        22
+                    </a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="post-image">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/featured-blog-2.jpg') ?>" class="zoom">
+
+                </div>
+                <div class="inner">
+                    <h2>
+                        Is My Blood Pressure Too High?
+                    </h2>
+                    <p>
+                        How high is too high where your blood pressure is concerned? Is a blood pressure reading of 135 over 85 healthy, or a cause for alarm? What constitutes good numbers and bad? Are healthy blood pressure readings the same for young and old, male and female, active and sedentary individuals?…
+                    </p>
+                    <span>
+                        <a href="">
+                            Continue reading
+                        </a>
+                    </span>
+                </div>
+
+                <div class="ctaWrapper">
+                    <a href="">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/comments-ico.png') ?>">
+                        0
+                    </a>
+                    <a href="">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/likes-ico.png') ?>">
+                        60
+                    </a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="post-image">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/featured-blog-3.jpg') ?>" class="zoom">
+
+                </div>
+                <div class="inner">
+                    <h2>
+                        5 Vegan Sources of Complete Protein
+                    </h2>
+                    <p>
+                        One concern for new vegans and some vegetarian is: can they get enough complete protein from eating just plant-source foods. The answer is “Yes”. Most complete proteins do come from animals, but there are several that come from plants. Here are five of the most popular. QUINOA—looks like couscous, it…
+                    </p>
+                    <span>
+                        <a href="">
+                            Continue reading
+                        </a>
+                    </span>
+                </div>
+
+                <div class="ctaWrapper">
+                    <a href="">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/comments-ico.png') ?>">
+                        0
+                    </a>
+                    <a href="">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/likes-ico.png') ?>">
+                        68
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="bottomCategoriesWrapper">
+    <div>
+        <a href="<?php echo Mage::getBaseUrl(); ?>hair">
+            <p>
+                FULLER, THICKER 
+            </p>
+            <strong>
+                younger-looking hair
+            </strong>
+        </a>
+    </div>
+
+    <div>
+        <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
+            <p>
+                GORGEOUS
+            </p>
+            <strong>
+                lashes
+            </strong>
+        </a>
+    </div>
+
+    <div>
+        <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
+            <p>
+                LIGHT, FIRM
+            </p>
+            <strong>
+                &amp; illuminate
+            </strong>
+        </a>
+    </div>
+</div>
+
+
+<div class="signUpWrapper">
+    <div class="custom-container">
+        <h1>
+            SIGN UP FOR FREE SHIPPING <br/>
+            &amp; FREE SAMPLE
+        </h1>
+        <p>
+            OVER 1 MILLION CUSTOMERS WORLDWIDE
+        </p>
+
+        <form>
+            <input type="email" name="email" placeholder="Email">
+            <button>
+                Become a MD Friend
+            </button>
+        </form>
+
+        <span>
+            We protect your personal information. We use secure transaction.
+        </span>
+    </div>
+</div>
+
+
+<div class="promotionWrapper">
+    <div class="custom-container">
+        <div class="inner">
+            <h1>
+                10% OFF
+            </h1>
+            <p>
+                online exclusive
+            </p>
+            <p>
+                offer valid till 10 arpil 2017
+            </p>
+            <div class="ctaWrapper">
+                <a href="javascript:void(0);">
+                    Sign Up
+                </a>
+            </div>
+            <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/promotion-prod.png') ?>" class=" wow fadeInUp animated" data-wow-delay="0.5s">
+        </div>
+    </div>
+</div>
+
+
+<div class="footerMenuWrapper footerMenuDesktop">
+    <div class="custom-container">
+        <div>
+            <ul>
+                <li>
+                    CUSTOMER SERVICE
+                </li>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Shipping Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Return Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/authenticity/">
+                        Authenticity
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/contact-us/">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/privacy-policy/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/terms-and-conditions/">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/wholesale/">
+                        Wholesale
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    ABOUT MD
+                </li>
+                <li>
+                    <a href="http://md-factor.com/md-factor-careers/">
+                        Careers 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        International
+                    </a>
+                </li> -->
+                <li> 
+                    <a href="http://md-factor.com/about/">
+                        About MD® / 于MD®
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/press/">
+                        In The Press
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/faq/">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    ACCOUNT
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                        Order Status
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                        View Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    INTERNATIONAL
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        繁體中文
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        体中文
+                    </a>
+                </li>
+                <li class="jabber">
+                    <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&direction=desc#reviews">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/jabber-logo.png') ?>">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="footerMenuWrapper footerMenuMobile" style="display: none;">
+    <div class="tab_container">
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1">CUSTOMER SERVICE</label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2">ABOUT MD</label>
+
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3">ACCOUNT</label>
+
+        <input id="tab4" type="radio" name="tabs">
+        <label for="tab4">INTERNATIONAL</label>
+        
+
+        <section id="content1" class="tab-content">
+            <ul>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Shipping Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Return Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/authenticity/">
+                        Authenticity
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/contact-us/">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/privacy-policy/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/terms-and-conditions/">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/wholesale/">
+                        Wholesale
+                    </a>
+                </li>
+            </ul>
+        </section>
+       
+        <section id="content2" class="tab-content">
+            <ul>
+                <li>
+                    <a href="http://md-factor.com/md-factor-careers/">
+                        Careers 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        International
+                    </a>
+                </li> -->
+                <li> 
+                    <a href="http://md-factor.com/about/">
+                        About MD® / 于MD®
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/press/">
+                        In The Press
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/faq/">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </section>
+       
+        <section id="content3" class="tab-content">
+            <ul>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                        Order Status
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                        View Cart
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="content4" class="tab-content">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);">
+                        繁體中文
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        体中文
+                    </a>
+                </li>
+                <li class="jabber">
+                    <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&direction=desc#reviews">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/jabber-logo.png') ?>">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="custom-container">
+        <p>
+            Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+            <a href="javascript:void(0);">User Agreement</a> and <a href="javascript:void(0);">Privacy Policy</a>.
+        </p>
+        <span>
+            <a href="https://www.facebook.com/MDLASHF">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/fb.png') ?>"> 
+            </a>
+            <a href="https://twitter.com/MDLFbySusanLin">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/twitter.png') ?>"> 
+            </a>
+            <a href="https://instagram.com/md_factor/">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/instagram.png') ?>"> 
+            </a>
+        </span>
+    </div>
+</div>
+
+
+<!--  Custom Scripts  -->
+
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.event.move.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
+
+<script>
+
+$(window).load(function(){
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.8});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+});
+
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+    $("#AsSeenInSlider").owlCarousel({
+        items : 5,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+    $("#feauredProductSlider").owlCarousel({
+        items : 4,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+    $("#blogSlider").owlCarousel({
+        items : 3,
+        itemsCustom : false,
+        itemsDesktop : [1270,3],
+        itemsDesktopSmall : [1070,2],
+        itemsTablet: [768,1],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+});
+
+
+</script>
+<script type="text/javascript">
+
+$(function() {
+    menu = $('nav ul');
+
+    $('#openup').on('click', function(e) {
+        e.preventDefault(); menu.slideToggle();
+    });
+  
+    $(window).resize(function(){
+        var w = $(this).width(); if(w > 319 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+  
+    $('nav li').on('click', function(e) {                
+        var w = $(window).width(); if(w < 319 ) {
+            menu.slideToggle(); 
+        }
+    });
+    
+    $('.open-menu').height($(window).height());
+});
+
+var offset = $('#main-navWrapper').offset();
+$(window).scroll(function(){
+   
+    $('#main-navWrapper').addClass('fixed-nav');
+    
+    if($(document).scrollTop() < 120){
+        $('#main-navWrapper').removeClass('fixed-nav');
+    }
+
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 120){  
+        $('#main-navWrapper').addClass("sticky");
+    }
+    else{
+        $('#main-navWrapper').removeClass("sticky");
+    }
+});
+
+</script>
+
+<script type="text/javascript">
+
+'use strict';
+
+function debounce(func, wait, immediate) {
+
+  // Debounce
+  // http://davidwalsh.name/javascript-debounce-function
+
+    var timeout;
+    return function() {
+        var context = this,
+          args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) {
+            func.apply(context, args);
+          }
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) {
+          func.apply(context, args);
+        }
+      };
+}
+
+    var htmlTag = document.getElementsByTagName('html')[0];
+    var videoContainer = document.querySelector('#video-container');
+    var videoElem = document.querySelector('#video-container video');
+
+    var minW = 320; // Minimum video width allowed
+    var vidWOrig; // Original video dimensions
+    var vidHOrig;
+
+    vidWOrig = videoElem.getAttribute('width');
+    vidHOrig = videoElem.getAttribute('height');
+
+    var videoCover = function() {
+
+      var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var winHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+      // Set the video viewport to the window size
+
+      videoContainer.style.width = winWidth + 'px';
+      videoContainer.style.height = winHeight + 'px';
+
+      // Use largest scale factor of horizontal/vertical
+      var scaleH = winWidth / vidWOrig;
+      var scaleV = winHeight / vidHOrig;
+      var scale = scaleH > scaleV ? scaleH : scaleV;
+
+      // Don't allow scaled width < minimum video width
+      if (scale * vidWOrig < minW) {
+        scale = minW / vidWOrig;
+      }
+
+      // Scale the video
+      var videoNewWidth = scale * vidWOrig;
+      var videoNewHeight = scale * vidHOrig;
+
+      videoElem.style.width = videoNewWidth + 'px';
+      videoElem.style.height = videoNewHeight + 'px';
+
+      // Center it by scrolling the video viewport
+      videoContainer.scrollLeft = (videoNewWidth - winWidth) / 2;
+      videoContainer.scrollTop = (videoNewHeight - winHeight) / 1.3;
+
+    };
+
+    if (htmlTag.classList.contains('no-touch')) {
+      videoCover();
+
+      // Adjust on resize
+      var updateVideo = debounce(function() {
+        videoCover();
+      }, 100);
+
+      window.addEventListener('resize', updateVideo);
+    }
+        
+</script>
+
+
+</body>
+</html>

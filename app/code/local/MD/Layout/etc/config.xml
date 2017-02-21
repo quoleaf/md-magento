@@ -35,6 +35,15 @@
         </page>
         <page>
             <layouts> 
+                <landingpagerevamp module="page" translate="label">
+                    <label>MD Landingpage Revamp</label>
+                    <template>page/md-landingpage-revamp.phtml</template>
+                    <layout_handle>landingpagerevamp</layout_handle>
+                </landingpagerevamp> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
                 <mdhairlossveronelandingpage module="page" translate="label">
                     <label>MD Hairloss Version One Landing Page</label>
                     <template>page/md-hairloss-version-one-landingpage.phtml</template>

@@ -2282,3 +2282,31 @@ body.intimate-restore-blue {
     min-height: 150px;
     background: url(AjaxLoader.gif) no-repeat center center
 }   
+.intimatefree{
+    span#success_message {
+        font-size: 24px;
+        font-family: inherit;
+        padding: 0 !important;
+    }
+
+    button.Button.ctct-button.Button--block.Button-secondary.intimatemdfriend {
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #e8408b;
+        transition: all 0.5s ease;
+        padding: 0px 30px 0px 30px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 20px;
+        color: #fff;
+        font-family: inherit;
+        border: 0;
+    }
+
+    button.Button.ctct-button.Button--block.Button-secondary.intimatemdfriend:hover{
+        background: #da0061;
+    }
+
+    
+}
+

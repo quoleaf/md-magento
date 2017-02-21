@@ -72,7 +72,7 @@
 
 <div class="VideoWrapper">
 	<div id="video-container">
-        <video preload="auto" autoplay loop muted width="1440" height="810">
+        <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
             <source src="http://localhost/webfiles/MDMageVerTwo/skin/frontend/default/md-theme/images/landingpage-revamp/header-vid-new.mp4" type="video/mp4">  
         </video>
     </div>
@@ -208,7 +208,7 @@
 </div>
 
 <div class="categoryWrapper">
-    <div class="shine">
+    <div class="">
         <div class="inner">
             <a href="<?php echo Mage::getBaseUrl(); ?>hair" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-hair.png') ?>">
@@ -222,7 +222,7 @@
         </span>
     </div>
     
-    <div class="shine">
+    <div class="">
         <div class="inner">
             <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-lash.png') ?>">
@@ -236,7 +236,7 @@
         </span>
     </div>
 
-    <div class="shine">
+    <div class="">
         <div class="inner">
             <a href="<?php echo Mage::getBaseUrl(); ?>md-skin" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-skin.png') ?>">
@@ -250,7 +250,7 @@
         </span>
     </div>
 
-    <div class="shine">
+    <div class="">
         <div class="inner">
             <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-wellness.png') ?>">
@@ -929,6 +929,12 @@
     </div>
 </div>
 
+
+<style type="text/css">
+    ::-webkit-media-controls {
+  display:none !important;
+}
+</style>
 
 <!--  Custom Scripts  -->
 

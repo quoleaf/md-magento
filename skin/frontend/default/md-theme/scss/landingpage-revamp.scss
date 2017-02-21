@@ -829,6 +829,10 @@ body.landingpage-revamp {
 				    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
 				    position: relative;
 				    top: 3px;
+				    width: 100%;
+				    text-align: center;
+				    float: left;
+				    padding: 10px 0 20px 0;
 
 				    @media screen and (max-width: 520px) {
 				    	font-size: 16px;

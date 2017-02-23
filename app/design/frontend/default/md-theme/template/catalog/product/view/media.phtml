@@ -37,7 +37,7 @@
         <?php if ($this->isGalleryImageVisible($_image)): ?>
         <div class="image">
             <div class="content">
-                <img  class="zoom" data-magnify-src="<?php echo $this->getGalleryImageUrl($_image); ?>" src="<?php echo $this->getGalleryImageUrl($_image); ?>" />
+                <img title="<?php echo $this->getImageLabel(); ?>" alt="<?php echo $this->getImageLabel(); ?>" class="zoom" data-magnify-src="<?php echo $this->getGalleryImageUrl($_image); ?>" src="<?php echo $this->getGalleryImageUrl($_image); ?>" />
                 
             </div>
         </div>

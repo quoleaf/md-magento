@@ -66,7 +66,7 @@ nav {
         .MDnav>ul>li>a {
             padding:15px 20px;
 
-            @media only screen and (max-width : 1270px) { 
+            @media only screen and (max-width : 1470px) { 
                 padding: 15px 11px;
                 font-size: 14px;
             }
@@ -163,7 +163,7 @@ nav {
             text-decoration: none;
             color: #fff;
 
-            @media screen and (max-width: 1070px) { 
+            @media screen and (max-width: 1064px) { 
                 color: #727070;
             }
             
@@ -245,7 +245,7 @@ nav {
         }
         .MDnav .menu-toggle {
             color:#777;
-            padding:10px 50px 10px 50px;
+            padding:10px 15px 10px 15px;
             height: 55px;
 
             @media only screen and (max-width : 470px) {
@@ -609,7 +609,7 @@ nav {
                 padding: 2px 0px 2px 0px;
 
                 @media screen and (max-width: 1100px) {
-                    padding: 2px 50px 2px 50px;
+                    padding: 2px 20px 2px 20px;
                 }
 
                 @media screen and (max-width: 1064px) {

@@ -214,7 +214,7 @@ body.landingpage-revamp {
 
 	    @media only screen and (max-width : 1100px) {
 	        width: 100%;
-	        padding: 0 50px 0 50px;
+	        padding: 0 20px 0 20px;
 	    }
 
 	    @media only screen and (max-width : 470px) {
@@ -1331,6 +1331,7 @@ body.landingpage-revamp {
 
 					@media only screen and (max-width : 500px) { 
 						font-size: 20pt;
+						line-height: 20px;
 					}
 
 					@media only screen and (max-width : 400px) { 
@@ -1345,6 +1346,10 @@ body.landingpage-revamp {
 					    position: relative;
 					    top: 18px;
 					    color: #004d93;
+
+					    @media only screen and (max-width : 500px) { 
+					    	font-size: 50px;
+					    }
 					}
 
 					// &:before {

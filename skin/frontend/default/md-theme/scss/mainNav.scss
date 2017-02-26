@@ -23,6 +23,13 @@ nav {
         }
 
         .logo {
+
+            @media screen and (max-width: 1270px) {
+                img {
+                    width: 110px;
+                }
+            }
+            
             @media screen and (max-width: 1064px) {
                 display: none;
             }

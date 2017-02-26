@@ -66,8 +66,9 @@ nav {
         .MDnav>ul>li>a {
             padding:15px 20px;
 
-            @media only screen and (max-width : 1170px) { 
-                padding: 15px 13px;
+            @media only screen and (max-width : 1270px) { 
+                padding: 15px 11px;
+                font-size: 14px;
             }
         }
         .MDnav ul ul {

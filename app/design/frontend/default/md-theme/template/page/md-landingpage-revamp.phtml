@@ -630,7 +630,37 @@
             <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/promotion-prod.png') ?>" class=" wow fadeInUp animated" data-wow-delay="0.5s">
 
             <div id="promotionsignupform" class="lity-hide">
-                <form>
+            
+              <div class="fields clearfix">
+          <div class="ctct-embed-signup subscription">
+            <div class="fields clearfix">
+              <span id="success_message_subscription" style="display:none;">
+                <div style="text-align:center;font-size:32px;color:#000">Thanks for signing up!</div>
+              </span>
+              
+              <form data-id="embedded_signup:form" class="ctct-custom-form Form subscribe" name="embedded_signup" method="POST" >
+              <input data-id="ca:input" name="ca" value="84bd4af4-34ab-46fe-93f8-cc6f0d942fdf" type="hidden">
+              <input data-id="list:input" name="list" value="1275815905" type="hidden">
+              <input data-id="source:input" name="source" value="EFD" type="hidden">
+              <input data-id="required:input" name="required" value="list,email,first_name" type="hidden">
+              <input data-id="url:input" name="url" value="" type="hidden">
+                  <input data-id="Email Address:input" placeholder="<?php echo $this->__('Email') ?>" class="textbox newsletter-email" name="email" value="" maxlength="80" type="text">
+                  <input data-id="First Name:input" placeholder="<?php echo $this->__('Name') ?>" class="textbox newsletter-name" name="first_name" value="" maxlength="50" type="text">
+                <div class="subscribe-btn-wrp">
+                  <button type="button" class="pinkBG Button ctct-button Button--block Button-secondary newsletter-submit submitBtn submitBtnCust " data-enabled="enabled">SUbmit<img id="loader" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/subscribe-loader.gif" alt="" style="display: none;"/></button>
+                  <label>
+                    
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <script type="text/javascript">var localizedErrMap={};localizedErrMap['required']='This field is required.';localizedErrMap['ca']='An unexpected error occurred while attempting to send email.';localizedErrMap['email']='Please enter your email address in name@email.com format.';localizedErrMap['birthday']='Please enter birthday in MM/DD format.';localizedErrMap['anniversary']='Please enter anniversary in MM/DD/YYYY format.';localizedErrMap['custom_date']='Please enter this date in MM/DD/YYYY format.';localizedErrMap['list']='Please select at least one email list.';localizedErrMap['generic']='This field is invalid.';localizedErrMap['shared']='Sorry, we could not complete your sign-up. Please contact us to resolve this.';localizedErrMap['state_mismatch']='Mismatched State/Province and Country.';localizedErrMap['state_province']='Select a state/province';localizedErrMap['selectcountry']='Select a country';var postURL='https://visitor2.constantcontact.com/api/signup';</script> 
+        </div>
+                
+
+                <!-- <form>
                     <input type="text" name="fullname" placeholder="FULL NAME">
                     <input type="email" name="email" placeholder="EMAIL">
                        
@@ -639,7 +669,7 @@
                             Submit
                         </button>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
@@ -971,7 +1001,35 @@ $(window).load(function(){
 
 <script>
 
+
+
 $(document).ready(function() {
+
+     $(document).on('click', '.submitBtnCust', function(){
+        var ca = $('form[data-id="embedded_signup:form"] input[data-id="ca:input"]').val();
+        var email = $('form[data-id="embedded_signup:form"] input[data-id="Email Address:input"]').val();
+        var name = $('form[data-id="embedded_signup:form"] input[data-id="First Name:input"]').val();
+
+        postURL = 'https://visitor2.constantcontact.com/api/signup?'+ 'ca='+ ca + '&email='+ email +'&first_name='+ name +'&list';
+          $.ajax({
+              type: 'POST',
+              crossDomain: true,
+              url: postURL,
+              error: function(xhr, status, err) {
+                
+                alert('error');
+          },
+          success: function(data, status, xhr) {
+              $('.ctct-embed-signup.subscription p').hide();
+              $('.ctct-embed-signup.subscription h2').hide();
+              $('.ctct-embed-signup.subscription button').hide();
+              $('.ctct-embed-signup.subscription form').hide();
+              $('#success_message_subscription').removeClass('u-hide');
+              $('#success_message_subscription').show();
+    
+          }
+      });
+    });
 
     $("#AsSeenInSlider").owlCarousel({
         items : 5,

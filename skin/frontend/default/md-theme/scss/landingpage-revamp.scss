@@ -2823,4 +2823,25 @@ body.landingpage-revamp {
 
 }
 
+.lity-content:after {
+    box-shadow: 0 0 8px rgba(255,255,255,0.6) !important;
+}
+
+button.pinkBG.Button.ctct-button.Button--block.Button-secondary.newsletter-submit.submitBtn.submitBtnCust {
+    background: #e8408b;
+    transition: all 0.5s ease;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 25px 45px 25px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.subscribe-btn-wrp {
+    float: right;
+}
+
 

@@ -29,8 +29,21 @@
 $order_id = $this->getOrderId();
 $order = Mage::getModel('sales/order')->loadByIncrementId($order_id);
 $total = $order->getGrandTotal();
+
+$items = $order->getAllItems();
+$skulist = "";
+$qlist = "";
+$amtlist = "";
+$namelist = "";
+foreach($items as $item){
+    $skulist .= $item->getProduct()->getData("sku") . '|';
+    $qlist .= intval($item->getQtyOrdered()) . '|';
+    $namelist .= $item->getName() . '|';
+    $amtlist .= intval($item->getPrice()) . '|';
+}
+
 $pepperjam_url = 'https://t.pepperjamnetwork.com/track?PID=7314&INT=ITEMIZED&ITEM1=1&QTY1=1&AMOUNT1='.$total.'&OID='.$order_id;
-$rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist=order&qlist=1&amtlist='.$total.'&cur=USD&namelist=order';
+$rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist='.$skulist.'&qlist='.$qlist.'&amtlist='.$amtlist.'&cur=USD&namelist='.$namelist;
 ?>
 
 <!-- pepperjam tracking -->

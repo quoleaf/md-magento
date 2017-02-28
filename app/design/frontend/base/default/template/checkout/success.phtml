@@ -39,7 +39,7 @@ foreach($items as $item){
     $skulist .= $item->getProduct()->getData("sku") . '|';
     $qlist .= intval($item->getQtyOrdered()) . '|';
     $namelist .= $item->getName() . '|';
-    $amtlist .= intval($item->getPrice()) . '|';
+    $amtlist .= intval($item->getPrice()*100) . '|';
 }
 
 $pepperjam_url = 'https://t.pepperjamnetwork.com/track?PID=7314&INT=ITEMIZED&ITEM1=1&QTY1=1&AMOUNT1='.$total.'&OID='.$order_id;

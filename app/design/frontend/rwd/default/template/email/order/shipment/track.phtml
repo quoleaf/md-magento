@@ -20,7 +20,7 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
@@ -38,7 +38,18 @@
     <?php $i=0; foreach ($_shipment->getAllTracks() as $_item): $i++ ?>
     <tbody>
             <td align="left" valign="top" style="padding:3px 9px"><?php echo $this->escapeHtml($_item->getTitle()) ?></td>
-            <td align="center" valign="top" style="padding:3px 9px"><?php echo $this->escapeHtml($_item->getNumber()) ?></td>
+            <?php
+            if (@class_exists('Xtento_CustomTrackers_Helper_Data')) {
+                $trackingUrl = Mage::helper('customtrackers')->getTrackingUrl($_item, $_shipment->getStoreId(), $_shipment);
+            } else {
+                $trackingUrl = '';
+            }
+            ?>
+            <?php if ($trackingUrl == ''): ?>
+                <td align="center" valign="top" style="padding:3px 9px"><?php echo $_item->getNumber() ?></td>
+            <?php else: ?>
+                <td align="center" valign="top" style="padding:3px 9px"><a href="<?php echo $trackingUrl ?>"><?php echo $_item->getNumber() ?></a></td>
+            <?php endif; ?>
         </tr>
     <?php endforeach ?>
     </tbody>

@@ -981,12 +981,13 @@
 
 
 <script>
-
+jQuery(document).ready(function($) {
 $(window).load(function(){
-      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.8});
-      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+      jQuery(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.8});
+      jQuery(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
 });
 
+});
 </script>
 
 
@@ -1026,9 +1027,9 @@ $(window).scroll(function() {
 
 
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
-     $(document).on('click', '.submitBtnCust', function(){
+     jQuery(document).on('click', '.submitBtnCust', function(){
         var ca = $('form[data-id="embedded_signup:form"] input[data-id="ca:input"]').val();
         var email = $('form[data-id="embedded_signup:form"] input[data-id="Email Address:input"]').val();
         var name = $('form[data-id="embedded_signup:form"] input[data-id="First Name:input"]').val();
@@ -1054,7 +1055,7 @@ $(document).ready(function() {
       });
     });
 
-    $("#AsSeenInSlider").owlCarousel({
+    jQuery("#AsSeenInSlider").owlCarousel({
         items : 5,
         itemsCustom : false,
         itemsDesktop : [1199,4],
@@ -1099,7 +1100,7 @@ $(document).ready(function() {
         lazyEffect : "fade",
     });
 
-    $("#feauredProductSlider").owlCarousel({
+   jQuery("#feauredProductSlider").owlCarousel({
         items : 4,
         itemsCustom : false,
         itemsDesktop : [1199,4],
@@ -1145,7 +1146,7 @@ $(document).ready(function() {
         lazyEffect : "fade",
     });
 
-    $("#blogSlider").owlCarousel({
+    jQuery("#blogSlider").owlCarousel({
         items : 3,
         itemsCustom : false,
         itemsDesktop : [1270,3],

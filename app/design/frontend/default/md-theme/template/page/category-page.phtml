@@ -450,78 +450,35 @@
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/nav.min.js') ?>"></script>
 
+
 <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            jQuery('.MDnav').MDNav({
-                theme: 'light'
+jQuery(document).ready(function($) {
+    jQuery('.MDnav').MDNav({
+        theme: 'light'
             });
         });
-    </script>
 
-<script>
-
-$(window).load(function(){
-      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.8});
-      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
-});
-
-</script>
-
-<script>
-
-
-
-$(document).ready(function() {
-
-     $(document).on('click', '.submitBtnCust', function(){
-        var ca = $('form[data-id="embedded_signup:form"] input[data-id="ca:input"]').val();
-        var email = $('form[data-id="embedded_signup:form"] input[data-id="Email Address:input"]').val();
-        var name = $('form[data-id="embedded_signup:form"] input[data-id="First Name:input"]').val();
-
-        postURL = 'https://visitor2.constantcontact.com/api/signup?'+ 'ca='+ ca + '&email='+ email +'&first_name='+ name +'&list';
-          $.ajax({
-              type: 'POST',
-              crossDomain: true,
-              url: postURL,
-              error: function(xhr, status, err) {
-                
-                alert('error');
-          },
-          success: function(data, status, xhr) {
-              $('.ctct-embed-signup.subscription p').hide();
-              $('.ctct-embed-signup.subscription h2').hide();
-              $('.ctct-embed-signup.subscription button').hide();
-              $('.ctct-embed-signup.subscription form').hide();
-              $('#success_message_subscription').removeClass('u-hide');
-              $('#success_message_subscription').show();
-    
-          }
-      });
-    });
-});
-
-
-</script>
-<script type="text/javascript">
-
+        jQuery(document).ready(function($) {
 var offset = $('#main-navWrapper').offset();
 $(window).scroll(function(){
    
-    $('#main-navWrapper').addClass('fixed-nav');
+    jQuery('#main-navWrapper').addClass('fixed-nav');
     
-    if($(document).scrollTop() < 120){
-        $('#main-navWrapper').removeClass('fixed-nav');
+    if(jQuery(document).scrollTop() < 120){
+        jQuery('#main-navWrapper').removeClass('fixed-nav');
     }
 
 });
-
+});
+jQuery(document).ready(function($) {
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 120){  
-        $('#main-navWrapper').addClass("sticky");
+    if (jQuery(this).scrollTop() > 120){  
+        jQuery('#main-navWrapper').addClass("sticky");
     }
     else{
-        $('#main-navWrapper').removeClass("sticky");
+        jQuery('#main-navWrapper').removeClass("sticky");
     }
+});
 });
 
 </script>

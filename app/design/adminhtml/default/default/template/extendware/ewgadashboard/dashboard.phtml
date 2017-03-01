@@ -1,0 +1,112 @@
+<div class="main-col-inner">
+	<div class="content-header">
+	    <h3 class="icon-head head-cms-page"><?php echo $this->__('Google Analytics Dashboard'); ?></h3>
+	    <p class="form-buttons">
+	    	<button onclick="setLocation('<?php echo $this->getUrl('adminhtml/ewgadashboard_dashboard/index', array('refresh' => 1, '_current' => true)); ?>')" class="scalable " type="button"><span><span><span><?php echo $this->__('Refresh'); ?></span></span></span></button>
+	    	<button type="button" class="scalable" onclick="setLocation('<?php echo $this->getUrl('adminhtml/dashboard/index', array('show_magento' => 1)); ?>')"><span><span><span><?php echo $this->__('View Default Dashboard') ?></span></span></span></button>
+	    	<button type="button" class="scalable go" onclick="window.open('https://www.google.com/analytics/reporting/?id=<?php echo $this->getProfile(); ?>')"><span><span><span><?php echo $this->__('View Full Report') ?></span></span></span></button>
+	    </p>
+	</div>
+	
+<?php if( !$this->isSingleStoreMode() ): ?>
+<?php echo $this->getChildHtml('store_switcher');?>
+<?php endif;?>
+
+<?php if ($this->isAuthConfigValid() === false): ?>
+<div id="messages"><ul class="messages"><li class="error-msg">
+<ul><li><span><?php echo $this->__('Failed to login to Google Analytics. Please verify your credentials are correct in Extendware -> Manage Extensions -> Google Analytics Dashboard -> Configure.'); ?></span></li></ul>
+</li></ul></div>
+<h1>How to get the authentication configuration?</h1>
+<p style="font-size: 14px">You must enter your authentication config in order be authenticated by google. To do this please refer to the user guide (Extendware -> User Guides). The authorized javascript origin URL should be <b>http://<?php echo parse_url(Mage::getBaseUrl(), PHP_URL_HOST); ?></b> and the authorized redirect URL you should use when creating your configuration is <b><?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'ewgadashboard.php'?></b></p>
+
+<?php elseif ($this->isAuthenticated() === false): ?>
+<p style="font-size: 14px"><?php echo $this->__('In order to view your dashboard you need to'); ?> <button onclick="window.location='<?php echo $this->getAuthUrl(); ?>'"><span><span><?php echo $this->__('grant session access to analytics data'); ?></span></span></button></p>
+<?php else: ?>
+	<?php foreach ($this->getSummaryData() as $summary): ?>
+		<?php
+			$block = $this->getLayout()->createBlock('core/template')->setTemplate('/extendware/ewgadashboard/dashboard/summary/' . $summary['display'] . '.phtml');
+			$block->setHeaderTitle($summary['header_title']);
+			$block->setDateRange($this->mHelper()->getDateRange($summary['from'], $summary['to']));
+			$block->setMetrics($summary['metrics']);
+			echo $block->toHtml();
+		?>
+	<?php endforeach; ?>
+	
+	<?php 
+		$from = 'today - ' . $this->mHelper('config')->getContentPeriodMagnitude() . ' days';
+		$to = 'today';
+		$data = $this->getApi()->getTopContentReport($from, $to, $this->mHelper('config')->getContentMaxItems()); 
+	?>
+
+	<div class="box-left" style="max-height: 350px; overflow: auto;">
+		<div class="entry-edit">
+		<div class="entry-edit-head"><h4><?php echo $this->__('Top Content (%s)', $this->mHelper()->getDateRange($from, $to)); ?></h4></div>
+		<fieldset class="np">
+		<div class="grid np">
+			<table cellspacing="0" style="border:0;">
+				<col><col width="70">
+				<thead>
+				<tr class="headings">
+					<th class=" no-link"><span class="nobr"><?php echo $this->__('URL') ?></span></th>
+					<th class=" no-link last"><span class="nobr"><?php echo $this->__('Pageviews') ?></span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<?php foreach($data->getResults() as $result): ?>
+					<tr>
+						<td><a href="http://<?php echo $result->getHostname() . $result->getPagePath(); ?>" target="_blank" style="word-wrap: break-word"><?php echo $result->getPagePath(); ?></a></td>
+						<td><?php echo number_format($result->getPageviews()); ?></td>
+					</tr>
+				<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+		</fieldset>
+		</div>
+	</div>
+
+	<?php 
+		$from = 'today - ' . $this->mHelper('config')->getReferrerPeriodMagnitude() . ' days';
+		$to = 'today';
+		$data = $this->getApi()->getTopReferrerReport($from, $to, $this->mHelper('config')->getReferrerMaxItems(), $this->mHelper('config')->getReferrerSortBy()); 
+	?>
+
+	<div class="box-right" style="max-height: 350px; overflow: auto;">
+		<div class="entry-edit">
+		<div class="entry-edit-head"><h4><?php echo $this->__('Top Referrers (%s)', $this->mHelper()->getDateRange($from, $to)); ?></h4></div>
+		<fieldset class="np">
+		<div class="grid np">
+			<span style="width:100%;background:#fff;text-align:center;padding:10px 0;display:block;">
+			<?php echo $this->mHelper()->getReferralGraphImage($data); ?>
+			</span>
+			<table cellspacing="0" style="border:0;">
+				<col><col width="100"><col width="70">
+				<thead>
+				<tr class="headings">
+					<th class=" no-link"><span class="nobr"><?php echo $this->__('Source') ?></span></th>
+					<th class=" no-link last"><span class="nobr"><?php echo $this->__('Revenue') ?></span></th>
+					<th class=" no-link last"><span class="nobr"><?php echo $this->__('Visits') ?></span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<?php foreach($data->getResults() as $result): ?>
+					<tr>
+						<?php if ($result->getMedium() == 'referral'): ?>
+							<td><a href="http://<?php echo $result->getSource() . $result->getReferralPath(); ?>" target="_blank" style="word-wrap: break-word"><?php echo $result->getSource() . $result->getReferralPath(); ?></a></td>
+						<?php else: ?>
+							<td><?php echo $result->getSource(); ?></td>
+						<?php endif; ?>
+						<td><?php echo $this->mHelper()->getPrice($result->getTransactionRevenue()); ?></td>
+						<td><?php echo number_format($result->getVisits()); ?></td>
+					</tr>
+				<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+		</fieldset>
+		</div>
+	</div>
+<?php endif; ?>
+	<div class="clear"></div>
+
+</div>

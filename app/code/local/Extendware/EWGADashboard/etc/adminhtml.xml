@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<config>
+	<extendware>
+		<quickaccess>
+			<ewgadashboard>
+                <resource>extendware/ewgadashboard</resource>
+				<children>
+					<dashboard translate="title" module="ewgadashboard">
+						<title>Dashboard</title>
+						<sort_order>1</sort_order>
+						<action>adminhtml/ewgadashboard_dashboard</action>
+						<resource>extendware/ewgadashboard</resource>
+					</dashboard>
+				</children>
+			</ewgadashboard>
+		</quickaccess>
+	</extendware>
+	<menu>
+	    <ewcore translate="title" module="ewgadashboard">
+			<title>Extendware</title>
+			<sort_order>89</sort_order>
+			<resource>extendware/ewcore</resource>
+			<class>ewcore-main</class>
+	        <children>
+	            <quickaccess translate="title" module="ewgadashboard">
+	                <title>Manage Extensions</title>
+	                <sort_order>1</sort_order>
+	                <resource>extendware/ewgadashboard</resource>
+	                <children>
+	                	<ewgadashboard translate="title" module="ewgadashboard">
+			                <title>Google Analytics Dashboard</title>
+			                <sort_order>43747</sort_order>
+			                <resource>extendware/ewgadashboard</resource>
+			                <children>
+			                	<dashboard translate="title" module="ewgadashboard">
+									<title>Dashboard</title>
+									<sort_order>1</sort_order>
+									<action>adminhtml/ewgadashboard_dashboard</action>
+									<resource>extendware/ewgadashboard</resource>
+								</dashboard>
+								<configure translate="title" module="ewgadashboard">
+									<title>Configure</title>
+									<sort_order>9999999</sort_order>
+									<action>adminhtml/ewgadashboard_config/index</action>
+									<resource>extendware/ewgadashboard/configure</resource>
+								</configure>
+			                </children>
+			            </ewgadashboard>
+	                </children>
+	            </quickaccess>
+	            <userguides translate="title" module="ewgadashboard">
+	                <title>User Guides / Help</title>
+	                <sort_order>9</sort_order>
+	                <action>adminhtml/ewgadashboard_config/gotoExtendwareUserguides</action>
+	                <resource>extendware/ewcore/redirect/userguide</resource>
+	                <class>ewcore-extendware-userguide</class>
+	            </userguides>
+	            <storelink translate="title" module="ewgadashboard">
+		            <title>Improve Your Store</title>
+		            <sort_order>9999</sort_order>
+		            <action>adminhtml/ewgadashboard_config/gotoExtendware</action>
+		            <resource>extendware/ewcore/redirect/extendware</resource>
+		            <class>ewcore-extendware-link</class>
+		        </storelink>
+	        </children>
+	    </ewcore>
+	    <dashboard>
+	        <children>
+	            <ewgadashboard translate="title" module="ewgadashboard">
+					<title>Analaytics Dashboard</title>
+					<sort_order>1</sort_order>
+					<action>adminhtml/ewgadashboard_dashboard</action>
+					<resource>extendware/ewgadashboard</resource>
+				</ewgadashboard>
+	        </children>
+	    </dashboard>
+	</menu>
+	<acl>
+		<resources>
+            <admin>
+                <children>
+                    <extendware translate="title" module="ewgadashboard">
+                    	<title>Extendware</title>
+                    	<sort_order>0</sort_order>
+                        <children>
+                        	<ewgadashboard translate="title" module="ewgadashboard">
+                        		<title>Google Analytics Dash</title>
+                        		<children>
+                        			<settings translate="title">
+                        				<title>Settings</title>
+                        				<children>
+				                            <main translate="title">
+				                                <title>Main</title>
+				                                <children>
+					                                <ewgadashboard translate="title">
+						                                <title>General</title>
+						                            </ewgadashboard>
+					                            </children>
+				                            </main>
+			                            </children>
+			            			</settings>
+			            		</children>
+			            	</ewgadashboard>
+                        </children>
+                    </extendware>
+                </children>
+            </admin>
+        </resources>
+	</acl>
+</config>

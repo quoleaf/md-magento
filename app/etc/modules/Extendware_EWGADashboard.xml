@@ -1,0 +1,14 @@
+<config>
+   <modules>
+      <Extendware_EWGADashboard>
+         <active>true</active>
+         <codePool>local</codePool>
+         <depends>
+            <Extendware_EWCore/>
+         </depends>
+         <extendware>
+            <name>Google Analytics Dash</name>
+         </extendware>
+      </Extendware_EWGADashboard>
+   </modules>
+</config>

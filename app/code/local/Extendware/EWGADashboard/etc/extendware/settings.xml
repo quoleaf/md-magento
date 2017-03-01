@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+        <Extendware_EWGADashboard>
+        	<extendware>
+	        	<settings>
+	        		<scopes>
+		        		<main>
+							<tabs>
+						        <main translate="label comment ewhelp" module="ewgadashboard">
+						            <label>Google Analytics Dash</label>
+						            <sort_order>100</sort_order>
+						        </main>
+						    </tabs>
+							<sections>
+								<ewgadashboard translate="label comment ewhelp" module="ewgadashboard">
+									<class>separator-top</class>
+									<label>General</label>
+									<tab>main</tab>
+									<frontend_type>text</frontend_type>
+									<sort_order>100</sort_order>
+									<show_in_default>1</show_in_default>
+									<show_in_website>1</show_in_website>
+									<show_in_store>1</show_in_store>
+									<groups>
+										<general translate="label comment ewhelp" module="ewgadashboard">
+						                    <label>General</label>
+						                    <frontend_type>text</frontend_type>
+						                    <sort_order>10</sort_order>
+						                    <show_in_default>1</show_in_default>
+						                    <show_in_website>1</show_in_website>
+						                    <show_in_store>1</show_in_store>
+						                    <fields>
+						                        <default_dashboard translate="label comment ewhelp">
+						                            <label>Default Dashboard</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewgadashboard/adminhtml_config_data_option_dashboard</source_model>
+						                            <sort_order>1</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[This is the dashboard that will be displayed when first logging in and when clicking the "Dashboard" link on the admin menu bar.]]></comment>
+						                        </default_dashboard>
+						                        <profile_id translate="label comment ewhelp">
+						                            <label>Profile ID</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>10</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The numeric profile ID of your site (<b>not the public property ID</b>).]]></comment>
+						                            <ewhelp><![CDATA[To get this ID follow these steps:
+						                            <ol style="list-style-type:decimal; margin-left: 20px;">
+						                            	<li>Login to your analytics account</li>
+						                            	<li>Click on the propert to view the analytics</li>
+						                            	<li>The browser URL will look like this: https://www.google.com/analytics/web/?hl=en#report/visitors-overview/a34764025w48483814p<b>49777031</b>/</li>
+						                            	<li>Copy the number after the <i>p</i> like the bolded example above. That is your profile ID.</li>
+						                            </ol>
+						                            ]]></ewhelp>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>0</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-zero-or-greater</validate>
+						                        </profile_id>
+						                        <authentication_config translate="label comment ewhelp">
+						                            <label>Authentication Config</label>
+						                            <frontend_type>textarea</frontend_type>
+						                            <sort_order>20</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_json</model>
+						                            		<options>
+						                            			<can_be_empty>1</can_be_empty>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <comment><![CDATA[Your Google Analytics authentification config. Refer to user guide in Extendware -> User Guides for information on how to get this]]></comment>
+												 </authentication_config>
+						                         <timezone translate="label">
+						                            <label>Timezone</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>adminhtml/system_config_source_locale_timezone</source_model>
+						                            <backend_model>adminhtml/system_config_backend_locale_timezone</backend_model>
+						                            <sort_order>31</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[Enter the timezone that is used by your analytics account.]]></comment>
+						                        </timezone>
+						                        <cache_lifetime translate="label comment ewhelp">
+						                            <label>Cache Lifetime</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>40</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The number of minutes to cache the dashboard.]]></comment>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>0</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-zero-or-greater</validate>
+						                        </cache_lifetime>
+						                    </fields>
+						                </general>
+									</groups>
+								</ewgadashboard>
+								<ewgadashboard_advanced translate="label comment ewhelp" module="ewgadashboard">
+									<class>separator-top</class>
+									<label>Advanced</label>
+									<tab>main</tab>
+									<frontend_type>text</frontend_type>
+									<sort_order>200</sort_order>
+									<show_in_default>1</show_in_default>
+									<show_in_website>1</show_in_website>
+									<show_in_store>1</show_in_store>
+									<groups>
+										<content translate="label comment ewhelp" module="ewgadashboard">
+						                    <label>Top Content</label>
+						                    <frontend_type>text</frontend_type>
+						                    <sort_order>10</sort_order>
+						                    <show_in_default>1</show_in_default>
+						                    <show_in_website>1</show_in_website>
+						                    <show_in_store>1</show_in_store>
+						                    <fields>
+						                    	<period_magnitude translate="label comment ewhelp">
+						                            <label>Content Period</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>10</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The number of days in the past to use when creating top content report.]]></comment>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>1</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-greater-than-zero</validate>
+						                        </period_magnitude>
+						                        <max_items translate="label comment ewhelp">
+						                            <label>Max Items</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>11</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The max number of content sources to display.]]></comment>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>1</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-greater-than-zero</validate>
+						                        </max_items>
+						                    </fields>
+						                </content>
+						                <referrer translate="label comment ewhelp" module="ewgadashboard">
+						                    <label>Top Referrers</label>
+						                    <frontend_type>text</frontend_type>
+						                    <sort_order>20</sort_order>
+						                    <show_in_default>1</show_in_default>
+						                    <show_in_website>1</show_in_website>
+						                    <show_in_store>1</show_in_store>
+						                    <fields>
+						                        <period_magnitude translate="label comment ewhelp">
+						                            <label>Referrer Period</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>10</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The number of days in the past to use when creating top referrers report.]]></comment>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>1</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-greater-than-zero</validate>
+						                        </period_magnitude>
+						                        <max_items translate="label comment ewhelp">
+						                            <label>Max Items</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>11</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The max number of referrer sources to display.]]></comment>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>1</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-greater-than-zero</validate>
+						                        </max_items>
+						                        <sort_by translate="label comment ewhelp">
+						                            <label>Sort By</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewgadashboard/adminhtml_config_data_option_referrer_sortby</source_model>
+						                            <sort_order>20</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                            <show_in_store>1</show_in_store>
+						                            <comment><![CDATA[The order that referrer sources are sorted]]></comment>
+						                        </sort_by>
+						                    </fields>
+						                </referrer>
+									</groups>
+								</ewgadashboard_advanced>
+								<ewgadashboard_developer translate="label comment ewhelp" module="ewgadashboard">
+									<class>separator-top</class>
+									<label>Developer</label>
+									<tab>main</tab>
+									<frontend_type>text</frontend_type>
+									<sort_order>300</sort_order>
+									<show_in_default>1</show_in_default>
+									<show_in_website>1</show_in_website>
+									<show_in_store>1</show_in_store>
+									<groups>
+										<general translate="label comment ewhelp" module="ewgadashboard">
+						                    <label>General</label>
+						                    <frontend_type>text</frontend_type>
+						                    <fieldset_css>fieldset-wide</fieldset_css>
+						                    <sort_order>10</sort_order>
+						                    <show_in_default>1</show_in_default>
+						                    <show_in_website>1</show_in_website>
+						                    <show_in_store>1</show_in_store>
+						                    <fields>
+						                    	<report_config translate="label comment ewhelp">
+						                            <label>Report Config</label>
+						                            <frontend_type>textarea</frontend_type>
+						                            <sort_order>1</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>1</show_in_website>
+						                    		<show_in_store>1</show_in_store>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_xml</model>
+						                            		<options>
+						                            			<inline>1</inline>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry</validate>
+						                            <comment><![CDATA[Set date ranges, change order of metrics, remove metrics, etc. Refer to userguide for more information.]]></comment>
+						                        </report_config>
+						                    </fields>
+						                </general>
+									</groups>
+								</ewgadashboard_developer>
+							</sections>
+						</main>
+					</scopes>
+				</settings>
+			</extendware>
+		</Extendware_EWGADashboard>
+	</modules>
+</config>

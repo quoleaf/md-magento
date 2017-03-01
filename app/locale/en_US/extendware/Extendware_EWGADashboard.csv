@@ -1,0 +1,80 @@
+Advanced,Advanced
+"Analaytics Dashboard","Analaytics Dashboard"
+"Authentication Config","Authentication Config"
+avg,avg
+"Avg. Time on Site","Avg. Time on Site"
+"Bounce Rate","Bounce Rate"
+"Cache Lifetime","Cache Lifetime"
+Configuration,Configuration
+Configure,Configure
+"Content Period","Content Period"
+"Conversion Rate","Conversion Rate"
+Dashboard,Dashboard
+"Default Dashboard","Default Dashboard"
+Developer,Developer
+"Enter the timezone that is used by your analytics account.","Enter the timezone that is used by your analytics account."
+Extendware,Extendware
+"Failed to login to Google Analytics. Please verify your credentials are correct in Extendware -> Manage Extensions -> Google Analytics Dashboard -> Configure.","Failed to login to Google Analytics. Please verify your credentials are correct in Extendware -> Manage Extensions -> Google Analytics Dashboard -> Configure."
+General,General
+"Google Analytics","Google Analytics"
+"Google Analytics Dash","Google Analytics Dash"
+"Google Analytics Dashboard","Google Analytics Dashboard"
+"grant session access to analytics data","grant session access to analytics data"
+"Improve Your Store","Improve Your Store"
+"In order to view your dashboard you need to","In order to view your dashboard you need to"
+"Magento Default","Magento Default"
+Main,Main
+"Manage Extensions","Manage Extensions"
+"Max Items","Max Items"
+"New Visits","New Visits"
+"Organic Searches","Organic Searches"
+"Page Load Time (s)","Page Load Time (s)"
+"Pages / Visit","Pages / Visit"
+Pageviews,Pageviews
+"Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs.","Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs."
+"Profile ID","Profile ID"
+"Referrer Period","Referrer Period"
+Refresh,Refresh
+"Report Config","Report Config"
+Revenue,Revenue
+"Revenue / Transaction","Revenue / Transaction"
+"Revenue / Visit","Revenue / Visit"
+"Set date ranges, change order of metrics, remove metrics, etc. Refer to userguide for more information.","Set date ranges, change order of metrics, remove metrics, etc. Refer to userguide for more information."
+Settings,Settings
+"Sort By","Sort By"
+Source,Source
+"The max number of content sources to display.","The max number of content sources to display."
+"The max number of referrer sources to display.","The max number of referrer sources to display."
+"The number of days in the past to use when creating top content report.","The number of days in the past to use when creating top content report."
+"The number of days in the past to use when creating top referrers report.","The number of days in the past to use when creating top referrers report."
+"The number of minutes to cache the dashboard.","The number of minutes to cache the dashboard."
+"The numeric profile ID of your site (<b>not the public property ID</b>).","The numeric profile ID of your site (<b>not the public property ID</b>)."
+"The order that referrer sources are sorted","The order that referrer sources are sorted"
+"This is the dashboard that will be displayed when first logging in and when clicking the ""Dashboard"" link on the admin menu bar.","This is the dashboard that will be displayed when first logging in and when clicking the ""Dashboard"" link on the admin menu bar."
+Timezone,Timezone
+"To get this ID follow these steps:
+						                            <ol style=""list-style-type:decimal; margin-left: 20px;"">
+						                            	<li>Login to your analytics account</li>
+						                            	<li>Click on the propert to view the analytics</li>
+						                            	<li>The browser URL will look like this: https://www.google.com/analytics/web/?hl=en#report/visitors-overview/a34764025w48483814p<b>49777031</b>/</li>
+						                            	<li>Copy the number after the <i>p</i> like the bolded example above. That is your profile ID.</li>
+						                            </ol>
+						                            ","To get this ID follow these steps:
+						                            <ol style=""list-style-type:decimal; margin-left: 20px;"">
+						                            	<li>Login to your analytics account</li>
+						                            	<li>Click on the propert to view the analytics</li>
+						                            	<li>The browser URL will look like this: https://www.google.com/analytics/web/?hl=en#report/visitors-overview/a34764025w48483814p<b>49777031</b>/</li>
+						                            	<li>Copy the number after the <i>p</i> like the bolded example above. That is your profile ID.</li>
+						                            </ol>
+						                            "
+"Top Content","Top Content"
+"Top Content (%s)","Top Content (%s)"
+"Top Referrers","Top Referrers"
+"Top Referrers (%s)","Top Referrers (%s)"
+Transactions,Transactions
+URL,URL
+"User Guides / Help","User Guides / Help"
+"View Default Dashboard","View Default Dashboard"
+"View Full Report","View Full Report"
+Visits,Visits
+"Your Google Analytics authentification config. Refer to user guide in Extendware -> User Guides for information on how to get this","Your Google Analytics authentification config. Refer to user guide in Extendware -> User Guides for information on how to get this"

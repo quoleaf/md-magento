@@ -1,87 +1,58 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
 
 <!DOCTYPE html>
-<html>
-<head>
-	<title>MD Factor</title>
 
-    <meta property="og:image" content="http://us.md-factor.com/skin/frontend/default/md-theme/images/md-hair-landing/nutrihair-fb-thumbnail.jpg" />
-    
-    <meta property="og:image" content="http://us.md-factor.com/skin/frontend/default/md-theme/images/md-hair-landing/nutrihair-fb-thumbnail.jpg" />
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+    <title>MD Factor</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <?php echo $this->getChildHtml('head') ?>
 
-    <link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
-    
-    <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
-
-	<!-- Fontawesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-
-    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
-
-    <!-- Owl Carousel Assets -->
-    <link href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet">
-
-	<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/mainNav.css" type="text/css" />
-
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
-
-    <!-- BEGIN GOOGLE ANALYTICS CODE -->
-    <script type="text/javascript">
-        //<![CDATA[
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-89987290-1']);
-            _gaq.push(['_trackPageview']);
-            
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-        //]]>
-    </script>
-    <!-- END GOOGLE ANALYTICS CODE -->
-        
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init', '1010013549017189');
-        fbq('track', "PageView");
-    </script>
     
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PZFB6R7');</script>
-    <!-- End Google Tag Manager -->
-
 </head>
 
 <body class="landingpage-revamp">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZFB6R7"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
 <div class="VideoWrapper">
-	<div id="video-container">
+    <div id="video-container">
         <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
             <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/header-vid-new-optimize.mp4" type="video/mp4">  
             <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/header-vid-new-optimize.webm" type="video/webm"> 
@@ -91,101 +62,115 @@
 
     <div class="overlay">
         <div class="overlay__inner">
-            <nav class='main-nav' id="main-navWrapper">
-            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
-                <div class="custom-container navi">
-                    <a class="logo" href='<?php echo mage::getbaseurl(); ?>'> 
-                        <img class="whitelogo" src="<?php echo $this->getSkinUrl('images/logo-white.png') ?>"> 
-                        <img class="darklogo" src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>" style="display: none;"> 
-                    </a>
-                    <div class="MDnav">
-                        <ul>
-                             <?php
-                            $obj = new Mage_Catalog_Block_Navigation();
-                            $storeCategories = $obj->getStoreCategories();
-                            Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
-                            $limit_category = 4;
-                            $ctr = 1;
+            <div class="transparentNav">
+                <nav class='main-nav' id="main-navWrapper">
+                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
+                    <div class="custom-container navi">
+                        <a class="logo" href='<?php echo mage::getbaseurl(); ?>'> 
+                            <img class="whitelogo" src="<?php echo $this->getSkinUrl('images/logo-blue.png') ?>"> 
+                            <img class="darklogo" src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>" style="display: none;"> 
+                        </a>
+                        <div class="MDnav">
+                            <ul>
+                                 <?php
+                                $obj = new Mage_Catalog_Block_Navigation();
+                                $storeCategories = $obj->getStoreCategories();
+                                Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                                $limit_category = 4;
+                                $ctr = 1;
 
-                            foreach ($storeCategories as $_category):
-                            if($ctr <= $limit_category) :
-                        ?>
-                    <li> 
+                                foreach ($storeCategories as $_category):
+                                if($ctr <= $limit_category) :
+                            ?>
+                        <li> 
 
-                        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
-                        
-                        <?php
-                            $_category = Mage::getModel('catalog/category')->load($_category->getId());
-                        ?>
-                        <?php echo $_category->getName(); ?></a>
-                        <ul>
-                        <?php 
+                            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
                             
-                            
-                                $_subcategories = $_category->getChildrenCategories();
-                                if (count($_subcategories) > 0){    
+                            <?php
+                                $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                            ?>
+                            <?php echo $_category->getName(); ?></a>
+                            <ul>
+                            <?php 
+                                
+                                
+                                    $_subcategories = $_category->getChildrenCategories();
+                                    if (count($_subcategories) > 0){    
 
-                                    foreach($_subcategories as $_subcategory){
-                                        //load products now
-                                    $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
-                                     ->getProductCollection()
-                                     ->addAttributeToSelect('*')
-                                     ->addAttributeToFilter('status', 1)
-                                     ->addAttributeToFilter('visibility', 4)
-                                     ->setOrder('price', 'ASC');
-                                         echo '
-                                         <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
-                                         if (count($products) > 0){    
+                                        foreach($_subcategories as $_subcategory){
+                                            //load products now
+                                        $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
+                                         ->getProductCollection()
+                                         ->addAttributeToSelect('*')
+                                         ->addAttributeToFilter('status', 1)
+                                         ->addAttributeToFilter('visibility', 4)
+                                         ->setOrder('price', 'ASC');
+                                             echo '
+                                             <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
+                                             if (count($products) > 0){    
 
-                                            echo '<ul>';
-                                            foreach($products as $_product){
-                                               echo '<li>
-                                                    <a class="thirdlevel" href="'.$_product->getProductUrl().'">
-                                                    <div class="image">
-                                                        <img src="'.$_product->getImageUrl().'">                                                    
-                                                    </div>
-                                                    <div class="desc">'.$_product->getName().'</div>
-                                                    </a>
-                                                </li>';
+                                                echo '<ul>';
+                                                foreach($products as $_product){
+                                                   echo '<li>
+                                                        <a class="thirdlevel" href="'.$_product->getProductUrl().'">
+                                                        <div class="image">
+                                                            <img src="'.$_product->getImageUrl().'">                                                    
+                                                        </div>
+                                                        <div class="desc">'.$_product->getName().'</div>
+                                                        </a>
+                                                    </li>';
+                                                }
+                                                    
+                                                echo '</ul>';
                                             }
-                                                
-                                            echo '</ul>';
-                                        }
-                                         echo '</li>';
-                                    }// end foreach subcat
-                                }// end if count sub
-                            
-                        ?>      
-                         </ul>
-                        </li>
-                        <?php  $ctr++; endif;   endforeach; ?>   
+                                             echo '</li>';
+                                        }// end foreach subcat
+                                    }// end if count sub
+                                
+                            ?>      
+                             </ul>
+                            </li>
+                            <?php  $ctr++; endif;   endforeach; ?>   
 
-                            <li><a href="<?php echo Mage::getBaseUrl(); ?>sales">Sale</a></li>
-                            <li><a href="http://md-factor.com/about/">Brand</a></li>
-                        </ul>
-                    </div>
+                                <li><a href="<?php echo Mage::getBaseUrl(); ?>sales">Sale</a></li>
+                                <li>
+                                    <a href="http://md-factor.com/about/">Brand</a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://md-factor.com/pressmedia/">Media</a> 
+                                            <ul>
+                                                <li>
+                                                    <a href="https://md-factor.com/blog/">Blog</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="searchWrapper desktopSearcWrapper">
-                        <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+                        <div class="searchWrapper desktopSearcWrapper">
+                            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+                                        
+                            <div id="searchInner" > 
+                                <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
                                     
-                        <div id="searchInner" > 
-                            <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
-                                
-                                <button value="" type="submit">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                                
-                                <input placeholder="SEARCH PRODUCTS" class="query" "search_query"="" name="q" type="text">
-                            </form>
-                        </div> 
+                                    <button value="" type="submit">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                    
+                                    <input placeholder="SEARCH PRODUCTS" class="query" "search_query"="" name="q" type="text">
+                                </form>
+                            </div> 
+                        </div>
                     </div>
-                </div>
-            </nav>
-     
+                </nav>
+            </div>
+
             <div class="content">
                 <div class="custom-container">
                     <h1>
-                        We create beauty
+                       <span>MD<em>&reg;</em></span> We create beauty
                     </h1>
                     <span>
                         through ADVANCE SCIENCE
@@ -193,7 +178,9 @@
 
                     <div class="ctaWrapper">
                         <a href="<?php echo Mage::getBaseUrl(); ?>categories">
-                            Shop Now
+                            <span>
+                                Shop Now
+                            </span>
                         </a>
                         <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
                             Watch Video
@@ -288,7 +275,7 @@
                         <div class="slider">
                             <div class="images twentytwenty-container">
                                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/beforeImage.jpg') ?>" />
-                        <img src="<?php     echo $this->getSkinUrl('images/landingpage-revamp/afterImage.jpg') ?>" />
+                                <img src="<?php     echo $this->getSkinUrl('images/landingpage-revamp/afterImage.jpg') ?>" />
                             </div>
                         </div>
                     </div>
@@ -389,7 +376,7 @@
                     from $80.00
                 </p>
                 <span>
-                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/big-stars.png') ?>">
                     10 Reviews
                 </span>
             </a>
@@ -403,7 +390,7 @@
                     from $50.00
                 </p>
                 <span>
-                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/big-stars.png') ?>">
                     75 Reviews
                 </span>
             </a>
@@ -417,7 +404,7 @@
                     from $39.95
                 </p>
                 <span>
-                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/big-stars.png') ?>">
                     2 Reviews
                 </span>
             </a>
@@ -431,7 +418,7 @@
                    from $140.00
                </p>
                <span>
-                   <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/stars.png') ?>">
+                   <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/big-stars.png') ?>">
                    27 Reviews
                 </span>
             </a>
@@ -569,7 +556,7 @@
                 FULLER, THICKER 
             </p>
             <strong>
-                younger-looking hair
+                Younger-looking HAIR
             </strong>
         </a>
     </div>
@@ -577,10 +564,10 @@
     <div>
         <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
             <p>
-                GORGEOUS
+                GORGEOUS, LONG
             </p>
             <strong>
-                lashes
+                &amp; Dense LASHES
             </strong>
         </a>
     </div>
@@ -588,10 +575,10 @@
     <div>
         <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
             <p>
-                LIGHT, FIRM
+                BRIGHT, FIRM
             </p>
             <strong>
-                &amp; illuminate
+                &amp; youthful SKIN
             </strong>
         </a>
     </div>
@@ -979,9 +966,6 @@
 </style>
 
 <!--  Custom Scripts  -->
-
-<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
-
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
 
 <script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
@@ -994,13 +978,7 @@
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/nav.min.js') ?>"></script>
 
-<script type="text/javascript">
-        jQuery(document).ready(function($) {
-            jQuery('.MDnav').MDNav({
-                theme: 'light'
-            });
-        });
-    </script>
+
 
 <script>
 
@@ -1010,6 +988,39 @@ $(window).load(function(){
 });
 
 </script>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    jQuery('.MDnav').MDNav({
+        theme: 'light'
+            });
+        });
+
+        jQuery(document).ready(function($) {
+var offset = $('#main-navWrapper').offset();
+$(window).scroll(function(){
+   
+    jQuery('#main-navWrapper').addClass('fixed-nav');
+    
+    if(jQuery(document).scrollTop() < 120){
+        jQuery('#main-navWrapper').removeClass('fixed-nav');
+    }
+
+});
+});
+jQuery(document).ready(function($) {
+$(window).scroll(function() {
+    if (jQuery(this).scrollTop() > 120){  
+        jQuery('#main-navWrapper').addClass("sticky");
+    }
+    else{
+        jQuery('#main-navWrapper').removeClass("sticky");
+    }
+});
+});
+    </script>
+
 
 <script>
 
@@ -1182,29 +1193,8 @@ $(document).ready(function() {
 
 
 </script>
-<script type="text/javascript">
 
-var offset = $('#main-navWrapper').offset();
-$(window).scroll(function(){
-   
-    $('#main-navWrapper').addClass('fixed-nav');
-    
-    if($(document).scrollTop() < 120){
-        $('#main-navWrapper').removeClass('fixed-nav');
-    }
 
-});
-
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 120){  
-        $('#main-navWrapper').addClass("sticky");
-    }
-    else{
-        $('#main-navWrapper').removeClass("sticky");
-    }
-});
-
-</script>
 
 <script type="text/javascript">
 
@@ -1290,7 +1280,5 @@ function debounce(func, wait, immediate) {
     }
         
 </script>
-
-
 </body>
 </html>

@@ -1,6 +1,108 @@
 /* Navigation */
 
 
+.customnav {
+    position: relative;
+    z-index: 99999999;
+
+    nav {
+        background: #f1f1f0;
+        transition: all 0.4s ease;
+        padding: 0;
+
+        #topBar {
+            margin: 0;
+        }
+
+        &.fixed-nav {
+            background: #fff;
+
+            .navWrapper {
+                padding:0;
+
+                .custom-container {
+                    .MDnav.light ul ul, .MDnav.light ul ul ul {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+        
+        .navWrapper {
+            padding: 10px 0 10px 0;
+
+            .custom-container {
+                &.navi {
+                    margin: 0 auto;
+                }
+
+                .logo {
+                    width: 100px;
+                }
+
+                .MDnav.light li a {
+                    color: #5d5b5b;
+                }
+
+                .MDnav.light ul ul, .MDnav.light ul ul ul {
+                    background: #f1f1f0;
+
+                    @media screen and (max-width: 1064px) {
+                        background: #fff;
+                     }
+                }
+
+                .searchWrapper {
+                    .MDCurrencyWrapper {
+                        top: 4px;
+                        background: transparent;
+                    }
+
+                    form {
+                        border: 2px solid #5d5b5b;
+
+                        input {
+                            color: #5d5b5b;
+
+                            &::-webkit-input-placeholder {
+                                color: #5d5b5b;
+                                opacity: 1;
+                            }
+
+                            &:-moz-placeholder {
+                                color: #5d5b5b;
+                                opacity: 1;
+                            }
+
+                            &::-moz-placeholder {
+                                color: #5d5b5b;
+                                opacity: 1;
+                            }
+
+                            &:-ms-input-placeholder {
+                                color: #5d5b5b;
+                                opacity: 1;
+                            }
+                        }
+
+                        button {
+                            i {
+                                color: #5d5b5b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.transparentNav {
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
 nav {
     font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
     width: 100%;
@@ -10,6 +112,200 @@ nav {
     padding: 0;
     z-index: 9999;
 
+    /* Top Bar */
+
+        #topBar {
+            height: 57px;
+            background: #1183ce;
+            z-index: 100001;
+            color: #dcdee0!important;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 320px;
+            margin: 0 0 30px 0;
+
+            @media only screen and (max-width: 1064px) {
+                margin: 0;
+            }
+
+            a {
+                color: #dcdee0;
+                text-decoration: none;
+            }
+        }
+
+        #topBar .info {
+            float: left;
+            margin-top: 7px;
+            line-height: 34.29px;
+            padding-left: 5px;
+            margin-right: 35px;
+            padding-top: 5px;
+            background: no-repeat 0 6px;
+            -webkit-background-size: 34px;
+            -moz-background-size: 34px;
+            background-size: 34px;
+            -ms-behavior: url(backgroundsize.min.htc);
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+
+
+        #topBar .myAccount {
+            display: none;
+            @media only screen and (max-width: 1100px) {
+                text-indent: -9999em;
+                width: 20px;
+                height: 22px;
+                background: url(../images/my-account-ico.png) no-repeat;
+                -webkit-background-size: 100%;
+                -moz-background-size: 100%;
+                background-size: 100%;
+                -ms-behavior: url(backgroundsize.min.htc);
+                top: 12px;
+                position: relative;
+            }
+
+            @media only screen and (max-width: 767px) {
+                top: 0;
+            }
+        }
+
+        #topBar .signin {
+            margin-right: 20px;
+        }
+
+        #topBar .freeShipping{
+            margin-right: 100px;
+            position: relative;
+            right: 15px;
+
+            @media only screen and (max-width : 1270px) { 
+                margin-right:0;
+            }
+
+            @media only screen and (max-width: 885px) {
+                img {
+                    width: 320px;
+                    position: relative;
+                    top: 6px;
+                }
+            }
+
+            @media only screen and (max-width : 1252px) {
+                display: none;
+            }
+        }
+
+        #topBar .freeShipping span {
+            display: inline-block;
+            border-left: 2px solid #dcdee0;
+            padding-left: 5px;
+            height: 13px;
+            line-height: 14px;
+        }
+
+        #topBar .phone {
+            background-image: url(../images/contact-ico.png);
+            padding-left: 46px;
+
+            @media only screen and (max-width: 1280px) {
+                font-size: 13px;
+            }
+        }   
+
+        #topBar .gifts {
+            background-image: url(../images/gifts-ico.png);
+            background-position: 0 3px;
+            padding-left: 50px;
+
+            @media only screen and (max-width: 1280px) {
+                font-size: 13px;
+            }
+
+            @media only screen and (max-width: 670px) {
+                display: none;
+            }
+        }   
+
+        #topBar .shoppingBag {
+            float: right;
+            width: 26px;
+            height: 30px;
+            margin-top: 13px;
+            background: url(../images/bag-ico.png) no-repeat;
+            text-indent: -9999em;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            background-size: 100%;
+            -ms-behavior: url(backgroundsize.min.htc);
+        }
+        .cart-link{
+            position:relative;
+        }
+        .cart-link .badge {
+            background-color: #e8408b;
+            left: -10px;
+            padding: 3px 9px;
+            position: absolute;
+            text-indent: 0;
+            top: 0;
+            color: #fff!important;
+        }
+
+        .badge {
+            background-color: #777;
+            border-radius: 10px;
+            color: #fff;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            min-width: 10px;
+            padding: 3px 7px;
+            text-align: center;
+            vertical-align: baseline;
+            white-space: nowrap;
+            height: 20px;
+        }
+
+        #topBar .signin {
+            float: right;
+            padding-left: 0;
+
+            @media only screen and (max-width: 1280px) {
+                font-size: 13px;
+            }
+        }
+
+        #topBar .myAccount {
+            float: right;
+            padding-left: 0;
+
+            @media only screen and (max-width: 1280px) {
+                font-size: 13px;
+            }
+        }
+
+        #topBar a:hover{color:#dcdee0;}
+
+        body.withTopbar #topNavi{
+            top: 56px;
+        }
+
+        body.withTopbar.scrolling #topNavi{
+            top: 31px;
+            max-height: 85px;
+        }
+
+        body.withTopbar.stickyNavi #topNavi .navi li .sub {
+            top: 123px;
+        }
+
+        body.withTopbar #topNavi .navi li .sub {
+            top: 141px;
+        }
+
+        /* End of Top Bar */
+
     .custom-container {
         &.navi {
             margin: 25px auto;
@@ -18,11 +314,14 @@ nav {
 
             @media screen and (max-width: 1064px) {
                 margin: 0;
-                padding: 0;
+                padding: 0!important;
             }
         }
 
         .logo {
+            outline: none;
+            width: 180px;
+            text-align: left;
 
             @media screen and (max-width: 1270px) {
                 img {
@@ -55,6 +354,7 @@ nav {
             padding:0;
             vertical-align:middle
         }
+
         .MDnav li a {
             padding:15px;
             display:block;
@@ -67,6 +367,7 @@ nav {
             -moz-transition:all .3s ease-out;
             transition:all .3s ease-out
         }
+
         .MDnav>ul>li {
             display:inline-block
         }
@@ -136,6 +437,7 @@ nav {
                     text-transform: none;
                     font-weight: lighter;
                     font-size: 12.5px;
+                    outline: none;
                     
                     &.thirdlevel {
                         height: 85px;
@@ -160,6 +462,50 @@ nav {
 
             li {
                 width: auto;
+            }
+        }
+
+        .MDnav.light ul li {
+            &:nth-child(5) {
+                a {
+                    color: #d72f7a!important;
+                }
+            }
+
+            &:nth-child(6) {
+                ul {
+                    width: 100px;
+
+                    @media screen and (max-width: 1064px) { 
+                        width: 100%;
+                    }
+
+                    ul {
+                        width: 100px;
+                        left: 100px;
+
+                        @media screen and (max-width: 1064px) { 
+                            width: 100%;
+                            left: 0;
+                            
+                            li {
+                                a {
+                                    padding: 25px 70px 25px 70px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            ul {
+                li {
+                     &:nth-child(5) {
+                        a {
+                            color: #727070!important;
+                        }
+                    }
+                }
             }
         }
 
@@ -430,7 +776,7 @@ nav {
 
             .MDCurrencyWrapper {
                 position: relative;
-                top: 2px;
+                top: 4px;
                 height: auto;
                 padding:0;
 
@@ -596,7 +942,7 @@ nav {
     &.fixed-nav{
         width: 100%;
         position: fixed;
-        top: -10px;
+        top: 0;
         left: 0;
         text-align: center;
         height: auto;
@@ -607,6 +953,11 @@ nav {
         background: #fff;
         padding: 0;
         z-index: 9;
+
+        #topBar {
+            margin: 0;
+        }
+
 
         .custom-container {
             &.navi {
@@ -652,7 +1003,7 @@ nav {
 
             .darklogo {
                 display: inline-block!important;
-                width: 60px;
+                width: 80px;
             }
 
             .searchWrapper {

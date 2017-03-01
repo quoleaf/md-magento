@@ -25,159 +25,354 @@
  */
 ?>
 
-<div id="newsletter">
-  <div class="ctct-embed-signup">
-    <div class="section">
-      <div class="fields clearfix"> <span id="success_message" style="display:none;">
-        <div style="text-align:center;font-size:32px;color:#fff"><?php echo $this->__('Thanks for signing up!')?></div>
-        </span>
-        <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
-          <input data-id="ca:input" name="ca" value="84bd4af4-34ab-46fe-93f8-cc6f0d942fdf" type="hidden">
-          <input data-id="list:input" name="list" value="1275815905" type="hidden">
-          <input data-id="source:input" name="source" value="EFD" type="hidden">
-          <input data-id="required:input" name="required" value="list,email,first_name" type="hidden">
-          <input data-id="url:input" name="url" value="" type="hidden">
-          <div class="field">
-            <input data-id="Email Address:input" placeholder="<?php echo $this->__('Email')?>" class="textbox" name="email" value="" maxlength="80" type="text">
-          </div>
-          <div class="field">
-            <input data-id="First Name:input" placeholder="<?php echo $this->__('Name')?>" class="textbox" name="first_name" value="" maxlength="50" type="text">
-          </div>
-          <button type="submit" class="Button ctct-button Button--block Button-secondary newsletter-submit submitBtn pinkSolidBtn" data-enabled="enabled"><?php echo $this->__('Subscribe')?></button>
-        </form>
-      </div>
+
+<div class="footerMenuWrapper footerMenuDesktop">
+    <div class="custom-container">
+        <div>
+            <ul>
+                <li>
+                    CUSTOMER SERVICE
+                </li>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Shipping Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Return Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/authenticity/">
+                        Authenticity
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/contact-us/">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/privacy-policy/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/terms-and-conditions/">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/wholesale/">
+                        Wholesale
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    ABOUT MD
+                </li>
+                <li>
+                    <a href="http://md-factor.com/md-factor-careers/">
+                        Careers 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        International
+                    </a>
+                </li> -->
+                <li> 
+                    <a href="http://md-factor.com/about/">
+                        About MD® / 于MD®
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/press/">
+                        In The Press
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/faq/">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    ACCOUNT
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                        Order Status
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                        View Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    INTERNATIONAL
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        繁體中文
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        体中文
+                    </a>
+                </li>
+                <li class="jabber">
+                    <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&direction=desc#reviews">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/jabber-logo.png') ?>">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <script type="text/javascript">
-   var localizedErrMap = {};
-   localizedErrMap['required'] =         'This field is required.';
-   localizedErrMap['ca'] =             'An unexpected error occurred while attempting to send email.';
-   localizedErrMap['email'] =             'Please enter your email address in name@email.com format.';
-   localizedErrMap['birthday'] =         'Please enter birthday in MM/DD format.';
-   localizedErrMap['anniversary'] =     'Please enter anniversary in MM/DD/YYYY format.';
-   localizedErrMap['custom_date'] =     'Please enter this date in MM/DD/YYYY format.';
-   localizedErrMap['list'] =             'Please select at least one email list.';
-   localizedErrMap['generic'] =         'This field is invalid.';
-   localizedErrMap['shared'] =         'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
-   localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
-    localizedErrMap['state_province'] = 'Select a state/province';
-   localizedErrMap['selectcountry'] =     'Select a country';
-   var postURL = 'https://visitor2.constantcontact.com/api/signup';
-    </script>
-   <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
-    <!--<script type="text/javascript" src="https://us.md-factor.com/content/signup-form.js"></script>-->
-  </div>
 </div>
+
+
+<div class="footerMenuWrapper footerMenuMobile" style="display: none;">
+    <div class="tab_container">
+        <input id="tab10" type="radio" name="tabs2" checked>
+        <label for="tab10">CUSTOMER SERVICE</label>
+
+        <input id="tab20" type="radio" name="tabs2">
+        <label for="tab20">ABOUT MD</label>
+
+        <input id="tab30" type="radio" name="tabs2">
+        <label for="tab30">ACCOUNT</label>
+
+        <input id="tab40" type="radio" name="tabs2">
+        <label for="tab40">INTERNATIONAL</label>
+        
+
+        <section id="content10" class="tab-content">
+            <ul>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Shipping Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/shipping-policy/">
+                        Return Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/authenticity/">
+                        Authenticity
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/contact-us/">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/privacy-policy/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/terms-and-conditions/">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/wholesale/">
+                        Wholesale
+                    </a>
+                </li>
+            </ul>
+        </section>
+       
+        <section id="content20" class="tab-content">
+            <ul>
+                <li>
+                    <a href="http://md-factor.com/md-factor-careers/">
+                        Careers 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        International
+                    </a>
+                </li> -->
+                <li> 
+                    <a href="http://md-factor.com/about/">
+                        About MD® / 于MD®
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/press/">
+                        In The Press
+                    </a>
+                </li>
+                <li>
+                    <a href="http://md-factor.com/faq/">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </section>
+       
+        <section id="content30" class="tab-content">
+            <ul>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                        Order Status
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                        View Cart
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="content40" class="tab-content">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);">
+                        繁體中文
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        体中文
+                    </a>
+                </li>
+                <li class="jabber">
+                    <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&direction=desc#reviews">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/jabber-logo.png') ?>">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+
 <div id="footer">
-			<div class="socials">
-				<div class="section">
-					<p class="title"><?php echo $this->__('CONNECT')?> <span><?php echo $this->__('with us')?></span></p>
-				
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/MDLASHF"><img src="<?php echo $this->getSkinUrl('images/facebook-ico.png') ?>" alt=""/></a></li>
-						<li><a href="https://twitter.com/MDLFbySusanLin"><img src="<?php echo $this->getSkinUrl('images/twitter-ico.png') ?>" alt=""/></a></li>
-						<li><a href="https://instagram.com/md_factor/"><img src="<?php echo $this->getSkinUrl('images/instagram-ico.png') ?>" alt=""/></a></li>
-						<li><a href="https://plus.google.com/107601202918737544485"><img src="<?php echo $this->getSkinUrl('images/google-ico.png') ?>" alt=""/></a></li>
-						<li><a href="https://www.pinterest.com/mdfactorbeauty/"><img src="<?php echo $this->getSkinUrl('images/pinterest-ico.png') ?>" alt=""/></a></li>
-						<li><a href="http://www.youtube.com/channel/UCzQBk-mlyv-x1K0O8_kEyYA"><img src="<?php echo $this->getSkinUrl('images/youtube-ico.png') ?>" alt=""/></a></li>
-					</ul>
-				</div>
-			</div>
-			
-			<div class="links">
-				<div class="section">
-					<div class="type first">
-						<span class="title"><?php echo $this->__('CUSTOMER SERVICE')?></span>
-						<ul>
-				          <li><a href="https://md-factor.com/shipping-policy/"><?php echo $this->__('Shipping Policies')?></a></li>
-				          <li><a href="https://md-factor.com/return-policy/"><?php echo $this->__('Return Policy')?></a></li>
-				          <li><a href="https://md-factor.com/authenticity/"><?php echo $this->__('Authenticity')?></a></li>
-				          <li><a href="https://md-factor.com/contact-us/"><?php echo $this->__('Contact Us')?></a></li>
-				          <li><a href="https://md-factor.com/privacy-policy/"><?php echo $this->__('Privacy Policy')?></a></li>
-				          <li><a href="https://md-factor.com/terms-and-conditions/"><?php echo $this->__('Terms and Conditions')?></a></li>
-				          <li><a href="https://md-factor.com/wholesale/"><?php echo $this->__('Wholesale')?></a></li>
-				        </ul>
-					</div>
-					<div class="type second">
-						<span class="title"><?php echo $this->__('ABOUT MD')?></span>
-						<ul>
-				          <li><a href="https://md-factor.com/md-factor-careers/"><?php echo $this->__('Careers')?></a></li>
-				          <!--<li><a href="http://md-factor.com/international/">International</a></li>-->
-				          <li><a href="https://md-factor.com/about/"><?php echo $this->__('About MD&reg; / 于MD&reg;')?></a></li>
-				          <li><a href="https://md-factor.com/press/"><?php echo $this->__('In The Press')?></a></li>
-				          <li><a href="https://md-factor.com/faq/"><?php echo $this->__('FAQs')?></a></li>
-				        </ul>
-					</div>
-					<div class="type third">
-						<span class="title"><?php echo $this->__('MY ACCOUNT')?></span>
-						<ul>
-							<li><a href="<?php echo Mage::getUrl('customer/account'); ?>"><?php echo $this->__('My Account')?></a></li>
-							<li><a href="<?php echo Mage::getUrl('customer/account'); ?>"><?php echo $this->__('Wishlist')?></a></li>
-							<li><a href="<?php echo Mage::getUrl('customer/account'); ?>"><?php echo $this->__('Order Status')?></a></li>
-							<li><a href="<?php echo Mage::getUrl('checkout/cart'); ?>"><?php echo $this->__('View Cart')?></a></li>
-						</ul>
-					</div>
-					<div class="type forth">
-						<!-- <span class="title">INTERNATIONAL</span>
-						<ul>
-							<li><a href="#">繁體中文</a></li>
-							<li><a href="#">体中文</a></li>
-						</ul> -->
-						<a href="#" class="siteJabbar"><img src="<?php echo $this->getSkinUrl('images/site-jabbar.png') ?>" alt=""/></a>
-					</div>
-				</div>
-			</div>
-			
-			<div class="info">
-				<div class="section">
-					<div class="inner">
-						<address>LA CANADA VENTURES, INC. <span>|</span> 448 N San Mateo Drive, San Mateo, CA, 94401 <span>|</span> Phone: 888-882-5788</address>
-						<p class="copyright"><?php echo $this->__('All prices are in USD')?> &copy; <?php echo $this->__('2016 MD Factor.')?> <!-- <a href="#">Sitemap</a> --></p>
-					</div>
-				</div>
-			</div>
-		</div><!-- END footer -->
-		<div id="searchOverlay" style="display: none;"> <a href="#" class="closeBtn">Close</a>
-		  <div class="fields">
-		    <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
-		      <input placeholder="" class="query" "search_query"="" name="q" type="text">
-		      <p class="instruction">Press enter to begin your search</p>
-		      <input value="" class="searchBtn" type="submit">
-		    </form>
-		  </div>
-		</div><!-- END searchOverlay -->
-		<!-- <div id="searchOverlay">	
-			<a href="#" class="closeBtn">Close</a>
-			
-			<div class="fields">
-				<input type="text" placeholder="START TYPING..." class="query"/>
-				<p class="instruction">Press enter to begin your search</p>
-			</div>
+    <div class="custom-container">
+        <p>
+            Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+            <a href="http://md-factor.com/terms-and-conditions/">User Agreement</a> and <a href="http://md-factor.com/privacy-policy/">Privacy Policy</a>.
+        </p>
+        <span>
+            <a href="https://www.facebook.com/MDLASHF">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/fb.png') ?>"> 
+            </a>
+            <a href="https://twitter.com/MDLFbySusanLin">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/twitter.png') ?>"> 
+            </a>
+            <a href="https://instagram.com/md_factor/">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/instagram.png') ?>"> 
+            </a>
+        </span>
+    </div>
+</div>
 
-		</div> -->
-		<!-- 
-		<a href="#" id="reviewsBtn"><?php // echo $this->__('Reviews')?></a> -->
-	</div><!-- END mainWrapper -->
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.event.move.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/nav.min.js') ?>"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    jQuery('.MDnav').MDNav({
+        theme: 'light'
+            });
+        });
+
+        jQuery(document).ready(function($) {
+var offset = $('#main-navWrapper').offset();
+$(window).scroll(function(){
+   
+    jQuery('#main-navWrapper').addClass('fixed-nav');
+    
+    if(jQuery(document).scrollTop() < 120){
+        jQuery('#main-navWrapper').removeClass('fixed-nav');
+    }
+
+});
+});
+jQuery(document).ready(function($) {
+$(window).scroll(function() {
+    if (jQuery(this).scrollTop() > 120){  
+        jQuery('#main-navWrapper').addClass("sticky");
+    }
+    else{
+        jQuery('#main-navWrapper').removeClass("sticky");
+    }
+});
+});
+    </script>
 
 
-	<!-- Justuno Script -->
 
-	<script type="text/javascript" charset="utf-8">var ju_num="EFC0E7DB-CA2F-4F51-B390-F920D634A92C";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+    <!-- Justuno Script -->
 
-	
-	<!-- End of Justuno Script -->
+    <script type="text/javascript" charset="utf-8">var ju_num="EFC0E7DB-CA2F-4F51-B390-F920D634A92C";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
 
-	<!-- Lucky Orange -->
+    
+    <!-- End of Justuno Script -->
+
+    <!-- Lucky Orange -->
 
 <script type='text/javascript'>
 window.__lo_site_id = 59158;
 
-	(function() {
-		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-	  })();
-	</script>
+    (function() {
+        var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+        wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+      })();
+    </script>
 
 
-	<!-- End of Lucky Orange -->
+    <!-- End of Lucky Orange -->
 </body>

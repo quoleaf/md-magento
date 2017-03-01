@@ -1,31 +1,61 @@
-        <div id="categories">
-            <ul class="clearfix">
-                <li>
-                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>hair">
-                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-hair.jpg)"></div></div>
-                        <p><span><?php echo $this->__('Hair') ?></span></p>
-                    </a>
-                </li>
-                <li class="alt">
-                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-lash-factor">
-                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-lash-factor.jpg)"></div></div>
-                        <p><span><?php echo $this->__('Lash Factor') ?></span></p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-skin">
-                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-skin.jpg)"></div></div>
-                        <p><span><?php echo $this->__('Skin') ?></span></p>
-                    </a>
-                </li>
-                <li class="alt">
-                    <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>md-wellness">
-                        <div class="image zoomEffect"><div class="pic" style="background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/category-md-wellness.jpg)"></div></div>
-                        <p><span><?php echo $this->__('Wellness') ?></span></p>
-                    </a>
-                </li>
-            </ul>
-        </div><!-- END categories -->
+
+<div class="categoryWrapper">
+    <div class="">
+        <div class="inner">
+            <a href="<?php echo Mage::getBaseUrl(); ?>hair" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-hair.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="<?php echo Mage::getBaseUrl(); ?>hair">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Hair
+            </a>
+        </span>
+    </div>
+    
+    <div class="">
+        <div class="inner">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-lash.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Lash
+            </a>
+        </span>
+    </div>
+
+    <div class="">
+        <div class="inner">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-skin" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-skin.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Skin
+            </a>
+        </span>
+    </div>
+
+    <div class="">
+        <div class="inner">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness" class="zoom">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-wellness.png') ?>">
+            </a>
+        </div>
+        <span>
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
+                Wellness
+            </a>
+        </span>
+    </div>
+</div>
 
 <div id="shop">
     <div class="section clearfix">

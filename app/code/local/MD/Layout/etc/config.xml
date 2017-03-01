@@ -44,6 +44,51 @@
         </page>
         <page>
             <layouts> 
+                <category module="page" translate="label">
+                    <label>MD Category</label>
+                    <template>page/category-page.phtml</template>
+                    <layout_handle>category</layout_handle>
+                </category> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <lashcategory module="page" translate="label">
+                    <label>MD Lash Category</label>
+                    <template>page/lash-category-page.phtml</template>
+                    <layout_handle>lashcategory</layout_handle>
+                </lashcategory> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <haircategory module="page" translate="label">
+                    <label>MD Hair Category</label>
+                    <template>page/hair-category-page.phtml</template>
+                    <layout_handle>haircategory</layout_handle>
+                </haircategory> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <skincategory module="page" translate="label">
+                    <label>MD skin Category</label>
+                    <template>page/skin-category-page.phtml</template>
+                    <layout_handle>skincategory</layout_handle>
+                </skincategory> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <wellnesscategory module="page" translate="label">
+                    <label>MD wellness Category</label>
+                    <template>page/wellness-category-page.phtml</template>
+                    <layout_handle>wellnesscategory</layout_handle>
+                </wellnesscategory> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
                 <mdhairlossveronelandingpage module="page" translate="label">
                     <label>MD Hairloss Version One Landing Page</label>
                     <template>page/md-hairloss-version-one-landingpage.phtml</template>

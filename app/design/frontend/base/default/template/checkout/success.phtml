@@ -29,6 +29,7 @@
 $order_id = $this->getOrderId();
 $order = Mage::getModel('sales/order')->loadByIncrementId($order_id);
 $total = $order->getGrandTotal();
+$subtotal = (float)number_format($order->getSubtotal(),2);
 
 $items = $order->getAllItems();
 $skulist = "";
@@ -41,9 +42,12 @@ foreach($items as $item){
     $namelist .= $item->getName() . '|';
     $amtlist .= intval($item->getPrice()*100) . '|';
 }
+$amtlist = intval($subtotal*100);
 
 $pepperjam_url = 'https://t.pepperjamnetwork.com/track?PID=7314&INT=ITEMIZED&ITEM1=1&QTY1=1&AMOUNT1='.$total.'&OID='.$order_id;
-$rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist='.$skulist.'&qlist='.$qlist.'&amtlist='.$amtlist.'&cur=USD&namelist='.$namelist;
+//$rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist='.$skulist.'&qlist='.$qlist.'&amtlist='.$amtlist.'&cur=USD&namelist='.$namelist;
+$rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist=order&qlist=1&amtlist='.$amtlist.'&cur=USD&namelist=order';
+//echo $rakuten_url;
 ?>
 
 <!-- pepperjam tracking -->

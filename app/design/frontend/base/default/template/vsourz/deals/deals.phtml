@@ -4,7 +4,7 @@
 	<div class="SaleBanner" style="background: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('sales_banner')->toHtml(); ?>') center center; background-size: cover; background-repeat: no-repeat;"></div>
 
 	<div class="salesWrapper">
-		<!-- <div class="salesmenu">
+		<div class="salesmenu">
 			<strong>Sales</strong>
 			<ul>
 				<li>
@@ -13,7 +13,7 @@
 					</a>
 				</li>
 			</ul>
-		</div> -->
+		</div>
 		<div class="container-slider">
 			<div id="shopProducts" class="hot-deals list list-<?php echo mage::getstoreconfig('deals/settings/productcount')?>
 				">
@@ -65,6 +65,113 @@
 				<?php endif; ?>
 				</li>
 				<?php endforeach; ?>
+
+				<!-- Static Producs -->
+
+					<li class="item">
+
+					<?php
+						$revitalizing_shampoo_and_conditioner_bundle = Mage::getModel('catalog/product')->load(46);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $revitalizing_shampoo_and_conditioner_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($revitalizing_shampoo_and_conditioner_bundle->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($revitalizing_shampoo_and_conditioner_bundle, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($revitalizing_shampoo_and_conditioner_bundle, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($revitalizing_shampoo_and_conditioner_bundle); ?>
+							</div>
+							<a href="<?php echo $revitalizing_shampoo_and_conditioner_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($revitalizing_shampoo_and_conditioner_bundle->getName()) ?>"><?php echo $this->
+							escapeHtml($revitalizing_shampoo_and_conditioner_bundle->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $revitalizing_shampoo_and_conditioner_bundle); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($revitalizing_shampoo_and_conditioner_bundle, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							19.984%</span>, You save: <span>
+							$19.98</span>
+						</div>
+						</div>
+						
+						<?php if(!$revitalizing_shampoo_and_conditioner_bundle->
+						canConfigure() && $revitalizing_shampoo_and_conditioner_bundle->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($revitalizing_shampoo_and_conditioner_bundle) ?>')"></a>
+						<?php elseif($revitalizing_shampoo_and_conditioner_bundle->
+						getStockItem() && $revitalizing_shampoo_and_conditioner_bundle->getStockItem()->getIsInStock()): ?> <?php echo $revitalizing_shampoo_and_conditioner_bundle->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
+					<li class="item">
+
+					<?php
+						$clear_complexion_solution_bundle = Mage::getModel('catalog/product')->load(98);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $clear_complexion_solution_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($clear_complexion_solution_bundle->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($clear_complexion_solution_bundle, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($clear_complexion_solution_bundle, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($clear_complexion_solution_bundle); ?>
+							</div>
+							<a href="<?php echo $clear_complexion_solution_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($clear_complexion_solution_bundle->getName()) ?>"><?php echo $this->
+							escapeHtml($clear_complexion_solution_bundle->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $clear_complexion_solution_bundle); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($clear_complexion_solution_bundle, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							27%</span>, You save: <span>
+							$36</span>
+						</div>
+						</div>
+						
+						<?php if(!$clear_complexion_solution_bundle->
+						canConfigure() && $clear_complexion_solution_bundle->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($clear_complexion_solution_bundle) ?>')"></a>
+						<?php elseif($clear_complexion_solution_bundle->
+						getStockItem() && $clear_complexion_solution_bundle->getStockItem()->getIsInStock()): ?> <?php echo $clear_complexion_solution_bundle->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
 				</ul>
 			</div>
 		</div>

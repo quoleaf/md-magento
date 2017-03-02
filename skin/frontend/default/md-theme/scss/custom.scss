@@ -6509,6 +6509,10 @@ body.cms-sales {
 									width: 100%;
 									float: left; 
 									height: 100px;
+
+									@media only screen and (max-width : 770px) {
+										height: auto;
+									}
 								}
 
 								.ProductRewardTop, .ReviewsList, a {

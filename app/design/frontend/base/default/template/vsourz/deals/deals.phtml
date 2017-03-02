@@ -221,13 +221,13 @@
 					<li class="item">
 
 					<?php
-						$md_nutri_hair_ultimate_auto_ship_program = Mage::getModel('catalog/product')->load(89);
+						$md_nutri_hair_ultimate = Mage::getModel('catalog/product')->load(89);
 					?>
 
 						<div class="image">
-							<a href="<?php echo $md_nutri_hair_ultimate_auto_ship_program->getProductUrl() ?>" title="<?php echo $this->
-							escapeHtml($md_nutri_hair_ultimate_auto_ship_program->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_nutri_hair_ultimate_auto_ship_program, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
-							stripTags($this->getImageLabel($md_nutri_hair_ultimate_auto_ship_program, 'small_image'), null, true) ?>"/>
+							<a href="<?php echo $md_nutri_hair_ultimate->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_nutri_hair_ultimate->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_nutri_hair_ultimate, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_nutri_hair_ultimate, 'small_image'), null, true) ?>"/>
 							<div class="overlay">
 								<span><em>VIEW PRODUCT</em></span>
 							</div>
@@ -236,28 +236,28 @@
 						<div class="desc">
 							<div class="ProductRewardTop">
 								<?php echo Mage::helper('core/mwrewardpoints')->
-								pointsProductListRewardPoints($md_nutri_hair_ultimate_auto_ship_program); ?>
+								pointsProductListRewardPoints($md_nutri_hair_ultimate); ?>
 							</div>
-							<a href="<?php echo $md_nutri_hair_ultimate_auto_ship_program->getProductUrl() ?>" title="<?php echo $this->
-							escapeHtml($md_nutri_hair_ultimate_auto_ship_program->getName()) ?>"><?php echo $this->
-							escapeHtml($md_nutri_hair_ultimate_auto_ship_program->getName()) ?></a>
+							<a href="<?php echo $md_nutri_hair_ultimate->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_nutri_hair_ultimate->getName()) ?>"><?php echo $this->
+							escapeHtml($md_nutri_hair_ultimate->getName()) ?></a>
 							<div class="ReviewsList">
 								<?php $this->
-								helper('yotpo')->showBottomline($this, $md_nutri_hair_ultimate_auto_ship_program); ?>
+								helper('yotpo')->showBottomline($this, $md_nutri_hair_ultimate); ?>
 							</div>
 							<?php echo $this->
-						getPriceHtml($md_nutri_hair_ultimate_auto_ship_program, true, '-new') ?>
+						getPriceHtml($md_nutri_hair_ultimate, true, '-new') ?>
 						<div class="discount">
 							 Discount: <span>
 							59%</span>, You save: <span>
-							$170.03</span>
+							$170</span>
 						</div>
 						</div>
 						
-						<?php if(!$md_nutri_hair_ultimate_auto_ship_program->
-						canConfigure() && $md_nutri_hair_ultimate_auto_ship_program->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_nutri_hair_ultimate_auto_ship_program) ?>')"></a>
-						<?php elseif($md_nutri_hair_ultimate_auto_ship_program->
-						getStockItem() && $md_nutri_hair_ultimate_auto_ship_program->getStockItem()->getIsInStock()): ?> <?php echo $md_nutri_hair_ultimate_auto_ship_program->
+						<?php if(!$md_nutri_hair_ultimate->
+						canConfigure() && $md_nutri_hair_ultimate->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_nutri_hair_ultimate) ?>')"></a>
+						<?php elseif($md_nutri_hair_ultimate->
+						getStockItem() && $md_nutri_hair_ultimate->getStockItem()->getIsInStock()): ?> <?php echo $md_nutri_hair_ultimate->
 						getProductUrl() ?>"><?php echo $this->
 						__('View Details') ?></a>
 					

@@ -95,8 +95,8 @@
 						getPriceHtml($revitalizing_shampoo_and_conditioner_bundle, true, '-new') ?>
 						<div class="discount">
 							 Discount: <span>
-							19.984%</span>, You save: <span>
-							$19.98</span>
+							20%</span>, You save: <span>
+							$20</span>
 						</div>
 						</div>
 						
@@ -166,6 +166,316 @@
 					</li>
 
 
+					<li class="item">
+
+					<?php
+						$healthy_scalp_super_beauty_bundle = Mage::getModel('catalog/product')->load(88);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $healthy_scalp_super_beauty_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($healthy_scalp_super_beauty_bundle->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($healthy_scalp_super_beauty_bundle, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($healthy_scalp_super_beauty_bundle, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($healthy_scalp_super_beauty_bundle); ?>
+							</div>
+							<a href="<?php echo $healthy_scalp_super_beauty_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($healthy_scalp_super_beauty_bundle->getName()) ?>"><?php echo $this->
+							escapeHtml($healthy_scalp_super_beauty_bundle->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $healthy_scalp_super_beauty_bundle); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($healthy_scalp_super_beauty_bundle, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							27%</span>, You save: <span>
+							$39.98</span>
+						</div>
+						</div>
+						
+						<?php if(!$healthy_scalp_super_beauty_bundle->
+						canConfigure() && $healthy_scalp_super_beauty_bundle->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($healthy_scalp_super_beauty_bundle) ?>')"></a>
+						<?php elseif($healthy_scalp_super_beauty_bundle->
+						getStockItem() && $healthy_scalp_super_beauty_bundle->getStockItem()->getIsInStock()): ?> <?php echo $healthy_scalp_super_beauty_bundle->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
+					<li class="item">
+
+					<?php
+						$md_nutri_hair_ultimate_auto_ship_program = Mage::getModel('catalog/product')->load(89);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $md_nutri_hair_ultimate_auto_ship_program->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_nutri_hair_ultimate_auto_ship_program->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_nutri_hair_ultimate_auto_ship_program, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_nutri_hair_ultimate_auto_ship_program, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($md_nutri_hair_ultimate_auto_ship_program); ?>
+							</div>
+							<a href="<?php echo $md_nutri_hair_ultimate_auto_ship_program->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_nutri_hair_ultimate_auto_ship_program->getName()) ?>"><?php echo $this->
+							escapeHtml($md_nutri_hair_ultimate_auto_ship_program->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $md_nutri_hair_ultimate_auto_ship_program); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($md_nutri_hair_ultimate_auto_ship_program, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							59%</span>, You save: <span>
+							$170.03</span>
+						</div>
+						</div>
+						
+						<?php if(!$md_nutri_hair_ultimate_auto_ship_program->
+						canConfigure() && $md_nutri_hair_ultimate_auto_ship_program->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_nutri_hair_ultimate_auto_ship_program) ?>')"></a>
+						<?php elseif($md_nutri_hair_ultimate_auto_ship_program->
+						getStockItem() && $md_nutri_hair_ultimate_auto_ship_program->getStockItem()->getIsInStock()): ?> <?php echo $md_nutri_hair_ultimate_auto_ship_program->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
+					<li class="item">
+
+					<?php
+						$md_hair_restoration_system = Mage::getModel('catalog/product')->load(83);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $md_hair_restoration_system->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_hair_restoration_system->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_hair_restoration_system, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_hair_restoration_system, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($md_hair_restoration_system); ?>
+							</div>
+							<a href="<?php echo $md_hair_restoration_system->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_hair_restoration_system->getName()) ?>"><?php echo $this->
+							escapeHtml($md_hair_restoration_system->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $md_hair_restoration_system); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($md_hair_restoration_system, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							20%</span>, You save: <span>
+							$60</span>
+						</div>
+						</div>
+						
+						<?php if(!$md_hair_restoration_system->
+						canConfigure() && $md_hair_restoration_system->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_hair_restoration_system) ?>')"></a>
+						<?php elseif($md_hair_restoration_system->
+						getStockItem() && $md_hair_restoration_system->getStockItem()->getIsInStock()): ?> <?php echo $md_hair_restoration_system->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
+					<li class="item">
+
+					<?php
+						$md_complexion_factor_starter_kit = Mage::getModel('catalog/product')->load(76);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $md_complexion_factor_starter_kit->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_complexion_factor_starter_kit->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_complexion_factor_starter_kit, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_complexion_factor_starter_kit, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($md_complexion_factor_starter_kit); ?>
+							</div>
+							<a href="<?php echo $md_complexion_factor_starter_kit->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_complexion_factor_starter_kit->getName()) ?>"><?php echo $this->
+							escapeHtml($md_complexion_factor_starter_kit->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $md_complexion_factor_starter_kit); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($md_complexion_factor_starter_kit, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							12%</span>, You save: <span>
+							$10</span>
+						</div>
+						</div>
+						
+						<?php if(!$md_complexion_factor_starter_kit->
+						canConfigure() && $md_complexion_factor_starter_kit->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_complexion_factor_starter_kit) ?>')"></a>
+						<?php elseif($md_complexion_factor_starter_kit->
+						getStockItem() && $md_complexion_factor_starter_kit->getStockItem()->getIsInStock()): ?> <?php echo $md_complexion_factor_starter_kit->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
+					<li class="item">
+
+					<?php
+						$md_beauty_essentials_bundle = Mage::getModel('catalog/product')->load(90);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $md_beauty_essentials_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_beauty_essentials_bundle->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_beauty_essentials_bundle, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_beauty_essentials_bundle, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($md_beauty_essentials_bundle); ?>
+							</div>
+							<a href="<?php echo $md_beauty_essentials_bundle->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_beauty_essentials_bundle->getName()) ?>"><?php echo $this->
+							escapeHtml($md_beauty_essentials_bundle->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $md_beauty_essentials_bundle); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($md_beauty_essentials_bundle, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							13%</span>, You save: <span>
+							$25</span>
+						</div>
+						</div>
+						
+						<?php if(!$md_beauty_essentials_bundle->
+						canConfigure() && $md_beauty_essentials_bundle->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_beauty_essentials_bundle) ?>')"></a>
+						<?php elseif($md_beauty_essentials_bundle->
+						getStockItem() && $md_beauty_essentials_bundle->getStockItem()->getIsInStock()): ?> <?php echo $md_beauty_essentials_bundle->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
+
+
+					<li class="item">
+
+					<?php
+						$md_anti_aging_skin_care_kit = Mage::getModel('catalog/product')->load(97);
+					?>
+
+						<div class="image">
+							<a href="<?php echo $md_anti_aging_skin_care_kit->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_anti_aging_skin_care_kit->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_anti_aging_skin_care_kit, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_anti_aging_skin_care_kit, 'small_image'), null, true) ?>"/>
+							<div class="overlay">
+								<span><em>VIEW PRODUCT</em></span>
+							</div>
+							</a>
+						</div>
+						<div class="desc">
+							<div class="ProductRewardTop">
+								<?php echo Mage::helper('core/mwrewardpoints')->
+								pointsProductListRewardPoints($md_anti_aging_skin_care_kit); ?>
+							</div>
+							<a href="<?php echo $md_anti_aging_skin_care_kit->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_anti_aging_skin_care_kit->getName()) ?>"><?php echo $this->
+							escapeHtml($md_anti_aging_skin_care_kit->getName()) ?></a>
+							<div class="ReviewsList">
+								<?php $this->
+								helper('yotpo')->showBottomline($this, $md_anti_aging_skin_care_kit); ?>
+							</div>
+							<?php echo $this->
+						getPriceHtml($md_anti_aging_skin_care_kit, true, '-new') ?>
+						<div class="discount">
+							 Discount: <span>
+							25%</span>, You save: <span>
+							$100</span>
+						</div>
+						</div>
+						
+						<?php if(!$md_anti_aging_skin_care_kit->
+						canConfigure() && $md_anti_aging_skin_care_kit->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_anti_aging_skin_care_kit) ?>')"></a>
+						<?php elseif($md_anti_aging_skin_care_kit->
+						getStockItem() && $md_anti_aging_skin_care_kit->getStockItem()->getIsInStock()): ?> <?php echo $md_anti_aging_skin_care_kit->
+						getProductUrl() ?>"><?php echo $this->
+						__('View Details') ?></a>
+					
+						<?php else: ?>
+						<p class="action availability out-of-stock">
+							<span><?php echo $this->
+							__('Out of stock') ?></span>
+						</p>
+						<?php endif; ?>
+					</li>
 				</ul>
 			</div>
 		</div>

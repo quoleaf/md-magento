@@ -6401,6 +6401,11 @@ body.cms-sales {
 					li {
 					    padding: 10px 10px 10px 10px;
     					border-bottom: 1px solid #e4e4e4;
+
+    					a {
+    						color:#1183ce;
+    						outline: none;
+    					}
 					}
 				}
 			}
@@ -6437,7 +6442,7 @@ body.cms-sales {
 
 						li {
 							height: 525px;
-							margin: 0 25px 25px 0;
+							margin: 0 25px 100px 0;
 							width: 31.7%;
 							text-align: left;
 

@@ -475,9 +475,11 @@ nav {
             &:nth-child(6) {
                 ul {
                     width: 100px;
+                    text-align: center;
 
                     @media screen and (max-width: 1064px) { 
                         width: 100%;
+                        text-align: left;
                     }
 
                     ul {

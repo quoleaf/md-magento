@@ -4,7 +4,7 @@
 	<div class="SaleBanner" style="background: url('<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('sales_banner')->toHtml(); ?>') center center; background-size: cover; background-repeat: no-repeat;"></div>
 
 	<div class="salesWrapper">
-		<div class="salesmenu">
+		<!-- <div class="salesmenu">
 			<strong>Sales</strong>
 			<ul>
 				<li>
@@ -13,7 +13,7 @@
 					</a>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 		<div class="container-slider">
 			<div id="shopProducts" class="hot-deals list list-<?php echo mage::getstoreconfig('deals/settings/productcount')?>
 				">
@@ -71,7 +71,7 @@
 					<li class="item">
 
 					<?php
-						$revitalizing_shampoo_and_conditioner_bundle = Mage::getModel('catalog/product')->load(46);
+						$revitalizing_shampoo_and_conditioner_bundle = Mage::getModel('catalog/product')->load(87);
 					?>
 
 						<div class="image">

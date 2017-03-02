@@ -8,8 +8,18 @@
 			<strong>Sales</strong>
 			<ul>
 				<li>
-					<a href="">
-						SKIN (2)
+					<a href="<?php echo Mage::getBaseUrl(); ?>categories">
+						MIX (1)
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo Mage::getBaseUrl(); ?>hair">
+						HAIR (4)
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
+						SKIN (3)
 					</a>
 				</li>
 			</ul>
@@ -378,16 +388,14 @@
 							</a>
 						</div>
 						<div class="desc">
-							<div class="ProductRewardTop">
-								<?php echo Mage::helper('core/mwrewardpoints')->
-								pointsProductListRewardPoints($md_beauty_essentials_bundle); ?>
-							</div>
-							<a href="<?php echo $md_beauty_essentials_bundle->getProductUrl() ?>" title="<?php echo $this->
-							escapeHtml($md_beauty_essentials_bundle->getName()) ?>"><?php echo $this->
-							escapeHtml($md_beauty_essentials_bundle->getName()) ?></a>
-							<div class="ReviewsList">
-								<?php $this->
-								helper('yotpo')->showBottomline($this, $md_beauty_essentials_bundle); ?>
+							<div class="inner">
+								<a href="<?php echo $md_beauty_essentials_bundle->getProductUrl() ?>" title="<?php echo $this->
+								escapeHtml($md_beauty_essentials_bundle->getName()) ?>"><?php echo $this->
+								escapeHtml($md_beauty_essentials_bundle->getName()) ?></a>
+								<div class="ReviewsList">
+									<?php $this->
+									helper('yotpo')->showBottomline($this, $md_beauty_essentials_bundle); ?>
+								</div>
 							</div>
 							<?php echo $this->
 						getPriceHtml($md_beauty_essentials_bundle, true, '-new') ?>

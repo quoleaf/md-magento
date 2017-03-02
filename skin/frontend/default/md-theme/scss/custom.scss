@@ -4960,7 +4960,7 @@ body.CustomCategoryPage {
 			  		object-fit: cover;
 			  	}
 
-			  	@media screen and (max-width: 991px) {
+			  	@media screen and (max-width: 1070px) {
 			  		display: none;
 			  	}
 			}
@@ -4975,11 +4975,11 @@ body.CustomCategoryPage {
 		  	z-index: 20;
 
 		  	@media screen and (max-width: 1070px) {
-		  		background-color: rgba(38, 38, 38, 0.64);
+		  		// background-color: rgba(38, 38, 38, 0.64);
 		  		top: 0;
 
 		  		@media screen and (max-width: 991px) {
-		  			background-color: transparent;
+		  			background-color: rgba(255, 255, 255, 0.64)
 		  		}
 		  	}
 
@@ -4991,21 +4991,20 @@ body.CustomCategoryPage {
 			  		position:relative;
 			  		top: 150px;
 
-			  		@media screen and (max-width: 991px) {
-			  			display: block!important;
-			  		}
-
-
 			  		@media screen and (max-width: 1070px) {
-			  			top: 200px;
+			  			top: 0;
+					    height: 100vh;
+					    padding: 0;
+					    display: flex!important;
+					    align-items: center;
 			  		}
 
 			  		.custom-container {
 			  			padding: 0 0 0 85px;
 			  			color: #fff;
 
-			  			@media screen and (max-width: 991px) {
-			  				color: #5d5b5b;
+			  			@media screen and (max-width: 1070px) {
+			  				color: #2d2727;
 			  			}
 
 			  			@media screen and (max-width: 620px) {
@@ -5020,44 +5019,22 @@ body.CustomCategoryPage {
 				  			margin: 0;
 				  			padding: 0;
 
-				  			@media screen and (max-width: 991px) {
-				  				color: #5d5b5b;
+				  			@media screen and (max-width: 1070px) {
+				  				color: #2d2727;
+				  				margin: 0 0 15px 0;
+				  				font-size: 26pt;
 				  			}
-
-				  			@media only screen and (max-width : 1370px) {
-				  				font-size: 25pt;
-				  			}
-
-				  			@media only screen and (max-width : 420px) {
-				  				font-size: 18pt;
-				  			}
-
-				  			@media only screen and (max-width : 407px) {
-				  				font-size: 14pt;
-				  			}
-
-				  			@media only screen and (max-width : 335px) {
-				  				font-size: 12pt;
-				  			}
-
 				  		}
 
 				  		span {
 				  			font-family: 'Bodoni', Arial, sans-serif;
 			  				font-style: italic;
 			  				font-size: 47pt;
+			  				line-height: 55px;
 
-				  			@media only screen and (max-width : 1370px) {
-				  				font-size: 35pt;
-				  			}
-
-				  			@media only screen and (max-width : 407px) {
-				  				font-size: 28pt;
-				  			}
-
-				  			@media only screen and (max-width : 335px) {
-				  				font-size: 26pt;
-				  			}
+			  				@media screen and (max-width: 1070px) {
+			  					font-size: 44pt;
+			  				}
 				  		}
 
 				  		.ctaWrapper {
@@ -5263,7 +5240,7 @@ body.CustomLashCategory {
 			height: 100vh;
 		}
 
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 1070px) {
 			height: 100vh;
 			background: url('../images/lash-category-bg.jpg') center center;
 			background-size: cover;
@@ -5280,11 +5257,13 @@ body.CustomHairCategory {
 	/* Video Wrapper */
 
 	.VideoWrapper {
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 1070px) {
 			height: 100vh;
 			background: url('../images/hair-category-bg.jpg') center center;
 			background-size: cover;
 			background-repeat: no-repeat;
+
+
 		}
 	}
 }
@@ -5296,7 +5275,7 @@ body.CustomSkinCategory {
 	/* Video Wrapper */
 
 	.VideoWrapper {
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 1070px) {
 			height: 100vh;
 			background: url('../images/skin-category-bg.jpg') center center;
 			background-size: cover;
@@ -5312,7 +5291,7 @@ body.CustomWellnessCategory {
 	/* Video Wrapper */
 
 	.VideoWrapper {
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 1070px) {
 			height: 100vh;
 			background: url('../images/wellness-category-bg.jpg') center center;
 			background-size: cover;

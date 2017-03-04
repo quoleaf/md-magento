@@ -182,6 +182,10 @@
 ############################################
 ## Add default Expires header
 ## http://developer.yahoo.com/performance/rules.html#expires
+
+# Enable expirations
+ExpiresActive On 
+
 # Perhaps better to whitelist expires rules? Perhaps.
  ExpiresDefault      "access plus 1 month"
 

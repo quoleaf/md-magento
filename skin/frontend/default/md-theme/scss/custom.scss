@@ -5506,6 +5506,20 @@ body.CustomWellnessCategory {
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
+
+		.overlay {
+			.overlay__inner {
+				.content {
+					.custom-container {
+						color: #000;
+
+						h1 {
+							color: #000;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

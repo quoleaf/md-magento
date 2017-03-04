@@ -51,6 +51,44 @@
 
 <body class="landingpage-revamp">
 
+<!-- Preloader -->
+<script type="text/javascript">
+    if (window.location.protocol != "http:"){
+    window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
+    }
+    
+    window.addEventListener("load", function(){
+        var load_screen = document.getElementById("load_screen");
+        document.body.removeChild(load_screen);
+    });
+</script>
+
+<div id="load_screen">
+    <div id="loadingwrapper">
+        <!-- Custom -->
+        <h1>
+            <em>
+                MD Factor
+            </em>
+            <span>
+                We create beauty through advance science
+            </span>
+        </h1>
+        <div class="loader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div> 
+
+        <span>
+            Please wait..
+        </span> 
+    </div>
+</div>
+
+
 <div class="VideoWrapper">
     <div id="video-container">
         <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
@@ -1298,5 +1336,19 @@ window.__lo_site_id = 59158;
 
 
     <!-- End of Lucky Orange -->
+
+
+    <!-- Preloader -->
+
+<script type="text/javascript">    
+jQuery(document).ready(function($) {
+    $(window).load(function() {
+        jQuery('body').css({'overflow-y':'auto', 'position':'relative', 'height':'auto'});
+    });
+});
+</script>
+
+
+
 </body>
 </html>

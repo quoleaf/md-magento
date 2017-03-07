@@ -4414,6 +4414,10 @@ body {
 	overflow-x: hidden;
 }
 
+#lo_avail_for_chat_btn {
+	display: none!important;
+}
+
 
 /* ==== Preloader ==== */
 
@@ -5473,8 +5477,6 @@ body.CustomHairCategory {
 			background: url('../images/hair-category-bg.jpg') center center;
 			background-size: cover;
 			background-repeat: no-repeat;
-
-
 		}
 	}
 }
@@ -5533,7 +5535,6 @@ body.CustomCategories {
 	/* Nav */
 
 	nav {
-
 		&.fixed-nav {
 			.custom-container {
 				.MDnav.light ul li a {
@@ -5580,7 +5581,7 @@ body.CustomCategories {
 
 		.custom-container {
 			.MDnav.light ul li a {
-				color: #454545;
+				color: #fff;
 
 				@media only screen and (max-width : 1064px) {
 					color: #727070;
@@ -5601,35 +5602,35 @@ body.CustomCategories {
 
 			.searchWrapper {
 				form {
-					border: 2px solid #454545;
+					border: 2px solid #fff;
 
 					input {
-						color: #454545;
+						color: #fff;
 
 						&::-webkit-input-placeholder {
-	                        color: #454545;
+	                        color: #fff;
 	                        opacity: 1;
 	                    }
 
 	                    &:-moz-placeholder {
-	                        color: #454545;
+	                        color: #fff;
 	                        opacity: 1;
 	                    }
 
 	                    &::-moz-placeholder {
-	                        color: #454545;
+	                        color: #fff;
 	                        opacity: 1;
 	                    }
 
 	                    &:-ms-input-placeholder {
-	                        color: #454545;
+	                        color: #fff;
 	                        opacity: 1;
     	                }
 					}
 
 					button {
 						i {
-							color: #454545;
+							color: #fff;
 						}
 					}
 				}
@@ -5640,23 +5641,11 @@ body.CustomCategories {
 	/* Video Wrapper */
 
 	.VideoWrapper {
-		height: 100vh;
-		background: url('../images/categories-bg.jpg') center center;
-		background-size: cover;
-		background-repeat: no-repeat;	
-
-		.overlay {
-			.overlay__inner {
-				.content {
-					.custom-container {
-						color: #5d5b5b;
-
-						h1 {
-							color: #5d5b5b;
-						}
-					}
-				}
-			}
+		@media screen and (max-width: 1064px) {
+			height: 100vh;
+			background: url('../images/categories-bg.jpg') center center;
+			background-size: cover;
+			background-repeat: no-repeat;	
 		}
 	}
 }
@@ -5665,14 +5654,48 @@ body.CustomCategories {
 
 /* Search Category */
 
-body.catalogsearch-result-index {
-	#categories {
-		display: none;
+body.catalogsearch-result-index, body.catalog-category-view {
+	.customnav {
+		nav {
+			background: #fff;
+
+			@media only screen and (max-width : 1064px) {
+				.custom-container {
+					.MDnav.mobile, .MDnav.mobile.fixed {
+						background: #fff;
+					}
+				}
+
+				.navWrapper {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.categoryWrapper {
+		margin:  0 0 15px 0;
 	}
 
 	#shop {
 		a {
 			color: #000;
+		}
+
+		.price-box .special-price {
+			padding-left: 0;
+		}
+
+		#shopProducts {
+			ul {
+				li {
+					.desc { 
+						.price {
+							color: #1183ce;
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -44,6 +44,17 @@
                                 __('Qty') ?>" class="input-text qty"> <input class="button-arrow button-up" type="button" value='+'>
                             </div>
                         </div>
+                        <div class="<?php
+                                    //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
+                                    if(($_product->getData('sku')) != "NH3120-T"){echo 'hidden'; } ?> ">
+                                
+                                <input id="nutriHairBtn" class="customPaypalBtn-NutriHair" type="submit" value="SUBSCRIBE" onClick="select_option()" src="" border="0" name="button" alt="BuyNow">
+                                <br>
+                                <input class="customPaypalBtn-NutriHair" type="image" onClick="select_option()" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="button" alt="PayPal - The safer, easier way to pay online!">
+                                
+                                
+                        </div>
+
                         <div class="BuyNowWrapper">
                             <div class="AddToCartWrapper">
                                 <button href="#" class="<?php
@@ -87,3 +98,17 @@
     </div>
 <?php endif; ?>
 
+<script>
+    jQuery(".customPaypalBtn-NutriHair").on('click', function(){
+        var selected_option = jQuery('.product-custom-option').val();
+        switch(selected_option){
+            case '1':
+                jQuery('.customClick90').click();
+            break;
+            case '2':
+                jQuery('.customClick30').click();
+            break;
+        }
+        return false;
+    });
+</script>

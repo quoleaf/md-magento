@@ -10003,3 +10003,28 @@ body.opc-index-index .opc-wrapper-opc .opc-col-center #login_guest .validation-a
 .lity.lity-opened {
 	z-index: 99999999;
 }
+
+input#nutriHairBtn {
+    background: #e8408b;
+    transition: background-color 0.5s ease;
+    padding: 13px 60px 13px 60px;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+input#nutriHairBtn:hover {
+	background-color: #ff2787
+}
+
+input.customPaypalBtn-NutriHair {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 570px){
+	input#nutriHairBtn{
+		width: 100%;
+	}
+}

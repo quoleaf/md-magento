@@ -73,12 +73,16 @@
             </h1>
             
             <div class="noticeWrapper">
-                <span class="reviews">
-                    <?php $this->helper('yotpo')->showBottomline($this, $_product); ?>
-                    <em>
-                        (Please click "Reviews" tab below to see product reviews.)
-                    </em>
-                </span>
+
+                 <ul class="tabs">
+                    <li class="tab-link reviews" data-tab="reviews">
+                        <a href="#reviews">
+                            <span class="reviews">
+                                <?php $this->helper('yotpo')->showBottomline($this, $_product); ?>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
 
                 <div class="availability">
                     <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getProductAvailability(), 'product_availability'); ?>
@@ -167,52 +171,49 @@
 
     <div id="ProductInfoWrapper">
         <div class="tab_container">
-            <input class="tabInput" id="tab1" type="radio" name="tabs" checked>
-            <label class="tabLabel" for="tab1"><span>Product Details</span></label>
+             <ul class="tabs">
+                <li class="tab-link current" data-tab="product-details">
+                    Product Details
+                </li>
 
-            <?php 
-                 $ingredientsText = $_product->getData('ingredients');
-                           
-                if(isset($ingredientsText)){
-                    $prodAttrIngredients = $_product->getResource()->getAttribute('ingredients');
-                    $_ingredients = $prodAttrIngredients->getStoreLabel(Mage::app()->getStore()->getName());
-                        echo '
+                <?php 
+                    $ingredientsText = $_product->getData('ingredients');
+                               
+                    if(isset($ingredientsText)){
+                        $prodAttrIngredients = $_product->getResource()->getAttribute('ingredients');
+                        $_ingredients = $prodAttrIngredients->getStoreLabel(Mage::app()->getStore()->getName());
+                            echo '
 
-                            <input class="tabInput" id="tab2" type="radio" name="tabs">
-                            <label class="tabLabel" for="tab2"><span>Science</span></label>
+                                <li class="tab-link" data-tab="science">Science</li>
 
-                        ';
-                }
-            ?>
+                            ';
+                    }
+                ?>
+                <li class="tab-link" data-tab="questionandanswer">
+                    Q&amp;A
+                </li>
+                <li class="tab-link reviewsTab" data-tab="reviews">
+                Reviews
+                </li>
+            </ul>
 
-            <input class="tabInput" id="tab3" type="radio" name="tabs">
-            <label class="tabLabel" for="tab3"><span>Q&amp;A</span></label>
-
-            <input class="tabInput" id="tab4" type="radio" name="tabs">
-            <label class="tabLabel" for="tab4"><span>Reviews</span></label>
-
-            <!-- Description -->
-
-            <section id="content1" class="tab-content">
+            <div id="product-details" class="tab-content current">
                 <div class="inner">
                     <?php echo $_descriptionText = $_helper->productAttribute($_product, $_product->getDescription(), 'description'); ?>
                 </div>
-            </section>
-
-            <!-- Ingredients -->
+            </div>
 
             <?php if (isset($ingredientsText)): ?>
-                <section id="content2" class="tab-content">
-                    <div class="inner"> 
-
-                        <?php echo $ingredientsText = $_helper->productAttribute($_product, $_product->getIngredients(), 'ingredients'); ?>
+                <div id="science" class="tab-content">
+                    <div class="inner">
+                         <?php echo $ingredientsText = $_helper->productAttribute($_product, $_product->getIngredients(), 'ingredients'); ?>
                     </div>
-                </section>
+                </div>
             <?php endif;?>
 
-            <!-- QA -->
-            <section id="content3" class="tab-content">
-                <div class="inner">   
+
+            <div id="questionandanswer" class="tab-content ">
+               <div class="inner">   
                    <div class="product-collateral">
                         <?php foreach ($this->
                         getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
@@ -230,16 +231,14 @@
                         getChildHtml('product_additional_data') ?>
                     </div>
                 </div>
-            </section>
-
-            <!-- Reviews -->
-            <section id="content4" class="tab-content">
-                <div class="inner">
-                    <div class="ReviewsWrapper">
-                        <?php $this->helper('yotpo')->showWidget($this, $_product); ?>
-                    </div>
-                </div> 
-            </section>
+            </div>
+            <div id="reviews" class="tab-content reviewsTab">
+                <div class="inner ">
+                        <div class="ReviewsWrapper">
+                            <?php $this->helper('yotpo')->showWidget($this, $_product); ?>
+                        </div>
+                    </div> 
+            </div>
         </div>
     </div>
 </div>
@@ -398,4 +397,44 @@ jQuery(function($) {
             $qty.val(qty);
         });
     });
+
+
+    jQuery(function($) {
+    
+        jQuery('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            jQuery('ul.tabs li').removeClass('current');
+            jQuery('.tab-content').removeClass('current');
+
+            jQuery(this).addClass('current');
+            jQuery("#"+tab_id).addClass('current');
+        });
+
+            jQuery('.reviews').on('click',function(){
+            jQuery('ul.tabs li').removeClass('current');
+            jQuery('.tab-content').removeClass('current');
+           jQuery('.reviewsTab').addClass('current');
+            jQuery(this).removeClass('current');
+        });
+
+    });
+
+    jQuery(function($) {
+
+        jQuery('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+    });
+
+
 </script>

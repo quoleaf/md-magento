@@ -6,9 +6,9 @@
     z-index: 99999999;
 
     nav {
-        background: #f1f1f0;
         transition: all 0.4s ease;
         padding: 0;
+        border-bottom: 1px solid #f1f1f1;
 
         #topBar {
             margin: 0;
@@ -31,13 +31,13 @@
         .navWrapper {
             padding: 10px 0 10px 0;
 
+            @media screen and (max-width: 1064px) {
+                padding: 0;
+            }
+
             .custom-container {
                 &.navi {
                     margin: 0 auto;
-                }
-
-                .logo {
-                    width: 100px;
                 }
 
                 .MDnav.light li a {

@@ -8,7 +8,6 @@
     nav {
         transition: all 0.4s ease;
         padding: 0;
-        border-bottom: 1px solid #f1f1f1;
 
         #topBar {
             margin: 0;
@@ -29,7 +28,7 @@
         }
         
         .navWrapper {
-            padding: 10px 0 10px 0;
+            padding: 30px 0 30px 0;
 
             @media screen and (max-width: 1064px) {
                 padding: 0;

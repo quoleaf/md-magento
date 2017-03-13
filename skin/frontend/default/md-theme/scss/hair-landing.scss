@@ -1749,18 +1749,6 @@ body.hairlossVer-one {
         @media only screen and (max-width :470px) {
             #Ingredients {
                 .MDcontainer {
-                    .rightSide {
-                        padding: 0;
-                        position: relative;
-                        right: 20px;
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width :370px) {
-            #Ingredients {
-                .MDcontainer {
                     .leftSide {
                         h1 {
                             font-size: 20px;
@@ -1773,7 +1761,7 @@ body.hairlossVer-one {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -7px;
+                        right: -40px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -1792,6 +1780,16 @@ body.hairlossVer-one {
                                 background-position-x: -16px;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :370px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        right: -7px;
                     }
                 }
             }
@@ -3523,18 +3521,6 @@ body.hairlossVer-two {
         @media only screen and (max-width :470px) {
             #Ingredients {
                 .MDcontainer {
-                    .rightSide {
-                        padding: 0;
-                        position: relative;
-                        right: 20px;
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width :370px) {
-            #Ingredients {
-                .MDcontainer {
                     .leftSide {
                         h1 {
                             font-size: 20px;
@@ -3547,7 +3533,7 @@ body.hairlossVer-two {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -7px;
+                        right: -40px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -3566,6 +3552,16 @@ body.hairlossVer-two {
                                 background-position-x: -16px;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :370px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        right: -7px;
                     }
                 }
             }
@@ -5331,18 +5327,6 @@ body.hairkitoffer {
         @media only screen and (max-width :470px) {
             #Ingredients {
                 .MDcontainer {
-                    .rightSide {
-                        padding: 0;
-                        position: relative;
-                        right: 20px;
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width :370px) {
-            #Ingredients {
-                .MDcontainer {
                     .leftSide {
                         h1 {
                             font-size: 20px;
@@ -5355,7 +5339,7 @@ body.hairkitoffer {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -7px;
+                        right: -40px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -5374,6 +5358,16 @@ body.hairkitoffer {
                                 background-position-x: -16px;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :370px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        right: -7px;
                     }
                 }
             }
@@ -5865,6 +5859,7 @@ body.AfricanAmerican {
                             float: left;
                             margin: 15px 0 0 0;
                             padding: 25px;
+                            position: relative;
 
                             .inner {
                                 background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') center center;
@@ -7175,18 +7170,6 @@ body.AfricanAmerican {
         @media only screen and (max-width :470px) {
             #Ingredients {
                 .MDcontainer {
-                    .rightSide {
-                        padding: 0;
-                        position: relative;
-                        right: 20px;
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width :370px) {
-            #Ingredients {
-                .MDcontainer {
                     .leftSide {
                         h1 {
                             font-size: 20px;
@@ -7199,7 +7182,7 @@ body.AfricanAmerican {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -7px;
+                        right: -40px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -7218,6 +7201,16 @@ body.AfricanAmerican {
                                 background-position-x: -16px;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :370px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        right: -7px;
                     }
                 }
             }

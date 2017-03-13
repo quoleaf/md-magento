@@ -1136,7 +1136,9 @@ body.hairlossVer-one {
                 background: url(../images/md-hair-landing/descriptionBg-tablet.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
-                min-height: 49em;
+                min-height: auto;
+                height: 100%;
+                padding: 0 0 100px 0;
 
                 .leftSide {
                     width: 100%;
@@ -1227,7 +1229,6 @@ body.hairlossVer-one {
                 background: url(../images/md-hair-landing/descriptionBg-mobile.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
-                min-height: 47em;
 
                 .leftSide {
                     margin-top: 40px;
@@ -1290,10 +1291,7 @@ body.hairlossVer-one {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-
-            @media only screen and (max-width :370px) {
-                background-position-x: -5px;
-            }
+            background-position-x: -5px;
             
             .MDcontainer {
                 display: flex;
@@ -3063,10 +3061,7 @@ body.hairlossVer-two {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-
-            @media only screen and (max-width :370px) {
-                background-position-x: -5px;
-            }
+            background-position-x: -5px;
 
             .MDcontainer {
                 display: flex;
@@ -4716,7 +4711,9 @@ body.hairkitoffer {
                 background: url(../images/md-hair-landing/descriptionBg-3-tablet.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
-                min-height: 40em;
+                min-height: auto;
+                height: 100%;
+                padding: 0 0 100px 0;
 
                 .leftSide {
                     width: 100%;
@@ -4869,10 +4866,7 @@ body.hairkitoffer {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-
-            @media only screen and (max-width :370px) {
-                background-position-x: -5px;
-            }
+            background-position-x: -5px;
 
             .MDcontainer {
                 display: flex;
@@ -6390,7 +6384,7 @@ body.AfricanAmerican {
         #CustomDescription {
             background: url(../images/md-hair-landing/american-african-description-bg.jpg) center center;
             height: auto;
-            min-height: 42em;
+            min-height: 47em;
             margin: 0 auto;
             width: 100%;
             float: left;
@@ -6411,6 +6405,10 @@ body.AfricanAmerican {
                         text-transform: uppercase;
                         font-size: 25px;
 
+                        @media only screen and (max-width :1170px) {
+                            font-size: 20px;
+                        }
+
                         span {
                             font-family: "Bodoni",Arial,sans-serif !important;
                             color: #777777;
@@ -6419,6 +6417,10 @@ body.AfricanAmerican {
                             font-style: italic;
                             position: relative;
                             top: 12px;
+
+                            @media only screen and (max-width :1270px) {
+                                font-size: 40px;
+                            }
 
                             @media only screen and (max-width :770px) {
                                 width: 100%;
@@ -6550,7 +6552,9 @@ body.AfricanAmerican {
                 background: url(../images/md-hair-landing/american-african-description-bg-tablet.jpg) center center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                min-height: 40em;
+                min-height: auto;
+                height: 100%;
+                padding: 0 0 100px 0;
 
                 .leftSide {
                     width: 100%;
@@ -6705,10 +6709,7 @@ body.AfricanAmerican {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-
-            @media only screen and (max-width :370px) {
-                background-position-x: -5px;
-            }
+            background-position-x: -5px;
 
             .MDcontainer {
                 display: flex;

@@ -5940,13 +5940,13 @@ body.catalog-product-view {
                             box-sizing: border-box;
                             background: center no-repeat;
                             background-size: cover;
-                            display: inline-table;
+                            display: flex;
+                            align-items: center;
                             position: relative;
                             margin: 4px;
                             padding: 5px;
-                            border: 3px solid transparent;
-                            width: 125px;
-                            height: 150px;
+                            border: 3px solid transparent;;
+                            height: 240px;
                             cursor: pointer;
 
                             &.active {
@@ -5967,8 +5967,7 @@ body.catalog-product-view {
                             }
 
                             img {
-                                width: 100%;
-                                height: 100%;
+                                width: 150px;
                             }
 
                             .inner {

@@ -213,6 +213,15 @@
                 </mdhairkitbundle> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <africanamericanlanding module="page" translate="label">
+                    <label>MD African American Landing Page</label>
+                    <template>page/md-african-american-landingpage.phtml</template>
+                    <layout_handle>africanamericanlanding</layout_handle>
+                </africanamericanlanding> 
+            </layouts>
+        </page>
     </global>
     <frontend>
         <routers>

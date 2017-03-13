@@ -217,6 +217,7 @@ body {
 @media only screen and (max-width :370px) {
     .MDcontainer {
         width: 300px;
+        padding: 0 10px 0 10px;
     }  
 
     .navWrapper .navbar-fixed-top a {
@@ -1042,13 +1043,13 @@ body.hairlossVer-one {
 
                             img {
                                 margin: 20px 0 50px 0;
+                                width: 250px;
                             }
                         }
 
                         .bottom {
                             width: 100%;
                             float: left;
-                            display: flex;
 
                             .pinkBG {
                                 background: #e8408b;
@@ -1072,28 +1073,24 @@ body.hairlossVer-one {
                                 border: 2px solid #e8408b;
                                 background: transparent;
                                 outline: none;
-                                color: #e8408b;
+                                height: 53px;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 font-size: 16px;
                                 transition: all 0.5s ease;
-                                outline: none;
-                                text-decoration: none;
 
-                                &:hover {
-                                    background: #e8408b;
-                                    
-                                    a {
+                                a {
+                                    color: #e8408b;
+                                    text-decoration: none;
+                                    padding: 13px 30px 13px 30px;
+
+                                    &:hover {
                                         color: #fff;
                                     }
                                 }
 
-                                a {
-                                    text-decoration: none;
-                                    color: #e8408b;
-                                    padding: 15px 30px 15px 30px;
-                                    width: 100%;
-                                    float: left;
+                                &:hover {
+                                    background: #e8408b;
                                 }
                             }
                         }
@@ -1293,6 +1290,10 @@ body.hairlossVer-one {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
+
+            @media only screen and (max-width :370px) {
+                background-position-x: -5px;
+            }
             
             .MDcontainer {
                 display: flex;
@@ -1772,7 +1773,7 @@ body.hairlossVer-one {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -15px;
+                        right: -7px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -2817,13 +2818,13 @@ body.hairlossVer-two {
 
                             img {
                                 margin: 20px 0 50px 0;
+                                width: 250px;
                             }
                         }
 
                         .bottom {
                             width: 100%;
                             float: left;
-                            display: flex;
 
                             .pinkBG {
                                 background: #e8408b;
@@ -2847,28 +2848,24 @@ body.hairlossVer-two {
                                 border: 2px solid #e8408b;
                                 background: transparent;
                                 outline: none;
-                                color: #e8408b;
+                                height: 53px;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 font-size: 16px;
                                 transition: all 0.5s ease;
-                                outline: none;
-                                text-decoration: none;
 
-                                &:hover {
-                                    background: #e8408b;
-                                    
-                                    a {
+                                a {
+                                    color: #e8408b;
+                                    text-decoration: none;
+                                    padding: 13px 30px 13px 30px;
+
+                                    &:hover {
                                         color: #fff;
                                     }
                                 }
 
-                                a {
-                                    text-decoration: none;
-                                    color: #e8408b;
-                                    padding: 15px 30px 15px 30px;
-                                    width: 100%;
-                                    float: left;
+                                &:hover {
+                                    background: #e8408b;
                                 }
                             }
                         }
@@ -3068,6 +3065,10 @@ body.hairlossVer-two {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
+
+            @media only screen and (max-width :370px) {
+                background-position-x: -5px;
+            }
 
             .MDcontainer {
                 display: flex;
@@ -3546,7 +3547,7 @@ body.hairlossVer-two {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -15px;
+                        right: -7px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -4628,6 +4629,7 @@ body.hairkitoffer {
 
                             img {
                                 margin: 20px 0 50px 0;
+                                width: 250px;
                             }
                         }
 
@@ -4658,15 +4660,21 @@ body.hairkitoffer {
                                 background: transparent;
                                 padding: 13px 30px 13px 30px;
                                 outline: none;
-                                color: #e8408b;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 font-size: 16px;
                                 transition: all 0.5s ease;
 
+                                a {
+                                    color: #e8408b;
+
+                                    &:hover {
+                                        color: #fff;
+                                    }
+                                }
+
                                 &:hover {
                                     background: #e8408b;
-                                    color: #fff;
                                 }
                             }
                         }
@@ -4865,6 +4873,10 @@ body.hairkitoffer {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
+
+            @media only screen and (max-width :370px) {
+                background-position-x: -5px;
+            }
 
             .MDcontainer {
                 display: flex;
@@ -5343,7 +5355,7 @@ body.hairkitoffer {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -15px;
+                        right: -7px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -5430,15 +5442,14 @@ body.hairkitoffer {
                     width: 45%;
 
                     .vid {
-                        background: rgba(106,106,106,0.2);
                         width: 100%;
-                        height: 280px;
+                        height: 300px;
                         margin: 0;
                         padding: 0;
 
                         .inner {
-                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% -46px;
-                            height: 99%;
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% center;
+                            height: 100%;
                             background-size: cover;
                             background-repeat: no-repeat;
                             display: flex;
@@ -5460,7 +5471,6 @@ body.hairkitoffer {
                                 }
                             }
                         }
-
 
                         @media only screen and (max-width :470px) {
                             .inner {
@@ -5682,6 +5692,1870 @@ body.hairkitoffer {
         }
     }
 }
+
+
+body.AfricanAmerican {
+    .contentWrapper {
+        width: 100%;
+        float: left;
+        background: #fff;
+        height: auto;
+        min-height: 100vh;
+        overflow: hidden;
+
+        /* Freeshipping Section */
+
+        .freeshippingWrapper {
+            background: #252525;
+            border-bottom: 2px solid #e8408b;
+            color: #fff;
+            padding: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
+            font-weight: 500;
+
+            img {
+                position: relative;
+                bottom: 2px;
+                right: 10px;
+            }
+        }
+
+
+        /* Header Section */
+
+        #header-section {
+            background: url('../images/md-hair-landing/american-african-banner.jpg') center center;
+            height: 80vh;
+            margin: 0 auto;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position-x: 1px;
+            background-size: cover;
+            position: relative;
+            box-shadow: none;
+
+            @media only screen and (max-width :1599px) {
+                height: 83vh;
+            }
+
+            @media only screen and (max-width :1500px) {
+                background-position-x: -128px;
+            }
+
+            @media only screen and (max-width :1300px) {
+                background-position-x: -290px;
+            }
+
+              .MDcontainer {
+
+                .col-md-6 {
+                    padding: 0 0 0 40px;
+
+                    .share {
+                        width: 100%;
+                        float: left;
+                        text-align: right;
+                        margin: 45px 0 25px 0;
+
+                        a {
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: #566167;
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+
+                            i {
+                                -webkit-transform:rotateY(180deg);
+                                -moz-transform:rotateY(180deg);
+                                -o-transform:rotateY(180deg);
+                                -ms-transform:rotateY(180deg);
+                                unicode-bidi:bidi-override;
+                                direction:rtl;
+                                color: #1283cf;
+                            }
+                        }
+                    }
+
+                    h1 {
+                        width:100%;
+                        float: left;
+                        color: #566167;
+                        font-family: 'Bodoni', Arial, sans-serif!important;
+                        text-transform: uppercase;
+                        font-style: italic;
+                        font-size: 40px;
+
+                        p {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+                            font-style: normal;
+                            font-size: 23px;
+                            width: 100%;
+                            float: left;
+                        }
+
+                        span {
+                            width: 100%;
+                            float: left;
+                            color: #e8408b;
+                            font-weight: 100;
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+                            font-style: normal;
+                            font-size: 52px;
+                        }
+                    }
+
+                    .top {
+                        width: 100%; 
+                        float: left;
+                        padding: 15px 0 24px 0;
+
+                        p {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+                            text-transform: uppercase;
+                            font-size: 18px;
+                            color: #566167;
+                            margin-bottom: 29px;
+                        }
+
+                        .pinkBG {
+                            background: #e8408b;
+                            border: none;
+                            padding: 15px 45px 15px 45px;
+                            margin: 0 7px 0 0;
+                            outline: none;
+                            color: #fff;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-size: 16px;
+                        }
+
+                        .pinkBorder {
+                            border: 2px solid #e8408b;
+                            background: transparent;
+                            padding: 13px 14px 13px 14px;
+                            outline: none;
+                            color: #e8408b;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-size: 16px;
+                            transition: all 0.5s ease;
+
+                            &:hover {
+                                background: #e8408b;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .bottom {
+                        background: rgba(189, 189, 189, 0.46);
+                        width: 370px;
+                        height: 252px;
+                        float: left;
+                        margin: 15px 0 0 0;
+                        padding: 25px;
+
+                        .inner {
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') center center;
+                            height: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;                            
+                            display: flex;
+                            align-items: center;
+
+                            a {
+                                width: 100%;
+                                text-align: center;
+                                display: block!important;
+                                text-decoration: none;
+
+                                span {
+                                    width: 100%;
+                                    float: left;
+                                    color: #4f4f4f;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    margin-top: 5px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .hangingProduct {
+                        
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :1170px) {
+            #header-section {
+                .MDcontainer {
+                    .col-md-6 {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :1120px) {
+            #header-section {
+                background: url(../images/md-hair-landing/american-african-banner-tablet.jpg)center center;
+                background-position-x: -250px;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                .MDcontainer {
+                    .col-md-6 {
+                        .hangingProduct {
+                            display: none;  
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :991px) {
+            #header-section {
+                .MDcontainer {
+                    display: flex;
+
+                    .col-md-6 {
+                        &:nth-child(1) {
+                            width: 30%;
+                        }
+
+                        &:nth-child(2) {
+                            width: 70%;
+                            padding: 25px 0 0 100px;
+
+                            .share {
+                                display: none;
+                            }
+
+                            .bottom {
+                                margin: 80px auto;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media only screen and (max-width :835px) {
+            #header-section {
+                .MDcontainer {
+                    .col-md-6 {
+                        &:nth-child(2) {
+                            text-align: center;
+
+                            .top, h1 {
+                                position: relative;
+                                right: 20px;
+                            }
+
+                            button {
+                                width: 87%;
+                                margin: 0 0 15px 0!important;
+                            }
+
+                            .bottom {
+                                margin: 0 auto; 
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media only screen and (max-width :770px) {
+            #header-section {
+                .MDcontainer {
+                    .col-md-6 {
+                        &:nth-child(1) {
+                            display: none;
+                        }
+
+                        &:nth-child(2) {
+                            width: 100%;
+                            padding: 25px 0 0 0px;
+
+                            .top, h1 {
+                                right: 0;
+                            }
+
+                            button {
+                                width: 50%;
+                            }
+
+                            .bottom {
+                                position:relative;
+                                left: 135px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media only screen and (max-width :670px) {
+            #header-section {
+                .MDcontainer {
+                    .col-md-6 {
+                        &:nth-child(2) {
+                            .bottom {
+                                position:relative;
+                                left: 80px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media only screen and (max-width :570px) {
+            #header-section {
+                background: url(../images/md-hair-landing/american-african-banner-mobile.jpg) fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+
+                .MDcontainer {
+                    .col-md-6 {
+                        &:nth-child(2) {
+                            margin: 0;
+                            padding: 0;
+
+                            .share {
+                                display: block;
+                            }
+
+                            button {
+                                width: 87%;
+                            }
+
+                            .bottom {
+                                width: 100%;
+                                left: 0;
+                                margin: 40px auto 0;
+
+                                .inner {
+                                    background:url("http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg") 50% -45px;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media only screen and (max-width :370px) {
+            #header-section {
+                .MDcontainer {
+                    .col-md-6 {
+                        &:nth-child(2) {
+                            margin: 0;
+                            padding: 0;
+
+                            .share {
+                                display: block;
+                            }
+
+                            button {
+                                width: 87%;
+                            }
+
+                            .bottom {
+                                width: 100%;
+                                margin: 65px auto 0;
+                            }
+
+                            h1 {
+                                font-size: 28px;
+
+                                span {
+                                    font-size: 40px;
+                                }
+                            }
+
+                            .top {
+                                p {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+
+        /* As Seen In Section */
+
+        #AsSeenIn {
+            background: url(../images/md-hair-landing/AsSeenOnBg.jpg) 55% 0px fixed;
+            margin: 0 auto;
+            width: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            box-shadow: none;
+            height: auto;
+            padding: 50px 0 50px 0;
+
+            h2 {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+                color: #525252;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0 0 15px 0;
+                font-size: 25px;
+                letter-spacing: 4px;
+            }
+
+
+
+            #AsSeenInSlider .item{
+                margin: 3px;
+            }
+
+            #AsSeenInSlider .item img{
+                display: block;
+                margin: 0 auto;
+                height: auto;
+            }
+
+            /* clearfix */
+            .owl-carousel .owl-wrapper:after {
+                content: ".";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                line-height: 0;
+                height: 0;
+            }
+            /* display none until init */
+            .owl-carousel{
+                display: none;
+                position: relative;
+                width: 100%;
+                -ms-touch-action: pan-y;
+            }
+            .owl-carousel .owl-wrapper{
+                display: none;
+                position: relative;
+                -webkit-transform: translate3d(0px, 0px, 0px);
+            }
+            .owl-carousel .owl-wrapper-outer{
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                display: -webkit-inline-box;
+                display: inline-block;
+            }
+            .owl-carousel .owl-wrapper-outer.autoHeight{
+                -webkit-transition: height 500ms ease-in-out;
+                -moz-transition: height 500ms ease-in-out;
+                -ms-transition: height 500ms ease-in-out;
+                -o-transition: height 500ms ease-in-out;
+                transition: height 500ms ease-in-out;
+            }
+                
+            .owl-carousel .owl-item{
+                float: left;
+            }
+            .owl-controls .owl-page,
+            .owl-controls .owl-buttons div{
+                cursor: pointer;
+            }
+            .owl-controls {
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            }
+
+            /* mouse grab icon */
+            .grabbing { 
+                cursor:url(grabbing.png) 8 8, move;
+            }
+
+            /* fix */
+            .owl-carousel  .owl-wrapper,
+            .owl-carousel  .owl-item{
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility:    hidden;
+                -ms-backface-visibility:     hidden;
+              -webkit-transform: translate3d(0,0,0);
+              -moz-transform: translate3d(0,0,0);
+              -ms-transform: translate3d(0,0,0);
+            }
+
+            .owl-theme .owl-controls{
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            /* Styling Next and Prev buttons */
+
+            .owl-theme .owl-controls .owl-buttons div{
+                color: #FFF;
+                display: inline-block;
+                zoom: 1;
+                *display: inline;/*IE7 life-saver */
+                margin: 5px;
+                padding: 3px 10px;
+                font-size: 12px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+                background: #869791;
+                filter: Alpha(Opacity=50);/*IE7 fix*/
+                opacity: 0.5;
+            }
+            /* Clickable class fix problem with hover on touch devices */
+            /* Use it for non-touch hover action */
+            .owl-theme .owl-controls.clickable .owl-buttons div:hover{
+                filter: Alpha(Opacity=100);/*IE7 fix*/
+                opacity: 1;
+                text-decoration: none;
+            }
+
+            /* Styling Pagination*/
+
+            .owl-theme .owl-controls .owl-page{
+                display: inline-block;
+                zoom: 1;
+                *display: inline;/*IE7 life-saver */
+            }
+            .owl-theme .owl-controls .owl-page span{
+                display: block;
+                width: 12px;
+                height: 12px;
+                margin: 5px 7px;
+                filter: Alpha(Opacity=50);/*IE7 fix*/
+                opacity: 0.5;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                background: #869791;
+            }
+
+            .owl-theme .owl-controls .owl-page.active span,
+            .owl-theme .owl-controls.clickable .owl-page:hover span{
+                filter: Alpha(Opacity=100);/*IE7 fix*/
+                opacity: 1;
+            }
+
+            /* If PaginationNumbers is true */
+
+            .owl-theme .owl-controls .owl-page span.owl-numbers{
+                height: auto;
+                width: auto;
+                color: #FFF;
+                padding: 2px 10px;
+                font-size: 12px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+            }
+
+            /* preloading images */
+            .owl-item.loading{
+                min-height: 150px;
+                background: url(../images/md-hair-landing/AjaxLoader.gif) no-repeat center center
+            }
+        }
+
+
+        /* JoinMD Section */
+
+        #JoinMD {
+            background: #313131;
+            width: 100%;
+            float: left;
+            padding: 50px 0 50px 0;
+
+            h2 {
+                font-family: 'Bodoni', Arial, sans-serif!important;
+                margin: 0;
+                color: #fff;
+                text-align: center;
+                font-style: italic;
+                text-transform: uppercase;
+
+                span {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+                    width: 100%;
+                    float: left;
+                    font-style: normal;
+                    font-size: 21px;
+                    margin-top: 5px;
+                }
+
+                p {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important;
+                    font-style: normal;
+                    font-size: 13px;
+                    text-transform: capitalize;
+                    font-weight: initial;
+                    letter-spacing: 1.2px;
+                    width: 100%;
+                    float: left;
+                    padding: 5px 0 30px 0;
+                }
+            }
+
+            form {
+                width: 100%;
+                text-align:center;
+                margin-top: 35px;
+                float:left;
+                display: flex;
+
+                input {
+                    width: 41%;
+                    height: 60px;
+                    padding: 0 10px 0 10px;
+                    outline: none;
+                    margin-right: 15px;
+                    color: #525252;
+
+                    &::-webkit-input-placeholder {
+                        color: #525252;
+                        opacity: 1;
+                    }
+
+                    &:-moz-placeholder {
+                        color: #525252;
+                        opacity: 1;
+                    }
+
+                    &::-moz-placeholder {
+                        color: #525252;
+                        opacity: 1;
+                    }
+
+                    &:-ms-input-placeholder {  
+                        color: #525252;
+                        opacity: 1;
+                    }
+                }
+
+                .pinkBG {
+                    background: #e8408b;
+                    border: none;
+                    padding: 15px 65px 15px 65px;
+                    margin: 0;
+                    outline: none;
+                    color: #fff;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 16px;
+                    height: 60px;
+                }
+            }
+        }
+
+        @media only screen and (max-width :970px) {
+            #JoinMD {
+                padding: 50px 0 50px 0;
+            }
+        }
+
+        @media only screen and (max-width :770px) {
+            #JoinMD {
+
+                form {
+                    display: block;
+                    text-align: center;
+
+                    input {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        /* Description Section*/
+
+        #CustomDescription {
+            background: url(../images/md-hair-landing/american-african-description-bg.jpg) center center;
+            height: auto;
+            min-height: 42em;
+            margin: 0 auto;
+            width: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: none;
+
+            .leftSide {
+                width: 60%;
+                float: left;
+                margin-top: 50px;
+                padding: 0;
+
+               .title {
+                    h1 {
+                        font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
+                        color: #525252;
+                        text-transform: uppercase;
+                        font-size: 25px;
+
+                        span {
+                            font-family: "Bodoni",Arial,sans-serif !important;
+                            color: #777777;
+                            text-transform: lowercase;
+                            font-size: 45px;
+                            font-style: italic;
+                            position: relative;
+                            top: 12px;
+
+                            @media only screen and (max-width :770px) {
+                                width: 100%;
+                                float: left;
+                                top: 0;
+                                margin: 10px 0 55px 0;
+                            }
+                        }
+                    }
+                }
+
+                .contentInner, .contentInnerMobile {
+                    display: flex;
+                    margin-top: 45px;
+
+                    .left {
+                        width: 25%;
+                        margin-right: 5px;
+
+                        img {
+                            width: 150px;
+                            position: relative;
+                            bottom: 25px;
+                            right:20px;
+                            -webkit-transform: rotate(10deg);
+                            -moz-transform: rotate(10deg);
+                            -ms-transform: rotate(10deg);
+                            -o-transform: rotate(10deg);
+                            transform: rotate(10deg);
+                        }
+                    }
+
+                    .right {
+                        width: 75%;
+                        
+                        .top {
+                            p {
+                                color: #686666;
+                                font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                                font-size: 17px;
+                                font-weight: 500;
+                                width: 85%;
+                            }
+
+                            img {
+                                margin: 20px 0 50px 0;
+                                width: 250px;
+                            }
+                        }
+
+                        .bottom {
+                            width: 100%;
+                            float: left;
+
+                            .pinkBG {
+                                background: #e8408b;
+                                border: none;
+                                padding: 15px 30px 15px 30px;
+                                margin: 0 7px 0 0;
+                                outline: none;
+                                color: #fff;
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+                                font-size: 16px;
+
+                                img {
+                                    position: relative;
+                                    bottom: 4px;
+                                }
+                            }
+
+
+                            .pinkBorder {
+                                border: 2px solid #e8408b;
+                                background: transparent;
+                                padding: 13px 30px 13px 30px;
+                                outline: none;
+                                color: #e8408b;
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+                                font-size: 16px;
+                                transition: all 0.5s ease;
+
+                                &:hover {
+                                    background: #e8408b;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .rightSide{
+                width: 45%;
+            }
+        }
+
+        @media only screen and (max-width :1300px) {
+            #CustomDescription {
+                background-position-x: -150px;
+            }
+        }
+
+        @media only screen and (max-width :1200px) {
+            #CustomDescription {
+                background-position-x: -250px;
+            }
+        }
+
+        @media only screen and (max-width :1070px) {
+            #CustomDescription {
+                .leftSide {
+                    .contentInner {
+                        .right {
+                            .top {
+                                p {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :970px) {
+            #CustomDescription {
+                background: url(../images/md-hair-landing/american-african-description-bg-tablet.jpg) center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                min-height: 40em;
+
+                .leftSide {
+                    width: 100%;
+
+                    .contentInner {
+                        display: none;
+                    }
+
+                    .title {
+                        h1 {
+                            text-align: center;
+                        }
+                    }
+
+                    .contentInnerMobile {
+                        display: block!important;
+                        text-align: center;
+
+                        .right {
+                            width: 100%;
+
+                            .top {
+                                p {
+                                    width: 100%;
+                                    float: left;
+                                }
+
+                                .brush {
+                                    display: none;
+                                    width: 100%;
+                                    float: left;
+                                    height: 125px;
+
+                                    img {
+                                        width: 100px;
+                                        position: relative;
+                                        bottom: 45px;
+                                        right:0px;
+                                        margin: 0;
+                                        -webkit-transform: rotate(70deg);
+                                        -moz-transform: rotate(70deg);
+                                        -ms-transform: rotate(70deg);
+                                        -o-transform: rotate(70deg);
+                                        transform: rotate(70deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .rightSide {
+                    display: none;
+                }
+            }
+        }
+
+        @media only screen and (max-width :570px) {
+            #CustomDescription {
+                background-position-x: -165px;
+
+                .leftSide {
+                    margin-top: 15px;
+
+                    .contentInnerMobile {
+                        .right {
+                            .top {
+                                p {
+                                    font-size: 15px;
+                                }
+                            }
+
+                            .bottom {
+                                button{
+                                    width: 87%;
+                                    margin: 0 0 10px 0!important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :570px) {
+            #CustomDescription {
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                float: left;
+                height: 100%;
+                padding: 0 0 60px 0;
+
+                .leftSide {
+                    margin-top: 40px;
+
+                    .title {
+                        h1 {
+                            font-size: 27px;
+                        }
+                    }
+
+                    .contentInnerMobile {
+                        .right {
+                            .top {
+                                p {
+                                    font-size: 15px;
+                                }
+
+                                .brush {
+                                    display: none;
+                                }
+                            }
+
+                            .bottom {
+                                button{
+                                    width: 87%;
+                                    margin: 0 0 10px 0!important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :370px) {
+            #CustomDescription {
+
+                .leftSide {
+                    margin-top: 40px;
+
+                    .title {
+                        h1 {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        /* Promo */
+
+        #Promo {
+            background: url(../images/md-hair-landing/promoBg.jpg);
+            height: auto;
+            margin: 0 auto;
+            width: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: none;
+
+            @media only screen and (max-width :370px) {
+                background-position-x: -5px;
+            }
+
+            .MDcontainer {
+                display: flex;
+
+                .leftSide {
+                    width: 30%;
+                    padding: 100px 0 100px 0;
+
+                    img {
+                        float: right;
+                    }
+                }
+
+                .middle {
+                    width: 60%;
+                    padding: 80px 0 120px 0;
+
+                    h1 {
+                        font-family: 'Bodoni', Arial, sans-serif!important;
+                        color: #556067;
+                        font-style: italic;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 55px;
+
+                        span {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
+                            width: 100%;
+                            float: left;
+                            color: #686666;
+                            font-style: initial;
+                            font-size: 21px;
+                        }
+
+                        strong {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
+                            width: 100%;
+                            float: left;
+                            margin: 10px 0 0 0;
+                        }
+                    }
+
+
+                    form {
+                        width: 100%;
+                        float: left;
+                        margin-top: 20px;
+                        text-align: center;
+
+                        input {
+                            width: 70%;
+                            margin: 0 auto;
+                            height: 50px;
+                            padding: 0 20px 0 20px;
+                            outline: none;
+                            color: #525252;
+                            font-size: 16px;
+                            letter-spacing: 4px;
+
+                            &::-webkit-input-placeholder {
+                                font-family: 'Helvetica', Arial, sans-serif!important; 
+                                color: #525252;
+                                opacity: 1;
+                            }
+
+                            &:-moz-placeholder {
+                                font-family: 'Helvetica', Arial, sans-serif!important;
+                                color: #525252;
+                                opacity: 1;
+                            }
+
+                            &::-moz-placeholder {
+                                font-family: 'Helvetica', Arial, sans-serif!important; 
+                                color: #525252;
+                                opacity: 1;
+                            }
+
+                            &:-ms-input-placeholder { 
+                                font-family: 'Helvetica', Arial, sans-serif!important;
+                                color: #525252;
+                                opacity: 1;
+                            }
+                        }
+
+                        .pinkBG {
+                            background: #e8408b;
+                            border: none;
+                            padding: 15px 35px 15px 35px;
+                            margin: 20px 0 0 0;
+                            outline: none;
+                            color: #fff;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .rightSide {
+                    width: 30%;
+                    padding: 100px 0 100px 0;
+
+                    img {
+                        float: left;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :870px) {
+            #Promo {
+                .MDcontainer {
+                    .middle {
+                        h1 {
+                            font-size: 40px;
+
+                            span {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :700px) {
+            #Promo {
+                .MDcontainer {
+                    .leftSide, .rightSide {
+                        display: none;      
+                    }
+
+                    .middle {
+                        width: 100%;
+                        padding: 30px 0 50px 0;
+
+                        form {
+                            input {
+                                float: none;
+                                width: 75%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+         @media only screen and (max-width :500px) {
+            #Promo {
+                .MDcontainer {
+                    .middle {
+                        width: 100%;
+                        padding: 30px 0 50px 0;
+
+                        h1 {
+                            font-size: 35px;
+
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+
+                        form {
+                            input {
+                                float: none;
+                                width: auto;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        /* Ingredients Section */
+
+        #Ingredients {
+            background: #1283cf;
+            width: 100%;
+            float: left;
+
+            .MDcontainer {
+                display: flex;
+                align-items: center;
+                height: auto;
+                min-height: 30em;
+
+                .leftSide {
+                    width: 40%;
+                    margin-right: 65px;
+
+                    h1 {
+                        font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                        color: #fff;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 30px;
+
+                        span {
+                            font-family: "Bodoni",Arial,sans-serif !important;
+                            text-transform: lowercase;
+                            font-style: italic;
+                            font-size: 60px;
+                            position: relative;
+                            top: 22px;
+                        }
+                    }
+                }
+
+                .rightSide {
+                    width: 60%;
+                    display: flex;
+                    color: #fff;
+                    margin-top: 75px;
+
+                    .firstIngredient {
+                        margin-right: 35px;
+
+                        span {
+                            background: url(../images/md-hair-landing/ingredients/collagen.jpg);
+                            background-position-x: -41px;
+                            background-position-y: -19px;
+                            background-repeat: no-repeat;
+                            background-size: 123% 113%;
+                            border-radius: 100%;
+                            border: 5px solid #156ea8;
+                            margin: 20px auto;
+                            height: 200px;
+                            width: 200px;
+                            float: left;
+                            box-shadow: none;
+                        }
+
+                        p {
+                            font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                            margin:0;
+                            padding:0;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+
+
+                    .secondIngredient {
+                        position: relative;
+                        bottom: 90px;
+                        margin-right: 35px;
+
+                        span {
+                            background: url(../images/md-hair-landing/ingredients/lilac-extract.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 100%;
+                            border: 5px solid #156ea8;
+                            margin: 20px auto;
+                            height: 200px;
+                            width: 200px;
+                            float: left;
+                            box-shadow: none;
+                        }
+
+                        p {
+                            font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                            margin:0;
+                            padding:0;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+
+
+                    .thirdIngredient {
+                        position: relative;
+                        bottom: 200px;
+
+                        span {
+                            background: url(../images/md-hair-landing/ingredients/flaxseed-powder.jpg);
+                            background-position-x: -9px;
+                            background-position-y: -23px;
+                            background-repeat: no-repeat;
+                            background-size: 250% 145%;
+                            border-radius: 100%;
+                            border: 5px solid #156ea8;
+                            margin: 20px auto;
+                            height: 200px;
+                            width: 200px;
+                            float: left;
+                            box-shadow: none;
+                        }
+
+                        p {
+                            font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                            margin:0;
+                            padding:0;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @media only screen and (max-width :1270px) {
+            #Ingredients {
+                .MDcontainer {
+                    .leftSide {
+                        h1 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :1200px) {
+            #Ingredients {
+                .MDcontainer {
+                    .leftSide {
+                        margin-right: 0;
+
+                        h1 {
+                            span {
+                                font-size: 50px;
+                            }
+                        }
+                    }
+
+                    .rightSide {
+                        .firstIngredient, .secondIngredient, .thirdIngredient {
+                            span {
+                                width: 180px;
+                                height: 180px;
+                            }
+                        }
+
+                        .firstIngredient {
+                            span {
+                                background-position-x: -38px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :1070px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        .firstIngredient, .secondIngredient{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :970px) {
+            #Ingredients {
+                .MDcontainer {
+                    display: block;
+                    min-height: auto;
+                    padding-bottom: 50px;
+
+                    .leftSide {
+                        width: 100%;
+                    }
+
+                    .rightSide {
+                        width: 100%;
+                        padding: 0 100px 0 100px;
+                        margin-top: 35px;
+
+                        .firstIngredient, .secondIngredient, .thirdIngredient {
+                            bottom: 0;
+                        }
+
+                        .firstIngredient, .secondIngredient{
+                            margin-right: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :870px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        .firstIngredient, .secondIngredient, .thirdIngredient {
+                            span {
+                                width: 145px;
+                                height: 145px;
+                            }
+                        }
+
+                        .firstIngredient {
+                            span {
+                                background-position-x: -30px;
+                                background-position-y: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :770px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        padding: 0 50px 0 50px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :670px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :570px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        padding: 0 30px 0 30px;
+                        
+                        .firstIngredient, .secondIngredient, .thirdIngredient { 
+                            margin-right: 7px;
+                        }
+
+                        .firstIngredient, .secondIngredient, .thirdIngredient { 
+                            span {
+                                width: 120px;
+                                height: 120px;
+                            }
+                        }
+
+                        .firstIngredient {
+                            span {
+                                background-position-x: -24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :470px) {
+            #Ingredients {
+                .MDcontainer {
+                    .rightSide {
+                        padding: 0;
+                        position: relative;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :370px) {
+            #Ingredients {
+                .MDcontainer {
+                    .leftSide {
+                        h1 {
+                            font-size: 20px;
+
+                            span {
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                    .rightSide {
+                        padding: 0;
+                        position: relative;
+                        right: -7px;
+
+                        .firstIngredient, .secondIngredient, .thirdIngredient { 
+                            p {
+                                font-size: 9px;
+                            }
+
+                            span {
+                                width: 80px;
+                                height: 80px;
+                                border: 3px solid #156ea8;
+                            }
+                        }
+
+                        .firstIngredient {
+                            span {
+                                background-position-x: -16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        /* Customer Review Section */ 
+
+        #CustomerReview {
+            width: 100%;
+            float: left;
+            padding: 75px 0 75px 0;
+
+            .MDcontainer {
+                height: auto;
+                display: flex;
+
+                .leftSide {
+                    width: 55%;
+                    margin-right: 132px;
+
+                    .rating {
+                        img {
+                            width: auto;
+                        }
+                    }
+
+                    .testimonial {
+                        p {
+                            font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                            margin: 15px 0 40px 0;
+                            padding: 0;
+                            font-size: 18px;
+                            color: #5e5e5e;
+                        }
+                    }
+
+                    .author {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            background: url(../images/md-hair-landing/sample-author.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 100%;
+                            height: 100px;
+                            width: 100px;
+                            float: left;
+                            box-shadow: none;
+                        }
+
+                        p {
+                            font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                            margin: 0;
+                            padding: 0 0 0 25px;
+                            font-style: italic;
+                            font-size: 20px;
+                            color: #5e5e5e;
+                        }
+
+                    }
+                }
+                .rightSide {
+                    width: 45%;
+
+                    .vid {
+                        width: 100%;
+                        height: 300px;
+                        margin: 0;
+                        padding: 0;
+
+                        .inner {
+                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 50% center;
+                            height: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            display: flex;
+                            align-items: center;
+                            margin-top: 25px;
+
+                            a {
+                                width: 100%;
+                                text-align: center;
+                                display: block!important;
+                                text-decoration: none;
+
+                                span {
+                                    width: 100%;
+                                    float: left;
+                                    color: #566167;
+                                    text-transform: uppercase;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+
+                        @media only screen and (max-width :470px) {
+                            .inner {
+                                background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :970px) {
+            #CustomerReview {
+                .MDcontainer {
+                    .leftSide {
+                        margin-right: 65px;
+
+                        .testimonial {
+                            p {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width :670px) {
+            #CustomerReview {
+                .MDcontainer {
+                    display: block;
+                    text-align: center;
+
+                    .leftSide {
+                        width: 100%;
+                        float: left;
+                        margin-right: 0;
+
+                        .author {
+                            display: block;
+
+                            span {
+                                float: none;
+                                display: inline-block;
+                            }
+
+                            p {
+                                width: 100%;
+                                text-align: center;
+                                padding: 20px 0 0 0;
+                            }
+                        }
+                    }
+
+                    .rightSide {
+                        width: 100%;
+                        float: left;
+                    }
+                }
+            }
+        }
+
+
+        /* Footer */
+
+        #customFooter {
+            width: 100%;
+            float: left;
+            background: #313131;
+            height: auto;
+            padding: 35px 0 40px 0;
+
+            h1 {
+                font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 30px;
+                margin: 0;
+
+                span {
+                    font-family: "Bodoni",Arial,sans-serif !important;
+                    text-transform: lowercase;
+                    font-style: italic;
+                    font-size: 60px;
+                    position: relative;
+                    top: 22px;
+                }
+            }
+
+            .social {
+                width: 100%;
+                float: left;
+                text-align: center;
+                margin: 50px 0 0 0;
+
+                .icon-button {
+                    background-color: white;
+                    border-radius: 5.6rem;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-size: 2.0rem;
+                    height: 5.6rem;
+                    line-height: 5.6rem;
+                    margin: 0 5px;
+                    position: relative;
+                    text-align: center;
+                    -webkit-user-select: none;
+                       -moz-user-select: none;
+                        -ms-user-select: none;
+                            user-select: none;
+                    width: 5.6rem;
+                }
+
+                /* Circle */
+                .icon-button span {
+                    border-radius: 0;
+                    display: block;
+                    height: 0;
+                    left: 50%;
+                    margin: 0;
+                    position: absolute;
+                    top: 50%;
+                    -webkit-transition: all 0.3s;
+                       -moz-transition: all 0.3s;
+                         -o-transition: all 0.3s;
+                            transition: all 0.3s;
+                    width: 0;
+                }
+
+                .icon-button:hover span {
+                    width: 58px;
+                    height: 58px;
+                    border-radius: 100%;
+                    margin: -29px 0 0 -29px;
+                }
+
+                .twitter span {
+                    background-color: #4099ff;
+                }
+
+                .facebook span {
+                    background-color: #3B5998;
+                }
+
+                .instagram span {
+                    background-color: #5d4112;
+                }
+
+                /* Icons */
+
+                .icon-button i {
+                   background: none;
+                    color: #313131;
+                    height: 58px;
+                    font-size: 30px;
+                    left: 0;
+                    line-height: 058px;
+                    position: absolute;
+                    top: 0;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                    width: 58px;
+                    z-index: 10;
+
+                    &:before {
+                        right: 1px;
+                        top: -1px;
+                        position: relative;
+                    }
+                }
+
+                .icon-button .icon-twitter {
+                    color: #4099ff;
+                }
+
+                .icon-button .icon-facebook {
+                    color: #3B5998;
+                }
+
+                .icon-button .icon-google-plus {
+                    color: #db5a3c;
+                }
+                .icon-button:hover i {
+                    color: white;
+                }
+            }
+        }
+
+
+        #Copyright {
+            background: #f7f7f7;
+            width: 100%;
+            float: left;
+            text-align: center;
+            padding: 30px 0 30px 0;
+
+            p {
+                font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
+
+                a {
+                    text-decoration: underline;
+                    color: #1183ce;
+                }
+            }
+        }
+
+
+        @media only screen and (max-width :570px) {
+            #customFooter {
+                h1 {
+                    span {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -55,12 +55,13 @@
 </script>
 <![endif]-->
 
-<!--[if !IE]--> <link href="<?php echo $this->getSkinUrl(); ?>css/iecustom.css" rel="stylesheet" type="text/css"> <!--<![endif]-->
 <?php echo $this->getCssJsHtml() ?>
 <?php echo $this->getChildHtml() ?>
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
 
+
+<!--[if !IE]--> <link href="<?php echo $this->getSkinUrl(); ?>css/iecustom.css" rel="stylesheet" type="text/css"> <!--<![endif]-->
 <!-- Preloader -->
 <script type="text/javascript">
     if (window.location.protocol != "https:"){

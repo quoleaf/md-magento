@@ -4213,7 +4213,7 @@ body.catalog-product-view {
                 top: 15px; }
             body.catalog-product-view #CustomProductWrapper form .productImage .gallery .thumbs .thumb img {
               width: 100%;
-              height: auto !important; }
+              height: auto; }
             body.catalog-product-view #CustomProductWrapper form .productImage .gallery .thumbs .thumb .inner {
               background-repeat: no-repeat;
               background-position: center;

@@ -5849,43 +5849,49 @@ body.AfricanAmerican {
                         }
                     }
 
-                    .bottom {
-                        background: rgba(189, 189, 189, 0.46);
-                        width: 370px;
-                        height: 252px;
-                        float: left;
-                        margin: 15px 0 0 0;
-                        padding: 25px;
+                    .bottomWrapper {
+                        position:relative;
 
-                        .inner {
-                            background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') center center;
-                            height: 100%;
-                            background-size: cover;
-                            background-repeat: no-repeat;                            
-                            display: flex;
-                            align-items: center;
+                        .hangingProduct {
+                            position:absolute;
+                            top: 185px;
+                            left: 310px;
+                        }
 
-                            a {
-                                width: 100%;
-                                text-align: center;
-                                display: block!important;
-                                text-decoration: none;
+                        .bottom {
+                            background: rgba(189, 189, 189, 0.46);
+                            width: 370px;
+                            height: 252px;
+                            float: left;
+                            margin: 15px 0 0 0;
+                            padding: 25px;
 
-                                span {
+                            .inner {
+                                background: url('http://i3.ytimg.com/vi/xiIIqeHHY-c/hqdefault.jpg') center center;
+                                height: 100%;
+                                background-size: cover;
+                                background-repeat: no-repeat;                            
+                                display: flex;
+                                align-items: center;
+
+                                a {
                                     width: 100%;
-                                    float: left;
-                                    color: #4f4f4f;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    margin-top: 5px;
-                                }
+                                    text-align: center;
+                                    display: block!important;
+                                    text-decoration: none;
 
+                                    span {
+                                        width: 100%;
+                                        float: left;
+                                        color: #4f4f4f;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        margin-top: 5px;
+                                    }
+
+                                }
                             }
                         }
-                    }
-
-                    .hangingProduct {
-                        
                     }
                 }
             }

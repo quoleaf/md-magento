@@ -6496,17 +6496,25 @@ body.AfricanAmerican {
                             .pinkBorder {
                                 border: 2px solid #e8408b;
                                 background: transparent;
-                                padding: 13px 30px 13px 30px;
                                 outline: none;
-                                color: #e8408b;
+                                height: 53px;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
                                 font-size: 16px;
                                 transition: all 0.5s ease;
 
+                                a {
+                                    color: #e8408b;
+                                    text-decoration: none;
+                                    padding: 13px 30px 13px 30px;
+
+                                    &:hover {
+                                        color: #fff;
+                                    }
+                                }
+
                                 &:hover {
                                     background: #e8408b;
-                                    color: #fff;
                                 }
                             }
                         }

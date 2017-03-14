@@ -30,6 +30,8 @@
    
 
 <div class="top">
+    <div class="VariationProductSKU" data-variation-product-sku="<?php echo $_product->getData('sku'); ?>">    
+    </div>
                     <strong class="<?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
                                     if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?>">
@@ -110,5 +112,26 @@
             break;
         }
         return false;
+    });
+
+
+
+    jQuery(window).load(function() {    
+      
+        var sku = jQuery('.VariationProductSKU').attr('data-variation-product-sku');
+
+
+        var blockedSKUs = ['md-lash-factor-eyelash-conditioner-limited-edition-gold','md-lash-factor-eyelash-conditioner-limited-edition-silver','LABRCO'];
+        
+        if (jQuery.inArray(jQuery.trim(sku).toLowerCase(),blockedSKUs) > -1 ) {
+        var blockedCountries = ['RU','RUS','CN','CHN','CR','CRI','PE','PER','VN','VNM'];
+        
+        function hideCart(){jQuery('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper').hide();}
+        
+        jQuery.getJSON('http://freegeoip.net/json/', function (location) {
+           if(jQuery.inArray(location.country_code,blockedCountries )>-1) hideCart();
+           if(location.country_code=='US' && location.region_code=='CA') hideCart();
+        });
+        }
     });
 </script>

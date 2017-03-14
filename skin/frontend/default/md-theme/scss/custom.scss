@@ -7477,20 +7477,11 @@ body.cms-sales {
 
 body {
   &.customer-logged-in {
-  	#header.forCategory  {
-		background-image: none!important;
-		background-color: #fff!important;
-		height: 186px;
 
-		@media only screen and (max-width: 1250px) {
-            height: auto!important;
-            padding: 0 0 65px 0;
-        }
-
-		.section {
-			display: none;
-		}
-	}
+  	nav .cart-link .badge {
+  		padding: 1px 9px;
+  	}
+  	
 
     div, a, span, h1, h2, h3, h4, h5, h6, p {
       font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;

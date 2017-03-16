@@ -213,7 +213,7 @@
 
                 <div class="contentInner">
                     <div class="left wow zoomIn animated" data-wow-delay="0.8">
-                        <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/brush.png') ?>" alt=""/> 
+                        <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/kitoffer-prod-left.png') ?>" alt=""/> 
                     </div>
 
                     <div class="right">
@@ -299,6 +299,9 @@
                         Reveal Code
                     </button>
                 </form>
+                <span class="footnote">
+                    We protect your personal information. We use secure transaction.
+                </span>
             </div>
             <div class="rightSide">
                 <img src="<?php echo $this->getSkinUrl('images/md-hair-landing/american-african-prod-right.png') ?>" alt=""/ class="wow fadeInDown animated" data-wow-delay="0.5s"> 
@@ -320,27 +323,70 @@
             </div>
 
             <div class="rightSide">
-                <div class="firstIngredient wow fadeIn animated" data-wow-delay="0.8">
-                    <span></span>
-                    <p>
-                        Collagen
-                    </p>
+                <div class="firstIngredient wow fadeIn animated ingredientWrapper" data-wow-delay="0.8">
+                    <div class="imageWrapper">
+                        <span class="image"></span>
+                    </div>
+                    <div class="inner">
+                        <p>
+                            Norwegian White Fish Collagen
+                        </p>
+
+                        <em>
+                            For hair's strength, flexibility, and luster
+                        </em>
+
+                        <!-- <span class="tooltipWrapper">
+                            <a class="top ingredientcontent" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="For hair's strength, flexibility, and luster">
+                                <i class="fa fa-question" aria-hidden="true"></i>
+                            </a>  
+                        </span> -->
+                    </div>
                 </div>
 
-                <div class="secondIngredient wow fadeIn animated" data-wow-delay="1s">
-                    <span></span>
-                    <p>
-                        Lilac Extract
-                    </p>
+                <div class="secondIngredient wow fadeIn animated ingredientWrapper" data-wow-delay="1s">
+                    <div class="imageWrapper">
+                        <span class="image"></span>
+                    </div>
+                    <div class="inner">
+                        <p>
+                            Lilac Extract
+                        </p>
+
+                        <em>
+                            Natural anti-oxidant to address genetic, hormonal and age related hair shedding        
+                        </em>
+
+                        <!-- <span class="tooltipWrapper">
+                            <a class="top ingredientcontent" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Natural anti-oxidant to address genetic, hormonal and age related hair shedding">
+                                <i class="fa fa-question" aria-hidden="true"></i>
+                            </a>
+                        </span> -->
+                    </div>
                 </div>
 
-                <div class="thirdIngredient wow fadeIn animated" data-wow-delay="1.8s">
-                    <span></span>
-                    <p>
-                        Flaxseed powder
-                    </p>
+                <div class="thirdIngredient wow fadeIn animated ingredientWrapper" data-wow-delay="1.8s">
+                    <div class="imageWrapper">
+                        <span class="image"></span>
+                    </div>
+                    <div class="inner">
+                        <p>
+                            Flaxseed Powder
+                        </p>
+
+                        <em>
+                            High in omega 3,6 ad 9 to calm and protect scalp from inflammation.
+                        </em>
+
+                        <!-- <span class="tooltipWrapper">
+                            <a class="top ingredientcontent" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="High in omega 3,6 and 9 to calm and nourish scalp from inflammation.">
+                                <i class="fa fa-question" aria-hidden="true"></i>
+                            </a>
+                        </span>  -->
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -377,7 +423,7 @@
         </div>
     </section>
 
-    <section id="customFooter">
+    <!-- <section id="customFooter">
         <div class="MDcontainer wow fadeIn animated" data-wow-delay="0.3">
             <h1>
                 Connect 
@@ -401,16 +447,32 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="Copyright">
+    <div id="footer">
         <div class="MDcontainer">
             <p>
-                Copyright &copy; 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/><a href="javascript:void(0);">User Agreement</a> and <a href="javascript:void(0);"> Privacy Policy </a>.
+                Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+                <a href="https://md-factor.com/terms-and-conditions/">User Agreement</a> and <a href="https://md-factor.com/privacy-policy/">Privacy Policy</a>.
             </p>
+            <span>
+                <a href="https://www.facebook.com/MDLASHF">
+                    <img src="<?php echo $this->getSkinUrl('images/intimate-restore/fb.png') ?>"> 
+                </a>
+                <a href="https://twitter.com/MDLFbySusanLin">
+                    <img src="<?php echo $this->getSkinUrl('images/intimate-restore/twitter.png') ?>"> 
+                </a>
+                <a href="https://instagram.com/md_factor/">
+                    <img src="<?php echo $this->getSkinUrl('images/intimate-restore/instagram.png') ?>"> 
+                </a>
+            </span>
         </div>
-    </section>
+    </div>
+
 </div>
+
+
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
@@ -437,6 +499,9 @@ a2a_config.num_services = 2;
 
 
 <script>
+    // tooltip demo
+
+    $('.ingredientcontent').tooltip();
 
     // Fixed Nav
 

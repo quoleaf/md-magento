@@ -28,7 +28,7 @@
         }
         
         .navWrapper {
-            padding: 30px 0 30px 0;
+            padding: 32px 0 32px 0;
 
             @media screen and (max-width: 1064px) {
                 padding: 0;
@@ -59,6 +59,7 @@
 
                     form {
                         border: 2px solid #5d5b5b;
+                        padding: 7px 0px 7px 0px;
 
                         input {
                             color: #5d5b5b;

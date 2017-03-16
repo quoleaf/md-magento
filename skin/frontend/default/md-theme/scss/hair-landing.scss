@@ -1291,7 +1291,7 @@ body.hairlossVer-one {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-            background-position-x: -5px;
+            
             
             .MDcontainer {
                 display: flex;
@@ -3061,7 +3061,7 @@ body.hairlossVer-two {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-            background-position-x: -5px;
+            
 
             .MDcontainer {
                 display: flex;
@@ -4866,7 +4866,7 @@ body.hairkitoffer {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-            background-position-x: -5px;
+            
 
             .MDcontainer {
                 display: flex;
@@ -5843,7 +5843,8 @@ body.AfricanAmerican {
                         .hangingProduct {
                             position:absolute;
                             top: 185px;
-                            left: 310px;
+                            left: 345px;
+                            z-index:9;
                         }
 
                         .bottom {
@@ -6437,30 +6438,26 @@ body.AfricanAmerican {
                     margin-top: 45px;
 
                     .left {
-                        width: 25%;
+                        width: 35%;
                         margin-right: 5px;
 
                         img {
-                            width: 150px;
+                            width: auto;
                             position: relative;
                             bottom: 25px;
                             right:20px;
-                            -webkit-transform: rotate(10deg);
-                            -moz-transform: rotate(10deg);
-                            -ms-transform: rotate(10deg);
-                            -o-transform: rotate(10deg);
-                            transform: rotate(10deg);
+                            top:0;
                         }
                     }
 
                     .right {
-                        width: 75%;
+                        width: 65%;
                         
                         .top {
                             p {
                                 color: #686666;
                                 font-family: "HelveticaLTStd-Light",Arial,sans-serif !important;
-                                font-size: 17px;
+                                font-size: 15px;
                                 font-weight: 500;
                                 width: 85%;
                             }
@@ -6717,7 +6714,7 @@ body.AfricanAmerican {
             background-repeat: no-repeat;
             background-size: cover;
             box-shadow: none;
-            background-position-x: -5px;
+            
 
             .MDcontainer {
                 display: flex;
@@ -6814,6 +6811,20 @@ body.AfricanAmerican {
                             font-size: 16px;
                         }
                     }
+
+                    .footnote {
+                        font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                        color: #686666;
+                        font-size: 18px;
+                        width: 100%;
+                        float: left;
+                        text-align: center;
+                        padding: 20px 0 0 0;
+
+                        @media only screen and (max-width : 440px) {
+                            font-size: 12px;
+                        }
+                    }
                 }
 
                 .rightSide {
@@ -6902,6 +6913,10 @@ body.AfricanAmerican {
             width: 100%;
             float: left;
 
+            @media only screen and (max-width :770px) {
+                padding: 0 0 50px 0;
+            }
+
             .MDcontainer {
                 display: flex;
                 align-items: center;
@@ -6936,10 +6951,132 @@ body.AfricanAmerican {
                     color: #fff;
                     margin-top: 75px;
 
-                    .firstIngredient {
-                        margin-right: 35px;
+                    @media only screen and (max-width :970px) {
+                        right: 25px;
+                    }
 
-                        span {
+                    @media only screen and (max-width :770px) {
+                        display: inline-block;
+                        width: 100%;
+                        float: left;
+                        right: 0;
+                    }
+
+
+
+                    .ingredientWrapper {
+                        text-align: center;
+
+                        @media only screen and (max-width :770px) {
+                            width: 100%;
+                            display: inline-block;
+                            float: left;
+                        }
+
+                        .ingredientcontent {
+                            background: #014977;
+                            font-size: 12px;
+                            border-radius: 100%;
+                            color: #fff;
+                            text-decoration: none;
+                            padding: 2px 7px 2px 7px;
+                        }
+
+                        .imageWrapper {
+                            display: flex;
+
+                            @media only screen and (max-width :770px) {
+                                float: left;
+                                width: 100%;
+                            }
+                        }
+
+                        em {
+                            width: 200px;
+                            float: left;
+                            font-style: normal;
+                            font-size: 12px;
+                            text-transform: none;
+                            padding: 5px;
+                            margin: 6px 0 0 0;
+
+                            @media only screen and (max-width :770px) {
+                                width: 100%;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .inner {
+                            width: 100%;
+                            float: left;
+                            text-align: center;
+
+                            p {
+                                width: 200px;
+                                
+                                @media only screen and (max-width :970px) {
+                                    width: 100%;
+                                    float: left;  
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 50px; 
+                                }  
+
+                                @media only screen and (max-width :770px) {
+                                    font-size: 16px;
+                                    display: block;
+                                    text-align: center;
+                                    height: auto;
+                                }     
+                            }
+
+                            .tooltipWrapper {
+                                position: relative;
+                                left: 85px;
+                                bottom: 20px;
+                                width: 100%;
+                                float: left;
+
+                                @media only screen and (max-width :970px) {
+                                    left:0;
+                                    bottom:0;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2), &:nth-child(3) {
+                            p { 
+                                a {
+                                    margin: 0 0 0 10px;
+
+                                    @media only screen and (max-width :970px) {
+                                        margin: 15px 0 0 0;
+                                    }
+                                }
+                            } 
+                        }
+                    }
+
+                    .firstIngredient {
+                        position: relative;
+                        bottom: 0;
+                        margin-right: 55px;
+
+                        @media only screen and (max-width :1270px) {
+                            margin-right: 15px;
+                        }
+
+                        @media only screen and (max-width :1030px) {
+                            margin-right: -10px;
+                        }
+
+                        @media only screen and (max-width :870px) {
+                            margin-right: 0;
+                        }
+
+
+                        .image {
                             background: url(../images/md-hair-landing/ingredients/collagen.jpg);
                             background-position-x: -41px;
                             background-position-y: -19px;
@@ -6967,9 +7104,25 @@ body.AfricanAmerican {
                     .secondIngredient {
                         position: relative;
                         bottom: 90px;
-                        margin-right: 35px;
+                        margin-right: 55px;
 
-                        span {
+                        @media only screen and (max-width :1270px) {
+                            margin-right: 15px;
+                        }
+
+                        @media only screen and (max-width :1070px) {
+                            margin-right: -10px;
+                        }
+
+                        @media only screen and (max-width :1030px) {
+                            margin-right: -20px;
+                        }
+
+                        @media only screen and (max-width :870px) {
+                            margin-right: 0;
+                        }
+
+                        .image {
                             background: url(../images/md-hair-landing/ingredients/lilac-extract.jpg);
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -6996,7 +7149,7 @@ body.AfricanAmerican {
                         position: relative;
                         bottom: 200px;
 
-                        span {
+                        .image {
                             background: url(../images/md-hair-landing/ingredients/flaxseed-powder.jpg);
                             background-position-x: -9px;
                             background-position-y: -23px;
@@ -7051,28 +7204,16 @@ body.AfricanAmerican {
 
                     .rightSide {
                         .firstIngredient, .secondIngredient, .thirdIngredient {
-                            span {
+                            .image {
                                 width: 180px;
                                 height: 180px;
                             }
                         }
 
                         .firstIngredient {
-                            span {
+                            .image {
                                 background-position-x: -38px;
                             }
-                        }
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width :1070px) {
-            #Ingredients {
-                .MDcontainer {
-                    .rightSide {
-                        .firstIngredient, .secondIngredient{
-                            margin-right: 0;
                         }
                     }
                 }
@@ -7094,13 +7235,10 @@ body.AfricanAmerican {
                         width: 100%;
                         padding: 0 100px 0 100px;
                         margin-top: 35px;
+                        position: relative;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient {
                             bottom: 0;
-                        }
-
-                        .firstIngredient, .secondIngredient{
-                            margin-right: 50px;
                         }
                     }
                 }
@@ -7112,14 +7250,14 @@ body.AfricanAmerican {
                 .MDcontainer {
                     .rightSide {
                         .firstIngredient, .secondIngredient, .thirdIngredient {
-                            span {
+                            .image {
                                 width: 145px;
                                 height: 145px;
                             }
                         }
 
                         .firstIngredient {
-                            span {
+                            .image {
                                 background-position-x: -30px;
                                 background-position-y: -10px;
                             }
@@ -7160,14 +7298,14 @@ body.AfricanAmerican {
                         }
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
-                            span {
+                            .image {
                                 width: 120px;
                                 height: 120px;
                             }
                         }
 
                         .firstIngredient {
-                            span {
+                            .image {
                                 background-position-x: -24px;
                             }
                         }
@@ -7188,25 +7326,20 @@ body.AfricanAmerican {
                             }
                         }
                     }
+
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: -40px;
+                        right: 18px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
                                 font-size: 9px;
-                            }
-
-                            span {
-                                width: 80px;
-                                height: 80px;
-                                border: 3px solid #156ea8;
-                            }
+                            }                        
                         }
 
                         .firstIngredient {
-                            span {
+                            .image {
                                 background-position-x: -16px;
                             }
                         }
@@ -7219,7 +7352,15 @@ body.AfricanAmerican {
             #Ingredients {
                 .MDcontainer {
                     .rightSide {
-                        right: -7px;
+                        right: -3px;
+
+                        .firstIngredient, .secondIngredient, .thirdIngredient { 
+                            .image {
+                                width: 80px;
+                                height: 80px;
+                                border: 3px solid #156ea8;
+                            }                      
+                        }
                     }
                 }
             }
@@ -7509,23 +7650,45 @@ body.AfricanAmerican {
         }
 
 
-        #Copyright {
-            background: #f7f7f7;
+        /* Footer */
+
+        #footer {
+            background: #d72f7a;
             width: 100%;
             float: left;
+            color: #fff;
             text-align: center;
             padding: 30px 0 30px 0;
+            font-family: "HelveticaLTStd-Light",Arial,sans-serif ;
 
-            p {
-                font-family: 'HelveticaLTStd-Light', Arial, sans-serif!important; 
+            .MDcontainer {
+                p {
+                    font-size: 14px;
+                }
 
                 a {
                     text-decoration: underline;
-                    color: #1183ce;
+                    color: #fff;
+                }
+
+                span {
+                    width: 100%;
+                    float: left;
+                    padding: 15px 0 0 0 ;
+
+                    a {
+                        text-decoration: none;
+
+                        &:nth-child(3) {
+                            position: relative;
+                            left: 3px;
+                        }
+                    }
                 }
             }
         }
 
+        /* Footer */
 
         @media only screen and (max-width :570px) {
             #customFooter {

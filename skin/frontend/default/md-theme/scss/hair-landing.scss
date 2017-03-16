@@ -6123,6 +6123,10 @@ body.AfricanAmerican {
                 display: block;
                 margin: 0 auto;
                 height: auto;
+
+                @media only screen and (max-width :1216px) {
+                    width: 55%;
+                }
             }
 
             /* clearfix */
@@ -6952,7 +6956,7 @@ body.AfricanAmerican {
                     margin-top: 75px;
 
                     @media only screen and (max-width :970px) {
-                        right: 25px;
+                        right:0;
                     }
 
                     @media only screen and (max-width :770px) {
@@ -7000,8 +7004,11 @@ body.AfricanAmerican {
                             padding: 5px;
                             margin: 6px 0 0 0;
 
-                            @media only screen and (max-width :770px) {
+                            @media only screen and (max-width :1070px) {
                                 width: 100%;
+                            }
+
+                            @media only screen and (max-width :770px) {
                                 font-size: 14px;
                             }
                         }
@@ -7014,7 +7021,7 @@ body.AfricanAmerican {
                             p {
                                 width: 200px;
                                 
-                                @media only screen and (max-width :970px) {
+                                @media only screen and (max-width :1070px) {
                                     width: 100%;
                                     float: left;  
                                     display: flex;
@@ -7067,8 +7074,8 @@ body.AfricanAmerican {
                             margin-right: 15px;
                         }
 
-                        @media only screen and (max-width :1030px) {
-                            margin-right: -10px;
+                        @media only screen and (max-width :1070px) {
+                            margin-right: 20px;
                         }
 
                         @media only screen and (max-width :870px) {
@@ -7107,15 +7114,11 @@ body.AfricanAmerican {
                         margin-right: 55px;
 
                         @media only screen and (max-width :1270px) {
-                            margin-right: 15px;
+                            margin-right: 0;
                         }
 
                         @media only screen and (max-width :1070px) {
-                            margin-right: -10px;
-                        }
-
-                        @media only screen and (max-width :1030px) {
-                            margin-right: -20px;
+                            margin-right: 10px;
                         }
 
                         @media only screen and (max-width :870px) {
@@ -7220,7 +7223,7 @@ body.AfricanAmerican {
             }
         }
 
-        @media only screen and (max-width :970px) {
+        @media only screen and (max-width :1070px) {
             #Ingredients {
                 .MDcontainer {
                     display: block;
@@ -7294,7 +7297,7 @@ body.AfricanAmerican {
                         padding: 0 30px 0 30px;
                         
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
-                            margin-right: 7px;
+                            margin-right: 0;
                         }
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
@@ -7330,7 +7333,6 @@ body.AfricanAmerican {
                     .rightSide {
                         padding: 0;
                         position: relative;
-                        right: 18px;
 
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             p {
@@ -7352,8 +7354,6 @@ body.AfricanAmerican {
             #Ingredients {
                 .MDcontainer {
                     .rightSide {
-                        right: -3px;
-
                         .firstIngredient, .secondIngredient, .thirdIngredient { 
                             .image {
                                 width: 80px;

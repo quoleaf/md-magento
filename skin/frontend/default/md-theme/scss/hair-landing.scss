@@ -6424,7 +6424,7 @@ body.AfricanAmerican {
                             top: 12px;
 
                             @media only screen and (max-width :1270px) {
-                                font-size: 40px;
+                                font-size: 35px;
                             }
 
                             @media only screen and (max-width :770px) {
@@ -6451,6 +6451,10 @@ body.AfricanAmerican {
                             bottom: 25px;
                             right:20px;
                             top:0;
+
+                            @media only screen and (max-width :1270px) {
+                                width: 215px;
+                            }
                         }
                     }
 

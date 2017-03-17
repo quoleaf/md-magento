@@ -128,6 +128,8 @@
         function hideCart(){jQuery('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper').hide();}
         
         jQuery.getJSON('https://freegeoip.net/json/', function (location) {
+            console.log(location.country_code);
+            console.log(location.region_code);
            if(jQuery.inArray(location.country_code,blockedCountries )>-1) hideCart();
            if(location.country_code=='US' && location.region_code=='CA') hideCart();
         });

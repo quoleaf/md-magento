@@ -187,14 +187,52 @@
                     Over 1 million customers worldwide
                 </span>
             </h2>
+            <div class="ctct-embed-signup">
+               <div>
+                   <span id="success_message" style="display:none; margin-top:24px;">
+                       <div style="text-align:center; color:#fff; font-size: 22px;">Thanks for signing up!</div>
+                   </span>
+                   <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+                      
+                       <!-- The following code must be included to ensure your sign-up form works properly. -->
+                       <input data-id="ca:input" type="hidden" name="ca" value="84bd4af4-34ab-46fe-93f8-cc6f0d942fdf">
+                       <input data-id="list:input" type="hidden" name="list" value="1275815905">
+                       <input data-id="source:input" type="hidden" name="source" value="EFD">
+                       <input data-id="required:input" type="hidden" name="required" value="list,email,first_name">
+                       <input data-id="url:input" type="hidden" name="url" value="">
+                       <input data-id="Email Address:input" type="text" name="email" class="newsletter-email" placeholder="EMAIL" value="" maxlength="80">
+                       <input data-id="First Name:input" type="text" name="first_name" class="newsletter-name" placeholder="NAME" value="" maxlength="50">
+                       <button type="submit" class="pinkBG Button ctct-button Button--block Button-secondary customBtn" data-enabled="enabled">SUBSCRIBE</button>
+                    
+                   </form>
+               </div>
+            </div>
+            <script type='text/javascript'>
+               var localizedErrMap = {};
+               localizedErrMap['required'] =        'This field is required.';
+               localizedErrMap['ca'] =          'An unexpected error occurred while attempting to send email.';
+               localizedErrMap['email'] =           'Please enter your email address in name@email.com format.';
+               localizedErrMap['birthday'] =        'Please enter birthday in MM/DD format.';
+               localizedErrMap['anniversary'] =     'Please enter anniversary in MM/DD/YYYY format.';
+               localizedErrMap['custom_date'] =     'Please enter this date in MM/DD/YYYY format.';
+               localizedErrMap['list'] =            'Please select at least one email list.';
+               localizedErrMap['generic'] =         'This field is invalid.';
+               localizedErrMap['shared'] =      'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+               localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+                localizedErrMap['state_province'] = 'Select a state/province';
+               localizedErrMap['selectcountry'] =   'Select a country';
+               var postURL = 'https://visitor2.constantcontact.com/api/signup';
+            </script>
+            <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
 
-            <form class="wow fadeIn animated" data-wow-delay="0.3s">
+
+            <!-- <form class="wow fadeIn animated" data-wow-delay="0.3s">
                 <input type="text" name="name" placeholder="NAME">
                 <input type="email" name="email" placeholder="EMAIL">
                 <button class="pinkBG">
                     Subscribe
                 </button>
-            </form>
+            </form> -->
         </div>
     </section>
 
@@ -293,12 +331,53 @@
                     </span>
                 </h1>
 
-                <form>
+                <div class="ctct-embed-signup1 subscription">
+                    <div class="fields clearfix">
+                      <span id="success_message_subscription" style="display:none;">
+                        <div style="text-align:center;font-size:22px;color:#000">Please check your email. Thank You!</div>
+                      </span>
+                      
+                      <form data-id="embedded_signup1:form" class="ctct-custom-form Form subscribe" name="embedded_signup" method="POST" >
+                      <input data-id="ca:input" name="ca" value="d80138c8-5f83-4282-95e9-a68db02a61af" type="hidden">
+                      <input data-id="list:input" name="list" value="1218100351" type="hidden">
+                      <input data-id="source:input" name="source" value="EFD" type="hidden">
+                      <input data-id="required:input" name="required" value="list,email" type="hidden">
+                      <input data-id="url:input" name="url" value="" type="hidden">
+                          <input data-id="Email Address:input" placeholder="<?php echo $this->__('EMAIL') ?>" class="textbox" name="email" value="" maxlength="80" type="text">
+                          <!-- <input data-id="First Name:input" placeholder="<?php echo $this->__('Name') ?>" class="textbox newsletter-name" name="first_name" value="" maxlength="50" type="text"> -->
+                        <div class="subscribe-btn-wrp">
+                          <button type="button" class="pinkBG Button ctct-button Button--block Button-secondary newsletter-submit submitBtn submitBtnCust " data-enabled="enabled">REVEAL CODE<img id="loader" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/md-theme/images/subscribe-loader.gif" alt="" style="display: none;"/></button>
+                          <label>
+                            
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <script type='text/javascript'>
+                       var localizedErrMap = {};
+                       localizedErrMap['required'] =    'This field is required.';
+                       localizedErrMap['ca'] =      'An unexpected error occurred while attempting to send email.';
+                       localizedErrMap['email'] =       'Please enter your email address in name@email.com format.';
+                       localizedErrMap['birthday'] =    'Please enter birthday in MM/DD format.';
+                       localizedErrMap['anniversary'] =   'Please enter anniversary in MM/DD/YYYY format.';
+                       localizedErrMap['custom_date'] =   'Please enter this date in MM/DD/YYYY format.';
+                       localizedErrMap['list'] =      'Please select at least one email list.';
+                       localizedErrMap['generic'] =     'This field is invalid.';
+                       localizedErrMap['shared'] =    'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+                       localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+                      localizedErrMap['state_province'] = 'Select a state/province';
+                       localizedErrMap['selectcountry'] =   'Select a country';
+                       var postURL = 'https://visitor2.constantcontact.com/api/signup';
+                    </script>
+
+                <!-- <form>
                     <input type="email" name="email" placeholder="EMAIL">
                     <button class="pinkBG">
                         Reveal Code
                     </button>
-                </form>
+                </form> -->
                 <span class="footnote">
                     We protect your personal information. We use secure transaction.
                 </span>
@@ -481,11 +560,9 @@
 
 
 <script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
-
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
-
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/owl.carousel.js') ?>"></script>
 
 
@@ -497,8 +574,41 @@ a2a_config.num_services = 2;
 </script>
 <script async src="https://static.addtoany.com/menu/page.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '.submitBtnCust', function(){
+        var ca = $('form[data-id="embedded_signup1:form"] input[data-id="ca:input"]').val();
+        var email = $('form[data-id="embedded_signup1:form"] input[data-id="Email Address:input"]').val();
+        var list = $('form[data-id="embedded_signup1:form"] input[data-id="list:input"]').val();
+        var source = $('form[data-id="embedded_signup1:form"] input[data-id="source:input"]').val();
+        
+        postURL = 'https://visitor2.constantcontact.com/api/signup?'+ 'ca='+ ca + '&email='+ email +'&list';
+            $.ajax({
+                type: 'POST',
+                crossDomain: true,
+                url: postURL,
+            error: function(xhr, status, err) {
+                
+                alert('error');
+            },
+            success: function(data, status, xhr) {
+                $('.ctct-embed-signup1.subscription p').hide();
+                $('.ctct-embed-signup1.subscription h2').hide();
+                $('.ctct-embed-signup1.subscription button').hide();
+                $('.ctct-embed-signup1.subscription form').hide();
+                $('#success_message_subscription').removeClass('u-hide');
+                $('#success_message_subscription').show();
+    
+            }
+        });
+    });
+});
+
+</script>
+
 
 <script>
+
     // tooltip demo
 
     $('.ingredientcontent').tooltip();

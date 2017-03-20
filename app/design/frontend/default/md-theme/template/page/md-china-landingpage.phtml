@@ -1,0 +1,1139 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+    <title>MD Factor</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <?php echo $this->getChildHtml('head') ?>
+
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/china-landing.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
+    
+</head>
+
+<body class="chinalanding">
+
+<!-- Preloader -->
+<script type="text/javascript">
+    if (window.location.protocol != "https:"){
+    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    }
+    
+    window.addEventListener("load", function(){
+        var load_screen = document.getElementById("load_screen");
+        document.body.removeChild(load_screen);
+    });
+</script>
+
+<div id="load_screen">
+    <div id="loadingwrapper">
+        <!-- Custom -->
+        <h1>
+            <em>
+                MD Factor
+            </em>
+            <span>
+                We create beauty through advance science
+            </span>
+        </h1>
+        <div class="loader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div> 
+
+        <span>
+            Please wait..
+        </span> 
+    </div>
+</div>
+
+
+<div class="VideoWrapper">
+    <!-- <div id="video-container">
+        <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
+            <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/header-vid-new-optimize.mp4" type="video/mp4">  
+            <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/header-vid-new-optimize.webm" type="video/webm"> 
+            <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/header-vid-new-optimize.ogg" type="video/ogg">  
+        </video>
+    </div> -->
+
+    <div class="overlay">
+        <div class="overlay__inner">
+            <div class="transparentNav">
+                <nav class='main-nav' id="main-navWrapper">
+                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
+                    <div class="custom-container navi">
+                        <a class="logo" href='<?php echo mage::getbaseurl(); ?>'> 
+                            <img class="whitelogo" src="<?php echo $this->getSkinUrl('images/logo-blue.png') ?>"> 
+                            <img class="darklogo" src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>" style="display: none;"> 
+                        </a>
+                        <div class="MDnav">
+                            <ul>
+                                 <?php
+                                $obj = new Mage_Catalog_Block_Navigation();
+                                $storeCategories = $obj->getStoreCategories();
+                                Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+                                $limit_category = 4;
+                                $ctr = 1;
+
+                                foreach ($storeCategories as $_category):
+                                if($ctr <= $limit_category) :
+                            ?>
+                        <li> 
+
+                            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
+                            
+                            <?php
+                                $_category = Mage::getModel('catalog/category')->load($_category->getId());
+                            ?>
+                            <?php echo $_category->getName(); ?></a>
+                            <ul>
+                            <?php 
+                                
+                                
+                                    $_subcategories = $_category->getChildrenCategories();
+                                    if (count($_subcategories) > 0){    
+
+                                        foreach($_subcategories as $_subcategory){
+                                            //load products now
+                                        $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
+                                         ->getProductCollection()
+                                         ->addAttributeToSelect('*')
+                                         ->addAttributeToFilter('status', 1)
+                                         ->addAttributeToFilter('visibility', 4)
+                                         ->setOrder('price', 'ASC');
+                                             echo '
+                                             <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
+                                             if (count($products) > 0){    
+
+                                                echo '<ul>';
+                                                foreach($products as $_product){
+                                                   echo '<li>
+                                                        <a class="thirdlevel" href="'.$_product->getProductUrl().'">
+                                                        <div class="image">
+                                                            <img src="'.$_product->getImageUrl().'">                                                    
+                                                        </div>
+                                                        <div class="desc">'.$_product->getName().'</div>
+                                                        </a>
+                                                    </li>';
+                                                }
+                                                    
+                                                echo '</ul>';
+                                            }
+                                             echo '</li>';
+                                        }// end foreach subcat
+                                    }// end if count sub
+                                
+                            ?>      
+                             </ul>
+                            </li>
+                            <?php  $ctr++; endif;   endforeach; ?>   
+
+                                <li><a href="<?php echo Mage::getBaseUrl(); ?>sales">Sale</a></li>
+                                <li>
+                                    <a href="https://md-factor.com/about/">Brand</a>
+                                    <ul>
+                                       <li>
+                                            <a href="https://md-factor.com/about/">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://md-factor.com/blog/">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://md-factor.com/pressmedia">Media</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="searchWrapper desktopSearcWrapper">
+                            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+                                        
+                            <div id="searchInner" > 
+                                <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
+                                    
+                                    <button value="" type="submit">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                    
+                                    <input placeholder="SEARCH PRODUCTS" class="query" "search_query"="" name="q" type="text">
+                                </form>
+                            </div> 
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="content">
+                <div class="custom-container">
+                    <h1>
+                        <span>
+                            MD<em>&reg;</em>
+                        </span>
+                        <span>
+                            维他命C精华素
+                        </span>
+                        使用MD维他命C精华素， 在三十<br/>天内重获健康年轻的肌肤。
+                    </h1>
+
+                    <img src="<?php echo $this->getSkinUrl('images/md-china/vit-c-bottle.png') ?>" class=" wow fadeInDown animated" data-wow-delay="3s">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="secondSection">
+    <div class="custom-container">
+        <div class="left">
+            <h1>
+                爱美女人更要吃维C
+            </h1>
+            <span>
+                “女为悦己者容”，女人爱美，天性使然！科学证实，维生素C族是女人保持美丽的重要物质。
+            </span>
+        </div>
+
+        <div class="right">
+            <img src="<?php echo $this->getSkinUrl('images/md-china/section-two-image.png') ?>" class=" wow fadeInRight animated" data-wow-delay="0.3s">
+        </div>
+    </div>
+</div>
+
+<div class="thirdSection">
+    <div class="custom-container">
+        <div class="left">
+            <img src="<?php echo $this->getSkinUrl('images/md-china/vit-c-bottle.png') ?>" class=" wow fadeInLeft    animated" data-wow-delay="0.3s">
+        </div>  
+
+        <div class="right">
+            <h1>
+                家中有维C 
+
+                <span>
+                    健康肌肤不是问题
+                </span>
+            </h1>
+
+            <ul>
+                <li class="wow fadeIn animated" data-wow-delay="0.1s">
+                    <span>
+                        <div class="checkmark wow zoomIn animated" data-wow-delay="0.5s"></div>
+                    </span>
+                    减少细纹和皱纹
+                </li>
+                <li class="wow fadeIn animated" data-wow-delay="0.7s">
+                    <span>
+                        <div class="checkmark wow zoomIn animated" data-wow-delay="0.9s"></div>
+                    </span>
+                    增加皮肤的紧致和弹性
+                </li>
+                <li class="wow fadeIn animated" data-wow-delay="1s">
+                    <span>
+                        <div class="checkmark wow zoomIn animated" data-wow-delay="1.5s""></div>
+                    </span>
+                    防紫外线和红外线辐射
+                </li>
+                <li class="wow fadeIn animated" data-wow-delay="1.7s">
+                    <span>
+                        <div class="checkmark wow zoomIn animated" data-wow-delay="1.9s"></div>
+                    </span>
+                    改善皮肤素质
+                </li>
+                <li class="wow fadeIn animated" data-wow-delay="2s">
+                    <span>
+                        <div class="checkmark wow zoomIn animated" data-wow-delay="2.5s"></div>
+                    </span>
+                    让肌肤更柔顺，饱满，有光泽。
+                </li>
+            </ul>
+        </div>  
+    </div>
+</div>
+
+<div class="fourthSection">
+    <div class="sectionTitle">
+        <div class="custom-container">
+            <p>
+                产品详情
+            </p>
+        </div>
+    </div>
+    <div class="custom-container">
+        <div class="inner">
+            <div class="left">
+                <ul>
+                    <li class="wow fadeInLeft animated" data-wow-delay="0.3s">
+                        <span>
+                            产品名称：维他命C精华素
+                        </span>
+                    </li>
+                    <li class="wow fadeInLeft animated" data-wow-delay="0.5s">
+                        <span>
+                            产品种类：护肤品
+                        </span>
+                    </li>
+                    <li class="wow fadeInLeft animated" data-wow-delay="0.7s">
+                        <span>
+                            产品规格：200粒
+                        </span>
+                    </li>
+                    <li class="wow fadeInLeft animated" data-wow-delay="0.9s">
+                        <span>
+                            产品原产地：美国
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/md-china/vit-c-bottle.png') ?>" class=" wow fadeIn animated" data-wow-delay="0.3s">
+                </div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/md-china/jabberseal.png') ?>" class=" wow fadeIn animated" data-wow-delay="0.3s">
+
+                    <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fifthSection">
+    <div class="sectionTitle">
+        <div class="custom-container">
+            <p>
+                产品描述
+            </p>
+        </div>
+    </div>
+    <div class="innerWrapper">
+        <div class="custom-container">
+            <h1>
+                使用MD维他命C精华素               
+                    <span>在三十天内重获健康年轻的肌肤</span>
+            </h1>
+        </div>
+    </div>
+    <div class="innerContent">
+        <div class="custom-container">
+            <div>
+                <span>
+                    1
+                </span>
+                <p>
+                    促进胶原蛋白的生成，增加皮肤的紧致和弹性，减少细纹和皱纹，同时修复阳光造成的伤害。
+                </p>
+            </div>
+            <div>
+                <span>
+                    2
+                </span>
+                <p>
+                    维生素C可帮助抗氧化和保护皮肤免于紫外线和红外线辐射的伤害。 
+                </p>
+            </div>
+            <div>
+                <span>
+                    3
+                </span>
+                <p>
+                    容易使用，而且不会在打开瓶盖一年后仍然保持功效，不会变黄。 
+                </p>
+            </div>
+            <div>
+                <span>
+                    4
+                </span> 
+                <p>
+                    含 20% 的 L-抗坏血酸（最活跃，稳定的维生素C），能改善皮肤素质。长久使用可让肌肤更柔顺，饱满，有光泽。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sixthSection">
+    <div class="sectionTitle">
+        <div class="custom-container">
+            <p>
+                主要成分
+            </p>
+        </div>
+    </div>
+
+    <div class="inner">
+        <div class="custom-container">
+            <div>
+                <div class="imageWrapper">
+                    <img src="<?php echo $this->getSkinUrl('images/md-china/sixth-section-image-1.jpg') ?>">
+                </div>
+                <p>
+                    <strong>
+                        L-抗坏血酸
+                    </strong>
+                    维生素C，均匀肤色，促进胶原蛋白生成，保护皮肤免受环境伤害，减少细纹和皱纹。
+                </p>
+            </div>
+
+            <div>
+                <div class="imageWrapper">
+                    <img src="<?php echo $this->getSkinUrl('images/md-china/sixth-section-image-2.jpg') ?>">
+                </div>
+                <p>
+                    <strong>
+                        余甘 Embilica 果提取物
+                    </strong>
+                    又称洗果或印度醋栗。富含维生素C。抗氧化，抗发炎。
+                </p>
+            </div>
+
+            <div>
+                <div class="imageWrapper">
+                    <img src="<?php echo $this->getSkinUrl('images/md-china/sixth-section-image-3.jpg') ?>">
+                </div>
+                <p>
+                    <strong>
+                        麦角硫因
+                    </strong>
+                    天然蘑菇提取物，抗氧化。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="seventhSection">
+    <div class="sectionTitle">
+        <div class="custom-container">
+            <p>
+                建议用法
+            </p>
+        </div>
+    </div>
+
+    <div class="inner">
+        <div class="custom-container">
+            <div class="innerContent">
+                <div>
+                    <div class="imageWrapper">
+                        <img src="<?php echo $this->getSkinUrl('images/md-china/seventh-section-first-step.png') ?>">
+                    </div>
+                </div>
+                <div>
+                    <div class="imageWrapper">
+                        <img src="<?php echo $this->getSkinUrl('images/md-china/seventh-section-second-step.png') ?>">
+                    </div>
+                </div>
+                <div>
+                    <div class="imageWrapper">
+                        <img src="<?php echo $this->getSkinUrl('images/md-china/seventh-section-third-step.png') ?>">
+                    </div>
+                </div>
+            </div>
+
+            <span>
+                将 MD 维他命 C 精华素均匀涂抹在脸部，但避开眼睛周围。因为这是一个强有力的血清，你可能会在使用后的第一个星期感觉到轻微刺
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="footerMenuWrapper footerMenuDesktop">
+    <div class="custom-container">
+        <div>
+            <ul>
+                <li>
+                    CUSTOMER SERVICE
+                </li>
+                <li>
+                    <a href="https://md-factor.com/shipping-policy/">
+                        Shipping Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/shipping-policy/">
+                        Return Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/authenticity/">
+                        Authenticity
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/contact-us/">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/privacy-policy/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/terms-and-conditions/">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/wholesale/">
+                        Wholesale
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    ABOUT MD
+                </li>
+                <li>
+                    <a href="https://md-factor.com/md-factor-careers/">
+                        Careers 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        International
+                    </a>
+                </li> -->
+                <li> 
+                    <a href="https://md-factor.com/about/">
+                        About MD® / 于MD®
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/press/">
+                        In The Press
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/blog/">
+                        Blog 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/faq/">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    ACCOUNT
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                        Order Status
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                        View Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    INTERNATIONAL
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        繁體中文
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        体中文
+                    </a>
+                </li>
+                <li class="jabber">
+                    <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&direction=desc#reviews">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/jabber-logo.png') ?>">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="footerMenuWrapper footerMenuMobile" style="display: none;">
+    <div class="tab_container">
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1">CUSTOMER SERVICE</label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2">ABOUT MD</label>
+
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3">ACCOUNT</label>
+
+        <input id="tab4" type="radio" name="tabs">
+        <label for="tab4">INTERNATIONAL</label>
+        
+
+        <section id="content1" class="tab-content">
+            <ul>
+                <li>
+                    <a href="https://md-factor.com/shipping-policy/">
+                        Shipping Policies
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/shipping-policy/">
+                        Return Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/authenticity/">
+                        Authenticity
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/contact-us/">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/privacy-policy/">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/terms-and-conditions/">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/wholesale/">
+                        Wholesale
+                    </a>
+                </li>
+            </ul>
+        </section>
+       
+        <section id="content2" class="tab-content">
+            <ul>
+                <li>
+                    <a href="https://md-factor.com/md-factor-careers/">
+                        Careers 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                        International
+                    </a>
+                </li> -->
+                <li> 
+                    <a href="https://md-factor.com/about/">
+                        About MD® / 于MD®
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/press/">
+                        In The Press
+                    </a>
+                </li>
+                <li>
+                    <a href="https://md-factor.com/faq/">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+        </section>
+       
+        <section id="content3" class="tab-content">
+            <ul>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                        Order Status
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                        View Cart
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="content4" class="tab-content">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);">
+                        繁體中文
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        体中文
+                    </a>
+                </li>
+                <li class="jabber">
+                    <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&direction=desc#reviews">
+                        <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/jabber-logo.png') ?>">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="custom-container">
+        <p>
+            Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+            <a href="https://md-factor.com/terms-and-conditions/">User Agreement</a> and <a href="https://md-factor.com/privacy-policy/">Privacy Policy</a>.
+        </p>
+        <span>
+            <a href="https://www.facebook.com/MDLASHF">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/fb.png') ?>"> 
+            </a>
+            <a href="https://twitter.com/MDLFbySusanLin">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/twitter.png') ?>"> 
+            </a>
+            <a href="https://instagram.com/md_factor/">
+                <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/instagram.png') ?>"> 
+            </a>
+        </span>
+    </div>
+</div>
+
+
+<!--  Custom Scripts  -->
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.event.move.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/nav.min.js') ?>"></script>
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $(window).load(function(){
+          jQuery(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.8});
+          jQuery(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+    });
+});
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    jQuery('.MDnav').MDNav({
+        theme: 'light'
+    });
+});
+
+jQuery(document).ready(function($) {
+    var offset = $('#main-navWrapper').offset();
+    $(window).scroll(function(){
+       
+        jQuery('#main-navWrapper').addClass('fixed-nav');
+        
+        if(jQuery(document).scrollTop() < 120){
+            jQuery('#main-navWrapper').removeClass('fixed-nav');
+        }
+
+    });
+});
+
+jQuery(document).ready(function($) {
+    $(window).scroll(function() {
+        if (jQuery(this).scrollTop() > 120){  
+            jQuery('#main-navWrapper').addClass("sticky");
+        }
+        else{
+            jQuery('#main-navWrapper').removeClass("sticky");
+        }
+    });
+});
+</script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($) {
+
+     jQuery(document).on('click', '.submitBtnCust', function(){
+        var ca = $('form[data-id="embedded_signup:form"] input[data-id="ca:input"]').val();
+        var email = $('form[data-id="embedded_signup:form"] input[data-id="Email Address:input"]').val();
+        var name = $('form[data-id="embedded_signup:form"] input[data-id="First Name:input"]').val();
+
+        postURL = 'https://visitor2.constantcontact.com/api/signup?'+ 'ca='+ ca + '&email='+ email +'&first_name='+ name +'&list';
+          $.ajax({
+              type: 'POST',
+              crossDomain: true,
+              url: postURL,
+              error: function(xhr, status, err) {
+                
+                alert('error');
+          },
+          success: function(data, status, xhr) {
+              $('.ctct-embed-signup.subscription p').hide();
+              $('.ctct-embed-signup.subscription h2').hide();
+              $('.ctct-embed-signup.subscription button').hide();
+              $('.ctct-embed-signup.subscription form').hide();
+              $('#success_message_subscription').removeClass('u-hide');
+              $('#success_message_subscription').show();
+    
+          }
+      });
+    });
+
+    jQuery("#AsSeenInSlider").owlCarousel({
+        items : 5,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+   jQuery("#feauredProductSlider").owlCarousel({
+        items : 4,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+    jQuery("#blogSlider").owlCarousel({
+        items : 3,
+        itemsCustom : false,
+        itemsDesktop : [1270,3],
+        itemsDesktopSmall : [1070,2],
+        itemsTablet: [768,1],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+});
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+'use strict';
+
+function debounce(func, wait, immediate) {
+
+  // Debounce
+  // http://davidwalsh.name/javascript-debounce-function
+
+    var timeout;
+    return function() {
+        var context = this,
+          args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) {
+            func.apply(context, args);
+          }
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) {
+          func.apply(context, args);
+        }
+      };
+}
+
+    var htmlTag = document.getElementsByTagName('html')[0];
+    var videoContainer = document.querySelector('#video-container');
+    var videoElem = document.querySelector('#video-container video');
+
+    var minW = 320; // Minimum video width allowed
+    var vidWOrig; // Original video dimensions
+    var vidHOrig;
+
+    vidWOrig = videoElem.getAttribute('width');
+    vidHOrig = videoElem.getAttribute('height');
+
+    var videoCover = function() {
+
+      var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var winHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+      // Set the video viewport to the window size
+
+      videoContainer.style.width = winWidth + 'px';
+      videoContainer.style.height = winHeight + 'px';
+
+      // Use largest scale factor of horizontal/vertical
+      var scaleH = winWidth / vidWOrig;
+      var scaleV = winHeight / vidHOrig;
+      var scale = scaleH > scaleV ? scaleH : scaleV;
+
+      // Don't allow scaled width < minimum video width
+      if (scale * vidWOrig < minW) {
+        scale = minW / vidWOrig;
+      }
+
+      // Scale the video
+      var videoNewWidth = scale * vidWOrig;
+      var videoNewHeight = scale * vidHOrig;
+
+      videoElem.style.width = videoNewWidth + 'px';
+      videoElem.style.height = videoNewHeight + 'px';
+
+      // Center it by scrolling the video viewport
+      videoContainer.scrollLeft = (videoNewWidth - winWidth) / 2;
+      videoContainer.scrollTop = (videoNewHeight - winHeight) / 2;
+
+    };
+
+    if (htmlTag.classList.contains('no-touch')) {
+      videoCover();
+
+      // Adjust on resize
+      var updateVideo = debounce(function() {
+        videoCover();
+      }, 100);
+
+      window.addEventListener('resize', updateVideo);
+    }
+        
+</script>
+
+
+
+<!-- Justuno Script -->
+
+<script type="text/javascript" charset="utf-8">
+    var ju_num="EFC0E7DB-CA2F-4F51-B390-F920D634A92C";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();
+</script>
+
+<!-- End of Justuno Script -->
+
+<!-- Lucky Orange -->
+
+<script type='text/javascript'>
+    window.__lo_site_id = 59158;
+
+    (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+</script>
+
+<!-- End of Lucky Orange -->
+
+
+<!-- Preloader -->
+
+<script type="text/javascript">    
+    jQuery(document).ready(function($) {
+        $(window).load(function() {
+            jQuery('body').css({'overflow-y':'auto', 'position':'relative', 'height':'auto'});
+        });
+    });
+</script>
+
+<!-- End of Preloader -->
+
+<!-- Intercom -->
+
+<script>
+    window.intercomSettings = {
+        app_id: "fjf9gs7l"
+    };
+</script>
+
+<script>
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/fjf9gs7l';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+</script>
+
+<!-- End of Intercom -->
+
+</body>
+</html>

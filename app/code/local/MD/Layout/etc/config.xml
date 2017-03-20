@@ -222,6 +222,15 @@
                 </africanamericanlanding> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <mdchinalandind module="page" translate="label">
+                    <label>MD China Landing Page</label>
+                    <template>page/md-china-landingpage.phtml</template>
+                    <layout_handle>mdchinalandind</layout_handle>
+                </mdchinalandind> 
+            </layouts>
+        </page>
     </global>
     <frontend>
         <routers>

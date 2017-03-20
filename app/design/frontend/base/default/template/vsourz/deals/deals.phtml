@@ -267,13 +267,13 @@
 					<li class="item">
 
 					<?php
-						$md_hair_restoration_system = Mage::getModel('catalog/product')->load(83);
+						$md_hair_restoration_starter_kit = Mage::getModel('catalog/product')->load(63);
 					?>
 
 						<div class="image">
-							<a href="<?php echo $md_hair_restoration_system->getProductUrl() ?>" title="<?php echo $this->
-							escapeHtml($md_hair_restoration_system->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_hair_restoration_system, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
-							stripTags($this->getImageLabel($md_hair_restoration_system, 'small_image'), null, true) ?>"/>
+							<a href="<?php echo $md_hair_restoration_starter_kit->getProductUrl() ?>" title="<?php echo $this->
+							escapeHtml($md_hair_restoration_starter_kit->getName()) ?>" class="product-image"> <img class="main-img" src="<?php echo $this->helper('catalog/image')->init($md_hair_restoration_starter_kit, 'small_image')->resize(300,300) ?>" alt="<?php echo $this->
+							stripTags($this->getImageLabel($md_hair_restoration_starter_kit, 'small_image'), null, true) ?>"/>
 							<div class="overlay">
 								<span><em>VIEW PRODUCT</em></span>
 							</div>
@@ -281,27 +281,27 @@
 						</div>
 						<div class="desc">
 							<div class="inner">
-								<a href="<?php echo $md_hair_restoration_system->getProductUrl() ?>" title="<?php echo $this->
-								escapeHtml($md_hair_restoration_system->getName()) ?>"><?php echo $this->
-								escapeHtml($md_hair_restoration_system->getName()) ?></a>
+								<a href="<?php echo $md_hair_restoration_starter_kit->getProductUrl() ?>" title="<?php echo $this->
+								escapeHtml($md_hair_restoration_starter_kit->getName()) ?>"><?php echo $this->
+								escapeHtml($md_hair_restoration_starter_kit->getName()) ?></a>
 								<div class="ReviewsList">
 									<?php $this->
-									helper('yotpo')->showBottomline($this, $md_hair_restoration_system); ?>
+									helper('yotpo')->showBottomline($this, $md_hair_restoration_starter_kit); ?>
 								</div>
 							</div>
 							<?php echo $this->
-						getPriceHtml($md_hair_restoration_system, true, '-new') ?>
+						getPriceHtml($md_hair_restoration_starter_kit, true, '-new') ?>
 						<div class="discount">
 							 Discount: <span>
-							20%</span>, You save: <span>
-							$60</span>
+							17%</span>, You save: <span>
+							$40</span>
 						</div>
 						</div>
 						
-						<?php if(!$md_hair_restoration_system->
-						canConfigure() && $md_hair_restoration_system->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_hair_restoration_system) ?>')"></a>
-						<?php elseif($md_hair_restoration_system->
-						getStockItem() && $md_hair_restoration_system->getStockItem()->getIsInStock()): ?> <?php echo $md_hair_restoration_system->
+						<?php if(!$md_hair_restoration_starter_kit->
+						canConfigure() && $md_hair_restoration_starter_kit->isSaleable()): ?> <a href="#" class="addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($md_hair_restoration_starter_kit) ?>')"></a>
+						<?php elseif($md_hair_restoration_starter_kit->
+						getStockItem() && $md_hair_restoration_starter_kit->getStockItem()->getIsInStock()): ?> <?php echo $md_hair_restoration_starter_kit->
 						getProductUrl() ?>"><?php echo $this->
 						__('View Details') ?></a>
 					

@@ -12,23 +12,23 @@ $(document).ready(function(){
 $.get("//ipinfo.io", function (response) {
     $("#ip").html("IP: " + response.country);
     if(response.country == "AU"){
-    	window.location.href = '//staging.md-factor.com/au';
+    	window.location.href = '//md-factor.com/au';
     }else if(response.country == "BR"){
-    	window.location.href = '//staging.md-factor.com/br';
+    	window.location.href = '//md-factor.com/br';
     }
     else if(response.country == "CA"){
-    	window.location.href = '//staging.md-factor.com/ca';
+    	window.location.href = '//md-factor.com/ca';
     }
     else if(response.country == "CH"){
-    	window.location.href = '//staging.md-factor.com/ch';
+    	window.location.href = '//md-factor.com/ch';
     }
     else if(response.country == "MX"){
-    	window.location.href = '//staging.md-factor.com/mx';
+    	window.location.href = '//md-factor.com/mx';
     }
     else if(response.country == "US"){
-    	window.location.href = '//staging.md-factor.com/us';
+    	window.location.href = '//md-factor.com/us';
     }else{
-    	window.location.href = '//staging.md-factor.com/us';
+    	window.location.href = '//md-factor.com/us';
     }
     
 }, "jsonp");

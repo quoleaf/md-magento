@@ -44,17 +44,17 @@
 <body>
 <?php 
 $host = $_SERVER['SERVER_NAME']  . $_SERVER['REQUEST_URI'];
-if($host == "staging.md-factor.com/au/"){
+if($host == "md-factor.com/au/"){
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-landingpage.phtml')->toHtml();
-}elseif($host == "staging.md-factor.com/br/"){
+}elseif($host == "md-factor.com/br/"){
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-landingpage.phtml')->toHtml();
-}elseif($host == "staging.md-factor.com/ca/"){
+}elseif($host == "md-factor.com/ca/"){
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-landingpage.phtml')->toHtml();
-}elseif($host == "staging.md-factor.com/ch/"){
+}elseif($host == "md-factor.com/ch/"){
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-china-landingpage.phtml')->toHtml();
-}elseif($host == "staging.md-factor.com/mx/"){
+}elseif($host == "md-factor.com/mx/"){
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-landingpage.phtml')->toHtml();
-}elseif($host == "staging.md-factor.com/us/"){
+}elseif($host == "md-factor.com/us/"){
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-landingpage.phtml')->toHtml();;
 }else{
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-country-selector.phtml')->toHtml();

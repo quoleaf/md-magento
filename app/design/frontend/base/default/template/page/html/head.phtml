@@ -60,7 +60,7 @@
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
 
-<!-- Preloader --
+<!-- Preloader -->
 <script type="text/javascript">
     if (window.location.protocol != "http:"){
     window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
@@ -70,11 +70,11 @@
         var load_screen = document.getElementById("load_screen");
         document.body.removeChild(load_screen);
     });
-</script> 
+</script>
 
 <div id="load_screen">
     <div id="loadingwrapper">
-       
+        <!-- Custom -->
         <h1>
             <em>
                 MD Factor
@@ -95,4 +95,4 @@
             Please wait..
         </span> 
     </div>
-</div> -->
+</div>

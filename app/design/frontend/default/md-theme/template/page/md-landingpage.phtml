@@ -51,44 +51,6 @@
 
 <body class="landingpage-revamp">
 
-<!-- Preloader --
-<script type="text/javascript">
-    if (window.location.protocol != "https:"){
-    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-    }
-    
-    window.addEventListener("load", function(){
-        var load_screen = document.getElementById("load_screen");
-        document.body.removeChild(load_screen);
-    });
-</script>
-
-<div id="load_screen">
-    <div id="loadingwrapper">
-        
-        <h1>
-            <em>
-                MD Factor
-            </em>
-            <span>
-                We create beauty through advance science
-            </span>
-        </h1>
-        <div class="loader">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div> 
-
-        <span>
-            Please wait..
-        </span> 
-    </div>
-</div> -->
-
-
 <div class="VideoWrapper">
     <div id="video-container">
         <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
@@ -116,12 +78,13 @@
                                 Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
                                 $limit_category = 4;
                                 $ctr = 1;
+
                                 foreach ($storeCategories as $_category):
                                 if($ctr <= $limit_category) :
                             ?>
                         <li> 
 
-                            <a href="<?php echo Mage::app()->getStore()->getHomeUrl().$_category->getUrlKey(); ?>">
+                            <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).$_category->getUrlKey(); ?>">
                             
                             <?php
                                 $_category = Mage::getModel('catalog/category')->load($_category->getId());
@@ -133,6 +96,7 @@
                                 
                                     $_subcategories = $_category->getChildrenCategories();
                                     if (count($_subcategories) > 0){    
+
                                         foreach($_subcategories as $_subcategory){
                                             //load products now
                                         $products = Mage::getModel('catalog/category')->load($_subcategory->getId())
@@ -142,12 +106,13 @@
                                          ->addAttributeToFilter('visibility', 4)
                                          ->setOrder('price', 'ASC');
                                              echo '
-                                             <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'</a>';
+                                             <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
                                              if (count($products) > 0){    
+
                                                 echo '<ul>';
                                                 foreach($products as $_product){
                                                    echo '<li>
-                                                        <a class="thirdlevel" href="'.Mage::app()->getStore()->getHomeUrl().$_product->url_key.'">
+                                                        <a class="thirdlevel" href="'.$_product->getProductUrl().'">
                                                         <div class="image">
                                                             <img src="'.$_product->getImageUrl().'">                                                    
                                                         </div>
@@ -167,7 +132,7 @@
                             </li>
                             <?php  $ctr++; endif;   endforeach; ?>   
 
-                                <li><a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>sales">Sale</a></li>
+                                <li><a href="<?php echo Mage::getBaseUrl(); ?>sales">Sale</a></li>
                                 <li>
                                     <a href="https://md-factor.com/about/">Brand</a>
                                     <ul>
@@ -213,7 +178,7 @@
                     </span>
 
                     <div class="ctaWrapper">
-                        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>categories">
+                        <a href="<?php echo Mage::getBaseUrl(); ?>categories">
                             <span>
                                 Shop Now
                             </span>
@@ -231,12 +196,12 @@
 <div class="categoryWrapper">
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>hair" class="zoom">
+            <a href="<?php echo Mage::getBaseUrl(); ?>hair" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-hair.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>hair">
+            <a href="<?php echo Mage::getBaseUrl(); ?>hair">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Hair
             </a>
@@ -245,12 +210,12 @@
     
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor" class="zoom">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-lash.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Lash
             </a>
@@ -259,12 +224,12 @@
 
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin" class="zoom">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-skin" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-skin.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Skin
             </a>
@@ -273,12 +238,12 @@
 
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-wellness" class="zoom">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-wellness.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-wellness">
+            <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Wellness
             </a>
@@ -301,7 +266,7 @@
                     <a href="https://youtu.be/QUQR0xiWyvI" target="_blank" data-lity="">
                         Discover 
                     </a>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
                         Try Now
                     </a>
                 </div>
@@ -355,7 +320,7 @@
         <div class="left">
             <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/all-products.png') ?>" class="wow fadeIn animated" data-wow-delay="0.5s">
             <div class="ctaWrapper">
-                <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>categories">
+                <a href="<?php echo Mage::getBaseUrl(); ?>categories">
                     View product
                 </a>
             </div>
@@ -403,7 +368,7 @@
     <div class="custom-container">
         <div id="feauredProductSlider" class="owl-carousel">
 
-            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-revitalizing-shampoo-and-conditioner-bundle">
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-revitalizing-shampoo-and-conditioner-bundle">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/conditioner-shampoo-bundle.png') ?>">
                 <p class="name">
                     MD Revitalizing Shampoo <br/> and Conditioner Bundle
@@ -417,7 +382,7 @@
                 </span>
             </a>
 
-            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-nutri-hair">
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-nutri-hair">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/nutri-hair.png') ?>">
                 <p class="name">
                     Nutri Hair <br/> &nbsp;
@@ -431,7 +396,7 @@
                 </span>
             </a>
 
-            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-nutri-hair-ultimate-program">
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-nutri-hair-ultimate-program">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/hair-ultimate-program.png') ?>">
                 <p class="name">
                     MD Nutri Hair <br/> Ultimate Program
@@ -445,7 +410,7 @@
                 </span>
             </a>
 
-            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>new-md-lash-factor-eyelash-conditioner">
+            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>new-md-lash-factor-eyelash-conditioner">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/lash-factor-5-91-NEW.png') ?>">
                <p class="name">
                    NEW MD Lash Factor <br/> Eyelash Conditioner
@@ -587,7 +552,7 @@
 
 <div class="bottomCategoriesWrapper">
     <div>
-        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>hair">
+        <a href="<?php echo Mage::getBaseUrl(); ?>hair">
             <p>
                 FULLER, THICKER 
             </p>
@@ -598,7 +563,7 @@
     </div>
 
     <div>
-        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
+        <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
             <p>
                 GORGEOUS, LONG
             </p>
@@ -609,7 +574,7 @@
     </div>
 
     <div>
-        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin">
+        <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
             <p>
                 BRIGHT, FIRM
             </p>
@@ -798,22 +763,22 @@
                     ACCOUNT
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>customer/account">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
                         My Account
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>wishlist">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
                         Wishlist
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>sales/order/history">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
                         Order Status
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>checkout/cart">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
                         View Cart
                     </a>
                 </li>
@@ -934,22 +899,22 @@
         <section id="content3" class="tab-content">
             <ul>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>customer/account">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
                         My Account
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>wishlist">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
                         Wishlist
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>sales/order/history">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
                         Order Status
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>checkout/cart">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
                         View Cart
                     </a>
                 </li>
@@ -1027,6 +992,7 @@ jQuery(document).ready(function($) {
         theme: 'light'
     });
 });
+
 jQuery(document).ready(function($) {
     var offset = $('#main-navWrapper').offset();
     $(window).scroll(function(){
@@ -1036,8 +1002,10 @@ jQuery(document).ready(function($) {
         if(jQuery(document).scrollTop() < 120){
             jQuery('#main-navWrapper').removeClass('fixed-nav');
         }
+
     });
 });
+
 jQuery(document).ready(function($) {
     $(window).scroll(function() {
         if (jQuery(this).scrollTop() > 120){  
@@ -1051,11 +1019,14 @@ jQuery(document).ready(function($) {
 </script>
 
 <script type="text/javascript">
+
 jQuery(document).ready(function($) {
+
      jQuery(document).on('click', '.submitBtnCust', function(){
         var ca = $('form[data-id="embedded_signup:form"] input[data-id="ca:input"]').val();
         var email = $('form[data-id="embedded_signup:form"] input[data-id="Email Address:input"]').val();
         var name = $('form[data-id="embedded_signup:form"] input[data-id="First Name:input"]').val();
+
         postURL = 'https://visitor2.constantcontact.com/api/signup?'+ 'ca='+ ca + '&email='+ email +'&first_name='+ name +'&list';
           $.ajax({
               type: 'POST',
@@ -1076,6 +1047,7 @@ jQuery(document).ready(function($) {
           }
       });
     });
+
     jQuery("#AsSeenInSlider").owlCarousel({
         items : 5,
         itemsCustom : false,
@@ -1120,6 +1092,7 @@ jQuery(document).ready(function($) {
         lazyFollow : true,
         lazyEffect : "fade",
     });
+
    jQuery("#feauredProductSlider").owlCarousel({
         items : 4,
         itemsCustom : false,
@@ -1165,6 +1138,7 @@ jQuery(document).ready(function($) {
         lazyFollow : true,
         lazyEffect : "fade",
     });
+
     jQuery("#blogSlider").owlCarousel({
         items : 3,
         itemsCustom : false,
@@ -1210,15 +1184,21 @@ jQuery(document).ready(function($) {
         lazyEffect : "fade",
     });
 });
+
+
 </script>
 
 
 
 <script type="text/javascript">
+
 'use strict';
+
 function debounce(func, wait, immediate) {
+
   // Debounce
   // http://davidwalsh.name/javascript-debounce-function
+
     var timeout;
     return function() {
         var context = this,
@@ -1237,43 +1217,59 @@ function debounce(func, wait, immediate) {
         }
       };
 }
+
     var htmlTag = document.getElementsByTagName('html')[0];
     var videoContainer = document.querySelector('#video-container');
     var videoElem = document.querySelector('#video-container video');
+
     var minW = 320; // Minimum video width allowed
     var vidWOrig; // Original video dimensions
     var vidHOrig;
+
     vidWOrig = videoElem.getAttribute('width');
     vidHOrig = videoElem.getAttribute('height');
+
     var videoCover = function() {
+
       var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
       var winHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
       // Set the video viewport to the window size
+
       videoContainer.style.width = winWidth + 'px';
       videoContainer.style.height = winHeight + 'px';
+
       // Use largest scale factor of horizontal/vertical
       var scaleH = winWidth / vidWOrig;
       var scaleV = winHeight / vidHOrig;
       var scale = scaleH > scaleV ? scaleH : scaleV;
+
       // Don't allow scaled width < minimum video width
       if (scale * vidWOrig < minW) {
         scale = minW / vidWOrig;
       }
+
       // Scale the video
       var videoNewWidth = scale * vidWOrig;
       var videoNewHeight = scale * vidHOrig;
+
       videoElem.style.width = videoNewWidth + 'px';
       videoElem.style.height = videoNewHeight + 'px';
+
       // Center it by scrolling the video viewport
       videoContainer.scrollLeft = (videoNewWidth - winWidth) / 2;
       videoContainer.scrollTop = (videoNewHeight - winHeight) / 2;
+
     };
+
     if (htmlTag.classList.contains('no-touch')) {
       videoCover();
+
       // Adjust on resize
       var updateVideo = debounce(function() {
         videoCover();
       }, 100);
+
       window.addEventListener('resize', updateVideo);
     }
         
@@ -1281,48 +1277,41 @@ function debounce(func, wait, immediate) {
 
 
 
+<!-- Justuno Script -->
 
-    <!-- Justuno Script -->
+<script type="text/javascript" charset="utf-8">
+    var ju_num="EFC0E7DB-CA2F-4F51-B390-F920D634A92C";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();
+</script>
 
-    <script type="text/javascript" charset="utf-8">var ju_num="EFC0E7DB-CA2F-4F51-B390-F920D634A92C";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+<!-- End of Justuno Script -->
 
-    
-    <!-- End of Justuno Script -->
-
-    <!-- Lucky Orange -->
+<!-- Lucky Orange -->
 
 <script type='text/javascript'>
-window.__lo_site_id = 59158;
-(function() {
-var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-})();
+    window.__lo_site_id = 59158;
+
+    (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
 </script>
 
+<!-- End of Lucky Orange -->
 
-    <!-- End of Lucky Orange -->
-
-
-    <!-- Preloader -->
-
-<script type="text/javascript">    
-jQuery(document).ready(function($) {
-    $(window).load(function() {
-        jQuery('body').css({'overflow-y':'auto', 'position':'relative', 'height':'auto'});
-    });
-});
-</script>
-
-
+<!-- Intercom -->
 
 <script>
-  window.intercomSettings = {
-    app_id: "fjf9gs7l"
-  };
+    window.intercomSettings = {
+        app_id: "fjf9gs7l"
+    };
 </script>
-<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/fjf9gs7l';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
 
+<script>
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/fjf9gs7l';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+</script>
+
+<!-- End of Intercom -->
 
 </body>
 </html>

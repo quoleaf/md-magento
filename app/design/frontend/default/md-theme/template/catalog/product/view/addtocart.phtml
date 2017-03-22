@@ -34,12 +34,12 @@
     </div>
                     <strong class="<?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?>">
+                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?>">
                     <?php echo $this->__('QTY:') ?> </strong>
                     <div class="inner">
                         <div class="<?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> qtyWrapper">
+                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?> qtyWrapper">
                             <div class="custom-qty">
                                 <input class="button-arrow button-down" type="button" value='-'>
                                 <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->
@@ -59,9 +59,9 @@
 
                         <div class="BuyNowWrapper">
                             <div class="AddToCartWrapper">
-                                <button href="#" class="<?php
+                                <button href="#" class="ip-select <?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> buyNow" 
+                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?> buyNow" 
                                     title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
                                     <span>
                                         <?php echo $this->__('BUY NOW') ?>
@@ -135,4 +135,13 @@
         });
         }
     });
+
+jQuery(document).ready(function(){
+jQuery.get("//ipinfo.io", function (response) {
+    if(response.country == "US" && response.region == "California"){
+        jQuery('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper').hide();
+    }
+    
+}, "jsonp");
+});
 </script>

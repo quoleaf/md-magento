@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Itfosters_Pallcurrencys>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Paypal/>
+            </depends>
+        </Itfosters_Pallcurrencys>
+    </modules>
+</config>

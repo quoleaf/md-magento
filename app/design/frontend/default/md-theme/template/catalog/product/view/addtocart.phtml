@@ -127,21 +127,14 @@
         
         function hideCart(){jQuery('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper').hide();}
         
-        jQuery.getJSON('https://freegeoip.net/json/', function (location) {
-            console.log(location.country_code);
-            console.log(location.region_code);
-           if(jQuery.inArray(location.country_code,blockedCountries )>-1) hideCart();
-           if(location.country_code=='US' && location.region_code=='CA') hideCart();
+        jQuery.getJSON('//ipinfo.io', function (location) {
+            console.log(location.country);
+            console.log(location.region);
+           if(jQuery.inArray(location.country,blockedCountries )>-1) hideCart();
+           if(location.country=='US' && location.region=='California') hideCart();
         });
         }
     });
 
-jQuery(document).ready(function(){
-jQuery.get("//ipinfo.io", function (response) {
-    if(response.country == "US" && response.region == "California"){
-        jQuery('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper').hide();
-    }
-    
-}, "jsonp");
-});
+
 </script>

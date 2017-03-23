@@ -227,8 +227,8 @@
                     <?php $_iterator = 0; ?>
                     <?php $_imgSize = 277; ?>
                     <?php foreach ($_productCollection as $_product): ?>
-                        <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
-                            <div class="image">
+                        <li class="<?php echo $_product->getData('sku'); ?> item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+                            <div class="VariationProductSKU image" data-variation-product-sku="<?php echo $_product->getData('sku'); ?>">
                                 <a href="<?php echo $_product->getProductUrl() ?>" class="inner">
                                     <img 
                                     src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepFrame(false)->resize($_imgSize); ?>"
@@ -276,16 +276,36 @@
     </div>
 </div><!-- END shop -->     
 
-<?php if(($_product->getAttributeText('no_cart_button')) == "Yes"){ ?>
+
+
 <script>
-jQuery(document).ready(function(){
-jQuery.get("//ipinfo.io", function (response) {
-    console.log(response);
-    if(response.country == "US" && response.region == "California"){
-        jQuery('body.CustomCategoryPage #shopProducts ul li .no-cart').hide();
-    }
-    
-}, "jsonp");
-});
+
+jQuery(window).ready(function() { 
+        jQuery('.VariationProductSKU').each(function(){
+            var sku = jQuery(this).attr('data-variation-product-sku');
+            
+
+            var skuArr = jQuery.makeArray(sku);
+
+            // console.log('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper, #shopProducts ul li.'+skuArr[0]+' .addCart');
+
+            var blockedSKUs = ['md-lash-factor-eyelash-conditioner-limited-edition-gold','md-lash-factor-eyelash-conditioner-limited-edition-silver','LABRCO','MDLF3','NMDLF6','NMDLF3','MDLF6'];
+        
+            if (jQuery.inArray(jQuery.trim(sku),blockedSKUs) > -1 ) {
+                
+            var blockedCountries = ['RU','RUS','CN','CHN','CR','CRI','PE','PER','VN','VNM'];
+            
+            function hideCart(){jQuery('body.catalog-product-view #CustomProductWrapper form .productIntro .OptionsWrapper .top, .buyNow, .AddToCartWrapper, #shopProducts ul li.'+skuArr[0]+' .addCart').hide();}
+  
+            jQuery.getJSON('//ipinfo.io', function (location) {
+                console.log(location.country);
+                console.log(location.region);
+               if(jQuery.inArray(location.country,blockedCountries )>-1) hideCart();
+               if(location.country=='US' && location.region=='California') hideCart();
+            });
+            }
+        });
+    });
+
+
 </script>
-<?php } ?> 

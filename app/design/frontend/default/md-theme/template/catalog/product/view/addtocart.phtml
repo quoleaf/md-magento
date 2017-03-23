@@ -29,75 +29,70 @@
 <?php if($_product->isSaleable()): ?>
    
 <div class="VariationProductSKU" data-variation-product-sku="<?php echo $_product->getData('sku'); ?>">
-<div class="top">
+    <div class="top">
+        <strong class="<?php
+            //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
+            if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?>">
+            <?php echo $this->__('QTY:') ?> 
+        </strong>
         
-    </div>
-                    <strong class="<?php
-                                    //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?>">
-                    <?php echo $this->__('QTY:') ?> </strong>
-                    <div class="inner">
-                        <div class="<?php
-                                    //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> qtyWrapper">
-                            <div class="custom-qty">
-                                <input class="button-arrow button-down" type="button" value='-'>
-                                <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->
-                                __('Qty') ?>" class="input-text qty"> <input class="button-arrow button-up" type="button" value='+'>
-                            </div>
-                        </div>
-                        <div class="<?php
-                                    //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getData('sku')) != "NH3120-T"){echo 'hidden'; } ?> ">
-                                
-                                <input id="nutriHairBtn" class="customPaypalBtn-NutriHair " type="submit" value="SUBSCRIBE" onClick="select_option()" src="" border="0" name="button" alt="BuyNow">
-                                <br>
-                                <input class="customPaypalBtn-NutriHair hidden" type="image" onClick="select_option()" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="button" alt="PayPal - The safer, easier way to pay online!">
-                                
-                                
-                        </div>
+        <div class="inner">
+            <div class="<?php
+                //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
+                if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?> qtyWrapper">
+                <div class="custom-qty">
+                    <input class="button-arrow button-down" type="button" value='-'>
+                    <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->
+                                    __('Qty') ?>" class="input-text qty"> <input class="button-arrow button-up" type="button" value='+'>
+                </div>
+            </div>
+            
+            <div class="<?php
+                //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
+                if(($_product->getData('sku')) != "NH3120-T"){echo 'hidden'; } ?> ">
+                                    
+                <input id="nutriHairBtn" class="customPaypalBtn-NutriHair " type="submit" value="SUBSCRIBE" onClick="select_option()" src="" border="0" name="button" alt="BuyNow"><br>
+                <input class="customPaypalBtn-NutriHair hidden" type="image" onClick="select_option()" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="button" alt="PayPal - The safer, easier way to pay online!">
+            </div>
 
-                        <div class="BuyNowWrapper">
-                            <div class="AddToCartWrapper">
-                                <button href="#" class="ip-select <?php
-                                    //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> buyNow" 
-                                    title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
-                                    <span>
-                                        <?php echo $this->__('BUY NOW') ?>
-                                        <?php echo $this->getChildHtml('', true, true) ?>    
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="RewardProductWrapper">
-                        <?php echo Mage::helper('core/mwrewardpoints')->
-                        pointsProductDetailRewardPoints($_product); ?> <?php echo Mage::helper('core/mwrewardpoints')->
-                        showFacebookRewardPoints(); ?> <?php echo Mage::helper('core/mwrewardpoints')->
-                        showInvitationRewardPoints(); ?>
-                    </div>
+            <div class="BuyNowWrapper">
+                <div class="AddToCartWrapper">
+                    <button href="#" class="ip-select <?php
+                        //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
+                        if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?> buyNow" title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
+                        
+                        <span>
+                            <?php echo $this->__('BUY NOW') ?>
+                            <?php echo $this->getChildHtml('', true, true) ?>    
+                        </span>
+                    </button>
                 </div>
-                <div class="bottom">
-                    <?php if (!$this->
-                    hasOptions()):?>
-                    <div class="add-to-box">
-                        <?php echo $this->
-                         getChildHtml('addto') ?>
-                    </div>
-                    <?php elseif (!$_product->
-                    isSaleable()): ?>
-                    <div class="add-to-box">
-                        <?php echo $this->
-                         getChildHtml('addto') ?> <?php echo $this->
-                         getChildHtml('sharing') ?>
-                    </div>
-                    <?php endif; ?>
-                </div>
+            </div>
+        </div>
+
+        <div class="RewardProductWrapper">
+            <?php echo Mage::helper('core/mwrewardpoints')->pointsProductDetailRewardPoints($_product); ?> <?php echo Mage::helper('core/mwrewardpoints')->showFacebookRewardPoints(); ?> <?php echo Mage::helper('core/mwrewardpoints')->showInvitationRewardPoints(); ?>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <?php if (!$this->hasOptions()):?>
+            <div class="add-to-box">
+                <?php echo $this->getChildHtml('addto') ?>
+            </div>
+            
+            <?php elseif (!$_product->isSaleable()): ?>
+            
+            <div class="add-to-box">
+                <?php echo $this->getChildHtml('addto') ?> <?php echo $this->getChildHtml('sharing') ?>
+            </div>
+        <?php endif; ?>
+    </div>
 
     <div class="AwardWrapper">
         <a href="http://www.sitejabber.com/reviews/www.md-factor.com?sort=rating&amp;direction=desc#reviews" target="_BLANK" class="award"></a>
     </div>
+</div>
 <?php endif; ?>
 
 <script>

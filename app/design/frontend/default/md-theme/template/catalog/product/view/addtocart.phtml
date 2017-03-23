@@ -34,12 +34,12 @@
     </div>
                     <strong class="<?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?>">
+                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?>">
                     <?php echo $this->__('QTY:') ?> </strong>
                     <div class="inner">
                         <div class="<?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?> qtyWrapper">
+                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> qtyWrapper">
                             <div class="custom-qty">
                                 <input class="button-arrow button-down" type="button" value='-'>
                                 <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->
@@ -61,7 +61,7 @@
                             <div class="AddToCartWrapper">
                                 <button href="#" class="ip-select <?php
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
-                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'no-cart'; } ?> buyNow" 
+                                    if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> buyNow" 
                                     title="<?php echo $buttonTitle ?>" onclick="productAddToCartForm.submit(this)">
                                     <span>
                                         <?php echo $this->__('BUY NOW') ?>

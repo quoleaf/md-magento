@@ -26,7 +26,7 @@
 	           <nav class='main-nav' id="main-navWrapper">
 	            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
 	                <div class="custom-container navi">
-	                    <a class="logo" href='<?php echo mage::getbaseurl(); ?>'> 
+	                    <a class="logo" href='<?php echo Mage::app()->getStore()->getHomeUrl(); ?>'> 
 	                        <img class="whitelogo" src="<?php echo $this->getSkinUrl('images/logo-blue.png') ?>"> 
 	                        <img class="darklogo" src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>" style="display: none;"> 
 	                    </a>
@@ -66,7 +66,7 @@
 	                                     ->addAttributeToFilter('visibility', 4)
 	                                     ->setOrder('price', 'ASC');
 	                                         echo '
-	                                         <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'">'.$_subcategory->getName().'</a>';
+	                                         <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'</a>';
 	                                         if (count($products) > 0){    
 
 	                                            echo '<ul>';

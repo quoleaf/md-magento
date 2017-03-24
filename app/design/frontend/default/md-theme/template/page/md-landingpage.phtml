@@ -143,13 +143,13 @@
                                          ->addAttributeToFilter('visibility', 4)
                                          ->setOrder('price', 'ASC');
                                              echo '
-                                             <li><a href="'.$_subcategory->getUrl().'">'.$_subcategory->getName().'</a>';
+                                             <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'</a>';
                                              if (count($products) > 0){    
 
                                                 echo '<ul>';
                                                 foreach($products as $_product){
                                                    echo '<li>
-                                                        <a class="thirdlevel" href="'.$_product->getProductUrl().'">
+                                                        <a class="thirdlevel" href="'.Mage::app()->getStore()->getHomeUrl().$_product->url_key.'">
                                                         <div class="image">
                                                             <img src="'.$_product->getImageUrl().'">                                                    
                                                         </div>
@@ -169,7 +169,7 @@
                             </li>
                             <?php  $ctr++; endif;   endforeach; ?>   
 
-                                <li><a href="<?php echo Mage::getBaseUrl(); ?>sales">Sale</a></li>
+                                <li><a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>sales">Sale</a></li>
                                 <li>
                                     <a href="https://md-factor.com/about/">Brand</a>
                                     <ul class="brandDropdown">
@@ -215,7 +215,7 @@
                     </span>
 
                     <div class="ctaWrapper">
-                        <a href="<?php echo Mage::getBaseUrl(); ?>categories">
+                        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>categories">
                             <span>
                                 Shop Now
                             </span>
@@ -233,12 +233,12 @@
 <div class="categoryWrapper">
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::getBaseUrl(); ?>hair" class="zoom">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>hair" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-hair.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::getBaseUrl(); ?>hair">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>hair">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Hair
             </a>
@@ -247,12 +247,12 @@
     
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor" class="zoom">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-lash.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Lash
             </a>
@@ -261,12 +261,12 @@
 
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::getBaseUrl(); ?>md-skin" class="zoom">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-skin.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Skin
             </a>
@@ -275,12 +275,12 @@
 
     <div class="">
         <div class="inner">
-            <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness" class="zoom">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-wellness" class="zoom">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-wellness.png') ?>">
             </a>
         </div>
         <span>
-            <a href="<?php echo Mage::getBaseUrl(); ?>md-wellness">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-wellness">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/category-logo.png') ?>">
                 Wellness
             </a>
@@ -303,7 +303,7 @@
                     <a href="https://youtu.be/QUQR0xiWyvI" target="_blank" data-lity="">
                         Discover 
                     </a>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
                         Try Now
                     </a>
                 </div>
@@ -357,7 +357,7 @@
         <div class="left">
             <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/all-products.png') ?>" class="wow fadeIn animated" data-wow-delay="0.5s">
             <div class="ctaWrapper">
-                <a href="<?php echo Mage::getBaseUrl(); ?>categories">
+                <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>categories">
                     View product
                 </a>
             </div>
@@ -405,7 +405,7 @@
     <div class="custom-container">
         <div id="feauredProductSlider" class="owl-carousel">
 
-            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-revitalizing-shampoo-and-conditioner-bundle">
+            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-revitalizing-shampoo-and-conditioner-bundle">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/conditioner-shampoo-bundle.png') ?>">
                 <p class="name">
                     MD Revitalizing Shampoo <br/> and Conditioner Bundle
@@ -419,7 +419,7 @@
                 </span>
             </a>
 
-            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-nutri-hair">
+            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-nutri-hair">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/nutri-hair.png') ?>">
                 <p class="name">
                     Nutri Hair <br/> &nbsp;
@@ -433,7 +433,7 @@
                 </span>
             </a>
 
-            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>md-nutri-hair-ultimate-program">
+            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-nutri-hair-ultimate-program">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/hair-ultimate-program.png') ?>">
                 <p class="name">
                     MD Nutri Hair <br/> Ultimate Program
@@ -447,7 +447,7 @@
                 </span>
             </a>
 
-            <a class="item" href="<?php echo Mage::getBaseUrl(); ?>new-md-lash-factor-eyelash-conditioner">
+            <a class="item" href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>new-md-lash-factor-eyelash-conditioner">
                 <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/lash-factor-5-91-NEW.png') ?>">
                <p class="name">
                    NEW MD Lash Factor <br/> Eyelash Conditioner
@@ -589,7 +589,7 @@
 
 <div class="bottomCategoriesWrapper">
     <div>
-        <a href="<?php echo Mage::getBaseUrl(); ?>hair">
+        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>hair">
             <p>
                 FULLER, THICKER 
             </p>
@@ -600,7 +600,7 @@
     </div>
 
     <div>
-        <a href="<?php echo Mage::getBaseUrl(); ?>md-lash-factor">
+        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
             <p>
                 GORGEOUS, LONG
             </p>
@@ -611,7 +611,7 @@
     </div>
 
     <div>
-        <a href="<?php echo Mage::getBaseUrl(); ?>md-skin">
+        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin">
             <p>
                 BRIGHT, FIRM
             </p>
@@ -800,22 +800,22 @@
                     ACCOUNT
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>customer/account">
                         My Account
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>wishlist">
                         Wishlist
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>sales/order/history">
                         Order Status
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>checkout/cart">
                         View Cart
                     </a>
                 </li>
@@ -936,22 +936,22 @@
         <section id="content3" class="tab-content">
             <ul>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>customer/account">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>customer/account">
                         My Account
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>wishlist">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>wishlist">
                         Wishlist
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>sales/order/history">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>sales/order/history">
                         Order Status
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo Mage::getBaseUrl(); ?>checkout/cart">
+                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>checkout/cart">
                         View Cart
                     </a>
                 </li>

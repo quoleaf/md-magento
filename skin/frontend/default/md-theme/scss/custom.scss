@@ -10024,15 +10024,22 @@ input.customPaypalBtn-NutriHair {
     margin-top: 25px;
 }
 
-.viewpage-social-media{
-	display: flex; 
-	margin-top: 20px;
-	a {
-		margin-right: 10px;
-	}
+.viewpage-social-media-wrapper{
+	margin-top: 20px;	
 
-	a:last-child{
-		margin-right: 0px;
+	.viewpage-social-media{
+		a {
+			margin-right: 10px;
+			display: inline-block;
+		}
+
+		a:hover, a:active, a:focus {
+			outline: 0;
+		}
+
+		a:last-child{
+			margin-right: 0px;
+		}
 	}
 }
 
@@ -10041,7 +10048,9 @@ input.customPaypalBtn-NutriHair {
 		width: 100%;
 	}
 
-	.viewpage-social-media{
+	.viewpage-social-media-wrapper{
+		overflow: hidden;
 		text-align: center;
+		margin-top: 0px;
 	}
 }

@@ -7182,19 +7182,23 @@ input#nutriHairBtn:hover {
 input.customPaypalBtn-NutriHair {
   margin-top: 25px; }
 
-.viewpage-social-media {
-  display: flex;
+.viewpage-social-media-wrapper {
   margin-top: 20px; }
-  .viewpage-social-media a {
-    margin-right: 10px; }
-  .viewpage-social-media a:last-child {
+  .viewpage-social-media-wrapper .viewpage-social-media a {
+    margin-right: 10px;
+    display: inline-block; }
+  .viewpage-social-media-wrapper .viewpage-social-media a:hover, .viewpage-social-media-wrapper .viewpage-social-media a:active, .viewpage-social-media-wrapper .viewpage-social-media a:focus {
+    outline: 0; }
+  .viewpage-social-media-wrapper .viewpage-social-media a:last-child {
     margin-right: 0px; }
 
 @media only screen and (max-width: 570px) {
   input#nutriHairBtn {
     width: 100%; }
 
-  .viewpage-social-media {
-    text-align: center; } }
+  .viewpage-social-media-wrapper {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px; } }
 
 /*# sourceMappingURL=custom.css.map */

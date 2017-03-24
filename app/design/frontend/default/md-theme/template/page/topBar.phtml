@@ -28,7 +28,7 @@
             </a>
         <?php else: ?>
         
-            <a class="signin info" href="<?php echo Mage::app()->getStore()->getHomeUrl('account/login'); ?>">
+            <a class="signin info" href="<?php echo mage::helper('customer')->getLoginUrl(); ?>">
                 <?php echo $this->__('SIGN IN') ?>
             </a>
         <?php endif; ?>

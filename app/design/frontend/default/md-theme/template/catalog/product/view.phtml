@@ -129,6 +129,7 @@
                 <?php echo $this->getChildHtml('bundle_prices') ?>
                 <?php echo $this->getTierPriceHtml() ?>    
             </span>
+
            
             <!-- Options -->        
             <div class="OptionsWrapper">
@@ -145,7 +146,9 @@
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
+            
                 </div>
+
                 <div class="bottom">
                     <?php if (!$this->
                     hasOptions()):?>
@@ -162,12 +165,30 @@
                     </div>
                     <?php endif; ?>
                 </div>
+
+
              <?php endif;?>
-                
+             <span class="viewpage-social-media">
+                <a href="https://www.facebook.com/MDLASHF" target="_blank">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/fb.png') ?>"> 
+                </a>
+                <a href="https://twitter.com/MDLFbySusanLin" target="_blank">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/twitter.png') ?>"> 
+                </a>
+                <a href="https://instagram.com/md_factor/" target="_blank">
+                    <img src="<?php echo $this->getSkinUrl('images/landingpage-revamp/instagram.png') ?>"> 
+                </a>
+            </span>
             </div>
             <!-- End of Options -->
+
         </div>
+
+
     </form>
+    
+    
+
 
     <div id="ProductInfoWrapper">
         <div class="tab_container">
@@ -438,3 +459,4 @@ jQuery(function($) {
 
 
 </script>
+

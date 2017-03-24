@@ -14,7 +14,7 @@
         
         <?php   $count = ($this->
         helper('checkout/cart')->getSummaryCount() ? $this->helper('checkout/cart')->getSummaryCount() : 0 ) ?> 
-            <a href="<?php echo mage::geturl('checkout/cart'); ?>" class="shoppingBag cart-link">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl('checkout/cart'); ?>" class="shoppingBag cart-link">
                 <span class="badge"><?php echo $count?></span>
                 <?php echo $this->__('Shopping Bag') ?>
             </a>
@@ -23,7 +23,7 @@
             <a class="signin info" href="<?php echo mage::helper('customer')->getLogoutUrl(); ?>">
                 <?php echo $this->__('LOG OUT')?>
             </a>
-            <a href="<?php echo mage::geturl('customer/account'); ?>" class="myAccount info">
+            <a href="<?php echo Mage::app()->getStore()->getHomeUrl('customer/account'); ?>" class="myAccount info">
                 <?php echo $this->__('MY ACCOUNT') ?>
             </a>
         <?php else: ?>

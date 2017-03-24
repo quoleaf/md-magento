@@ -224,11 +224,20 @@
         </page>
         <page>
             <layouts> 
-                <mdchinalandind module="page" translate="label">
+                <mdchinalanding module="page" translate="label">
                     <label>MD China Landing Page</label>
                     <template>page/md-china-landingpage.phtml</template>
                     <layout_handle>mdchinalandind</layout_handle>
-                </mdchinalandind> 
+                </mdchinalanding> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <aboutus module="page" translate="label">
+                    <label>MD About Us Page</label>
+                    <template>page/aboutus.phtml</template>
+                    <layout_handle>aboutus</layout_handle>
+                </aboutus> 
             </layouts>
         </page>
     </global>

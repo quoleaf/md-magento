@@ -47,7 +47,7 @@
                                             ->setOrder('price', 'ASC');
                                             
                                             echo '
-                                            <li><a href="'.Mage::getBaseUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'</a>';
+                                            <li><a href="'.Mage::getBaseUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>';
                                                  
                                             if (count($products) > 0){    
 

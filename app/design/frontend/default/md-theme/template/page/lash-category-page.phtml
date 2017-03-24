@@ -66,7 +66,7 @@
 	                                     ->addAttributeToFilter('visibility', 4)
 	                                     ->setOrder('price', 'ASC');
 	                                         echo '
-	                                         <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'</a>';
+	                                         <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>';
 	                                         if (count($products) > 0){    
 
 	                                            echo '<ul>';

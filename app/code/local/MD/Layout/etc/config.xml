@@ -240,6 +240,69 @@
                 </aboutus> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <shippingpolicy module="page" translate="label">
+                    <label>MD Shipping Policy Page</label>
+                    <template>page/shipping-policy.phtml</template>
+                    <layout_handle>shippingpolicy</layout_handle>
+                </shippingpolicy> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <authenticity module="page" translate="label">
+                    <label>MD Authenticity Page</label>
+                    <template>page/authenticity.phtml</template>
+                    <layout_handle>authenticity</layout_handle>
+                </authenticity> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <privacypolicy module="page" translate="label">
+                    <label>MD Privacy Policy Page</label>
+                    <template>page/privacy-policy.phtml</template>
+                    <layout_handle>privacypolicy</layout_handle>
+                </privacypolicy> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <termsandconditions module="page" translate="label">
+                    <label>MD Terms and Conditions Page</label>
+                    <template>page/terms-and-conditions.phtml</template>
+                    <layout_handle>termsandconditions</layout_handle>
+                </termsandconditions> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <careers module="page" translate="label">
+                    <label>MD Careers Page</label>
+                    <template>page/careers.phtml</template>
+                    <layout_handle>careers</layout_handle>
+                </careers> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <faq module="page" translate="label">
+                    <label>MD FAQ Page</label>
+                    <template>page/faq.phtml</template>
+                    <layout_handle>faq</layout_handle>
+                </faq> 
+            </layouts>
+        </page>
+        <!-- <page>
+            <layouts> 
+                <pressmedia module="page" translate="label">
+                    <label>MD PressMedia Page</label>
+                    <template>page/press-media.phtml</template>
+                    <layout_handle>pressmedia</layout_handle>
+                </pressmedia> 
+            </layouts>
+        </page> -->
     </global>
     <frontend>
         <routers>

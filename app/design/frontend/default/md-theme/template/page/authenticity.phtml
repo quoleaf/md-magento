@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MD Authenticity</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <?php echo $this->getChildHtml('head') ?>
+
+
+</head>
+
+<body class="authenticity">
+
+<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+
+<div class="contentWrapper">
+	<div class="custom-container">
+		<h2>Authenticity</h2>
+		
+		<ul>
+			<li>MD product warranty only applies to products purchased directly on <a href="http://www.md-factor.com">http://www.md-factor.com</a>.</li>
+			<li>MD's warranty for all our beauty products and the money back guarantee offers for MD Nutri Hair, does not apply for products purchased by other unauthorized resellers from other stores and websites.</li>
+			<li>Please report other unauthorized resellers by <a href="<?php echo Mage::getBaseUrl(); ?>contactus">contacting us</a>. </li>
+		</ul>
+	</div>
+</div>
+
+<?php echo $this->getChildHtml('footer') ?>
+
+</body>
+</html>

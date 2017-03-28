@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MD Lash</title>
+	<title>MD About Us</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <?php echo $this->getChildHtml('head') ?>
@@ -12,14 +12,6 @@
 <body class="aboutus CustomCategoryPage">
 
 <div class="VideoWrapper">
-	<div id="video-container">
-        <video preload="auto" autoplay loop muted controls="true" width="1440" height="810">
-            <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/lash-category.mp4" type="video/mp4">  
-            <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/lash-category.webm" type="video/webm"> 
-            <source src="https://boozaid.com/skin/frontend/default/boozaid/images/mdvid/lash-category.ogg" type="video/ogg">  
-        </video>
-    </div>
-
     <div class="overlay">
         <div class="overlay__inner">
         	<div class="transparentNav">
@@ -127,19 +119,18 @@
 	                </div>
 	            </nav>
 	        </div>
-            <div class="content" style="display: none;">
+            <div class="content">
                 <div class="custom-container">
-                    <h1>
-                       	Get Real
-                    </h1>
-                    <span>
-                        Longer Lashes
-                    </span>
-
-                    <div class="ctaWrapper">
-                        <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
-                            Watch Video
-                        </a>
+                    <div class="left">
+                    	<img src="<?php echo $this->getSkinUrl('images/aboutus/header-about-bottles.png') ?>" />
+                    </div>
+                    <div class="right">
+                    	<h1>
+	                       	WE CREATE BEAUTY
+	                    </h1>
+	                    <span>
+	                       	...The MD Way!
+	                    </span>
                     </div>
                 </div>
             </div>
@@ -152,8 +143,245 @@
 	<div id="intro">
 		<div class="custom-container">
 			<p>MD is a collection of innovative hair, skin and wellness products utilizing the latest anti-aging technology. The products are created by a board-certified surgeon, physician and expert in the field of medical aesthetics, Dr. Susan Lin.</p>
+			<img src="<?php echo $this->getSkinUrl('images/aboutus/intro-products.png') ?>" alt=""/>
 		</div>
-	</div><!-- END intro -->
+	</div>
+
+	<div id="founder">
+		<div class="custom-container">
+			<div class="image wow fadeIn animated">
+				<img src="<?php echo $this->getSkinUrl('images/aboutus/founder-image.jpg') ?>" alt=""/>
+			</div>
+			<div class="desc wow fadeInRight animated">
+				<p>Dr. Lin is the founder of MD Laser and Cosmetics Center in San Mateo, California. Since 1991 she has been on a quest for the most advanced breakthroughs in the health and wellness of women, in addition to hair and skin beauty.</p>
+				<p>Dr. Susan Lin’s physician-formulated products are available throughout the US and in dozens of countries worldwide.</p>
+			</div>
+		</div>
+	</div>
+	<div id="feedback">
+		<div class="custom-container">
+			<blockquote class="fadeInUp wow animated">
+				<span class="quote open">“</span>
+					Because I had hair problems, and was unsatisfied with current choices. I was motivated to develop simple and nature-inspired products specifically for this important issue.
+				<span class="quote close">”</span>
+			</blockquote>
+		</div>
+	</div>
+
+	<div id="videoAbout">
+		<a href="https://www.youtube.com/watch?v=xiIIqeHHY-c" data-lity="" class="wow fadeInUp animated">
+			<span>
+				<img src="<?php echo $this->getSkinUrl('images/aboutus/video-play-btn.png') ?>" />
+			</span>
+		</a>
+	</div>
+
+
+	<div id="ourProducts">
+		<div class="custom-container">
+			<ul>
+				<li>
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</li>
+				<li>
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</li>
+				<li>
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</li>
+				<li>
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</li>
+				<li>
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</li>
+				<li>
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</li>
+			</ul>
+
+			<div class="ctaWrapper">
+				<a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>categories"> <span>
+				Shop Now </span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="moreAbout">
+		<div class="titleBar">
+			<div class="custom-container">
+				<img src="https://md-factor.com/blog/wp-content/themes/mdfactor/images/more-about-pic.png" alt=""/>
+				<span>More About Dr. Susan Lin</span>
+			</div>
+		</div>
+
+		<div class="custom-container">
+			<ul>
+				<li>
+					<img src="https://md-factor.com/blog/wp-content/themes/mdfactor/images/about-graduate-ico.png" class="wow fadeInLeft animated">
+					<span class="wow fadeInRight animated">
+						Dr. Lin graduated from the Boston University School Six Year Medical Program with a NIH Cancer Research Fellowship. She completed her postdoctoral training in Obstetrics and Gynecology at Kaiser Permanente Oakland, Felix Rutledge Oncology Fellowhip at MD Anderson Cancer Center and Galloway Fellowship in Gynecologic Oncology at Memorial SLoan Kettering Cancer Center.
+					</span>
+				</li>
+
+				<li>
+					<img src="https://md-factor.com/blog/wp-content/themes/mdfactor/images/about-expertise-ico.png" class="wow fadeInLeft animated">
+					<span class="wow fadeInRight animated">
+						Susan has served as an Expert Reviewer for the Medical Board of California since 2004 and Medical Director for MD Laser &amp; Cosmetics. In addition, DR. Lin has served on, and/or belonged to, the following organizations: American College of Obstetrics and Gynecology, AMerican Academy of Antiaging Medicine, American Academy of Aesthetic Medicine, Assistant Clinical professor OB/GYN UCSF School of Medicine and the American Society for Laser MEdicine and Surgery.
+					</span>
+				</li>
+
+				<li>
+					<img src="https://md-factor.com/blog/wp-content/themes/mdfactor/images/about-current-job-ico.png"class="wow fadeInLeft animated">
+					<span class="wow fadeInRight animated">
+						Susan currently serves on the Strategic Board for Mc Govern Institute for Britain Research at Massachusetts Institute of Technology and Community Gatepath Burlingame where she serves children and adults with disabilities. She has also served as a board member of the Boys and Girls Club of the Peninsula for disadvantaged youth.
+					</span>
+				</li>
+
+				<li>
+					<img src="https://md-factor.com/blog/wp-content/themes/mdfactor/images/about-author-ico.png" class="wow fadeInLeft animated">
+					<span class="wow fadeInRight animated">
+						Dr. Lin is a noted author and expert in the field of medical aesthetics. In 2015 she authored two chapters in “Harry’s Coemeticology 9th Edition”, widely recognized as one of the most popular cosmetic technical books of all time. This refderence book draws on the current expertise for universities and cosmetic societies around the world.
+					</span>
+				</li>
+
+				<li>
+					<img src="https://md-factor.com/blog/wp-content/themes/mdfactor/images/about-award-ico.png" class="wow fadeInLeft animated">
+					<span class="wow fadeInRight animated">
+						In 2016, Dr. Lin was honored with an Export Achievement Certificate from the US Commercial Service. This prestigious award is presented to companies who have shown significant accomplishments in the global marketplace. The award also recognizes the creation of many new jobs and opportunities for Americans.
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="gallery">
+		<div class="custom-container">
+			<h1>MD Gallery</h1>
+		</div>
+
+		<div class="contentWrapper">
+			<div class="imageWrapper Desktop">
+				<div class="left">
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</div>
+				<div class="middle">
+					<div class="inner">
+						<div class="side">
+						 	<div class="image-box">
+							  	<div class="image">
+							  	</div>
+							</div>  
+						</div>
+						<div class="side">
+						 	<div class="image-box">
+							  	<div class="image">
+							  	</div>
+							</div>  
+						</div>
+					</div>
+					<div class="inner">
+						<div class="side">
+						 	<div class="image-box">
+							  	<div class="image">
+							  	</div>
+							</div> 
+						</div>
+						<div class="side">
+						 	<div class="image-box">
+							  	<div class="image">
+							  	</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="imageWrapper Mobile" style="display: none;">
+				<div class="mobileImage">
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</div>
+				
+				<div class="mobileImage">
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</div>
+
+				<div class="mobileImage">
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+					<div class="image-box">
+					  	<div class="image">
+					  	</div>
+					</div>  
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="joinUs">
+		<div class="custom-container">
+			<h1>Join us #theMDway</h1>
+		</div>
+	</div>
+
+	<div id="inThePress">
+		<div class="custom-container">
+			<h1>
+				In the press
+			</h1>
+			<div class="ctaWrapper">
+				<a href="https://md-factor.com/blog/press/"> 
+					<span>
+						View all
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php echo $this->getChildHtml('footer') ?>

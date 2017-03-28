@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <checkout_onepage_review>
+        <reference name="checkout.onepage.review.info.items.after">
+            <block type="ddbillb2c/form_ddbillb2c" name="payment.form.ddbillb2c" template="ddbillb2c/form/ddbillb2c.phtml">
+                <action method="setMethodInfo"></action>
+            </block>
+        </reference>
+    </checkout_onepage_review>
+</layout>

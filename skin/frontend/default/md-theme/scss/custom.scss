@@ -11815,7 +11815,7 @@ input.customPaypalBtn-NutriHair {
 	}
 }
 
-.opc-index-index{
+.opc-index-index.not-ch{
 	#checkboxPaymentTarget dt#dt_method_ddbillb2c{
 	  	display: none;
 	}
@@ -11823,7 +11823,7 @@ input.customPaypalBtn-NutriHair {
 
 .opc-index-index.ch-dinpay{
 	#checkboxPaymentTarget dt#dt_method_ddbillb2c{
-	  	display: block !important;
+	  	display: block;
 	}
 }
 

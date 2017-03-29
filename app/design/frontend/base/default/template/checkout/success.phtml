@@ -48,6 +48,7 @@ $pepperjam_url = 'https://t.pepperjamnetwork.com/track?PID=7314&INT=ITEMIZED&ITE
 //$rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist='.$skulist.'&qlist='.$qlist.'&amtlist='.$amtlist.'&cur=USD&namelist='.$namelist;
 $rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&skulist=order&qlist=1&amtlist='.$amtlist.'&cur=USD&namelist=order';
 //echo $rakuten_url;
+
 ?>
 
 <!-- pepperjam tracking -->
@@ -62,6 +63,44 @@ $rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&sku
 </div>
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 <h2 class="sub-title"><?php echo $this->__('Thank you for your purchase!') ?></h2>
+
+<?php
+  $lastOrderId = Mage::getSingleton('checkout/session')->getLastOrderId();
+  $_order = Mage::getSingleton('sales/order')->loadByIncrementId($lastOrderId);
+  $_sub=$order->getSubtotal();
+?>
+
+<!-- Offer Conversion: Beautiful Hair Bundle -->
+<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=12&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: Healthy Full Hair Bundle -->
+<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=16&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: New Mom Essential -->
+<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=10&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: Bring Sexy Back -->
+<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=22&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: Nourish Your Skin -->
+<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=24&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: Beauty and Serenity  -->
+<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=14&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: Beauty Boost -->
+<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=18&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
+
+<!-- Offer Conversion: Clear Skin A -->
+<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=20&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $_sub ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<!-- // End Offer Conversion -->
 
 <?php if ($this->getOrderId()):?>
 <?php if ($this->getCanViewOrder()) :?>

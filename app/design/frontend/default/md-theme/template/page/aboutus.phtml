@@ -18,7 +18,7 @@
 	           <nav class='main-nav' id="main-navWrapper">
 	            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/topBar.phtml')->toHtml(); ?>
 	                <div class="custom-container navi">
-	                    <a class="logo" href='<?php echo Mage::app()->getStore()->getHomeUrl(); ?>'> 
+	                    <a class="logo" href='<?php echo Mage::getBaseUrl(); ?>'> 
 	                        <img class="whitelogo" src="<?php echo $this->getSkinUrl('images/logo-blue.png') ?>"> 
 	                        <img class="darklogo" src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>" style="display: none;"> 
 	                    </a>

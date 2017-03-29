@@ -8266,10 +8266,10 @@ input.customPaypalBtn-NutriHair {
     overflow: hidden;
     text-align: center;
     margin-top: 0px; } }
-.opc-index-index.not-ch #checkboxPaymentTarget dt#dt_method_ddbillb2c {
+#checkboxPaymentTarget.not-ch dt#dt_method_ddbillb2c {
   display: none; }
 
-.opc-index-index.ch-dinpay #checkboxPaymentTarget dt#dt_method_ddbillb2c {
+#checkboxPaymentTarget.ch-dinpay dt#dt_method_ddbillb2c {
   display: block; }
 
 /*# sourceMappingURL=custom.css.map */

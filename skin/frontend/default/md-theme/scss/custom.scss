@@ -11814,3 +11814,15 @@ input.customPaypalBtn-NutriHair {
 		margin-top: 0px;
 	}
 }
+
+.opc-index-index{
+	.dt_method_ddbillb2c{
+	  display: none;
+	}
+}
+
+.opc-index-index.ch-dinpay{
+	.dt_method_ddbillb2c{
+	  display: block !important;
+	}
+}

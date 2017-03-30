@@ -218,6 +218,20 @@
                 <li class="tab-link reviewsTab" data-tab="reviews">
                 Reviews
                 </li>
+                <?php 
+                    $beforeandafterContent = $_product->getData('before_and_after');
+                               
+                    if(isset($beforeandafterContent)){
+                        $prodAttrBeforeandAfter = $_product->getResource()->getAttribute('before_and_after');
+                        $_beforeandafter = $prodAttrBeforeandAfter->getStoreLabel(Mage::app()->getStore()->getName());
+                            echo '
+
+                                <li class="tab-link " data-tab="beforeandafter">Photos</li>
+
+                            ';
+                    }
+                ?>
+                
             </ul>
 
             <div id="product-details" class="tab-content current">
@@ -261,6 +275,13 @@
                             <?php $this->helper('yotpo')->showWidget($this, $_product); ?>
                         </div>
                     </div> 
+            </div>
+            <div id="beforeandafter" class="tab-content">
+                <div class="inner ">
+                     
+                    <?php echo $_product->getData('before_and_after'); ?>
+                   
+                </div> 
             </div>
         </div>
     </div>

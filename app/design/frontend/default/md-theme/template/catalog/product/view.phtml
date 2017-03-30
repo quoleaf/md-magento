@@ -218,6 +218,8 @@
                 <li class="tab-link reviewsTab" data-tab="reviews">
                 Reviews
                 </li>
+
+               
                 <?php 
                     $beforeandafterContent = $_product->getData('before_and_after');
                                
@@ -226,12 +228,11 @@
                         $_beforeandafter = $prodAttrBeforeandAfter->getStoreLabel(Mage::app()->getStore()->getName());
                             echo '
 
-                                
+                                <li class="tab-link " data-tab="beforeandafter">Photos</li>    
 
                             ';
                     }
                 ?>
-                
             </ul>
 
             <div id="product-details" class="tab-content current">
@@ -276,13 +277,14 @@
                         </div>
                     </div> 
             </div>
+
+            <?php if (isset($beforeandafterContent)): ?>
             <div id="beforeandafter" class="tab-content">
                 <div class="inner ">
-                     
-                    <?php echo $_product->getData('before_and_after'); ?>
-                   
+                    <?php echo $beforeandafterContent= $_helper->productAttribute($_product, $_product->getbefore_and_after(), 'before_and_after'); ?>
                 </div> 
             </div>
+            <?php endif;?>
         </div>
     </div>
 </div>

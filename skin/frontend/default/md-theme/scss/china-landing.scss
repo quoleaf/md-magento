@@ -318,6 +318,9 @@ body.chinalanding {
 		background-size: cover;
 		background-repeat: no-repeat;
 
+		@media screen and (max-width: 1070px) {
+	  		background: #a5b9ae;
+		}
 
 		#video-container {
 			width: 100%;
@@ -348,7 +351,7 @@ body.chinalanding {
 		  	z-index: 20;
 
 		  	@media screen and (max-width: 1070px) {
-		  		background-color: rgba(38, 38, 38, 0.64);
+		  		// background-color: rgba(38, 38, 38, 0.64);
 		  		top: 0;
 		  	}
 
@@ -364,74 +367,131 @@ body.chinalanding {
 			  			top: 0;
 					    height: 100vh;
 					    padding: 0;
-					    display: flex;
-					    align-items: center;
 			  		}
 
 			  		.custom-container {
-			  			padding:50px 0 0 0;
+			  			padding:0;
 			  			color: #fff;
 			  			display: flex;
+			  			align-items: center;
+			  			height: 80vh;
 
-			  			@media screen and (max-width: 620px) {
-			  				padding: 0 15px 0 15px;
-			  				text-align: center;
+			  			@media screen and (max-width: 1100px) {
+			  				padding: 0 50px 0 50px;
+			  			}
+
+			  			@media screen and (max-width: 1070px) {
+			  				padding: 100px 150px 0 150px;
+			  			}
+
+			  			@media screen and (max-width: 900px) {
+			  				padding: 100px 50px 0 50px;
+			  			}
+
+			  			@media screen and (max-width: 500px) {
+			  				padding: 100px 15px 0 15px;
 			  			}
 
 			  			h1 {
 			  				color: #333333;
 			  				width: 100%;
 						    float: left;
-						    padding: 105px 0 0 630px;
+						    padding: 0 0 0 630px;
 						    font-family: 'fzlthjw', Arial, sans-serif;
 						    font-weight: bold;
 						    font-size: 27px;
+
+						    @media screen and (max-width: 1470px) {
+						    	padding: 0 0 0 530px;
+						    }
+
+						    @media screen and (max-width: 1370px) {
+						    	padding: 0 0 0 450px;
+						    }
+
+						    @media screen and (max-width: 1170px) {
+						    	padding: 0 0 0 400px;
+						    }
+
+						    @media screen and (max-width: 1100px) {
+						    	padding: 0 0 0 350px;
+						    }
+
+						    @media screen and (max-width: 1070px) {
+						    	padding: 0;
+						    }
+
+						    @media screen and (max-width: 700px) {
+						    	text-align: center;
+						    }
+
+						    @media screen and (max-width: 520px) {
+						    	font-size: 22px;
+						    }
+
+						    @media screen and (max-width: 450px) {
+						    	font-size: 20px;
+						    }
 
 			  				span {
 							    width: 100%;
 							    float: left;
 							    
 							    &:nth-of-type(1) {
-							        font-weight: lighter;
-								    font-family: 'Minion', Arial, sans-serif;
-								    font-size: 105pt;
-								    color: #001489;
-								    height: 140px;
-								    background: -webkit-linear-gradient(#0076ff, #000, #0076ff);
-								    -webkit-background-clip: text;
-								    -webkit-text-fill-color: rgba(0, 20, 137, 0.04);
+							        @media screen and (max-width: 700px) {
+							        	text-align: center;
+							        }
 
-								    em {
-								        font-style: normal;
-									    font-family: 'Helvetica', Arial, sans-serif;
-									    position: relative;
-									    right: 17px;
-									    bottom: 80px;
-									    font-size: 16px;
-									    background: -webkit-linear-gradient(#00377b, #333);
-									    -webkit-background-clip: text;
-									    -webkit-text-fill-color: transparent;
-								    }
+							        img {
+							        	width: 45%;
+							        	height: auto;
+
+							        	@media screen and (max-width: 700px) {
+							        		display: inline;
+							        		float: none;
+							        	}
+
+							        	@media screen and (max-width: 520px) {
+							        		width: 35%;
+							        	}
+
+							        	@media screen and (max-width: 450px) {
+							        		width: 50%;
+							        	}
+							        }
 							    }
 
 							    &:nth-of-type(2) {
 							    	font-weight: bold;
 								    font-family: 'fzlthjw', Arial, sans-serif;
 								    font-size: 45pt;
-							    }
 
+								    @media screen and (max-width: 520px) {
+								    	font-size: 26pt;
+								    }
 
-							    img {
-							    	width: 40%;
-							    	margin: 0 0 15px 0;
+								    @media screen and (max-width: 450px) {
+								    	font-size: 24pt;
+								    }
 							    }
 			  				}	
 				  		}
 
 				  		img {
-				  			width: 17.5%;
+				  			width: 18%;
 				  			float:left;
-				  			height: 100%;
+
+				  			@media screen and (max-width: 1470px) {
+				  				width: 22%;
+				  			}
+
+				  			@media screen and (max-width: 1070px) {
+				  				width: 25%;
+				  			}
+
+				  			@media screen and (max-width: 700px) {
+				  				display: none;
+				  			}
 				  		}
 			  		}
 			  	}
@@ -450,17 +510,39 @@ body.chinalanding {
 
 		.custom-container {
 			display: flex;
+			align-items: center;
 			padding: 70px 150px 70px 150px;
+
+			@media screen and (max-width: 735px) {
+				padding: 70px 15px 70px 15px;
+			}
 
 			.left {
 				width:50%;
 				padding: 15px 0 0 0;
+
+				@media screen and (max-width: 1170px) {
+					width: 100%;
+					text-align:center;
+				}
 
 				h1 {
 				    color: #c572a1;
 				    font-family: 'fzlthjw', Arial, sans-serif;
 				    font-weight: bold;
 				    font-size: 35pt;
+
+				    @media screen and (max-width: 1370px) {
+				    	font-size: 34pt;
+				    }
+
+				    @media screen and (max-width: 1370px) {
+				    	font-size: 33pt;
+				    }
+
+				    @media screen and (max-width: 735px) {
+				    	font-size: 27pt;
+				    }
 				}
 
 				span {
@@ -469,12 +551,24 @@ body.chinalanding {
 					font-size: 16pt;
 				    width: 415px;
 				    float: left;
+
+				    @media screen and (max-width: 1170px) {
+				    	float: none;
+				    }
+
+				    @media screen and (max-width: 735px) {
+				    	font-size: 14pt;
+				    }
 				}
 			}
 
 			.right {
 				width: 50%;
 				text-align: right;
+
+				@media screen and (max-width: 1170px) {
+					display: none;
+				}
 
 				img {
 					width: 85%;
@@ -500,6 +594,10 @@ body.chinalanding {
 		width: 100%;
 		float: left;
 
+		@media screen and (max-width: 870px) {
+			background-position-x: -50px;
+		}
+
 		.custom-container { 
 			display: flex;
 
@@ -507,8 +605,12 @@ body.chinalanding {
 			    width: 30%;
     			text-align: center;
 
+    			@media screen and (max-width: 1064px) {
+    				display: none;
+    			}
+
     			img {
-    				width: 75%;
+    				width: 165px;
     				display: inline;
     			}
 
@@ -522,11 +624,38 @@ body.chinalanding {
 			.right {
 				padding: 100px 0 0 60px;
 
+				@media screen and (max-width: 1064px) {
+					padding: 0 0 0 60px;
+				}
+
+				@media screen and (max-width: 870px) {
+					padding: 0 190px 0 190px;
+					text-align: left;
+				}
+
+				@media screen and (max-width: 756px) {
+					padding: 0;
+				}
+
 				h1 {
 					color: #7a3d12;
 					font-family: 'fzlthjw', Arial, sans-serif;
 				    font-weight: bold;
 				    font-size: 55pt;
+
+				    @media screen and (max-width: 796px) {
+				    	font-size: 50pt;
+				    }
+
+				    @media screen and (max-width: 756px) {
+				    	font-size: 45pt;
+				    	text-align: center;
+				    }
+
+				    @media screen and (max-width: 340px) {
+				    	font-size: 35pt;
+				    	text-align: center;
+				    }
 
 				    span {
 				    	width: 100%;
@@ -534,6 +663,22 @@ body.chinalanding {
 					    font-size: 45px;
 					    font-weight: lighter;
 					    padding: 0 0 0 125px;
+
+					    @media screen and (max-width: 870px) {
+					    	padding: 0;
+					    }
+
+					    @media screen and (max-width: 796px) {
+					    	font-size: 40px;
+					    }
+
+					    @media screen and (max-width: 756px) {
+					    	font-size: 35px;
+					    }
+
+					    @media screen and (max-width: 340px) {
+					    	font-size: 27px;
+					    }
 				    }
 				}
 
@@ -541,6 +686,30 @@ body.chinalanding {
 					padding: 30px 0 0 130px;
 					width: 100%;
 					float: left;
+
+					@media screen and (max-width: 870px) {
+					    padding: 30px 0 0 0px;
+					    width: 100%;
+					    margin: 0 auto;
+					    float: none;
+					}
+
+					@media screen and (max-width: 756px) {
+						width: 57%;
+					}
+
+					@media screen and (max-width: 583px) {
+						width: 65%;
+					}
+
+					@media screen and (max-width: 518px) {
+						width: 80%;
+					}
+
+					@media screen and (max-width: 421px) {
+						width: 100%;
+					}
+
 
 					li {
 					    width: 100%;
@@ -550,6 +719,16 @@ body.chinalanding {
 					    display: flex;
 					    align-items: center;
 					    color: #333333;
+					    text-align: left;
+
+					    @media screen and (max-width: 870px) {
+					    	font-size: 24px;
+					    	margin: 0 0 10px 0;
+					    }
+
+					    @media screen and (max-width: 340px) {
+					    	font-size: 18px;
+					    }
 
 						span {
 							border: 1px solid #7a3d12;
@@ -557,6 +736,11 @@ body.chinalanding {
 						    height: 30px;
 						    float: left;
 						    margin: 0 30px 0 0;
+
+						    @media screen and (max-width: 340px) {
+						        width: 21px;
+    							height: 21px;
+						    }
 
 						    .checkmark{
 								display:inline-block;
@@ -572,6 +756,14 @@ body.chinalanding {
 								    position: relative;
 								    bottom: 12px;
 								    left: 10px;
+
+
+								    @media screen and (max-width: 340px) {
+								        width: 12px;
+									    height: 25px;
+									    bottom: 8px;
+									    left: 10px;
+								    }
 								}
 							}
 						}
@@ -596,6 +788,10 @@ body.chinalanding {
 		    width: 100%;
 		    float: left;
 		    padding: 5px 0 5px 0;
+
+		    @media screen and (max-width: 1100px) {
+		    	padding: 5px 15px 5px 15px;
+		    }
 
 		    .custom-container {
 		    	padding: 0;
@@ -622,10 +818,24 @@ body.chinalanding {
 					width: 50%;
 					float: left;
 
+					@media screen and (max-width: 842px) {
+						width: 65%;
+						margin: 0 auto;
+						float: none;
+					}
+
+					@media screen and (max-width: 420px) {
+						width: 100%;
+					}
+
 					ul {
 						padding: 0 0 0 30px;
 						width: 100%;
 						float: left;
+
+						@media screen and (max-width: 842px) {
+							padding: 0;
+						}
 
 						li {
 							width: 100%;
@@ -642,6 +852,24 @@ body.chinalanding {
 							    align-items: center;
 							    font-family: 'fzlthjw', Arial, sans-serif;
 							    font-size: 26px;
+
+							    @media screen and (max-width: 1060px) {
+									font-size: 23px;
+								}
+
+								@media screen and (max-width: 951px) {
+									font-size: 20px;
+								}	
+
+								@media screen and (max-width: 842px) {
+									justify-content: center;
+									text-align: center;
+									width: 100%;
+								}
+
+								@media screen and (max-width: 350px) {
+									font-size: 16px;
+								}	
 							}			
 						}
 					}
@@ -653,10 +881,19 @@ body.chinalanding {
 					width: 50%;
 					float: left;
 
+					@media screen and (max-width: 842px) {
+						display: none;
+					}
+
 					div {
 						&:nth-child(1) {
 							img {
 								width: 120px;
+
+								@media screen and (max-width: 951px) {
+									position: relative;
+									right: 50px;
+								}
 							}
 						}
 
@@ -694,6 +931,10 @@ body.chinalanding {
 		    float: left;
 		    padding: 5px 0 5px 0;
 
+		    @media screen and (max-width: 1100px) {
+		    	padding: 5px 15px 5px 15px;
+		    }
+
 		    .custom-container {
 		    	padding: 0;
 
@@ -718,6 +959,12 @@ body.chinalanding {
 			width: 100%;
 			float: left;
 
+			@media screen and (max-width: 850px) {
+				background: #d4eff6;
+				min-height: auto;
+				padding: 85px 0 0 0;
+			}
+
 			.custom-container {
 				h1 {
 					color: #e8391b;
@@ -727,6 +974,20 @@ body.chinalanding {
 				    position: relative;
 				    top: 400px;
 
+				    @media screen and (max-width: 1170px) {
+				    	font-size: 35pt;
+				    }
+
+				    @media screen and (max-width: 850px) {
+				    	text-align: center;
+				    	top:0;
+				    	font-size: 27pt;
+				    }
+
+				    @media screen and (max-width: 485px) {
+				    	font-size: 20pt;
+				    }
+
 				    span {
 				    	font-family: 'fzlthjw', Arial, sans-serif;
 				        width: 100%;
@@ -734,6 +995,19 @@ body.chinalanding {
 					    font-size: 50px;
 					    font-weight: bold;
 					    padding: 25px 0 0 191px;
+
+					    @media screen and (max-width: 1170px) {
+					    	font-size: 40px;
+					    }
+
+					    @media screen and (max-width: 850px) {
+					    	padding: 10px 0 0 0;
+					    	font-size: 30px;
+					    }
+
+					    @media screen and (max-width: 485px) {
+					    	font-size: 25px;
+					    }
 				    }
 				}
 			}
@@ -748,22 +1022,41 @@ body.chinalanding {
 			float: left;
 			padding: 100px 0 85px 0;
 
+			@media screen and (max-width: 850px) {
+				padding: 20px 0 85px 0;
+				background: #d4eff6;
+			}
+
 			.custom-container {
 				display: flex;
+
+				@media screen and (max-width: 850px) {
+					display: block;
+				}
 
 				div {
 					width: 25%;
 					display: flex;
 
+					@media screen and (max-width: 850px) {
+						width: 100%;
+					}
+
+					@media screen and (max-width: 850px) {
+						display: block;
+					}
+
 					&:nth-child(1) {
 						span {
 							width: 16%;
+							right: 15px;
 						}
 					}
 
 					&:nth-child(2) {
 						span {
 							width: 25%;
+							right: 15px;
 						}
 
 						p {
@@ -774,16 +1067,19 @@ body.chinalanding {
 					&:nth-child(3) {
 						span {
 							width: 24%;
+							right: 15px;
 						}
 
 						p {
 							width: 65%;
+							right: 15px;
 						}
 					}
 
 					&:nth-child(4) {
 						span {
 							width: 27%;
+							right: 15px;
 						}
 
 						p {
@@ -800,6 +1096,19 @@ body.chinalanding {
 					    text-align: center;
 					    position: relative;
 					    bottom: 78px;
+
+					    @media screen and (max-width: 1170px) {
+					    	font-size: 60pt;
+					    	bottom: 60px;
+					    }
+
+					    @media screen and (max-width: 850px) {
+					    	width: 100%!important;
+					    	float: left;
+					    	right:0!important;
+					    	text-align: center;
+					    	bottom:0;
+					    }
 					}
 
 					p {
@@ -810,6 +1119,20 @@ body.chinalanding {
 					    font-weight: lighter;
 					    font-size: 16pt;
 					    width: 71%;
+
+					    @media screen and (max-width: 1170px) {
+					    	font-size: 13pt;
+					    }
+
+					    @media screen and (max-width: 850px) {
+					        width: 60% !important;
+    						margin: 0 auto;
+					    	text-align: center;
+					    }
+
+					    @media screen and (max-width: 650px) {
+					    	width: 100%!important;
+					    }
 					}
 				}
 			}
@@ -827,6 +1150,10 @@ body.chinalanding {
 		    width: 100%;
 		    float: left;
 		    padding: 5px 0 5px 0;
+
+		    @media screen and (max-width: 1100px) {
+		    	padding: 5px 15px 5px 15px;
+		    }
 
 		    .custom-container {
 		    	padding: 0;
@@ -847,25 +1174,61 @@ body.chinalanding {
 				padding: 100px 0 100px 0;
 				width: 1100px;
 
+				@media screen and (max-width: 1170px) {
+					justify-content: center;
+				}
+
+				@media screen and (max-width: 1090px) {
+					display: block;
+					width: 100%;
+					float: left;
+					padding: 100px 15px 100px 15px;
+				}
+
 				div {
 					width: 33.33%;
 					text-align: center;
 
+					@media screen and (max-width: 1170px) {
+						width: 27.33%;
+					}
+
+					@media screen and (max-width: 1090px) {
+						width: 100%;
+						padding: 0 0 20px 0;
+
+						&:last-child {
+							padding: 0;
+						}
+					}
+
 					&:nth-child(1) {
 						p {
 							width: 59%;
+
+							@media screen and (max-width: 1100px) {
+								width: 75%;
+							}
 						}
 					}
 
 					&:nth-child(2) {
 						p {
 							width: 76%;
+
+							@media screen and (max-width: 1100px) {
+								width: 75%;
+							}
 						}
 					}
 
 					&:nth-child(3) {
 						p {
 							width: 50%;
+
+							@media screen and (max-width: 1100px) {
+								width: 75%;
+							}
 						}
 					}
 
@@ -876,6 +1239,10 @@ body.chinalanding {
 						img {
 							display: inline;
 							width: 60%;
+
+							@media screen and (max-width: 1090px) {
+								width: 200px;
+							}
 						}
 					}
 
@@ -885,12 +1252,26 @@ body.chinalanding {
 					    color: #333333;
     					margin: 0 auto;
     					text-align: left;
+
+    					@media screen and (max-width: 1170px) {
+    						font-size: 12pt;
+    					}
+
+    					@media screen and (max-width: 1090px) {
+    						width: 100%!important;
+    						text-align: center;
+    					}
+
 			    		strong {
 			    			width: 100%;
 			    			float: left;
 			    			text-align: center;
 			    			font-size: 26px;
 			    			padding: 15px 0 10px 0;
+
+			    			@media screen and (max-width: 1170px) {
+			    				font-size: 18px;
+			    			}
 			    		}
 					}
 				}
@@ -909,6 +1290,10 @@ body.chinalanding {
 		    width: 100%;
 		    float: left;
 		    padding: 5px 0 5px 0;
+
+		    @media screen and (max-width: 1100px) {
+		    	padding: 5px 15px 5px 15px;
+		    }
 
 		    .custom-container {
 		    	padding: 0;
@@ -933,8 +1318,15 @@ body.chinalanding {
 			.custom-container {	
 				width: 1100px;
 
+				@media screen and (max-width: 1170px) {
+					width: 100%;
+					float: left;
+					padding: 0 15px 0 15px;
+				}
+
 				.innerContent {
 					display: flex;
+					justify-content: center;
 
 					div {
 						width: 33.33%;

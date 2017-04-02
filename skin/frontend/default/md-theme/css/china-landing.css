@@ -198,6 +198,9 @@ body.chinalanding {
     background: url("../images/md-china/header-bg.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat; }
+    @media screen and (max-width: 1070px) {
+      body.chinalanding .VideoWrapper {
+        background: #a5b9ae; } }
     body.chinalanding .VideoWrapper #video-container {
       width: 100%;
       height: 100%;
@@ -220,7 +223,6 @@ body.chinalanding {
       z-index: 20; }
       @media screen and (max-width: 1070px) {
         body.chinalanding .VideoWrapper .overlay {
-          background-color: rgba(38, 38, 38, 0.64);
           top: 0; } }
       body.chinalanding .VideoWrapper .overlay .overlay__inner {
         width: 100%; }
@@ -232,81 +234,147 @@ body.chinalanding {
             body.chinalanding .VideoWrapper .overlay .overlay__inner .content {
               top: 0;
               height: 100vh;
-              padding: 0;
-              display: flex;
-              align-items: center; } }
+              padding: 0; } }
           body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container {
-            padding: 50px 0 0 0;
+            padding: 0;
             color: #fff;
-            display: flex; }
-            @media screen and (max-width: 620px) {
+            display: flex;
+            align-items: center;
+            height: 80vh; }
+            @media screen and (max-width: 1100px) {
               body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container {
-                padding: 0 15px 0 15px;
-                text-align: center; } }
+                padding: 0 50px 0 50px; } }
+            @media screen and (max-width: 1070px) {
+              body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container {
+                padding: 100px 150px 0 150px; } }
+            @media screen and (max-width: 900px) {
+              body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container {
+                padding: 100px 50px 0 50px; } }
+            @media screen and (max-width: 500px) {
+              body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container {
+                padding: 100px 15px 0 15px; } }
             body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
               color: #333333;
               width: 100%;
               float: left;
-              padding: 105px 0 0 630px;
+              padding: 0 0 0 630px;
               font-family: 'fzlthjw', Arial, sans-serif;
               font-weight: bold;
               font-size: 27px; }
+              @media screen and (max-width: 1470px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  padding: 0 0 0 530px; } }
+              @media screen and (max-width: 1370px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  padding: 0 0 0 450px; } }
+              @media screen and (max-width: 1170px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  padding: 0 0 0 400px; } }
+              @media screen and (max-width: 1100px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  padding: 0 0 0 350px; } }
+              @media screen and (max-width: 1070px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  padding: 0; } }
+              @media screen and (max-width: 700px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  text-align: center; } }
+              @media screen and (max-width: 520px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  font-size: 22px; } }
+              @media screen and (max-width: 450px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 {
+                  font-size: 20px; } }
               body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span {
                 width: 100%;
                 float: left; }
-                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) {
-                  font-weight: lighter;
-                  font-family: 'Minion', Arial, sans-serif;
-                  font-size: 105pt;
-                  color: #001489;
-                  height: 140px;
-                  background: -webkit-linear-gradient(#0076ff, #000, #0076ff);
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: rgba(0, 20, 137, 0.04); }
-                  body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) em {
-                    font-style: normal;
-                    font-family: 'Helvetica', Arial, sans-serif;
-                    position: relative;
-                    right: 17px;
-                    bottom: 80px;
-                    font-size: 16px;
-                    background: -webkit-linear-gradient(#00377b, #333);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; }
+                @media screen and (max-width: 700px) {
+                  body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) {
+                    text-align: center; } }
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) img {
+                  width: 45%;
+                  height: auto; }
+                  @media screen and (max-width: 700px) {
+                    body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) img {
+                      display: inline;
+                      float: none; } }
+                  @media screen and (max-width: 520px) {
+                    body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) img {
+                      width: 35%; } }
+                  @media screen and (max-width: 450px) {
+                    body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(1) img {
+                      width: 50%; } }
                 body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(2) {
                   font-weight: bold;
                   font-family: 'fzlthjw', Arial, sans-serif;
                   font-size: 45pt; }
-                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span img {
-                  width: 40%;
-                  margin: 0 0 15px 0; }
+                  @media screen and (max-width: 520px) {
+                    body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(2) {
+                      font-size: 26pt; } }
+                  @media screen and (max-width: 450px) {
+                    body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container h1 span:nth-of-type(2) {
+                      font-size: 24pt; } }
             body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container img {
-              width: 17.5%;
-              float: left;
-              height: 100%; }
+              width: 18%;
+              float: left; }
+              @media screen and (max-width: 1470px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container img {
+                  width: 22%; } }
+              @media screen and (max-width: 1070px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container img {
+                  width: 25%; } }
+              @media screen and (max-width: 700px) {
+                body.chinalanding .VideoWrapper .overlay .overlay__inner .content .custom-container img {
+                  display: none; } }
   body.chinalanding .secondSection {
     width: 100%;
     float: left; }
     body.chinalanding .secondSection .custom-container {
       display: flex;
+      align-items: center;
       padding: 70px 150px 70px 150px; }
+      @media screen and (max-width: 735px) {
+        body.chinalanding .secondSection .custom-container {
+          padding: 70px 15px 70px 15px; } }
       body.chinalanding .secondSection .custom-container .left {
         width: 50%;
         padding: 15px 0 0 0; }
+        @media screen and (max-width: 1170px) {
+          body.chinalanding .secondSection .custom-container .left {
+            width: 100%;
+            text-align: center; } }
         body.chinalanding .secondSection .custom-container .left h1 {
           color: #c572a1;
           font-family: 'fzlthjw', Arial, sans-serif;
           font-weight: bold;
           font-size: 35pt; }
+          @media screen and (max-width: 1370px) {
+            body.chinalanding .secondSection .custom-container .left h1 {
+              font-size: 34pt; } }
+          @media screen and (max-width: 1370px) {
+            body.chinalanding .secondSection .custom-container .left h1 {
+              font-size: 33pt; } }
+          @media screen and (max-width: 735px) {
+            body.chinalanding .secondSection .custom-container .left h1 {
+              font-size: 27pt; } }
         body.chinalanding .secondSection .custom-container .left span {
           font-family: 'fzlthjw', Arial, sans-serif;
           color: #333333;
           font-size: 16pt;
           width: 415px;
           float: left; }
+          @media screen and (max-width: 1170px) {
+            body.chinalanding .secondSection .custom-container .left span {
+              float: none; } }
+          @media screen and (max-width: 735px) {
+            body.chinalanding .secondSection .custom-container .left span {
+              font-size: 14pt; } }
       body.chinalanding .secondSection .custom-container .right {
         width: 50%;
         text-align: right; }
+        @media screen and (max-width: 1170px) {
+          body.chinalanding .secondSection .custom-container .right {
+            display: none; } }
         body.chinalanding .secondSection .custom-container .right img {
           width: 85%;
           display: inline; }
@@ -320,34 +388,91 @@ body.chinalanding {
     align-items: center;
     width: 100%;
     float: left; }
+    @media screen and (max-width: 870px) {
+      body.chinalanding .thirdSection {
+        background-position-x: -50px; } }
     body.chinalanding .thirdSection .custom-container {
       display: flex; }
       body.chinalanding .thirdSection .custom-container .left {
         width: 30%;
         text-align: center; }
+        @media screen and (max-width: 1064px) {
+          body.chinalanding .thirdSection .custom-container .left {
+            display: none; } }
         body.chinalanding .thirdSection .custom-container .left img {
-          width: 75%;
+          width: 165px;
           display: inline; }
 @-moz-document url-prefix() {
   body.chinalanding .thirdSection .custom-container .left img {
     width: 60%; } }
       body.chinalanding .thirdSection .custom-container .right {
         padding: 100px 0 0 60px; }
+        @media screen and (max-width: 1064px) {
+          body.chinalanding .thirdSection .custom-container .right {
+            padding: 0 0 0 60px; } }
+        @media screen and (max-width: 870px) {
+          body.chinalanding .thirdSection .custom-container .right {
+            padding: 0 190px 0 190px;
+            text-align: left; } }
+        @media screen and (max-width: 756px) {
+          body.chinalanding .thirdSection .custom-container .right {
+            padding: 0; } }
         body.chinalanding .thirdSection .custom-container .right h1 {
           color: #7a3d12;
           font-family: 'fzlthjw', Arial, sans-serif;
           font-weight: bold;
           font-size: 55pt; }
+          @media screen and (max-width: 796px) {
+            body.chinalanding .thirdSection .custom-container .right h1 {
+              font-size: 50pt; } }
+          @media screen and (max-width: 756px) {
+            body.chinalanding .thirdSection .custom-container .right h1 {
+              font-size: 45pt;
+              text-align: center; } }
+          @media screen and (max-width: 340px) {
+            body.chinalanding .thirdSection .custom-container .right h1 {
+              font-size: 35pt;
+              text-align: center; } }
           body.chinalanding .thirdSection .custom-container .right h1 span {
             width: 100%;
             float: left;
             font-size: 45px;
             font-weight: lighter;
             padding: 0 0 0 125px; }
+            @media screen and (max-width: 870px) {
+              body.chinalanding .thirdSection .custom-container .right h1 span {
+                padding: 0; } }
+            @media screen and (max-width: 796px) {
+              body.chinalanding .thirdSection .custom-container .right h1 span {
+                font-size: 40px; } }
+            @media screen and (max-width: 756px) {
+              body.chinalanding .thirdSection .custom-container .right h1 span {
+                font-size: 35px; } }
+            @media screen and (max-width: 340px) {
+              body.chinalanding .thirdSection .custom-container .right h1 span {
+                font-size: 27px; } }
         body.chinalanding .thirdSection .custom-container .right ul {
           padding: 30px 0 0 130px;
           width: 100%;
           float: left; }
+          @media screen and (max-width: 870px) {
+            body.chinalanding .thirdSection .custom-container .right ul {
+              padding: 30px 0 0 0px;
+              width: 100%;
+              margin: 0 auto;
+              float: none; } }
+          @media screen and (max-width: 756px) {
+            body.chinalanding .thirdSection .custom-container .right ul {
+              width: 57%; } }
+          @media screen and (max-width: 583px) {
+            body.chinalanding .thirdSection .custom-container .right ul {
+              width: 65%; } }
+          @media screen and (max-width: 518px) {
+            body.chinalanding .thirdSection .custom-container .right ul {
+              width: 80%; } }
+          @media screen and (max-width: 421px) {
+            body.chinalanding .thirdSection .custom-container .right ul {
+              width: 100%; } }
           body.chinalanding .thirdSection .custom-container .right ul li {
             width: 100%;
             height: 50px;
@@ -355,13 +480,25 @@ body.chinalanding {
             font-size: 29px;
             display: flex;
             align-items: center;
-            color: #333333; }
+            color: #333333;
+            text-align: left; }
+            @media screen and (max-width: 870px) {
+              body.chinalanding .thirdSection .custom-container .right ul li {
+                font-size: 24px;
+                margin: 0 0 10px 0; } }
+            @media screen and (max-width: 340px) {
+              body.chinalanding .thirdSection .custom-container .right ul li {
+                font-size: 18px; } }
             body.chinalanding .thirdSection .custom-container .right ul li span {
               border: 1px solid #7a3d12;
               width: 30px;
               height: 30px;
               float: left;
               margin: 0 30px 0 0; }
+              @media screen and (max-width: 340px) {
+                body.chinalanding .thirdSection .custom-container .right ul li span {
+                  width: 21px;
+                  height: 21px; } }
               body.chinalanding .thirdSection .custom-container .right ul li span .checkmark {
                 display: inline-block; }
                 body.chinalanding .thirdSection .custom-container .right ul li span .checkmark:after {
@@ -375,6 +512,12 @@ body.chinalanding {
                   position: relative;
                   bottom: 12px;
                   left: 10px; }
+                  @media screen and (max-width: 340px) {
+                    body.chinalanding .thirdSection .custom-container .right ul li span .checkmark:after {
+                      width: 12px;
+                      height: 25px;
+                      bottom: 8px;
+                      left: 10px; } }
   body.chinalanding .fourthSection {
     width: 100%;
     float: left; }
@@ -384,6 +527,9 @@ body.chinalanding {
       width: 100%;
       float: left;
       padding: 5px 0 5px 0; }
+      @media screen and (max-width: 1100px) {
+        body.chinalanding .fourthSection .sectionTitle {
+          padding: 5px 15px 5px 15px; } }
       body.chinalanding .fourthSection .sectionTitle .custom-container {
         padding: 0; }
         body.chinalanding .fourthSection .sectionTitle .custom-container p {
@@ -401,10 +547,21 @@ body.chinalanding {
       body.chinalanding .fourthSection .custom-container .inner .left {
         width: 50%;
         float: left; }
+        @media screen and (max-width: 842px) {
+          body.chinalanding .fourthSection .custom-container .inner .left {
+            width: 65%;
+            margin: 0 auto;
+            float: none; } }
+        @media screen and (max-width: 420px) {
+          body.chinalanding .fourthSection .custom-container .inner .left {
+            width: 100%; } }
         body.chinalanding .fourthSection .custom-container .inner .left ul {
           padding: 0 0 0 30px;
           width: 100%;
           float: left; }
+          @media screen and (max-width: 842px) {
+            body.chinalanding .fourthSection .custom-container .inner .left ul {
+              padding: 0; } }
           body.chinalanding .fourthSection .custom-container .inner .left ul li {
             width: 100%;
             float: left; }
@@ -419,13 +576,34 @@ body.chinalanding {
               align-items: center;
               font-family: 'fzlthjw', Arial, sans-serif;
               font-size: 26px; }
+              @media screen and (max-width: 1060px) {
+                body.chinalanding .fourthSection .custom-container .inner .left ul li span {
+                  font-size: 23px; } }
+              @media screen and (max-width: 951px) {
+                body.chinalanding .fourthSection .custom-container .inner .left ul li span {
+                  font-size: 20px; } }
+              @media screen and (max-width: 842px) {
+                body.chinalanding .fourthSection .custom-container .inner .left ul li span {
+                  justify-content: center;
+                  text-align: center;
+                  width: 100%; } }
+              @media screen and (max-width: 350px) {
+                body.chinalanding .fourthSection .custom-container .inner .left ul li span {
+                  font-size: 16px; } }
       body.chinalanding .fourthSection .custom-container .inner .right {
         display: flex;
         align-items: center;
         width: 50%;
         float: left; }
+        @media screen and (max-width: 842px) {
+          body.chinalanding .fourthSection .custom-container .inner .right {
+            display: none; } }
         body.chinalanding .fourthSection .custom-container .inner .right div:nth-child(1) img {
           width: 120px; }
+          @media screen and (max-width: 951px) {
+            body.chinalanding .fourthSection .custom-container .inner .right div:nth-child(1) img {
+              position: relative;
+              right: 50px; } }
         body.chinalanding .fourthSection .custom-container .inner .right div:nth-child(2) {
           width: 100%;
           text-align: center; }
@@ -442,6 +620,9 @@ body.chinalanding {
     width: 100%;
     float: left;
     padding: 5px 0 5px 0; }
+    @media screen and (max-width: 1100px) {
+      body.chinalanding .fifthSection .sectionTitle {
+        padding: 5px 15px 5px 15px; } }
     body.chinalanding .fifthSection .sectionTitle .custom-container {
       padding: 0; }
       body.chinalanding .fifthSection .sectionTitle .custom-container p {
@@ -460,6 +641,11 @@ body.chinalanding {
     align-items: center;
     width: 100%;
     float: left; }
+    @media screen and (max-width: 850px) {
+      body.chinalanding .fifthSection .innerWrapper {
+        background: #d4eff6;
+        min-height: auto;
+        padding: 85px 0 0 0; } }
     body.chinalanding .fifthSection .innerWrapper .custom-container h1 {
       color: #e8391b;
       font-family: 'fzlthjw', Arial, sans-serif;
@@ -467,6 +653,17 @@ body.chinalanding {
       font-size: 39pt;
       position: relative;
       top: 400px; }
+      @media screen and (max-width: 1170px) {
+        body.chinalanding .fifthSection .innerWrapper .custom-container h1 {
+          font-size: 35pt; } }
+      @media screen and (max-width: 850px) {
+        body.chinalanding .fifthSection .innerWrapper .custom-container h1 {
+          text-align: center;
+          top: 0;
+          font-size: 27pt; } }
+      @media screen and (max-width: 485px) {
+        body.chinalanding .fifthSection .innerWrapper .custom-container h1 {
+          font-size: 20pt; } }
       body.chinalanding .fifthSection .innerWrapper .custom-container h1 span {
         font-family: 'fzlthjw', Arial, sans-serif;
         width: 100%;
@@ -474,6 +671,16 @@ body.chinalanding {
         font-size: 50px;
         font-weight: bold;
         padding: 25px 0 0 191px; }
+        @media screen and (max-width: 1170px) {
+          body.chinalanding .fifthSection .innerWrapper .custom-container h1 span {
+            font-size: 40px; } }
+        @media screen and (max-width: 850px) {
+          body.chinalanding .fifthSection .innerWrapper .custom-container h1 span {
+            padding: 10px 0 0 0;
+            font-size: 30px; } }
+        @media screen and (max-width: 485px) {
+          body.chinalanding .fifthSection .innerWrapper .custom-container h1 span {
+            font-size: 25px; } }
   body.chinalanding .fifthSection .innerContent {
     height: auto;
     background: url("../images/md-china/fifth-section-inner-bg.jpg") top;
@@ -482,23 +689,41 @@ body.chinalanding {
     width: 100%;
     float: left;
     padding: 100px 0 85px 0; }
+    @media screen and (max-width: 850px) {
+      body.chinalanding .fifthSection .innerContent {
+        padding: 20px 0 85px 0;
+        background: #d4eff6; } }
     body.chinalanding .fifthSection .innerContent .custom-container {
       display: flex; }
+      @media screen and (max-width: 850px) {
+        body.chinalanding .fifthSection .innerContent .custom-container {
+          display: block; } }
       body.chinalanding .fifthSection .innerContent .custom-container div {
         width: 25%;
         display: flex; }
+        @media screen and (max-width: 850px) {
+          body.chinalanding .fifthSection .innerContent .custom-container div {
+            width: 100%; } }
+        @media screen and (max-width: 850px) {
+          body.chinalanding .fifthSection .innerContent .custom-container div {
+            display: block; } }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(1) span {
-          width: 16%; }
+          width: 16%;
+          right: 15px; }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(2) span {
-          width: 25%; }
+          width: 25%;
+          right: 15px; }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(2) p {
           width: 57%; }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(3) span {
-          width: 24%; }
+          width: 24%;
+          right: 15px; }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(3) p {
-          width: 65%; }
+          width: 65%;
+          right: 15px; }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(4) span {
-          width: 27%; }
+          width: 27%;
+          right: 15px; }
         body.chinalanding .fifthSection .innerContent .custom-container div:nth-child(4) p {
           width: 71%; }
         body.chinalanding .fifthSection .innerContent .custom-container div span {
@@ -510,6 +735,17 @@ body.chinalanding {
           text-align: center;
           position: relative;
           bottom: 78px; }
+          @media screen and (max-width: 1170px) {
+            body.chinalanding .fifthSection .innerContent .custom-container div span {
+              font-size: 60pt;
+              bottom: 60px; } }
+          @media screen and (max-width: 850px) {
+            body.chinalanding .fifthSection .innerContent .custom-container div span {
+              width: 100% !important;
+              float: left;
+              right: 0 !important;
+              text-align: center;
+              bottom: 0; } }
         body.chinalanding .fifthSection .innerContent .custom-container div p {
           margin: 0;
           padding: 0;
@@ -518,12 +754,26 @@ body.chinalanding {
           font-weight: lighter;
           font-size: 16pt;
           width: 71%; }
+          @media screen and (max-width: 1170px) {
+            body.chinalanding .fifthSection .innerContent .custom-container div p {
+              font-size: 13pt; } }
+          @media screen and (max-width: 850px) {
+            body.chinalanding .fifthSection .innerContent .custom-container div p {
+              width: 60% !important;
+              margin: 0 auto;
+              text-align: center; } }
+          @media screen and (max-width: 650px) {
+            body.chinalanding .fifthSection .innerContent .custom-container div p {
+              width: 100% !important; } }
   body.chinalanding .sixthSection .sectionTitle {
     background: #e5e5e5;
     border-left: 5px solid #037bff;
     width: 100%;
     float: left;
     padding: 5px 0 5px 0; }
+    @media screen and (max-width: 1100px) {
+      body.chinalanding .sixthSection .sectionTitle {
+        padding: 5px 15px 5px 15px; } }
     body.chinalanding .sixthSection .sectionTitle .custom-container {
       padding: 0; }
       body.chinalanding .sixthSection .sectionTitle .custom-container p {
@@ -536,39 +786,82 @@ body.chinalanding {
     display: flex;
     padding: 100px 0 100px 0;
     width: 1100px; }
+    @media screen and (max-width: 1170px) {
+      body.chinalanding .sixthSection .inner .custom-container {
+        justify-content: center; } }
+    @media screen and (max-width: 1090px) {
+      body.chinalanding .sixthSection .inner .custom-container {
+        display: block;
+        width: 100%;
+        float: left;
+        padding: 100px 15px 100px 15px; } }
     body.chinalanding .sixthSection .inner .custom-container div {
       width: 33.33%;
       text-align: center; }
+      @media screen and (max-width: 1170px) {
+        body.chinalanding .sixthSection .inner .custom-container div {
+          width: 27.33%; } }
+      @media screen and (max-width: 1090px) {
+        body.chinalanding .sixthSection .inner .custom-container div {
+          width: 100%;
+          padding: 0 0 20px 0; }
+          body.chinalanding .sixthSection .inner .custom-container div:last-child {
+            padding: 0; } }
       body.chinalanding .sixthSection .inner .custom-container div:nth-child(1) p {
         width: 59%; }
+        @media screen and (max-width: 1100px) {
+          body.chinalanding .sixthSection .inner .custom-container div:nth-child(1) p {
+            width: 75%; } }
       body.chinalanding .sixthSection .inner .custom-container div:nth-child(2) p {
         width: 76%; }
+        @media screen and (max-width: 1100px) {
+          body.chinalanding .sixthSection .inner .custom-container div:nth-child(2) p {
+            width: 75%; } }
       body.chinalanding .sixthSection .inner .custom-container div:nth-child(3) p {
         width: 50%; }
+        @media screen and (max-width: 1100px) {
+          body.chinalanding .sixthSection .inner .custom-container div:nth-child(3) p {
+            width: 75%; } }
       body.chinalanding .sixthSection .inner .custom-container div .imageWrapper {
         width: 100%;
         float: left; }
         body.chinalanding .sixthSection .inner .custom-container div .imageWrapper img {
           display: inline;
           width: 60%; }
+          @media screen and (max-width: 1090px) {
+            body.chinalanding .sixthSection .inner .custom-container div .imageWrapper img {
+              width: 200px; } }
       body.chinalanding .sixthSection .inner .custom-container div p {
         font-family: 'fzlthjw', Arial, sans-serif;
         font-size: 15pt;
         color: #333333;
         margin: 0 auto;
         text-align: left; }
+        @media screen and (max-width: 1170px) {
+          body.chinalanding .sixthSection .inner .custom-container div p {
+            font-size: 12pt; } }
+        @media screen and (max-width: 1090px) {
+          body.chinalanding .sixthSection .inner .custom-container div p {
+            width: 100% !important;
+            text-align: center; } }
         body.chinalanding .sixthSection .inner .custom-container div p strong {
           width: 100%;
           float: left;
           text-align: center;
           font-size: 26px;
           padding: 15px 0 10px 0; }
+          @media screen and (max-width: 1170px) {
+            body.chinalanding .sixthSection .inner .custom-container div p strong {
+              font-size: 18px; } }
   body.chinalanding .seventhSection .sectionTitle {
     background: #e5e5e5;
     border-left: 5px solid #037bff;
     width: 100%;
     float: left;
     padding: 5px 0 5px 0; }
+    @media screen and (max-width: 1100px) {
+      body.chinalanding .seventhSection .sectionTitle {
+        padding: 5px 15px 5px 15px; } }
     body.chinalanding .seventhSection .sectionTitle .custom-container {
       padding: 0; }
       body.chinalanding .seventhSection .sectionTitle .custom-container p {
@@ -585,8 +878,14 @@ body.chinalanding {
     padding: 100px 0 100px 0; }
     body.chinalanding .seventhSection .inner .custom-container {
       width: 1100px; }
+      @media screen and (max-width: 1170px) {
+        body.chinalanding .seventhSection .inner .custom-container {
+          width: 100%;
+          float: left;
+          padding: 0 15px 0 15px; } }
       body.chinalanding .seventhSection .inner .custom-container .innerContent {
-        display: flex; }
+        display: flex;
+        justify-content: center; }
         body.chinalanding .seventhSection .inner .custom-container .innerContent div {
           width: 33.33%; }
           body.chinalanding .seventhSection .inner .custom-container .innerContent div .imageWrapper {

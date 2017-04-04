@@ -44,7 +44,7 @@
         <?php endif; ?>
         <?php $i++; endforeach; ?>
 
-        <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getvideo_base_image(), 'video_base_image') ?>
+        <!-- <?php //echo $this->helper('catalog/output')->productAttribute($_product, $_product->getvideo_base_image(), 'video_base_image') ?> -->
     </div>
     <div class="thumbs">
         <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
@@ -54,7 +54,7 @@
         </div>
         <?php $i++; endforeach; ?>
 
-        <?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getvideo_thumbnail(), 'video_thumbnail') ?>
+        <!-- <?php //echo $this->helper('catalog/output')->productAttribute($_product, $_product->getvideo_thumbnail(), 'video_thumbnail') ?> -->
                 
     </div>
 </div>

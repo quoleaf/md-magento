@@ -11850,7 +11850,7 @@ input.customPaypalBtn-NutriHair {
 #beforeandafter .content .inner img {
     width: 100px;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 45%;
 }
 
@@ -11872,6 +11872,7 @@ input.customPaypalBtn-NutriHair {
 						    min-width: 80px;
 						    width: 20%; 
 						    margin-top: 40%;
+						    margin-left: 39%;
 						}
 					}
 				}
@@ -11880,7 +11881,7 @@ input.customPaypalBtn-NutriHair {
 	}	
 }
 
-@media screen only and (max-width: 384px ){
+@media screen and (max-width: 384px ){
 	#beforeandafter .content .inner img {
 		margin-top: 80%;
 	}
@@ -11890,7 +11891,7 @@ input.customPaypalBtn-NutriHair {
 	}
 }
 
-@media screen only and (max-width: 480px ){
+@media screen and (max-width: 480px ){
 	#beforeandafter .content .inner img {
 		margin-top: 65%;
 	}

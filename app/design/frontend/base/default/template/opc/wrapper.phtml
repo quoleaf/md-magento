@@ -71,7 +71,8 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
             <?php if(!$is_persistent):?>
             
                 <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
-
+                
+            
             <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
                 <?php echo $this->getChildHtml('login');?>
             <?php endif;?>
@@ -166,9 +167,16 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
             <div id="checkboxPaymentTarget" class="CustomRightWrapper disabled">
 
                 <div class="payment section">
-                    <?php if(!$is_persistent):?>
-                        <?php echo $this->getChildHtml('paypal.button'); ?>
-                    <?php endif;?>
+                    <?php 
+                    $cart = Mage::getModel('checkout/cart')->getQuote();
+                    foreach ($cart->getAllItems() as $item) {
+                        $productName = $item->getProduct()->getSku();
+                        if($productName == "test" || $productName == "NH3120-T"){
+                            echo $this->getChildHtml('paypal.button');
+                        }
+                    }
+                    ?>
+
                     <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
                         <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
                     </div>
@@ -267,6 +275,25 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
     </div>
 </div>
 
+<?php
+$cart = Mage::getModel('checkout/cart')->getQuote();
+foreach ($cart->getAllItems() as $item) {
+$productName = $item->getProduct()->getSku();
+if($productName == "test" || $productName == "NH3120-T"){
+?>    
+<script>
+jQuery(document).ready(function() {
+jQuery('body.opc-index-index .opc-wrapper-opc .btn-checkout').removeClass('opc-btn-checkout');
+var link = jQuery('.paypal-logo a[data-action="checkout-form-submit"]').attr("href");
+var content = jQuery('body.opc-index-index .opc-wrapper-opc .btn-checkout').html();
+jQuery('body.opc-index-index .opc-wrapper-opc .btn-checkout').html('<a href="'+link+'">'+content+'</a>');
+});
+</script>
+<style>
+.opc-wrapper-opc .paypal-logo .paypal-or{display:none;}
+body.opc-index-index .opc-wrapper-opc .btn-checkout span{cursor: pointer;}
+</style>
+<?php }} ?>
 
 <?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
 <script type="text/javascript">
@@ -468,6 +495,3 @@ function MoveContent(destId, srcId) {
 </script>
 
 
-<style>
-.opc-wrapper-opc .paypal-logo .paypal-or{display:none;}
-</style>

@@ -1,0 +1,26 @@
+<?php
+/**
+ * All For Coding
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 All For Coding. (http://www.all4coding.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/* @var $this All4coding_Core_Block_All4coding_Core_License_Close */
+
+?>
+<div id="messages" style="margin: 1em;"><?php echo $this->getMessagesBlock()->getGroupedHtml(); ?></div>
+<script type="text/javascript">
+function closeWindow() {
+    if (window.parent) {
+        window.parent.all4codingLicense.closeDialog();
+    }
+}
+
+setTimeout(closeWindow, 3000);
+</script>
+<div class="a-center">
+<?php echo $this->getCloseButtonHtml() ?>
+</div>

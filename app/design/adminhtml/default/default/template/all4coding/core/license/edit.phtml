@@ -1,0 +1,73 @@
+<?php
+/**
+ * All For Coding
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 All For Coding. (http://www.all4coding.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this Mage_Core_Block_Template */
+$this->setChild('license_edit', $this->getLayout()->createBlock('all4coding_core/all4coding_core_license_edit', 'license_edit'));
+?>
+<div class="license_edit_wrapper">
+    <div id="license_edit_messages"></div>
+    <?php echo $this->getChildHtml('license_edit'); ?>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Translator.add('-- Select Site --', '<?php echo $this->__('-- Select Site --'); ?>');
+editForm._submit = function() {
+    var $form = $(this.formId);
+    var submitUrl = $form.action;
+    if (this.submitUrl) {
+        submitUrl = this.submitUrl
+    }
+    new Ajax.Request(submitUrl, {
+        method: 'post',
+        parameters: $(this.formId).serialize(),
+        onComplete: function(transport) {
+            var response = transport.responseText.evalJSON();
+            if ($('license_edit_messages')) {
+                $('license_edit_messages').innerHTML = response.message;
+            }
+            all4coding.core.updateLicenseHostList(response);
+            if (!response.error) {
+                all4coding.core.resetLicenseForm();
+                // refresh the license list
+                all4coding_licensesJsObject.doFilter()
+            }
+            // clear license message after few seconds
+            setTimeout(all4coding.core.deleteSaveLicenseMessage, 5000);
+        },
+        onFailure: function(transport) {
+            location.href = BASE_URL;
+        }
+    });
+};
+
+all4coding.core.deleteSaveLicenseMessage = function() {
+    if ($('license_edit_messages')) {
+        $('license_edit_messages').innerHTML = '';
+    }
+}
+
+all4coding.core.updateLicenseHostList =  function(response) {
+    if (response.host_list_changed) {
+        var html = '<option value="">' + Translator.translate('-- Select Site --') + '</option>';
+        for (var key in response.host_list) {
+            if (response.host_list.hasOwnProperty(key)) {
+                html += '<option value="' + response.host_list[key] + '">' + response.host_list[key] + '</option>';
+            }
+        }
+        $('license_host').innerHTML = html;
+    }
+}
+
+all4coding.core.resetLicenseForm = function() {
+    $('license_serial').value = '';
+    $('license_per_instance').value = 0;
+    $('license_host').value = '';
+}
+//]]>
+</script>

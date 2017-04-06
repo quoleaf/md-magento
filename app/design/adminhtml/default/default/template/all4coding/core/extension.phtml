@@ -1,0 +1,28 @@
+<?php
+/**
+ * All For Coding
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 All For Coding. (http://www.all4coding.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this All4coding_Core_Block_All4coding_Core_Extension */
+
+?>
+
+<div class="content-header">
+    <?php echo $this->getHeaderHtml(); ?>
+</div>
+<?php echo $this->getTabsHtml() ?>
+<div id="extension_tab_content"></div>
+<script type="text/javascript">
+//<![CDATA[
+ALL4CODING_INSTALLER_URL = '<?php echo $this->getUrl('*/*/ajax'); ?>';
+
+all4codingExtensions = <?php echo $this->getAllExtensions(); ?>;
+all4codingserialForm = <?php echo $this->getJsonSerialForm(); ?>;
+all4codingUninstallForm = <?php echo $this->getJsonUninstallForm(); ?>;
+
+//]]>
+</script>

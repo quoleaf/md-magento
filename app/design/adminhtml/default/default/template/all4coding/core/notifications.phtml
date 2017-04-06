@@ -1,0 +1,28 @@
+<?php
+/**
+ * All For Coding
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 All For Coding. (http://www.all4coding.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this All4coding_Core_Block_Notifications */
+$_extensions = $this->getUpdatableExtensions();
+$_unregExtensions = $this->getUnregisterExtensions();
+
+?>
+<?php if($_extensions): ?>
+<div class="notification-global">
+    <strong><?php echo $this->helper('all4coding_core')->__('One or more of the All4coding Extensions is updatable:'); ?></strong>
+    <?php echo implode(', ', $_extensions); ?>.    
+    <?php echo $this->helper('all4coding_core')->__('Click here to go to <a href="%s">Extension Manager</a> and update extensions.', $this->getManageUrl()); ?>
+</div>
+<?php endif;?>
+<?php if($_unregExtensions): ?>
+<div class="notification-global">
+    <strong><?php echo $this->helper('all4coding_core')->__('One or more of the All4coding Extensions is not registered:'); ?></strong>
+    <?php echo implode(', ', $_unregExtensions); ?>.    
+    <?php echo $this->helper('all4coding_core')->__('Click here to go to <a href="%s">Extension Manager</a> and register extensions.', $this->getManageUrl()); ?>
+</div>
+<?php endif;?>

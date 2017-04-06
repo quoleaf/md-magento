@@ -1,0 +1,297 @@
+span.gi {
+    color: #d7d7d7;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.grid table td.a4c_order span {
+    background-repeat: no-repeat;
+    float: left;
+    height: 13px;
+    text-align: center;
+    width: 20px;
+}
+
+.grid table td.a4c_order span.uparrow {
+    background-image: url("../images/all4coding/core/uparrow.png");
+}
+
+.grid table td.a4c_order span.downarrow {
+    background-image: url("../images/all4coding/core/downarrow.png");
+}
+
+.grid table td.a4c_order span.text {
+    display: none;
+}
+
+.all4coding-installed a,
+.all4coding-available a {
+    text-decoration: none;
+}
+
+.all4coding-installed a:hover,
+.all4coding-available a:hover {
+    text-decoration: underline;
+}
+
+.all4coding-installed .all4coding-header {
+    color: #DE5221;
+}
+.all4coding-available .all4coding-header {
+    color: #37971E;
+}
+.all4coding-installed .all4coding-products,
+.all4coding-available .all4coding-products {
+    padding: 7px 0 0 7px;
+    margin-bottom: 20px; 
+}
+
+.all4coding-installed .all4coding-products {
+    border: 1px solid #FFD7C8;
+    background-color: #FFFCE5;
+}
+.all4coding-available .all4coding-products {
+    border: 1px solid #37971E;
+    background-color: #F3FAE9;
+}
+
+.all4coding-installed .product-item,
+.all4coding-available .product-item {
+    float: left;
+    margin: 0 7px 7px 0;
+}
+
+.all4coding-installed .product-item {
+    border: 3px solid #F8E3C8;
+    background-color: #FFFDEF;
+}
+.all4coding-available .product-item {
+    border: 3px solid #E4F2D5;
+    background-color: #F8FCF2;
+}
+
+.product-item .new-version-msg {
+    color: #008000;
+    font-weight: bold;
+}
+
+.all4coding-installed .product-head,
+.all4coding-available .product-head {
+    padding: 5px;
+    height: 155px;
+}
+
+.all4coding-installed .product-image,
+.all4coding-available .product-image {
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+.all4coding-installed .product-info,
+.all4coding-available .product-info {
+    margin-left: 150px;
+    padding-left: 5px;
+    width: 180px;
+}
+
+.all4coding-installed .product-name,
+.all4coding-available .product-name {
+    font-weight: normal;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.all4coding-installed .product-name {
+    color: #DE5221;
+    border-bottom: 1px solid #FFD7C8;
+}
+.all4coding-available .product-name {
+    color: #37971E;
+    border-bottom: 1px solid #7EC969;
+}
+
+.all4coding-installed .product-version,
+.all4coding-available .product-version {
+    color: #808080;
+}
+
+.all4coding-available .product-link {
+    color: #008000;
+}
+
+.all4coding-installed .no-license {
+  background-color: #FAEBE7;
+  border: 1px solid #F16048;
+  color: #DF280A;
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.all4coding-available .product-old-price {
+  margin-bottom: 0;
+}
+
+.all4coding-available .price-label {
+  color: #CD5033;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.all4coding-available .price {
+  color: #C76200;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.product-old-price .price-label {
+  color: #999999;
+  font-weight: normal;
+}
+
+.product-old-price .price {
+  text-decoration: line-through;
+}
+
+.all4coding-available .free {
+  color: #EB2C00;
+  font-weight: bold;
+}
+
+.all4coding-available .free-trial {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.all4coding-installed .product-actions button,
+.all4coding-available .product-actions button {
+    margin-top: 2px;
+}
+
+.all4coding-installed .product-desc,
+.all4coding-available .product-desc {
+    width: 335px;
+    padding: 5px;
+}
+
+.all4coding-available .product-desc-caption {
+    color: #37971E;
+    border-bottom: 1px solid #7EC969;
+}
+
+.product-desc-content {
+    height: 170px;
+    overflow-y: auto;
+}
+
+.license_list_wrapper, .license_edit_wrapper {
+    background: none repeat scroll 0 0 #E7EFEF;
+    border: 1px solid #CDDDDD;
+    margin: 1.5em 0;
+    padding: 1em;
+}
+
+#loading-mask {
+    z-index: 1100;
+}
+
+/* all4coding install wizard */
+#all4coding_install_window_content {
+    position: relative;
+}
+#all4coding_install_window_content .buttons {
+    border-top: 1px solid #999999;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding-top: 5px;
+    min-height: 20px;
+}
+
+#all4coding_install_window_content .buttons button {
+    margin-right: 5px;
+}
+
+#all4coding_install_window_content .buttons .button-right {
+    margin-right: 0;
+    margin-left: 5px;
+    float: right;
+}
+
+.all4coding-install-wizard {
+    padding: 18px 0;
+}
+
+.all4coding-install-wizard .title {
+    color: #B31017;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+.all4coding-install-wizard .desc {
+    padding-bottom: 60px;
+}
+
+.all4coding-install-wizard .serial-page .title {
+    padding-bottom: 10px;
+}
+
+.all4coding-install-wizard .serial-page .desc {
+    padding-bottom: 10px;
+}
+
+/* .all4coding-install-wizard .uninstall-reason-page {
+    max-height: 280px;
+    overflow: auto;
+} */
+
+.all4coding-install-wizard .uninstall-reason-page .title {
+    padding-bottom: 10px;
+}
+
+.all4coding-install-wizard .uninstall-reason-page .desc {
+    padding-bottom: 10px;
+}
+
+.all4coding-install-wizard .uninstall-reason-page .form {
+    border: 1px solid #D6D6D6;
+    height: 180px;
+    overflow: auto;
+    padding: 10px 15px;
+}
+
+.all4coding-install-wizard .uninstall-reason-page textarea {
+    width: 98%;
+    height: 6em;
+}
+
+.all4coding-install-wizard .process-page {
+    max-height: 280px;
+    overflow: auto;
+}
+
+.all4coding-progressbar {
+    height: 20px;
+    border: 2px solid #000;
+    margin-bottom: 5px;
+}
+
+.all4coding-progressbar .toddler-outer {
+    height: 100%;
+    background-image: url("../images/all4coding/core/progress-outer.png");
+    background-color: #FFF;
+}
+
+.all4coding-progressbar .toddler {
+    height: 100%;
+    background-image: url("../images/all4coding/core/progress-inner.png");
+}
+
+.all4coding-task{ padding: 2px 2px 2px 30px; background: url("../images/all4coding/core/wait.png") no-repeat left center;margin-left:10px;}
+.all4coding-task.process{ background-image:url("../images/all4coding/core/process.gif");}
+.all4coding-task.success{ background-image:url("../images/all4coding/core/ok.png");}
+.all4coding-task.fail{ background-image:url("../images/all4coding/core/fail.png");}

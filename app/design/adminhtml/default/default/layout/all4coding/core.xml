@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <name>all4coding/core.css</name>
+            </action>
+            <action method="addJs">
+                <script>all4coding/adminhtml/core.js?ver=2.1.1</script>
+            </action>
+            <action method="addJs" ifconfig="dev/js/merge_files">
+                <script>all4coding/adminhtml/core.js</script>
+            </action>
+            <action method="addJs">
+                <script>all4coding/adminhtml/fixes.js?ver=2.1.1</script>
+            </action>
+            <action method="addJs" ifconfig="dev/js/merge_files">
+                <script>all4coding/adminhtml/fixes.js</script>
+            </action>
+        </reference>
+        <reference name="notifications">
+            <block type="all4coding_core/notifications" name="all4coding_core_notifications" template="all4coding/core/notifications.phtml" before="-"/>
+        </reference>
+    </default>
+    
+    <!-- Extension Manager -->
+    <adminhtml_all4coding_core_index>
+        <update handle="editor"/>
+        <reference name="head">
+            <action method="addJs">
+                <script>all4coding/adminhtml/core/license.js?ver=2.1.1</script>
+            </action>
+            <action method="addJs" ifconfig="dev/js/merge_files">
+                <script>all4coding/adminhtml/core/license.js</script>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="all4coding_core/all4coding_core_extension" name="extension_list" />
+        </reference>
+    </adminhtml_all4coding_core_index>
+    
+    <!-- License Manager Notify and Close Page -->
+    <adminhtml_all4coding_core_license_index>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="all4coding_core/all4coding_core_license_close"/>
+        </block>
+    </adminhtml_all4coding_core_license_index>
+    
+    <!-- License Manager -->
+    <adminhtml_all4coding_core_license_manage>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="core/template" name="license_list_wrapper" template="all4coding/core/license.phtml"/>
+            <block type="core/template" name="license_list_edit_wrapper" template="all4coding/core/license/edit.phtml"/>
+        </block>
+    </adminhtml_all4coding_core_license_manage>
+    
+    <adminhtml_all4coding_core_license_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="all4coding_core/all4coding_core_license_grid" name="admin.license.grid"/>
+        </block>
+    </adminhtml_all4coding_core_license_grid>
+</layout>

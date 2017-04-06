@@ -1,0 +1,61 @@
+<?php
+/**
+ * All For Coding
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 All For Coding. (http://www.all4coding.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this Mage_Core_Block_Template */
+/* @var $licenseList All4coding_Core_Block_All4coding_Core_License */
+$licenseList = $this->getLayout()->createBlock('all4coding_core/all4coding_core_license', 'license_list');
+$this->setChild('license_list', $licenseList);
+/* @var $grid All4coding_Core_Block_All4coding_Core_License_Grid */
+$grid = $licenseList->getChild('grid');
+?>
+<script type="text/javascript">
+//<![CDATA[
+Translator.add('Are you sure you want to delete this license?', '<?php echo $this->__('Are you sure you want to delete this license?'); ?>');
+all4coding.core.deleteLicenseRow = function(grid, event){
+    var trElement = Event.findElement(event, 'tr');
+    if(trElement){
+        var link = Element.getElementsBySelector(trElement, 'a');
+        all4coding.core.deleteLicense(link[0].href);
+    }
+};
+
+all4coding.core.deleteLicense = function(url) {
+    if (confirm(Translator.translate('Are you sure you want to delete this license?'))) {
+        new Ajax.Request(url,{
+            method: 'get',
+            onComplete: function(transport) {
+                var response = transport.responseText.evalJSON();
+                if ($('license_list_messages')) {
+                    $('license_list_messages').innerHTML = response.message;
+                }
+                if (!response.error) {
+                    <?php echo $grid->getJsObjectName(); ?>.doFilter();
+                }
+                all4coding.core.updateLicenseHostList(response);
+                // clear license message after few seconds
+                setTimeout(all4coding.core.deleteLicenseMessage, 5000);
+            },
+            onFailure: function(transport) {
+                location.href = BASE_URL;
+            }
+        });
+    }
+};
+
+all4coding.core.deleteLicenseMessage = function() {
+    if ($('license_list_messages')) {
+        $('license_list_messages').innerHTML = '';
+    }
+}
+//]]>
+</script>
+<div class="license_list_wrapper">
+    <div id="license_list_messages"></div>
+    <?php echo $this->getChildHtml('license_list'); ?>
+</div>

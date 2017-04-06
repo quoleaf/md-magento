@@ -1,0 +1,105 @@
+<?php
+/**
+ * All For Coding
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 All For Coding. (http://www.all4coding.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this All4coding_Core_Block_All4coding_Core_Extension_Tab_Extension */
+
+$installed = $this->getInstalledExtensions();
+$notInstalled = $this->getNotInstalledExtensions();
+/* @var $currency Mage_Directory_Model_Currency */
+$currency = Mage::helper('all4coding_core/extension')->getCurrency();
+/* @var $helper All4coding_Core_Helper_Data */
+$helper = Mage::helper('all4coding_core');
+?>
+<?php if (count($installed)): ?>
+<div class="all4coding-installed">
+    <h3 class="all4coding-header"><?php echo $this->getInstalledExtensionsTitle(); ?></h3>
+    <div class="all4coding-products">
+    <?php foreach ($installed as $item): ?>
+        <?php 
+        $itemInstalledVersion = $item->getModuleVersion();
+        $updatable = $item->isUpdatable();
+        ?>
+        <div class="product-item">
+            <div class="product-head">
+                <a class="product-image" title="<?php echo $item->getName(); ?>" href="<?php echo $item->getLink(); ?>" target="_blank">
+                    <img width="150" height="150" alt="<?php $item->getName(); ?>" src="<?php echo $item->getIconLink(); ?>"/>
+                </a>
+                <div class="product-info">
+                    <h4 class="product-name"><?php echo $item->getName(); ?></h4>
+                    <div class="product-version"><?php echo $itemInstalledVersion; ?></div>
+                    <a class="product-link <?php echo $updatable ? ' new-version-msg' : ''; ?>"  title="<?php echo $this->__('Go to the official page'); ?>" href="<?php echo $item->getLink(); ?>" target="_blank"><?php echo $updatable ? $this->__('New version is available') : $this->__('Official Page'); ?></a>
+                    <?php if ($item->getRequireLicense() && !$helper->hasLicense($item->getPid())) : ?>
+                    <div id="<?php echo 'no-license-'.$item->getPid(); ?>" class="no-license"><?php echo $this->__('Please add license key for the current site'); ?></div>
+                    <?php endif; ?>
+                    <div class="product-actions">
+                    <?php if ($item->getRequireLicense()): ?>
+                        <button type="button" class="scalable" title="<?php echo $this->__('License Keys Manager'); ?>" onclick="all4codingLicense.openDialog('<?php echo $this->getUrl('*/all4coding_core_license/manage', array('pid'  => $item->getPid()));?>')"><?php echo $this->__('Keys'); ?></button>
+                    <?php endif; ?>
+                    <?php if ($updatable) :?>
+                        <button type="button" class="scalable" title="<?php echo $this->__('Update to %s', $item->getVersion()); ?>" onclick="all4codingInstall.openDialog(<?php echo $item->getPid(); ?>);"><?php echo $this->__('Update'); ?></button>
+                    <?php endif;?>
+                    <?php if ($item->getHelper()->canUninstall()): ?>
+                        <button type="button" class="scalable cancel" title="<?php echo $this->__('Uninstall'); ?>" onclick="all4codingInstall.openDialog(<?php echo $item->getPid(); ?>, 'uninstall');"><?php echo $this->__('Uninstall'); ?></button>
+                    <?php endif; ?>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <div style="clear: both;"></div>
+    </div>
+</div>
+<?php endif; ?>
+<?php if (count($notInstalled)): ?>
+<div class="all4coding-available">
+    <h3 class="all4coding-header"><?php echo $this->getNotInstalledExtensionsTitle(); ?></h3>
+    <div class="all4coding-products">
+    <?php foreach ($notInstalled as $item): ?>
+        <div class="product-item">
+            <div class="product-head">
+                <a class="product-image" title="<?php echo $item->getName(); ?>" href="<?php echo $item->getLink(); ?>" target="_blank">
+                    <img width="150" height="150" alt="<?php $item->getName(); ?>" src="<?php echo $item->getIconLink(); ?>"/>
+                </a>
+                <div class="product-info">
+                    <h4 class="product-name"><?php echo $item->getName(); ?></h4>
+                    <?php if ($item->getHasTrial()): ?>
+                    <a class="free-trial"  title="<?php echo $this->__('Get Free Trial'); ?>" href="<?php echo $item->getLink(); ?>" target="_blank"><?php echo $this->__('Get Free Trial'); ?></a>
+                    <?php else: ?>
+                    <a class="product-link"  title="<?php echo $this->__('Go to the official page'); ?>" href="<?php echo $item->getLink(); ?>" target="_blank"><?php echo $this->__('Official Page'); ?></a>
+                    <?php endif; ?>
+                    <?php if ($item->getRegularPrice() > $item->getPrice()): ?>
+                    <p class="product-old-price">
+                        <span class="price-label"><?php echo $this->__('Regular Price:'); ?></span>
+                        <?php echo $currency->format($item->getRegularPrice()); ?>
+                    </p>
+                    <?php endif; ?>
+                    <p class="product-price">
+                    <?php if ($item->getPrice() > 0) : ?>
+                        <?php echo $currency->format($item->getPrice()); ?>
+                    <?php else : ?>
+                        <span class="free"><?php echo $this->__('Free'); ?></span>
+                    <?php endif;?>
+                    </p>
+                    <div class="product-actions">
+                        <button type="button" class="scalable" title="<?php echo $this->__('Install'); ?>" onclick="all4codingInstall.openDialog(<?php echo $item->getPid(); ?>);"><?php echo $this->__('Install'); ?></button>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="product-desc">
+                <div class="product-desc-caption"><?php echo $this->__('Description:'); ?></div>
+                <div class="product-desc-content"><?php echo $item->getDescription(); ?></div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <div style="clear: both;"></div>
+    </div>
+</div>
+<?php endif; ?>

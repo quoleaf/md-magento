@@ -233,6 +233,25 @@
                             ';
                     }
                 ?>
+
+                <?php 
+                    $video_base_image = $_product->getData('video_base_image');
+                               
+                    if(empty($beforeandafterContent)){
+                        $prodAttrBeforeandAfter = $_product->getResource()->getAttribute('before_and_after');
+                        $_beforeandafter = $prodAttrBeforeandAfter->getStoreLabel(Mage::app()->getStore()->getName());
+
+                        if(isset($video_base_image)){
+                            $prodAttrVideoBaseImage = $_product->getResource()->getAttribute('video_base_image');
+                            $_videobaseimage = $prodAttrVideoBaseImage->getStoreLabel(Mage::app()->getStore()->getName());
+                            echo '
+
+                                <li class="tab-link " data-tab="video_content">Video</li>    
+
+                            ';
+                        }
+                    }
+                ?>
             </ul>
 
             <div id="product-details" class="tab-content current">
@@ -281,7 +300,19 @@
             <?php if (isset($beforeandafterContent)): ?>
             <div id="beforeandafter" class="tab-content">
                 <div class="inner ">
+                    
+                    <?php echo $video_base_image= $_helper->productAttribute($_product, $_product->getvideo_base_image(), 'video_base_image'); ?>
                     <?php echo $beforeandafterContent= $_helper->productAttribute($_product, $_product->getbefore_and_after(), 'before_and_after'); ?>
+
+                </div> 
+            </div>
+            <?php endif;?>
+
+            <?php if (isset($video_base_image)): ?>
+            <div id="video_content" class="tab-content">
+                <div class="inner ">
+                    <?php echo $video_base_image= $_helper->productAttribute($_product, $_product->getvideo_base_image(), 'video_base_image'); ?>
+
                 </div> 
             </div>
             <?php endif;?>

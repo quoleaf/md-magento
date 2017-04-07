@@ -302,8 +302,18 @@
                 <mdhealthyhairbundleone module="page" translate="label">
                     <label>MD Healthy Hair Bundle Landing Page One</label>
                     <template>page/md-healthy-hair-bundle-landingpage-one.phtml</template>
-                    <layout_handle>mdhealthyhairbundleonee</layout_handle>
+                    <layout_handle>mdhealthyhairbundleone</layout_handle>
                 </mdhealthyhairbundleone> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <mdhealthyhairbundletwo module="page" translate="label">
+                    <label>MD Healthy Hair Bundle Landing Page Two</label>
+                    <template>page/md-healthy-hair-bundle-landingpage-two.phtml</template>
+                    <layout_handle>mdhealthyhairbundletwo</layout_handle>
+                </mdhealthyhairbundletwo> 
             </layouts>
         </page>
 

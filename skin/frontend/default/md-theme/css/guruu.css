@@ -1560,7 +1560,7 @@ nav {
       @media only screen and (max-width: 945px) {
         #about .custom-container .title {
           position: relative;
-          right: 30px; } }
+          right: 0; } }
       @media only screen and (max-width: 730px) {
         #about .custom-container .title {
           display: block;

@@ -2165,7 +2165,7 @@ nav {
     float: left;
     padding: 50px 0 50px 0;
 
-    @media only screen and (max-width : 945px) {
+    @media only screen and (max-width : 730px) {
         padding: 0 0 50px 0;
     }
 
@@ -2173,7 +2173,7 @@ nav {
         position: relative;
         right: 25px;
 
-        @media only screen and (max-width : 945px) {
+        @media only screen and (max-width : 730px) {
             right: 0;
             padding: 0;
         }
@@ -2196,7 +2196,7 @@ nav {
             }
 
             img {
-                width: 145px    ;
+                width: 145px;
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
@@ -2205,7 +2205,7 @@ nav {
                 left: 55px;
                 z-index: 1;
 
-                @media only screen and (max-width : 945px) {
+                @media only screen and (max-width : 730px) {
                     left: 0;
                     top: 53px;
                 }
@@ -2223,7 +2223,7 @@ nav {
                 position: relative;
                 top: 10px;
 
-                @media only screen and (max-width : 945px) {
+                @media only screen and (max-width : 730px) {
                     display: block;
                     padding: 20px 0 20px 0;
                     font-size: 17pt;
@@ -2252,7 +2252,7 @@ nav {
                 padding: 30px 25px 0 125px;
             }
 
-            @media only screen and (max-width : 945px) {
+            @media only screen and (max-width : 730px) {
                 padding: 0px 50px 0 50px;
             }
 

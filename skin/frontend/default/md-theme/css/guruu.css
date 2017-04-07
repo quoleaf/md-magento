@@ -1542,13 +1542,13 @@ nav {
   width: 100%;
   float: left;
   padding: 50px 0 50px 0; }
-  @media only screen and (max-width: 945px) {
+  @media only screen and (max-width: 730px) {
     #about {
       padding: 0 0 50px 0; } }
   #about .custom-container {
     position: relative;
     right: 25px; }
-    @media only screen and (max-width: 945px) {
+    @media only screen and (max-width: 730px) {
       #about .custom-container {
         right: 0;
         padding: 0; } }
@@ -1575,7 +1575,7 @@ nav {
         position: relative;
         left: 55px;
         z-index: 1; }
-        @media only screen and (max-width: 945px) {
+        @media only screen and (max-width: 730px) {
           #about .custom-container .title img {
             left: 0;
             top: 53px; } }
@@ -1590,7 +1590,7 @@ nav {
         text-transform: uppercase;
         position: relative;
         top: 10px; }
-        @media only screen and (max-width: 945px) {
+        @media only screen and (max-width: 730px) {
           #about .custom-container .title p {
             display: block;
             padding: 20px 0 20px 0;
@@ -1610,7 +1610,7 @@ nav {
       @media only screen and (max-width: 1170px) {
         #about .custom-container ul {
           padding: 30px 25px 0 125px; } }
-      @media only screen and (max-width: 945px) {
+      @media only screen and (max-width: 730px) {
         #about .custom-container ul {
           padding: 0px 50px 0 50px; } }
       @media only screen and (max-width: 470px) {

@@ -171,7 +171,7 @@
         <page>
             <layouts> 
                 <mdintimaterestore module="page" translate="label">
-                    <label>MD Intimate Restore PLanding Page</label>
+                    <label>MD Intimate Restore Landing Page</label>
                     <template>page/md-intimate-restore-landingpage.phtml</template>
                     <layout_handle>mdhairkitofferlandingpage</layout_handle>
                 </mdintimaterestore> 
@@ -180,7 +180,7 @@
         <page>
             <layouts> 
                 <mdintimaterestorered module="page" translate="label">
-                    <label>MD Intimate Restore PLanding Page (RED)</label>
+                    <label>MD Intimate Restore Landing Page (RED)</label>
                     <template>page/md-intimate-restore-landingpage-red.phtml</template>
                     <layout_handle>mdhairkitofferlandingpagered</layout_handle>
                 </mdintimaterestorered> 
@@ -189,7 +189,7 @@
         <page>
             <layouts> 
                 <mdintimaterestoreyellow module="page" translate="label">
-                    <label>MD Intimate Restore PLanding Page (YELLOW)</label>
+                    <label>MD Intimate Restore Landing Page (YELLOW)</label>
                     <template>page/md-intimate-restore-landingpage-yellow.phtml</template>
                     <layout_handle>mdhairkitofferlandingpageyellow</layout_handle>
                 </mdintimaterestoreyellow> 
@@ -198,7 +198,7 @@
         <page>
             <layouts> 
                 <mdintimaterestoreblue module="page" translate="label">
-                    <label>MD Intimate Restore PLanding Page (BLUE)</label>
+                    <label>MD Intimate Restore Landing Page (BLUE)</label>
                     <template>page/md-intimate-restore-landingpage-blue.phtml</template>
                     <layout_handle>mdhairkitofferlandingpageblue</layout_handle>
                 </mdintimaterestoreblue> 
@@ -294,15 +294,19 @@
                 </faq> 
             </layouts>
         </page>
-        <!-- <page>
+
+        <!-- GURUU LPs -->
+
+        <page>
             <layouts> 
-                <pressmedia module="page" translate="label">
-                    <label>MD PressMedia Page</label>
-                    <template>page/press-media.phtml</template>
-                    <layout_handle>pressmedia</layout_handle>
-                </pressmedia> 
+                <mdhealthyhairbundleone module="page" translate="label">
+                    <label>MD Healthy Hair Bundle Landing Page One</label>
+                    <template>page/md-healthy-hair-bundle-landingpage-one.phtml</template>
+                    <layout_handle>mdhealthyhairbundleonee</layout_handle>
+                </mdhealthyhairbundleone> 
             </layouts>
-        </page> -->
+        </page>
+
     </global>
     <frontend>
         <routers>

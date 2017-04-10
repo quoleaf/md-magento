@@ -62,6 +62,34 @@
 </head>
 
 <body class="health-hair-bundle-two">
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 108 ?>
+<?php $_productID2 = 109 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[11]=13&options[10]=17&form_key='.$formkey.'' ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+$(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
+if (this.checked) {
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[11]=13&options[10]=17&form_key='.$formkey.'' ?>";
+$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('#description .custom-container .left div a').attr('href', url);
+$('#FreeShipping .custom-container div a').attr('href', url);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
+}else{
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[15]=2&form_key='.$formkey.'' ?>";
+$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('#description .custom-container .left div a').attr('href', url2);
+$('#FreeShipping .custom-container div a').attr('href', url2);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
+}
+});
+});
+</script>
 
 <div class="TopWrapper">
     <div class="custom-container">
@@ -76,90 +104,90 @@
 
 
 <div id="headerWrapper">
-	<nav class='main-nav' id="main-navWrapper">
-	    <div class="custom-container">
-	        <ul class='main-nav'>
-	            <li>
-	                <a href='<?php echo Mage::getBaseUrl(); ?>'>
-	                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
-	                </a>
-	            </li>
-	            <li>
-	                <a href='#description'>
-	                    What is MD Hair
-	                </a>
-	            </li>
-	            <li>
-	                <a href='#description'>
-	                    How does it work
-	                </a>
-	            </li>
-	            <li>
-	                <a href='https://md-factor.com/shipping-policy/'>
-	                    satisfaction guarantee
-	                </a>
-	            </li>
-	            <li>
-	                <a href="https://us.md-factor.com/md-hair-restoration-starter-kit" class="buynow">
-	                    Buy now
-	                </a>
-	            </li>
-	            <li>
-	                <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
+    <nav class='main-nav' id="main-navWrapper">
+        <div class="custom-container">
+            <ul class='main-nav'>
+                <li>
+                    <a href='<?php echo Mage::getBaseUrl(); ?>'>
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        What is MD Hair
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        How does it work
+                    </a>
+                </li>
+                <li>
+                    <a href='https://md-factor.com/shipping-policy/'>
+                        satisfaction guarantee
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $cartUrl; ?>" class="buynow">
+                        Buy now
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
                         Share
                     </a>
-	            </li>
+                </li>
 
-	        </ul>
-	        <a href='#' id='openup'>
-	            <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
-	        </a>
+            </ul>
+            <a href='#' id='openup'>
+                <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+            </a>
 
-	        <span>
-	            <a href="https://www.addtoany.com/share" class="share a2a_dd">
-	                <i class="fa fa-reply" aria-hidden="true"></i> Share
-	            </a>
-	        </span>
-	    </div>
-	</nav>
+            <span>
+                <a href="https://www.addtoany.com/share" class="share a2a_dd">
+                    <i class="fa fa-reply" aria-hidden="true"></i> Share
+                </a>
+            </span>
+        </div>
+    </nav>
 
     <div class="custom-container">
         <div class="inner">
-        	<div class="content">
-        		<h1>
-        			HEALTHY HAIR BUNDLE
-        		</h1>
+            <div class="content">
+                <h1>
+                    HEALTHY HAIR BUNDLE
+                </h1>
 
-        		<p>
-        			Fight Hair Shedding and <br/>
-					Regain Gorgeous Hair
-        		</p>
+                <p>
+                    Fight Hair Shedding and <br/>
+                    Regain Gorgeous Hair
+                </p>
 
-        		<span>
-        			PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
-        		</span>
+                <span>
+                    PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
+                </span>
 
-        		<div class="cta">
-        			<a href="javascript:void(0);">
-        				Order Yours Now
-        			</a>
-        		</div>
-        	</div>
+                <div class="cta">
+                    <a href="<?php echo $cartUrl; ?>">
+                        Order Yours Now
+                    </a>
+                </div>
+            </div>
 
-        	<div class="hanging-products">
+            <div class="hanging-products">
 
-        		<div>
-        			<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-1.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
-        		</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-1.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
+                </div>
 
-        		<div>
-        			<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-2.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
-        		</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-2.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
+                </div>
 
-        		<div>
-        			<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-3.png') ?>" class="wow fadeInUp animated" data-wow-delay="1s">
-        		</div>
-        	</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-3.png') ?>" class="wow fadeInUp animated" data-wow-delay="1s">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -173,7 +201,7 @@
             PLUS FREE SAMPLE WITH FIRST ORDER
         </p>
         <div>
-            <a href="javascript:void(0);">
+            <a href="<?php echo $cartUrl; ?>">
                 SUBSCRIBE NOW
             </a>
         </div>
@@ -181,76 +209,76 @@
 </div>
 
 <div id="bundleWrapper">
-	<div class="custom-container">
-		<div class="imageWrapper">
-        	<div class="inner">
-            	<div>
+    <div class="custom-container">
+        <div class="imageWrapper">
+            <div class="inner">
+                <div>
                     <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
                 </div>
 
                 <div>
-            		<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
-            	</div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
+                </div>
 
-            	<div>
-            		<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
-            	</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
+                </div>
 
-            	<div>
-            		<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2-shadow.png') ?>" class="wow bounceInLeft animated" data-wow-delay="1s">
-            	</div>
-        	</div>
-		</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2-shadow.png') ?>" class="wow bounceInLeft animated" data-wow-delay="1s">
+                </div>
+            </div>
+        </div>
 
-		<div class="content">
-			<h1>
-				Healthy Hair Bundle
-			</h1>
-			<p>
-				Healthy Hair Bundle helps fight hair loss and breakage.
-			</p>
+        <div class="content">
+            <h1>
+                Healthy Hair Bundle
+            </h1>
+            <p>
+                Healthy Hair Bundle helps fight hair loss and breakage.
+            </p>
 
-			<div class="price">
-				<span>$150</span>
-				<p>
-					$99
-				</p>
-			</div>
+            <div class="price">
+                <span>$150</span>
+                <p>
+                    $99
+                </p>
+            </div>
 
-			<strong>
-				Product Includes:	
-			</strong>
+            <strong>
+                Product Includes:   
+            </strong>
 
-			<ul>
-				<li>
-					Three one month supply MD Nutri Hair (30 capsules)
-				</li>
-			</ul>
+            <ul>
+                <li>
+                    Three one month supply MD Nutri Hair (30 capsules)
+                </li>
+            </ul>
 
-			<div class="autoshipWrapper">
-				<div class="inner">
-					<div class="custom-checkbox">
-					    <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
-					    <label for="custom-checkbox">
-					    	<span>
-					    		Autoship every 90 days
-					    	</span>
-					    </label>
-					</div>
-				</div>
+            <div class="autoshipWrapper">
+                <div class="inner">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
+                        <label for="custom-checkbox">
+                            <span>
+                                Autoship every 90 days
+                            </span>
+                        </label>
+                    </div>
+                </div>
 
-				<p>
-					Enjoy the special bundle saving and receive autoship every 90 days
-				</p>
-			</div>
+                <p>
+                    Enjoy the special bundle saving and receive autoship every 90 days
+                </p>
+            </div>
 
-			<div class="cta">
-        		<a href="javascript:void(0);">
-        			Order Now
-        		</a>
-        	</div>
-		</div>
-	</div>
+            <div class="cta">
+                <a href="<?php echo $cartUrl; ?>">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="AsSeenIn">
@@ -287,16 +315,16 @@
                 </h2>
 
                 <strong>
-                	MD NUTRI HAIR
+                    MD NUTRI HAIR
                 </strong>
 
                 <p>
-                	MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available. 		
+                    MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available.      
                 </p>
             </div>
                 
             <div>
-                <a href="https://us.md-factor.com/md-hair-restoration-starter-kit">
+                <a href="<?php echo $cartUrl; ?>">
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
@@ -516,30 +544,30 @@
 
 
 <div id="about">
-	<div class="custom-container">	
-		<div class="title">
-			<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
-			<p>
-				<span>
+    <div class="custom-container">  
+        <div class="title">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
+            <p>
+                <span>
                     About DR Susan Lin            
                 </span>
-			</p>
-		</div>
+            </p>
+        </div>
 
-		<ul>
-			<li>
-				Dr. Susan F. Lin is a practicing surgeon focusing on woman's health, antiaging and aesthetics medicine in San Francisco Area for 26 years. Dr. Lin graduated from Boston University School of Medicine with NIH Cancer Research Fellowship. She compeleted postdoctural training in Ob/GYN at Kaiser Permanente Oakland, Felix Rutledge Oncology Fellowship at MD Anderson Cancer Center and Galloway Fellowship in Gynecology Oncology at Memorial Sloan Kettering Cancer Center.
-			</li>
+        <ul>
+            <li>
+                Dr. Susan F. Lin is a practicing surgeon focusing on woman's health, antiaging and aesthetics medicine in San Francisco Area for 26 years. Dr. Lin graduated from Boston University School of Medicine with NIH Cancer Research Fellowship. She compeleted postdoctural training in Ob/GYN at Kaiser Permanente Oakland, Felix Rutledge Oncology Fellowship at MD Anderson Cancer Center and Galloway Fellowship in Gynecology Oncology at Memorial Sloan Kettering Cancer Center.
+            </li>
 
-			<li>
-				Dr. Lin has been fellow of American College of OB/GYN, American Academy of Anti Aging Medicine, American Academy of Aesthetic Medicine, American Society for Laser Medicine and Surgery, Expert Reviewer for Medical Board of California and Assistant Clinical Professor of OB/GYN for UCSF School of Medicine.
-			</li>
+            <li>
+                Dr. Lin has been fellow of American College of OB/GYN, American Academy of Anti Aging Medicine, American Academy of Aesthetic Medicine, American Society for Laser Medicine and Surgery, Expert Reviewer for Medical Board of California and Assistant Clinical Professor of OB/GYN for UCSF School of Medicine.
+            </li>
 
-			<li>
-				Dr. Lin directs MD Laser &amp; Cosmetics Center in San Mateo California and is the founder and president of La Canada Venture Inc. holding patent for lash and hair innovations. <a href="www.md-factor.com">www.md-factor.com</a>. Currently serves on board for McGovern Institute of Brain Research at Massachusetts Institute of Technology and Community Gatepath for disabled children and adults. 
-			</li>
-		</ul>
-	</div>
+            <li>
+                Dr. Lin directs MD Laser &amp; Cosmetics Center in San Mateo California and is the founder and president of La Canada Venture Inc. holding patent for lash and hair innovations. <a href="www.md-factor.com">www.md-factor.com</a>. Currently serves on board for McGovern Institute of Brain Research at Massachusetts Institute of Technology and Community Gatepath for disabled children and adults. 
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div id="footer">

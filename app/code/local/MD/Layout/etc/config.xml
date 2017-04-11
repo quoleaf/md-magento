@@ -316,6 +316,24 @@
                 </mdhealthyhairbundletwo> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <lashcategory module="page" translate="label">
+                    <label>MD Beauty and Serenity Landing Page Six</label>
+                    <template>page/beauty-and-serenity-landingpage-six.phtml</template>
+                    <layout_handle>beautyandserenity</layout_handle>
+                </lashcategory> 
+            </layouts>
+        </page>
+        <page>
+            <layouts> 
+                <lashcategory module="page" translate="label">
+                    <label>MD Beauty Boost Landing Page Seven</label>
+                    <template>page/beauty-boost-landingpage-seven.phtml</template>
+                    <layout_handle>beautyboost</layout_handle>
+                </lashcategory> 
+            </layouts>
+        </page>
 
     </global>
     <frontend>

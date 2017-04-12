@@ -279,32 +279,6 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 $cart = Mage::getModel('checkout/cart')->getQuote();
 foreach ($cart->getAllItems() as $item) {
 $productName = $item->getProduct()->getSku();
- switch($gurupeeps_sku){
-    case 'BEAUTIHAIRBUND' || 'BEAUTIHAIRBUND-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=12&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>' ;
-    break;
-    case 'HEALTHYHAIRBUND' || 'HEALTHYHAIRBUND-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=16&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'NEWMOM' || 'NEWMOM-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=10&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'BSEXYB' || 'BSEXYB-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=22&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'NOURISHSKIN' || 'NOURISHSKIN-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=24&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'BEAUTYANDSERENITY' || 'BEAUTYANDSERENITY-T':
-        echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=14&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'BEAUTYBOOST' || 'BEAUTYBOOST-T':
-        echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=18&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'CLEARSKINA' || 'CLEARSKINB':
-        echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=20&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-
 if($productName == "test" || $productName == "BEAUTIHAIRBUND-T" || $productName == "HEALTHYHAIRBUND-T" || $productName == "NEWMOM-T" || $productName == "BSEXYB-T" || $productName == "NOURISHSKIN-T" || $productName == "BEAUTYANDSERENITY-T" || $productName == "BEAUTYBOOST-T" || $productName == "CLEARSKINB" ){
 ?>    
 <script>

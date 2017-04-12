@@ -316,6 +316,17 @@
                 </mdhealthyhairbundletwo> 
             </layouts>
         </page>
+
+         <page>
+            <layouts> 
+                <mdmomessential module="page" translate="label">
+                    <label>MD New Mom Essential Landing Page</label>
+                    <template>page/md-mom-essential.phtml</template>
+                    <layout_handle>mdmomessential </layout_handle>
+                </mdmomessential > 
+            </layouts>
+        </page>
+
         <page>
             <layouts> 
                 <beautyandserenity module="page" translate="label">
@@ -325,6 +336,7 @@
                 </beautyandserenity> 
             </layouts>
         </page>
+
         <page>
             <layouts> 
                 <beautyboost module="page" translate="label">
@@ -334,6 +346,7 @@
                 </beautyboost> 
             </layouts>
         </page>
+        
         <page>
             <layouts> 
                 <flawlessclearskin module="page" translate="label">

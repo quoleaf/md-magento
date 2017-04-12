@@ -317,13 +317,23 @@
             </layouts>
         </page>
 
-         <page>
+        <page>
             <layouts> 
                 <mdmomessential module="page" translate="label">
                     <label>MD New Mom Essential Landing Page</label>
                     <template>page/md-mom-essential.phtml</template>
-                    <layout_handle>mdmomessential </layout_handle>
+                    <layout_handle>mdmomessential</layout_handle>
                 </mdmomessential > 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <mdbringsexyback module="page" translate="label">
+                    <label>MD Bring Sexy Back Landing Page</label>
+                    <template>page/md-bring-sexy-back.phtml</template>
+                    <layout_handle>mdbringsexyback</layout_handle>
+                </mdbringsexyback > 
             </layouts>
         </page>
 
@@ -346,7 +356,7 @@
                 </beautyboost> 
             </layouts>
         </page>
-        
+
         <page>
             <layouts> 
                 <flawlessclearskin module="page" translate="label">

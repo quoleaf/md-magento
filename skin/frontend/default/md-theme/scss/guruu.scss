@@ -4557,6 +4557,7 @@ body.mom-essential {
             .catWrapper {
                 display: flex;
                 align-items: center;
+                align-self: center;
                 position: relative;
 
                 @media only screen and (max-width : 1370px) {

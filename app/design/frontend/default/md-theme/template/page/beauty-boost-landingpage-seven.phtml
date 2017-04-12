@@ -62,6 +62,35 @@
 </head>
 
 <body class="beauty-boost">
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 114 ?>
+<?php $_productID2 = 115 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[22]=24&bundle_option[23]=25&bundle_option[24]=26&options[14]=21&form_key='.$formkey.'' ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+$(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
+if (this.checked) {
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[30]=31&bundle_option[29]=34&bundle_option[28]=32&options[16]=23&form_key='.$formkey.''  ?>";
+$('body.beauty-boost #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.beauty-boost #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+$('#description .custom-container .left div a:first-child').attr('href', url);
+$('#FreeShipping .custom-container div a').attr('href', url);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
+}else{
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[31]=35&bundle_option[32]=36&bundle_option[33]=37&form_key='.$formkey.'' ?>";
+$('body.beauty-boost #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.beauty-boost #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+$('#description .custom-container .left div a:first-child').attr('href', url2);
+$('#FreeShipping .custom-container div a').attr('href', url2);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
+}
+});
+});
+</script>
 
 <div class="TopWrapper">
     <div class="custom-container">
@@ -599,7 +628,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>

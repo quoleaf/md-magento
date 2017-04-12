@@ -167,7 +167,7 @@ a, button {
   margin: 0;
   padding: 0; }
   .vid .inner {
-    background: url("http://i3.ytimg.com/vi/_pv-ZZ3geXM/hqdefault.jpg") center;
+    background: url("https://i3.ytimg.com/vi/_pv-ZZ3geXM/hqdefault.jpg") center;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -186,7 +186,7 @@ a, button {
         margin-top: 5px; }
   @media only screen and (max-width: 470px) {
     .vid .inner {
-      background: url("http://i3.ytimg.com/vi/_pv-ZZ3geXM/hqdefault.jpg") 0; } }
+      background: url("https://i3.ytimg.com/vi/_pv-ZZ3geXM/hqdefault.jpg") 0; } }
 
 /* Top */
 .TopWrapper {
@@ -2685,7 +2685,7 @@ body.mom-essential {
   /* Bundle */
   /* End of Bundle */ }
   body.mom-essential .vid .inner {
-    background: url("http://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg") center;
+    background: url("https://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg") center;
     background-size: cover; }
   body.mom-essential #headerWrapper {
     width: 100%;
@@ -3360,7 +3360,7 @@ body.bring-sexy-back {
   /* Bundle */
   /* End of Bundle */ }
   body.bring-sexy-back .vid .inner {
-    background: url("http://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg") center;
+    background: url("https://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg") center;
     background-size: cover; }
   body.bring-sexy-back #headerWrapper {
     width: 100%;

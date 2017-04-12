@@ -334,6 +334,15 @@
                 </beautyboost> 
             </layouts>
         </page>
+        <page>
+            <layouts> 
+                <flawlessclearskin module="page" translate="label">
+                    <label>MD Flawless Clear Skin Landing Page Eight</label>
+                    <template>page/flawless-clear-skin-landingpage-eight.phtml</template>
+                    <layout_handle>flawlessclearskin</layout_handle>
+                </flawlessclearskin> 
+            </layouts>
+        </page>
 
     </global>
     <frontend>

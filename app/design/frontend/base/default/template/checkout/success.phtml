@@ -91,28 +91,28 @@ $rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&sku
 
 <?php 
   switch($gurupeeps_sku){
-    case 'BEAUTIHAIRBUND':
+    case 'BEAUTIHAIRBUND' || 'BEAUTIHAIRBUND-T':
         echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=12&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>' ;
     break;
-    case 'HEALTHYHAIRBUND':
+    case 'HEALTHYHAIRBUND' || 'HEALTHYHAIRBUND-T':
         echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=16&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
-    case 'NEWMOM':
+    case 'NEWMOM' || 'NEWMOM-T':
         echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=10&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
-    case 'BSEXYB':
+    case 'BSEXYB' || 'BSEXYB-T':
         echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=22&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
-    case 'NOURISHSKIN':
+    case 'NOURISHSKIN' || 'NOURISHSKIN-T':
         echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=24&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
-    case 'BEAUTYANDSERENITY':
+    case 'BEAUTYANDSERENITY' || 'BEAUTYANDSERENITY-T':
         echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=14&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
-    case 'BEAUTYBOOST':
+    case 'BEAUTYBOOST' || 'BEAUTYBOOST-T':
         echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=18&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
-    case 'CLEARSKINA':
+    case 'CLEARSKINA' || 'CLEARSKINB':
         echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=20&adv_sub=<?php echo $_order ?>amp;amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
     break;
   }

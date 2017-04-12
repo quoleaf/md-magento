@@ -333,7 +333,17 @@
                     <label>MD Bring Sexy Back Landing Page</label>
                     <template>page/md-bring-sexy-back.phtml</template>
                     <layout_handle>mdbringsexyback</layout_handle>
-                </mdbringsexyback > 
+                </mdbringsexyback> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <mdnourishskin module="page" translate="label">
+                    <label>MD Nourish Skin Landing Page</label>
+                    <template>page/md-nourish-skin.phtml</template>
+                    <layout_handle>mdnourishskin</layout_handle>
+                </mdnourishskin> 
             </layouts>
         </page>
 

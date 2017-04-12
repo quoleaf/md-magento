@@ -279,7 +279,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 $cart = Mage::getModel('checkout/cart')->getQuote();
 foreach ($cart->getAllItems() as $item) {
 $productName = $item->getProduct()->getSku();
-if($productName == "test" || $productName == "BEAUTIHAIRBUND-T" || $productName == "HEALTHYHAIRBUND-T" || $productName == "NEWMOM-T" || $productName == "BSEXYB-T" || $productName == "NOURISHSKIN-T" || $productName == "BEAUTYANDSERENITY-T" || $productName == "BEAUTYBOOST-T" || $productName == "CLEARSKINB" ){
+if($productName == "test" || $productName == "BEAUTIHAIRBUND" || $productName == "BEAUTIHAIRBUND-T" || $productName == "HEALTHYHAIRBUND" || || $productName == "HEALTHYHAIRBUND-T" || $productName == "NEWMOM" || $productName == "NEWMOM-T" || $productName == "BSEXYB" || $productName == "BSEXYB-T" || $productName == "NOURISHSKIN" || $productName == "NOURISHSKIN-T" || $productName == "BEAUTYANDSERENITY" || $productName == "BEAUTYANDSERENITY-T" || $productName == "BEAUTYBOOST" || $productName == "BEAUTYBOOST-T" || $productName == "CLEARSKINA" || $productName == "CLEARSKINB" ){
 ?>    
 <script>
 jQuery(document).ready(function() {

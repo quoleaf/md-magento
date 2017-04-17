@@ -377,6 +377,16 @@
             </layouts>
         </page>
 
+        <page>
+            <layouts> 
+                <clearskin module="page" translate="label">
+                    <label>MD Clear Skin Landing Page Nine</label>
+                    <template>page/clear-skin-landingpage-nine.phtml</template>
+                    <layout_handle>clearskin</layout_handle>
+                </clearskin> 
+            </layouts>
+        </page>
+
     </global>
     <frontend>
         <routers>

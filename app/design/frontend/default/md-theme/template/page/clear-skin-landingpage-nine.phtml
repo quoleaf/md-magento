@@ -62,7 +62,12 @@
 </head>
 
 <body class="clear-skin">
-
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 116 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[43]=48&bundle_option[42]=47&form_key='.$formkey.'' ?>
 <div class="TopWrapper">
     <div class="custom-container">
         <p>
@@ -137,7 +142,7 @@
                 </p>
                
                 <div class="cta">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo $cartUrl; ?>">
                         Order Yours Now
                     </a>
                 </div>
@@ -165,7 +170,7 @@
             PLUS FREE SAMPLE WITH FIRST ORDER
         </p>
         <div>
-            <a href="javascript:void(0);">
+            <a href="<?php echo $cartUrl; ?>">
                 SUBSCRIBE NOW
             </a>
         </div>
@@ -218,7 +223,7 @@
             </ul>
 
             <div class="cta">
-                <a href="javascript:void(0);">
+                <a href="<?php echo $cartUrl; ?>">
                     Order Now
                 </a>
             </div>
@@ -279,7 +284,7 @@
             </div>
                 
             <div>
-                <a href="javascript:void(0);">
+                <a href="<?php echo $cartUrl; ?>">
                     <img src="<?php echo $this->getSkinUrl('images/guruu/bag.png') ?>">
                     Add to bag
                 </a>
@@ -384,7 +389,7 @@
             </div>
 
             <div>
-                <a href="https://us.md-factor.com/md-hair-restoration-starter-kit">
+                <a href="<?php echo $cartUrl; ?>">
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>

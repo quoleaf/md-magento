@@ -75,15 +75,15 @@ $(document).ready(function() {
 $(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
 if (this.checked) {
 var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[40]=45&bundle_option[39]=44&options[18]=25&form_key='.$formkey.''  ?>";
-$('body.beauty-and-serenity #bundleWrapper .custom-container .content .cta a').attr('href', url);
-$('body.beauty-and-serenity #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+$('body.nourish-skin #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.nourish-skin #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
 $('#description .custom-container .left div a:first-child').attr('href', url);
 $('#FreeShipping .custom-container div a').attr('href', url);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
 }else{
 var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[38]=42&bundle_option[39]=44&form_key='.$formkey.'' ?>";
-$('body.beauty-and-serenity #bundleWrapper .custom-container .content .cta a').attr('href', url2);
-$('body.beauty-and-serenity #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+$('body.nourish-skin #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.nourish-skin #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
 $('#description .custom-container .left div a:first-child').attr('href', url2);
 $('#FreeShipping .custom-container div a').attr('href', url2);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);

@@ -62,7 +62,35 @@
 </head>
 
 <body class="nourish-skin">
-
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 120 ?>
+<?php $_productID2 = 119 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[40]=45&bundle_option[39]=44&options[18]=25&form_key='.$formkey.'' ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+$(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
+if (this.checked) {
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[40]=45&bundle_option[39]=44&options[18]=25&form_key='.$formkey.''  ?>";
+$('body.beauty-and-serenity #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.beauty-and-serenity #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+$('#description .custom-container .left div a:first-child').attr('href', url);
+$('#FreeShipping .custom-container div a').attr('href', url);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
+}else{
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[38]=42&bundle_option[39]=44&form_key='.$formkey.'' ?>";
+$('body.beauty-and-serenity #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.beauty-and-serenity #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+$('#description .custom-container .left div a:first-child').attr('href', url2);
+$('#FreeShipping .custom-container div a').attr('href', url2);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
+}
+});
+});
+</script>
 <div class="TopWrapper">
     <div class="custom-container">
         <p>
@@ -100,7 +128,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascipt:void(0);" class="buynow">
+                    <a href="<?php echo $cartUrl ?>" class="buynow">
                         Buy now
                     </a>
                 </li>
@@ -139,7 +167,7 @@
                 </span>
 
                 <div class="cta">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo $cartUrl ?>">
                         Order Yours Now
                     </a>
                 </div>
@@ -172,7 +200,7 @@
             PLUS FREE SAMPLE WITH FIRST ORDER
         </p>
         <div>
-            <a href="javascript:void(0);">
+            <a href="<?php echo $cartUrl ?>">
                 SUBSCRIBE NOW
             </a>
         </div>
@@ -251,7 +279,7 @@
             </div>
 
             <div class="cta">
-                <a href="javascript:void(0);">
+                <a href="<?php echo $cartUrl ?>">
                     Order Now
                 </a>
             </div>
@@ -318,7 +346,7 @@
             </div>
                 
             <div>
-                <a href="javascipt:void(0);">
+                <a href="<?php echo $cartUrl ?>">
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
@@ -393,7 +421,7 @@
             </div>
                 
             <div>
-                <a href="javascript:void(0);">
+                <a href="<?php echo $cartUrl ?>">
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
@@ -565,7 +593,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>

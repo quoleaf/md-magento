@@ -6416,3 +6416,32 @@ body.nourish-skin {
     }
 
 }
+
+#promo .custom-container .middle form button {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #e8408b;
+    transition: all 0.5s ease;
+    padding: 0;
+    height: 55px;
+    width: 33%;
+    line-height: 55px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    
+    @media only screen and (max-width: 1100px) {
+        margin: 0 auto;
+        font-size: 21px;
+        width: 315px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+
+#promo .custom-container .middle form button:hover {
+    background: #da0061;
+}

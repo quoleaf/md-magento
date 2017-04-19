@@ -167,6 +167,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
             <div id="checkboxPaymentTarget" class="CustomRightWrapper disabled">
 
                 <div class="payment section">
+                    <div style="visibility: hidden; height:0;">
                     <?php 
                     $cart = Mage::getModel('checkout/cart')->getQuote();
                     foreach ($cart->getAllItems() as $item) {
@@ -176,6 +177,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                         }
                     }
                     ?>
+                    </div>
 
                     <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
                         <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
@@ -275,26 +277,11 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
     </div>
 </div>
 
-<?php
-$cart = Mage::getModel('checkout/cart')->getQuote();
-foreach ($cart->getAllItems() as $item) {
-$productName = $item->getProduct()->getSku();
-if($productName == "test" || $productName == "BEAUTIHAIRBUND" || $productName == "BEAUTIHAIRBUND-T" || $productName == "HEALTHYHAIRBUND" || $productName == "HEALTHYHAIRBUND-T" || $productName == "NEWMOM" || $productName == "NEWMOM-T" || $productName == "BSEXYB" || $productName == "BSEXYB-T" || $productName == "NOURISHSKIN" || $productName == "NOURISHSKIN-T" || $productName == "BEAUTYANDSERENITY" || $productName == "BEAUTYANDSERENITY-T" || $productName == "BEAUTYBOOST" || $productName == "BEAUTYBOOST-T" || $productName == "CLEARSKINA" || $productName == "CLEARSKINB" ){
-?>    
-<script>
-jQuery(document).ready(function() {
-jQuery('body.opc-index-index .opc-wrapper-opc .btn-checkout').removeClass('opc-btn-checkout');
-var link = jQuery('.paypal-logo a[data-action="checkout-form-submit"]').attr("href");
-var content = jQuery('body.opc-index-index .opc-wrapper-opc .btn-checkout').html();
-jQuery('body.opc-index-index .opc-wrapper-opc .btn-checkout').html('<a href="'+link+'">'+content+'</a>');
-});
-</script>
+
 <style>
 .opc-wrapper-opc .paypal-logo .paypal-or{display:none;}
 body.opc-index-index .opc-wrapper-opc .btn-checkout span{cursor: pointer;}
 </style>
-<?php }} ?>
-
 <?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
 <script type="text/javascript">
     jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-right').removeClass('hide'); 

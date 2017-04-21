@@ -165,8 +165,18 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
             </p>
 
             <div id="checkboxPaymentTarget" class="CustomRightWrapper disabled">
-
-                <div class="payment section">
+                    <div class="payment section">
+                    <div style="visibility: hidden; height:0;">        
+                        <?php      
+                        $cart = Mage::getModel('checkout/cart')->getQuote();       
+                        foreach ($cart->getAllItems() as $item) {      
+                            $productName = $item->getProduct()->getSku();      
+                            if($productName == "test" || $productName == "BEAUTIHAIRBUND" || $productName == "BEAUTIHAIRBUND-T" || $productName == "HEALTHYHAIRBUND" || $productName == "HEALTHYHAIRBUND-T" || $productName == "NEWMOM" || $productName == "NEWMOM-T" || $productName == "BSEXYB" || $productName == "BSEXYB-T" || $productName == "NOURISHSKIN" || $productName == "NOURISHSKIN-T" || $productName == "BEAUTYANDSERENITY" || $productName == "BEAUTYANDSERENITY-T" || $productName == "BEAUTYBOOST" || $productName == "BEAUTYBOOST-T" || $productName == "CLEARSKINA" || $productName == "CLEARSKINB" ){     
+                                echo $this->getChildHtml('paypal.button');     
+                            }      
+                        }      
+                        ?>     
+                    </div> 
                     <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
                         <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
                     </div>
@@ -247,7 +257,10 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
     </div>
 </div>
 
-
+<style>        
+.opc-wrapper-opc .paypal-logo .paypal-or{display:none;}        
+body.opc-index-index .opc-wrapper-opc .btn-checkout span{cursor: pointer;}     
+</style>
 <?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
 <script type="text/javascript">
     jQuery('body.opc-index-index .opc-wrapper-opc .opc-col-right').removeClass('hide'); 

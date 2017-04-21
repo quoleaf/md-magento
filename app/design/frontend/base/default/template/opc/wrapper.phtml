@@ -71,7 +71,6 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
             <?php if(!$is_persistent):?>
             
                 <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
-                <?php echo $this->getChildHtml('paypal.button'); ?>
             
             <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
                 <?php echo $this->getChildHtml('login');?>
@@ -174,7 +173,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                             if($productName == "test" || $productName == "BEAUTIHAIRBUND" || $productName == "BEAUTIHAIRBUND-T" || $productName == "HEALTHYHAIRBUND" || $productName == "HEALTHYHAIRBUND-T" || $productName == "NEWMOM" || $productName == "NEWMOM-T" || $productName == "BSEXYB" || $productName == "BSEXYB-T" || $productName == "NOURISHSKIN" || $productName == "NOURISHSKIN-T" || $productName == "BEAUTYANDSERENITY" || $productName == "BEAUTYANDSERENITY-T" || $productName == "BEAUTYBOOST" || $productName == "BEAUTYBOOST-T" || $productName == "CLEARSKINA" || $productName == "CLEARSKINB" ){     
                                 echo $this->getChildHtml('paypal.button');     
                             }      
-                        }      
+                        }       
                         ?>     
                     </div> 
                     <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">

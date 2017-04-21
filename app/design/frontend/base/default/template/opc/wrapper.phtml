@@ -203,7 +203,9 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                                 Your Order
                             </strong>
                             <div id="GrandDetails" class="pf-opc-total">
-                                <div id="opc-review-block"></div>
+                                <div id="opc-review-block">
+                                    <?php echo $this->_getReviewHtml()?>
+                                </div>
                             </div>
 
                         </div>

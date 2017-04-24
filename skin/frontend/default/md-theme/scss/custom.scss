@@ -4414,7 +4414,16 @@ body {
 	    font-weight: bold;
 	    text-transform: none;
 	    text-align: center;
+
+	    @media only screen and (max-width : 991px) {
+	    	font-size: 30px;
+	    }
 	}
+}
+
+
+.instashow, .instashow div, .instashow figure, .instashow img, .instashow p, .instashow ul {
+	overflow: hidden;
 }
 
 /* ==== Preloader ==== */

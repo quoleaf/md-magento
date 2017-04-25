@@ -4407,6 +4407,7 @@ body {
     width: 100%;
     float: left;
     background: #eee;
+    text-align: center;
 
 	h1 {
 		font-size: 55px;
@@ -4415,10 +4416,21 @@ body {
 	    font-weight: bold;
 	    text-transform: none;
 	    text-align: center;
+	    margin: 0;
 
 	    @media only screen and (max-width : 991px) {
 	    	font-size: 30px;
 	    }
+	}
+
+	p {
+		width: 100%;
+	    text-align: center;
+	    margin: 10px 0 15px 0;
+	}
+
+	a {
+		color: #1183ce;
 	}
 }
 

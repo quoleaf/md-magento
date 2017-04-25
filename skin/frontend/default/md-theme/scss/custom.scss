@@ -4392,8 +4392,9 @@ div#sidebar .sideNavi ul li.active a {
 /****************  Custom - rej  ****************/
 
 body {
-	overflow-y: hidden;
+	overflow-y: auto;
 	overflow-x: hidden;
+	height: auto;
 }
 
 #lo_avail_for_chat_btn, .write-first-question-button {

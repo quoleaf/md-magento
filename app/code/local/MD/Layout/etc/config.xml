@@ -387,6 +387,16 @@
             </layouts>
         </page>
 
+        <page>
+            <layouts> 
+                <testpaypal module="page" translate="label">
+                    <label>Staging Test Paypal</label>
+                    <template>page/staging-test-paypal.phtml</template>
+                    <layout_handle>testpaypal</layout_handle>
+                </testpaypal> 
+            </layouts>
+        </page>
+
     </global>
     <frontend>
         <routers>

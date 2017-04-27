@@ -84,42 +84,39 @@ $rakuten_url = 'https://track.linksynergy.com/ep?mid=42138&ord='.$order_id.'&sku
     $gurupeeps_sku   = "";
     foreach($allitems as $item)
     {
-      $gurupeeps_sku.= $item->getSku();
-      
+      $gurupeeps_sku .= $item->getSku();
+    
     }
 ?>
 
-<?php 
+<!-- TUNE pixel/tracking codes start here -->
+<?php if ( strpos($gurupeeps_sku, 'BEAUTIHAIRBUND') !== false || strpos($gurupeeps_sku, 'BEAUTIHAIRBUND-T') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=12&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'HEALTHYHAIRBUND') !== false || strpos($gurupeeps_sku, 'HEALTHYHAIRBUND-T') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=16&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'NEWMOM') !== false || strpos($gurupeeps_sku, 'NEWMOM-T') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=10&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'BSEXYB') !== false || strpos($gurupeeps_sku, 'BSEXYB-T') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=22&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'NOURISHSKIN') !== false ||  strpos($gurupeeps_sku, 'NOURISHSKIN-T') !== false ) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=24&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'BEAUTYANDSERENITY') !== false || strpos($gurupeeps_sku, 'BEAUTYANDSERENITY-T') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=14&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'BEAUTYBOOST') !== false || strpos($gurupeeps_sku, 'BEAUTYBOOST-T') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=18&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<?php if ( strpos($gurupeeps_sku, 'CLEARSKINA') !== false || strpos($gurupeeps_sku, 'CLEARSKINB') !== false) : ?>
+    <iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=20&adv_sub=<?php echo $order_id ?>&amount=<?php echo $total ?>" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+<?php endif; ?>
+<!-- TUNE pixel/tracking codes end here -->
 
-  switch($gurupeeps_sku){
-    
-    case 'BEAUTIHAIRBUND' || 'BEAUTIHAIRBUND-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=12&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>' ;
-    break;
 
-    case 'HEALTHYHAIRBUND' || 'HEALTHYHAIRBUND-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=16&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'NEWMOM' || 'NEWMOM-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=10&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'BSEXYB' || 'BSEXYB-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=22&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'NOURISHSKIN' || 'NOURISHSKIN-T':
-        echo '<iframe src="https://gurupeeps.go2cloud.org/aff_l?offer_id=24&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'BEAUTYANDSERENITY' || 'BEAUTYANDSERENITY-T':
-        echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=14&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'BEAUTYBOOST' || 'BEAUTYBOOST-T':
-        echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=18&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-    case 'CLEARSKINA' || 'CLEARSKINB':
-        echo '<iframe src="http://gurupeeps.go2cloud.org/aff_l?offer_id=20&adv_sub='.$order_id.'&amount='.$total.'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-    break;
-  }
-?>
 
 <?php if ($this->getOrderId()):?>
 <?php if ($this->getCanViewOrder()) :?>

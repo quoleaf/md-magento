@@ -83,6 +83,7 @@
                                 foreach ($storeCategories as $_category):
                                 if($ctr <= $limit_category) :
                             ?>
+
                         <li> 
 
                             <a href="<?php echo Mage::app()->getStore()->getHomeUrl().$_category->getUrlKey(); ?>">
@@ -91,6 +92,7 @@
                                 $_category = Mage::getModel('catalog/category')->load($_category->getId());
                             ?>
                             <?php echo $_category->getName(); ?></a>
+
                             <ul>
                             <?php 
                                 
@@ -106,8 +108,9 @@
                                          ->addAttributeToFilter('status', 1)
                                          ->addAttributeToFilter('visibility', 4)
                                          ->setOrder('price', 'ASC');
+                                             
                                              echo '
-                                             <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->url_key.'">'.$_subcategory->getName().'</a>';
+                                             <li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>';
                                              if (count($products) > 0){    
 
                                                 echo '<ul>';

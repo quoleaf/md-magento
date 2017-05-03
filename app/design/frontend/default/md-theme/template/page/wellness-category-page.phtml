@@ -108,6 +108,22 @@
                                         </li>
                                     </ul>
                                 </li>
+
+                                <li class="mobileSearchWrapper" style="display: none;">
+                                     <div class="searchWrapper">
+                                                    
+                                        <div id="searchInner" > 
+                                            <form onsubmit="return check_small_search_form()" method="get" action="<?php echo Mage::getUrl('catalogsearch/result')?>">
+                                                
+                                                <button value="" type="submit">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </button>
+                                                
+                                                <input placeholder="SEARCH PRODUCTS" class="query" "search_query"="" name="q" type="text">
+                                            </form>
+                                        </div> 
+                                    </div>
+                                </li>
 	                        </ul>
 	                    </div>
 

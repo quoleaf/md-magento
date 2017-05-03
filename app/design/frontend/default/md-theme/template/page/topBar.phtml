@@ -12,6 +12,10 @@
             <?php echo $this->__('GIFT CERTIFICATES') ?>       
         </a>
         
+        <div class="CurrencyWrapper" style="display: none;">
+            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+        </div>
+
         <?php   $count = ($this->
         helper('checkout/cart')->getSummaryCount() ? $this->helper('checkout/cart')->getSummaryCount() : 0 ) ?> 
             <a href="<?php echo Mage::app()->getStore()->getHomeUrl().'checkout/cart'; ?>" class="shoppingBag cart-link">

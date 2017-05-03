@@ -214,6 +214,10 @@ nav {
             @media only screen and (max-width: 1280px) {
                 font-size: 13px;
             }
+
+            @media only screen and (max-width: 450px) {
+               display: none;
+            }
         }   
 
         #topBar .gifts {
@@ -497,6 +501,61 @@ nav {
                                 a {
                                     padding: 25px 70px 25px 70px;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.mobileSearchWrapper {
+
+                @media screen and (max-width: 1064px) { 
+                    display: block!important;
+                    width: 100%;
+                    float: left;
+                    height: 60px;
+
+                    .searchWrapper {
+                        width: 100%;
+                        padding: 0 35px 0 35px;
+
+                        @media screen and (max-width: 470px) { 
+                            padding: 0 10px 0 10px;
+                        }
+
+                        form {
+                            border:none!important;
+                            width: 100%;
+                            height: 60px;
+
+                            button {
+                                i {
+                                    color: #1183ce;
+                                }
+                            }
+
+                            input {
+                                color: #1183ce;
+
+                                 &::-webkit-input-placeholder {
+                            color: #1183ce;
+                            opacity: 1;
+                        }
+                        
+                        &:-moz-placeholder {
+                            color: #1183ce;
+                            opacity: 1;
+                        }
+
+                        &::-moz-placeholder {
+                            color: #1183ce;
+                            opacity: 1;
+                        }
+
+                        &:-ms-input-placeholder {
+                            color: #1183ce;
+                            opacity: 1;
+                        }
                             }
                         }
                     }
@@ -1061,6 +1120,125 @@ nav {
         transition: all 0.4s ease;
     }
 }
+
+
+
+
+#topBar .CurrencyWrapper {
+
+    @media screen and (max-width: 1064px) { 
+        display: block!important;
+
+        .MDCurrencyWrapper {
+                position: relative;
+                top: 14px;
+                right: 0;
+                height: auto;
+                padding:0;
+
+                .AUD::before {
+                    content: url('../images/currency/au-flag.png');
+                }
+                .CAD::before {
+                    content: url('../images/currency/ca-flag.png');
+                }
+                .BRL::before {
+                    content: url('../images/currency/br-flag.png');
+                }
+                .CNY::before {
+                    content: url('../images/currency/ch-flag.png');
+                }
+                .MXN::before {
+                    content: url('../images/currency/mx-flag.png');
+                }
+                .USD::before {
+                    content: url('../images/currency/us-flag.png');
+                }
+
+                ul li:hover > ul {
+                    display:list-item;
+                    color: #1183ce;
+                    z-index: 100;
+                    width: 300px;
+
+                    li {
+                        width: 50%;
+                        float: left;
+                    }
+                }
+
+                ul {
+                    list-style:none;
+                    position:relative;
+                    float:left;
+                    margin:0;
+                    padding:0;
+
+                    li {
+                        position:relative;
+                        float:left;
+                        margin:0px;
+                        padding:0;
+                        z-index:100;
+                        &:hover {
+                            ;
+                            cursor: pointer;
+                            z-index:100;
+                        }
+                        &.language {
+                            width: 100%!important;
+                            float: left;
+                            text-align: center;
+                            padding: 10px 0 5px 0;
+                            color: #727070;
+                        }
+                        a {
+                            display: block;
+                            width: 62px;
+                            text-align: left;
+                            z-index: 100;
+                            outline: none;
+                            font-family: 'Helvetica', Arial, sans-serif;
+                            text-decoration: none;
+                            color: #0d6ba9;
+                        }
+
+                        ul {
+                            display:none;
+                            position:absolute;
+                            top:100%;
+                            left:0;
+                            background:#fff;
+                            padding:0;
+                            z-index:100;
+                            border: 1px solid #000;
+                            li {
+                                float:none;
+                                z-index:100;
+                                width:235px;
+                                a {
+                                    line-height:120%;
+                                    padding:10px 10px;
+                                    text-align: left;
+                                    left: 100px;
+                                    z-index:100;
+                                    display: flex;
+                                    align-items: center;
+                                    outline: none;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    &::before {
+                                        padding-right: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
 
 /* End of Navigation */
 

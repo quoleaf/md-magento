@@ -258,7 +258,7 @@
                                     //Checks if the "Disable Add to Cart" variable is set to 'Yes': 
                                     if(($_product->getAttributeText('no_cart_button')) == "Yes"){echo 'hidden'; } ?> addCart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"></a>               
                              <?php elseif($_product->getStockItem() && $_product->getStockItem()->getIsInStock()): ?>
-                                <?php echo $_product->getProductUrl() ?>"><?php echo $this->__('View Details') ?></a></p>
+                                <!-- <p><a><?php echo $_product->getProductUrl() ?>"><?php echo $this->__('View Details') ?></a></p> -->
                              <?php else: ?>
                                 <p class="action availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
                              <?php endif; ?>

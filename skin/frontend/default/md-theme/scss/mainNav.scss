@@ -450,6 +450,10 @@ nav {
                         height: 85px;
                         display: flex;
                         align-items: center;
+
+                        @media screen and (max-width: 1064px) { 
+                            display: none;
+                        } 
                     }
 
                     img {
@@ -758,6 +762,10 @@ nav {
                 a {
                     padding:20px 50px 20px 50px;
                 }
+
+                &.open>a.dd-toggle i, a.dd-toggle i{
+                    display: none;
+                }
             }
         }
         .MDnav.mobile ul ul ul {
@@ -772,7 +780,8 @@ nav {
             border-bottom:1px solid rgba(255,255,255,.15)
         }
         .MDnav.mobile li.has-sub a {
-            padding-right:50px
+            padding-right:50px;
+            font-size: 12px;
         }
         .MDnav.mobile.light li a {
             border-bottom:1px solid rgba(0,0,0,.15)
@@ -806,8 +815,8 @@ nav {
         }
         .MDnav.mobile.light ul {
             background:rgba(255,255,255,1);
-                overflow-y: auto;
-             height: 80vh;
+            overflow-y: auto;
+            height: 65vh;
         }
         .MDnav.mobile.dark ul {
             background:rgba(0,0,0,1)

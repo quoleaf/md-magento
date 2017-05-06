@@ -992,7 +992,20 @@
 </div>
 
 
+<style type="text/css">
+    nav .custom-container .MDnav.mobile ul ul, nav .custom-container .MDnav.mobile ul ul li.open>a.dd-toggle i, nav .custom-container .MDnav.mobile ul ul li a.dd-toggle i {
+        display: none;
+    }
 
+    nav .custom-container .MDnav.mobile li.has-sub a {
+        font-size: 12px;
+    }
+
+    nav .custom-container .MDnav.mobile.light ul {
+        overflow-y: auto;
+        height: 65vh
+    }
+</style>
 
 <!--  Custom Scripts  -->
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>

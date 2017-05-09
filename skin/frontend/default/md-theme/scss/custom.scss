@@ -4951,6 +4951,691 @@ div#load_screen{
 
 /* Footer */
 
+
+/* Custom Pages (with banners) */
+
+body.staginglanding, body.StagingHairCategory {
+	.VideoWrapper {
+		height: 93vh;
+		background: url('../images/banners/hair-banner.jpg') center center;
+		background-size: cover;
+		background-repeat: no-repeat;	
+
+		@media only screen and (max-width : 1070px) {
+			background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
+			background-size: cover!important;
+			background-repeat: no-repeat!important;	
+		}
+
+		@media only screen and (max-width : 540px) {
+			height: 80vh!important;
+		}
+
+		.overlay {
+
+			@media only screen and (max-width : 1070px) {
+				background: none!important;
+			}
+
+			.overlay__inner {
+				.content {
+				    top: 0!important;
+				    height: 65vh;
+				    display: flex;
+				    align-items: center;
+
+				    @media only screen and (max-width : 1070px) {
+				    	height: 85vh!important;
+				    }
+
+				    @media only screen and (max-width : 540px) {
+				    	height: 65vh!important;
+				    }
+
+					.custom-container {
+						text-align: center;
+						padding: 0 0 0 600px!important;
+
+						@media only screen and (max-width : 1170px) {
+							padding: 0 0 0 500px!important;
+						}
+
+						@media only screen and (max-width : 1070px) {
+							padding: 0!important;
+						}
+
+						h1.title {
+							font-family: 'Helvetica', Arial, sans-serif!important;
+							font-style: normal!important;
+							font-size: 55pt!important;
+							line-height: 70px;
+							color: #fff!important;
+							text-transform: lowercase!important;
+
+							@media only screen and (max-width : 540px) {
+								font-size: 37pt !important;
+    							line-height: 53px;	
+							}
+
+							@media only screen and (max-width : 400px) {
+								font-size: 26pt !important;
+    							line-height: 40px;	
+							}
+
+							span {
+								width: 100%;
+								float: left;
+								font-family: 'Helvetica', Arial, sans-serif!important;
+								font-style: normal!important;
+								font-weight: bold!important;
+
+								@media only screen and (max-width : 540px) {
+									font-size: 35pt!important;
+								}
+
+								@media only screen and (max-width : 540px) {
+									font-size: 25pt!important;
+								}
+							}
+						}
+
+						.subtitle {
+							font-family: 'Bodoni', Arial, sans-serif;
+						    font-style: italic;
+						    font-weight: lighter;
+						    font-size: 55pt;
+						    color: #fff!important;
+
+						    @media only screen and (max-width : 540px) {
+						    	font-size: 35pt;
+						    }
+
+						    @media only screen and (max-width : 400px) {
+						    	font-size: 25pt;
+						    }
+						}
+
+						.ctaWrapper {
+							justify-content: center;
+							margin: 10px 0 0 0!important;
+
+							@media only screen and (max-width : 620px) {
+								display: flex!important;
+							}
+
+							@media only screen and (max-width : 540px) {
+								display: block!important;
+							    width: 270px!important;
+    							margin: 20px auto!important;
+    							float: none!important;
+							}
+
+							a {
+								padding: 10px 60px 10px 60px!important;
+								
+								@media only screen and (max-width : 540px) {
+									width: 100%!important;
+									float: left!important;
+									margin: 0 0 10px 0!important;
+									padding: 15px 0 15px 0!important;
+								}
+
+								&:nth-child(1) {
+									background: #fff!important;
+									color: #2a54b3!important;
+									border: 2px solid #fff!important;
+									margin: 0 20px 0 0;
+
+									&:hover {
+										background: #2a54b3!important;
+										border: 2px solid #2a54b3!important;
+										color: #fff!important;
+									}
+								}
+
+								&:nth-child(2) {
+									border: 2px solid #fff!important;
+									background: transparent!important;
+
+									&:hover {
+										border: 2px solid #2a54b3!important;
+										background: #2a54b3!important;
+									}
+								}
+
+								span {
+									font-size: 12px!important;
+									font-weight: bold;
+									position: relative;
+								    top: -2px!important;
+								    font-size: 20px;
+								    font-style: normal;
+								    letter-spacing: 2px;
+								    line-height: 0!important;
+								    font-family: 'Helvetica', Arial, sans-serif;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+body.StagingSkinCategory {
+	.VideoWrapper {
+		height: 93vh;
+		background: url('../images/banners/skin-banner.jpg') center center;
+		background-size: cover;
+		background-repeat: no-repeat;	
+
+		@media only screen and (max-width : 1070px) {
+			background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
+			background-size: cover!important;
+			background-repeat: no-repeat!important;	
+		}
+
+		@media only screen and (max-width : 540px) {
+			height: 80vh!important;
+		}
+
+		.overlay {
+
+			@media only screen and (max-width : 1070px) {
+				background: none!important;
+			}
+
+			.overlay__inner {
+				.content {
+				    top: 0!important;
+				    height: 65vh;
+				    display: flex;
+				    align-items: center;
+
+				    @media only screen and (max-width : 1070px) {
+				    	height: 85vh!important;
+				    }
+
+				    @media only screen and (max-width : 540px) {
+				    	height: 65vh!important;
+				    }
+
+					.custom-container {
+						text-align: center;
+						padding: 0 0 0 600px!important;
+
+						@media only screen and (max-width : 1170px) {
+							padding: 0 0 0 500px!important;
+						}
+
+						@media only screen and (max-width : 1070px) {
+							padding: 0!important;
+						}
+
+						h1.title {
+							font-family: 'Helvetica', Arial, sans-serif!important;
+							font-style: normal!important;
+							font-size: 55pt!important;
+							line-height: 30px;
+							color: #fff!important;
+							text-transform: lowercase!important;
+
+							@media only screen and (max-width : 540px) {
+								font-size: 37pt !important;
+    							line-height: 53px;	
+							}
+
+							@media only screen and (max-width : 400px) {
+								font-size: 26pt !important;
+    							line-height: 40px;	
+							}
+
+							span {
+								width: 100%;
+								float: left;
+								font-family: 'Helvetica', Arial, sans-serif!important;
+								font-style: normal!important;
+								font-weight: bold!important;
+
+								@media only screen and (max-width : 540px) {
+									font-size: 35pt!important;
+								}
+
+								@media only screen and (max-width : 540px) {
+									font-size: 25pt!important;
+								}
+							}
+						}
+
+						.subtitle {
+							font-family: 'Bodoni', Arial, sans-serif;
+						    font-style: italic;
+						    font-weight: lighter;
+						    font-size: 50pt;
+						    color: #fff!important;
+
+						    @media only screen and (max-width : 540px) {
+						    	font-size: 35pt;
+						    }
+
+						    @media only screen and (max-width : 400px) {
+						    	font-size: 25pt;
+						    }
+						}
+
+						.ctaWrapper {
+							justify-content: center;
+							margin: 55px 0 0 0!important;
+
+							@media only screen and (max-width : 620px) {
+								display: flex!important;
+							}
+
+							@media only screen and (max-width : 540px) {
+								display: block!important;
+							    width: 270px!important;
+    							margin: 20px auto!important;
+    							float: none!important;
+							}
+
+							a {
+								padding: 10px 60px 10px 60px!important;
+								
+								@media only screen and (max-width : 540px) {
+									width: 100%!important;
+									float: left!important;
+									margin: 0 0 10px 0!important;
+									padding: 15px 0 15px 0!important;
+								}
+
+								&:nth-child(1) {
+									background: #fff!important;
+									color: #d76899!important;
+									border: 2px solid #fff!important;
+									margin: 0 20px 0 0;
+
+									&:hover {
+										background: #2a54b3!important;
+										border: 2px solid #2a54b3!important;
+										color: #fff!important;
+									}
+								}
+
+								&:nth-child(2) {
+									border: 2px solid #fff!important;
+									background: transparent!important;
+
+									&:hover {
+										border: 2px solid #2a54b3!important;
+										background: #2a54b3!important;
+									}
+								}
+
+								span {
+									font-size: 12px!important;
+									font-weight: bold;
+									position: relative;
+								    top: -2px!important;
+								    font-size: 20px;
+								    font-style: normal;
+								    letter-spacing: 2px;
+								    line-height: 0!important;
+								    font-family: 'Helvetica', Arial, sans-serif;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+body.StagingLashCategory {
+	.VideoWrapper {
+		height: 83vh;
+		background: url('../images/banners/lash-banner.jpg') center center;
+		background-size: cover;
+		background-repeat: no-repeat;	
+		background-position-y: 50px;
+
+		@media only screen and (max-width : 1070px) {
+			background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
+			background-size: cover!important;
+			background-repeat: no-repeat!important;	
+		}
+
+		@media only screen and (max-width : 540px) {
+			height: 80vh!important;
+		}
+
+		.overlay {
+
+			@media only screen and (max-width : 1070px) {
+				background: none!important;
+			}
+
+			.overlay__inner {
+				.content {
+				    top: 0!important;
+				    height: 60vh;
+				    display: flex!important;
+				    align-items: center;
+
+				    @media only screen and (max-width : 1070px) {
+				    	height: 85vh!important;
+				    }
+
+				    @media only screen and (max-width : 540px) {
+				    	height: 65vh!important;
+				    }
+
+					.custom-container {
+						text-align: center;
+						padding: 0 0 0 600px!important;
+
+						@media only screen and (max-width : 1170px) {
+							padding: 0 0 0 600px!important;
+						}
+
+						@media only screen and (max-width : 1070px) {
+							padding: 0!important;
+						}
+
+						h1.title {
+							font-family: 'Helvetica', Arial, sans-serif!important;
+							font-style: normal!important;
+							font-size: 55pt!important;
+							line-height: 70px;
+							color: #222323!important;
+							text-transform: lowercase!important;
+
+							@media only screen and (max-width : 540px) {
+								font-size: 37pt !important;
+    							line-height: 53px;	
+							}
+
+							@media only screen and (max-width : 400px) {
+								font-size: 26pt !important;
+    							line-height: 40px;	
+							}
+
+							span {
+								width: 100%;
+								float: left;
+								font-family: 'Helvetica', Arial, sans-serif!important;
+								font-style: normal!important;
+								font-weight: bold!important;
+
+								@media only screen and (max-width : 540px) {
+									font-size: 35pt!important;
+								}
+
+								@media only screen and (max-width : 540px) {
+									font-size: 25pt!important;
+								}
+							}
+						}
+
+						.subtitle {
+							font-family: 'Bodoni', Arial, sans-serif;
+						    font-style: italic;
+						    font-weight: lighter;
+						    font-size: 55pt;
+						    color: #222323!important;
+
+						    @media only screen and (max-width : 540px) {
+						    	font-size: 35pt;
+						    }
+
+						    @media only screen and (max-width : 400px) {
+						    	font-size: 25pt;
+						    }
+						}
+
+						.ctaWrapper {
+							justify-content: center;
+							margin: 10px 0 0 0!important;
+
+							@media only screen and (max-width : 620px) {
+								display: flex!important;
+							}
+
+							@media only screen and (max-width : 540px) {
+								display: block!important;
+							    width: 270px!important;
+    							margin: 20px auto!important;
+    							float: none!important;
+							}
+
+							a {
+								padding: 10px 60px 10px 60px!important;
+								
+								@media only screen and (max-width : 540px) {
+									width: 100%!important;
+									float: left!important;
+									margin: 0 0 10px 0!important;
+									padding: 15px 0 15px 0!important;
+								}
+
+								&:nth-child(1) {
+									background: #2a54b3!important;
+									color: #fff!important;
+									border: 2px solid #2a54b3!important;
+									margin: 0 20px 0 0;
+
+									&:hover {
+										background: #2a54b3!important;
+										border: 2px solid #2a54b3!important;
+										color: #fff!important;
+									}
+								}
+
+								&:nth-child(2) {
+									border: 2px solid #2a54b3!important;
+									color: #2a54b3!important;
+									background: transparent!important;
+
+									&:hover {
+										border: 2px solid #2a54b3!important;
+										background: #2a54b3!important;
+										color: #fff!important;
+									}
+								}
+
+								span {
+									font-size: 12px!important;
+									font-weight: bold;
+									position: relative;
+								    top: -2px!important;
+								    font-size: 20px;
+								    font-style: normal;
+								    letter-spacing: 2px;
+								    line-height: 0!important;
+								    font-family: 'Helvetica', Arial, sans-serif;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+body.StagingWellnessCategory {
+	.VideoWrapper {
+		height: 93vh;
+		background: url('../images/banners/wellness-banner.jpg') center center;
+		background-size: cover;
+		background-repeat: no-repeat;	
+
+		@media only screen and (max-width : 1070px) {
+			background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
+			background-size: cover!important;
+			background-repeat: no-repeat!important;	
+		}
+
+		@media only screen and (max-width : 540px) {
+			height: 80vh!important;
+		}
+
+		.overlay {
+
+			@media only screen and (max-width : 1070px) {
+				background: none!important;
+			}
+
+			.overlay__inner {
+				.content {
+				    top: 0!important;
+				    height: 65vh;
+				    display: flex;
+				    align-items: center;
+
+				    @media only screen and (max-width : 1070px) {
+				    	height: 85vh!important;
+				    }
+
+				    @media only screen and (max-width : 540px) {
+				    	height: 65vh!important;
+				    }
+
+					.custom-container {
+						text-align: center;
+						padding: 0 0 0 600px!important;
+
+						@media only screen and (max-width : 1170px) {
+							padding: 0 0 0 500px!important;
+						}
+
+						@media only screen and (max-width : 1070px) {
+							padding: 0!important;
+						}
+
+						h1.title {
+							font-family: 'Helvetica', Arial, sans-serif!important;
+							font-style: normal!important;
+							font-size: 55pt!important;
+							line-height: 30px;
+							color: #fff!important;
+							text-transform: lowercase!important;
+
+							@media only screen and (max-width : 540px) {
+								font-size: 37pt !important;
+    							line-height: 53px;	
+							}
+
+							@media only screen and (max-width : 400px) {
+								font-size: 26pt !important;
+    							line-height: 40px;	
+							}
+
+							span {
+								width: 100%;
+								float: left;
+								font-family: 'Helvetica', Arial, sans-serif!important;
+								font-style: normal!important;
+								font-weight: bold!important;
+
+								@media only screen and (max-width : 540px) {
+									font-size: 35pt!important;
+								}
+
+								@media only screen and (max-width : 540px) {
+									font-size: 25pt!important;
+								}
+							}
+						}
+
+						.subtitle {
+							font-family: 'Bodoni', Arial, sans-serif;
+						    font-style: italic;
+						    font-weight: lighter;
+						    font-size: 50pt;
+						    color: #fff!important;
+
+						    @media only screen and (max-width : 540px) {
+						    	font-size: 35pt;
+						    }
+
+						    @media only screen and (max-width : 400px) {
+						    	font-size: 25pt;
+						    }
+						}
+
+						.ctaWrapper {
+							justify-content: center;
+							margin: 55px 0 0 0!important;
+
+							@media only screen and (max-width : 620px) {
+								display: flex!important;
+							}
+
+							@media only screen and (max-width : 540px) {
+								display: block!important;
+							    width: 270px!important;
+    							margin: 20px auto!important;
+    							float: none!important;
+							}
+
+							a {
+								padding: 10px 60px 10px 60px!important;
+								
+								@media only screen and (max-width : 540px) {
+									width: 100%!important;
+									float: left!important;
+									margin: 0 0 10px 0!important;
+									padding: 15px 0 15px 0!important;
+								}
+
+								&:nth-child(1) {
+									background: #fff!important;
+									color: #d76899!important;
+									border: 2px solid #fff!important;
+									margin: 0 20px 0 0;
+
+									&:hover {
+										background: #2a54b3!important;
+										border: 2px solid #2a54b3!important;
+										color: #fff!important;
+									}
+								}
+
+								&:nth-child(2) {
+									border: 2px solid #fff!important;
+									background: transparent!important;
+
+									&:hover {
+										border: 2px solid #2a54b3!important;
+										background: #2a54b3!important;
+									}
+								}
+
+								span {
+									font-size: 12px!important;
+									font-weight: bold;
+									position: relative;
+								    top: -2px!important;
+								    font-size: 20px;
+								    font-style: normal;
+								    letter-spacing: 2px;
+								    line-height: 0!important;
+								    font-family: 'Helvetica', Arial, sans-serif;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 /* Category */
 
 	.categoryWrapper {
@@ -4968,52 +5653,6 @@ div#load_screen{
     		display: block;
     	}
 
-		.shine {
-		    position: relative;
-		    display: inline-block;
-		    color: #fff;
-		    text-decoration: none;
-		    text-align: center;
-		    line-height: 50px;
-		    font-size: 12px;
-		}
-
-		.shine:after {
-		  content: "";
-		  position: absolute;
-		  top: -110%;
-		  left: -210%;
-		  width: 200%;
-		  height: 200%;
-		  opacity: 0;
-		  transform: rotate(30deg);
-		  
-		  background: rgba(255, 255, 255, 0.13);
-		  background: linear-gradient(
-		    to right, 
-		    rgba(255, 255, 255, 0.13) 0%,
-		    rgba(255, 255, 255, 0.13) 77%,
-		    rgba(255, 255, 255, 0.5) 92%,
-		    rgba(255, 255, 255, 0.0) 100%
-		  );
-		}
-
-		/* Hover state - trigger effect */
-
-		.shine:hover:after {
-		  opacity: 1;
-		  top: -30%;
-		  left: -30%;
-		  transition-property: left, top, opacity;
-		  transition-duration: 0.7s, 0.7s, 0.15s;
-		  transition-timing-function: ease;
-		}
-
-		/* Active state */
-
-		.shine:active:after {
-		  opacity: 0;
-		}
 
 		.zoom
 		{
@@ -5264,7 +5903,6 @@ body.CustomCategoryPage {
 				  			font-family: 'Bodoni', Arial, sans-serif;
 			  				font-style: italic;
 			  				font-size: 47pt;
-			  				line-height: 55px;
 
 			  				@media screen and (max-width: 1070px) {
 			  					font-size: 44pt;

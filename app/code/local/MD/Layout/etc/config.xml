@@ -387,6 +387,8 @@
             </layouts>
         </page>
 
+        <!-- Staging -->
+
         <page>
             <layouts> 
                 <testpaypal module="page" translate="label">
@@ -396,6 +398,58 @@
                 </testpaypal> 
             </layouts>
         </page>
+
+        <page>
+            <layouts> 
+                <staginghomepage module="page" translate="label">
+                    <label>Staging Homepage</label>
+                    <template>page/staging-homepage.phtml</template>
+                    <layout_handle>staginghomepage</layout_handle>
+                </staginghomepage> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <staginghair module="page" translate="label">
+                    <label>Staging Hair</label>
+                    <template>page/staging-hair.phtml</template>
+                    <layout_handle>staginghair</layout_handle>
+                </staginghair> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <staginglash module="page" translate="label">
+                    <label>Staging Lash</label>
+                    <template>page/staging-lash.phtml</template>
+                    <layout_handle>staginglash</layout_handle>
+                </staginglash> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <stagingskin module="page" translate="label">
+                    <label>Staging Skin</label>
+                    <template>page/staging-skin.phtml</template>
+                    <layout_handle>stagingskin</layout_handle>
+                </stagingskin> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <stagingwellness module="page" translate="label">
+                    <label>Staging Wellness</label>
+                    <template>page/staging-wellness.phtml</template>
+                    <layout_handle>stagingwellness</layout_handle>
+                </stagingwellness> 
+            </layouts>
+        </page>
+
+
 
     </global>
     <frontend>

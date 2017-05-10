@@ -4954,7 +4954,376 @@ div#load_screen{
 
 /* Custom Pages (with banners) */
 
-body.staginglanding, body.StagingHairCategory {
+body.staginglanding {
+	.VideoWrapper {
+		height: 93vh;
+		background: none;
+
+		@media only screen and (max-width : 1070px) {
+			background: none!important;
+			height: 90vh!important;
+		}
+
+		.overlay {
+
+			@media only screen and (max-width : 1070px) {
+				background: none!important;
+			}
+
+			.overlay__inner {
+				.content {
+				   	width: 100%;
+				    float: left;
+				    position: relative;
+				    top: -88px!important;
+
+				   	#BannerSlider {
+				   		.owl-pagination, .owl-buttons {
+				   			display: none;
+				   		}
+
+				   		.owl-item  {
+
+				   			&:nth-child(1) {
+				   				.bannerItem {
+					   				background: url('../images/banners/lash-banner.jpg') center center;
+									background-size: cover;
+									background-repeat: no-repeat;
+
+									.bannerContent {
+										.custom-container {
+											h1.title {
+												font-size: 55pt;
+												line-height: 70px;
+												color: #222323;
+
+												@media only screen and (max-width : 540px) {
+													font-size: 37pt;
+					    							line-height: 53px;	
+												}
+
+												@media only screen and (max-width : 400px) {
+													font-size: 26pt;
+					    							line-height: 40px;	
+												}
+
+											}
+
+											.subtitle {
+											    font-size: 55pt;
+											    color: #222323;
+
+											    @media only screen and (max-width : 540px) {
+											    	font-size: 35pt;
+											    }
+
+											    @media only screen and (max-width : 400px) {
+											    	font-size: 25pt;
+											    }
+											}
+
+											.ctaWrapper {
+												a {
+													&:nth-child(1) {
+														background: #2a54b3;
+														color: #fff;
+														border: 2px solid #2a54b3;
+														margin: 0 20px 0 0;
+
+														&:hover {
+															background: #2a54b3;
+															border: 2px solid #2a54b3;
+															color: #fff;
+														}
+													}
+
+													&:nth-child(2) {
+														border: 2px solid #2a54b3;
+														color: #2a54b3;
+														background: transparent;
+
+														&:hover {
+															border: 2px solid #2a54b3;
+															background: #2a54b3;
+															color: #fff;
+														}
+													}
+												}
+											}
+										}
+									}
+					   			}
+					   		}
+
+					   		&:nth-child(2) {
+					   			.bannerItem {
+					   				background: url('../images/banners/hair-banner.jpg') center center;
+									background-size: cover;
+									background-repeat: no-repeat;
+					   			}
+					   		}
+
+					   		&:nth-child(3) {
+					   			.bannerItem {
+					   				background: url('../images/banners/skin-banner.jpg') center center;
+									background-size: cover;
+									background-repeat: no-repeat;
+
+									.bannerContent {
+										.custom-container {
+											h1.title {
+												font-size: 55pt;
+												line-height: 30px;
+
+												@media only screen and (max-width : 540px) {
+													font-size: 37pt;
+					    							line-height: 53px;	
+												}
+
+												@media only screen and (max-width : 400px) {
+													font-size: 26pt;
+					    							line-height: 40px;	
+												}
+											}
+
+											.subtitle {
+											    font-size: 50pt;
+
+											     @media only screen and (max-width : 540px) {
+											    	font-size: 35pt;
+											    }
+
+											    @media only screen and (max-width : 400px) {
+											    	font-size: 25pt;
+											    }
+											}
+
+											.ctaWrapper {
+												margin: 55px 0 0 0;
+
+												a {
+													
+													&:nth-child(1) {
+														color: #d76899;
+													}
+												}
+											}
+										}
+									}
+					   			}
+					   		}
+
+					   		&:nth-child(4) {
+					   			.bannerItem {
+					   				background: url('../images/banners/wellness-banner.jpg') center center;
+									background-size: cover;
+									background-repeat: no-repeat;
+
+									.bannerContent {
+										.custom-container {
+											h1.title {
+												font-size: 55pt;
+												line-height: 30px;
+
+												@media only screen and (max-width : 540px) {
+													font-size: 37pt;
+					    							line-height: 53px;	
+												}
+
+												@media only screen and (max-width : 400px) {
+													font-size: 26pt;
+					    							line-height: 40px;	
+												}
+											}
+
+											.subtitle {
+											    font-size: 50pt;
+
+											     @media only screen and (max-width : 540px) {
+											    	font-size: 35pt;
+											    }
+
+											    @media only screen and (max-width : 400px) {
+											    	font-size: 25pt;
+											    }
+											}
+
+											.ctaWrapper {
+												margin: 55px 0 0 0;
+
+												a {
+													
+													&:nth-child(1) {
+														color: #d76899;
+													}
+												}
+											}
+										}
+									}
+								}
+					   		}
+
+					   		.bannerItem {
+					   			height: 85vh;
+
+					   			@media only screen and (max-width : 1070px) {
+									background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
+									background-size: cover;
+									background-repeat: no-repeat;	
+								}
+
+								@media only screen and (max-width : 540px) {
+									height: 80vh;
+								}
+
+					   			
+					   			.bannerContent {
+					   				top: 0;
+								    height: 100vh;
+								    display: flex;
+								    align-items: center;
+
+									.custom-container {
+										text-align: center;
+										padding: 0 0 0 600px;
+
+										@media only screen and (max-width : 1170px) {
+											padding: 0 0 0 500px;
+										}
+
+										@media only screen and (max-width : 1070px) {
+											padding: 0;
+										}
+
+										@media only screen and (max-width : 540px) {
+											height: 60vh;
+										}
+
+										h1.title {
+											font-family: 'Helvetica', Arial, sans-serif;
+											font-style: normal;
+											font-size: 55pt;
+											line-height: 70px;
+											color: #fff;
+											text-transform: lowercase;
+
+											@media only screen and (max-width : 540px) {
+												font-size: 37pt;
+				    							line-height: 53px;	
+											}
+
+											@media only screen and (max-width : 400px) {
+												font-size: 26pt;
+				    							line-height: 40px;	
+											}
+
+											span {
+												width: 100%;
+												float: left;
+												font-family: 'Helvetica', Arial, sans-serif;
+												font-style: normal;
+												font-weight: bold;
+
+												@media only screen and (max-width : 540px) {
+													font-size: 35pt;
+												}
+
+												@media only screen and (max-width : 540px) {
+													font-size: 25pt;
+												}
+											}
+										}
+
+										.subtitle {
+											font-family: 'Bodoni', Arial, sans-serif;
+										    font-style: italic;
+										    font-weight: lighter;
+										    font-size: 55pt;
+										    color: #fff;
+										    line-height: inherit;
+
+										    @media only screen and (max-width : 540px) {
+										    	font-size: 35pt;
+										    }
+
+										    @media only screen and (max-width : 400px) {
+										    	font-size: 25pt;
+										    }
+										}
+
+										.ctaWrapper {
+											justify-content: center;
+											margin: 10px 0 0 0;
+
+											@media only screen and (max-width : 620px) {
+												display: flex;
+											}
+
+											@media only screen and (max-width : 540px) {
+												display: block;
+											    width: 270px;
+				    							margin: 20px auto;
+				    							float: none;
+											}
+
+											a {
+												padding: 10px 60px 10px 60px;
+												
+												@media only screen and (max-width : 540px) {
+													width: 100%;
+													float: left;
+													margin: 0 0 10px 0!important;
+													padding: 15px 0 15px 0;
+												}
+
+												&:nth-child(1) {
+													background: #fff;
+													color: #2a54b3;
+													border: 2px solid #fff;
+													margin: 0 20px 0 0;
+
+													&:hover {
+														background: #2a54b3;
+														border: 2px solid #2a54b3;
+														color: #fff;
+													}
+												}
+
+												&:nth-child(2) {
+													border: 2px solid #fff;
+													background: transparent;
+
+													&:hover {
+														border: 2px solid #2a54b3;
+														background: #2a54b3;
+													}
+												}
+
+												span {
+													font-size: 12px;
+													font-weight: bold;
+													position: relative;
+												    top: -2px;
+												    font-style: normal;
+												    letter-spacing: 2px;
+												    line-height: 0;
+												    font-family: 'Helvetica', Arial, sans-serif;
+												}
+											}
+										}
+									}
+								}
+				   			}
+				   		}
+				   	}
+				}
+			}
+		}
+	}
+}
+
+
+body.StagingHairCategory {
 	.VideoWrapper {
 		height: 93vh;
 		background: url('../images/banners/hair-banner.jpg') center center;
@@ -5105,11 +5474,10 @@ body.staginglanding, body.StagingHairCategory {
 								}
 
 								span {
-									font-size: 12px!important;
+									font-size: 12px;
 									font-weight: bold;
 									position: relative;
 								    top: -2px!important;
-								    font-size: 20px;
 								    font-style: normal;
 								    letter-spacing: 2px;
 								    line-height: 0!important;
@@ -5276,11 +5644,10 @@ body.StagingSkinCategory {
 								}
 
 								span {
-									font-size: 12px!important;
+									font-size: 12px;
 									font-weight: bold;
 									position: relative;
 								    top: -2px!important;
-								    font-size: 20px;
 								    font-style: normal;
 								    letter-spacing: 2px;
 								    line-height: 0!important;
@@ -5450,11 +5817,10 @@ body.StagingLashCategory {
 								}
 
 								span {
-									font-size: 12px!important;
+									font-size: 12px;
 									font-weight: bold;
 									position: relative;
 								    top: -2px!important;
-								    font-size: 20px;
 								    font-style: normal;
 								    letter-spacing: 2px;
 								    line-height: 0!important;
@@ -5621,11 +5987,10 @@ body.StagingWellnessCategory {
 								}
 
 								span {
-									font-size: 12px!important;
+									font-size: 12px;
 									font-weight: bold;
 									position: relative;
 								    top: -2px!important;
-								    font-size: 20px;
 								    font-style: normal;
 								    letter-spacing: 2px;
 								    line-height: 0!important;

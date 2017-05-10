@@ -46,7 +46,7 @@
 
     <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://md-factor.com/skin/frontend/default/md-theme/css/custom.css">
+   
     
 </head>
 
@@ -183,28 +183,120 @@
             </div>
 
             <div class="content">
-                <div class="custom-container">
-                    <h1 class="title">
-                       nourish
-                       <span>
-                       	your hair
-                       </span>
-                    </h1>
-                    <span class="subtitle">
-                        back to beautiful
-                    </span>
+               
+                <div id="BannerSlider" class="owl-carousel">
+                    <div class="bannerItem">
+                        <div class="bannerContent">
+                            <div class="custom-container">
+                                <h1 class="title">
+                                   fuller,
+                                   <span>
+                                    denser
+                                   </span>
+                                </h1>
+                                <span class="subtitle">
+                                    longer lashes
+                                </span>
 
-                    <div class="ctaWrapper">
-                        <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>categories">
-                            <span>
-                                Shop Now
-                            </span>
-                        </a>
-                        <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
-                            <span>
-                            	Learn More
-                            </span>
-                        </a>
+                                <div class="ctaWrapper">
+                                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor">
+                                        <span>
+                                            Shop Now
+                                        </span>
+                                    </a>
+                                    <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                                        <span>
+                                            Learn More
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bannerItem">
+                        <div class="bannerContent">
+                            <div class="custom-container">
+                                <h1 class="title">
+                                   nourish
+                                   <span>
+                                    your hair
+                                   </span>
+                                </h1>
+                                <span class="subtitle">
+                                    back to beautiful
+                                </span>
+
+                                <div class="ctaWrapper">
+                                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>categories">
+                                        <span>
+                                            Shop Now
+                                        </span>
+                                    </a>
+                                    <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                                        <span>
+                                            Learn More
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bannerItem">
+                        <div class="bannerContent">
+                            <div class="custom-container">
+                                <h1 class="title">
+                                   <span>
+                                        from dull
+                                   </span>
+                                </h1>
+                                <span class="subtitle">
+                                    to glowing skin
+                                </span>
+
+                                <div class="ctaWrapper">
+                                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-skin">
+                                        <span>
+                                            Shop Now
+                                        </span>
+                                    </a>
+                                    <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                                        <span>
+                                            Learn More
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bannerItem">
+                        <div class="bannerContent">
+                            <div class="custom-container">
+                                <h1 class="title">
+                                   <span>
+                                        fast-acting
+                                   </span>
+                                </h1>
+                                <span class="subtitle">
+                                    real results
+                                </span>
+
+                                <div class="ctaWrapper">
+                                    <a href="<?php echo Mage::app()->getStore()->getHomeUrl(); ?>md-wellness">
+                                        <span>
+                                            Shop Now
+                                        </span>
+                                    </a>
+                                    <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                                        <span>
+                                            Learn More
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1088,6 +1180,52 @@ jQuery(document).ready(function($) {
           }
       });
     });
+
+    jQuery("#BannerSlider").owlCarousel({
+        items : 1,
+        itemsCustom : false,
+        itemsDesktop : [1199,1],
+        itemsDesktopSmall : [980,1],
+        itemsTablet: [768,1],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
 
     jQuery("#AsSeenInSlider").owlCarousel({
         items : 5,

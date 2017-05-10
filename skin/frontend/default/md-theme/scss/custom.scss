@@ -4956,13 +4956,16 @@ div#load_screen{
 
 body.staginglanding {
 	.VideoWrapper {
-		height: 93vh;
+		height: 89vh;
 		background: none;
 
 		@media only screen and (max-width : 1070px) {
-			background: none!important;
 			height: 90vh!important;
+			background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
+			background-size: cover!important;
+			background-repeat: no-repeat!important;
 		}
+
 
 		.overlay {
 
@@ -4976,6 +4979,10 @@ body.staginglanding {
 				    float: left;
 				    position: relative;
 				    top: -88px!important;
+
+				    @media only screen and (max-width : 1070px) {
+				    	top: 0!important;
+				    }
 
 				   	#BannerSlider {
 				   		.owl-pagination, .owl-buttons {
@@ -5164,24 +5171,22 @@ body.staginglanding {
 					   		}
 
 					   		.bannerItem {
-					   			height: 85vh;
+					   			height: 100vh;
 
 					   			@media only screen and (max-width : 1070px) {
-									background: url('../images/banners/hair-banner-mobile.jpg') center center!important;
-									background-size: cover;
-									background-repeat: no-repeat;	
-								}
-
-								@media only screen and (max-width : 540px) {
-									height: 80vh;
-								}
-
+					   				background: none!important;
+					   			}
 					   			
 					   			.bannerContent {
 					   				top: 0;
 								    height: 100vh;
 								    display: flex;
 								    align-items: center;
+
+								    @media only screen and (max-width : 1070px) {
+								        height: auto;
+    									padding: 150px 0 0 0;
+								    }
 
 									.custom-container {
 										text-align: center;
@@ -5262,7 +5267,7 @@ body.staginglanding {
 											@media only screen and (max-width : 540px) {
 												display: block;
 											    width: 270px;
-				    							margin: 20px auto;
+				    							margin: 20px auto!important;
 				    							float: none;
 											}
 

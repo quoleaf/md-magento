@@ -4956,16 +4956,13 @@ div#load_screen{
 
 body.staginglanding {
 
-	#instagramLiveFeedWrapper {
-		padding: 0!important;
-	}
+	nav #topBar {
+		margin: 0 0 14px 0; 
 
-	nav {
-		#topBar {
-			margin: 0;
+		@media only screen and (max-width : 1070px) {
+			margin: 0!important;
 		}
 	}
-
 
 	.VideoWrapper {
 		height: 89vh;
@@ -4990,7 +4987,7 @@ body.staginglanding {
 				   	width: 100%;
 				    float: left;
 				    position: relative;
-				    top: -75px!important;
+				    top: -88px!important;
 
 				    @media only screen and (max-width : 1070px) {
 				    	top: 0!important;
@@ -5197,7 +5194,7 @@ body.staginglanding {
 
 								    @media only screen and (max-width : 1070px) {
 								        height: auto;
-    									padding: 120px 0 0 0;
+    									padding: 80px 0 0 0;
 								    }
 
 									.custom-container {

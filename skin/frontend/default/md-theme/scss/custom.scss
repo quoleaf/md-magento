@@ -4956,12 +4956,30 @@ div#load_screen{
 
 body.staginglanding {
 
+	.owl-buttons {
+		display: none!important;
+	}
+
 	nav #topBar {
 		margin: 0 0 14px 0; 
 
 		@media only screen and (max-width : 1070px) {
 			margin: 0!important;
 		}
+	}
+
+	.featuredProductsWrapper .owl-item .item img {
+	    width: 100%;
+	} 
+
+	.featuredProductsWrapper .custom-container #feauredProductSlider .owl-wrapper-outer .owl-wrapper .owl-item .item span img {
+		display: block;
+	}
+
+	#AsSeenInSlider .owl-wrapper-outer .owl-wrapper .owl-item .item {
+		width: 100%;
+		float: left;
+		text-align: center;
 	}
 
 	.VideoWrapper {

@@ -57,37 +57,20 @@
 <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
 
 
+
+<!-- Owl Carousel Assets -->
+<link defer href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet" media="all"/>
+
+<link defer rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/custom.css" type="text/css" / >
+<link defer rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/mainNav.css" type="text/css" />
+<link defer rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />   
+ <link defer rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
+<link defer rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
+
     
 </head>
 
 <body class="landingpage-revamp staginglanding">
-
- <noscript id="deferred-styles">
-     
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/custom.css" type="text/css" / >
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/mainNav.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />   
- <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
-
-<!-- Owl Carousel Assets -->
-<link href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet" media="all"/>
-
-
-    </noscript>
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
 
 
 <div class="VideoWrapper">
@@ -1140,16 +1123,15 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 
 <!--  Custom Scripts  -->
-<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
-<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js" ></script>
+<script defer src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js" ></script>
+<script defer type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js" ></script>
+<script defer type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>" async></script>
 
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.event.move.js') ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/nav.min.js') ?>"></script>
+<script defer type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.event.move.js') ?>"></script>
+<script defer type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/jquery.twentytwenty.js') ?>"></script>
+<script defer type="text/javascript" src="<?php echo $this->getSkinUrl('js/md-js/nav.min.js') ?>"></script>
+
 
 
 <script type="text/javascript">

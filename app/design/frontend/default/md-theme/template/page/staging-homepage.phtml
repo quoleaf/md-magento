@@ -42,11 +42,30 @@
     <title>MD Factor</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <?php echo $this->getChildHtml('head') ?>
-
-    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
    
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+    
+<link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+
+
+
+<!-- Owl Carousel Assets -->
+<link href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/custom.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/mainNav.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
+
     
 </head>
 
@@ -1098,9 +1117,14 @@
     }
 </style>
 
-<!--  Custom Scripts  -->
-<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+<!--  Custom Scripts  -->
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
@@ -1369,90 +1393,6 @@ jQuery(document).ready(function($) {
 
 
 
-<script type="text/javascript">
-
-'use strict';
-
-function debounce(func, wait, immediate) {
-
-  // Debounce
-  // http://davidwalsh.name/javascript-debounce-function
-
-    var timeout;
-    return function() {
-        var context = this,
-          args = arguments;
-        var later = function() {
-          timeout = null;
-          if (!immediate) {
-            func.apply(context, args);
-          }
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) {
-          func.apply(context, args);
-        }
-      };
-}
-
-    var htmlTag = document.getElementsByTagName('html')[0];
-    var videoContainer = document.querySelector('#video-container');
-    var videoElem = document.querySelector('#video-container video');
-
-    var minW = 320; // Minimum video width allowed
-    var vidWOrig; // Original video dimensions
-    var vidHOrig;
-
-    vidWOrig = videoElem.getAttribute('width');
-    vidHOrig = videoElem.getAttribute('height');
-
-    var videoCover = function() {
-
-      var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      var winHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-      // Set the video viewport to the window size
-
-      videoContainer.style.width = winWidth + 'px';
-      videoContainer.style.height = winHeight + 'px';
-
-      // Use largest scale factor of horizontal/vertical
-      var scaleH = winWidth / vidWOrig;
-      var scaleV = winHeight / vidHOrig;
-      var scale = scaleH > scaleV ? scaleH : scaleV;
-
-      // Don't allow scaled width < minimum video width
-      if (scale * vidWOrig < minW) {
-        scale = minW / vidWOrig;
-      }
-
-      // Scale the video
-      var videoNewWidth = scale * vidWOrig;
-      var videoNewHeight = scale * vidHOrig;
-
-      videoElem.style.width = videoNewWidth + 'px';
-      videoElem.style.height = videoNewHeight + 'px';
-
-      // Center it by scrolling the video viewport
-      videoContainer.scrollLeft = (videoNewWidth - winWidth) / 2;
-      videoContainer.scrollTop = (videoNewHeight - winHeight) / 2;
-
-    };
-
-    if (htmlTag.classList.contains('no-touch')) {
-      videoCover();
-
-      // Adjust on resize
-      var updateVideo = debounce(function() {
-        videoCover();
-      }, 100);
-
-      window.addEventListener('resize', updateVideo);
-    }
-        
-</script>
 
 
 

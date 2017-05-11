@@ -56,19 +56,38 @@
     
 <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
 
+
     
 </head>
 
+<body class="landingpage-revamp staginglanding">
 
-<!-- Owl Carousel Assets -->
-<link href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/custom.css" type="text/css" />
+ <noscript id="deferred-styles">
+     
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/custom.css" type="text/css" / >
 <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/mainNav.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/landingpage-revamp.css" type="text/css" />   
+ <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/twentytwenty.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
 
-<body class="landingpage-revamp staginglanding">
+<!-- Owl Carousel Assets -->
+<link href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" rel="stylesheet" media="all"/>
+
+
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
 
 
 <div class="VideoWrapper">

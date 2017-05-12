@@ -4968,6 +4968,10 @@ body.staginglanding {
 		}
 	}
 
+	nav.fixed-nav #topBar {
+		margin: 0!important;
+	}
+	
 	.featuredProductsWrapper .owl-item .item img {
 	    width: 100%;
 	} 

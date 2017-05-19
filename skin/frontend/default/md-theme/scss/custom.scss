@@ -10323,6 +10323,30 @@ body.cms-sales {
 body {
   &.customer-logged-in {
 
+  	.pager {
+	    width: 100%;
+	    float: left;
+
+	    ul {
+		    float: left;
+		    display: flex;
+
+		    li {
+		    	padding: 0 10px 0 0;
+
+		    	&.active {
+		    		a {
+		    			color: #1183ce;
+		    		}
+		    	}
+
+		    	a {
+		    		color: #454545;
+		    	}
+		    }
+		}
+	}
+
   	nav .cart-link .badge {
   		padding: 1px 9px;
   	}

@@ -495,7 +495,7 @@
         <page>
             <layouts> 
                 <Dmdmomessential module="page" translate="label">
-                    <label>D - Guruu MD Beautiful Hair</label>
+                    <label>D - Guruu MD Mom Essential</label>
                     <template>page/duplicated-guruuLPs/D-md-mom-essential.phtml</template>
                     <layout_handle>D-md-mom-essential</layout_handle>
                 </Dmdmomessential> 

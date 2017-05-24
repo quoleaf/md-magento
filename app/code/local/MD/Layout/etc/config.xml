@@ -449,6 +449,110 @@
             </layouts>
         </page>
 
+        <page>
+            <layouts> 
+                <latesthomepage module="page" translate="label">
+                    <label>Latest Staging Homepage</label>
+                    <template>page/latesthomepage.phtml</template>
+                    <layout_handle>latesthomepage</layout_handle>
+                </latesthomepage> 
+            </layouts>
+        </page>
+
+
+        <!-- Duplicated GURUU LPs -->
+
+        <page>
+            <layouts> 
+                <Dmdbeautifulhair module="page" translate="label">
+                    <label>D - Guruu MD Beautiful Hair</label>
+                    <template>page/duplicated-guruuLPs/D-md-beautiful-hair.phtml</template>
+                    <layout_handle>D-md-beautiful-hair</layout_handle>
+                </Dmdbeautifulhair> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdhealthyhair module="page" translate="label">
+                    <label>D - Guruu MD Healthy Hair</label>
+                    <template>page/duplicated-guruuLPs/D-md-healthy-hair-bundle.phtml</template>
+                    <layout_handle>D-md-healthy-hair</layout_handle>
+                </Dmdhealthyhair> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdbringsexyback module="page" translate="label">
+                    <label>D - Guruu MD Bring Sexy Back</label>
+                    <template>page/duplicated-guruuLPs/D-md-bring-sexy-back.phtml</template>
+                    <layout_handle>D-md-bring-sexy-back</layout_handle>
+                </Dmdbringsexyback> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdmomessential module="page" translate="label">
+                    <label>D - Guruu MD Beautiful Hair</label>
+                    <template>page/duplicated-guruuLPs/D-md-mom-essential.phtml</template>
+                    <layout_handle>D-md-mom-essential</layout_handle>
+                </Dmdmomessential> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdnourishskin module="page" translate="label">
+                    <label>D - Guruu MD Noursih Skin</label>
+                    <template>page/duplicated-guruuLPs/D-md-nourish-skin.phtml</template>
+                    <layout_handle>D-md-nourish-skin</layout_handle>
+                </Dmdnourishskin> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdbeautyandserenity module="page" translate="label">
+                    <label>D - Guruu MD Beauty and Serenity</label>
+                    <template>page/duplicated-guruuLPs/D-beauty-and-serenity-landingpage-six.phtml</template>
+                    <layout_handle>D-md-beauty-and-serenity</layout_handle>
+                </Dmdbeautyandserenity> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdbeautyboost module="page" translate="label">
+                    <label>D - Guruu Beauty Boost</label>
+                    <template>page/duplicated-guruuLPs/D-beauty-boost-landingpage-seven.phtml</template>
+                    <layout_handle>D-md-beauty-boost</layout_handle>
+                </Dmdbeautyboost> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdclearskin module="page" translate="label">
+                    <label>D - Guruu MD Clear Skin</label>
+                    <template>page/duplicated-guruuLPs/D-clear-skin-landingpage-nine.phtml</template>
+                    <layout_handle>D-md-clear-skin-landingpager</layout_handle>
+                </Dmdclearskin> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <Dmdflawlessclearskin module="page" translate="label">
+                    <label>D - Guruu MD Flawless Clear Skin</label>
+                    <template>page/duplicated-guruuLPs/D-flawless-clear-skin-landingpage-eight.phtml</template>
+                    <layout_handle>D-md-flawless-clear-skin-landingpager</layout_handle>
+                </Dmdflawlessclearskin> 
+            </layouts>
+        </page>
+
+
 
 
     </global>

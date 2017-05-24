@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta property="og:image" content="http://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-thumbnail.jpg" />
+    
+    <meta property="og:image:secure_url" content="https://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-thumbnail.jpg" />
+
+    <title>MD Healthy Hair Bundle</title>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+    
+    <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
+
+
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu.css" type="text/css" />
+
+    
+    <!-- BEGIN GOOGLE ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-89987290-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        //]]>
+    </script>
+    <!-- END GOOGLE ANALYTICS CODE -->
+        
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1010013549017189');
+        fbq('track', "PageView");
+    </script>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class="health-hair-bundle-one">
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 107 ?>
+<?php $_productID2 = 103 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[9]=11&bundle_option[10]=12&options[9]=16&form_key='.$formkey.'' ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+$(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
+if (this.checked) {
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[9]=11&bundle_option[10]=12&options[9]=16&form_key='.$formkey.''  ?>";
+$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.health-hair-bundle-one #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+$('#description .custom-container .left div a:first-child').attr('href', url);
+$('#FreeShipping .custom-container div a').attr('href', url);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
+}else{
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[4]=6&bundle_option[1]=1&form_key='.$formkey.'' ?>";
+$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.health-hair-bundle-one #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+$('#description .custom-container .left div a:first-child').attr('href', url2);
+$('#FreeShipping .custom-container div a').attr('href', url2);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
+}
+});
+});
+</script>
+
+<div class="TopWrapper">
+    <div class="custom-container">
+        <p>
+            <i class="fa fa-phone" aria-hidden="true"></i> Contact Us | 1-888-882-5788
+        </p>
+        <p>
+            <i class="fa fa-truck" aria-hidden="true"></i> FREE US SHIPPING | USE CODE: FREESHIPPING
+        </p>
+    </div>
+</div>
+
+
+<div id="headerWrapper">
+    <nav class='main-nav' id="main-navWrapper">
+        <div class="custom-container">
+            <ul class='main-nav'>
+                <li>
+                    <a href='<?php echo Mage::getBaseUrl(); ?>'>
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        What is MD Hair
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        How does it work
+                    </a>
+                </li>
+                <li>
+                    <a href='https://md-factor.com/shipping-policy/'>
+                        satisfaction guarantee
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $cartUrl; ?>" class="buynow">
+                        Buy now
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
+                        Share
+                    </a>
+                </li>
+
+            </ul>
+            <a href='#' id='openup'>
+                <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+            </a>
+
+            <span>
+                <a href="https://www.addtoany.com/share" class="share a2a_dd">
+                    <i class="fa fa-reply" aria-hidden="true"></i> Share
+                </a>
+            </span>
+        </div>
+    </nav>
+
+    <div class="custom-container">
+        <div class="inner">
+            <div class="content">
+                <h1>
+                    HEALTHY HAIR BUNDLE
+                </h1>
+
+                <p>
+                    Fight Hair Shedding and <br/>
+                    Regain Gorgeous Hair
+                </p>
+
+                <span>
+                    PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
+                </span>
+
+                <div class="cta">
+                    <a href="<?php echo $cartUrl; ?>">
+                        Order Yours Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="hanging-products">
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/fe-hanging-prod.png') ?>" class="wow fadeInDown animated" data-wow-delay="4s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-3.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-1.png') ?>" class="wow fadeInUp animated" data-wow-delay="1s">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="FreeShipping">
+    <div class="custom-container">
+        <h1>
+            FREE SHIPPING 
+        </h1>
+        <p>
+            PLUS FREE SAMPLE WITH FIRST ORDER
+        </p>
+        <div>
+            <a href="<?php echo $cartUrl; ?>">
+                SUBSCRIBE NOW
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="bundleWrapper">
+    <div class="custom-container">
+        <div class="imageWrapper">
+            <div class="inner">
+                <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair1-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="4s">
+            </div>
+
+            <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair1-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
+            </div>
+
+            <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair2-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
+            </div>
+
+            <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/fe-prod-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
+            </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>
+                Healthy Hair Bundle
+            </h1>
+            <p>
+                Transform your healthy hair from inside out
+            </p>
+
+            <div class="price">
+                <span>$290</span>
+                <p>
+                    $140
+                </p>
+            </div>
+
+            <strong>
+                Bundle Includes:    
+            </strong>
+
+            <ul>
+                <li>
+                    Three one month supply MD Nutri Hair ($150)
+                </li>
+                <li>
+                    MD Follicle Energizer 28 ml - 3 Month Supply($140)
+                </li>
+            </ul>
+
+            <div class="autoshipWrapper">
+                <div class="inner">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
+                        <label for="custom-checkbox">
+                            <span>
+                                Autoship every 90 days
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <p>
+                    Enjoy the special bundle saving and receive autoship every 90 days
+                </p>
+            </div>
+
+            <div class="cta">
+                <a href="<?php echo $cartUrl; ?>">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="AsSeenIn">
+    <div class="custom-container">
+        <h2>
+            As Seen In
+        </h2>
+        <div id="AsSeenInSlider" class="owl-carousel">
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/cosmopolitan-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img class="intimate" src="<?php echo $this->getSkinUrl('images/hairkit-bundle/marie-claire-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/the-new-york-times-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/allure-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/womens-health-logo.png') ?>">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="description">
+    <div class="custom-container desktop">
+        <div class="left">
+            <div class="inner">
+                <h2>
+                    How it works?
+                </h2>
+
+                <strong>
+                    MD NUTRI HAIR
+                </strong>
+
+                <p>
+                    MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available.      
+                </p>
+
+                <strong>
+                    MD FOLLICLE ENERGIZER
+                </strong>
+
+                <p>
+                    Follicle Energizer is fortified with peptides designed help anchor your hair to scalp  and to increase thickness of individual hair.  You will notice stronger thicker hair that can be styled easier and less shedding during brushing or washing.  
+                </p>
+            </div>
+                
+            <div>
+                <a href="<?php echo $cartUrl; ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
+                    Add to bag
+                </a>
+
+                <a href="https://youtu.be/_pv-ZZ3geXM" target="_blank" data-lity="">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>
+                Before &amp; After
+            </h2>
+            
+            <div class="BeforeAndAfterSlider" class="owl-carousel">
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-1.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-2.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-3.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-3.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>">
+                    </a> 
+                </div>
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>">
+                    </a> 
+                </div> 
+            </div>
+
+            <div class="vid">
+                <div class="inner">
+                    <a href="https://youtu.be/_pv-ZZ3geXM" target="_blank" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/intimate-restore/playbutton-medium.png') ?>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-container mobile" style="display: none;">
+
+        <div class="right">
+            <h2>
+                Before &amp; After
+            </h2>
+            
+            <div class="BeforeAndAfterSlider" class="owl-carousel">
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-1.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-2.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-3.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-3.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.png') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>">
+                    </a> 
+                </div>
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>">
+                    </a> 
+                </div> 
+            </div>
+        </div>
+        <div class="left">
+            <div class="inner">
+                <h2>
+                    How it works?
+                </h2>
+
+                <strong>
+                    MD NUTRI HAIR
+                </strong>
+
+                <p>
+                    MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available.      
+                </p>
+
+                <strong>
+                    MD FOLLICLE ENERGIZER
+                </strong>
+
+                <p>
+                    Follicle Energizer is fortified with peptides designed help anchor your hair to scalp  and to increase thickness of individual hair.  You will notice stronger thicker hair that can be styled easier and less shedding during brushing or washing.  
+                </p>
+            </div>
+                
+            <div>
+                <a href="<?php echo $cartUrl; ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
+                    Add to bag
+                </a>
+
+                <a href="https://youtu.be/_pv-ZZ3geXM" target="_blank" data-lity="">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="vid">
+                <div class="inner">
+                    <a href="https://youtu.be/_pv-ZZ3geXM" target="_blank" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/intimate-restore/playbutton-medium.png') ?>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="ingredients">
+    <div class="custom-container">
+        <div class="left">
+            <p>
+                Nutri hair
+
+                <span>
+                    ingredients
+                </span>
+            </p>
+        </div>
+
+        <div class="right">
+            <div class="inner wow zoomIn animated" data-wow-delay="0s">
+                <div></div>
+                <p>
+                    NORWEGIAN FISH COLLAGEN
+                </p>
+            </div>
+            
+            <div class="inner wow zoomIn animated" data-wow-delay="1s">
+                <div></div>
+                <p>
+                    Lilac Extract
+                </p>
+            </div>
+            
+            <div class="inner wow zoomIn animated" data-wow-delay="2s">
+                <div></div>
+                <p>
+                    Flaxseed powder
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial">
+    <div class="custom-container">
+        <div class="inner">
+            <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/stars.png') ?>">
+            <p>
+                This product qualifies almost as a miracle, as far as I'm concerned. I've been using hair supplements and creams for ages, and I had just gotten a hair extension when I found your product. My thinning hair is filling in, so I no longer need it. PLUS - I've had my husband take it, and HIS thinning hair is filling in! Hallelujah! Thank you, thank you, thank you! 
+            </p>
+            <div>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/author-1.jpg') ?>">
+                    <a href="javascript:void(0);">
+                        Cyndi W
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/stars.png') ?>">
+            <p>
+                So far so good..only been using this hair products for a month but my sister has been using it longer and the difference in her hair is remarkable!
+            </p>
+            <div>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/author-2.jpg') ?>">
+                    <a href="javascript:void(0);">
+                        Peggy J.
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+<div id="promo">
+    <div class="custom-container">
+        <div class="left wow fadeInUp animated" data-wow-delay="0.5s">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-nutri-hair.png') ?>"> 
+        </div>
+        <div class="middle">
+            <h1>
+                SIGN UP FOR FREE SHIPPING <br/>&amp; FREE SAMPLE
+            </h1>
+            <p>
+                OVER 1 MILLION CUSTOMERS WORLDWIDE
+            </p>
+            <!-- <form>
+                <input type="text" name="Email" placeholder="EMAIL">
+                <a href="javascript:void(0);">
+                    Become a MD Friend
+                </a>
+            </form> -->
+
+<link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
+<div class="ctct-embed-signup" style="font: 16px Helvetica Neue, Arial, sans-serif; font: 1rem Helvetica Neue, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased;">
+   <div style="color:#5b5b5b; border-radius:5px;">
+       <span id="success_message" style="display:none;">
+           <div style="text-align:center;">Thanks for signing up!</div>
+       </span>
+       <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+           
+           <p></p>
+           <!-- The following code must be included to ensure your sign-up form works properly. -->
+           <input data-id="ca:input" type="hidden" name="ca" value="3d16f3e7-767f-40fa-9de8-f5e179bd5121">
+           <input data-id="list:input" type="hidden" name="list" value="1858923668">
+           <input data-id="source:input" type="hidden" name="source" value="EFD">
+           <input data-id="required:input" type="hidden" name="required" value="list,email">
+           <input data-id="url:input" type="hidden" name="url" value="">
+           <input data-id="Email Address:input" type="text" name="email" placeholder="EMAIL" value="" maxlength="80">
+           <button type="submit" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Become a MD Friend</button>
+       
+   </div>
+</div>
+<script type='text/javascript'>
+   var localizedErrMap = {};
+   localizedErrMap['required'] =    'This field is required.';
+   localizedErrMap['ca'] =      'An unexpected error occurred while attempting to send email.';
+   localizedErrMap['email'] =       'Please enter your email address in name@email.com format.';
+   localizedErrMap['birthday'] =    'Please enter birthday in MM/DD format.';
+   localizedErrMap['anniversary'] =   'Please enter anniversary in MM/DD/YYYY format.';
+   localizedErrMap['custom_date'] =   'Please enter this date in MM/DD/YYYY format.';
+   localizedErrMap['list'] =      'Please select at least one email list.';
+   localizedErrMap['generic'] =     'This field is invalid.';
+   localizedErrMap['shared'] =    'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+   localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+  localizedErrMap['state_province'] = 'Select a state/province';
+   localizedErrMap['selectcountry'] =   'Select a country';
+   var postURL = 'https://visitor2.constantcontact.com/api/signup';
+</script>
+<script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+<!--End CTCT Sign-Up Form-->
+
+            <span>
+                We protect your personal information. We use secure transaction.
+            </span>
+        </div>
+        <div class="right wow fadeInDown animated" data-wow-delay="0.5s">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-fe.png') ?>"> 
+        </div>
+    </div>
+</div>
+
+
+<div id="about">
+    <div class="custom-container">  
+        <div class="title">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
+            <p>
+                <span>
+                    About DR Susan Lin            
+                </span>
+            </p>
+        </div>
+
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="custom-container">
+        <p>
+            Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+            <a href="javascript:void(0);">User Agreement</a> and <a href="javascript:void(0);">Privacy Policy</a>.
+        </p>
+        <span>
+            <a href="https://www.facebook.com/MDLASHF">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/fb.png') ?>"> 
+            </a>
+            <a href="https://twitter.com/MDLFbySusanLin">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/twitter.png') ?>"> 
+            </a>
+            <a href="https://instagram.com/md_factor/">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/instagram.png') ?>"> 
+            </a>
+        </span>
+    </div>
+</div>
+
+
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+
+
+<!-- Share button -->
+
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.num_services = 2;
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<script>
+
+$(document).ready(function() {
+    $("#AsSeenInSlider").owlCarousel({
+        items : 5,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : false,
+        navigationText : ["prev","next"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+    $(".BeforeAndAfterSlider").owlCarousel({
+        items : 1,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : true,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 5000,
+        paginationSpeed : 3000,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : false,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<img src='<?php echo $this->getSkinUrl('images/hairkit-bundle/slider-left-arrow.png') ?>'>","<img src='<?php echo $this->getSkinUrl('images/hairkit-bundle/slider-right-arrow.png') ?>'>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+      });
+
+});
+
+
+    </script>
+
+<script type="text/javascript">
+
+$(function() {
+    menu = $('nav ul');
+
+    $('#openup').on('click', function(e) {
+        e.preventDefault(); menu.slideToggle();
+    });
+  
+    $(window).resize(function(){
+        var w = $(this).width(); if(w > 760 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+  
+    $('nav li').on('click', function(e) {                
+        var w = $(window).width(); if(w < 760 ) {
+            menu.slideToggle(); 
+        }
+    });
+    
+    $('.open-menu').height($(window).height());
+});
+
+var offset = $('#main-navWrapper').offset();
+$(window).scroll(function(){
+   
+    $('#main-navWrapper').addClass('fixed-nav');
+    
+    if($(document).scrollTop() < 120){
+        $('#main-navWrapper').removeClass('fixed-nav');
+    }
+
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 120){  
+        $('#main-navWrapper').addClass("sticky");
+    }
+    else{
+        $('#main-navWrapper').removeClass("sticky");
+    }
+});
+
+</script>
+
+<script type='text/javascript'>
+window.__lo_site_id = 59158;
+
+(function() {
+var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+})();
+</script>
+</body>
+</html>

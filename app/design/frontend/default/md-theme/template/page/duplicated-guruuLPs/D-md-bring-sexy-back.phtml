@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta property="og:image" content="http://md-factor.com/us/skin/frontend/default/md-theme/images/sexy-back/sexy-back-fb-thumbnail.png" />
+    
+    <meta property="og:image:secure_url" content="https://md-factor.com/us/skin/frontend/default/md-theme/images/sexy-back/sexy-back-fb-thumbnail.png" />
+
+    <title>Bring Sexy Back</title>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+    
+    <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
+
+
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu.css" type="text/css" />
+
+    
+    <!-- BEGIN GOOGLE ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-89987290-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        //]]>
+    </script>
+    <!-- END GOOGLE ANALYTICS CODE -->
+        
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1010013549017189');
+        fbq('track', "PageView");
+    </script>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class="bring-sexy-back">
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 123 ?>
+<?php $_productID2 = 122 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[46]=51&bundle_option[47]=52&options[19]=26&form_key='.$formkey.'' ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+$(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
+if (this.checked) {
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[46]=51&bundle_option[47]=52&options[19]=26&form_key='.$formkey.''  ?>";
+$('body.bring-sexy-back #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.bring-sexy-back #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+$('#description .custom-container .left div a:first-child').attr('href', url);
+$('#FreeShipping .custom-container div a').attr('href', url);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
+}else{
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[44]=49&bundle_option[45]=50&form_key='.$formkey.'' ?>";
+$('body.bring-sexy-back #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.bring-sexy-back #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+$('#description .custom-container .left div a:first-child').attr('href', url2);
+$('#FreeShipping .custom-container div a').attr('href', url2);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
+}
+});
+});
+</script>
+
+<div class="TopWrapper">
+    <div class="custom-container">
+        <p>
+            <i class="fa fa-phone" aria-hidden="true"></i> Contact Us | 1-888-882-5788
+        </p>
+        <p>
+            <i class="fa fa-truck" aria-hidden="true"></i> FREE US SHIPPING | USE CODE: FREESHIPPING
+        </p>
+    </div>
+</div>
+
+
+<div id="headerWrapper">
+	<nav class='main-nav' id="main-navWrapper">
+	    <div class="custom-container">
+	        <ul class='main-nav'>
+	            <li>
+	                <a href='<?php echo Mage::getBaseUrl(); ?>'>
+	                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
+	                </a>
+	            </li>
+	            <li>
+	                <a href='#description'>
+	                    What is MD
+	                </a>
+	            </li>
+	            <li>
+	                <a href='#description'>
+	                    How does it work
+	                </a>
+	            </li>
+	            <li>
+	                <a href='https://md-factor.com/shipping-policy/'>
+	                    satisfaction guarantee
+	                </a>
+	            </li>
+	            <li>
+	                <a href="<?php echo $cartUrl ?>" class="buynow">
+	                    Buy now
+	                </a>
+	            </li>
+	            <li>
+	                <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
+                        Share
+                    </a>
+	            </li>
+
+	        </ul>
+	        <a href='#' id='openup'>
+	            <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+	        </a>
+
+	        <span>
+	            <a href="https://www.addtoany.com/share" class="share a2a_dd">
+	                <i class="fa fa-reply" aria-hidden="true"></i> Share
+	            </a>
+	        </span>
+	    </div>
+	</nav>
+
+    <div class="custom-container">
+        <div class="inner">
+            <div class="hanging-products">
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/sexy-back/brightening-cream-hanging-prod.png') ?>" class="wow fadeInUp animated">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/sexy-back/intimate-restore-hanging-prod.png') ?>" class="wow zoomIn animated">
+                </div>
+            </div>
+
+        	<div class="content">
+        		<h1>
+        			BRING SEXY BACK
+        		</h1>
+
+        		<p>
+        			improves sensitivity, <br/>
+                    appearance and discoloration <br/>
+                    of intimate feminine area.
+        		</p>
+
+        		<span>
+        			PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
+        		</span>
+
+        		<div class="cta">
+        			<a href="<?php echo $cartUrl ?>">
+        				Order Yours Now
+        			</a>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>
+
+<div id="FreeShipping">
+    <div class="custom-container">
+        <h1>
+            FREE SHIPPING 
+        </h1>
+        <p>
+            PLUS FREE SAMPLE WITH FIRST ORDER
+        </p>
+        <div>
+            <a href="<?php echo $cartUrl ?>">
+                SUBSCRIBE NOW
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="bundleWrapper">
+	<div class="custom-container">
+		<div class="imageWrapper">
+        	<div class="inner">
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/sexy-back/brightening-cream-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
+                </div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/sexy-back/intimate-restore-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
+                </div>
+        	</div>
+		</div>
+
+		<div class="content">
+			<h1>
+				BRING SEXY BACK
+			</h1>
+
+			<p>
+				Bring Sexy Back bundle improves sensitivity, <br/>
+                appearance and discoloration of intimate feminine area.
+			</p>
+
+			<div class="price">
+				<span>$145</span>
+				<p>
+					$98
+				</p>
+			</div>
+
+			<strong>
+				Bundle Includes:	
+			</strong>
+
+			<ul>
+				<li>
+                    Intimate Restore            
+                </li>
+
+                <li>
+                    MD Skin Brightening Cream 3%
+                </li>
+			</ul>
+
+			<div class="autoshipWrapper">
+				<div class="inner">
+					<div class="custom-checkbox">
+					    <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
+					    <label for="custom-checkbox">
+					    	<span>
+					    		Autoship every 90 days
+					    	</span>
+					    </label>
+					</div>
+				</div>
+
+				<p>
+					Enjoy the special bundle saving and receive autoship every 90 days
+				</p>
+			</div>
+
+			<div class="cta">
+        		<a href="<?php echo $cartUrl ?>">
+        			Order Now
+        		</a>
+        	</div>
+		</div>
+
+        <div class="catWrapper">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/mom-essential/cat-gif-bling.gif') ?>" class="wow fadeIn animated">
+        </div>
+	</div>
+</div>
+
+<div id="AsSeenIn">
+    <div class="custom-container">
+        <h2>
+            As Seen In
+        </h2>
+        <div id="AsSeenInSlider" class="owl-carousel">
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/cosmopolitan-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img class="intimate" src="<?php echo $this->getSkinUrl('images/hairkit-bundle/marie-claire-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/the-new-york-times-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/allure-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/womens-health-logo.png') ?>">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="description">
+    <div class="custom-container desktop">
+        <div class="left">
+            <div class="inner">
+                <h2>
+                    How it works?
+                </h2>
+
+                <strong>
+                    INTIMATE RESTORE
+                </strong>
+
+                <p>
+                    Intimate restore uses anti-aging peptide technology to rejuvenate feminine area to improve appearance, sensitivity and tone.
+                </p>
+
+                <strong>
+                    MD SKIN BRIGHTENING 3% CREAM
+                </strong>
+
+                <p>
+                    MD Skin Brightening 3% Cream- Many areas can darken after childbirth: nipple, back of neck, arm pits, abdomen, inner thighs and vulva.  Designed to gradually reduce pigmentation from pregnancy without skin irritation.  Avoid applying to nipple area while breastfeeding.
+                </p>
+            </div>
+                
+            <div>
+                <a href="<?php echo $cartUrl ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
+                    Add to bag
+                </a>
+
+                <a href="https://youtu.be/-TRk9ATsyWc" target="_blank" data-lity="">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>
+                Before &amp; After
+            </h2>
+            
+            <div class="BeforeAndAfterSlider" class="owl-carousel">
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/mom-essential/ba/BandA-1.png') ?>" data-lity="" >
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/mom-essential/ba/BandA-1.png') ?>">
+                    </a> 
+                </div> 
+            </div>
+
+            <div class="vid">
+                <div class="inner">
+                    <a href="https://youtu.be/gjyR33NIu1o" target="_blank" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/intimate-restore/playbutton-medium.png') ?>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-container mobile" style="display: none;">
+
+        <div class="right">
+            <h2>
+                Before &amp; After
+            </h2>
+            
+            <div class="BeforeAndAfterSlider" class="owl-carousel">
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/mom-essential/ba/BandA-1.png') ?>" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/mom-essential/ba/BandA-1.png') ?>">
+                    </a> 
+                </div> 
+            </div>
+        </div>
+        <div class="left">
+            <div class="inner">
+                <h2>
+                    How it works?
+                </h2>
+
+                <strong>
+                    INTIMATE RESTORE
+                </strong>
+
+                <p>
+                    Intimate restore uses anti-aging peptide technology to rejuvenate feminine area to improve appearance, sensitivity and tone.
+                </p>
+
+                <strong>
+                    MD SKIN BRIGHTENING 3% CREAM
+                </strong>
+
+                <p>
+                    MD Skin Brightening 3% Cream- Many areas can darken after childbirth: nipple, back of neck, arm pits, abdomen, inner thighs and vulva.  Designed to gradually reduce pigmentation from pregnancy without skin irritation.  Avoid applying to nipple area while breastfeeding.
+                </p>
+            </div>
+                
+            <div>
+                <a href="<?php echo $cartUrl ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
+                    Add to bag
+                </a>
+
+                <a href="https://youtu.be/-TRk9ATsyWc" target="_blank" data-lity="">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="vid">
+                <div class="inner">
+                    <a href="https://youtu.be/gjyR33NIu1o" target="_blank" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/intimate-restore/playbutton-medium.png') ?>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="ingredients">
+    <div class="custom-container">
+        <div class="left">
+            <p>
+                Key
+
+                <span>
+                    ingredients
+                </span>
+            </p>
+        </div>
+
+        <div class="right">
+            <div class="inner wow zoomIn animated" data-wow-delay="0s">
+                <div></div>
+                <p>
+                    Amino Acid Complex
+                </p>
+            </div>
+            
+            <div class="inner wow zoomIn animated" data-wow-delay="1s">
+                <div></div>
+                <p>
+                    Green tea
+                </p>
+            </div>
+            
+            <div class="inner wow zoomIn animated" data-wow-delay="2s">
+                <div></div>
+                <p>
+                    Antiaging Peptides
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial">
+    <div class="custom-container">
+        <div class="inner">
+            <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/stars.png') ?>">
+            <p>
+                Thank you for Intimate Restore in helping me enjoy being intimate again. I thought something was wrong with me but this has help me feel good again. Took about 1 weeks to notice difference.
+            </p>
+            <div>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/author-1.jpg') ?>">
+                    <a href="javascript:void(0);">
+                        Cyndi W
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/stars.png') ?>">
+            <p>
+               I have been using this product for a few months and I love the result. I'll defiantly buy it again. great Product!!
+            </p>
+            <div>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/author-2.jpg') ?>">
+                    <a href="javascript:void(0);">
+                        Peggy J.
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+<div id="promo">
+    <div class="custom-container">
+        <div class="left wow fadeInUp animated" data-wow-delay="0.5s">
+           <!--  <img src="<?php //echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-nutri-hair.png') ?>"> --> 
+        </div>
+        <div class="middle">
+            <h1>
+                SIGN UP FOR FREE SHIPPING <br/>&amp; FREE SAMPLE
+            </h1>
+            <p>
+                OVER 1 MILLION CUSTOMERS WORLDWIDE
+            </p>
+            <!-- <form>
+                <input type="text" name="Email" placeholder="EMAIL">
+                <a href="javascript:void(0);">
+                    Become a MD Friend
+                </a>
+            </form> -->
+
+
+
+<div class="ctct-embed-signup" >
+   <div>
+       <span id="success_message" style="display:none;">
+           <div style="text-align:center;">Thanks for signing up!</div>
+       </span>
+       <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+           
+           <p></p>
+           <!-- The following code must be included to ensure your sign-up form works properly. -->
+           <input data-id="ca:input" type="hidden" name="ca" value="eaccf17d-7664-49aa-b483-424e00bc2dcc">
+           <input data-id="list:input" type="hidden" name="list" value="1387587837">
+           <input data-id="source:input" type="hidden" name="source" value="EFD">
+           <input data-id="required:input" type="hidden" name="required" value="list,email">
+           <input data-id="url:input" type="hidden" name="url" value="">
+           <input data-id="Email Address:input" type="text" name="email" value="" placeholder="EMAIL" maxlength="80">
+           <button type="submit" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Become a MD Friend</button>
+        
+       </form>
+   </div>
+</div>
+<script type='text/javascript'>
+   var localizedErrMap = {};
+   localizedErrMap['required'] =    'This field is required.';
+   localizedErrMap['ca'] =      'An unexpected error occurred while attempting to send email.';
+   localizedErrMap['email'] =       'Please enter your email address in name@email.com format.';
+   localizedErrMap['birthday'] =    'Please enter birthday in MM/DD format.';
+   localizedErrMap['anniversary'] =   'Please enter anniversary in MM/DD/YYYY format.';
+   localizedErrMap['custom_date'] =   'Please enter this date in MM/DD/YYYY format.';
+   localizedErrMap['list'] =      'Please select at least one email list.';
+   localizedErrMap['generic'] =     'This field is invalid.';
+   localizedErrMap['shared'] =    'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+   localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+  localizedErrMap['state_province'] = 'Select a state/province';
+   localizedErrMap['selectcountry'] =   'Select a country';
+   var postURL = 'https://visitor2.constantcontact.com/api/signup';
+</script>
+<script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+<!--End CTCT Sign-Up Form-->
+
+            <span>
+                We protect your personal information. We use secure transaction.
+            </span>
+        </div>
+       <div class="right wow fadeInDown animated" data-wow-delay="0.5s">
+            <img src="<?php //echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-fe.png') ?>"> 
+        </div>
+    </div>
+</div>
+
+
+<div id="about">
+	<div class="custom-container">	
+		<div class="title">
+			<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
+			<p>
+				<span>
+                    About DR Susan Lin            
+                </span>
+			</p>
+		</div>
+
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
+	</div>
+</div>
+
+<div id="footer">
+    <div class="custom-container">
+        <p>
+            Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+            <a href="javascript:void(0);">User Agreement</a> and <a href="javascript:void(0);">Privacy Policy</a>.
+        </p>
+        <span>
+            <a href="https://www.facebook.com/MDLASHF">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/fb.png') ?>"> 
+            </a>
+            <a href="https://twitter.com/MDLFbySusanLin">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/twitter.png') ?>"> 
+            </a>
+            <a href="https://instagram.com/md_factor/">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/instagram.png') ?>"> 
+            </a>
+        </span>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+
+
+<!-- Share button -->
+
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.num_services = 2;
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<script>
+
+$(document).ready(function() {
+
+    $("#AsSeenInSlider").owlCarousel({
+        items : 5,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : false,
+        navigationText : ["prev","next"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+    $(".BeforeAndAfterSlider").owlCarousel({
+        items : 1,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : true,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 5000,
+        paginationSpeed : 3000,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : false,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<img src='<?php echo $this->getSkinUrl('images/hairkit-bundle/slider-left-arrow.png') ?>'>","<img src='<?php echo $this->getSkinUrl('images/hairkit-bundle/slider-right-arrow.png') ?>'>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+      });
+
+});
+
+
+    </script>
+
+<script type="text/javascript">
+
+$(function() {
+    menu = $('nav ul');
+
+    $('#openup').on('click', function(e) {
+        e.preventDefault(); menu.slideToggle();
+    });
+  
+    $(window).resize(function(){
+        var w = $(this).width(); if(w > 760 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+  
+    $('nav li').on('click', function(e) {                
+        var w = $(window).width(); if(w < 760 ) {
+            menu.slideToggle(); 
+        }
+    });
+    
+    $('.open-menu').height($(window).height());
+});
+
+var offset = $('#main-navWrapper').offset();
+$(window).scroll(function(){
+   
+    $('#main-navWrapper').addClass('fixed-nav');
+    
+    if($(document).scrollTop() < 120){
+        $('#main-navWrapper').removeClass('fixed-nav');
+    }
+
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 120){  
+        $('#main-navWrapper').addClass("sticky");
+    }
+    else{
+        $('#main-navWrapper').removeClass("sticky");
+    }
+});
+
+</script>
+
+<script type='text/javascript'>
+window.__lo_site_id = 59158;
+
+(function() {
+var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+})();
+</script>
+</body>
+</html>

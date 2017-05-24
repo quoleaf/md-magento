@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta property="og:image" content="http://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-2-thumbnail.jpg" /> -->
+    
+    <!-- <meta property="og:image:secure_url" content="https://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-2-thumbnail.jpg" /> -->
+
+    <title>Nourish Skin</title>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <link rel="icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+    
+    <link rel="shortcut icon" href="<?php echo $this->getSkinUrl('images/favicon.ico') ?>" type="image/x-icon" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/lity.min.css" media="all" />
+
+
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu.css" type="text/css" />
+
+    
+    <!-- BEGIN GOOGLE ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-89987290-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        //]]>
+    </script>
+    <!-- END GOOGLE ANALYTICS CODE -->
+        
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1010013549017189');
+        fbq('track', "PageView");
+    </script>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class="nourish-skin">
+<?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
+<?php $_product = Mage::registry('current_product'); ?>
+<?php //$_productID = $_product->getId(); ?>
+<?php $_productID = 120 ?>
+<?php $_productID2 = 119 ?>
+<?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[40]=45&bundle_option[41]=46&options[18]=25&form_key='.$formkey.'' ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+$(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
+if (this.checked) {
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[40]=45&bundle_option[41]=46&options[18]=25&form_key='.$formkey.''  ?>";
+$('body.nourish-skin #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.nourish-skin #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+$('#description .custom-container .left div a:first-child').attr('href', url);
+$('#FreeShipping .custom-container div a').attr('href', url);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
+}else{
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[38]=42&bundle_option[39]=44&form_key='.$formkey.'' ?>";
+$('body.nourish-skin #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.nourish-skin #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+$('#description .custom-container .left div a:first-child').attr('href', url2);
+$('#FreeShipping .custom-container div a').attr('href', url2);
+$('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
+}
+});
+});
+</script>
+<div class="TopWrapper">
+    <div class="custom-container">
+        <p>
+            <i class="fa fa-phone" aria-hidden="true"></i> Contact Us | 1-888-882-5788
+        </p>
+        <p>
+            <i class="fa fa-truck" aria-hidden="true"></i> FREE US SHIPPING | USE CODE: FREESHIPPING
+        </p>
+    </div>
+</div>
+
+
+<div id="headerWrapper">
+    <nav class='main-nav' id="main-navWrapper">
+        <div class="custom-container">
+            <ul class='main-nav'>
+                <li>
+                    <a href='<?php echo Mage::getBaseUrl(); ?>'>
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        What is MD
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        How does it work
+                    </a>
+                </li>
+                <li>
+                    <a href='https://md-factor.com/shipping-policy/'>
+                        satisfaction guarantee
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $cartUrl ?>" class="buynow">
+                        Buy now
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
+                        Share
+                    </a>
+                </li>
+
+            </ul>
+            <a href='#' id='openup'>
+                <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+            </a>
+
+            <span>
+                <a href="https://www.addtoany.com/share" class="share a2a_dd">
+                    <i class="fa fa-reply" aria-hidden="true"></i> Share
+                </a>
+            </span>
+        </div>
+    </nav>
+
+    <div class="custom-container">
+        <div class="inner">
+            <div class="content">
+                <h1>
+                    NOURISH YOUR SKIN
+                </h1>
+
+                <p>
+                   Beauty from within
+                </p>
+
+                <span>
+                    PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
+                </span>
+
+                <div class="cta">
+                    <a href="<?php echo $cartUrl ?>">
+                        Order Yours Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="hanging-products">
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/skin/vitamin-c-hanging-prod.png') ?>" class="wow fadeInRight animated" data-wow-delay="3s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/skin/enzyme-hanging-prod.png') ?>" class="wow fadeInRight animated" data-wow-delay="2s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/skin/ultimate-beauty-hanging-prod.png') ?>" class="wow fadeInRight animated" data-wow-delay="1s">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="FreeShipping">
+    <div class="custom-container">
+        <h1>
+            FREE SHIPPING 
+        </h1>
+        <p>
+            PLUS FREE SAMPLE WITH FIRST ORDER
+        </p>
+        <div>
+            <a href="<?php echo $cartUrl ?>">
+                SUBSCRIBE NOW
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="bundleWrapper">
+    <div class="custom-container">
+        <div class="imageWrapper">
+            <div class="inner">
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/skin/enzyme-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/skin/ultimate-beauty-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
+                </div>
+
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/skin/vitamin-c-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>
+                Nourish your skin
+            </h1>
+            <p>
+                HBeauty from within.  Beauty Drink with fish collagen, Hyaluronic Acid, <br/> Antioxidants (resveratrol, green tea extract, vitamin C ) and amino acid.
+            </p>
+
+            <div class="price">
+                <span>$180</span>
+                <p>
+                    $138
+                </p>
+            </div>
+
+            <strong>
+                Bundle Includes:   
+            </strong>
+
+            <ul>
+                <li>
+                    MD Beauty Drink
+                </li>
+
+                <li>
+                    Vitamin C Serum
+                </li>
+
+                <li>
+                    <strong>
+                        Bonus Gift: 
+                    </strong>
+                    Enzyme Peeling Mask
+                </li>
+            </ul>
+
+            <div class="autoshipWrapper">
+                <div class="inner">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
+                        <label for="custom-checkbox">
+                            <span>
+                                Autoship every 90 days
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <p>
+                    Enjoy the special bundle saving and receive autoship every 90 days
+                </p>
+            </div>
+
+            <div class="cta">
+                <a href="<?php echo $cartUrl ?>">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="AsSeenIn">
+    <div class="custom-container">
+        <h2>
+            As Seen In
+        </h2>
+        <div id="AsSeenInSlider" class="owl-carousel">
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/cosmopolitan-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img class="intimate" src="<?php echo $this->getSkinUrl('images/hairkit-bundle/marie-claire-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/the-new-york-times-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/allure-logo.png') ?>">
+            </a>
+            <a class="item">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/womens-health-logo.png') ?>">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="description">
+    <div class="custom-container desktop">
+        <div class="left">
+            <div class="inner">
+                <h2>
+                    How it works?
+                </h2>
+
+                <strong>
+                    VITAMIN C SERUM
+                </strong>
+
+                <p>
+                    high potency 20% <b>L-Ascorbic Acid works quickly</b> to penetrate your skin and bring back your youthful glow.  Brightens your complexion and minimize appearance of fine lines with natural anti-oxidants.
+                </p>
+
+                <strong>
+                    MD ENZYME MASK
+                </strong>
+
+                <p>
+                    Gentle mass enriched with natural enzyme from papaya and pineapple.  Apply thin layer to face and wait 15 minutes to dry avoiding eye region. Remove dry mask by gently peeling away the mask. Wash with warm water to reveal a softer and clean complexion.  Use weekly. 
+                </p>
+
+                <strong>
+                    MD BEAUTY DRINK
+                </strong>
+
+                <p>
+                    Fortified with bioactive fish Collagen, Hyaluronic Acid, Vitamin C, Resveratrol, Green Tea Extract and proprietary blend of amino acids, MD Beauty Drink is designed for your skin to regain its youthful fullness from the inside out.  Add one scoop to your favorite shake or juice every morning and notice softer and plumper skin in few days. 
+                </p>
+            </div>
+                
+            <div>
+                <a href="<?php echo $cartUrl ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
+                    Add to bag
+                </a>
+
+                <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>
+                Before &amp; After
+            </h2>
+            
+            <div class="BeforeAndAfterSlider" class="owl-carousel">
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-1.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-2.jpg') ?>">
+                    </a> 
+                </div> 
+            </div>
+
+            <div class="vid">
+                <div class="inner">
+                    <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/intimate-restore/playbutton-medium.png') ?>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-container mobile" style="display: none;">
+
+        <div class="right">
+            <h2>
+                Before &amp; After
+            </h2>
+            
+            <div class="BeforeAndAfterSlider" class="owl-carousel">
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-1.jpg') ?>">
+                    </a> 
+                </div> 
+                <div class="item">
+                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/skin/ba/BandA-2.jpg') ?>">
+                    </a> 
+                </div> 
+            </div>
+        </div>
+        <div class="left">
+            <div class="inner">
+                <h2>
+                    How it works?
+                </h2>
+
+                <strong>
+                    MD NUTRI HAIR
+                </strong>
+
+                <p>
+                    MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available.      
+                </p>
+            </div>
+                
+            <div>
+                <a href="<?php echo $cartUrl ?>">
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
+                    Add to bag
+                </a>
+
+                <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="vid">
+                <div class="inner">
+                    <a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity="">
+                        <img src="<?php echo $this->getSkinUrl('images/intimate-restore/playbutton-medium.png') ?>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="ingredients">
+    <div class="custom-container">
+        <div class="left">
+            <p>
+                Key
+
+                <span>
+                    ingredients
+                </span>
+            </p>
+        </div>
+
+        <div class="right">
+            <div class="inner wow zoomIn animated" data-wow-delay="0s">
+                <div></div>
+                <p>
+                    Anti-Oxident L-Ascorbic Acid
+                </p>
+            </div>
+            
+            <div class="inner wow zoomIn animated" data-wow-delay="1s">
+                <div></div>
+                <p>
+                    Norwegian Fish Collagen
+                </p>
+            </div>
+            
+            <div class="inner wow zoomIn animated" data-wow-delay="2s">
+                <div></div>
+                <p>
+                    Natural Papaya &amp; <br/>
+                    Pineapple Enzyme
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial">
+    <div class="custom-container">
+        <div class="inner">
+            <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/stars.png') ?>">
+            <p>
+                Just started using the mask about a month ago and it works pretty good! Every time i use it, I see the oils from my pores on the mask when i peel it off.  My face feels nice and soft afterwards and doesn't irritate my skin which is good. Overall, it doesn't leave my skin drying like other masks that i have tried in the past.
+            </p>
+            <div>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/author-1.jpg') ?>">
+                    <a href="javascript:void(0);">
+                        Cyndi W
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/stars.png') ?>">
+            <p>
+                I've been using MD brightening serum for years. It not only made my skin soft but also helped thicken the skin under my eyes. It's a great product.
+            </p>
+            <div>
+                <span>
+                    <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/author-2.jpg') ?>">
+                    <a href="javascript:void(0);">
+                        Peggy J.
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+<div id="promo">
+    <div class="custom-container">
+        <div class="left wow fadeInUp animated" data-wow-delay="0.5s">
+            <!-- <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-nutri-hair.png') ?>">  -->
+        </div>
+        <div class="middle">
+            <h1>
+                SIGN UP FOR FREE SHIPPING <br/>&amp; FREE SAMPLE
+            </h1>
+            <p>
+                OVER 1 MILLION CUSTOMERS WORLDWIDE
+            </p>
+            <!-- <form>
+                <input type="text" name="Email" placeholder="EMAIL">
+                <a href="javascript:void(0);">
+                    Become a MD Friend
+                </a>
+            </form> -->
+
+
+<div class="ctct-embed-signup" >
+   <div>
+       <span id="success_message" style="display:none;">
+           <div style="text-align:center;">Thanks for signing up!</div>
+       </span>
+       <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+           
+           <p></p>
+           <!-- The following code must be included to ensure your sign-up form works properly. -->
+           <input data-id="ca:input" type="hidden" name="ca" value="963eb0ad-2584-423f-b9fd-c7b05d8d5995">
+           <input data-id="list:input" type="hidden" name="list" value="1622880689">
+           <input data-id="source:input" type="hidden" name="source" value="EFD">
+           <input data-id="required:input" type="hidden" name="required" value="list,email">
+           <input data-id="url:input" type="hidden" name="url" value="">
+           <input data-id="Email Address:input" type="text" name="email" placeholder="EMAIL" value="" maxlength="80">
+           <button type="submit" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Become a MD Friend</button>
+        
+       </form>
+   </div>
+</div>
+<script type='text/javascript'>
+   var localizedErrMap = {};
+   localizedErrMap['required'] =    'This field is required.';
+   localizedErrMap['ca'] =      'An unexpected error occurred while attempting to send email.';
+   localizedErrMap['email'] =       'Please enter your email address in name@email.com format.';
+   localizedErrMap['birthday'] =    'Please enter birthday in MM/DD format.';
+   localizedErrMap['anniversary'] =   'Please enter anniversary in MM/DD/YYYY format.';
+   localizedErrMap['custom_date'] =   'Please enter this date in MM/DD/YYYY format.';
+   localizedErrMap['list'] =      'Please select at least one email list.';
+   localizedErrMap['generic'] =     'This field is invalid.';
+   localizedErrMap['shared'] =    'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+   localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+  localizedErrMap['state_province'] = 'Select a state/province';
+   localizedErrMap['selectcountry'] =   'Select a country';
+   var postURL = 'https://visitor2.constantcontact.com/api/signup';
+</script>
+<script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+<!--End CTCT Sign-Up Form-->
+
+            <span>
+                We protect your personal information. We use secure transaction.
+            </span>
+        </div>
+        <!-- <div class="right wow fadeInDown animated" data-wow-delay="0.5s">
+            <img src="<?php //echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-fe.png') ?>"> 
+        </div> -->
+    </div>
+</div>
+
+
+<div id="about">
+    <div class="custom-container">  
+        <div class="title">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
+            <p>
+                <span>
+                    About DR Susan Lin            
+                </span>
+            </p>
+        </div>
+
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="custom-container">
+        <p>
+            Copyright © 2016 MD Factor. All RIghts Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the MD Factor <br/>
+            <a href="javascript:void(0);">User Agreement</a> and <a href="javascript:void(0);">Privacy Policy</a>.
+        </p>
+        <span>
+            <a href="https://www.facebook.com/MDLASHF">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/fb.png') ?>"> 
+            </a>
+            <a href="https://twitter.com/MDLFbySusanLin">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/twitter.png') ?>"> 
+            </a>
+            <a href="https://instagram.com/md_factor/">
+                <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/instagram.png') ?>"> 
+            </a>
+        </span>
+    </div>
+</div>
+
+<script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+
+
+<!-- Share button -->
+
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.num_services = 2;
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<script>
+
+$(document).ready(function() {
+
+    $("#AsSeenInSlider").owlCarousel({
+        items : 5,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : false,
+        navigationText : ["prev","next"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+
+    $(".BeforeAndAfterSlider").owlCarousel({
+        items : 1,
+        itemsCustom : false,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet: [768,2],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : true,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 5000,
+        paginationSpeed : 3000,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : false,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<img src='<?php echo $this->getSkinUrl('images/hairkit-bundle/slider-left-arrow.png') ?>'>","<img src='<?php echo $this->getSkinUrl('images/hairkit-bundle/slider-right-arrow.png') ?>'>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+      });
+
+});
+
+
+    </script>
+
+<script type="text/javascript">
+
+$(function() {
+    menu = $('nav ul');
+
+    $('#openup').on('click', function(e) {
+        e.preventDefault(); menu.slideToggle();
+    });
+  
+    $(window).resize(function(){
+        var w = $(this).width(); if(w > 760 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+  
+    $('nav li').on('click', function(e) {                
+        var w = $(window).width(); if(w < 760 ) {
+            menu.slideToggle(); 
+        }
+    });
+    
+    $('.open-menu').height($(window).height());
+});
+
+var offset = $('#main-navWrapper').offset();
+$(window).scroll(function(){
+   
+    $('#main-navWrapper').addClass('fixed-nav');
+    
+    if($(document).scrollTop() < 120){
+        $('#main-navWrapper').removeClass('fixed-nav');
+    }
+
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 120){  
+        $('#main-navWrapper').addClass("sticky");
+    }
+    else{
+        $('#main-navWrapper').removeClass("sticky");
+    }
+});
+
+</script>
+
+<script type='text/javascript'>
+window.__lo_site_id = 59158;
+
+(function() {
+var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+})();
+</script>
+</body>
+</html>

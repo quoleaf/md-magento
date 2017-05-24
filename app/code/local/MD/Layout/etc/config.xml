@@ -387,6 +387,19 @@
             </layouts>
         </page>
 
+
+        <!-- Main -->
+
+        <page>
+            <layouts> 
+                <latesthomepage module="page" translate="label">
+                    <label>Latest Staging Homepage</label>
+                    <template>page/main/latesthomepage.phtml</template>
+                    <layout_handle>latesthomepage</layout_handle>
+                </latesthomepage> 
+            </layouts>
+        </page>
+
         <!-- Staging -->
 
         <page>
@@ -446,16 +459,6 @@
                     <template>page/staging-wellness.phtml</template>
                     <layout_handle>stagingwellness</layout_handle>
                 </stagingwellness> 
-            </layouts>
-        </page>
-
-        <page>
-            <layouts> 
-                <latesthomepage module="page" translate="label">
-                    <label>Latest Staging Homepage</label>
-                    <template>page/latesthomepage.phtml</template>
-                    <layout_handle>latesthomepage</layout_handle>
-                </latesthomepage> 
             </layouts>
         </page>
 

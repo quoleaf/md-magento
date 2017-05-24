@@ -1,0 +1,123 @@
+<?php
+$orders = $this->getLastestOrder();
+$info_display = explode(',', Mage::getStoreConfig('recentlypurchase/params/info_display'));
+$position_display = Mage::getStoreConfig('recentlypurchase/params/position_display');
+$define_text = Mage::getStoreConfig('recentlypurchase/params/define_text');
+$time_refresh = intval(Mage::getStoreConfig('recentlypurchase/params/time_refresh') * 1000);
+$time_delay = intval(Mage::getStoreConfig('recentlypurchase/params/time_delay') * 1000);
+$html = '';
+if ($this->enableModule() && count($orders)) {
+    $indexOrder = 0;
+    foreach ($orders as $order) {
+        $order_id = $order->getId();
+        $order_created_at = strtotime($order->getCreatedAt());
+        $orderDetail = Mage::getModel("sales/order")->load($order_id);
+        $ordered_items = $orderDetail->getParentItemsRandomCollection(1);
+        $_customer = Mage::getModel('customer/customer')->load($order->getCustomerId());
+        if ($order->getCustomerId()) {
+            if($_customer->getDefaultShippingAddress()) {
+                $countryCode = $_customer->getDefaultShippingAddress()->getCountry();
+            } else{
+                $countryCode = $order->getShippingAddress()->getCountry();
+            }
+        } else {
+            $countryCode = $order->getShippingAddress()->getCountry();
+        }
+        $country = Mage::getModel('directory/country')->loadByCode($countryCode);
+        $countryName = $country->getName();
+        foreach ($ordered_items as $item) {
+            $indexOrder++;
+            $productModel = Mage::getModel('catalog/product');
+            $_product = $productModel->loadByAttribute('sku', $item->getSku());
+			
+			//fix php fatal error
+			if(!$_product){
+				continue;
+			}
+			
+            $html .= '<div class="order_item_'. $indexOrder . '" style="display:none;padding:5px;overflow:hidden;">' ;
+            $product_url = Mage::getUrl($_product->getUrlPath());
+            if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_IMAGE_PRODUCT, $info_display)) {
+                $html .= '<div class="image"><a href="' . $product_url . '" title="' . $item->getName() . '"><img src="' . Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(75, 75) . '" alt="' . $item->getName() . '"></a></div>';
+            }
+            $html .= '<div class="info">';
+            if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_DEFINE_TEXT, $info_display)) {
+                if ($define_text == DragonFroot_Recentlypurchase_Block_Recentlypurchase::DEFINE_TEXT_RANDOM) {
+                    if ($order->getCustomerId()) {
+                        $html .= '<div class="title">' . $this->__('Someone in') . ' ' . $countryName . ' ' . $this->__('checkout') . ' "<a href="' . $product_url . '" title="' . $item->getName() . '">' . $item->getName() . '</a>".</div>';
+                    } else {
+                        $suburbName = $order->getShippingAddress()->getCity() ;
+                        $html .= '<div class="title">' . $this->__('Someone in ') .  $suburbName . ' ' . $this->__('bought a ') . ' "<a href="' . $product_url . '" title="' . $item->getName() . '">' . $item->getName() . '</a>".</div>';
+                    }
+                } elseif ($define_text == DragonFroot_Recentlypurchase_Block_Recentlypurchase::DEFINE_TEXT_CHECKOUT) {
+                    $html .= '<div class="title">' . $this->__('Someone in') . ' ' . $countryName . ' ' . $this->__('checkout') . ' "<a href="' . $product_url . '" title="' . $item->getName() . '">' . $item->getName() . '</a>".</div>';
+                } elseif ($define_text == DragonFroot_Recentlypurchase_Block_Recentlypurchase::DEFINE_TEXT_BOUGHT) {
+                    $suburbName = $order->getShippingAddress()->getCity() ;
+                    $html .= '<div class="title">' . $this->__('Someone in ') .  $suburbName . ' ' . $this->__('bought a ') . ' "<a href="' . $product_url . '" title="' . $item->getName() . '">' . $item->getName() . '</a>".</div>';
+                } elseif ($define_text == DragonFroot_Recentlypurchase_Block_Recentlypurchase::DEFINE_TEXT_CUSTOM) {
+                    $customDefineText = Mage::getStoreConfig('recentlypurchase/params/custom_text');
+                    if (strpos($customDefineText, '[product_name]')) {
+                        $productName = '<a href="' . $product_url . '" title="' . $item->getName() . '">' . $item->getName() . '</a>';
+                        $customDefineText = str_replace('[product_name]', $productName, $customDefineText);
+                    }
+                    if (strpos($customDefineText, '[fullname_customer]')) {
+                        $full_name = $order->getShippingAddress()->getFirstname() . ' ' . $order->getShippingAddress()->getLastname();
+                        $customDefineText = str_replace('[fullname_customer]', $full_name, $customDefineText);
+                    }
+                    if (strpos($customDefineText, '[shipping_country]')) {
+                        $customDefineText = str_replace('[shipping_country]', $countryName, $customDefineText);
+                    }
+                    $html .= $customDefineText;
+                } else {
+                    $full_name = $order->getShippingAddress()->getFirstname() . ' ' . $order->getShippingAddress()->getLastname();
+                    $html .= '<div class="title">' . $this->__('Someone sent') . ' "<a href="' . $product_url . '" title="' . $item->getName() . '">' . $item->getName() . '</a>" ' . $this->__('to') . ' ' . $full_name . ' ' . $this->__('in') . ' ' . $countryName . '.</div>';
+                }
+            }
+            if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_VOTE, $info_display)) {
+                $storeId = Mage::app()->getStore()->getId();
+                $summaryData = Mage::getModel('review/review_summary')
+                    ->setStoreId($storeId)
+                    ->load($_product->getId());
+                $html .= '<div class="rating-box">';
+                if ($summaryData->getRatingSummary()) {
+                    $html .= '<div class="rating" style="width:'.$summaryData->getRatingSummary().'%"></div>';
+                } else {
+                    $html .= '<div class="rating" style="width:0%"></div>';
+                }
+                $html .= '</div>';
+            }
+            if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_TIME_AGO, $info_display)) {
+                $html .= '<div class="time_ago">' . $this->timeAgo($order_created_at) . ' ' . $this->__('ago') . '</div>';
+            }
+            $html .= '</div>';
+            $html .= '<div class="clear"></div></div>';
+        }
+    }
+    ?>
+    <div class="recently_purchase" <?php echo ($position_display == DragonFroot_Recentlypurchase_Block_Recentlypurchase::POSITION_LEFT_BOTTOM) ? "style='left: 10px; border: none;'" : "style='right: 10px;border: none;'"?>>
+        <div class="order_item_0">
+        </div>
+        <?php echo $html; ?>
+    </div>
+    <script type="text/javascript">
+        var numOrders = <?php echo count($orders) + count($ordered_items) ?>;
+        var currentOrder = 0;
+        timDelay = <?php echo $time_delay?>;
+        jsOrder = jQuery.noConflict();
+        jsOrder(document).ready(function (){
+            var timeRefresh = <?php echo $time_refresh?>;
+            interval = window.setInterval("changeOrder();", timeRefresh);
+        })
+        function changeOrder () {
+            jsOrder(".order_item_" + currentOrder).fadeOut("slow", function() {
+                if (currentOrder >= numOrders) {
+                    clearInterval(interval);
+                }
+                jsOrder(".order_item_" + (currentOrder + 1)).fadeIn("slow", function() {
+                    jsOrder(".order_item_" + (currentOrder + 1)).delay(timDelay).fadeOut("slow");
+                    currentOrder++;
+                });
+            });
+        }
+    </script>
+<?php } ?>

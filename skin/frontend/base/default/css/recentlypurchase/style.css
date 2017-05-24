@@ -1,0 +1,3 @@
+.recently_purchase {position: fixed;bottom: 10px;border: 1px solid #CCC;background: #F1F1F1;z-index: 9999;border-radius: 5px; opacity: 0.9;width: 260px;text-align: left;}
+.recently_purchase:hover {opacity: 0.6;}
+.recently_purchase .image {float: left;margin-right: 10px;}

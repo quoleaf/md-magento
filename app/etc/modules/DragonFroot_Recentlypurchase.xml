@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <DragonFroot_Recentlypurchase>
+            <active>true</active>
+            <codePool>community</codePool>
+        </DragonFroot_Recentlypurchase>
+    </modules>
+</config>

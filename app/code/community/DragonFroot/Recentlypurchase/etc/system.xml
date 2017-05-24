@@ -1,0 +1,182 @@
+<config>
+    <tabs>
+        <dragonfrootplugin>
+            <label>DragonFroot Extensions</label>
+            <sort_order>99999</sort_order>
+        </dragonfrootplugin>
+    </tabs>
+    <sections>
+        <recentlypurchase translate="label">
+            <label>Popup Recently Purchase</label>
+            <tab>dragonfrootplugin</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <information translate="label">
+                    <label>Information</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>1</sort_order>
+                    <fields>
+                        <helper_logo translate="label comment">
+                            <label>
+                                <![CDATA[<a href="http://dragonfroot.com/product/name/recentlypurchase"  target="_blank" title="Visit our website dragonfroot.com for help on this module"><img src="http://dragonfroot.com/skin/frontend/default/mex003/images/logo.png" width="150px" alt="Visit our website dragonfroot.com for help on this module"></a>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </helper_logo>
+                        <donate_label translate="label">
+                            <label>This magento is provide free. Feel free to donate if you like it.</label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </donate_label>
+                        <donate_button translate="label">
+                            <label>
+                                <![CDATA[
+                                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RWXELTLYSTMNS" target="_blank">
+                                <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" />
+                                 </a>
+                                    <div id="fb-root"></div>
+                                    <script>(function(d, s, id) {
+                                      var js, fjs = d.getElementsByTagName(s)[0];
+                                      if (d.getElementById(id)) return;
+                                      js = d.createElement(s); js.id = id;
+                                      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                                      fjs.parentNode.insertBefore(js, fjs);
+                                    }(document, 'script', 'facebook-jssdk'));</script>
+                                    <div class="fb-like" data-href="http://dragonfroot.com/product/name/recentlypurchase" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+                                    <div class="fb-comments" data-href="http://dragonfroot.com/product/name/recentlypurchase" data-width="470" data-num-posts="10"></div>
+                             ]]>
+                            </label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </donate_button>
+                        <helper translate="label comment">
+                            <label>Help</label>
+                            <frontend_type>label</frontend_type>
+                            <comment>
+                                <![CDATA[<a href='http://dragonfroot.com/product/name/recentlypurchase' target='_blank' title='Visit our website dragonfroot.com for help on this module'>Visit our website dragonfroot.com for help on this module. Click here</a>]]></comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </helper>
+                    </fields>
+                </information>
+                <params translate="label">
+                    <label>Parameters Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>12</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+						<jquery>
+                            <label>jQuery</label>
+                            <comment>
+                                <![CDATA[Include jQuery library if your Magento has not yet]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </jquery>
+                        <limit_order translate="label">
+                            <label>Number order display</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-greater-than-zero validate-digits</validate>
+                        </limit_order>
+                        <time_refresh translate="label">
+                            <label>Time refresh (second)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-greater-than-zero validate-digits</validate>
+                        </time_refresh>
+                        <time_delay translate="label">
+                            <label>Time delay (second)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-greater-than-zero validate-digits</validate>
+                        </time_delay>
+
+                        <position_display translate="label">
+                            <label>Position display</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>recentlypurchase/Resource_PositionDisplay</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </position_display>
+
+                        <custom_text translate="label">
+                            <label>Custom Define Text</label>
+                            <frontend_type>textarea</frontend_type>
+                            <comment>You can use tags: [product_name],[fullname_customer], [shipping_country] to define text</comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_text>
+
+                        <define_text translate="label">
+                            <label>Define text</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>recentlypurchase/Resource_DefineText</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </define_text>
+
+                        <info_display translate="label">
+                            <label>Choose information display</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>recentlypurchase/Resource_InformationDisplay</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-select</validate>
+                        </info_display>
+
+                    </fields>
+                </params>
+
+            </groups>
+        </recentlypurchase>
+    </sections>
+</config>

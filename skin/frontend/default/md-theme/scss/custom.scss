@@ -5285,6 +5285,24 @@ div#load_screen{
 	}
 }
 
+
+body.landingpage-revamp {
+
+	.AsSeenInSlider .owl-item  {
+		text-align: center;
+	}
+
+	.featuredProductsWrapper .owl-item .item img {
+	    width: 100%;
+	} 
+
+	.featuredProductsWrapper .custom-container #feauredProductSlider .owl-wrapper-outer .owl-wrapper .owl-item .item span img {
+		display: block;
+	}
+}
+
+
+
 .CustomCategoryPage {
 	.bannerItem {
 		height: 100vh;

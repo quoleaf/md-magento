@@ -393,12 +393,63 @@
         <page>
             <layouts> 
                 <latesthomepage module="page" translate="label">
-                    <label>Latest Staging Homepage</label>
+                    <label>Latest Landing Page</label>
                     <template>page/main/latesthomepage.phtml</template>
                     <layout_handle>latesthomepage</layout_handle>
                 </latesthomepage> 
             </layouts>
         </page>
+
+        <page>
+            <layouts> 
+                <latestcatpage module="page" translate="label">
+                    <label>Latest Category Page</label>
+                    <template>page/main/latest-category-page.phtml</template>
+                    <layout_handle>latestcatpage</layout_handle>
+                </latestcatpage> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <latesthaircategory module="page" translate="label">
+                    <label>Latest Hair Category Page</label>
+                    <template>page/main/latest-hair.phtml</template>
+                    <layout_handle>latesthaircategory</layout_handle>
+                </latesthaircategory> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <latestlashcategory module="page" translate="label">
+                    <label>Latest Lash Category Page</label>
+                    <template>page/main/latest-lash.phtml</template>
+                    <layout_handle>latestlashcategory</layout_handle>
+                </latestlashcategory> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <latestskincategory module="page" translate="label">
+                    <label>Latest Skin Category Page</label>
+                    <template>page/main/latest-skin.phtml</template>
+                    <layout_handle>latestskincategory</layout_handle>
+                </latestskincategory> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <latestwellnesscategory module="page" translate="label">
+                    <label>Latest Wellness Category Page</label>
+                    <template>page/main/latest-wellness.phtml</template>
+                    <layout_handle>latestwellnesscategory</layout_handle>
+                </latestwellnesscategory> 
+            </layouts>
+        </page>
+
 
         <!-- Staging -->
 

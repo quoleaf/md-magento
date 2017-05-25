@@ -1037,3 +1037,80 @@
 		}
     }
 }
+
+
+.normalpageNav {
+	.navigationWrapper {
+		position: relative;
+		float: none;
+		padding: 0 0 15px 0;
+
+		nav {
+			.DesktopView {
+				.dropdownNavigation {
+					li {
+
+						&:hover {
+							ul {
+								background: #5e5e5e;
+
+								li {
+									ul {
+										background: #fff;
+
+										li {
+											a {
+												&.thirdlevel {
+													background: #f1f1f1;
+													border: 2px solid #f1f1f1;
+
+													&:hover {
+														border: 2px solid #e8408b;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						a {
+							color: #454545;
+						}
+					}
+				}
+
+				.searchWrapper {
+					form {
+						border: 2px solid #e8408b;
+
+						input {
+							color: #e8408b;
+
+							&::-webkit-input-placeholder {
+								color: #e8408b;
+								opacity: 1;
+							}
+
+							&:-moz-placeholder {
+								color: #e8408b;
+								opacity: 1;
+							}
+
+							&::-moz-placeholder {
+								color: #e8408b;
+								opacity: 1;
+							}
+
+							&:-ms-input-placeholder {
+								color: #e8408b;
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

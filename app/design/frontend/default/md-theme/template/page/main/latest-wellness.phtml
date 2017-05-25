@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MD Wellness</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://md-factor.com/skin/frontend/default/md-theme/css/custom.css">
+    <?php echo $this->getChildHtml('head') ?>
+
+
+</head>
+
+<body class="CustomCategoryPage CustomWellnessCategory">
+
+<div class="custombannerWrapper">
+	<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml(); ?>
+
+    <div class="bannerItem">
+        <div class="bannerContent">
+			<div class="custom-container">
+				<h1 class="title"><span> fast-acting </span></h1>
+				<span class="subtitle"> real results </span>
+				<div class="ctaWrapper">
+					<a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>md-wellness"> <span> Shop Now </span></a><a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity=""><span> Learn More </span></a>
+				</div>
+			</div>
+		</div>
+     </div>
+</div>
+
+
+<div class="customCategory">
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('wellness_category_list')->toHtml(); ?>
+</div>
+
+<?php echo $this->getChildHtml('footer') ?>
+
+
+</body>
+</html>

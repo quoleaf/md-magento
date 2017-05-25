@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MD Category</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://md-factor.com/skin/frontend/default/md-theme/css/custom.css">
+    <!-- Owl Carousel Assets -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+    <?php echo $this->getChildHtml('head') ?>
+
+
+</head>
+
+<body class="CustomCategoryPage  CustomSkinCategory">
+
+<div class="custombannerWrapper">
+	<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml(); ?>
+
+    <div id="BannerSlider" class="owl-carousel">
+        <div class="bannerItem">
+            <div class="bannerContent">
+                <div class="custom-container">
+                    <h1 class="title"> fuller, <span> denser </span></h1>
+                    <span class="subtitle"> longer lashes </span>
+                    <div class="ctaWrapper">
+                        <a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>md-lash-factor"> <span> Shop Now </span></a><a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity=""><span> Learn More </span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bannerItem">
+            <div class="bannerContent">
+                <div class="custom-container">
+                    <h1 class="title"> nourish <span> your hair </span></h1>
+                    <span class="subtitle"> back to beautiful </span>
+                    <div class="ctaWrapper">
+                        <a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>categories"> <span> Shop Now </span></a><a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity=""><span> Learn More </span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bannerItem">
+            <div class="bannerContent">
+                <div class="custom-container">
+                    <h1 class="title"><span> from dull </span></h1>
+                    <span class="subtitle"> to glowing skin </span>
+                    <div class="ctaWrapper">
+                        <a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>md-skin"> <span> Shop Now </span></a><a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity=""><span> Learn More </span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bannerItem">
+            <div class="bannerContent">
+                <div class="custom-container">
+                    <h1 class="title"><span> fast-acting </span></h1>
+                    <span class="subtitle"> real results </span>
+                    <div class="ctaWrapper">
+                        <a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>md-wellness"> <span> Shop Now </span></a><a href="https://youtu.be/xiIIqeHHY-c" target="_blank" data-lity=""><span> Learn More </span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="customCategory">
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('categories_list')->toHtml(); ?>
+</div>
+
+
+
+<?php echo $this->getChildHtml('footer') ?>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+<script defer src="<?php echo $this->getSkinUrl(); ?>js/carousel/slider.min.js" ></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	jQuery("#BannerSlider").owlCarousel({
+        items : 1,
+        itemsCustom : false,
+        itemsDesktop : [1199,1],
+        itemsDesktopSmall : [980,1],
+        itemsTablet: [768,1],
+        itemsTabletSmall: false,
+        itemsMobile : [479,1],
+        singleItem : false,
+        itemsScaleUp : false,
+     
+        //Basic Speeds
+        slideSpeed : 200,
+        paginationSpeed : 800,
+        rewindSpeed : 1000,
+     
+        //Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+     
+        // Navigation
+        navigation : true,
+        navigationText : ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"],
+        rewindNav : true,
+        scrollPerPage : false,
+     
+        //Pagination
+        pagination : true,
+        paginationNumbers: false,
+     
+        // Responsive 
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+     
+        // CSS Styles
+        baseClass : "owl-carousel",
+        theme : "owl-theme",
+     
+        //Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+    });
+ });
+
+
+</script>
+
+</body>
+</html>

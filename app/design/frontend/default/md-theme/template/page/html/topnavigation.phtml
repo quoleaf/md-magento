@@ -14,7 +14,7 @@
 				 	getStoreCategories(); Mage::registry('current_category') ? $currentCategoryId=Mage::registry('current_category')->getId() : $currentCategoryId=''; $limit_category=4; $ctr=1; foreach ($storeCategories as $_category): if($ctr <=$limit_category) : ?>
 							
 						<li>
-							<a href="<?php echo mage::app()->getStore()->getHomeUrl().$_category->getUrlKey(); ?>"> <?php $_category=Mage::getModel('catalog/category')->
+							<a href="<?php echo Mage::getBaseUrl().$_category->getUrlKey(); ?>"> <?php $_category=Mage::getModel('catalog/category')->
 								load($_category->getId()); ?> <?php echo $_category->
 								getName(); ?>
 							</a>
@@ -22,10 +22,10 @@
 							<ul>
 								<?php $_subcategories=$_category->
 								getChildrenCategories(); if (count($_subcategories) > 0){foreach($_subcategories as $_subcategory){$products=Mage::getModel('catalog/category')->load($_subcategory->getId()) ->getProductCollection() ->addAttributeToSelect('*') ->addAttributeToFilter('status', 1) ->addAttributeToFilter('visibility', 4) ->setOrder('price', 'ASC'); echo '
-								<li><a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>'; if (count($products) > 0){echo '
+								<li><a href="'.Mage::getBaseUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>'; if (count($products) > 0){echo '
 								<ul>
 									'; foreach($products as $_product){echo '
-									<li><a class="thirdlevel" href="'.Mage::app()->getStore()->getHomeUrl().$_product->url_key.'">
+									<li><a class="thirdlevel" href="'.Mage::getBaseUrl().$_product->url_key.'">
 									<div class="image">
 										<img src="'.$_product->getImageUrl().'">
 									</div>
@@ -42,7 +42,7 @@
 					<?php $ctr++; endif; endforeach; ?>
 
 					<li class="sale">
-						<a href="<?php echo mage::app()->getStore()->getHomeUrl(); ?>sales">Sale</a>
+						<a href="<?php echo Mage::getBaseUrl(); ?>sales">Sale</a>
 					</li>
 					
 					<li>
@@ -90,7 +90,7 @@
 					        
 					        <div class="content">
 					            <?php $_subcategories=$_category->getChildrenCategories(); if (count($_subcategories) > 0){foreach($_subcategories as $_subcategory){$products=Mage::getModel('catalog/category')->load($_subcategory->getId()) ->getProductCollection() ->addAttributeToSelect('*') ->addAttributeToFilter('status', 1) ->addAttributeToFilter('visibility', 4) ->setOrder('price', 'ASC'); echo '
-					               <a href="'.Mage::app()->getStore()->getHomeUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>'; if (count($products) > 0)echo '
+					               <a href="'.Mage::getBaseUrl().$_subcategory->request_path.'">'.$_subcategory->getName().'</a>'; if (count($products) > 0)echo '
 					                ';}}?>
 					        </div>
 					      </li>
@@ -98,7 +98,7 @@
 					</ul>
 			    </div>
 
-			    <a class="logo" href='<?php echo mage::app()->getStore()->getHomeUrl(); ?>'> 
+			    <a class="logo" href='<?php echo Mage::getBaseUrl(); ?>'> 
 					<img class="darklogo" src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>"> 
 				</a>
 				<label for="menu-switch" id="menu-toggle"></label>

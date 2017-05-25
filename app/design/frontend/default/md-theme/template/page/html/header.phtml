@@ -37,4 +37,6 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+<div class="normalpageNav">
+	<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml(); ?>
+</div>

@@ -5288,7 +5288,11 @@ div#load_screen{
 
 body.landingpage-revamp {
 
-	.AsSeenInSlider .owl-item  {
+	.owl-buttons {
+		display: none!important;
+	}
+
+	#AsSeenInSlider .owl-item  {
 		text-align: center;
 	}
 

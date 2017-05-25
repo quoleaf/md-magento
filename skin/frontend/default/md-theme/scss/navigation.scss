@@ -297,7 +297,7 @@
 
 	        				ul {
 	        					background: #fff;
-	        					height: 400px;
+	        					max-height: 400px;
 	        					overflow-x: hidden;
 	        					overflow-y: auto;
 
@@ -1000,7 +1000,7 @@
 									display: block;
 									width: 65px;
 									position: relative;
-									bottom: 5px;
+									bottom: 3px;
 								}
 
 								.whitelogo {

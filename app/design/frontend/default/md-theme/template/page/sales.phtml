@@ -44,7 +44,9 @@
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
 
-<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/custom-top-menu.phtml')->toHtml(); ?>
+<div class="normalpageNav">
+	<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml(); ?>
+</div>
 
 <?php echo $this->getLayout()->createBlock('vsourz_deals/deals')->setCategoryId('31')->setTitle('Sales')->setTemplate('vsourz/deals/deals.phtml')->toHtml();
  ?>

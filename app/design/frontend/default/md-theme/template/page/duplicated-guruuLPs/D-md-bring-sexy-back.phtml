@@ -65,23 +65,23 @@
 <?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
 <?php $_product = Mage::registry('current_product'); ?>
 <?php //$_productID = $_product->getId(); ?>
-<?php $_productID = 123 ?>
-<?php $_productID2 = 122 ?>
+<?php $_productID = 150 ?>
+<?php $_productID2 = 149 ?>
 <?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
-<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[46]=51&bundle_option[47]=52&options[19]=26&form_key='.$formkey.'' ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[86]=91&bundle_option[87]=92&options[27]=34&form_key='.$formkey.'' ?>
 <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function() {
 $(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
 if (this.checked) {
-var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[46]=51&bundle_option[47]=52&options[19]=26&form_key='.$formkey.''  ?>";
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[86]=91&bundle_option[87]=92&options[27]=34&form_key='.$formkey.''  ?>";
 $('body.bring-sexy-back #bundleWrapper .custom-container .content .cta a').attr('href', url);
 $('body.bring-sexy-back #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
 $('#description .custom-container .left div a:first-child').attr('href', url);
 $('#FreeShipping .custom-container div a').attr('href', url);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
 }else{
-var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[44]=49&bundle_option[45]=50&form_key='.$formkey.'' ?>";
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[84]=89&bundle_option[85]=90&form_key='.$formkey.'' ?>";
 $('body.bring-sexy-back #bundleWrapper .custom-container .content .cta a').attr('href', url2);
 $('body.bring-sexy-back #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
 $('#description .custom-container .left div a:first-child').attr('href', url2);

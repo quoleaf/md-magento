@@ -65,23 +65,23 @@
 <?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
 <?php $_product = Mage::registry('current_product'); ?>
 <?php //$_productID = $_product->getId(); ?>
-<?php $_productID = 108 ?>
-<?php $_productID2 = 109 ?> 
+<?php $_productID = 138 ?>
+<?php $_productID2 = 137 ?> 
 <?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
-<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[11]=13&options[10]=17&form_key='.$formkey.'' ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[55]=60&options[22]=29&form_key='.$formkey.'' ?>
 <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function() {
 $(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
 if (this.checked) {
-var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[11]=13&options[10]=17&form_key='.$formkey.'' ?>";
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[55]=60&options[22]=29&form_key='.$formkey.'' ?>";
 $('body.health-hair-bundle-two #bundleWrapper .custom-container .content .cta a').attr('href', url);
 $('body.health-hair-bundle-two #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
 $('#description .custom-container .left div a:first-child').attr('href', url);
 $('#FreeShipping .custom-container div a').attr('href', url);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
 }else{
-var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[13]=15&form_key='.$formkey.'' ?>";
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[54]=59&form_key='.$formkey.'' ?>";
 $('body.health-hair-bundle-two #bundleWrapper .custom-container .content .cta a').attr('href', url2);
 $('body.health-hair-bundle-two #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
 $('#description .custom-container .left div a:first-child').attr('href', url2);

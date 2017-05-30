@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta property="og:image" content="http://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-thumbnail.jpg" />
+    <meta property="og:image" content="http://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-2-thumbnail.jpg" />
     
-    <meta property="og:image:secure_url" content="https://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-thumbnail.jpg" />
+    <meta property="og:image:secure_url" content="https://md-factor.com/us/skin/frontend/default/md-theme/images/guruu/healthy-hair-bundle/healthy-hair-bundle-2-thumbnail.jpg" />
 
     <title>MD Healthy Hair Bundle</title>
 
@@ -61,29 +61,29 @@
 
 </head>
 
-<body class="health-hair-bundle-one">
+<body class="health-hair-bundle-two">
 <?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
 <?php $_product = Mage::registry('current_product'); ?>
 <?php //$_productID = $_product->getId(); ?>
-<?php $_productID = 107 ?>
-<?php $_productID2 = 103 ?>
+<?php $_productID = 108 ?>
+<?php $_productID2 = 109 ?> 
 <?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
-<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[9]=11&bundle_option[10]=12&options[9]=16&form_key='.$formkey.'' ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[11]=13&options[10]=17&form_key='.$formkey.'' ?>
 <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function() {
 $(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
 if (this.checked) {
-var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[9]=11&bundle_option[10]=12&options[9]=16&form_key='.$formkey.''  ?>";
-$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url);
-$('body.health-hair-bundle-one #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[11]=13&options[10]=17&form_key='.$formkey.'' ?>";
+$('body.health-hair-bundle-two #bundleWrapper .custom-container .content .cta a').attr('href', url);
+$('body.health-hair-bundle-two #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
 $('#description .custom-container .left div a:first-child').attr('href', url);
 $('#FreeShipping .custom-container div a').attr('href', url);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
 }else{
-var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[4]=6&bundle_option[1]=1&form_key='.$formkey.'' ?>";
-$('body.health-hair-bundle-one #bundleWrapper .custom-container .content .cta a').attr('href', url2);
-$('body.health-hair-bundle-one #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[13]=15&form_key='.$formkey.'' ?>";
+$('body.health-hair-bundle-two #bundleWrapper .custom-container .content .cta a').attr('href', url2);
+$('body.health-hair-bundle-two #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
 $('#description .custom-container .left div a:first-child').attr('href', url2);
 $('#FreeShipping .custom-container div a').attr('href', url2);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
@@ -176,20 +176,17 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
             </div>
 
             <div class="hanging-products">
+
                 <div>
-                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/fe-hanging-prod.png') ?>" class="wow fadeInDown animated" data-wow-delay="4s">
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-1.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
                 </div>
 
                 <div>
-                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-3.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-2.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
                 </div>
 
                 <div>
-                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
-                </div>
-
-                <div>
-                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-1.png') ?>" class="wow fadeInUp animated" data-wow-delay="1s">
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-hanging-prod-2-3.png') ?>" class="wow fadeInUp animated" data-wow-delay="1s">
                 </div>
             </div>
         </div>
@@ -217,20 +214,20 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
         <div class="imageWrapper">
             <div class="inner">
                 <div>
-                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair1-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="4s">
-            </div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
+                </div>
 
-            <div>
-                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair1-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
-            </div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
+                </div>
 
-            <div>
-                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair2-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
-            </div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
+                </div>
 
-            <div>
-                <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/fe-prod-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
-            </div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/nutri-hair-bundle-2-shadow.png') ?>" class="wow fadeIn animated" data-wow-delay="1s">
+                </div>
             </div>
         </div>
 
@@ -239,26 +236,23 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 Healthy Hair Bundle
             </h1>
             <p>
-                Transform your healthy hair from inside out
+                Healthy Hair Bundle helps fight hair loss and breakage.
             </p>
 
             <div class="price">
-                <span>$290</span>
+                <span>$150</span>
                 <p>
-                    $140
+                    $113.85
                 </p>
             </div>
 
             <strong>
-                Bundle Includes:    
+                Product Includes:   
             </strong>
 
             <ul>
                 <li>
-                    Three one month supply MD Nutri Hair ($150)
-                </li>
-                <li>
-                    MD Follicle Energizer 28 ml - 3 Month Supply($140)
+                    Three one month supply MD Nutri Hair (30 capsules)
                 </li>
             </ul>
 
@@ -328,14 +322,6 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 <p>
                     MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available.      
                 </p>
-
-                <strong>
-                    MD FOLLICLE ENERGIZER
-                </strong>
-
-                <p>
-                    Follicle Energizer is fortified with peptides designed help anchor your hair to scalp  and to increase thickness of individual hair.  You will notice stronger thicker hair that can be styled easier and less shedding during brushing or washing.  
-                </p>
             </div>
                 
             <div>
@@ -374,31 +360,6 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 <div class="item">
                     <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
                         <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.png') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>">
-                    </a> 
-                </div>
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>">
                     </a> 
                 </div> 
             </div>
@@ -441,31 +402,6 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                         <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/BandA-4.png') ?>">
                     </a> 
                 </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-1.jpg') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-2.jpg') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-3.jpg') ?>">
-                    </a> 
-                </div> 
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-4.jpg') ?>">
-                    </a> 
-                </div>
-                <div class="item">
-                    <a class="imageWrapper" href="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>" data-lity="" data-lity-desc="">
-                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/ba/BandA-5.jpg') ?>">
-                    </a> 
-                </div> 
             </div>
         </div>
         <div class="left">
@@ -480,14 +416,6 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 
                 <p>
                     MD Nutri Hair combines potent natural ingredients to strengthen your hair and address common hair problems. Plant Lilac extract address hormonal and aging causes of hair thinning.  Natural Anti-oxidant vitamin E protects against overprocessing. Collagen for hair's luster, flexibility and shine. Biotin for healthy manageable hair.  Flax seed rich in omega oils to nourish hair follicles from within.   Simply take one small capsule each day and notice less hair shedding in 2-3 weeks. Vegan version available.      
-                </p>
-
-                <strong>
-                    MD FOLLICLE ENERGIZER
-                </strong>
-
-                <p>
-                    Follicle Energizer is fortified with peptides designed help anchor your hair to scalp  and to increase thickness of individual hair.  You will notice stronger thicker hair that can be styled easier and less shedding during brushing or washing.  
                 </p>
             </div>
                 
@@ -520,7 +448,7 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
     <div class="custom-container">
         <div class="left">
             <p>
-                Nutri hair
+                Key
 
                 <span>
                     ingredients
@@ -606,52 +534,53 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 </a>
             </form> -->
 
-<link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
-<div class="ctct-embed-signup" style="font: 16px Helvetica Neue, Arial, sans-serif; font: 1rem Helvetica Neue, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased;">
-   <div style="color:#5b5b5b; border-radius:5px;">
+            
+<div class="ctct-embed-signup">
+   <div>
        <span id="success_message" style="display:none;">
            <div style="text-align:center;">Thanks for signing up!</div>
        </span>
        <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
-           
+          
            <p></p>
            <!-- The following code must be included to ensure your sign-up form works properly. -->
-           <input data-id="ca:input" type="hidden" name="ca" value="3d16f3e7-767f-40fa-9de8-f5e179bd5121">
-           <input data-id="list:input" type="hidden" name="list" value="1858923668">
+           <input data-id="ca:input" type="hidden" name="ca" value="b3d675c9-1230-4530-a409-235dacc76fd3">
+           <input data-id="list:input" type="hidden" name="list" value="1772598243">
            <input data-id="source:input" type="hidden" name="source" value="EFD">
            <input data-id="required:input" type="hidden" name="required" value="list,email">
            <input data-id="url:input" type="hidden" name="url" value="">
-           <input data-id="Email Address:input" type="text" name="email" placeholder="EMAIL" value="" maxlength="80">
+           <input data-id="Email Address:input" type="text" name="email" value="" placeholder="EMAIL" maxlength="80">
            <button type="submit" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Become a MD Friend</button>
-       
+        
+       </form>
    </div>
 </div>
 <script type='text/javascript'>
    var localizedErrMap = {};
-   localizedErrMap['required'] =    'This field is required.';
-   localizedErrMap['ca'] =      'An unexpected error occurred while attempting to send email.';
-   localizedErrMap['email'] =       'Please enter your email address in name@email.com format.';
-   localizedErrMap['birthday'] =    'Please enter birthday in MM/DD format.';
-   localizedErrMap['anniversary'] =   'Please enter anniversary in MM/DD/YYYY format.';
-   localizedErrMap['custom_date'] =   'Please enter this date in MM/DD/YYYY format.';
-   localizedErrMap['list'] =      'Please select at least one email list.';
-   localizedErrMap['generic'] =     'This field is invalid.';
-   localizedErrMap['shared'] =    'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+   localizedErrMap['required'] =        'This field is required.';
+   localizedErrMap['ca'] =          'An unexpected error occurred while attempting to send email.';
+   localizedErrMap['email'] =           'Please enter your email address in name@email.com format.';
+   localizedErrMap['birthday'] =        'Please enter birthday in MM/DD format.';
+   localizedErrMap['anniversary'] =     'Please enter anniversary in MM/DD/YYYY format.';
+   localizedErrMap['custom_date'] =     'Please enter this date in MM/DD/YYYY format.';
+   localizedErrMap['list'] =            'Please select at least one email list.';
+   localizedErrMap['generic'] =         'This field is invalid.';
+   localizedErrMap['shared'] =      'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
    localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
-  localizedErrMap['state_province'] = 'Select a state/province';
+    localizedErrMap['state_province'] = 'Select a state/province';
    localizedErrMap['selectcountry'] =   'Select a country';
    var postURL = 'https://visitor2.constantcontact.com/api/signup';
 </script>
 <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
-<!--End CTCT Sign-Up Form-->
+
 
             <span>
                 We protect your personal information. We use secure transaction.
             </span>
         </div>
-        <div class="right wow fadeInDown animated" data-wow-delay="0.5s">
-            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-fe.png') ?>"> 
-        </div>
+        <!-- <div class="right wow fadeInDown animated" data-wow-delay="0.5s">
+            <img src="<?php //echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/promo-fe.png') ?>"> 
+        </div> -->
     </div>
 </div>
 
@@ -711,6 +640,7 @@ a2a_config.num_services = 2;
 <script>
 
 $(document).ready(function() {
+
     $("#AsSeenInSlider").owlCarousel({
         items : 5,
         itemsCustom : false,

@@ -2195,4 +2195,7 @@ body.beauty-boost {
 #promo .custom-container .middle form button:hover {
   background: #da0061; }
 
+#headerWrapper .custom-container .inner .content .cta a, #bundleWrapper .custom-container .content .cta a, #FreeShipping, .autoshipWrapper, .add-to-bag {
+  display: none; }
+
 /*# sourceMappingURL=guruu_LP7.css.map */

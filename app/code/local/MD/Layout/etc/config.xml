@@ -528,6 +528,16 @@
 
         <page>
             <layouts> 
+                <Dmdbeautifulhaircopy module="page" translate="label">
+                    <label>D - Guruu MD Beautiful Hair Copy</label>
+                    <template>page/duplicated-guruuLPs/D-md-beautiful-hair-copy.phtml</template>
+                    <layout_handle>D-md-beautiful-hair-copy</layout_handle>
+                </Dmdbeautifulhaircopy> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
                 <Dmdhealthyhair module="page" translate="label">
                     <label>D - Guruu MD Healthy Hair</label>
                     <template>page/duplicated-guruuLPs/D-md-healthy-hair-bundle.phtml</template>

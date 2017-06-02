@@ -45,17 +45,17 @@
 <?php 
 $host = $_SERVER['SERVER_NAME']  . $_SERVER['REQUEST_URI'];
 if($host == "md-factor.com/au/"){
-  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml();
+  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/main/latesthomepage.phtml')->toHtml();
 }elseif($host == "md-factor.com/br/"){
-  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml();
+  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/main/latesthomepage.phtml')->toHtml();
 }elseif($host == "md-factor.com/ca/"){
-  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml();
+  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/main/latesthomepage.phtml')->toHtml();
 }elseif($host == "md-factor.com/ch/"){
-  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml();
+  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/main/latesthomepage.phtml')->toHtml();
 }elseif($host == "md-factor.com/mx/"){
-  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml();
+  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/main/latesthomepage.phtml')->toHtml();
 }elseif($host == "md-factor.com/us/"){
-  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/html/topnavigation.phtml')->toHtml();;
+  echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/main/latesthomepage.phtml')->toHtml();;
 }else{
   echo  $this->getLayout()->createBlock('core/template')->setTemplate('page/md-country-selector.phtml')->toHtml();
 }

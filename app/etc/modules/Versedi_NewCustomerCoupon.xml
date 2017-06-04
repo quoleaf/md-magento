@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Versedi_NewCustomerCoupon>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
             <depends>
                 <Mage_SalesRule/>

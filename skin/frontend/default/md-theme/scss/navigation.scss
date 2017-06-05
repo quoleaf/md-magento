@@ -113,9 +113,18 @@
         #topBar .freeShipping{
             margin-right: 100px;
             position: relative;
-            right: 0px;
+            right: 10px;
+            top: 5px;
             pointer-events: none;
             text-transform: uppercase;
+
+            img {
+            	width: 560px;
+
+            	@media only screen and (max-width : 1252px) {
+            		width: 100%;
+            	}
+            }
 
             span {
             	font-weight: lighter;
@@ -128,20 +137,15 @@
                 margin-right:0;
             }
 
-            @media only screen and (max-width: 885px) {
-                img {
-                    width: 320px;
-                    position: relative;
-                    top: 6px;
-                }
-            }
 
             @media only screen and (max-width : 1252px) {
                 width: 100%;
 			    float: left;
 			    margin: 0;
 			    padding: 0;
+			    right: 0;
 			    border-bottom: 1px solid;
+			    text-align: center;
             }
 			
 			@media only screen and (max-width : 570px) {

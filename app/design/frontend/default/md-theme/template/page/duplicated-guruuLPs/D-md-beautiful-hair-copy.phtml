@@ -930,13 +930,13 @@ jQuery(window).ready(function() {
         function clickCart2(){jQuery('.add-to-bag, .cta a').attr('href', '<?php echo $cartUrl; ?>');}
 
         jQuery.getJSON('//ipinfo.io', function (location) {
-            console.log(location.country);
+            // console.log(location.country);
             // console.log(location.region);
-           if(location.country=='PH') {
-                clickCart();
+           if(location.country=='US') {
+                clickCart2();
             }
             else{
-                clickCart2();
+                clickCart();
             }
         });
     });

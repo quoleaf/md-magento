@@ -18,6 +18,12 @@
             margin:0;
             transition: all 0.4s ease;
 
+            @media only screen and (max-width : 1252px) {
+                height: auto;
+			    width: 100%;
+			    float: left;
+            }
+
             @media only screen and (max-width: 1064px) {
                 margin: 0;
             }
@@ -29,6 +35,33 @@
 
             .custom-container {
             	display: block;
+
+            	@media only screen and (max-width : 1252px) {
+            		padding: 0;
+            		width: 100%;
+
+            		.inner {
+	            		@media only screen and (max-width : 1270px) {
+					        width: 1090px;
+					        margin: 0 auto;
+					        padding: 5px 0 5px 0;
+					    }
+
+					    @media only screen and (max-width : 1170px) {
+						    width: 1040px;
+						}
+
+						@media only screen and (max-width : 1100px) {
+						    width: 100%;
+						    float: left;
+						    padding: 5px 20px 5px 20px;
+						}
+
+						@media only screen and (max-width : 470px) {
+					        padding: 0 15px 0 15px;
+					    }
+	            	}
+            	}
             }
         }
 
@@ -45,6 +78,11 @@
             background-size: 34px;
             -ms-behavior: url(backgroundsize.min.htc);
             font-family: 'Helvetica', Arial, sans-serif;
+
+            @media only screen and (max-width : 1252px) { 
+            	margin-top: 0;
+            }
+
         }
 
 
@@ -75,7 +113,16 @@
         #topBar .freeShipping{
             margin-right: 100px;
             position: relative;
-            right: 15px;
+            right: 0px;
+            pointer-events: none;
+            text-transform: uppercase;
+
+            span {
+            	font-weight: lighter;
+			    border-left: 2px solid #c2d2de;
+			    padding-left: 10px;
+			    margin-left: 10px;
+            }
 
             @media only screen and (max-width : 1270px) { 
                 margin-right:0;
@@ -90,17 +137,29 @@
             }
 
             @media only screen and (max-width : 1252px) {
-                display: none;
+                width: 100%;
+			    float: left;
+			    margin: 0;
+			    padding: 0;
+			    // border-bottom: 1px solid;
+			    background:#e8408b;
+            }
+			
+			@media only screen and (max-width : 570px) {
+                font-size: 10px;
+			    text-align: center;
+			    line-height: 18px;
+			    padding: 7px 0 7px 0;
             }
         }
 
-        #topBar .freeShipping span {
-            display: inline-block;
-            border-left: 2px solid #dcdee0;
-            padding-left: 5px;
-            height: 13px;
-            line-height: 14px;
-        }
+        // #topBar .freeShipping span {
+        //     display: inline-block;
+        //     border-left: 2px solid #dcdee0;
+        //     padding-left: 5px;
+        //     height: 13px;
+        //     line-height: 14px;
+        // }
 
         #topBar .phone {
             background-image: url(../images/contact-ico.png);
@@ -140,6 +199,10 @@
             -moz-background-size: 100%;
             background-size: 100%;
             -ms-behavior: url(backgroundsize.min.htc);
+
+            @media only screen and (max-width : 1252px) {
+            	margin-top: 4px;
+            }
         }
         .cart-link{
             position:relative;

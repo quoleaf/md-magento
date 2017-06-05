@@ -1,40 +1,46 @@
 <div id="topBar" class="clearfix">
     <div class="custom-container">
         <a href="#" class="freeShipping info">
-            <img src="<?php echo $this->getSkinUrl('images/free-ship-truck-gif.gif') ?>"> 
+            <!-- <img src="<?php //echo $this->getSkinUrl('images/free-ship-truck-gif.gif') ?>"> --> 
+            <div class="inner">
+                10% cashback + 15% off for new customers <span>Use Code</span>: MDNEW
+            </div>
         </a>
         
-        <a href="tel:18888825788" class="phone info">
-            <?php echo $this->__('1-888-882-5788') ?>
-        </a>
+        <div class="inner">
+            <a href="tel:18888825788" class="phone info">
+                <?php echo $this->__('1-888-882-5788') ?>
+            </a>
 
-        <a href="#" class="gifts info">
-            <?php echo $this->__('GIFT CERTIFICATES') ?>       
-        </a>
-        
-        <div class="CurrencyWrapper" style="display: none;">
-            <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+            <a href="#" class="gifts info">
+                <?php echo $this->__('GIFT CERTIFICATES') ?>       
+            </a>
+            
+            
+            <div class="CurrencyWrapper" style="display: none;">
+                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('currency/currency.phtml')->toHtml(); ?>
+            </div>
+
+            <?php   $count = ($this->
+            helper('checkout/cart')->getSummaryCount() ? $this->helper('checkout/cart')->getSummaryCount() : 0 ) ?> 
+                <a href="<?php echo Mage::getBaseUrl().'checkout/cart'; ?>" class="shoppingBag cart-link">
+                    <span class="badge"><?php echo $count?></span>
+                    <?php echo $this->__('Shopping Bag') ?>
+                </a>
+            
+            <?php if (Mage::helper('customer')->isLoggedIn() ): ?> 
+                <a class="signin info" href="<?php echo mage::helper('customer')->getLogoutUrl(); ?>">
+                    <?php echo $this->__('LOG OUT')?>
+                </a>
+                <a href="<?php echo Mage::app()->getStore()->getHomeUrl('customer/account'); ?>" class="myAccount info">
+                    <?php echo $this->__('MY ACCOUNT') ?>
+                </a>
+            <?php else: ?>
+            
+                <a class="signin info" href="<?php echo Mage::getBaseUrl().'customer/account/login'; ?>">
+                    <?php echo $this->__('SIGN IN') ?>
+                </a>
+            <?php endif; ?>
         </div>
-
-        <?php   $count = ($this->
-        helper('checkout/cart')->getSummaryCount() ? $this->helper('checkout/cart')->getSummaryCount() : 0 ) ?> 
-            <a href="<?php echo Mage::getBaseUrl().'checkout/cart'; ?>" class="shoppingBag cart-link">
-                <span class="badge"><?php echo $count?></span>
-                <?php echo $this->__('Shopping Bag') ?>
-            </a>
-        
-        <?php if (Mage::helper('customer')->isLoggedIn() ): ?> 
-            <a class="signin info" href="<?php echo mage::helper('customer')->getLogoutUrl(); ?>">
-                <?php echo $this->__('LOG OUT')?>
-            </a>
-            <a href="<?php echo Mage::app()->getStore()->getHomeUrl('customer/account'); ?>" class="myAccount info">
-                <?php echo $this->__('MY ACCOUNT') ?>
-            </a>
-        <?php else: ?>
-        
-            <a class="signin info" href="<?php echo Mage::getBaseUrl().'customer/account/login'; ?>">
-                <?php echo $this->__('SIGN IN') ?>
-            </a>
-        <?php endif; ?>
     </div>
 </div>

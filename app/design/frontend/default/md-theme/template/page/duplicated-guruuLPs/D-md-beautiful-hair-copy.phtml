@@ -928,15 +928,18 @@ jQuery(window).ready(function() {
 
         function clickCart(){jQuery('.add-to-bag, .cta a, .custom-container div a, .main-nav li a').attr('href', '#popupTest').attr('data-lity','');}
         function clickCart2(){jQuery('.add-to-bag, .cta a').attr('href', '<?php echo $cartUrl; ?>');}
+        function hideTick(){jQuery('body.health-hair-bundle-one #bundleWrapper .custom-container .content .autoshipWrapper .inner .custom-checkbox label').hide();}
 
         jQuery.getJSON('//ipinfo.io', function (location) {
             // console.log(location.country);
             // console.log(location.region);
+       
            if(location.country=='US') {
                 clickCart2();
             }
             else{
                 clickCart();
+                hideTick();
             }
         });
     });

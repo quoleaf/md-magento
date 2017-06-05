@@ -129,9 +129,16 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo $cartUrl; ?>" class="buynow">
+                    <a href="<?php echo $cartUrl; ?>" class="buynow" data-lity>
                         Buy now
                     </a>
+                    <div id="popupTest" class="lity-hide" style="display: none;">
+                        <div class="inner">
+                            <p>
+                                Sorry this bundle is currently available for US customers only.
+                            </p>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
@@ -169,9 +176,16 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 </span>
 
                 <div class="cta">
-                    <a href="<?php echo $cartUrl; ?>">
+                    <a href="<?php echo $cartUrl; ?>" data-lity>
                         Order Yours Now
                     </a>
+                    <div id="popupTest" class="lity-hide" style="display: none;">
+                        <div class="inner">
+                            <p>
+                                Sorry this bundle is currently available for US customers only.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -205,7 +219,7 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
             PLUS FREE SAMPLE WITH FIRST ORDER
         </p>
         <div>
-            <a href="<?php echo $cartUrl; ?>">
+            <a href="<?php echo $cartUrl; ?>" data-lity>
                 SUBSCRIBE NOW
             </a>
         </div>
@@ -280,9 +294,16 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
             </div>
 
             <div class="cta">
-                <a href="<?php echo $cartUrl; ?>">
+                <a href="<?php echo $cartUrl; ?>" data-lity>
                     Order Now
                 </a>
+                <div id="popupTest" class="lity-hide" style="display: none;">
+                    <div class="inner">
+                        <p>
+                            Sorry this bundle is currently available for US customers only.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -339,7 +360,7 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
             </div>
                 
             <div>
-                <a class="add-to-bag" href="#popupTest" data-lity>
+                <a class="add-to-bag" data-lity>
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
@@ -904,13 +925,19 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa
 
 <script>
 jQuery(window).ready(function() { 
-            
-        function showCart(){jQuery('nav .custom-container ul li:nth-child(5) a, #headerWrapper .custom-container .inner .content .cta a, #bundleWrapper .custom-container .content .cta a, #FreeShipping, .autoshipWrapper, .add-to-bag').show();}
+
+        function clickCart1(){jQuery('.add-to-bag, .cta a, .custom-container div a, .main-nav li a').attr('href', '#popupTest');}
+        function clickCart2(){jQuery('.add-to-bag, .cta a').attr('href', '#<?php echo $cartUrl; ?>');}
 
         jQuery.getJSON('//ipinfo.io', function (location) {
-            // console.log(location.country);
+            console.log(location.country);
             // console.log(location.region);
-           if(location.country=='US' || location.country=='PH') showCart();
+           if(location.country!='PH') {
+                clickCart1();
+            }
+            else{
+                clickCart2();
+            }
         });
     });
 </script>

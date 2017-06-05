@@ -932,7 +932,7 @@ jQuery(window).ready(function() {
         jQuery.getJSON('//ipinfo.io', function (location) {
             console.log(location.country);
             // console.log(location.region);
-           if(location.country!='PH') {
+           if(location.country=='PH') {
                 clickCart1();
             }
             else{

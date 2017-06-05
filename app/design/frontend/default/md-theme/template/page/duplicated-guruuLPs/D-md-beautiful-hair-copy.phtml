@@ -339,10 +339,18 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
             </div>
                 
             <div>
-                <a class="add-to-bag" href="<?php echo $cartUrl; ?>">
+                <a class="add-to-bag" href="#popupTest" data-lity>
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
+
+                <div id="popupTest" class="lity-hide" style="display: none;">
+                    <div class="inner">
+                        <p>
+                            Sorry this bundle is currently available for US customers only.
+                        </p>
+                    </div>
+                </div>
 
                 <a href="https://youtu.be/_pv-ZZ3geXM" target="_blank" data-lity="">
                     Learn More
@@ -690,6 +698,38 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
         </span>
     </div>
 </div>
+
+
+<style type="text/css">
+
+.lity.lity-opened #popupTest {
+    display: flex!important;
+}
+
+#popupTest {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+}
+
+#popupTest .inner {
+    padding: 45px;
+    background: #fff;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+#popupTest .inner p {
+    padding: 0;
+    margin: 0;
+}
+
+
+</style>
 
 
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>

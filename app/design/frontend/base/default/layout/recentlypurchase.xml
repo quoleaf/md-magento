@@ -6,7 +6,7 @@
 			<action ifconfig="recentlypurchase/params/jquery" method="addItem"><type>skin_js</type><name>js/recentlypurchase/jquery.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/recentlypurchase/style.css</name></action>
         </reference>
-        <reference name="before_body_end">
+        <reference name="head">
             <block type="recentlypurchase/recentlypurchase" name="recentlypurchase"
                    template="recentlypurchase/recentlypurchase.phtml"/>
         </reference>

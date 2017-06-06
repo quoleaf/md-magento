@@ -28,13 +28,14 @@ if ($this->enableModule() && count($orders)) {
         foreach ($ordered_items as $item) {
             $indexOrder++;
             $productModel = Mage::getModel('catalog/product');
-            $_product = $productModel->loadByAttribute('sku', $item->getSku());
-			
-			//fix php fatal error
-			if(!$_product){
-				continue;
-			}
-			
+            // $_product = $productModel->loadByAttribute('item_id', $ite->getId());
+            $_product = $productModel->load($item->getId());
+
+            //fix php fatal error
+            if(!$_product){
+                continue;
+            }
+            
             $html .= '<div class="order_item_'. $indexOrder . '" style="display:none;padding:5px;overflow:hidden;">' ;
             $product_url = Mage::getUrl($_product->getUrlPath());
             if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_IMAGE_PRODUCT, $info_display)) {

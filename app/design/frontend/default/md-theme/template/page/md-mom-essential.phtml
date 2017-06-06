@@ -132,6 +132,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 	                <a href="<?php echo $cartUrl; ?>" class="buynow">
 	                    Buy now
 	                </a>
+                    <div id="popupTest" class="lity-hide" style="display: none;">
+                        <div class="inner">
+                            <p>
+                                Sorry this bundle is currently available for US customers only.
+                            </p>
+                        </div>
+                    </div>
 	            </li>
 	            <li>
 	                <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
@@ -173,6 +180,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
         			<a href="<?php echo $cartUrl; ?>">
         				Order Yours Now
         			</a>
+                    <div id="popupTest" class="lity-hide" style="display: none;">
+                        <div class="inner">
+                            <p>
+                                Sorry this bundle is currently available for US customers only.
+                            </p>
+                        </div>
+                    </div>
         		</div>
         	</div>
 
@@ -195,6 +209,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
             <a href="<?php echo $cartUrl; ?>">
                 SUBSCRIBE NOW
             </a>
+            <div id="popupTest" class="lity-hide" style="display: none;">
+                <div class="inner">
+                    <p>
+                        Sorry this bundle is currently available for US customers only.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -279,6 +300,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
         		<a href="<?php echo $cartUrl; ?>">
         			Order Now
         		</a>
+                <div id="popupTest" class="lity-hide" style="display: none;">
+                    <div class="inner">
+                        <p>
+                            Sorry this bundle is currently available for US customers only.
+                        </p>
+                    </div>
+                </div>
         	</div>
 		</div>
 
@@ -351,6 +379,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
+                <div id="popupTest" class="lity-hide" style="display: none;">
+                    <div class="inner">
+                        <p>
+                            Sorry this bundle is currently available for US customers only.
+                        </p>
+                    </div>
+                </div>
 
                 <a href="https://youtu.be/-TRk9ATsyWc" target="_blank" data-lity="">
                     Learn More
@@ -432,6 +467,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                     <img src="<?php echo $this->getSkinUrl('images/hairkit-bundle/bag.png') ?>">
                     Add to bag
                 </a>
+                <div id="popupTest" class="lity-hide" style="display: none;">
+                    <div class="inner">
+                        <p>
+                            Sorry this bundle is currently available for US customers only.
+                        </p>
+                    </div>
+                </div>
 
                 <a href="https://youtu.be/-TRk9ATsyWc" target="_blank" data-lity="">
                     Learn More
@@ -629,7 +671,8 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
     </div>
 </div>
 
-
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu-custom.css" type="text/css" />
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/guruu-custom.js') ?>"></script>
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
@@ -801,17 +844,5 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa
 })();
 </script>
 
-<script>
-jQuery(window).ready(function() { 
-            
-        function showCart(){jQuery('nav .custom-container ul li:nth-child(5) a, #headerWrapper .custom-container .inner .content .cta a, #bundleWrapper .custom-container .content .cta a, #FreeShipping, .autoshipWrapper, .add-to-bag').show();}
-
-        jQuery.getJSON('//ipinfo.io', function (location) {
-            // console.log(location.country);
-            // console.log(location.region);
-           if(location.country=='US') showCart();
-        });
-    });
-</script>
 </body>
 </html>

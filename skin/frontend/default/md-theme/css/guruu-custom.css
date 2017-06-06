@@ -1,0 +1,25 @@
+.lity.lity-opened #popupTest {
+    display: flex!important;
+}
+
+#popupTest {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+}
+
+#popupTest .inner {
+    padding: 45px;
+    background: #fff;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+#popupTest .inner p {
+    padding: 0;
+    margin: 0;
+}

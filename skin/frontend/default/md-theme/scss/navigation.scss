@@ -80,7 +80,7 @@
             font-family: 'Helvetica', Arial, sans-serif;
 
             @media only screen and (max-width : 1252px) { 
-            	margin-top: 0;
+            	margin: 11px 20px 10px 0;
             }
 
         }
@@ -118,10 +118,22 @@
             pointer-events: none;
             text-transform: uppercase;
 
+            @media only screen and (max-width: 1370px) {
+            	margin-right: 0;
+            }
+
             img {
             	width: 560px;
 
-            	@media only screen and (max-width : 1252px) {
+            	@media only screen and (max-width : 1100px) {
+            		width: 50%;
+            	}
+
+            	@media only screen and (max-width : 900px) {
+            		width: 80%;
+            	}
+
+            	@media only screen and (max-width : 500px) {
             		width: 100%;
             	}
             }
@@ -131,10 +143,6 @@
 			    border-left: 2px solid #c2d2de;
 			    padding-left: 10px;
 			    margin-left: 10px;
-            }
-
-            @media only screen and (max-width : 1270px) { 
-                margin-right:0;
             }
 
 
@@ -204,7 +212,7 @@
             -ms-behavior: url(backgroundsize.min.htc);
 
             @media only screen and (max-width : 1252px) {
-            	margin-top: 4px;
+            	margin-top: 15px;
             }
         }
         .cart-link{
@@ -985,7 +993,7 @@
 				            transform: rotate(45deg);
 				    float: left;
 				    position: relative;
-				    bottom: 55px;
+				    bottom: 100px;
 				    right: 39px;
 
 				    &:before {

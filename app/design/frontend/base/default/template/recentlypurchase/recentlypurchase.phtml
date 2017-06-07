@@ -39,7 +39,9 @@ if ($this->enableModule() && count($orders)) {
             $html .= '<div class="order_item_'. $indexOrder . '" style="display:none;padding:5px;overflow:hidden;">' ;
             $product_url = Mage::getUrl($_product->getUrlPath());
             if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_IMAGE_PRODUCT, $info_display)) {
-                $html .= '<div class="image"><a href="' . $product_url . '" title="' . $item->getName() . '"><img src="' . Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(75, 75) . '" alt="' . $item->getName() . '"></a></div>';
+                // $html .= '<div class="image"><a href="' . $product_url . '" title="' . $item->getName() . '"><img src="' . Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(75, 75) . '" alt="' . $item->getName() . '"></a></div>';
+                $html .= '<div class="image"><a href="' . $product_url . '" title="' . $item->getName() . '"><img src="' . $_product->getImageUrl() . '" alt="' . $item->getName() . '"width = 75px;
+                height=75px;></a></div>';
             }
             $html .= '<div class="info">';
             if (in_array(DragonFroot_Recentlypurchase_Block_Recentlypurchase::DISPLAY_DEFINE_TEXT, $info_display)) {

@@ -24,44 +24,23 @@
 
     <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu.css" type="text/css" />
 
-    
-    <!-- BEGIN GOOGLE ANALYTICS CODE -->
-    <script type="text/javascript">
-        //<![CDATA[
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-89987290-1']);
-            _gaq.push(['_trackPageview']);
-            
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-        //]]>
-    </script>
-    <!-- END GOOGLE ANALYTICS CODE -->
-        
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init', '1010013549017189');
-        fbq('track', "PageView");
-    </script>
-    
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1010013549017189&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Facebook Pixel Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TPDPWSV');</script>
+    <!-- End Google Tag Manager -->
 
 </head>
 
 <body class="health-hair-bundle-two">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPDPWSV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
 <?php $_product = Mage::registry('current_product'); ?>
 <?php //$_productID = $_product->getId(); ?>
@@ -780,16 +759,6 @@ $(window).scroll(function() {
     }
 });
 
-</script>
-
-<script type='text/javascript'>
-window.__lo_site_id = 59158;
-
-(function() {
-var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-})();
 </script>
 
 <script>

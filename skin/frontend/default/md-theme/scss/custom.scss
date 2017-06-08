@@ -5151,6 +5151,7 @@ div#load_screen{
 					align-items: center;
                     -webkit-align-items: center;
 
+
 					.custom-container {
 						text-align: center;
 						padding: 0 0 0 600px;
@@ -5191,6 +5192,7 @@ div#load_screen{
 								@media only screen and (max-width : 540px) {
 									font-size: 35pt;
 								}
+
 								@media only screen and (max-width : 540px) {
 									font-size: 25pt;
 								}
@@ -13788,3 +13790,5 @@ p.price-from {
 .price-to .price-label {
     display: none;
 }
+
+

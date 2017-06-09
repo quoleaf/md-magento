@@ -42,23 +42,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
 <?php $_product = Mage::registry('current_product'); ?>
 <?php //$_productID = $_product->getId(); ?>
-<?php $_productID = 112 ?>
-<?php $_productID2 = 113 ?>
+<?php $_productID = 161 ?>
+<?php $_productID2 = 162 ?>
 <?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
-<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[22]=24&bundle_option[23]=25&bundle_option[24]=26&options[14]=21&form_key='.$formkey.'' ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?options[32]=39&form_key='.$formkey.'' ?>
 <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function() {
 $(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
 if (this.checked) {
-var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[22]=24&bundle_option[23]=25&bundle_option[24]=26&options[14]=21&form_key='.$formkey.''  ?>";
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?options[32]=39&form_key='.$formkey.'' ?>";
 $('body.beauty-and-serenity #bundleWrapper .custom-container .content .cta a').attr('href', url);
 $('body.beauty-and-serenity #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
 $('#description .custom-container .left div a:first-child').attr('href', url);
 $('#FreeShipping .custom-container div a').attr('href', url);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
 }else{
-var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[25]=27&bundle_option[26]=28&bundle_option[27]=29&form_key='.$formkey.'' ?>";
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?form_key='.$formkey.'' ?>";
 $('body.beauty-and-serenity #bundleWrapper .custom-container .content .cta a').attr('href', url2);
 $('body.beauty-and-serenity #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
 $('#description .custom-container .left div a:first-child').attr('href', url2);
@@ -82,33 +82,33 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 
 
 <div id="headerWrapper">
-	<nav class='main-nav' id="main-navWrapper">
-	    <div class="custom-container">
-	        <ul class='main-nav'>
-	            <li>
-	                <a href='<?php echo Mage::getBaseUrl(); ?>'>
-	                    <img src="<?php echo $this->getSkinUrl('images/guruu/logo.png') ?>">
-	                </a>
-	            </li>
-	            <li>
-	                <a href='#description'>
-	                    What is MD Hair
-	                </a>
-	            </li>
-	            <li>
-	                <a href='#description'>
-	                    How does it work
-	                </a>
-	            </li>
-	            <li>
-	                <a href='https://md-factor.com/shipping-policy/'>
-	                    satisfaction guarantee
-	                </a>
-	            </li>
-	            <li>
-	                <a href="<?php echo $cartUrl; ?>" class="buynow">
-	                    Buy now
-	                </a>
+    <nav class='main-nav' id="main-navWrapper">
+        <div class="custom-container">
+            <ul class='main-nav'>
+                <li>
+                    <a href='<?php echo Mage::getBaseUrl(); ?>'>
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/logo.png') ?>">
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        What is MD Hair
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        How does it work
+                    </a>
+                </li>
+                <li>
+                    <a href='https://md-factor.com/shipping-policy/'>
+                        satisfaction guarantee
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $cartUrl; ?>" class="buynow">
+                        Buy now
+                    </a>
                     <div id="popupTest" class="lity-hide" style="display: none;">
                         <div class="inner">
                             <p>
@@ -116,45 +116,45 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                             </p>
                         </div>
                     </div>
-	            </li>
-	            <li>
-	                <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
+                </li>
+                <li>
+                    <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
                         Share
                     </a>
-	            </li>
+                </li>
 
-	        </ul>
-	        <a href='#' id='openup'>
-	            <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
-	        </a>
+            </ul>
+            <a href='#' id='openup'>
+                <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+            </a>
 
-	        <span>
-	            <a href="https://www.addtoany.com/share" class="share a2a_dd">
-	                <i class="fa fa-reply" aria-hidden="true"></i> Share
-	            </a>
-	        </span>
-	    </div>
-	</nav>
+            <span>
+                <a href="https://www.addtoany.com/share" class="share a2a_dd">
+                    <i class="fa fa-reply" aria-hidden="true"></i> Share
+                </a>
+            </span>
+        </div>
+    </nav>
 
     <div class="custom-container">
         <div class="inner">
-        	<div class="content">
-        		<h1>
-        			BEAUTY & SERENITY
-        		</h1>
+            <div class="content">
+                <h1>
+                    BEAUTY & SERENITY
+                </h1>
 
-        		<p>
-        			DETOX, DESTRESS, AND BEAUTIFY YOUR SKIN
-        		</p>
+                <p>
+                    DETOX, DESTRESS, AND BEAUTIFY YOUR SKIN
+                </p>
 
-        		<span>
-        			PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
-        		</span>
+                <span>
+                    PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
+                </span>
 
-        		<div class="cta">
-        			<a href="<?php echo $cartUrl; ?>">
-        				Order Yours Now
-        			</a>
+                <div class="cta">
+                    <a href="<?php echo $cartUrl; ?>">
+                        Order Yours Now
+                    </a>
                     <div id="popupTest" class="lity-hide" style="display: none;">
                         <div class="inner">
                             <p>
@@ -162,22 +162,22 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                             </p>
                         </div>
                     </div>
-        		</div>
-        	</div>
+                </div>
+            </div>
 
-        	<div class="hanging-products">
-        		<div>
-        			<img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/ultimateGreen.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
-        		</div>
+            <div class="hanging-products">
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/ultimateGreen.png') ?>" class="wow fadeInDown animated" data-wow-delay="3s">
+                </div>
 
-        		<div>
-        			<img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/adrenalPro.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
-        		</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/adrenalPro.png') ?>" class="wow fadeInDown animated" data-wow-delay="2s">
+                </div>
 
-        		<div>
-        			<img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/beautyDrink.png') ?>" class="wow fadeInDown animated" data-wow-delay="1s">
-        		</div>
-        	</div>
+                <div>
+                    <img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/beautyDrink.png') ?>" class="wow fadeInDown animated" data-wow-delay="1s">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -206,75 +206,75 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 </div>
 
 <div id="bundleWrapper">
-	<div class="custom-container">
-		<div class="imageWrapper">
-        	<div class="inner">
-        		<div>
-        		<img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/ultimateGreen.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
-        	</div>
+    <div class="custom-container">
+        <div class="imageWrapper">
+            <div class="inner">
+                <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/ultimateGreen.png') ?>" class="wow fadeInLeft animated" data-wow-delay="3s">
+            </div>
 
-        	<div>
-        		<img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/adrenalPro.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
-        	</div>
+            <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/adrenalPro.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
+            </div>
 
-        	<div>
-        		<img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/beautyDrink.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
-        	</div>
-        	</div>
-		</div>
+            <div>
+                <img src="<?php echo $this->getSkinUrl('images/guruu/beauty-and-serenity/productPhotos/beautyDrink.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
+            </div>
+            </div>
+        </div>
 
-		<div class="content">
-			<h1>
-				Beauty & Serenity
-			</h1>
-			<p>
-				Feel less stressed the NEXT DAY with natural Ayrevedia and Chinese plant extracts.
-			</p>
+        <div class="content">
+            <h1>
+                Beauty & Serenity
+            </h1>
+            <p>
+                Feel less stressed the NEXT DAY with natural Ayrevedia and Chinese plant extracts.
+            </p>
 
-			<div class="price">
-				<span>$160</span>
-				<p>
-					$124
-				</p>
-			</div>
+            <div class="price">
+                <span>$160</span>
+                <p>
+                    $124
+                </p>
+            </div>
 
-			<strong>
-				Bundle Includes:	
-			</strong>
+            <strong>
+                Bundle Includes:    
+            </strong>
 
-			<ul>
-				<li>
-					MD Adrenal Pro ($40)
-				</li>
-				<li>
-					MD Beauty Drink ($60)
-				</li>
+            <ul>
+                <li>
+                    MD Adrenal Pro ($40)
+                </li>
+                <li>
+                    MD Beauty Drink ($60)
+                </li>
                 <li>
                     MD Ultimate Green ($60)
                 </li>
-			</ul>
+            </ul>
 
-			<div class="autoshipWrapper">
-				<div class="inner">
-					<div class="custom-checkbox">
-					    <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
-					    <label for="custom-checkbox">
-					    	<span>
-					    		Autoship every 60 days
-					    	</span>
-					    </label>
-					</div>
-				</div>
+            <div class="autoshipWrapper">
+                <div class="inner">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
+                        <label for="custom-checkbox">
+                            <span>
+                                Autoship every 60 days
+                            </span>
+                        </label>
+                    </div>
+                </div>
 
-				<p>
-					Enjoy the special bundle saving and receive autoship every 90 days
-				</p>
-			</div>
+                <p>
+                    Enjoy the special bundle saving and receive autoship every 90 days
+                </p>
+            </div>
 
-			<div class="cta">
-        		<a href="<?php echo $cartUrl; ?>">
-        			Order Now
-        		</a>
+            <div class="cta">
+                <a href="<?php echo $cartUrl; ?>">
+                    Order Now
+                </a>
                 <div id="popupTest" class="lity-hide" style="display: none;">
                     <div class="inner">
                         <p>
@@ -282,9 +282,9 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                         </p>
                     </div>
                 </div>
-        	</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="AsSeenIn">
@@ -321,7 +321,7 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 </h2>
 
                 <p>
-                	Feel less stressed from natural Ayurvedic herbs next day, Detoxify and clarify your skin with high grade green supplements made from over 20 natural plant extract, probiotics and antioxidants.   Plumper, younger skin in 2 weeks and clearer skin in 4 weeks.	
+                    Feel less stressed from natural Ayurvedic herbs next day, Detoxify and clarify your skin with high grade green supplements made from over 20 natural plant extract, probiotics and antioxidants.   Plumper, younger skin in 2 weeks and clearer skin in 4 weeks.    
                 </p>
             </div>
                 
@@ -574,18 +574,18 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 
 
 <div id="about">
-	<div class="custom-container">	
-		<div class="title">
-			<img src="<?php echo $this->getSkinUrl('images/guruu/aboutSusanLin/drLin.jpg') ?>">
-			<p>
-				<span>
+    <div class="custom-container">  
+        <div class="title">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/aboutSusanLin/drLin.jpg') ?>">
+            <p>
+                <span>
                     About DR Susan Lin            
                 </span>
-			</p>
-		</div>
+            </p>
+        </div>
 
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
-	</div>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
+    </div>
 </div>
 
 <div id="footer">

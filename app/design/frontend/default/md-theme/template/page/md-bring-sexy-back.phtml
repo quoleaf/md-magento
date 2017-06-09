@@ -44,23 +44,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php $homeurl = Mage::app()->getStore()->getHomeUrl(); ?>
 <?php $_product = Mage::registry('current_product'); ?>
 <?php //$_productID = $_product->getId(); ?>
-<?php $_productID = 123 ?>
-<?php $_productID2 = 122 ?>
+<?php $_productID = 167 ?>
+<?php $_productID2 = 168 ?>
 <?php $formkey = Mage::getSingleton('core/session')->getFormKey(); ?>
-<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[46]=51&bundle_option[47]=52&options[19]=26&form_key='.$formkey.'' ?>
+<?php $cartUrl = $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?options[35]=42&form_key='.$formkey.'' ?>
 <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function() {
 $(document).on('change', '.autoshipWrapper .custom-checkbox #custom-checkbox', function(){
 if (this.checked) {
-var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?bundle_option[46]=51&bundle_option[47]=52&options[19]=26&form_key='.$formkey.''  ?>";
+var url = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID.'/qty/1/?options[35]=42&form_key='.$formkey.'' ?>";
 $('body.bring-sexy-back #bundleWrapper .custom-container .content .cta a').attr('href', url);
 $('body.bring-sexy-back #headerWrapper .custom-container .inner .content .cta a').attr('href', url);
 $('#description .custom-container .left div a:first-child').attr('href', url);
 $('#FreeShipping .custom-container div a').attr('href', url);
 $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url);
 }else{
-var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?bundle_option[44]=49&bundle_option[45]=50&form_key='.$formkey.'' ?>";
+var url2 = "<?php echo $homeurl.'checkout/cart/add/product/'.$_productID2.'/qty/1/?form_key='.$formkey.'' ?>";
 $('body.bring-sexy-back #bundleWrapper .custom-container .content .cta a').attr('href', url2);
 $('body.bring-sexy-back #headerWrapper .custom-container .inner .content .cta a').attr('href', url2);
 $('#description .custom-container .left div a:first-child').attr('href', url2);
@@ -84,33 +84,33 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 
 
 <div id="headerWrapper">
-	<nav class='main-nav' id="main-navWrapper">
-	    <div class="custom-container">
-	        <ul class='main-nav'>
-	            <li>
-	                <a href='<?php echo Mage::getBaseUrl(); ?>'>
-	                    <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
-	                </a>
-	            </li>
-	            <li>
-	                <a href='#description'>
-	                    What is MD
-	                </a>
-	            </li>
-	            <li>
-	                <a href='#description'>
-	                    How does it work
-	                </a>
-	            </li>
-	            <li>
-	                <a href='https://md-factor.com/shipping-policy/'>
-	                    satisfaction guarantee
-	                </a>
-	            </li>
-	            <li>
-	                <a href="<?php echo $cartUrl ?>" class="buynow">
-	                    Buy now
-	                </a>
+    <nav class='main-nav' id="main-navWrapper">
+        <div class="custom-container">
+            <ul class='main-nav'>
+                <li>
+                    <a href='<?php echo Mage::getBaseUrl(); ?>'>
+                        <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/logo.png') ?>">
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        What is MD
+                    </a>
+                </li>
+                <li>
+                    <a href='#description'>
+                        How does it work
+                    </a>
+                </li>
+                <li>
+                    <a href='https://md-factor.com/shipping-policy/'>
+                        satisfaction guarantee
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $cartUrl ?>" class="buynow">
+                        Buy now
+                    </a>
                     <div id="popupTest" class="lity-hide" style="display: none;">
                         <div class="inner">
                             <p>
@@ -118,25 +118,25 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                             </p>
                         </div>
                     </div>
-	            </li>
-	            <li>
-	                <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
+                </li>
+                <li>
+                    <a href="https://www.addtoany.com/share" class="share a2a_dd" style="display: none;">
                         Share
                     </a>
-	            </li>
+                </li>
 
-	        </ul>
-	        <a href='#' id='openup'>
-	            <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
-	        </a>
+            </ul>
+            <a href='#' id='openup'>
+                <img src="<?php echo $this->getSkinUrl('images/logo-brown.png') ?>">
+            </a>
 
-	        <span>
-	            <a href="https://www.addtoany.com/share" class="share a2a_dd">
-	                <i class="fa fa-reply" aria-hidden="true"></i> Share
-	            </a>
-	        </span>
-	    </div>
-	</nav>
+            <span>
+                <a href="https://www.addtoany.com/share" class="share a2a_dd">
+                    <i class="fa fa-reply" aria-hidden="true"></i> Share
+                </a>
+            </span>
+        </div>
+    </nav>
 
     <div class="custom-container">
         <div class="inner">
@@ -150,25 +150,25 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                 </div>
             </div>
 
-        	<div class="content">
-        		<h1>
-        			BRING SEXY BACK
-        		</h1>
+            <div class="content">
+                <h1>
+                    BRING SEXY BACK
+                </h1>
 
-        		<p>
-        			improves sensitivity, <br/>
+                <p>
+                    improves sensitivity, <br/>
                     appearance and discoloration <br/>
                     of intimate feminine area.
-        		</p>
+                </p>
 
-        		<span>
-        			PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
-        		</span>
+                <span>
+                    PHYSICIAN FORMULATED NATURAL DRUG FREE FORMULA
+                </span>
 
-        		<div class="cta">
-        			<a href="<?php echo $cartUrl ?>">
-        				Order Yours Now
-        			</a>
+                <div class="cta">
+                    <a href="<?php echo $cartUrl ?>">
+                        Order Yours Now
+                    </a>
                     <div id="popupTest" class="lity-hide" style="display: none;">
                         <div class="inner">
                             <p>
@@ -176,8 +176,8 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                             </p>
                         </div>
                     </div>
-        		</div>
-        	</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -206,70 +206,70 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 </div>
 
 <div id="bundleWrapper">
-	<div class="custom-container">
-		<div class="imageWrapper">
-        	<div class="inner">
+    <div class="custom-container">
+        <div class="imageWrapper">
+            <div class="inner">
                 <div>
                     <img src="<?php echo $this->getSkinUrl('images/guruu/sexy-back/brightening-cream-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="2s">
                 </div>
                 <div>
                     <img src="<?php echo $this->getSkinUrl('images/guruu/sexy-back/intimate-restore-bundle.png') ?>" class="wow fadeInLeft animated" data-wow-delay="1s">
                 </div>
-        	</div>
-		</div>
+            </div>
+        </div>
 
-		<div class="content">
-			<h1>
-				BRING SEXY BACK
-			</h1>
+        <div class="content">
+            <h1>
+                BRING SEXY BACK
+            </h1>
 
-			<p>
-				Bring Sexy Back bundle improves sensitivity, <br/>
+            <p>
+                Bring Sexy Back bundle improves sensitivity, <br/>
                 appearance and discoloration of intimate feminine area.
-			</p>
+            </p>
 
-			<div class="price">
-				<span>$145</span>
-				<p>
-					$98
-				</p>
-			</div>
+            <div class="price">
+                <span>$145</span>
+                <p>
+                    $98
+                </p>
+            </div>
 
-			<strong>
-				Bundle Includes:	
-			</strong>
+            <strong>
+                Bundle Includes:    
+            </strong>
 
-			<ul>
-				<li>
+            <ul>
+                <li>
                     Intimate Restore            
                 </li>
 
                 <li>
                     MD Skin Brightening Cream 3%
                 </li>
-			</ul>
+            </ul>
 
-			<div class="autoshipWrapper">
-				<div class="inner">
-					<div class="custom-checkbox">
-					    <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
-					    <label for="custom-checkbox">
-					    	<span>
-					    		Autoship every 90 days
-					    	</span>
-					    </label>
-					</div>
-				</div>
+            <div class="autoshipWrapper">
+                <div class="inner">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" value="None" id="custom-checkbox" name="check" checked/>
+                        <label for="custom-checkbox">
+                            <span>
+                                Autoship every 90 days
+                            </span>
+                        </label>
+                    </div>
+                </div>
 
-				<p>
-					Enjoy the special bundle saving and receive autoship every 90 days
-				</p>
-			</div>
+                <p>
+                    Enjoy the special bundle saving and receive autoship every 90 days
+                </p>
+            </div>
 
-			<div class="cta">
-        		<a href="<?php echo $cartUrl ?>">
-        			Order Now
-        		</a>
+            <div class="cta">
+                <a href="<?php echo $cartUrl ?>">
+                    Order Now
+                </a>
                 <div id="popupTest" class="lity-hide" style="display: none;">
                     <div class="inner">
                         <p>
@@ -277,13 +277,13 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
                         </p>
                     </div>
                 </div>
-        	</div>
-		</div>
+            </div>
+        </div>
 
         <div class="catWrapper">
             <img src="<?php echo $this->getSkinUrl('images/guruu/mom-essential/cat-gif-bling.gif') ?>" class="wow fadeIn animated">
         </div>
-	</div>
+    </div>
 </div>
 
 <div id="AsSeenIn">
@@ -591,18 +591,18 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
 
 
 <div id="about">
-	<div class="custom-container">	
-		<div class="title">
-			<img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
-			<p>
-				<span>
+    <div class="custom-container">  
+        <div class="title">
+            <img src="<?php echo $this->getSkinUrl('images/guruu/healthy-hair-bundle/founder.jpg') ?>">
+            <p>
+                <span>
                     About DR Susan Lin            
                 </span>
-			</p>
-		</div>
+            </p>
+        </div>
 
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
-	</div>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('guruu_lp_susan_bio')->toHtml(); ?>
+    </div>
 </div>
 
 <div id="footer">

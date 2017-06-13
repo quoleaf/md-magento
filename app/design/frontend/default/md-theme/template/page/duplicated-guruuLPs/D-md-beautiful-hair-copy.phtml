@@ -24,6 +24,8 @@
 
     <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu.css" type="text/css" />
 
+    <link rel="stylesheet" href="<?php echo $this->getSkinUrl(); ?>css/guruu-custom.css" type="text/css" />
+
     
     <!-- BEGIN GOOGLE ANALYTICS CODE -->
     <script type="text/javascript">
@@ -163,7 +165,7 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
         <div class="inner">
             <div class="content">
                 <h1>
-                    HEALTHY HAIR BUNDLE
+                    TEST PAGE
                 </h1>
 
                 <p>
@@ -720,44 +722,12 @@ $('nav.fixed-nav .custom-container ul li a.buynow').attr('href', url2);
     </div>
 </div>
 
-
-<style type="text/css">
-
-.lity.lity-opened #popupTest {
-    display: flex!important;
-}
-
-#popupTest {
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-}
-
-#popupTest .inner {
-    padding: 45px;
-    background: #fff;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: bold;
-    color: red;
-}
-
-#popupTest .inner p {
-    padding: 0;
-    margin: 0;
-}
-
-
-</style>
-
-
 <script src="<?php echo $this->getSkinUrl(); ?>js/carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/md-js/lity.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/wow.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.js') ?>"></script>
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/animation/animate-custom.min.js') ?>"></script>
+<!-- <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/guruu-custom.js') ?>"></script> -->
 
 
 <!-- Share button -->
@@ -923,26 +893,5 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa
 })();
 </script>
 
-<script>
-jQuery(window).ready(function() { 
-
-        function clickCart(){jQuery('.add-to-bag, .cta a, .custom-container div a, .main-nav li a').attr('href', '#popupTest').attr('data-lity','');}
-        function clickCart2(){jQuery('.add-to-bag, .cta a').attr('href', '<?php echo $cartUrl; ?>');}
-        function hideTick(){jQuery('body.health-hair-bundle-one #bundleWrapper .custom-container .content .autoshipWrapper .inner .custom-checkbox label').hide();}
-
-        jQuery.getJSON('//ipinfo.io', function (location) {
-            // console.log(location.country);
-            // console.log(location.region);
-       
-           if(location.country=='US') {
-                clickCart2();
-            }
-            else{
-                clickCart();
-                hideTick();
-            }
-        });
-    });
-</script>
 </body>
 </html>

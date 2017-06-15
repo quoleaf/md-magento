@@ -13792,3 +13792,79 @@ p.price-from {
 }
 
 
+
+
+
+
+
+/* 6-14-17 custom checkout fix - buttons */
+
+body.opc-index-index span.radiocustom {
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0 20px 0 0;
+}
+
+body.opc-index-index .opc-wrapper-opc .opc-col-right dt
+label {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+body.opc-index-index span.radiocustom p {
+    margin: 0;
+    cursor: pointer;
+}
+
+
+body.opc-index-index span.radiocustom p i{
+    color: #747474;
+    font-size:20px;
+    position: relative;
+    top: 2px;
+}
+
+body.opc-index-index input[type="radio"]:checked+label span.radiocustom p i {
+    font-size:20px;
+    top: 2px;
+}
+
+
+
+body.opc-index-index .sp-methods ul li label {
+    display: flex!important;
+    display: -webkit-flex!important;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+body.opc-index-index .sp-methods ul li label p i {
+	top: 1px;
+}
+
+
+body.opc-index-index #header #topBar a {
+	@media screen and (max-width: 500px ){
+		font-size: 10px;
+	}
+}
+
+body.opc-index-index #topBar {
+	@media screen and (max-width: 500px ){
+		height: auto;
+	}
+}
+
+
+body.opc-index-index .main-container {
+	@media screen and (max-width: 500px ){
+		padding: 60px 30px 0 30px;
+	}
+}

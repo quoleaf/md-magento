@@ -13800,7 +13800,7 @@ p.price-from {
 /* 6-14-17 custom checkout fix - buttons */
 
 body.opc-index-index span.radiocustom {
-    border: 1px solid;
+    border: 1px solid #9b9b9b;
     width: 30px;
     height: 30px;
     display: flex;
@@ -13823,7 +13823,6 @@ body.opc-index-index span.radiocustom p {
     cursor: pointer;
 }
 
-
 body.opc-index-index span.radiocustom p i{
     color: #747474;
     font-size:20px;
@@ -13845,10 +13844,9 @@ body.opc-index-index .sp-methods ul li label {
     -webkit-align-items: center;
 }
 
-body.opc-index-index .sp-methods ul li label p i {
+body.opc-index-index .sp-methods ul li label p i, body.opc-index-index .sp-methods input[type="radio"]:checked+label span.radiocustom p i {
 	top: 1px;
 }
-
 
 body.opc-index-index #header #topBar a {
 	@media screen and (max-width: 500px ){

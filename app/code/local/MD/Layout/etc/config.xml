@@ -616,6 +616,16 @@
             </layouts>
         </page>
 
+        <page>
+            <layouts> 
+                <questionaire module="page" translate="label">
+                    <label>Questionaire</label>
+                    <template>page/landingpage-questionaire.phtml</template>
+                    <layout_handle>Questionaire</layout_handle>
+                </questionaire> 
+            </layouts>
+        </page>
+
 
 
 

@@ -627,7 +627,38 @@
         </page>
 
 
+        <!-- Bridal -->
 
+
+        <page>
+            <layouts> 
+                <bridallandingone module="page" translate="label">
+                    <label>Bridal Landing</label>
+                    <template>page/bridal/bridal-landing.phtml</template>
+                    <layout_handle>bridallandingone</layout_handle>
+                </bridallandingone> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <bridallandingtwo module="page" translate="label">
+                    <label>Bridal Landing Two</label>
+                    <template>page/bridal/bridal-landing-two.phtml</template>
+                    <layout_handle>bridallandingtwo</layout_handle>
+                </bridallandingtwo> 
+            </layouts>
+        </page>
+
+        <page>
+            <layouts> 
+                <bridallandingthree module="page" translate="label">
+                    <label>Bridal Landing Three</label>
+                    <template>page/bridal/bridal-landing-three.phtml</template>
+                    <layout_handle>bridallandingthree</layout_handle>
+                </bridallandingthree> 
+            </layouts>
+        </page>
 
     </global>
     <frontend>

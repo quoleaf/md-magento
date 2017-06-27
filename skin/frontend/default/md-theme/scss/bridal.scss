@@ -269,7 +269,7 @@ a, button, div, span, input, textarea {
     padding: 0;
 
     .inner {
-        background: url('http://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg') center;
+        background: url('http://i3.ytimg.com/vi/QUQR0xiWyvI/hqdefault.jpg') center;
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -294,7 +294,7 @@ a, button, div, span, input, textarea {
 
     @media only screen and (max-width :470px) {
         .inner {
-            background: url('http://i3.ytimg.com/vi/gjyR33NIu1o/hqdefault.jpg') 0;
+            background: url('http://i3.ytimg.com/vi/QUQR0xiWyvI/hqdefault.jpg') 0;
         }
     }
 }
@@ -594,7 +594,7 @@ nav {
         transition: all 0.4s ease;
         box-shadow: 0px 1.5px 0px 0px rgba(13, 107, 169, 0.74);
         background: #0d6ba9;
-        z-index: 9;
+        z-index: 999;
 
         @media screen and (max-width: 991px) {
             height: auto;
@@ -710,36 +710,197 @@ nav {
     width: 100%;
     float: left;
     padding: 0 0 65px 0;
-    background: url('../images/bridal/header-bg-one.jpg') no-repeat center center;
-    background-size: cover;
-    height: 79vh;
+    height: 90vh;
     display: flex;
     display: -webkit-flex;
     align-items: center;
     -webkit-align-items: center;
 
-    @media screen and (max-width: 986px) {
-        background-position-x: -170px;
-        padding: 0;
-        display: flex;
-        display: -webkit-flex;
-        align-items: center;
-        -webkit-align-items: center;
-    }
+    &.headerone {
+        background: url('../images/bridal/header-bg-one.jpg') no-repeat center center;
+        background-size: cover;
 
-    @media screen and (max-width: 970px) {
-        background: url('../images/bridal/header-bg-tablet.jpg') no-repeat center center;
-    }
+        @media screen and (max-width: 1020px) {
+            background: url('../images/bridal/header-bg-tablet.jpg') no-repeat center center;
+            background-size: cover;
+        }
 
-    @media screen and (max-width: 855px) {
-        background: none;
-    }
+        @media screen and (max-width: 600px) {
+            background: url('../images/bridal/header-bg-mobile.jpg') no-repeat center center;
+            background-size: cover;    
+            height: 113vh;    
+        }
 
-    @media screen and (max-width: 470px) {
-        &:after {
-            background-size: 100%;
+        @media screen and (max-width: 508px) {
+            height: 93vh;
         }
     }
+
+    &.headertwo {
+        background: url('../images/bridal/header-bg-two.jpg') no-repeat center center;
+        background-size: cover;
+
+        @media screen and (max-width: 1020px) {
+            background: url('../images/bridal/header-bg-tablet-two.jpg') no-repeat center center;
+            background-size: cover;
+            height: 154vh;
+        }
+
+        @media screen and (max-width: 770px) {
+            height: 108vh;
+        }
+
+        @media screen and (max-width: 600px) {
+            background: url('../images/bridal/header-bg-mobile.jpg') no-repeat center center;
+            background-size: cover;        
+        }
+
+        @media screen and (max-width: 508px) {
+            height: 93vh;
+        }
+
+        .custom-container {
+            .left {
+                padding: 75px 0 0 0; 
+
+                @media screen and (max-width: 1270px) {
+                    padding: 90px 0 0 0; 
+                }
+
+                @media screen and (max-width: 1170px) {
+                    padding: 25px 0 0 0; 
+                    left: 155px;
+                }
+
+                h1 {
+                    font-size: 36pt;
+
+                    @media screen and (max-width: 1270px) {
+                        font-size: 30pt;
+                    }
+                }  
+
+                p {
+                    padding: 40px 0 0 0;
+                }
+            }
+
+            .right {
+                div {
+                    &:nth-child(1) {
+                        img {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.headerthree {
+        background: url('../images/bridal/header-bg-three.jpg') no-repeat center center;
+        background-size: cover;
+        height: 93vh;
+
+        @media screen and (max-width: 1020px) {
+            background: url('../images/bridal/header-bg-tablet-three.jpg') no-repeat center center;
+            background-size: cover;
+            height: 154vh;
+        }
+
+        @media screen and (max-width: 770px) {
+            height: 108vh;
+        }
+
+        @media screen and (max-width: 600px) {
+            background: url('../images/bridal/header-bg-mobile.jpg') no-repeat center center;
+            background-size: cover;        
+        }
+
+        @media screen and (max-width: 508px) {
+            height: 93vh;
+        }
+
+        .custom-container {
+            .left {
+                padding: 150px 0 0 0; 
+                left: 250px;
+
+                @media screen and (max-width: 1370px) {
+                    left: 230px;
+                }
+
+                @media screen and (max-width: 1270px) {
+                    left: 210px;
+                    padding: 180px 0 0 0;
+                }
+
+                @media screen and (max-width: 1170px) {
+                    left: 180px;
+                    padding: 120px 0 0 0;
+                }
+
+                h1 {
+                    font-size: 35pt;
+
+                    @media screen and (max-width: 1370px) {
+                        font-size: 30pt;
+                    }
+
+                    @media screen and (max-width: 1270px) {
+                        font-size: 27pt;
+                    }
+                }  
+
+                p {
+                    font-size: 14px;
+
+                    @media screen and (max-width: 1370px) {
+                        font-size: 12px;
+                    }
+
+                    @media screen and (max-width: 1270px) {
+                        font-size: 10px;
+                    }
+                }
+
+                div {
+                    padding: 100px 0 0 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1170px) {
+        background-position-x: -185px;
+    }
+
+    @media screen and (max-width: 1070px) {
+        background-position-x: -205px;
+    }
+
+    @media screen and (max-width: 1020px) {
+        height: 153vh;
+        display: block;
+    }
+
+    @media screen and (max-width: 770px) {
+        height: 113vh;
+    }
+    
+    @media screen and (max-width: 600px) {
+        height: 111vh;
+        display: block;
+    }
+
+    @media screen and (max-width: 508px) {
+        height: 94vh;
+    }
+
+    @media screen and (max-width: 456px) {
+        height: 84vh;
+    }
+
 
     .custom-container {
         padding: 35px 0 0 0;
@@ -750,8 +911,12 @@ nav {
             padding: 0 50px 0 50px;
         }
 
+        @media screen and (max-width: 370px) {
+            padding: 0 10px 0 10px;
+        }
+
         &.desktop {
-            @media screen and (max-width: 970px) {
+            @media screen and (max-width: 1020px) {
                 display: none;
             }
         }
@@ -759,18 +924,145 @@ nav {
         &.mobile {
             display: none;
 
-            @media screen and (max-width: 970px) {
+            @media screen and (max-width: 1020px) {
                 display: block;
 
                 .top {
+                    width: 100%;
+                    float: left;
+                    text-align: center;
+                    padding: 125px 0 0 0;
+
+                    @media screen and (max-width: 770px) {
+                        padding: 80px 0 0 0;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        padding: 120px 0 0 0;
+                    }
+
+                    @media screen and (max-width: 508px) {
+                        padding: 85px 0 0 0;
+                    }
+
                     h1 {
                         font-family: 'Bodoni', Arial, sans-serif;
                         font-style: italic;
-                        font-size: 37pt;
+                        font-size: 41pt;
                         color: #556067;
                         font-weight: normal;
                         margin: 0;
                         padding:0;
+
+                        @media screen and (max-width: 770px) {
+                            font-size: 30pt;
+                        }
+
+                        @media screen and (max-width: 508px) {
+                            font-size: 26pt;
+                        }
+
+                        @media screen and (max-width: 456px) {
+                            font-size: 19pt;
+                        }
+                    }
+
+                    p {
+                        font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                        font-style: normal;
+                        font-size: 17px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        color: #7d7d7d;
+                        width: 100%;
+                        float: left;
+                        margin: 0;
+                        padding: 10px 0 0 0;
+
+                        @media screen and (max-width: 770px) {
+                            font-size: 12px;
+                        }
+
+                        @media screen and (max-width: 600px) {
+                            font-size: 17.5px;
+                            width: 393px;
+                            margin: 0 auto;
+                            float: none;                        
+                        }
+
+                        @media screen and (max-width: 508px) {
+                            font-size: 14.9px;
+                            width: 330px;
+                        }
+
+                        @media screen and (max-width: 456px) {
+                            font-size: 11.9px;
+                            width: 245px;
+                        }
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    float: left;
+                    text-align: center;
+
+                    @media screen and (max-width: 600px) {
+                        padding: 58vh 0 0 0;
+                    }
+
+                    @media screen and (max-width: 508px) {
+                        padding: 50vh 0 0 0;
+                    }
+
+                    @media screen and (max-width: 456px) {
+                        padding: 46vh 0 0 0;
+                    }
+
+                    @media screen and (max-width: 375px) {
+                        padding: 43vh 0 0 0;
+                    }
+
+                    div {
+                        width: 100%;
+                        float: left;
+                        padding: 80px 0 0 0;
+
+                        @media screen and (max-width: 600px) {
+                            padding: 0 10px 0 10px;
+                        }
+
+                        @media screen and (max-width: 375px) {
+                            padding: 45px 10px 0 10px;
+                        }
+
+                        @media screen and (max-width: 330px) {
+                            padding: 20px 10px 0 10px;
+                        }
+
+                        a {
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            background: #e8408b;
+                            transition: all 0.5s ease;
+                            padding: 15px 40px 15px 40px;
+                            font-size: 17px;
+                            color: #fff;
+
+                            &:hover {
+                                background: #da0061;
+                            }
+
+                            @media screen and (max-width: 600px) {
+                                padding: 15px 0 15px 0;
+                                width: 100%;
+                                float: left;
+                            }
+
+                            @media screen and (max-width: 370px) {
+                                font-size: 14px;
+                            }
+                        }
                     }
                 }
             }
@@ -782,20 +1074,20 @@ nav {
             float: left;
             padding: 90px 0 0 0;
             position: relative;
-            left: 215px;
+            left: 225px;
 
             @media only screen and (max-width : 1599px) {
-                padding: 105px 0 0 0;
+                left: 240px;
             }
 
             @media only screen and (max-width : 1370px) {
-                padding: 120px 0 0 0;
-                left: 215px;
+                padding: 100px 0 0 0;
+                left: 197px;
             }
 
             @media only screen and (max-width : 1270px) {
-                padding: 128px 0 0 0;
-                left: 190px;
+                padding: 123px 0 0 0;
+                left: 165px;
             }
 
             @media only screen and (max-width : 1170px) {
@@ -803,13 +1095,13 @@ nav {
                 left: 180px;
             }
 
-            @media only screen and (max-width : 1100px) {
-                padding: 85px 0 0 0;
-                left: 160px;
+            @media only screen and (max-width : 1120px) {
+                padding: 80px 0 0 0;
             }
 
             @media only screen and (max-width : 1070px) {
-                left: 150px;
+                padding: 70px 0 0 0;    
+                left: 170px;
             }
             
             @media only screen and (max-width : 991px) {
@@ -835,7 +1127,7 @@ nav {
                 padding: 0;
 
                 @media only screen and (max-width : 1370px) {
-                    font-size: 45px;
+                    font-size: 49.9px;
                 }
 
                 @media only screen and (max-width : 1270px) {
@@ -846,8 +1138,12 @@ nav {
                     font-size: 45px;
                 }
 
-                @media only screen and (max-width : 1100px) {
+                @media only screen and (max-width : 1120px) {
                     font-size: 40px;
+                }
+                
+                @media only screen and (max-width : 1070px) {
+                    font-size: 38px;
                 }
 
                 @media only screen and (max-width : 986px) {
@@ -902,10 +1198,6 @@ nav {
                     margin: 0;
                 }
 
-                @media only screen and (max-width : 1370px) {
-                    font-size: 13.5px;
-                }
-
                 @media only screen and (max-width : 1270px) {
                     font-size: 12px;
                 }
@@ -914,8 +1206,12 @@ nav {
                     font-size: 13.5px;
                 }
 
-                @media only screen and (max-width : 1100px) {
+                @media only screen and (max-width : 1120px) {
                     font-size: 11.5px;
+                }
+                
+                @media only screen and (max-width : 1070px) {
+                    font-size: 12.5px;
                 }
 
                 @media only screen and (max-width : 986px) {
@@ -974,6 +1270,8 @@ nav {
                     padding: 15px 40px 15px 40px;
                     font-size: 17px;
                     color: #fff;
+                    position: relative;
+                    z-index: 9;
 
                     &:hover {
                         background: #da0061;
@@ -993,6 +1291,10 @@ nav {
             position: relative;
             top: 15px;
 
+            @media screen and (max-width: 1070px) {
+                top: 0;
+            }
+
             div {
                 width: 100%;
                 float: left;
@@ -1006,6 +1308,10 @@ nav {
                         @media screen and (max-width: 1170px) {
                             left: 75px;
                             width: 385px;
+                        }
+
+                        @media screen and (max-width: 1070px) {
+                            width: 350px;
                         }
 
                         @media screen and (max-width: 1100px) {
@@ -1111,6 +1417,10 @@ nav {
     float: left;
     padding: 85px 0 120px 0;
 
+    @media only screen and (max-width : 1069px) {
+        padding: 0 0 120px 0;
+    }
+
     .custom-container {
         display: flex;
 
@@ -1123,16 +1433,6 @@ nav {
 
             &.mobile {
                 display: block!important;
-            }
-        }
-
-        @media only screen and (max-width : 470px) {
-            &.desktop {
-                display: block;
-            }
-
-            &.mobile {
-                display: none!important;
             }
         }
 
@@ -1318,17 +1618,9 @@ nav {
                     font-size: 30px;
                 }
 
-                @media only screen and (max-width : 470px) {
-                    display: none;
-                }
             }
 
             .BeforeAndAfterSlider {
-
-                @media only screen and (max-width : 470px) {
-                    display: none!important;
-                }
-
                 .owl-wrapper-outer {
                     .owl-wrapper {
                         .owl-item {
@@ -1439,6 +1731,26 @@ nav {
                         position: relative;
                         right: 35px;
 
+                        @media only screen and (max-width : 470px) {
+                            right: 20px;
+                            top: 10px;
+
+                            img {
+                                width: 35px;
+                            }
+                        }
+
+                        @media only screen and (max-width : 400px) {
+                            top: 20px;
+                        }
+
+                        @media only screen and (max-width : 370px) {
+                            top: 30px;
+                        }
+
+                        @media only screen and (max-width : 345px) {
+                            top: 43px;
+                        }
                     }
 
                     .owl-next {
@@ -1448,6 +1760,27 @@ nav {
 
                         @media only screen and (max-width : 1069px) {
                             left: 35px;
+                        }
+
+                        @media only screen and (max-width : 470px) {
+                            left: 20px;
+                            top: 10px;
+
+                            img {
+                                width: 35px;
+                            }
+                        }
+
+                        @media only screen and (max-width : 400px) {
+                            top: 20px;
+                        }
+
+                        @media only screen and (max-width : 370px) {
+                            top: 30px;
+                        }
+
+                        @media only screen and (max-width : 345px) {
+                            top: 43px;
                         }
                     }
                 }
@@ -1485,31 +1818,963 @@ nav {
     background-size: cover;
     width: 100%;
     float: left;
-    height: 75vh;
+    height: 87vh;
     padding: 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+
+    &.descriptiontwo {
+        background: url('../images/bridal/description-banner-product-two.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media only screen and (max-width : 1500px) {
+            height: 84vh;
+        }
+
+        @media only screen and (max-width : 1370px) {
+            height: 76vh;
+        }
+
+        @media only screen and (max-width : 1270px) {
+            height: 71vh;
+        }
+
+        @media only screen and (max-width : 1170px) {
+            height: 65vh;
+        }
+
+        @media only screen and (max-width : 1100px) {
+            height: 61vh;
+        }
+
+        @media only screen and (max-width : 1070px) {
+            background: url("../images/bridal/description-product-tablet.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 69vh;
+        }
+
+        @media only screen and (max-width : 1024px) {
+            height: 36vh;
+        }
+
+        @media only screen and (max-width : 1070px) {
+            background: url("../images/bridal/description-product-tablet.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 69vh;
+        }
+
+        @media only screen and (max-width : 1024px) {
+            height: 36vh;
+        }
+
+        @media only screen and (max-width : 900px) {
+            background: url("../images/bridal/description-product-tablet-v2.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 83vh;
+        }
+
+        @media only screen and (max-width : 830px) {
+            height: 78vh;
+        }
+        
+        @media only screen and (max-width : 770px) {
+            height: 53vh;
+        }
+
+        @media only screen and (max-width : 700px) {
+            height: 66vh;
+        }
+
+        @media only screen and (max-width : 670px) {
+            background: url("../images/bridal/description-product-tablet-v3.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 101vh;
+        }
+
+        @media only screen and (max-width : 600px) {
+            height: 90vh;
+        }
+
+        @media only screen and (max-width : 570px) {
+            height: 84vh;
+        }
+
+        @media only screen and (max-width : 500px) {
+            height: 75vh;
+        }
+
+        @media only screen and (max-width : 470px) {
+            background: url("../images/bridal/description-product-mobile.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+        }
+
+        @media only screen and (max-width : 430px) {
+            height: 65vh;
+        }
+
+        @media only screen and (max-width : 400px) {
+            background: url("../images/bridal/description-product-mobile-v2.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80vh;
+        }
+
+        @media only screen and (max-width : 370px) {
+            height: 74vh;
+        }
+
+        @media only screen and (max-width : 347px) {
+            background: url("../images/bridal/description-product-mobile-v3.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 93vh;
+        }
+
+        @media only screen and (max-width : 327px) {
+            height: 85vh;
+        }
+
+        .custom-container {
+            .right {
+                padding: 0 0 0 875px;
+                position: relative;
+                bottom: 25px;
+
+                @media only screen and (max-width : 1500px) {
+                    padding: 0 0 0 855px;
+                }
+
+                @media only screen and (max-width : 1370px) {
+                    padding: 0 0 0 750px;
+                }
+
+                @media only screen and (max-width : 1270px) {
+                    padding: 0 0 0 690px;
+                }
+
+                @media only screen and (max-width : 1170px) {
+                    padding: 0 0 0 630px;
+                }
+
+                @media only screen and (max-width : 1100px) {
+                    padding: 0 0 0 540px;
+                }
+
+                @media only screen and (max-width : 1070px) {
+                    padding: 0;
+                    bottom: 15px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @media only screen and (max-width : 768px) {
+                    bottom: 7px;
+                }
+
+
+                h1, h3 {
+                    font-family: 'BodoniRegular', Arial, sans-serif;
+                    font-weight: normal;
+                    text-transform: lowercase;
+                    color: #556067;
+                }
+
+                h3 {
+                    font-family: 'BodoniItalic', Arial, sans-serif;
+                    font-size: 30pt;
+                    margin: 0;
+                    position: relative;
+                    left: 60px;
+                    top: 8px;
+
+                    @media only screen and (max-width : 1500px) {
+                        font-size: 26pt;
+                        left: 50px;
+                        top: 10px;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 35px;
+                        left: 47px;
+                    }
+
+                    @media only screen and (max-width : 1070px) {
+                        width: 100%;
+                        left: 0;
+                        text-align: center;
+                        padding: 0 0 25px 0;
+                    }
+
+                    @media only screen and (max-width : 375px) {
+                        font-size: 30px;
+                    }
+
+                }
+
+                h1 {
+                    font-size: 60pt;
+                    line-height: 55px;
+                    margin: 0;
+
+                    @media only screen and (max-width : 1500px) {
+                        line-height: 48px;
+                        font-size: 50pt;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        line-height: 45px;
+                        font-size: 45pt;
+                    }
+
+                    @media only screen and (max-width : 700px) {
+                        line-height: 35px;
+                        font-size: 35pt;
+                    }
+
+                    @media only screen and (max-width : 397px) {
+                        line-height: 40px;
+                        font-size: 30pt;
+                    }
+
+                    span {
+                        font-family: 'BodoniItalic', Arial, sans-serif;
+                        width: 100%;
+                        float: left;
+                        font-style: italic;
+                        font-size: 48px;
+                        text-align: left;
+                        position: relative;
+                        left: 180px;
+
+                        @media only screen and (max-width : 1500px) {
+                            font-size: 40px;
+                            left: 150px;
+                        }
+
+                        @media only screen and (max-width : 1270px) {
+                            font-size: 36px;
+                            left: 137px;
+                        }
+
+                        @media only screen and (max-width : 1070px) {
+                            width: 100%;
+                            left: 0;
+                            text-align: center;
+                        }
+
+                        @media only screen and (max-width : 700px) {
+                            font-size: 30px;
+                        }
+
+                        @media only screen and (max-width : 375px) {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                p {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    font-size: 13pt;
+                    width: 100%;
+                    float: left;
+                    color: #565656;
+
+                    @media only screen and (max-width : 1500px) {
+                        font-size: 10.9pt;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 9.9pt;
+                    }
+
+                    @media only screen and (max-width : 1070px) {
+                        display: none;
+                    }
+                }
+
+                strong {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    font-size: 21px;
+                    width: 100%;
+                    float: left;
+                    color: #565656;
+                    padding: 0 0 5px 0;
+
+                    @media only screen and (max-width : 1500px) {
+                        font-size: 18px;
+                    }
+
+                    @media only screen and (max-width : 1070px) {
+                        padding: 30px 0 5px 0;
+                    }
+
+                    @media only screen and (max-width : 700px) {
+                        padding: 20px 0 5px 0;
+                    }
+                }
+
+                ul {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    margin: 0;
+                    padding: 0 0 0 20px;
+
+                    @media only screen and (max-width : 1070px) {
+                        width: 425px;
+                        text-align: left;
+                        margin: 0 auto;
+                    }
+
+                    @media only screen and (max-width : 770px) {
+                        width: 260px;
+                    }
+
+                    li {
+                        font-size: 20px;
+                        width: 100%;
+                        float: left;
+                        color: #565656;
+                        line-height: 25px;
+
+                        @media only screen and (max-width : 1500px) {
+                            font-size: 16.5px;
+                        }
+
+                        @media only screen and (max-width : 1270px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .price {
+                    width: 100%;
+                    float: left;
+                    padding: 0;
+
+                    @media only screen and (max-width : 1070px) {
+                        padding: 10px 0 0 0;
+                    }
+
+                    .inner {
+                        display: flex;
+                        display: -webkit-flex;
+                        -webkit-align-items: center;
+                        align-items: center;
+
+                        @media only screen and (max-width : 1070px) {
+                            width: 165px;
+                            margin: 0 auto;
+                        }
+
+                        span {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                            color: #565656;
+                            font-size: 20pt;
+                            margin: 0 11px 0 0;
+                        }
+
+                        p {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                            font-weight: bold;
+                            color: #e8408b;
+                            padding: 0;
+                            margin: 0;
+                            font-size: 35pt;
+
+                            @media only screen and (max-width : 1500px) {
+                                font-size: 30pt;
+                            }
+
+                            @media only screen and (max-width : 1070px) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    width: 100%;
+                    float: left;
+                    padding: 35px 0 0 0;
+
+                    a { 
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        background: #e8408b;
+                        transition: all 0.5s ease;
+                        padding: 15px 55px 15px 55px;
+                        font-size: 17px;
+                        color: #fff;
+
+                        &:hover {
+                            background: #da0061;
+                        }
+
+                        @media only screen and (max-width : 1500px) {
+                            padding: 15px 50px 15px 50px;
+                        }
+
+                        @media only screen and (max-width : 1270px) {
+                            padding: 15px 40px 15px 40px;
+                        }
+
+                        @media only screen and (max-width : 375px) {
+                            padding: 15px 0 15px 0;
+                            width: 100%;
+                            float: left;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.descriptionthree {
+        background: url('../images/bridal/description-banner-product-three.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media only screen and (max-width : 1500px) {
+            height: 84vh;
+        }
+
+        @media only screen and (max-width : 1370px) {
+            height: 76vh;
+        }
+
+        @media only screen and (max-width : 1270px) {
+            height: 71vh;
+        }
+
+        @media only screen and (max-width : 1170px) {
+            height: 65vh;
+        }
+
+        @media only screen and (max-width : 1100px) {
+            height: 61vh;
+        }
+
+        @media only screen and (max-width : 1070px) {
+            background: url("../images/bridal/description-product-tablet.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 69vh;
+        }
+
+        @media only screen and (max-width : 1024px) {
+            height: 36vh;
+        }
+
+        @media only screen and (max-width : 1070px) {
+            background: url("../images/bridal/description-product-tablet.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 69vh;
+        }
+
+        @media only screen and (max-width : 1024px) {
+            height: 36vh;
+        }
+
+        @media only screen and (max-width : 900px) {
+            background: url("../images/bridal/description-product-tablet-v2.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 83vh;
+        }
+
+        @media only screen and (max-width : 830px) {
+            height: 78vh;
+        }
+        
+        @media only screen and (max-width : 770px) {
+            height: 53vh;
+        }
+
+        @media only screen and (max-width : 700px) {
+            height: 66vh;
+        }
+
+        @media only screen and (max-width : 670px) {
+            background: url("../images/bridal/description-product-tablet-v3.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 101vh;
+        }
+
+        @media only screen and (max-width : 600px) {
+            height: 90vh;
+        }
+
+        @media only screen and (max-width : 570px) {
+            height: 84vh;
+        }
+
+        @media only screen and (max-width : 500px) {
+            height: 75vh;
+        }
+
+        @media only screen and (max-width : 470px) {
+            background: url("../images/bridal/description-product-mobile.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+        }
+
+        @media only screen and (max-width : 430px) {
+            height: 65vh;
+        }
+
+        @media only screen and (max-width : 400px) {
+            background: url("../images/bridal/description-product-mobile-v2.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80vh;
+        }
+
+        @media only screen and (max-width : 370px) {
+            height: 74vh;
+        }
+
+        @media only screen and (max-width : 347px) {
+            background: url("../images/bridal/description-product-mobile-v3.png") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 93vh;
+        }
+
+        @media only screen and (max-width : 327px) {
+            height: 85vh;
+        }
+
+        .custom-container {
+            .right {
+                padding: 0 0 0 875px;
+                position: relative;
+                bottom: 25px;
+
+                @media only screen and (max-width : 1500px) {
+                    padding: 0 0 0 855px;
+                }
+
+                @media only screen and (max-width : 1370px) {
+                    padding: 0 0 0 750px;
+                }
+
+                @media only screen and (max-width : 1270px) {
+                    padding: 0 0 0 690px;
+                }
+
+                @media only screen and (max-width : 1170px) {
+                    padding: 0 0 0 630px;
+                }
+
+                @media only screen and (max-width : 1100px) {
+                    padding: 0 0 0 540px;
+                }
+
+                @media only screen and (max-width : 1070px) {
+                    padding: 0;
+                    bottom: 15px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @media only screen and (max-width : 768px) {
+                    bottom: 7px;
+                }
+
+
+                h1, h3 {
+                    font-family: 'BodoniRegular', Arial, sans-serif;
+                    font-weight: normal;
+                    text-transform: lowercase;
+                    color: #556067;
+                }
+
+                h3 {
+                    font-family: 'BodoniItalic', Arial, sans-serif;
+                    font-size: 30pt;
+                    margin: 0;
+                    position: relative;
+                    left: 60px;
+                    top: 8px;
+
+                    @media only screen and (max-width : 1500px) {
+                        font-size: 26pt;
+                        left: 50px;
+                        top: 10px;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 35px;
+                        left: 47px;
+                    }
+
+                    @media only screen and (max-width : 1070px) {
+                        width: 100%;
+                        left: 0;
+                        text-align: center;
+                        padding: 0 0 25px 0;
+                    }
+
+                    @media only screen and (max-width : 375px) {
+                        font-size: 30px;
+                    }
+
+                }
+
+                h1 {
+                    font-size: 60pt;
+                    line-height: 55px;
+                    margin: 0;
+
+                    @media only screen and (max-width : 1500px) {
+                        line-height: 48px;
+                        font-size: 50pt;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        line-height: 45px;
+                        font-size: 45pt;
+                    }
+
+                    @media only screen and (max-width : 700px) {
+                        line-height: 35px;
+                        font-size: 35pt;
+                    }
+
+                    @media only screen and (max-width : 397px) {
+                        line-height: 40px;
+                        font-size: 30pt;
+                    }
+
+                    span {
+                        font-family: 'BodoniItalic', Arial, sans-serif;
+                        width: 100%;
+                        float: left;
+                        font-style: italic;
+                        font-size: 48px;
+                        text-align: left;
+                        position: relative;
+                        left: 180px;
+
+                        @media only screen and (max-width : 1500px) {
+                            font-size: 40px;
+                            left: 150px;
+                        }
+
+                        @media only screen and (max-width : 1270px) {
+                            font-size: 36px;
+                            left: 137px;
+                        }
+
+                        @media only screen and (max-width : 1070px) {
+                            width: 100%;
+                            left: 0;
+                            text-align: center;
+                        }
+
+                        @media only screen and (max-width : 700px) {
+                            font-size: 30px;
+                        }
+
+                        @media only screen and (max-width : 375px) {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                p {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    font-size: 13pt;
+                    width: 100%;
+                    float: left;
+                    color: #565656;
+
+                    @media only screen and (max-width : 1500px) {
+                        font-size: 10.9pt;
+                    }
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 9.9pt;
+                    }
+
+                    @media only screen and (max-width : 1070px) {
+                        display: none;
+                    }
+                }
+
+                strong {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    font-size: 21px;
+                    width: 100%;
+                    float: left;
+                    color: #565656;
+                    padding: 0 0 5px 0;
+
+                    @media only screen and (max-width : 1500px) {
+                        font-size: 18px;
+                    }
+
+                    @media only screen and (max-width : 1070px) {
+                        padding: 30px 0 5px 0;
+                    }
+
+                    @media only screen and (max-width : 700px) {
+                        padding: 20px 0 5px 0;
+                    }
+                }
+
+                ul {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    margin: 0;
+                    padding: 0 0 0 20px;
+
+                    @media only screen and (max-width : 1070px) {
+                        width: 425px;
+                        text-align: left;
+                        margin: 0 auto;
+                    }
+
+                    @media only screen and (max-width : 770px) {
+                        width: 260px;
+                    }
+
+                    li {
+                        font-size: 20px;
+                        width: 100%;
+                        float: left;
+                        color: #565656;
+                        line-height: 25px;
+
+                        @media only screen and (max-width : 1500px) {
+                            font-size: 16.5px;
+                        }
+
+                        @media only screen and (max-width : 1270px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .price {
+                    width: 100%;
+                    float: left;
+                    padding: 0;
+
+                    @media only screen and (max-width : 1070px) {
+                        padding: 10px 0 0 0;
+                    }
+
+                    .inner {
+                        display: flex;
+                        display: -webkit-flex;
+                        -webkit-align-items: center;
+                        align-items: center;
+
+                        @media only screen and (max-width : 1070px) {
+                            width: 165px;
+                            margin: 0 auto;
+                        }
+
+                        span {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                            color: #565656;
+                            font-size: 20pt;
+                            margin: 0 11px 0 0;
+                        }
+
+                        p {
+                            font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                            font-weight: bold;
+                            color: #e8408b;
+                            padding: 0;
+                            margin: 0;
+                            font-size: 35pt;
+
+                            @media only screen and (max-width : 1500px) {
+                                font-size: 30pt;
+                            }
+
+                            @media only screen and (max-width : 1070px) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    width: 100%;
+                    float: left;
+                    padding: 35px 0 0 0;
+
+                    a { 
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        background: #e8408b;
+                        transition: all 0.5s ease;
+                        padding: 15px 55px 15px 55px;
+                        font-size: 17px;
+                        color: #fff;
+
+                        &:hover {
+                            background: #da0061;
+                        }
+
+                        @media only screen and (max-width : 1500px) {
+                            padding: 15px 50px 15px 50px;
+                        }
+
+                        @media only screen and (max-width : 1270px) {
+                            padding: 15px 40px 15px 40px;
+                        }
+
+                        @media only screen and (max-width : 375px) {
+                            padding: 15px 0 15px 0;
+                            width: 100%;
+                            float: left;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
 
     @media only screen and (max-width : 1500px) {
-        height: 67vh;
+        height: 84vh;
     }
 
     @media only screen and (max-width : 1370px) {
-        height: 61vh;
+        height: 76vh;
     }
 
     @media only screen and (max-width : 1270px) {
-        height: 56vh;
+        height: 71vh;
     }
 
-    @media only screen and (max-width : 1140px) {
-        height: 51vh;
+    @media only screen and (max-width : 1170px) {
+        height: 65vh;
     }
 
     @media only screen and (max-width : 1100px) {
-        height: 49vh;
+        height: 61vh;
     }
 
     @media only screen and (max-width : 1070px) {
-        background: none; //temporary
+        background: url("../images/bridal/description-product-tablet.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 69vh;
+    }
+
+    @media only screen and (max-width : 1024px) {
+        height: 36vh;
+    }
+
+    @media only screen and (max-width : 1000px) {
+        height: 65vh;
+    }
+
+    @media only screen and (max-width : 970px) {
+        height: 62vh;
+    }
+
+    @media only screen and (max-width : 1070px) {
+        background: url("../images/bridal/description-product-tablet.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 69vh;
+    }
+
+    @media only screen and (max-width : 1024px) {
+        height: 36vh;
+    }
+
+    @media only screen and (max-width : 900px) {
+        background: url("../images/bridal/description-product-tablet-v2.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 83vh;
+    }
+
+    @media only screen and (max-width : 830px) {
+        height: 78vh;
+    }
+
+    @media only screen and (max-width : 770px) {
+        height: 53vh;
+    }
+
+    @media only screen and (max-width : 700px) {
+        height: 66vh;
+    }
+
+    @media only screen and (max-width : 670px) {
+        background: url("../images/bridal/description-product-tablet-v3.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 101vh;
+    }
+
+    @media only screen and (max-width : 600px) {
+        height: 90vh;
+    }
+
+    @media only screen and (max-width : 570px) {
+        height: 84vh;
+    }
+
+    @media only screen and (max-width : 500px) {
+        height: 75vh;
+    }
+
+    @media only screen and (max-width : 470px) {
+        background: url("../images/bridal/description-product-mobile.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+    }
+
+    @media only screen and (max-width : 430px) {
+        height: 65vh;
+    }
+
+    @media only screen and (max-width : 400px) {
+        background: url("../images/bridal/description-product-mobile-v2.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+    }
+
+    @media only screen and (max-width : 370px) {
+        height: 74vh;
+    }
+
+    @media only screen and (max-width : 347px) {
+        background: url("../images/bridal/description-product-mobile-v3.png") center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 93vh;
+    }
+
+    @media only screen and (max-width : 327px) {
+        height: 85vh;
     }
 
     .custom-container {
@@ -1518,33 +2783,41 @@ nav {
         display: -webkit-flex;
 
         .right {
-            padding: 115px 0 0 845px;
+            padding: 0 0 0 845px;
+            position: relative;
+            bottom: 25px;
 
             @media only screen and (max-width : 1500px) {
-                padding: 115px 0 0 740px;
+                padding: 0 0 0 740px;
             }
 
             @media only screen and (max-width : 1370px) {
-                padding: 65px 0 0 680px;
+                padding: 0 0 0 680px;
             }
 
             @media only screen and (max-width : 1270px) {
-                padding: 50px 0 0 635px;
+                padding: 0 0 0 635px;
             }
 
-            @media only screen and (max-width : 1140px) {
-                padding: 25px 0 0 570px;
+            @media only screen and (max-width : 1170px) {
+                padding: 0 0 0 570px;
             }
 
             @media only screen and (max-width : 1100px) {
-                padding: 15px 0 0 500px;
+                padding: 0 0 0 500px;
             }
 
             @media only screen and (max-width : 1070px) {
                 padding: 0;
+                bottom: 15px;
                 width: 100%;
                 text-align: center;
             }
+
+            @media only screen and (max-width : 768px) {
+                bottom: 7px;
+            }
+
 
             h1, h3 {
                 font-family: 'BodoniRegular', Arial, sans-serif;
@@ -1559,11 +2832,12 @@ nav {
                 margin: 0;
                 position: relative;
                 left: 38px;
+                top: 8px;
 
                 @media only screen and (max-width : 1500px) {
                     font-size: 26pt;
                     left: 32px;
-                    top: 13px;
+                    top: 10px;
                 }
 
                 @media only screen and (max-width : 1270px) {
@@ -1576,6 +2850,10 @@ nav {
                     left: 0;
                     text-align: center;
                     padding: 0 0 25px 0;
+                }
+
+                @media only screen and (max-width : 375px) {
+                    font-size: 30px;
                 }
 
             }
@@ -1593,6 +2871,16 @@ nav {
                 @media only screen and (max-width : 1270px) {
                     line-height: 45px;
                     font-size: 45pt;
+                }
+
+                @media only screen and (max-width : 700px) {
+                    line-height: 35px;
+                    font-size: 35pt;
+                }
+
+                @media only screen and (max-width : 397px) {
+                    line-height: 40px;
+                    font-size: 30pt;
                 }
 
                 span {
@@ -1619,6 +2907,14 @@ nav {
                         width: 100%;
                         left: 0;
                         text-align: center;
+                    }
+
+                    @media only screen and (max-width : 700px) {
+                        font-size: 30px;
+                    }
+
+                    @media only screen and (max-width : 375px) {
+                        font-size: 22px;
                     }
                 }
             }
@@ -1658,6 +2954,10 @@ nav {
                 @media only screen and (max-width : 1070px) {
                     padding: 30px 0 5px 0;
                 }
+
+                @media only screen and (max-width : 700px) {
+                    padding: 20px 0 5px 0;
+                }
             }
 
             ul {
@@ -1669,6 +2969,10 @@ nav {
                     width: 425px;
                     text-align: left;
                     margin: 0 auto;
+                }
+
+                @media only screen and (max-width : 770px) {
+                    width: 260px;
                 }
 
                 li {
@@ -1734,6 +3038,110 @@ nav {
                 }
             }
 
+            .autoshipWrapper {
+                width: 100%;
+                float: left;
+
+                .inner {
+                    display: flex;
+                    align-items: center;
+                    padding: 35px 0 0 0;
+
+                    @media only screen and (max-width : 1060px) {
+                        width: 260px;
+                        margin: 0 auto;
+                    }
+
+                    input[type=checkbox] {
+                        visibility: hidden;
+                    }
+
+                    input[type=checkbox]:checked + label:after {
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                        filter: alpha(opacity=100);
+                        opacity: 1;
+                    }
+
+                    .custom-checkbox {
+                        position: relative;
+
+                        label {
+                            cursor: pointer;
+                            position: absolute;
+                            width: 21px;
+                            height: 21px;
+                            top: 0;
+                            border-radius: 2px;
+                            box-shadow: none;
+                            background: #61b774;
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+                            
+                            &:after {
+                                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                                filter: alpha(opacity=0);
+                                opacity: 0;
+                                content: '';
+                                position: absolute;
+                                width: 11px;
+                                height: 5px;
+                                background: transparent;
+                                top: 5px;
+                                left: 4px;
+                                border: 2px solid #fff;
+                                border-top: none;
+                                border-right: none;
+                                -webkit-transform: rotate(-45deg);
+                                -moz-transform: rotate(-45deg);
+                                -o-transform: rotate(-45deg);
+                                -ms-transform: rotate(-45deg);
+                                transform: rotate(-45deg);
+                            }
+
+                            &:hover {
+                                &::after {
+                                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+                                    filter: alpha(opacity=30);
+                                    opacity: 0.5;
+                                }
+                            }
+                            span {
+                                font-family: 'HelveticaLTStd-Roman', Arial, sans-serif;
+                                font-size: 14.25pt;
+                                width: 450px;
+                                float: left;
+                                padding: 2px 0 0 30px;
+                                color: #565656;
+                                text-transform: uppercase;
+
+                                @media only screen and (max-width : 1270px) {
+                                    font-size: 13.25pt;
+                                }
+
+                                @media only screen and (max-width : 1060px) {
+                                    text-align: left;
+                                }
+                                
+                                @media only screen and (max-width : 410px) {
+                                    font-size: 12pt;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-family: 'HelveticaLTStd-Light', Arial, sans-serif;
+                    font-size: 11.45pt;
+                    font-weight: lighter;
+                    padding: 5px 0 0 0;
+                    margin: 0;
+
+                    @media only screen and (max-width : 1270px) {
+                        font-size: 10.45pt;
+                    }
+                }
+            }
+
             .button {
                 width: 100%;
                 float: left;
@@ -1758,6 +3166,12 @@ nav {
 
                     @media only screen and (max-width : 1270px) {
                         padding: 15px 40px 15px 40px;
+                    }
+
+                    @media only screen and (max-width : 375px) {
+                        padding: 15px 0 15px 0;
+                        width: 100%;
+                        float: left;
                     }
 
                 }
@@ -1893,6 +3307,10 @@ nav {
                     border-bottom: none;
                     margin:0;
                 }
+            }
+
+            @media only screen and (max-width : 470px) {
+                padding: 0 0 25px 0;
             }
 
             p {
@@ -2245,18 +3663,80 @@ nav {
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    height: 36vh;
+    height: 41vh;
     float: left;
     display: flex;
     display: -webkit-flex;
     align-items: center;
     -webkit-align-items: center;
 
+    @media only screen and (max-width : 1270px) {
+        height: 34vh;
+    }
+    
+    @media only screen and (max-width : 1000px) {
+        height: 32vh;
+    }
+
+    @media only screen and (max-width : 970px) {
+        height: 28vh;
+    }
+
+    @media only screen and (max-width : 770px) {
+        background: url('../images/bridal/promo-tablet-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 36vh;
+    }
+
+    @media only screen and (max-width : 700px) {
+        height: 32vh;
+    }
+
+    @media only screen and (max-width : 670px) {
+        height: 31vh;
+    }
+
+    @media only screen and (max-width : 570px) {
+        height: 26vh;
+    }
+
+    @media only screen and (max-width : 500px) {
+        background: url('../images/bridal/promo-mobile-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 38vh;
+    }
+
+    @media only screen and (max-width : 400px) {
+        height: 32vh;
+    }
+    
+    @media only screen and (max-width : 370px) {
+        height: 29vh;
+    }
+
+    @media only screen and (max-width : 330px) {
+        height: 26vh;
+    }
+
     .custom-container {
         .middle {
             width: 100%;
             float: left;
             text-align: center;
+
+            @media only screen and (max-width : 1270px) {
+                position: relative;
+                bottom: 10px;
+            }
+
+            @media only screen and (max-width : 500px) {
+                bottom: 13px;
+            }
+
 
             h1 {
                 font-family: 'Bodoni', Arial, sans-serif;
@@ -2274,17 +3754,17 @@ nav {
                 }
 
                 @media only screen and (max-width : 1270px) {
+                    font-size: 40px;
+                }
+
+                @media only screen and (max-width : 970px) {
                     font-size: 30px;
                 }
 
-                @media only screen and (max-width : 911px) {
-                    font-size: 25px;
+                @media only screen and (max-width : 500px) {
+                    font-size: 26px;
                 }
 
-                @media only screen and (max-width : 440px) {
-                    font-size: 19px;
-                    line-height: 31px;
-                }
             }
 
             p {
@@ -2297,17 +3777,19 @@ nav {
                 text-transform: uppercase;
 
                 @media only screen and (max-width : 1270px) {
-                    font-size: 18px;
+                    font-size: 17.5px;
                 }
 
-                @media only screen and (max-width : 911px) {
-                    font-size:15px;
+                @media only screen and (max-width : 970px) {
+                    padding: 10px 0 20px 0;
+                    font-size: 13.5px;
                 }
 
-                @media only screen and (max-width : 440px) {
-                    font-size: 12px;
-                }
+                @media only screen and (max-width : 500px) {
+                    padding: 0 0 20px 0;
+                    font-size: 11.5px;
 
+                }
             }
 
             div {
@@ -2328,10 +3810,20 @@ nav {
                         background: #da0061;
                     }
 
-                    @media screen and (max-width: 370px) {
-                        font-size: 14px;
-                        padding: 15px 35px 15px 35px;
-                        width: 100%;
+                    @media only screen and (max-width : 970px) {
+                        font-size: 13px;
+                    }
+
+                    @media screen and (max-width: 770px) {
+                        padding: 15px 75px 15px 75px;
+                    }
+
+                    @media screen and (max-width: 570px) {
+                        padding: 15px 70px 15px 70px;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        padding: 15px 55px 15px 55px;
                     }
                 }
             }
@@ -2350,29 +3842,48 @@ nav {
     background-position: center;
     width: 100%;
     float: left;
+    height: 75vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+
+    @media only screen and (max-width : 1270px) {
+        height: 62vh;
+    }
+
+    @media only screen and (max-width : 970px) {
+        height: 45vh;
+    }
+    
+    @media only screen and (max-width : 970px) {
+        background: url('../images/bridal/promo-form-tablet-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 62vh;
+    }
+
+    @media only screen and (max-width : 770px) {
+        height: 49vh;
+    }
+
+    @media only screen and (max-width : 570px) {
+        background: url('../images/bridal/promo-form-mobile-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+    }
+
+    @media only screen and (max-width : 370px) {
+        background: url('../images/bridal/promo-form-mobile-v2-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+    }
+
 
     .custom-container {
-        display: flex;
-        display: -webkit-flex;
-        align-items: center;
-        -webkit-align-items: center;
-        min-height: 60vh;
-        height: auto;
-
-        @media only screen and (max-width : 1370px) {
-            min-height: 50vh;
-        }
-
-        @media only screen and (max-width : 1170px) {
-            min-height: 42vh;
-        }
-
-        @media only screen and (max-width : 855px) {
-            min-height: auto;
-            padding: 60px 15px 60px 15px;
-        }
-
-        .left {
+       .left {
             width: 19%;
             float: left;
             text-align: center;
@@ -2398,19 +3909,7 @@ nav {
         }
 
         .middle {
-            width: 60%;
-            margin: 0 auto;
-            float: left;
             text-align: center;
-
-            @media only screen and (max-width : 1170px) {
-                width: 40%;
-            }
-
-            @media only screen and (max-width : 855px) {
-                width: 100%;
-                left: 0;
-            }
 
             h1 {
                 font-family: 'Bodoni', Arial, sans-serif;
@@ -2424,23 +3923,28 @@ nav {
 
                 @media only screen and (max-width : 1170px) {
                     font-size: 36px;
-
-                    br {
-                        display: none;
-                    }
                 }
 
                 @media only screen and (max-width : 1270px) {
                     font-size: 30px;
                 }
 
-                @media only screen and (max-width : 911px) {
+                @media only screen and (max-width : 970px) {
                     font-size: 25px;
                 }
 
-                @media only screen and (max-width : 440px) {
-                    font-size: 19px;
-                    line-height: 31px;
+                @media only screen and (max-width : 770px) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                @media only screen and (max-width : 435px) {
+                    font-size: 30px;
+                    line-height: 35px;
+
+                    br {
+                        display: none;
+                    }
                 }
             }
 
@@ -2456,17 +3960,25 @@ nav {
                     font-size: 18px;
                 }
 
-                @media only screen and (max-width : 911px) {
+                @media only screen and (max-width : 970px) {
                     font-size:15px;
                 }
 
-                @media only screen and (max-width : 440px) {
-                    font-size: 12px;
+                @media only screen and (max-width : 770px) {
+                    padding: 10px 0 15px 0;
+                    font-size: 13px;
                 }
+
+                @media only screen and (max-width : 435px) {
+                    padding: 10px 0 50px 0;
+                }
+
 
             }
 
             form {
+                width: 62%;
+                margin: 0 auto;
                 display: flex;
                 display: -webkit-flex;
                 align-items: center;
@@ -2476,11 +3988,23 @@ nav {
                     display: block;
                 }
 
+                @media only screen and (max-width : 970px) {
+                    width: 465px;
+                }
+
+                @media only screen and (max-width : 770px) {
+                    width: 370px;
+                }
+                
+                @media only screen and (max-width : 435px) {
+                    width: 100%;
+                }
+
                 input {
-                    width: 495px;
+                    width: 455px;
+                    margin: 0 auto;
                     height: 50px;
                     padding: 0 15px 0 15px;
-                    margin: 0 15px 0 40px;
                     outline: none;
 
                     @media only screen and (max-width : 1370px) {
@@ -2568,8 +4092,8 @@ nav {
                         padding: 0;
                     }
 
-                    @media only screen and (max-width : 911px) {
-                        font-size: 15px;
+                    @media only screen and (max-width : 970px) {
+                        font-size: 16px;
                     }
 
                     &:hover {
@@ -2586,8 +4110,29 @@ nav {
                 float: left;
                 padding: 20px 0 0 0;
 
-                @media only screen and (max-width : 440px) {
-                    font-size: 12px;
+                @media only screen and (max-width : 970px) {
+                    font-size: 16px;
+                    padding: 10px 0 0 0;
+                }
+
+                @media only screen and (max-width : 770px) {
+                    font-size: 12.5px;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+
+                    @media only screen and (max-width : 435px) {
+                        font-size: 13px;
+                        width: 300px;
+                        margin: 0 auto;
+                    }
+
+                    @media only screen and (max-width : 375px) {
+                        font-size: 12px;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -2671,7 +4216,7 @@ nav {
             }
 
             p {
-                width: 100%;
+                width: 105%;
                 background: #1183ce;
                 color: #fff;
                 padding: 20px 0 20px 50px;
